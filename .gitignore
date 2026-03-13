@@ -1,0 +1,11 @@
+.env
+__pycache__/
+*.pyc
+.DS_Store
+browser/sessions/
+scraped_data/
+debug_*.png
+outputs/liquidity/
+config/liquidity_checker.local.json
+.claude/
+.vscode/

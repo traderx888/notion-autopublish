@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bloomberg Research Digest #3 — Tech/AI, Digital Assets & Macro Signals</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --accent: #58a6ff;
+          --green: #3fb950; --red: #f85149; --yellow: #d29922; --text: #c9d1d9; --muted: #8b949e;
+          --orange: #f0883e; --purple: #bc8cff; --cyan: #39d2c0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans TC', 'Microsoft JhengHei', Helvetica, Arial, sans-serif; line-height: 1.7; padding: 20px; max-width: 860px; margin: 0 auto; }
+  h1 { color: #fff; font-size: 1.7em; margin-bottom: 4px; }
+  .subtitle { color: var(--muted); font-size: 0.9em; margin-bottom: 8px; }
+  .issue-badge { display: inline-block; background: rgba(88,166,255,0.15); color: var(--accent); padding: 3px 10px; border-radius: 12px; font-size: 0.8em; font-weight: 600; margin-bottom: 20px; }
+  .tag { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 0.72em; font-weight: 600; margin-right: 4px; }
+  .tag-ai { background: rgba(57,210,192,0.15); color: var(--cyan); }
+  .tag-crypto { background: rgba(188,140,255,0.15); color: var(--purple); }
+  .tag-fed { background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-bofa { background: rgba(240,136,62,0.15); color: var(--orange); }
+  .tag-credit { background: rgba(210,153,34,0.15); color: var(--yellow); }
+  .tag-china { background: rgba(248,81,73,0.15); color: var(--red); }
+  .section { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 16px; }
+  .section h2 { color: #fff; font-size: 1.15em; margin-bottom: 12px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+  .article { margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .article:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .article-title { color: #fff; font-weight: 700; font-size: 0.95em; margin-bottom: 4px; }
+  .article-title-cn { color: var(--muted); font-size: 0.85em; margin-bottom: 8px; }
+  .article p { font-size: 0.9em; margin: 6px 0; }
+  .data-point { background: rgba(255,255,255,0.03); padding: 8px 12px; border-radius: 6px; margin: 8px 0; font-size: 0.85em; }
+  .implication { background: rgba(88,166,255,0.06); border-left: 3px solid var(--accent); padding: 10px 14px; margin: 10px 0; border-radius: 0 6px 6px 0; font-size: 0.88em; }
+  .implication .label { color: var(--accent); font-weight: 700; font-size: 0.8em; text-transform: uppercase; margin-bottom: 4px; }
+  .implication.warn { border-left-color: var(--red); }
+  .implication.warn .label { color: var(--red); }
+  .callout { background: rgba(210,153,34,0.08); border: 1px solid rgba(210,153,34,0.3); border-radius: 6px; padding: 16px; margin: 16px 0; }
+  .callout-title { color: var(--yellow); font-weight: 700; font-size: 0.95em; margin-bottom: 8px; }
+  .callout ul { padding-left: 18px; }
+  .callout li { margin: 4px 0; font-size: 0.88em; }
+  .bofa-box { background: rgba(240,136,62,0.06); border: 1px solid rgba(240,136,62,0.3); border-radius: 8px; padding: 16px; margin: 12px 0; }
+  .bofa-box h3 { color: var(--orange); font-size: 0.95em; margin-bottom: 10px; }
+  ul { padding-left: 18px; }
+  li { margin: 3px 0; font-size: 0.88em; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  @media (max-width: 600px) { .stat-grid { grid-template-columns: repeat(2, 1fr); } }
+  .stat { background: rgba(255,255,255,0.03); padding: 12px; border-radius: 6px; text-align: center; }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: #fff; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
+  .toc { background: rgba(88,166,255,0.05); border: 1px solid rgba(88,166,255,0.2); border-radius: 8px; padding: 16px 20px; margin-bottom: 20px; }
+  .toc-title { color: var(--accent); font-weight: 700; font-size: 0.9em; margin-bottom: 8px; }
+  .toc a { color: var(--accent); text-decoration: none; font-size: 0.88em; }
+  .toc a:hover { text-decoration: underline; }
+  .toc ol { padding-left: 20px; }
+  .toc li { margin: 4px 0; }
+  .nav-links { display: flex; justify-content: space-between; margin: 20px 0; font-size: 0.85em; }
+  .nav-links a { color: var(--accent); text-decoration: none; }
+  .nav-links a:hover { text-decoration: underline; }
+  .footer { text-align: center; color: var(--muted); font-size: 0.75em; margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--border); }
+  .flow-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin: 10px 0; }
+  .flow-item { background: rgba(255,255,255,0.03); padding: 8px 12px; border-radius: 6px; font-size: 0.85em; }
+  .flow-item .flow-label { color: var(--muted); font-size: 0.75em; }
+  .flow-item .flow-val { color: #fff; font-weight: 700; font-size: 1.1em; }
+  .flow-pos { border-left: 3px solid var(--green); }
+  .flow-neg { border-left: 3px solid var(--red); }
+</style>
+</head>
+<body>
+
+<h1>Bloomberg Research Digest</h1>
+<p class="subtitle">Issue #3 of 3 | Tech/AI, Digital Assets & Macro Signals</p>
+<span class="issue-badge">March 2026</span>
+
+<div class="nav-links">
+  <a href="newsletter_2_japan_equities.html">&larr; Issue #2: Japan & Equity Markets</a>
+  <a href="newsletter_1_trade_geopolitics.html">Issue #1: Trade War & Geopolitics</a>
+</div>
+
+<div class="toc">
+  <div class="toc-title">Contents</div>
+  <ol>
+    <li><a href="#ai">AI Infrastructure: The $3 Trillion Debt Boom</a></li>
+    <li><a href="#crypto">Stablecoins & Digital Assets</a></li>
+    <li><a href="#fed">Fed Chair Warsh & Policy Outlook</a></li>
+    <li><a href="#bofa">BofA Flow Show: Latest Positioning Data</a></li>
+    <li><a href="#china-macro">China Credit & Macro Signals</a></li>
+    <li><a href="#takeaways">Cross-Issue Synthesis</a></li>
+  </ol>
+</div>
+
+<!-- ======== AI ======== -->
+<div class="section" id="ai">
+  <h2><span class="tag tag-ai">AI</span> <span class="tag tag-credit">CREDIT</span> AI Infrastructure: The $3 Trillion Debt Boom</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--cyan)">$3T</div><div class="lbl">Total AI capex<br>(Morgan Stanley)</div></div>
+    <div class="stat"><div class="val" style="color:var(--yellow)">$200B</div><div class="lbl">AI-related debt<br>issued in 2025</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">$300B</div><div class="lbl">Projected hyperscaler<br>issuance 2026</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">AI's $3 Trillion Build-Out Spurs Debt Boom and Creates New Risk</div>
+    <p>Tech giants are funding massive data centre capex through debt markets &mdash; <span style="color:#fff;font-weight:700">$200 billion borrowed in 2025</span> alone, with $250-300 billion projected for 2026. JPMorgan estimates total AI buildout at $5 trillion including power supply. Off-balance-sheet SPVs like Meta's $30 billion "Beignet" Louisiana data centre deal are a new credit innovation.</p>
+    <p>BIS has warned: higher leverage could amplify shocks to financial intermediaries. Only <span style="color:#fff;font-weight:700">35% of global cloud infrastructure</span> is currently optimised for AI workloads.</p>
+    <div class="implication warn">
+      <div class="label">Risk Alert</div>
+      Fixed-income portfolios increasingly AI-heavy. Bond-equity correlation shifting higher. If AI monetisation is slower than expected, refinancing at higher spreads becomes costly. Technology tail risk is significant and underpriced.
+    </div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">Pattern-Based, Heavy-Language Apps at High Risk</div>
+    <p>Anthropic's Cowork product poses a direct threat to pattern-based application companies. The AI platform layer is consolidating, compressing margins for middleware and wrapper companies. Advanced AI chip market projected to grow from <span style="color:#fff;font-weight:700">$116B (2024) to $600B (2033)</span> per Bloomberg Intelligence.</p>
+    <div class="implication">
+      <div class="label">Investment Implication</div>
+      AI infrastructure (chips, power, data centres) remains the durable investment theme. Application layer faces margin compression from platform providers (Anthropic, OpenAI). Separate "picks and shovels" from "gold miners" in AI allocation.
+    </div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">Infleqtion's Public Debut Tests Quantum Computing Frenzy</div>
+    <p>Quantum computing IPOs will test whether the hype has substance. Infleqtion's listing is a bellwether for the broader quantum computing sector's readiness for public market scrutiny and revenue expectations.</p>
+  </div>
+</div>
+
+<!-- ======== CRYPTO ======== -->
+<div class="section" id="crypto">
+  <h2><span class="tag tag-crypto">CRYPTO</span> Stablecoins & Digital Assets</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--purple)">$75.3B</div><div class="lbl">USDC in circulation<br>(+72% YoY)</div></div>
+    <div class="stat"><div class="val" style="color:var(--green)">+35%</div><div class="lbl">Circle stock jump<br>on Q4 earnings</div></div>
+    <div class="stat"><div class="val">4-5%</div><div class="lbl">Treasury yields<br>backing USDC</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">Circle Stablecoin Boom Defies Crypto Slump</div>
+    <p>Circle's Q4 earnings demonstrate stablecoin infrastructure thriving even as broader crypto slumps: USDC circulation up <span style="color:#fff;font-weight:700">72% YoY to $75.3 billion</span>. Revenue primarily from interest on US Treasuries backing reserves. CEO Jeremy Allaire projects agentic AI applications will drive "greatest acceleration of economic activity ever seen."</p>
+    <div class="implication">
+      <div class="label">Investment Implication</div>
+      Stablecoin adoption is a leading indicator for crypto institutionalisation &mdash; growing faster than speculative crypto. Interest-rate sensitive business model benefits from current 4-5% Treasury yields. Risk: AI adoption slower than projected, Treasury yields compress, or regulatory headwinds emerge.
+    </div>
+  </div>
+</div>
+
+<!-- ======== FED ======== -->
+<div class="section" id="fed">
+  <h2><span class="tag tag-fed">FED</span> Fed Chair Warsh & Institutional Constraints</h2>
+
+  <div class="article">
+    <div class="article-title">What Could Warsh Do Unilaterally as Fed Chair?</div>
+    <div class="article-title-cn">如果沃什擔任聯儲會主席 他可以單方面採取哪些行動？</div>
+    <p>Fed Chair nominee Kevin Warsh's planned reforms (balance sheet reduction, FOMC restructuring, reduced policy communication) are <span style="color:#fff;font-weight:700">constrained by consensus-driven institutional structure</span>. FOMC (12 members) sets rates by majority vote; Board (7 members) controls balance sheet and regulation. Warsh has limited unilateral power.</p>
+    <p>Precedent: successful chairs (Volcker, Greenspan, Bernanke) built consensus. Failed chairs (G. William Miller, 18 months) did not. Presidential appointment window guarantees only 1 additional Board seat when Powell's term ends Jan 2028.</p>
+    <div class="implication">
+      <div class="label">Investment Implication</div>
+      Warsh's ability to implement reforms depends on persuasion, not legal authority. Near-term (2026-2027) policy likely reflects compromise between Warsh and incumbent governors. Unilateral balance sheet reduction unlikely. Market should not overreact to Warsh headlines &mdash; institutional inertia is strong.
+    </div>
+  </div>
+</div>
+
+<!-- ======== BofA ======== -->
+<div class="section" id="bofa">
+  <h2><span class="tag tag-bofa">BofA</span> <span class="tag tag-credit">FLOWS</span> BofA Flow Show: Week Ended March 11</h2>
+
+  <div class="bofa-box">
+    <h3>Michael Hartnett's Key Call</h3>
+    <p style="font-size:0.9em;">Bull &amp; Bear Indicator has <span style="color:#fff;font-weight:700">peaked</span>. Risk-off outflows are becoming more visible in US HY bonds, EM debt, and financial stocks. But big picture positioning has yet to show a <span style="color:var(--red);font-weight:700">"bear panic"</span> &mdash; not yet a contrarian buy signal.</p>
+    <p style="font-size:0.85em; color:var(--muted); margin-top:8px;">Fade levels: Oil &gt;$100 | DXY &gt;100 | 30yr UST &gt;5% | SPX &lt;6,600</p>
+  </div>
+
+  <h3 style="color:var(--accent); font-size:0.9em; margin: 14px 0 8px;">Weekly Flows (week ended March 11)</h3>
+  <div class="flow-grid">
+    <div class="flow-item flow-pos"><div class="flow-label">Equities</div><div class="flow-val" style="color:var(--green)">+$13.2B</div></div>
+    <div class="flow-item flow-pos"><div class="flow-label">Bonds</div><div class="flow-val" style="color:var(--green)">+$3.4B</div></div>
+    <div class="flow-item flow-pos"><div class="flow-label">Cash</div><div class="flow-val" style="color:var(--green)">+$0.8B</div></div>
+    <div class="flow-item flow-neg"><div class="flow-label">Gold</div><div class="flow-val" style="color:var(--red)">-$0.9B</div></div>
+    <div class="flow-item flow-neg"><div class="flow-label">Crypto</div><div class="flow-val" style="color:var(--red)">-$0.2B</div></div>
+  </div>
+
+  <h3 style="color:var(--accent); font-size:0.9em; margin: 14px 0 8px;">Equity Flows by Region</h3>
+  <div class="flow-grid">
+    <div class="flow-item flow-pos"><div class="flow-label">Korea (record)</div><div class="flow-val" style="color:var(--green)">+$8.9B</div></div>
+    <div class="flow-item flow-pos"><div class="flow-label">Japan (most since May 2013)</div><div class="flow-val" style="color:var(--green)">+$6.3B</div></div>
+    <div class="flow-item flow-pos"><div class="flow-label">US Stocks</div><div class="flow-val" style="color:var(--green)">+$1.4B</div></div>
+    <div class="flow-item flow-neg"><div class="flow-label">Europe (1st outflow in 6 wks)</div><div class="flow-val" style="color:var(--red)">-$0.2B</div></div>
+  </div>
+
+  <h3 style="color:var(--accent); font-size:0.9em; margin: 14px 0 8px;">Sector Flows (Red Flags)</h3>
+  <div class="flow-grid">
+    <div class="flow-item flow-neg"><div class="flow-label">Financials (record outflow)</div><div class="flow-val" style="color:var(--red)">-$3.7B</div></div>
+    <div class="flow-item flow-neg"><div class="flow-label">Healthcare (biggest since July)</div><div class="flow-val" style="color:var(--red)">-$1.6B</div></div>
+    <div class="flow-item flow-neg"><div class="flow-label">Tech (1st outflow in 7 wks)</div><div class="flow-val" style="color:var(--red)">-$0.9B</div></div>
+  </div>
+
+  <h3 style="color:var(--accent); font-size:0.9em; margin: 14px 0 8px;">Fixed Income</h3>
+  <div class="flow-grid">
+    <div class="flow-item flow-pos"><div class="flow-label">IG Bonds (46th week!)</div><div class="flow-val" style="color:var(--green)">+$6.7B</div></div>
+    <div class="flow-item flow-pos"><div class="flow-label">Treasuries (6th week)</div><div class="flow-val" style="color:var(--green)">+$5.4B</div></div>
+    <div class="flow-item flow-neg"><div class="flow-label">HY Bonds (3rd wk outflow)</div><div class="flow-val" style="color:var(--red)">-$5.0B</div></div>
+    <div class="flow-item flow-neg"><div class="flow-label">EM Debt (biggest in 2 months)</div><div class="flow-val" style="color:var(--red)">-$3.1B</div></div>
+    <div class="flow-item flow-neg"><div class="flow-label">Bank Loans (biggest since April)</div><div class="flow-val" style="color:var(--red)">-$2.4B</div></div>
+  </div>
+
+  <div class="implication">
+    <div class="label">Investment Implication</div>
+    Risk-off rotation accelerating beneath the surface: financials, HY, EM debt, bank loans all seeing outflows while IG and Treasuries attract flight-to-quality. Korea and Japan inflows are strong but may reflect tariff-refund rotation rather than conviction. Watch for Hartnett's "bear panic" signal &mdash; not triggered yet, but the building blocks (HY outflows, financial sector exodus) are forming.
+  </div>
+</div>
+
+<!-- ======== CHINA MACRO ======== -->
+<div class="section" id="china-macro">
+  <h2><span class="tag tag-china">CHINA</span> Credit, Macro & US Data Signals</h2>
+
+  <div class="article">
+    <div class="article-title">China Credit Growth Sluggish, Reflecting Private Sector Confidence</div>
+    <div class="article-title-cn">中國信貸成長乏力折射出私營部門信心低迷</div>
+    <p>China's credit growth remains weak, reflecting persistent private sector confidence issues. Bank concentrated lending and government bond issuance expected to lift aggregate financing, but organic private-sector borrowing demand is still missing.</p>
+  </div>
+
+  <div class="article">
+    <div class="article-title">US Data Preview: Weather May Suppress NFP & Retail Sales</div>
+    <div class="article-title-cn">彭博美國數據前瞻：嚴寒多雪天氣或抑制非農就業和零售銷售</div>
+    <p>Severe winter weather expected to suppress upcoming US non-farm payroll and retail sales data. Important to distinguish weather-driven weakness from genuine economic slowdown when interpreting next data releases.</p>
+  </div>
+
+  <div class="article">
+    <div class="article-title">Trump's Affordable Care Act Effort Showing Results</div>
+    <div class="article-title-cn">川普平價醫療努力效果初現 美國CPI藥品價格或降3%</div>
+    <p>Drug price initiatives could reduce US CPI drug component by <span style="color:#fff;font-weight:700">~3%</span>, providing modest disinflation tailwind. Watch for this in upcoming CPI prints.</p>
+  </div>
+</div>
+
+<!-- ======== SYNTHESIS ======== -->
+<div class="callout" id="takeaways">
+  <div class="callout-title">Cross-Issue Synthesis: The Big Picture</div>
+  <ul>
+    <li><strong>AI Credit Risk:</strong> $3T buildout funded by debt creates new bond-equity correlation risk. Fixed-income portfolios are increasingly tech-concentrated. If AI monetisation disappoints, credit markets feel it first.</li>
+    <li><strong>Stablecoin Signal:</strong> USDC +72% YoY signals institutional adoption is real and durable, even as speculative crypto suffers. Stablecoins may be the leading indicator for crypto's next cycle.</li>
+    <li><strong>Fed Constraints:</strong> Warsh can't unilaterally reshape policy. Institutional inertia dominates. Don't overreact to headline risks about Fed independence.</li>
+    <li><strong>BofA Positioning:</strong> Risk-off building beneath surface (HY, EM debt, financials outflows). Bull &amp; Bear peaked but no bear panic yet. The transition from "late cycle" to "early correction" is underway.</li>
+    <li><strong>The Thread Across All 3 Issues:</strong> Markets are rotating, not crashing. Dispersion is high, correlations are low, and active management is outperforming. This is a stock-picker's market with rising macro tail risks. Position for dispersion but hedge for correlation spikes.</li>
+  </ul>
+</div>
+
+<div class="nav-links">
+  <a href="newsletter_2_japan_equities.html">&larr; Issue #2: Japan & Equity Markets</a>
+  <a href="newsletter_1_trade_geopolitics.html">Issue #1: Trade War & Geopolitics</a>
+</div>
+
+<div class="footer">
+  Bloomberg Research Digest | Compiled for educational purposes | March 2026<br>
+  Based on Bloomberg Intelligence, Bloomberg Economics, Bloomberg Opinion, and BofA Flow Show data<br>
+  Not investment advice. For discussion and learning only.
+</div>
+
+</body>
+</html>

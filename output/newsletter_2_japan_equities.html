@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bloomberg Research Digest #2 — Japan & Global Equity Markets</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --accent: #58a6ff;
+          --green: #3fb950; --red: #f85149; --yellow: #d29922; --text: #c9d1d9; --muted: #8b949e;
+          --orange: #f0883e; --purple: #bc8cff; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans TC', 'Microsoft JhengHei', Helvetica, Arial, sans-serif; line-height: 1.7; padding: 20px; max-width: 860px; margin: 0 auto; }
+  h1 { color: #fff; font-size: 1.7em; margin-bottom: 4px; }
+  .subtitle { color: var(--muted); font-size: 0.9em; margin-bottom: 8px; }
+  .issue-badge { display: inline-block; background: rgba(88,166,255,0.15); color: var(--accent); padding: 3px 10px; border-radius: 12px; font-size: 0.8em; font-weight: 600; margin-bottom: 20px; }
+  .tag { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 0.72em; font-weight: 600; margin-right: 4px; }
+  .tag-japan { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-us { background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-eu { background: rgba(188,140,255,0.15); color: var(--purple); }
+  .tag-uk { background: rgba(63,185,80,0.15); color: var(--green); }
+  .tag-vol { background: rgba(210,153,34,0.15); color: var(--yellow); }
+  .section { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 16px; }
+  .section h2 { color: #fff; font-size: 1.15em; margin-bottom: 12px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+  .article { margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .article:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .article-title { color: #fff; font-weight: 700; font-size: 0.95em; margin-bottom: 4px; }
+  .article-title-cn { color: var(--muted); font-size: 0.85em; margin-bottom: 8px; }
+  .article p { font-size: 0.9em; margin: 6px 0; }
+  .data-point { background: rgba(255,255,255,0.03); padding: 8px 12px; border-radius: 6px; margin: 8px 0; font-size: 0.85em; }
+  .implication { background: rgba(88,166,255,0.06); border-left: 3px solid var(--accent); padding: 10px 14px; margin: 10px 0; border-radius: 0 6px 6px 0; font-size: 0.88em; }
+  .implication .label { color: var(--accent); font-weight: 700; font-size: 0.8em; text-transform: uppercase; margin-bottom: 4px; }
+  .callout { background: rgba(210,153,34,0.08); border: 1px solid rgba(210,153,34,0.3); border-radius: 6px; padding: 16px; margin: 16px 0; }
+  .callout-title { color: var(--yellow); font-weight: 700; font-size: 0.95em; margin-bottom: 8px; }
+  .callout ul { padding-left: 18px; }
+  .callout li { margin: 4px 0; font-size: 0.88em; }
+  ul { padding-left: 18px; }
+  li { margin: 3px 0; font-size: 0.88em; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  @media (max-width: 600px) { .stat-grid { grid-template-columns: repeat(2, 1fr); } }
+  .stat { background: rgba(255,255,255,0.03); padding: 12px; border-radius: 6px; text-align: center; }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: #fff; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
+  .toc { background: rgba(88,166,255,0.05); border: 1px solid rgba(88,166,255,0.2); border-radius: 8px; padding: 16px 20px; margin-bottom: 20px; }
+  .toc-title { color: var(--accent); font-weight: 700; font-size: 0.9em; margin-bottom: 8px; }
+  .toc a { color: var(--accent); text-decoration: none; font-size: 0.88em; }
+  .toc a:hover { text-decoration: underline; }
+  .toc ol { padding-left: 20px; }
+  .toc li { margin: 4px 0; }
+  .nav-links { display: flex; justify-content: space-between; margin: 20px 0; font-size: 0.85em; }
+  .nav-links a { color: var(--accent); text-decoration: none; }
+  .nav-links a:hover { text-decoration: underline; }
+  .footer { text-align: center; color: var(--muted); font-size: 0.75em; margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--border); }
+  .vs-table { width: 100%; border-collapse: collapse; margin: 10px 0; font-size: 0.85em; }
+  .vs-table th { color: var(--muted); font-size: 0.75em; text-transform: uppercase; padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--border); }
+  .vs-table td { padding: 6px 10px; border-bottom: 1px solid rgba(48,54,61,0.3); }
+  .vs-table .num-pos { color: var(--green); font-weight: 600; }
+  .vs-table .num-neg { color: var(--red); font-weight: 600; }
+</style>
+</head>
+<body>
+
+<h1>Bloomberg Research Digest</h1>
+<p class="subtitle">Issue #2 of 3 | Japan Macro & Global Equity Markets</p>
+<span class="issue-badge">March 2026</span>
+
+<div class="nav-links">
+  <a href="newsletter_1_trade_geopolitics.html">&larr; Issue #1: Trade War & Geopolitics</a>
+  <a href="newsletter_3_tech_macro.html">Issue #3: Tech/AI & Macro &rarr;</a>
+</div>
+
+<div class="toc">
+  <div class="toc-title">Contents</div>
+  <ol>
+    <li><a href="#japan">Japan: BOJ Policy & Fiscal Strategy</a></li>
+    <li><a href="#us-equity">US Equity: Stagflation Signal & Rotation</a></li>
+    <li><a href="#eu-equity">European & UK Equity Outlook</a></li>
+    <li><a href="#takeaways">Key Takeaways for Fund Managers</a></li>
+  </ol>
+</div>
+
+<!-- ======== JAPAN ======== -->
+<div class="section" id="japan">
+  <h2><span class="tag tag-japan">JAPAN</span> BOJ Policy, Takaichi Fiscal Strategy & CPI</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--yellow)">1.8%</div><div class="lbl">Tokyo Core CPI<br>(slowing)</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">2.5%</div><div class="lbl">Core-Core CPI<br>(accelerating!)</div></div>
+    <div class="stat"><div class="val">July</div><div class="lbl">Expected next<br>BOJ rate hike</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">Three Fixes to Make Takaichi's Fiscal Bet Pay Off</div>
+    <p>PM Sanae Takaichi's fiscal expansion strategy is sound, but success requires three critical reforms: (1) deploy AI to fill labour gaps (<span style="color:#fff;font-weight:700">&yen;1 trillion</span> allocated), (2) grant BOJ more independence from government pressure, (3) relax rigid employment regulations that inhibit innovation.</p>
+    <div class="implication">
+      <div class="label">Investment Implication</div>
+      Fiscal expansion without structural reform risks capital flowing to interest-sensitive sectors (real estate) rather than productivity-enhancing industries. Success requires coordinated AI investment, monetary independence, and labour liberalisation.
+    </div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">Takaichi BOJ Board Picks Signal Dovish Tilt</div>
+    <div class="article-title-cn">高市早苗提名人選預示日本央行政策或趨向鴿派</div>
+    <p>Two dovish economists (Toichiro Asada, Ayano Sato) nominated to the 9-member BOJ policy board. BOJ expected to move cautiously, with next rate hike likely in <span style="color:#fff;font-weight:700">July</span>, not before. Ruling coalition lacks upper house majority, requiring opposition support.</p>
+    <div class="implication">
+      <div class="label">Investment Implication</div>
+      Softer BOJ stance supports weak yen and keeps real rates negative longer. The yen carry trade has extended runway, but watch for opposition blocking nominees on cost-of-living concerns.
+    </div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">Tokyo CPI Softened by Subsidies &mdash; But Underlying Inflation Sticky</div>
+    <div class="article-title-cn">東京CPI因補貼效應走軟意味央行可放緩加息步伐</div>
+    <p>February Tokyo CPI softened to 1.6% (subsidies reducing headline by 0.25pp). Core CPI slowed from 2.0% to 1.8%. But core-core (ex-food &amp; energy) <span style="color:#fff;font-weight:700">accelerated to 2.5%</span>, signalling underlying wage-price spiral persists.</p>
+    <div class="implication">
+      <div class="label">Investment Implication</div>
+      Subsidies mask inflation reality. When they expire, repricing may force faster hikes. BOJ likely pauses until July &mdash; but sticky core-core means the hiking cycle isn't over, just delayed.
+    </div>
+  </div>
+</div>
+
+<!-- ======== US EQUITY ======== -->
+<div class="section" id="us-equity">
+  <h2><span class="tag tag-us">US EQUITY</span> <span class="tag tag-vol">VOLATILITY</span> Stagflation Signal & Equity Rotation</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--red)">1.4%</div><div class="lbl">Q4 2025 GDP<br>(below est.)</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">3.0%</div><div class="lbl">Core PCE<br>(annual, rising)</div></div>
+    <div class="stat"><div class="val" style="color:var(--green)">60%</div><div class="lbl">Active managers<br>beating benchmark</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">S&P 500 Slumps: Weaker Growth, Stubborn Inflation</div>
+    <p>US equities caught between slowing growth (Q4 GDP <span style="color:#fff;font-weight:700">1.4%</span> vs. ~2% expected) and sticky inflation (core PCE 0.4% in December, highest in nearly a year). Tech stocks down 4% YTD while energy/materials rallied 15%+. Active managers outperforming at highest rate since 2007.</p>
+    <div class="implication">
+      <div class="label">Investment Implication</div>
+      Stagflationary backdrop favours stock-pickers over index exposure. Rotation away from mega-cap Tech into cyclicals (energy, materials) suggests value revival &mdash; but risks reverse if growth concerns intensify.
+    </div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">Equity Rotation Lifts Dispersion, But Value Is Harder to Find</div>
+    <p>Rotation from broad beta to stock-specific moves has pushed realised dispersion to historical highs. SPX realised correlation sits in the <span style="color:#fff;font-weight:700">6th percentile</span> (10-year history). Single-stock implied volatility elevated mid-30s vs. pre-COVID mid-20s. However, derivatives markets already price this &mdash; making dispersion trades richly valued.</p>
+
+    <table class="vs-table">
+      <tr><th>Outperforming</th><th>Underperforming</th></tr>
+      <tr><td class="num-pos">Commodities, Utilities, Telecom</td><td class="num-neg">Consumer Discretionary, Media, Tech</td></tr>
+      <tr><td class="num-pos">Healthcare, Energy, Materials</td><td class="num-neg">Mega-cap Growth</td></tr>
+    </table>
+
+    <div class="implication">
+      <div class="label">Investment Implication</div>
+      Long dispersion bets face headwinds &mdash; already priced. Micro-driven markets vulnerable to broad repricing if macro catalysts force correlation spikes. Prefer single-stock vol over index positions.
+    </div>
+  </div>
+</div>
+
+<!-- ======== EUROPE / UK EQUITY ======== -->
+<div class="section" id="eu-equity">
+  <h2><span class="tag tag-eu">EUROPE</span> <span class="tag tag-uk">UK</span> European & UK Equity Outlook</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val">16x</div><div class="lbl">Stoxx 600 fwd P/E<br>(20yr avg: 13.3x)</div></div>
+    <div class="stat"><div class="val" style="color:var(--green)">14.5x</div><div class="lbl">FTSE 100 fwd P/E<br>(cheapest major)</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">21.3x</div><div class="lbl">S&P 500 fwd P/E<br>(most expensive)</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">Strategists Say European Markets Already Peaked</div>
+    <p>Stoxx Europe 600 expected to <span style="color:#fff;font-weight:700">end 2026 flat</span> from ~630 all-time high despite 5% YTD gains. Valuation at 16x forward earnings (20-year average: 13.3x) with demanding double-digit earnings growth expectations. 8 consecutive months of gains; EPS revisions negative for internationally-exposed stocks.</p>
+    <div class="implication">
+      <div class="label">Investment Implication</div>
+      European equities near peak with limited upside. Prefer domestic-oriented over international stocks. Heavy fiscal support and low rates provide floor, but earnings compression risk if growth disappoints.
+    </div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">FTSE 100 Offers Haven Appeal in Troubled Times</div>
+    <p>FTSE 100 outperformed peers during Iran escalation: commodities exposure (18%), defensives (health + staples 30%), aerospace/defence (7.4%). <span style="color:#fff;font-weight:700">75% of revenue earned outside UK</span> (28% North America) benefits from weak pound. Valuation at 14.5x &mdash; compelling vs. US (21.3x) and Japan (23x). Fund managers net 15% underweight (down from 24%).</p>
+    <div class="implication">
+      <div class="label">Investment Implication</div>
+      FTSE 100 is the geopolitical hedge in equity markets. Weak pound tailwind, AI-shielded "HALO" names, and pension forced-selling completion create upside. Best risk/reward among major indices at current valuations.
+    </div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">SpaceX Mega IPO Reshapes 2026 Listing Landscape</div>
+    <p>SpaceX's potential mega IPO is reshaping the 2026 listing calendar, absorbing liquidity and setting valuation benchmarks for tech/space sector. DraftKings' prediction-market risk may be overstated at current low valuations. UBS carries hidden Credit Suisse tail risk the market may be underpricing.</p>
+  </div>
+</div>
+
+<!-- ======== TAKEAWAYS ======== -->
+<div class="callout" id="takeaways">
+  <div class="callout-title">Key Takeaways for Fund Managers</div>
+  <ul>
+    <li><strong>Japan:</strong> Dovish BOJ tilt extends yen carry trade runway. Next hike delayed to July. But core-core CPI at 2.5% means the hiking cycle isn't dead &mdash; just postponed. Monitor subsidy expiry timing.</li>
+    <li><strong>US Equities:</strong> Stagflationary signal (weak GDP + sticky PCE). Rotation from Tech into commodities/defensives. 60% of active managers beating benchmarks &mdash; best environment for stock-picking since 2007.</li>
+    <li><strong>Dispersion:</strong> At historical highs but already priced in derivatives. Long dispersion crowded. Vulnerable to macro-driven correlation spike.</li>
+    <li><strong>Europe:</strong> Peaked at 16x. Limited upside. Prefer domestic over export-dependent names.</li>
+    <li><strong>UK/FTSE:</strong> Best risk/reward at 14.5x. Geopolitical hedge, weak pound tailwind, defensive sector mix. Underweight positioning still being unwound.</li>
+    <li><strong>UBS:</strong> Hidden Credit Suisse tail risk likely underpriced by the market.</li>
+  </ul>
+</div>
+
+<div class="nav-links">
+  <a href="newsletter_1_trade_geopolitics.html">&larr; Issue #1: Trade War & Geopolitics</a>
+  <a href="newsletter_3_tech_macro.html">Issue #3: Tech/AI & Macro &rarr;</a>
+</div>
+
+<div class="footer">
+  Bloomberg Research Digest | Compiled for educational purposes | March 2026<br>
+  Based on Bloomberg Intelligence, Bloomberg Economics, and Bloomberg Opinion articles<br>
+  Not investment advice. For discussion and learning only.
+</div>
+
+</body>
+</html>

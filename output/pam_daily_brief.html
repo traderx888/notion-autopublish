@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PAM 每日簡報 — 2026年3月9日</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --accent: #58a6ff;
+          --green: #3fb950; --red: #f85149; --yellow: #d29922; --text: #c9d1d9; --muted: #8b949e; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans TC', 'Microsoft JhengHei', Helvetica, Arial, sans-serif; line-height: 1.7; padding: 20px; max-width: 800px; margin: 0 auto; }
+  h1 { color: #fff; font-size: 1.6em; margin-bottom: 4px; }
+  .subtitle { color: var(--muted); font-size: 0.9em; margin-bottom: 24px; }
+  .tag { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 0.75em; font-weight: 600; margin-right: 6px; }
+  .tag-short { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-hedge { background: rgba(210,153,34,0.15); color: var(--yellow); }
+  .tag-neutral { background: rgba(88,166,255,0.15); color: var(--accent); }
+  .section { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 16px; }
+  .section h2 { color: #fff; font-size: 1.15em; margin-bottom: 12px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+  .section h3 { color: var(--accent); font-size: 0.95em; margin: 14px 0 6px; }
+  .trade { background: rgba(88,166,255,0.06); border-left: 3px solid var(--accent); padding: 10px 14px; margin: 8px 0; border-radius: 0 6px 6px 0; font-size: 0.9em; }
+  .trade .label { color: var(--muted); font-size: 0.8em; }
+  .trade .fill { color: #fff; font-weight: 600; }
+  .buy { border-left-color: var(--green); }
+  .buy .fill { color: var(--green); }
+  .sell { border-left-color: var(--red); }
+  .sell .fill { color: var(--red); }
+  .phase { margin: 10px 0; padding: 10px 14px; background: rgba(255,255,255,0.03); border-radius: 6px; }
+  .phase-label { font-weight: 700; color: var(--accent); font-size: 0.85em; }
+  .prob { display: inline-block; padding: 1px 6px; border-radius: 4px; font-size: 0.8em; font-weight: 600; }
+  .prob-high { background: rgba(63,185,80,0.15); color: var(--green); }
+  .prob-med { background: rgba(210,153,34,0.15); color: var(--yellow); }
+  .prob-low { background: rgba(248,81,73,0.15); color: var(--red); }
+  .key-num { color: #fff; font-weight: 700; }
+  .callout { background: rgba(210,153,34,0.08); border: 1px solid rgba(210,153,34,0.3); border-radius: 6px; padding: 14px; margin: 12px 0; }
+  .callout-title { color: var(--yellow); font-weight: 700; font-size: 0.9em; margin-bottom: 4px; }
+  ul { padding-left: 20px; }
+  li { margin: 4px 0; font-size: 0.9em; }
+  .footer { text-align: center; color: var(--muted); font-size: 0.75em; margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--border); }
+  .stat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 10px 0; }
+  .stat { background: rgba(255,255,255,0.03); padding: 10px; border-radius: 6px; text-align: center; }
+  .stat .val { font-size: 1.3em; font-weight: 700; color: #fff; }
+  .stat .lbl { font-size: 0.75em; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<h1>PAM 每日簡報</h1>
+<p class="subtitle">Robert Balan SIGMA-G 期權結構分析 | 2026年3月9日 (週一)</p>
+<p style="margin-bottom: 16px;">
+  <span class="tag tag-short">淨空頭</span>
+  <span class="tag tag-neutral">收盤 Delta 中性</span>
+  <span class="tag tag-hedge">回補對沖倉位中</span>
+</p>
+
+<!-- Key Stats -->
+<div class="section">
+  <h2>盤面概覽</h2>
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--red)">6635</div><div class="lbl">SPX 盤中低點</div></div>
+    <div class="stat"><div class="val" style="color:var(--green)">6796</div><div class="lbl">SPX 盤中高點</div></div>
+    <div class="stat"><div class="val">161 點</div><div class="lbl">日內振幅</div></div>
+    <div class="stat"><div class="val">25.24</div><div class="lbl">VIX 收盤 (開盤 31.42)</div></div>
+  </div>
+  <p style="font-size:0.85em; color:var(--muted); margin-top:8px;">危機以來最大日內振幅。四希臘值匯聚(Four-Greek Convergence)製造早盤急殺，之後 Vanna 回補買盤徹底壓過所有結構性阻力反彈。</p>
+</div>
+
+<!-- Trades -->
+<div class="section">
+  <h2>交易紀錄</h2>
+
+  <h3>亞洲開盤 — 原油轉弱，獲利了結窗口</h3>
+  <p style="font-size:0.85em; margin-bottom:8px;">荷姆茲海峽恢復通行 + Lloyds 恢復油輪保險。Balan 提醒：週一亞洲盤後不要持空太久。</p>
+
+  <div class="trade buy">
+    <div class="label">06:44 HKT — 回補第一批空頭剝頭皮倉 (3月6日建倉)</div>
+    <div class="fill">ESH26 @ 6633 | NQH26 @ 24,271</div>
+  </div>
+
+  <div class="trade buy">
+    <div class="label">07:12 HKT — 回補第二批，PAM 轉為 Delta 中性</div>
+    <div class="fill">ESH26 @ 6640.50 | NQH26 @ 24,300</div>
+  </div>
+
+  <h3>紐約時段 — 觀察重新進場時機</h3>
+  <p style="font-size:0.85em; margin-bottom:8px;">原油兩小時內暴跌 $17，因 G7 考慮釋放戰略石油儲備。SPX 在 Vanna 回補買盤推動下大幅反彈。</p>
+
+  <div class="trade buy">
+    <div class="label">23:49 HKT — 掛單：SPX 跌回 6690 時回補 1月21日空頭對沖倉</div>
+    <div class="fill">限價單已掛出</div>
+  </div>
+
+  <h3>3月10日凌晨 — 成交</h3>
+  <div class="trade buy">
+    <div class="label">02:06 HKT — 回補 1月21日空頭對沖倉</div>
+    <div class="fill">ESH26 @ 6706 | NQH26 @ 24,611.50</div>
+  </div>
+</div>
+
+<!-- SIGMA-G Analysis -->
+<div class="section">
+  <h2>SIGMA-G 更新 2 — 四階段盤面解讀</h2>
+  <p style="font-size:0.85em; margin-bottom:12px;">看空論點（匯聚急殺）和看多論點（結構性悖論 + Vanna 回補）在同一個交易日內同時得到驗證。</p>
+
+  <div class="phase">
+    <div class="phase-label">第一階段：四希臘值匯聚 (9:30-10:00 ET)</div>
+    <p style="font-size:0.85em;">SPX 從 6694 跳空跌至 <span class="key-num">6635</span>。四個希臘值全部偏空：GEX -8.54、DEX +7,760、VEX -2,511、CEX +19.57。匯聚論點完全兌現。</p>
+  </div>
+
+  <div class="phase">
+    <div class="phase-label">第二階段：Vanna 回補啟動 (10:00-11:30 ET)</div>
+    <p style="font-size:0.85em;">VIX 從 31.42 壓縮至 28.37。結構性悖論啟動 — 客戶賣出 Put 讓造市商獲得 Long Gamma，止住跌勢。VIX 下跌 6 點迫使造市商機械性回補期貨空頭。SPX 從 6635 反彈至 <span class="key-num">6720</span>。</p>
+  </div>
+
+  <div class="phase">
+    <div class="phase-label">第三階段：盤整 (11:30-14:00 ET)</div>
+    <p style="font-size:0.85em;">在 6690-6740 區間震盪。Vanna 動能暫歇。0DTE GEX 翻正。6755 形成超級堡壘（+85.99 GEX）。</p>
+  </div>
+
+  <div class="phase">
+    <div class="phase-label">第四階段：Vanna 第二波 (14:00-15:30 ET)</div>
+    <p style="font-size:0.85em;">VIX 進一步崩至 <span class="key-num">25.24</span>，觸發第二波機械性回補買盤。SPX 突破 6755 超級堡壘，一路拉升至 <span class="key-num">6796</span>。堡壘從天花板變成了發射台。</p>
+  </div>
+
+  <div class="callout">
+    <div class="callout-title">核心教訓</div>
+    <p style="font-size:0.85em;">當 VIX 日內壓縮超過 4 點，Vanna 機制會完全壓過 0DTE GEX 結構。此時執行價層面的分析變成 Vanna 浪潮的路線圖，而非結算預測。</p>
+  </div>
+</div>
+
+<!-- Vanna Mechanic -->
+<div class="section">
+  <h2>Vanna 機制 — 為何反彈壓過一切結構</h2>
+  <ul>
+    <li>早盤急殺推動 VIX 至 31.42 — 造市商做空期貨對沖 Put 曝險</li>
+    <li>價格在 6635 穩住（接近 6620 堡壘位）</li>
+    <li>VIX 壓縮幅度：31.42 → 25.24 = <span class="key-num">6.18 點</span></li>
+    <li>VEX 為 -2,511 → 每跌 1 點波動率 ≈ $25 億機械性買盤</li>
+    <li>全日 Vanna 驅動買盤估算：<span class="key-num">超過 $150 億</span></li>
+    <li>GEX 支撐位 (6690、6710、6730) 變成 Vanna 浪潮的踏腳石，而非結算目標</li>
+  </ul>
+</div>
+
+<!-- Vol Surface -->
+<div class="section">
+  <h2>波動率曲面 (ConvexValue 數據)</h2>
+  <ul>
+    <li><strong>5-delta Put Skew：</strong>高於 ATM +9.7 至 +11.6 波動率點（3月10-12日到期）— 確認極端系統性 Put 需求</li>
+    <li><strong>期限結構：</strong>倒掛。前端 ATM IV 25.6% vs 後端 22.7%。倒掛集中在 3/13 至 3/16 的過渡期</li>
+    <li><strong>25-delta Skew：</strong>從 +1.4 陡升至 +5.0 點，較長期限已突破恐慌門檻</li>
+    <li><strong>解讀：</strong>市場定價崩盤風險至 3月13日，3月16日後預期正常化。與持倉數據完全吻合：3/13 = 4/4 偏空匯聚，3/16+ = 修復區間</li>
+  </ul>
+</div>
+
+<!-- Settlement & Look Ahead -->
+<div class="section">
+  <h2>結算攻防 &amp; 未來展望</h2>
+
+  <h3>收盤結算 (現貨 6796)</h3>
+  <p style="font-size:0.85em; margin-bottom:8px;">主戰場：6795-6815。低於 6795 Charm 賣壓主導，高於 6815 Charm 買盤拉向 6825。</p>
+  <div style="margin: 8px 0;">
+    <span class="prob prob-high">45%</span> 基本情境：6790-6810，收盤附近 6800 震盪
+  </div>
+  <div style="margin: 8px 0;">
+    <span class="prob prob-med">30%</span> 偏多情境：6815-6830，6825 磁吸位 (+20.31 GEX) 若觸及則為最強吸引點
+  </div>
+  <div style="margin: 8px 0;">
+    <span class="prob prob-low">25%</span> 回落情境：6770-6790，Charm 賣壓勝出，結算在 6775-6780 支撐
+  </div>
+
+  <h3>本週展望</h3>
+  <ul>
+    <li><strong>3/10 (二)：</strong>混合態勢 (GEX -5.63, DEX +565)。預計區間震盪，無法順勢延伸</li>
+    <li><strong>3/11-12 (三四)：</strong>修復窗口。3/4 至 4/4 偏多。若 VIX 降至 22-23，結構上支持顯著反彈</li>
+    <li><strong>3/13 (五)：</strong>下一個考驗。4/4 偏空匯聚，VEX -6,036。連續第五週的週五 Put 對沖模式。多頭陷阱論點將在此驗證</li>
+  </ul>
+</div>
+
+<!-- Bottom Thesis -->
+<div class="section">
+  <h2>底部論點 — 更新</h2>
+  <p style="font-size:0.9em;">6635 作為階段性底部的論據進一步強化：</p>
+  <ul>
+    <li>結構性悖論啟動（崩盤構建修復基礎）— <strong style="color:var(--green)">已確認</strong></li>
+    <li>Vanna 回補帶來 161 點反彈 — <strong style="color:var(--green)">已確認</strong></li>
+    <li>VIX 壓縮至 25.24，接近黃/紅分界線 (25) — <strong style="color:var(--yellow)">接近中</strong></li>
+  </ul>
+</div>
+
+<div class="footer">
+  <p>來源：Robert P. Balan, PAM Advisory Service (Seeking Alpha) | SIGMA-G Update 2</p>
+  <p>數據：OptionsDepth (已驗證) + ConvexValue 波動率曲面</p>
+  <p style="margin-top:8px;">本文為基於期權造市商持倉的結構分析，並非投資建議。</p>
+</div>
+
+</body>
+</html>

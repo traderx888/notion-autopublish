@@ -1,0 +1,44 @@
+{
+  "excel": {
+    "path_env": "LIQUIDITY_EXCEL_PATH",
+    "glob": "W_*.xlsx",
+    "sheet_name": "Sheet 1",
+    "metrics": {
+      "level": {
+        "match_column": "Ticker",
+        "match_text": "Federal Reserve Money Supply M",
+        "value_column": "Last Px (1 Year)"
+      },
+      "mom_5d": {
+        "match_column": "Ticker",
+        "match_text": "United States SOFR Secured Ove",
+        "value_column": "%1D",
+        "multiplier": -1
+      },
+      "mom_20d": {
+        "match_column": "Ticker",
+        "match_text": "United States SOFR Secured Ove",
+        "value_column": "%1M",
+        "multiplier": -1
+      }
+    }
+  },
+  "screenshot": {
+    "dir_env": "LIQUIDITY_SCREENSHOT_DIR",
+    "glob": "*.png",
+    "recursive": true,
+    "ocr_patterns": {
+      "repo_stress": "SOFR|repo|funding stress|fails",
+      "risk_off": "risk off|defensive|cash",
+      "liquidity_down": "liquidity.*(down|lower|contracting|peaking)",
+      "liquidity_up": "liquidity.*(up|higher|expanding|easing)"
+    }
+  },
+  "thresholds": {
+    "mom_5d_positive": 0.5,
+    "mom_5d_negative": -0.5,
+    "mom_20d_positive": 1.5,
+    "mom_20d_negative": -1.5,
+    "urgent_alert_min_hits": 2
+  }
+}

@@ -1,0 +1,1998 @@
+{
+  "success": true,
+  "elements": [
+    {
+      "id": "title",
+      "type": "text",
+      "x": 470,
+      "y": 20,
+      "width": 360,
+      "height": 40,
+      "strokeColor": "#1e1e1e",
+      "text": "Telegram Alert Map",
+      "fontSize": 30,
+      "fontFamily": "1",
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "subtitle",
+      "type": "text",
+      "x": 280,
+      "y": 62,
+      "width": 760,
+      "height": 44,
+      "strokeColor": "#495057",
+      "text": "Generated from normalized records. Live scheduled alerts and repo-only senders use separate lanes.",
+      "fontSize": 16,
+      "fontFamily": "1",
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "lane-live_scheduler",
+      "type": "rectangle",
+      "x": 24,
+      "y": 118.0,
+      "width": 980,
+      "height": 2772.0,
+      "backgroundColor": "#e7f5ff",
+      "strokeColor": "#74c0fc",
+      "strokeStyle": "solid",
+      "opacity": 40,
+      "label": {
+        "text": ""
+      },
+      "roundness": {
+        "type": 3
+      },
+      "fillStyle": "solid",
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "lane-title-live_scheduler",
+      "type": "text",
+      "x": 40,
+      "y": 124.0,
+      "width": 420,
+      "height": 24,
+      "strokeColor": "#1e1e1e",
+      "text": "Live Scheduler Tasks",
+      "fontSize": 18,
+      "fontFamily": "1",
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "card-sector_heatmap",
+      "type": "rectangle",
+      "x": 42.0,
+      "y": 146.0,
+      "width": 430.0,
+      "height": 78.0,
+      "backgroundColor": "#d0ebff",
+      "strokeColor": "#1c7ed6",
+      "strokeStyle": "solid",
+      "label": {
+        "text": "Sector Heatmap\n15:30 HKT\nSector screenshot flow and heatmap capture"
+      },
+      "roundness": {
+        "type": 3
+      },
+      "fillStyle": "solid",
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "arrow-sector_heatmap",
+      "type": "arrow",
+      "x": 472.0,
+      "y": 185.0,
+      "strokeColor": "#495057",
+      "strokeStyle": "solid",
+      "label": {
+        "text": ""
+      },
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          638.0,
+          1786.0
+        ]
+      ],
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "card-morning_digest",
+      "type": "rectangle",
+      "x": 42.0,
+      "y": 242.0,
+      "width": 430.0,
+      "height": 78.0,
+      "backgroundColor": "#d0ebff",
+      "strokeColor": "#1c7ed6",
+      "strokeStyle": "solid",
+      "label": {
+        "text": "Morning Digest\n07:00 HKT\nMorning synthesis across core sources"
+      },
+      "roundness": {
+        "type": 3
+      },
+      "fillStyle": "solid",
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "arrow-morning_digest",
+      "type": "arrow",
+      "x": 472.0,
+      "y": 281.0,
+      "strokeColor": "#495057",
+      "strokeStyle": "solid",
+      "label": {
+        "text": ""
+      },
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          638.0,
+          1690.0
+        ]
+      ],
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "card-daily_synthesis",
+      "type": "rectangle",
+      "x": 42.0,
+      "y": 338.0,
+      "width": 430.0,
+      "height": 78.0,
+      "backgroundColor": "#d0ebff",
+      "strokeColor": "#1c7ed6",
+      "strokeStyle": "solid",
+      "label": {
+        "text": "Daily Synthesis\n19:00 HKT\nEvening multi-source synthesis update"
+      },
+      "roundness": {
+        "type": 3
+      },
+      "fillStyle": "solid",
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "arrow-daily_synthesis",
+      "type": "arrow",
+      "x": 472.0,
+      "y": 377.0,
+      "strokeColor": "#495057",
+      "strokeStyle": "solid",
+      "label": {
+        "text": ""
+      },
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          638.0,
+          1594.0
+        ]
+      ],
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "card-evening_digest",
+      "type": "rectangle",
+      "x": 42.0,
+      "y": 434.0,
+      "width": 430.0,
+      "height": 78.0,
+      "backgroundColor": "#d0ebff",
+      "strokeColor": "#1c7ed6",
+      "strokeStyle": "solid",
+      "label": {
+        "text": "Evening Digest\n21:00 HKT\nEvening synthesis across core sources"
+      },
+      "roundness": {
+        "type": 3
+      },
+      "fillStyle": "solid",
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "arrow-evening_digest",
+      "type": "arrow",
+      "x": 472.0,
+      "y": 473.0,
+      "strokeColor": "#495057",
+      "strokeStyle": "solid",
+      "label": {
+        "text": ""
+      },
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          638.0,
+          1498.0
+        ]
+      ],
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "card-night_digest",
+      "type": "rectangle",
+      "x": 42.0,
+      "y": 530.0,
+      "width": 430.0,
+      "height": 78.0,
+      "backgroundColor": "#d0ebff",
+      "strokeColor": "#1c7ed6",
+      "strokeStyle": "solid",
+      "label": {
+        "text": "Night Digest\n23:30 HKT\nLate-night synthesis across core sources"
+      },
+      "roundness": {
+        "type": 3
+      },
+      "fillStyle": "solid",
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "arrow-night_digest",
+      "type": "arrow",
+      "x": 472.0,
+      "y": 569.0,
+      "strokeColor": "#495057",
+      "strokeStyle": "solid",
+      "label": {
+        "text": ""
+      },
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          638.0,
+          1402.0
+        ]
+      ],
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "card-crypto_etf_flow_am",
+      "type": "rectangle",
+      "x": 42.0,
+      "y": 626.0,
+      "width": 430.0,
+      "height": 78.0,
+      "backgroundColor": "#d0ebff",
+      "strokeColor": "#1c7ed6",
+      "strokeStyle": "solid",
+      "label": {
+        "text": "Crypto ETF Flow (AM)\n09:00 HKT\nPre-Market Crypto ETF cash flow summary"
+      },
+      "roundness": {
+        "type": 3
+      },
+      "fillStyle": "solid",
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "arrow-crypto_etf_flow_am",
+      "type": "arrow",
+      "x": 472.0,
+      "y": 665.0,
+      "strokeColor": "#495057",
+      "strokeStyle": "solid",
+      "label": {
+        "text": ""
+      },
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          638.0,
+          1306.0
+        ]
+      ],
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "card-crypto_etf_flow_mid",
+      "type": "rectangle",
+      "x": 42.0,
+      "y": 722.0,
+      "width": 430.0,
+      "height": 78.0,
+      "backgroundColor": "#d0ebff",
+      "strokeColor": "#1c7ed6",
+      "strokeStyle": "solid",
+      "label": {
+        "text": "Crypto ETF Flow (Mid)\n11:50 HKT\nMidday Crypto ETF cash flow update"
+      },
+      "roundness": {
+        "type": 3
+      },
+      "fillStyle": "solid",
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "arrow-crypto_etf_flow_mid",
+      "type": "arrow",
+      "x": 472.0,
+      "y": 761.0,
+      "strokeColor": "#495057",
+      "strokeStyle": "solid",
+      "label": {
+        "text": ""
+      },
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          638.0,
+          1210.0
+        ]
+      ],
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "card-crypto_news_daily",
+      "type": "rectangle",
+      "x": 42.0,
+      "y": 818.0,
+      "width": 430.0,
+      "height": 78.0,
+      "backgroundColor": "#d0ebff",
+      "strokeColor": "#1c7ed6",
+      "strokeStyle": "solid",
+      "label": {
+        "text": "Crypto Daily News\n11:00 HKT\nTop 8 Chinese + English crypto headlines"
+      },
+      "roundness": {
+        "type": 3
+      },
+      "fillStyle": "solid",
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "arrow-crypto_news_daily",
+      "type": "arrow",
+      "x": 472.0,
+      "y": 857.0,
+      "strokeColor": "#495057",
+      "strokeStyle": "solid",
+      "label": {
+        "text": ""
+      },
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          638.0,
+          1114.0
+        ]
+      ],
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "card-deepvue_dashboard",
+      "type": "rectangle",
+      "x": 42.0,
+      "y": 914.0,
+      "width": 430.0,
+      "height": 78.0,
+      "backgroundColor": "#d0ebff",
+      "strokeColor": "#1c7ed6",
+      "strokeStyle": "solid",
+      "label": {
+        "text": "DeepVue Dashboard\n15:30 HKT\nDeepVue market overview and screen brief"
+      },
+      "roundness": {
+        "type": 3
+      },
+      "fillStyle": "solid",
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "arrow-deepvue_dashboard",
+      "type": "arrow",
+      "x": 472.0,
+      "y": 953.0,
+      "strokeColor": "#495057",
+      "strokeStyle": "solid",
+      "label": {
+        "text": ""
+      },
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          638.0,
+          1018.0
+        ]
+      ],
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "card-southbound",
+      "type": "rectangle",
+      "x": 42.0,
+      "y": 1010.0,
+      "width": 430.0,
+      "height": 78.0,
+      "backgroundColor": "#d0ebff",
+      "strokeColor": "#1c7ed6",
+      "strokeStyle": "solid",
+      "label": {
+        "text": "Southbound Flow\n15:30 HKT\nSouthbound screenshot and screen brief"
+      },
+      "roundness": {
+        "type": 3
+      },
+      "fillStyle": "solid",
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "arrow-southbound",
+      "type": "arrow",
+      "x": 472.0,
+      "y": 1049.0,
+      "strokeColor": "#495057",
+      "strokeStyle": "solid",
+      "label": {
+        "text": ""
+      },
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          638.0,
+          922.0
+        ]
+      ],
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "card-jarvis_excel_sync_am",
+      "type": "rectangle",
+      "x": 42.0,
+      "y": 1106.0,
+      "width": 430.0,
+      "height": 78.0,
+      "backgroundColor": "#d0ebff",
+      "strokeColor": "#1c7ed6",
+      "strokeStyle": "solid",
+      "label": {
+        "text": "Jarvis Excel Sync AM\n10:30 HKT\nExcel sync workflow"
+      },
+      "roundness": {
+        "type": 3
+      },
+      "fillStyle": "solid",
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "arrow-jarvis_excel_sync_am",
+      "type": "arrow",
+      "x": 472.0,
+      "y": 1145.0,
+      "strokeColor": "#495057",
+      "strokeStyle": "solid",
+      "label": {
+        "text": ""
+      },
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          638.0,
+          826.0
+        ]
+      ],
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "card-jarvis_excel_sync_pm",
+      "type": "rectangle",
+      "x": 42.0,
+      "y": 1202.0,
+      "width": 430.0,
+      "height": 78.0,
+      "backgroundColor": "#d0ebff",
+      "strokeColor": "#1c7ed6",
+      "strokeStyle": "solid",
+      "label": {
+        "text": "Jarvis Excel Sync PM\n21:00 HKT\nExcel sync workflow"
+      },
+      "roundness": {
+        "type": 3
+      },
+      "fillStyle": "solid",
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "arrow-jarvis_excel_sync_pm",
+      "type": "arrow",
+      "x": 472.0,
+      "y": 1241.0,
+      "strokeColor": "#495057",
+      "strokeStyle": "solid",
+      "label": {
+        "text": ""
+      },
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          638.0,
+          730.0
+        ]
+      ],
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "card-georisk",
+      "type": "rectangle",
+      "x": 42.0,
+      "y": 1298.0,
+      "width": 430.0,
+      "height": 78.0,
+      "backgroundColor": "#d0ebff",
+      "strokeColor": "#1c7ed6",
+      "strokeStyle": "solid",
+      "label": {
+        "text": "GeoRisk Update\n20:00 HKT\nGeopolitics risk monitor and Telegram update"
+      },
+      "roundness": {
+        "type": 3
+      },
+      "fillStyle": "solid",
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "arrow-georisk",
+      "type": "arrow",
+      "x": 472.0,
+      "y": 1337.0,
+      "strokeColor": "#495057",
+      "strokeStyle": "solid",
+      "label": {
+        "text": ""
+      },
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          638.0,
+          634.0
+        ]
+      ],
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "card-jarvis_cbbc_tracker_am",
+      "type": "rectangle",
+      "x": 42.0,
+      "y": 1394.0,
+      "width": 430.0,
+      "height": 78.0,
+      "backgroundColor": "#d0ebff",
+      "strokeColor": "#1c7ed6",
+      "strokeStyle": "solid",
+      "label": {
+        "text": "HK CBBC Tracker (牛熊證)\n09:00 HKT\nSG Warrants bull/bear distribution"
+      },
+      "roundness": {
+        "type": 3
+      },
+      "fillStyle": "solid",
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "arrow-jarvis_cbbc_tracker_am",
+      "type": "arrow",
+      "x": 472.0,
+      "y": 1433.0,
+      "strokeColor": "#495057",
+      "strokeStyle": "solid",
+      "label": {
+        "text": ""
+      },
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          638.0,
+          538.0
+        ]
+      ],
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "card-usdata",
+      "type": "rectangle",
+      "x": 42.0,
+      "y": 1490.0,
+      "width": 430.0,
+      "height": 78.0,
+      "backgroundColor": "#d0ebff",
+      "strokeColor": "#1c7ed6",
+      "strokeStyle": "solid",
+      "label": {
+        "text": "US Data Calendar\n18:30 HKT\nCalendar screenshot and macro data table"
+      },
+      "roundness": {
+        "type": 3
+      },
+      "fillStyle": "solid",
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "arrow-usdata",
+      "type": "arrow",
+      "x": 472.0,
+      "y": 1529.0,
+      "strokeColor": "#495057",
+      "strokeStyle": "solid",
+      "label": {
+        "text": ""
+      },
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          638.0,
+          442.0
+        ]
+      ],
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "card-jarvis_full",
+      "type": "rectangle",
+      "x": 42.0,
+      "y": 1586.0,
+      "width": 430.0,
+      "height": 78.0,
+      "backgroundColor": "#d0ebff",
+      "strokeColor": "#1c7ed6",
+      "strokeStyle": "solid",
+      "label": {
+        "text": "JARVIS Full\n05:00 HKT\nFull controller run"
+      },
+      "roundness": {
+        "type": 3
+      },
+      "fillStyle": "solid",
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "arrow-jarvis_full",
+      "type": "arrow",
+      "x": 472.0,
+      "y": 1625.0,
+      "strokeColor": "#495057",
+      "strokeStyle": "solid",
+      "label": {
+        "text": ""
+      },
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          638.0,
+          346.0
+        ]
+      ],
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "card-jarvis_light_0950",
+      "type": "rectangle",
+      "x": 42.0,
+      "y": 1682.0,
+      "width": 430.0,
+      "height": 78.0,
+      "backgroundColor": "#d0ebff",
+      "strokeColor": "#1c7ed6",
+      "strokeStyle": "solid",
+      "label": {
+        "text": "JARVIS Light 09:50\n09:50 HKT\nLight controller run"
+      },
+      "roundness": {
+        "type": 3
+      },
+      "fillStyle": "solid",
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "arrow-jarvis_light_0950",
+      "type": "arrow",
+      "x": 472.0,
+      "y": 1721.0,
+      "strokeColor": "#495057",
+      "strokeStyle": "solid",
+      "label": {
+        "text": ""
+      },
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          638.0,
+          250.0
+        ]
+      ],
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "card-jarvis_light_2100",
+      "type": "rectangle",
+      "x": 42.0,
+      "y": 1778.0,
+      "width": 430.0,
+      "height": 78.0,
+      "backgroundColor": "#d0ebff",
+      "strokeColor": "#1c7ed6",
+      "strokeStyle": "solid",
+      "label": {
+        "text": "JARVIS Light 21:00\n21:00 HKT\nLight controller run"
+      },
+      "roundness": {
+        "type": 3
+      },
+      "fillStyle": "solid",
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "arrow-jarvis_light_2100",
+      "type": "arrow",
+      "x": 472.0,
+      "y": 1817.0,
+      "strokeColor": "#495057",
+      "strokeStyle": "solid",
+      "label": {
+        "text": ""
+      },
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          638.0,
+          154.0
+        ]
+      ],
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "card-jarvis_light_2230",
+      "type": "rectangle",
+      "x": 42.0,
+      "y": 1874.0,
+      "width": 430.0,
+      "height": 78.0,
+      "backgroundColor": "#d0ebff",
+      "strokeColor": "#1c7ed6",
+      "strokeStyle": "solid",
+      "label": {
+        "text": "JARVIS Light 22:30\n22:30 HKT\nLight controller run"
+      },
+      "roundness": {
+        "type": 3
+      },
+      "fillStyle": "solid",
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "arrow-jarvis_light_2230",
+      "type": "arrow",
+      "x": 472.0,
+      "y": 1913.0,
+      "strokeColor": "#495057",
+      "strokeStyle": "solid",
+      "label": {
+        "text": ""
+      },
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          638.0,
+          58.0
+        ]
+      ],
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "card-excel",
+      "type": "rectangle",
+      "x": 42.0,
+      "y": 1970.0,
+      "width": 430.0,
+      "height": 78.0,
+      "backgroundColor": "#d0ebff",
+      "strokeColor": "#1c7ed6",
+      "strokeStyle": "solid",
+      "label": {
+        "text": "Excel Reminder\n10:00 HKT\nManual Excel and data reminder"
+      },
+      "roundness": {
+        "type": 3
+      },
+      "fillStyle": "solid",
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "arrow-excel",
+      "type": "arrow",
+      "x": 472.0,
+      "y": 2009.0,
+      "strokeColor": "#495057",
+      "strokeStyle": "solid",
+      "label": {
+        "text": ""
+      },
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          638.0,
+          -38.0
+        ]
+      ],
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "card-story_1030",
+      "type": "rectangle",
+      "x": 42.0,
+      "y": 2066.0,
+      "width": 430.0,
+      "height": 96.0,
+      "backgroundColor": "#d0ebff",
+      "strokeColor": "#1c7ed6",
+      "strokeStyle": "solid",
+      "label": {
+        "text": "Market Storyteller\n10:30 HKT\nNarrative market summary from storyteller\nmodel"
+      },
+      "roundness": {
+        "type": 3
+      },
+      "fillStyle": "solid",
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "arrow-story_1030",
+      "type": "arrow",
+      "x": 472.0,
+      "y": 2114.0,
+      "strokeColor": "#495057",
+      "strokeStyle": "solid",
+      "label": {
+        "text": ""
+      },
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          638.0,
+          -143.0
+        ]
+      ],
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "card-fundman_telegram_ops_listener",
+      "type": "rectangle",
+      "x": 42.0,
+      "y": 2180.0,
+      "width": 430.0,
+      "height": 78.0,
+      "backgroundColor": "#d0ebff",
+      "strokeColor": "#1c7ed6",
+      "strokeStyle": "solid",
+      "label": {
+        "text": "Fundman Telegram Ops Listener\n00:01 HKT\nTelegram operations listener"
+      },
+      "roundness": {
+        "type": 3
+      },
+      "fillStyle": "solid",
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "arrow-fundman_telegram_ops_listener",
+      "type": "arrow",
+      "x": 472.0,
+      "y": 2219.0,
+      "strokeColor": "#495057",
+      "strokeStyle": "solid",
+      "label": {
+        "text": ""
+      },
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          638.0,
+          -248.0
+        ]
+      ],
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "card-schedule_audit",
+      "type": "rectangle",
+      "x": 42.0,
+      "y": 2276.0,
+      "width": 430.0,
+      "height": 78.0,
+      "backgroundColor": "#d0ebff",
+      "strokeColor": "#1c7ed6",
+      "strokeStyle": "solid",
+      "label": {
+        "text": "Telegram Schedule Audit\n06:15 HKT\nCross-repo Telegram schedule drift audit"
+      },
+      "roundness": {
+        "type": 3
+      },
+      "fillStyle": "solid",
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "arrow-schedule_audit",
+      "type": "arrow",
+      "x": 472.0,
+      "y": 2315.0,
+      "strokeColor": "#495057",
+      "strokeStyle": "solid",
+      "label": {
+        "text": ""
+      },
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          638.0,
+          -344.0
+        ]
+      ],
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "card-options_earnings_2100",
+      "type": "rectangle",
+      "x": 42.0,
+      "y": 2372.0,
+      "width": 430.0,
+      "height": 96.0,
+      "backgroundColor": "#d0ebff",
+      "strokeColor": "#1c7ed6",
+      "strokeStyle": "solid",
+      "label": {
+        "text": "Options & Earnings Alert (21:00)\n21:00 HKT\nExpiring options contracts and Dash earnings\nreminder"
+      },
+      "roundness": {
+        "type": 3
+      },
+      "fillStyle": "solid",
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "arrow-options_earnings_2100",
+      "type": "arrow",
+      "x": 472.0,
+      "y": 2420.0,
+      "strokeColor": "#495057",
+      "strokeStyle": "solid",
+      "label": {
+        "text": ""
+      },
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          638.0,
+          -449.0
+        ]
+      ],
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "card-options_earnings_2330",
+      "type": "rectangle",
+      "x": 42.0,
+      "y": 2486.0,
+      "width": 430.0,
+      "height": 96.0,
+      "backgroundColor": "#d0ebff",
+      "strokeColor": "#1c7ed6",
+      "strokeStyle": "solid",
+      "label": {
+        "text": "Options & Earnings Alert (23:30)\n23:30 HKT\nExpiring options contracts and Dash earnings\nreminder"
+      },
+      "roundness": {
+        "type": 3
+      },
+      "fillStyle": "solid",
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "arrow-options_earnings_2330",
+      "type": "arrow",
+      "x": 472.0,
+      "y": 2534.0,
+      "strokeColor": "#495057",
+      "strokeStyle": "solid",
+      "label": {
+        "text": ""
+      },
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          638.0,
+          -563.0
+        ]
+      ],
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "card-p_model_check",
+      "type": "rectangle",
+      "x": 42.0,
+      "y": 2600.0,
+      "width": 430.0,
+      "height": 78.0,
+      "backgroundColor": "#d0ebff",
+      "strokeColor": "#1c7ed6",
+      "strokeStyle": "solid",
+      "label": {
+        "text": "P-model Check\n05:00 HKT\nPre-market PAM / P-model signal check"
+      },
+      "roundness": {
+        "type": 3
+      },
+      "fillStyle": "solid",
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "arrow-p_model_check",
+      "type": "arrow",
+      "x": 472.0,
+      "y": 2639.0,
+      "strokeColor": "#495057",
+      "strokeStyle": "solid",
+      "label": {
+        "text": ""
+      },
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          638.0,
+          -668.0
+        ]
+      ],
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "card-jarvis_portfolio_am",
+      "type": "rectangle",
+      "x": 42.0,
+      "y": 2696.0,
+      "width": 430.0,
+      "height": 78.0,
+      "backgroundColor": "#d0ebff",
+      "strokeColor": "#1c7ed6",
+      "strokeStyle": "solid",
+      "label": {
+        "text": "JARVIS Portfolio Commentary (AM)\n09:00 HKT\nPortfolio actions vs model signals"
+      },
+      "roundness": {
+        "type": 3
+      },
+      "fillStyle": "solid",
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "arrow-jarvis_portfolio_am",
+      "type": "arrow",
+      "x": 472.0,
+      "y": 2735.0,
+      "strokeColor": "#495057",
+      "strokeStyle": "solid",
+      "label": {
+        "text": ""
+      },
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          638.0,
+          -764.0
+        ]
+      ],
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "card-jarvis_portfolio_pm",
+      "type": "rectangle",
+      "x": 42.0,
+      "y": 2792.0,
+      "width": 430.0,
+      "height": 78.0,
+      "backgroundColor": "#d0ebff",
+      "strokeColor": "#1c7ed6",
+      "strokeStyle": "solid",
+      "label": {
+        "text": "JARVIS Portfolio Commentary (PM)\n20:30 HKT\nPortfolio actions vs model signals"
+      },
+      "roundness": {
+        "type": 3
+      },
+      "fillStyle": "solid",
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "arrow-jarvis_portfolio_pm",
+      "type": "arrow",
+      "x": 472.0,
+      "y": 2831.0,
+      "strokeColor": "#495057",
+      "strokeStyle": "solid",
+      "label": {
+        "text": ""
+      },
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          638.0,
+          -860.0
+        ]
+      ],
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "lane-repo_only",
+      "type": "rectangle",
+      "x": 24,
+      "y": 2906.0,
+      "width": 980,
+      "height": 798.0,
+      "backgroundColor": "#fff9db",
+      "strokeColor": "#fcc419",
+      "strokeStyle": "solid",
+      "opacity": 40,
+      "label": {
+        "text": ""
+      },
+      "roundness": {
+        "type": 3
+      },
+      "fillStyle": "solid",
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "lane-title-repo_only",
+      "type": "text",
+      "x": 40,
+      "y": 2912.0,
+      "width": 420,
+      "height": 24,
+      "strokeColor": "#1e1e1e",
+      "text": "Repo-defined / Not Currently Scheduled",
+      "fontSize": 18,
+      "fontFamily": "1",
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "card-jarvis_light",
+      "type": "rectangle",
+      "x": 42.0,
+      "y": 2934.0,
+      "width": 430.0,
+      "height": 78.0,
+      "backgroundColor": "#fff3bf",
+      "strokeColor": "#f08c00",
+      "strokeStyle": "solid",
+      "label": {
+        "text": "Jarvis Light\nn/a\nrun_light.bat"
+      },
+      "roundness": {
+        "type": 3
+      },
+      "fillStyle": "solid",
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "arrow-jarvis_light",
+      "type": "arrow",
+      "x": 472.0,
+      "y": 2973.0,
+      "strokeColor": "#495057",
+      "strokeStyle": "solid",
+      "label": {
+        "text": ""
+      },
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          638.0,
+          -1002.0
+        ]
+      ],
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "card-scrape_cw",
+      "type": "rectangle",
+      "x": 42.0,
+      "y": 3030.0,
+      "width": 430.0,
+      "height": 78.0,
+      "backgroundColor": "#fff3bf",
+      "strokeColor": "#f08c00",
+      "strokeStyle": "solid",
+      "label": {
+        "text": "Scrape Cw\n10:00 HKT\ndaily_reminders.py --task scrape_cw"
+      },
+      "roundness": {
+        "type": 3
+      },
+      "fillStyle": "solid",
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "arrow-scrape_cw",
+      "type": "arrow",
+      "x": 472.0,
+      "y": 3069.0,
+      "strokeColor": "#495057",
+      "strokeStyle": "solid",
+      "label": {
+        "text": ""
+      },
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          638.0,
+          -1098.0
+        ]
+      ],
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "card-newsletter",
+      "type": "rectangle",
+      "x": 42.0,
+      "y": 3126.0,
+      "width": 430.0,
+      "height": 78.0,
+      "backgroundColor": "#fff3bf",
+      "strokeColor": "#f08c00",
+      "strokeStyle": "solid",
+      "label": {
+        "text": "Newsletter\n11:00 HKT\ndaily_reminders.py --task newsletter"
+      },
+      "roundness": {
+        "type": 3
+      },
+      "fillStyle": "solid",
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "arrow-newsletter",
+      "type": "arrow",
+      "x": 472.0,
+      "y": 3165.0,
+      "strokeColor": "#495057",
+      "strokeStyle": "solid",
+      "label": {
+        "text": ""
+      },
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          638.0,
+          -1194.0
+        ]
+      ],
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "card-northbound",
+      "type": "rectangle",
+      "x": 42.0,
+      "y": 3222.0,
+      "width": 430.0,
+      "height": 78.0,
+      "backgroundColor": "#fff3bf",
+      "strokeColor": "#f08c00",
+      "strokeStyle": "solid",
+      "label": {
+        "text": "Northbound\n15:30 HKT\ndaily_reminders.py --task northbound"
+      },
+      "roundness": {
+        "type": 3
+      },
+      "fillStyle": "solid",
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "arrow-northbound",
+      "type": "arrow",
+      "x": 472.0,
+      "y": 3261.0,
+      "strokeColor": "#495057",
+      "strokeStyle": "solid",
+      "label": {
+        "text": ""
+      },
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          638.0,
+          -1290.0
+        ]
+      ],
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "card-scrape_p_model",
+      "type": "rectangle",
+      "x": 42.0,
+      "y": 3318.0,
+      "width": 430.0,
+      "height": 78.0,
+      "backgroundColor": "#fff3bf",
+      "strokeColor": "#f08c00",
+      "strokeStyle": "solid",
+      "label": {
+        "text": "Scrape P Model\n20:00 HKT\ndaily_reminders.py --task scrape_p_model"
+      },
+      "roundness": {
+        "type": 3
+      },
+      "fillStyle": "solid",
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "arrow-scrape_p_model",
+      "type": "arrow",
+      "x": 472.0,
+      "y": 3357.0,
+      "strokeColor": "#495057",
+      "strokeStyle": "solid",
+      "label": {
+        "text": ""
+      },
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          638.0,
+          -1386.0
+        ]
+      ],
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "card-scrape_all",
+      "type": "rectangle",
+      "x": 42.0,
+      "y": 3414.0,
+      "width": 430.0,
+      "height": 78.0,
+      "backgroundColor": "#fff3bf",
+      "strokeColor": "#f08c00",
+      "strokeStyle": "solid",
+      "label": {
+        "text": "Scrape All\n22:00 HKT\ndaily_reminders.py --task scrape_all"
+      },
+      "roundness": {
+        "type": 3
+      },
+      "fillStyle": "solid",
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "arrow-scrape_all",
+      "type": "arrow",
+      "x": 472.0,
+      "y": 3453.0,
+      "strokeColor": "#495057",
+      "strokeStyle": "solid",
+      "label": {
+        "text": ""
+      },
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          638.0,
+          -1482.0
+        ]
+      ],
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "card-scrape_pam",
+      "type": "rectangle",
+      "x": 42.0,
+      "y": 3510.0,
+      "width": 430.0,
+      "height": 78.0,
+      "backgroundColor": "#fff3bf",
+      "strokeColor": "#f08c00",
+      "strokeStyle": "solid",
+      "label": {
+        "text": "Scrape Pam\nn/a\nalias:scrape_pam->scrape_p_model"
+      },
+      "roundness": {
+        "type": 3
+      },
+      "fillStyle": "solid",
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "arrow-scrape_pam",
+      "type": "arrow",
+      "x": 472.0,
+      "y": 3549.0,
+      "strokeColor": "#495057",
+      "strokeStyle": "solid",
+      "label": {
+        "text": ""
+      },
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          638.0,
+          -1578.0
+        ]
+      ],
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "card-portfolio_digest",
+      "type": "rectangle",
+      "x": 42.0,
+      "y": 3606.0,
+      "width": 430.0,
+      "height": 78.0,
+      "backgroundColor": "#fff3bf",
+      "strokeColor": "#f08c00",
+      "strokeStyle": "solid",
+      "label": {
+        "text": "JARVIS Portfolio Digest\nn/a\nConsolidated portfolio monitor digest"
+      },
+      "roundness": {
+        "type": 3
+      },
+      "fillStyle": "solid",
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "arrow-portfolio_digest",
+      "type": "arrow",
+      "x": 472.0,
+      "y": 3645.0,
+      "strokeColor": "#495057",
+      "strokeStyle": "solid",
+      "label": {
+        "text": ""
+      },
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          638.0,
+          -1674.0
+        ]
+      ],
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "lane-disabled",
+      "type": "rectangle",
+      "x": 24,
+      "y": 3720.0,
+      "width": 980,
+      "height": 126.0,
+      "backgroundColor": "#f1f3f5",
+      "strokeColor": "#adb5bd",
+      "strokeStyle": "dashed",
+      "opacity": 40,
+      "label": {
+        "text": ""
+      },
+      "roundness": {
+        "type": 3
+      },
+      "fillStyle": "solid",
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "lane-title-disabled",
+      "type": "text",
+      "x": 40,
+      "y": 3726.0,
+      "width": 420,
+      "height": 24,
+      "strokeColor": "#1e1e1e",
+      "text": "Disabled",
+      "fontSize": 18,
+      "fontFamily": "1",
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "card-telegram_hub_hourly",
+      "type": "rectangle",
+      "x": 42.0,
+      "y": 3748.0,
+      "width": 430.0,
+      "height": 78.0,
+      "backgroundColor": "#f1f3f5",
+      "strokeColor": "#868e96",
+      "strokeStyle": "dashed",
+      "label": {
+        "text": "Telegram Hub Hourly\n16:26 HKT\nHourly cross-repo Telegram digest"
+      },
+      "roundness": {
+        "type": 3
+      },
+      "fillStyle": "solid",
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "arrow-telegram_hub_hourly",
+      "type": "arrow",
+      "x": 472.0,
+      "y": 3787.0,
+      "strokeColor": "#495057",
+      "strokeStyle": "dashed",
+      "label": {
+        "text": ""
+      },
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          638.0,
+          -1816.0
+        ]
+      ],
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "tg-box",
+      "type": "rectangle",
+      "x": 1110,
+      "y": 1891.0,
+      "width": 280,
+      "height": 160,
+      "backgroundColor": "#fff4e6",
+      "strokeColor": "#e67700",
+      "label": {
+        "text": "Telegram Chat\nAll alert paths\nconverge here"
+      },
+      "roundness": {
+        "type": 3
+      },
+      "fillStyle": "solid",
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    }
+  ],
+  "count": 83
+}
