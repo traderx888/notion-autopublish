@@ -1,0 +1,108 @@
+{
+  "targets": [
+    {
+      "key": "industry-overview",
+      "name": "Industry Intelligence Hub Overview",
+      "url": "https://www.macromicro.me/industry-intelligence-hub/industry-overview?sort=1&tag=340&chartPremiss=0,1&page=1",
+      "page_type": "industry-overview",
+      "analysis_domains": ["industry", "dashboard"],
+      "enabled": true
+    },
+    {
+      "key": "industry-report-list",
+      "name": "Industry Report List",
+      "url": "https://www.macromicro.me/industry-report?page=1",
+      "page_type": "industry-report-list",
+      "analysis_domains": ["industry", "reports"],
+      "enabled": true
+    },
+    {
+      "key": "sentiment-combinations",
+      "name": "Sentiment Combinations",
+      "url": "https://www.macromicro.me/charts/99984/Sentiment-Combinations",
+      "page_type": "chart",
+      "analysis_domains": ["sentiment", "positioning"],
+      "enabled": true
+    },
+    {
+      "key": "fear-and-greed",
+      "name": "Fear And Greed",
+      "url": "https://www.macromicro.me/cross-country-database/fear-and-greed",
+      "page_type": "cross-country",
+      "analysis_domains": ["sentiment", "cross_sectional"],
+      "enabled": true
+    },
+    {
+      "key": "global-recession-rate",
+      "name": "MM Global Economic Recession Rate",
+      "url": "https://www.macromicro.me/charts/7898/mm-global-economic-recession-rate",
+      "page_type": "chart",
+      "analysis_domains": ["macro_cycle", "recession"],
+      "enabled": true
+    },
+    {
+      "key": "manufacturing-cycle",
+      "name": "Manufacturing Cycle",
+      "url": "https://www.macromicro.me/charts/37001/manufacturing-cycle-new-orders-minus-customer-inventory",
+      "page_type": "chart",
+      "analysis_domains": ["macro_cycle", "manufacturing"],
+      "enabled": true
+    },
+    {
+      "key": "central-bank-rate-cut-share",
+      "name": "Net Pct Of CBs Last Move Was A Rate Cut",
+      "url": "https://www.macromicro.me/charts/50290/net-pct-of-cbs-last-move-was-a-rate-cut",
+      "page_type": "chart",
+      "analysis_domains": ["liquidity", "central_banks"],
+      "enabled": true
+    },
+    {
+      "key": "fed-statement-index",
+      "name": "US MM Fed Statement Hawkish Dovish And Optimistic Index",
+      "url": "https://www.macromicro.me/charts/80611/us-mm-fed-statement-hawkish-dovish-and-optimistic-index",
+      "page_type": "chart",
+      "analysis_domains": ["rates", "fed"],
+      "enabled": true
+    },
+    {
+      "key": "global-macromicro-economic-index",
+      "name": "Global MacroMicro Economic Index",
+      "url": "https://www.macromicro.me/charts/81110/global-macromicro-economic-index",
+      "page_type": "chart",
+      "analysis_domains": ["macro_cycle", "nowcast"],
+      "enabled": true
+    },
+    {
+      "key": "stocks-above-200dma",
+      "name": "Constituent Stocks Above 200 Day Moving Average",
+      "url": "https://www.macromicro.me/cross-country-database/constituent-stocks-above-200-day-moving-average",
+      "page_type": "cross-country",
+      "analysis_domains": ["breadth", "sentiment"],
+      "enabled": true
+    },
+    {
+      "key": "sovereign-debt-default-cds",
+      "name": "Sovereign Debt Default CDS",
+      "url": "https://www.macromicro.me/cross-country-database/sovereign-debt-default-cds",
+      "page_type": "cross-country",
+      "analysis_domains": ["credit", "sovereign"],
+      "enabled": true
+    },
+    {
+      "key": "pe-ratio",
+      "name": "PE Ratio",
+      "url": "https://www.macromicro.me/cross-country-database/pe-ratio",
+      "page_type": "cross-country",
+      "analysis_domains": ["valuation", "equities"],
+      "enabled": true
+    },
+    {
+      "key": "buffett-indicator",
+      "name": "Buffett Indicator",
+      "url": "https://www.macromicro.me/cross-country-database/buffett-indicator",
+      "page_type": "cross-country",
+      "analysis_domains": ["valuation", "equities"],
+      "enabled": true
+    }
+  ]
+}

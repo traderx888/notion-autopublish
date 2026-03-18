@@ -44,6 +44,9 @@ Excel sync workflow"]
         N_jarvis_excel_sync_pm["Jarvis Excel Sync PM
 21:00 HKT
 Excel sync workflow"]
+        N_jarvis_excel_sync_late["Jarvis Excel Sync Late
+23:50 HKT
+run_excel_sync.bat"]
         N_georisk["GeoRisk Update
 20:00 HKT
 Geopolitics risk monitor and Telegram update"]
@@ -83,6 +86,9 @@ Expiring options contracts and Dash earnings reminder"]
         N_options_earnings_2330["Options & Earnings Alert (23:30)
 23:30 HKT
 Expiring options contracts and Dash earnings reminder"]
+        N_polymarket["JARVIS-Reminder-polymarket
+20:05 HKT
+run_daily_reminder.bat polymarket"]
         N_p_model_check["P-model Check
 05:00 HKT
 Pre-market PAM / P-model signal check"]
@@ -136,6 +142,7 @@ Hourly cross-repo Telegram digest"]
     N_southbound --> TG
     N_jarvis_excel_sync_am --> TG
     N_jarvis_excel_sync_pm --> TG
+    N_jarvis_excel_sync_late --> TG
     N_georisk --> TG
     N_jarvis_cbbc_tracker_am --> TG
     N_usdata --> TG
@@ -149,6 +156,7 @@ Hourly cross-repo Telegram digest"]
     N_schedule_audit --> TG
     N_options_earnings_2100 --> TG
     N_options_earnings_2330 --> TG
+    N_polymarket --> TG
     N_p_model_check --> TG
     N_jarvis_portfolio_am --> TG
     N_jarvis_portfolio_pm --> TG
@@ -183,6 +191,7 @@ Hourly cross-repo Telegram digest"]
 - `15:30 HKT` | **Southbound Flow** | Southbound screenshot and screen brief | `daily_reminders.py --task southbound`
 - `10:30 HKT` | **Jarvis Excel Sync AM** | Excel sync workflow | `run_excel_sync.bat`
 - `21:00 HKT` | **Jarvis Excel Sync PM** | Excel sync workflow | `run_excel_sync.bat`
+- `23:50 HKT` | **Jarvis Excel Sync Late** | run_excel_sync.bat | `run_excel_sync.bat`
 - `20:00 HKT` | **GeoRisk Update** | Geopolitics risk monitor and Telegram update | `daily_reminders.py --task georisk`
 - `09:00 HKT` | **HK CBBC Tracker (牛熊證)** | SG Warrants bull/bear distribution | `send_cbbc_tracker.py`
 - `18:30 HKT` | **US Data Calendar** | Calendar screenshot and macro data table | `daily_reminders.py --task usdata`
@@ -196,6 +205,7 @@ Hourly cross-repo Telegram digest"]
 - `06:15 HKT` | **Telegram Schedule Audit** | Cross-repo Telegram schedule drift audit | `run_schedule_audit.bat`
 - `21:00 HKT` | **Options & Earnings Alert (21:00)** | Expiring options contracts and Dash earnings reminder | `run_options_expiry.bat`
 - `23:30 HKT` | **Options & Earnings Alert (23:30)** | Expiring options contracts and Dash earnings reminder | `run_options_expiry.bat`
+- `20:05 HKT` | **JARVIS-Reminder-polymarket** | run_daily_reminder.bat polymarket | `run_daily_reminder.bat polymarket`
 - `05:00 HKT` | **P-model Check** | Pre-market PAM / P-model signal check | `daily_reminders.py --task pam_check`
 - `09:00 HKT` | **JARVIS Portfolio Commentary (AM)** | Portfolio actions vs model signals | `run_portfolio_commentary.bat`
 - `20:30 HKT` | **JARVIS Portfolio Commentary (PM)** | Portfolio actions vs model signals | `run_portfolio_commentary.bat`
@@ -231,6 +241,7 @@ Hourly cross-repo Telegram digest"]
 | Live scheduler | 15:30 HKT | Southbound Flow | `southbound` | Southbound screenshot and screen brief | `daily_reminders.py --task southbound` | Scheduler + repo |
 | Live scheduler | 10:30 HKT | Jarvis Excel Sync AM | `jarvis_excel_sync_am` | Excel sync workflow | `run_excel_sync.bat` | Scheduler + repo |
 | Live scheduler | 21:00 HKT | Jarvis Excel Sync PM | `jarvis_excel_sync_pm` | Excel sync workflow | `run_excel_sync.bat` | Scheduler + repo |
+| Live scheduler | 23:50 HKT | Jarvis Excel Sync Late | `jarvis_excel_sync_late` | run_excel_sync.bat | `run_excel_sync.bat` | Scheduler + repo |
 | Live scheduler | 20:00 HKT | GeoRisk Update | `georisk` | Geopolitics risk monitor and Telegram update | `daily_reminders.py --task georisk` | Scheduler + repo |
 | Live scheduler | 09:00 HKT | HK CBBC Tracker (牛熊證) | `jarvis_cbbc_tracker_am` | SG Warrants bull/bear distribution | `send_cbbc_tracker.py` | Scheduler + repo |
 | Live scheduler | 18:30 HKT | US Data Calendar | `usdata` | Calendar screenshot and macro data table | `daily_reminders.py --task usdata` | Scheduler + repo |
@@ -244,6 +255,7 @@ Hourly cross-repo Telegram digest"]
 | Live scheduler | 06:15 HKT | Telegram Schedule Audit | `schedule_audit` | Cross-repo Telegram schedule drift audit | `run_schedule_audit.bat` | Scheduler + repo |
 | Live scheduler | 21:00 HKT | Options &amp; Earnings Alert (21:00) | `options_earnings_2100` | Expiring options contracts and Dash earnings reminder | `run_options_expiry.bat` | Scheduler + repo |
 | Live scheduler | 23:30 HKT | Options &amp; Earnings Alert (23:30) | `options_earnings_2330` | Expiring options contracts and Dash earnings reminder | `run_options_expiry.bat` | Scheduler + repo |
+| Live scheduler | 20:05 HKT | JARVIS-Reminder-polymarket | `polymarket` | run_daily_reminder.bat polymarket | `run_daily_reminder.bat polymarket` | Scheduler + repo |
 | Live scheduler | 05:00 HKT | P-model Check | `p_model_check` | Pre-market PAM / P-model signal check | `daily_reminders.py --task pam_check` | Scheduler + repo |
 | Live scheduler | 09:00 HKT | JARVIS Portfolio Commentary (AM) | `jarvis_portfolio_am` | Portfolio actions vs model signals | `run_portfolio_commentary.bat` | Scheduler + repo |
 | Live scheduler | 20:30 HKT | JARVIS Portfolio Commentary (PM) | `jarvis_portfolio_pm` | Portfolio actions vs model signals | `run_portfolio_commentary.bat` | Scheduler + repo |

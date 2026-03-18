@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>彭博研究摘要 #5 — 央行困局、中國經濟與全球風險定位</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --accent: #58a6ff;
+          --green: #3fb950; --red: #f85149; --yellow: #d29922; --text: #c9d1d9; --muted: #8b949e;
+          --orange: #f0883e; --purple: #bc8cff; --cyan: #39d2c0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans TC', 'Microsoft JhengHei', Helvetica, Arial, sans-serif; line-height: 1.7; padding: 20px; max-width: 860px; margin: 0 auto; }
+  h1 { color: #fff; font-size: 1.7em; margin-bottom: 4px; }
+  .subtitle { color: var(--muted); font-size: 0.9em; margin-bottom: 8px; }
+  .issue-badge { display: inline-block; background: rgba(88,166,255,0.15); color: var(--accent); padding: 3px 10px; border-radius: 12px; font-size: 0.8em; font-weight: 600; margin-bottom: 20px; }
+  .tag { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 0.72em; font-weight: 600; margin-right: 4px; }
+  .tag-fed { background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-boj { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-china { background: rgba(240,136,62,0.15); color: var(--orange); }
+  .tag-ecb { background: rgba(188,140,255,0.15); color: var(--purple); }
+  .tag-japan { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-trade { background: rgba(210,153,34,0.15); color: var(--yellow); }
+  .tag-fx { background: rgba(63,185,80,0.15); color: var(--green); }
+  .section { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 16px; }
+  .section h2 { color: #fff; font-size: 1.15em; margin-bottom: 12px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+  .section h3 { color: var(--accent); font-size: 0.95em; margin: 14px 0 6px; }
+  .article { margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .article:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .article-title { color: #fff; font-weight: 700; font-size: 0.95em; margin-bottom: 4px; }
+  .article-title-cn { color: var(--muted); font-size: 0.85em; margin-bottom: 8px; }
+  .article p { font-size: 0.9em; margin: 6px 0; }
+  .data-point { background: rgba(255,255,255,0.03); padding: 8px 12px; border-radius: 6px; margin: 8px 0; font-size: 0.85em; }
+  .data-point .num { color: #fff; font-weight: 700; }
+  .implication { background: rgba(88,166,255,0.06); border-left: 3px solid var(--accent); padding: 10px 14px; margin: 10px 0; border-radius: 0 6px 6px 0; font-size: 0.88em; }
+  .implication .label { color: var(--accent); font-weight: 700; font-size: 0.8em; text-transform: uppercase; margin-bottom: 4px; }
+  .callout { background: rgba(210,153,34,0.08); border: 1px solid rgba(210,153,34,0.3); border-radius: 6px; padding: 16px; margin: 16px 0; }
+  .callout-title { color: var(--yellow); font-weight: 700; font-size: 0.95em; margin-bottom: 8px; }
+  .callout ul { padding-left: 18px; }
+  .callout li { margin: 4px 0; font-size: 0.88em; }
+  ul { padding-left: 18px; }
+  li { margin: 3px 0; font-size: 0.88em; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(255,255,255,0.03); padding: 12px; border-radius: 6px; text-align: center; }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: #fff; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
+  .toc { background: rgba(88,166,255,0.05); border: 1px solid rgba(88,166,255,0.2); border-radius: 8px; padding: 16px 20px; margin-bottom: 20px; }
+  .toc-title { color: var(--accent); font-weight: 700; font-size: 0.9em; margin-bottom: 8px; }
+  .toc a { color: var(--accent); text-decoration: none; font-size: 0.88em; }
+  .toc a:hover { text-decoration: underline; }
+  .toc ol { padding-left: 20px; }
+  .toc li { margin: 4px 0; }
+  .nav-links { display: flex; justify-content: space-between; margin: 20px 0; font-size: 0.85em; }
+  .nav-links a { color: var(--accent); text-decoration: none; }
+  .nav-links a:hover { text-decoration: underline; }
+  .footer { text-align: center; color: var(--muted); font-size: 0.75em; margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--border); }
+</style>
+</head>
+<body>
+
+<h1>彭博研究摘要</h1>
+<p class="subtitle">第五期 | 央行困局、中國經濟與全球風險定位</p>
+<span class="issue-badge">2026年3月中旬更新</span>
+
+<div class="nav-links">
+  <span><a href="newsletter_4_iran_war_oil.html">&larr; 第四期：伊朗戰爭</a></span>
+  <span><a href="index.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="toc">
+  <div class="toc-title">目錄</div>
+  <ol>
+    <li><a href="#fed">聯準會：鷹派當道，按兵不動</a></li>
+    <li><a href="#boj">日銀：持有但4月加息在即</a></li>
+    <li><a href="#china">中國：低門檻過關，成長依舊乏力</a></li>
+    <li><a href="#europe-trade">歐洲與全球貿易</a></li>
+    <li><a href="#takeaways">基金經理人重點摘要</a></li>
+  </ol>
+</div>
+
+<!-- ======== FED ======== -->
+<div class="section" id="fed">
+  <h2><span class="tag tag-fed">聯準會</span> 鷹派當道，按兵不動</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val">3.50-3.75%</div><div class="lbl">聯邦基金利率<br>預計維持不變</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">-9.2萬</div><div class="lbl">2月非農就業<br>（初值）</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">~3%</div><div class="lbl">3月CPI預測<br>（受油價推升）</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">聯儲會料按兵不動 — 利率路徑面臨雙向風險</div>
+    <p>FOMC預計在3月17-18日會議上維持利率在 <span style="color:#fff;font-weight:700">3.50%-3.75%</span> 不變。會後聲明將承認伊朗戰爭風險，並對利率路徑採用<span style="color:#fff;font-weight:700">雙向表述</span> — 既指出通膨上行風險，也提及就業下行壓力。</p>
+    <div class="data-point">
+      預計異議票：<span class="num">Milan、Waller</span>（主張降息）&nbsp;|&nbsp;
+      SEP中位數：<span class="num">今年仍降息25bp</span> &nbsp;|&nbsp;
+      通膨見頂預期：<span class="num">5月</span>
+    </div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">Waller的兩難：所有條件已滿足，但鷹派占上風</div>
+    <p>Waller此前設定的降息條件（關稅調整後CPI接近2%、1月就業修正消退）已基本滿足，2月就業初值為<span style="color:#fff;font-weight:700">-9.2萬</span>（可能下修至-11.2萬）。但FOMC內部鷹派占據主導。即便最鷹的克利夫蘭聯邦儲備銀行行長Hammack也提到油價的「雙向風險」。</p>
+    <div class="implication">
+      <div class="label">投資啟示</div>
+      Fed上半年按兵不動的概率極高。彭博經濟研究認為油價$80-$100將抑制消費、拖累就業，最終拉低核心PCE。整體通膨5月見頂後，FOMC將被迫加快降息步伐。下半年降息路徑仍在 — 做多前端利率期貨。
+    </div>
+  </div>
+</div>
+
+<!-- ======== BOJ ======== -->
+<div class="section" id="boj">
+  <h2><span class="tag tag-boj">日銀</span> <span class="tag tag-japan">日本</span> 持有但4月加息在即</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val">0.75%</div><div class="lbl">當前政策利率<br>預計維持</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">1.00%</div><div class="lbl">4月加息目標<br>（37%經濟學家預期）</div></div>
+    <div class="stat"><div class="val" style="color:var(--yellow)">$5,500億</div><div class="lbl">日本對美<br>投資承諾</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">BOJ預覽：3月持有，4月加息呼聲漸起</div>
+    <div class="article-title-cn">BOJ PREVIEW: Hold Likely; Watch Ueda on Growth-Prices Tradeoff</div>
+    <p>51位經濟學家一致預期日銀3月18-19日會議<span style="color:#fff;font-weight:700">維持0.75%不變</span>。關鍵是上田總裁是否暗示油價衝擊如何影響下次加息時點。37%的經濟學家預期<span style="color:#fff;font-weight:700">4月加息至1%</span>，22%預期6月，29%預期7月。</p>
+  </div>
+
+  <div class="article">
+    <div class="article-title">油價衝擊 = 提前加息？1970年代教訓重演</div>
+    <div class="article-title-cn">BE Primer: BOJ April Hike on Cards as Oil Rise Lifts Price Risks</div>
+    <p>彭博經濟研究將加息預期從7月提前至<span style="color:#fff;font-weight:700">4月</span>。理由：及時展示價格穩定承諾的成本很低，但延遲可能讓通膨預期脫錨。日本對中東原油高度依賴，1970年代石油危機的教訓是 — 正確的回應是收緊政策。迄今為止BOJ加息並未明顯拖累增長。</p>
+    <div class="implication">
+      <div class="label">投資啟示</div>
+      做空日圓（短期）：BOJ可能暫時按兵不動讓日圓進一步走弱。做多日本銀行股：加息預期上升有利NIM擴大。但若4月確認加息至1%，日經面臨進一步壓力 — 尤其出口商。
+    </div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">高市早苗訪美：$5,500億投資 + 霍爾木茲護航</div>
+    <p>日本首相高市早苗3月19日訪白宮。伊朗戰爭徹底改變會談焦點：<strong>（1）</strong>日本90%原油經霍爾木茲海峽，價格壓力巨大；<strong>（2）</strong>川普不滿盟友未響應聯合護航號召；<strong>（3）</strong>日本國內僅<span style="color:#fff;font-weight:700">9%支持</span>這場戰爭，高市面臨憲法與政治雙重約束。</p>
+    <div class="data-point">
+      日本原油對霍爾木茲依賴：<span class="num">90%</span> &nbsp;|&nbsp;
+      國內支持率：<span class="num">9%</span> &nbsp;|&nbsp;
+      可能讓步：<span class="num">金穹反導攔截彈生產</span>、排雷艦巡邏、安全角色填補
+    </div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">高市提名人選暗示央行政策趨鴿</div>
+    <p>高市政府對BOJ加息持謹慎態度。但面對堅實薪資動能和通膨風險，政府可能容忍更高利率。日本工業產出依舊乏力，預示Q1 GDP疲軟。</p>
+  </div>
+</div>
+
+<!-- ======== CHINA ======== -->
+<div class="section" id="china">
+  <h2><span class="tag tag-china">中國</span> 低門檻過關，成長依舊乏力</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--green)">+6.3%</div><div class="lbl">工業增加值<br>（共識5.3%）</div></div>
+    <div class="stat"><div class="val" style="color:var(--green)">+1.8%</div><div class="lbl">固定資產投資<br>（共識-5.1%）</div></div>
+    <div class="stat"><div class="val" style="color:var(--yellow)">+2.8%</div><div class="lbl">社會消費品零售<br>（共識2.5%）</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">中國年初數據高於預估 — 但成長依舊乏力</div>
+    <div class="article-title-cn">CHINA REACT: Data Clears Low Bar, Economy Stuck in Slow Growth</div>
+    <p>首份活動數據印證嚴峻現實：經濟已跨過較低門檻，但仍處於<span style="color:#fff;font-weight:700">低成長均衡</span>。工業增加值+6.3%（遠超共識5.3%），固定資產投資意外轉正+1.8%（共識-5.1%），零售+2.8%（共識2.5%）。但與歷史常態相比，增速仍遠低於2023-25年疫後平均4.8%。</p>
+    <div class="implication">
+      <div class="label">投資啟示</div>
+      數據超預期可能強化政府「穩健節奏」立場，短期內加碼刺激的概率下降。但伊朗局勢給脆弱的基本面增添外部風險。預計人行Q2降息10bp，但力度不足以逆轉趨勢。中國股市「數據好 = 刺激減碼」的悖論仍在。
+    </div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">伊朗戰爭可能考驗中國增長，刺激或需加碼</div>
+    <div class="article-title-cn">CHINA INSIGHT: Iran War May Test Growth, Spur Stimulus</div>
+    <p>中國的主要風險不是通膨 — 而是<span style="color:#fff;font-weight:700">全球需求急劇下降對出口的二次衝擊</span>。彭博估算：油價升至$108/桶，美國GDP降低0.1ppt，歐元區降低0.6ppt。對中國而言：</p>
+    <div class="data-point">
+      出口下降5%：GDP成長 <span class="num">-0.16ppt</span>（類似2023年）&nbsp;|&nbsp;
+      出口下降10%：GDP成長 <span class="num">-0.31ppt</span>（類似2016年）&nbsp;|&nbsp;
+      成長目標：<span class="num">4.5%-5.0%</span>（難度加大）
+    </div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">中國面臨「溫和且可控」的伊朗通膨衝擊</div>
+    <div class="article-title-cn">China Faces Mild But Manageable Inflationary Impulse From Iran</div>
+    <p>戰爭初期，布倫特已含約<span style="color:#fff;font-weight:700">$19/桶的戰爭風險溢價</span>。停火情境下油價可回落至$65（戰前均值）。極端情境（區域石油基建被攻擊 + 海峽關閉）油價可達$108。中國的通膨衝擊溫和且可控，但出口衝擊才是真正風險。政策工具充足但有局限 — 短期痛苦不可避免。</p>
+    <div class="implication">
+      <div class="label">投資啟示</div>
+      中國股市估值低洼但催化劑不足。做多內需防禦（公用事業、電信），減持出口導向（電子、機械）。人民幣相對穩定 — 人行管理升值節奏而非方向。若出口惡化觸發加碼刺激，消費和房地產相關標的可能是最大受益者。
+    </div>
+  </div>
+</div>
+
+<!-- ======== EUROPE & TRADE ======== -->
+<div class="section" id="europe-trade">
+  <h2><span class="tag tag-ecb">ECB</span> <span class="tag tag-trade">貿易</span> <span class="tag tag-fx">匯率</span> 歐洲與全球貿易</h2>
+
+  <div class="article">
+    <div class="article-title">歐元區：油價衝擊 + 關稅雙重打壓</div>
+    <div class="article-title-cn">BE Primer: Euro-Area Economy Weakened by Oil Surge, US Tariffs</div>
+    <p>歐元區前景遭受雙重衝擊：大宗商品價格飆升推高通膨並壓制活動，同時美國關稅上升打擊淨出口。Q1 GDP預計僅+0.2%（QoQ），低於趨勢增速0.3%。藥品關稅可能加劇問題。ECB預計<span style="color:#fff;font-weight:700">維持利率在中性水平附近不變</span> — 通膨上行風險與產出下行風險相互抵消。</p>
+    <div class="implication">
+      <div class="label">投資啟示</div>
+      德國財政刺激是歐洲唯一亮點 — 做多德國基建（建築、工程）。歐元區外銷企業（汽車、化工）面臨關稅+能源雙重壓力。歐元走強進一步壓縮出口競爭力。
+    </div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">美元短期反彈合理，中期方向不明</div>
+    <div class="article-title-cn">Dollar's Short-Term Rally Made Sense, Midterm View Not So Clear</div>
+    <p>伊朗戰爭推動避險資金流入美元，短期反彈邏輯清晰。但中期面臨結構性不確定：聯準會降息路徑、財政赤字可持續性、去美元化趨勢均構成下行壓力。DXY在100以上可能是逢高做空的機會（BofA Hartnett建議）。</p>
+  </div>
+
+  <div class="article">
+    <div class="article-title">伊朗戰爭中亞洲貨幣落後者：高Beta + 石油淨進口國</div>
+    <p>在伊朗衝突中表現最弱的亞洲貨幣集中於<span style="color:#fff;font-weight:700">高Beta且為石油淨進口國</span>的經濟體。日圓、韓圜、印度盧比承受壓力最大。外匯波動率飆升，亞洲央行面臨干預壓力。</p>
+  </div>
+
+  <div class="article">
+    <div class="article-title">《美墨加協定》六年審查 — 另一條貿易戰線</div>
+    <p>USMCA面臨六年期滿審查，談判結果不確定。川普政府可能利用此機會推動更嚴格的原產地規則和農業條款。在伊朗戰爭和對華關稅同時進行的背景下，這是又一個潛在的貿易不確定性來源。</p>
+  </div>
+</div>
+
+<!-- ======== TAKEAWAYS ======== -->
+<div class="callout" id="takeaways">
+  <div class="callout-title">基金經理人重點摘要</div>
+  <ul>
+    <li><strong>聯準會：</strong>上半年按兵不動。鷹派主導但Waller/Milan可能異議投票。PCE通膨預計5月見頂，下半年降息窗口重啟。做多前端利率期貨。2月非農-9.2萬（可能下修至-11.2萬）顯示就業市場轉弱。</li>
+    <li><strong>日銀：</strong>3月持有0.75%，但4月加息至1%的概率高達37%。油價衝擊+日圓貶值=通膨風險=提前加息。1970年代教訓：面對供給衝擊應緊縮。日本銀行股受益於NIM擴大。</li>
+    <li><strong>高市-川普峰會：</strong>伊朗問題主導議程。日本90%原油經霍爾木茲，僅9%國民支持戰爭。$5,500億投資承諾面臨交付壓力。可能讓步：金穹反導彈生產、排雷艦。</li>
+    <li><strong>中國：</strong>數據跨過低門檻（工業+6.3%、投資+1.8%、零售+2.8%），但仍處低成長均衡。人行Q2預計降息10bp。真正風險是出口二次衝擊（出口-5%=GDP -0.16ppt）。「數據好=刺激減碼」的悖論限制上行空間。</li>
+    <li><strong>歐元區：</strong>油價+關稅雙重打壓，GDP僅+0.2%。ECB維持中性 — 滯脹風險升溫。唯一亮點：德國財政刺激。做多德國基建，做空歐洲出口商。</li>
+    <li><strong>匯率：</strong>美元短期避險反彈，中期方向不明。亞洲高Beta+石油進口國貨幣最弱（日圓、韓圜、盧比）。</li>
+  </ul>
+</div>
+
+<div class="nav-links">
+  <span><a href="newsletter_4_iran_war_oil.html">&larr; 第四期：伊朗戰爭</a></span>
+  <span><a href="index.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="footer">
+  彭博研究摘要 | 為教學目的編輯整理 | 2026年3月中旬<br>
+  資料來源：Bloomberg Intelligence、Bloomberg Economics、Bloomberg Opinion<br>
+  不構成投資建議，僅供討論與學習。
+</div>
+
+</body>
+</html>

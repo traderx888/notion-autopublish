@@ -8,6 +8,7 @@ Usage:
     python -m browser scrape seekingalpha
     python -m browser scrape luxalgo
     python -m browser scrape all
+    python -m browser publish patreon [--dry-run] [--newsletter 1]
 """
 
 import argparse
@@ -17,7 +18,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 
-def main():
+def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
         prog="browser",
         description="Browser automation tools for notion-autopublish",
@@ -36,7 +37,7 @@ def main():
     scrape_parser = subparsers.add_parser("scrape", help="Scrape content via browser")
     scrape_parser.add_argument(
         "service",
-        choices=["substack", "seekingalpha", "luxalgo", "all"],
+        choices=["substack", "seekingalpha", "luxalgo", "macromicro", "institutional", "all"],
         help="Which service to scrape",
     )
     scrape_parser.add_argument(
@@ -51,13 +52,52 @@ def main():
         "--chrome", action="store_true",
         help="Use your real Chrome profile (keeps existing logins like Google SSO)",
     )
+    scrape_parser.add_argument(
+        "--target", action="append",
+        help="Specific named target to scrape (service-specific, repeatable)",
+    )
+    scrape_parser.add_argument(
+        "--url", action="append",
+        help="Specific URL to scrape (service-specific, repeatable)",
+    )
 
-    args = parser.parse_args()
+    # publish command
+    publish_parser = subparsers.add_parser("publish", help="Publish content via browser")
+    publish_parser.add_argument(
+        "service",
+        choices=["patreon"],
+        help="Which platform to publish to",
+    )
+    publish_parser.add_argument(
+        "--dry-run", action="store_true",
+        help="Fill content but do not click Publish",
+    )
+    publish_parser.add_argument(
+        "--newsletter", type=int, choices=[1, 2, 3],
+        help="Publish only a specific newsletter (1, 2, or 3)",
+    )
+    publish_parser.add_argument(
+        "--headless", action="store_true",
+        help="Run in headless mode (not recommended for publishing)",
+    )
+    publish_parser.add_argument(
+        "--draft", action="store_true",
+        help="Save posts as drafts instead of publishing",
+    )
+    return parser
+
+
+def main(argv=None):
+    parser = build_parser()
+
+    args = parser.parse_args(argv)
 
     if args.command == "grab":
         run_grabber(args)
     elif args.command == "scrape":
         run_scraper(args)
+    elif args.command == "publish":
+        run_publisher(args)
     else:
         parser.print_help()
         sys.exit(1)
@@ -75,10 +115,12 @@ def run_grabber(args):
 
 
 def run_scraper(args):
-    services = ["substack", "seekingalpha", "luxalgo"] if args.service == "all" else [args.service]
+    services = ["substack", "seekingalpha", "luxalgo", "macromicro", "institutional"] if args.service == "all" else [args.service]
     headless = getattr(args, "headless", False)
     limit = getattr(args, "limit", 10)
     use_chrome = getattr(args, "chrome", False)
+    targets = getattr(args, "target", None)
+    urls = getattr(args, "url", None)
 
     for service in services:
         if service == "substack":
@@ -94,6 +136,27 @@ def run_scraper(args):
             from browser.scrapers.luxalgo import LuxAlgoScraper
             with LuxAlgoScraper(headless=headless, use_chrome=use_chrome) as scraper:
                 scraper.run(limit=limit)
+        elif service == "macromicro":
+            from browser.scrapers.macromicro import MacroMicroScraper
+            with MacroMicroScraper(headless=headless, use_chrome=use_chrome) as scraper:
+                scraper.run(target_keys=targets, urls=urls)
+        elif service == "institutional":
+            from browser.scrapers.institutional import InstitutionalInsightsScraper
+            with InstitutionalInsightsScraper(headless=headless, use_chrome=use_chrome) as scraper:
+                scraper.run(site_keys=targets, limit=limit)
+
+
+def run_publisher(args):
+    if args.service == "patreon":
+        from browser.publishers.patreon import PatreonPublisher, NEWSLETTER_FILES
+        newsletters = None
+        if args.newsletter:
+            newsletters = [NEWSLETTER_FILES[args.newsletter - 1]]
+        headless = getattr(args, "headless", False)
+        dry_run = getattr(args, "dry_run", False)
+        draft = getattr(args, "draft", False)
+        with PatreonPublisher(dry_run=dry_run, newsletters=newsletters, headless=headless, draft=draft) as pub:
+            pub.run()
 
 
 if __name__ == "__main__":

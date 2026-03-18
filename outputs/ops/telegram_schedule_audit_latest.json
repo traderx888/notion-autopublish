@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-12T19:12:13.510822+08:00",
+  "generated_at": "2026-03-18T11:51:45.892709+08:00",
   "root": "C:\\Users\\User\\Documents\\GitHub",
   "repos": [
     "All-in-one",
@@ -285,6 +285,32 @@
       "source_detail": "Excel sync workflow",
       "time_slots": [
         "10:30 HKT"
+      ],
+      "runtime_entry": "run_excel_sync.bat",
+      "state_reason": "active scheduler job"
+    },
+    {
+      "task_key": "jarvis_excel_sync_late",
+      "scheduler_name": "Jarvis_Excel_Sync_Late",
+      "owner_repo": "fundman-jarvis",
+      "source_type": "scheduler",
+      "command": "C:\\Users\\User\\Documents\\GitHub\\fundman-jarvis\\run_excel_sync.bat",
+      "schedule_text": "Daily 23:50 HKT",
+      "enabled": true,
+      "telegram_related": true,
+      "observed_in": [
+        "scheduler"
+      ],
+      "issues": [
+        "missing_in_control",
+        "missing_in_repo"
+      ],
+      "display_name": "Jarvis Excel Sync Late",
+      "lane": "live_scheduler",
+      "source_group": "Excel sync",
+      "source_detail": "run_excel_sync.bat",
+      "time_slots": [
+        "23:50 HKT"
       ],
       "runtime_entry": "run_excel_sync.bat",
       "state_reason": "active scheduler job"
@@ -694,6 +720,32 @@
       "state_reason": "active scheduler job"
     },
     {
+      "task_key": "polymarket",
+      "scheduler_name": "JARVIS-Reminder-polymarket",
+      "owner_repo": "fundman-jarvis",
+      "source_type": "scheduler",
+      "command": "C:\\Users\\User\\Documents\\GitHub\\fundman-jarvis\\run_daily_reminder.bat polymarket",
+      "schedule_text": "Daily 20:05 HKT",
+      "enabled": true,
+      "telegram_related": true,
+      "observed_in": [
+        "repo",
+        "scheduler"
+      ],
+      "issues": [
+        "missing_in_control"
+      ],
+      "display_name": "JARVIS-Reminder-polymarket",
+      "lane": "live_scheduler",
+      "source_group": "Other Telegram task",
+      "source_detail": "run_daily_reminder.bat polymarket",
+      "time_slots": [
+        "20:05 HKT"
+      ],
+      "runtime_entry": "run_daily_reminder.bat polymarket",
+      "state_reason": "active scheduler job"
+    },
+    {
       "task_key": "portfolio_digest",
       "scheduler_name": "",
       "owner_repo": "fundman-jarvis",
@@ -960,12 +1012,12 @@
     }
   ],
   "summary": {
-    "total_records": 38,
-    "records_with_issues": 22,
+    "total_records": 40,
+    "records_with_issues": 24,
     "issues_by_kind": {
       "info_only_schedule": 1,
-      "missing_in_control": 19,
-      "missing_in_repo": 3,
+      "missing_in_control": 21,
+      "missing_in_repo": 4,
       "orphaned_wrapper": 2
     }
   }
