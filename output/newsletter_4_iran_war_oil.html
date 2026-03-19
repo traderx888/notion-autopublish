@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>彭博研究摘要 #4 — 伊朗戰爭：石油、通膨與全球衝擊</title>
+<title>彭博研究摘要 #4 — 伊朗戰爭全景：石油、黃金與全球衝擊</title>
 <style>
   :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --accent: #58a6ff;
           --green: #3fb950; --red: #f85149; --yellow: #d29922; --text: #c9d1d9; --muted: #8b949e;
-          --orange: #f0883e; --purple: #bc8cff; --cyan: #39d2c0; }
+          --orange: #f0883e; --purple: #bc8cff; --cyan: #39d2c0; --gold: #ffd700; }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans TC', 'Microsoft JhengHei', Helvetica, Arial, sans-serif; line-height: 1.7; padding: 20px; max-width: 860px; margin: 0 auto; }
   h1 { color: #fff; font-size: 1.7em; margin-bottom: 4px; }
@@ -20,6 +20,9 @@
   .tag-hedge { background: rgba(188,140,255,0.15); color: var(--purple); }
   .tag-semicon { background: rgba(57,210,192,0.15); color: var(--cyan); }
   .tag-commodity { background: rgba(63,185,80,0.15); color: var(--green); }
+  .tag-gold { background: rgba(255,215,0,0.15); color: var(--gold); }
+  .tag-geo { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-rates { background: rgba(88,166,255,0.15); color: var(--accent); }
   .section { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 16px; }
   .section h2 { color: #fff; font-size: 1.15em; margin-bottom: 12px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
   .section h3 { color: var(--accent); font-size: 0.95em; margin: 14px 0 6px; }
@@ -51,14 +54,19 @@
   .nav-links { display: flex; justify-content: space-between; margin: 20px 0; font-size: 0.85em; }
   .nav-links a { color: var(--accent); text-decoration: none; }
   .nav-links a:hover { text-decoration: underline; }
+  .scenario-table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 0.85em; }
+  .scenario-table th { background: rgba(255,255,255,0.05); color: #fff; padding: 8px 10px; text-align: left; border-bottom: 2px solid var(--border); font-size: 0.85em; }
+  .scenario-table td { padding: 8px 10px; border-bottom: 1px solid var(--border); vertical-align: top; }
+  .scenario-table tr:last-child td { border-bottom: none; }
+  .scenario-table .scenario-name { color: #fff; font-weight: 700; white-space: nowrap; }
   .footer { text-align: center; color: var(--muted); font-size: 0.75em; margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--border); }
 </style>
 </head>
 <body>
 
 <h1>彭博研究摘要</h1>
-<p class="subtitle">第四期 | 伊朗戰爭：石油、通膨與全球衝擊</p>
-<span class="issue-badge">2026年3月中旬更新</span>
+<p class="subtitle">第四期 | 伊朗戰爭全景：石油、黃金與全球衝擊</p>
+<span class="issue-badge">2026年3月中旬深度分析</span>
 
 <div class="nav-links">
   <span><a href="index.html">&larr; 返回目錄</a></span>
@@ -68,24 +76,93 @@
 </div>
 
 <div class="toc">
-  <div class="toc-title">目錄</div>
+  <div class="toc-title">目錄 — 8大主題深度解析</div>
   <ol>
-    <li><a href="#war-progress">戰爭進程與伊朗韌性</a></li>
-    <li><a href="#oil-commodities">石油與大宗商品衝擊</a></li>
-    <li><a href="#supply-chain">供應鏈連鎖效應</a></li>
-    <li><a href="#positioning">市場部位與對沖策略</a></li>
+    <li><a href="#war-scenarios">戰爭情境與政治博弈</a> <span style="color:var(--muted);font-size:0.8em">— 三大結局、七種打擊情境</span></li>
+    <li><a href="#iran-military">伊朗軍事能力評估</a> <span style="color:var(--muted);font-size:0.8em">— 3,678枚彈藥、產能未竭</span></li>
+    <li><a href="#hormuz">霍爾木茲海峽：石油的咽喉</a> <span style="color:var(--muted);font-size:0.8em">— 水雷、護航、亞洲衝擊</span></li>
+    <li><a href="#oil-scenarios">石油價格情境與市場衝擊</a> <span style="color:var(--muted);font-size:0.8em">— $65–$164區間、板塊輪動</span></li>
+    <li><a href="#gold">黃金：戰爭的終極對沖</a> <span style="color:var(--muted);font-size:0.8em">— 上調預測、雙贏結構</span></li>
+    <li><a href="#supply-chain">供應鏈連鎖效應</a> <span style="color:var(--muted);font-size:0.8em">— 氦氣、肥料、機械成本</span></li>
+    <li><a href="#central-banks">央行反應與利率啟示</a> <span style="color:var(--muted);font-size:0.8em">— ECB、BOJ、Fed困局</span></li>
     <li><a href="#takeaways">基金經理人重點摘要</a></li>
   </ol>
 </div>
 
-<!-- ======== WAR PROGRESS ======== -->
-<div class="section" id="war-progress">
-  <h2><span class="tag tag-war">戰爭</span> 戰爭進程與伊朗韌性</h2>
+<!-- ======== SECTION 1: WAR SCENARIOS ======== -->
+<div class="section" id="war-scenarios">
+  <h2><span class="tag tag-war">戰爭</span> <span class="tag tag-geo">地緣</span> 戰爭情境與政治博弈</h2>
 
   <div class="stat-grid">
-    <div class="stat"><div class="val" style="color:var(--red)">3,678</div><div class="lbl">伊朗已發射<br>飛彈與無人機</div></div>
-    <div class="stat"><div class="val" style="color:var(--yellow)">&darr;88%</div><div class="lbl">襲擊次數峰值<br>以來的降幅</div></div>
-    <div class="stat"><div class="val" style="color:var(--orange)">2倍</div><div class="lbl">動用空軍力量<br>超2003年伊拉克戰爭</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">3種情境</div><div class="lbl">停火 / 持續戰 / 政權更迭</div></div>
+    <div class="stat"><div class="val" style="color:var(--yellow)">60%</div><div class="lbl">美國民眾<br>反對開戰比率</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">7人</div><div class="lbl">美軍陣亡<br>（截至第二周）</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">「炸彈還是協議」— 三大情境及油價區間</div>
+    <div class="article-title-cn">MIDEAST DAILY: Bombs or Deal — Three Scenarios for Iran Conflict</div>
+    <p>彭博勾勒三大結局情境：</p>
+    <table class="scenario-table">
+      <tr><th>情境</th><th>觸發條件</th><th>油價區間</th><th>概率評估</th></tr>
+      <tr><td class="scenario-name" style="color:var(--green)">停火談判</td><td>伊朗彈藥耗盡 + 美國國內壓力 + 沙烏地斡旋</td><td>$65–$75</td><td>回歸戰前均值</td></tr>
+      <tr><td class="scenario-name" style="color:var(--yellow)">持續消耗戰</td><td>雙方不願先讓步、海峽部分通行</td><td>$80–$108</td><td>基準情境</td></tr>
+      <tr><td class="scenario-name" style="color:var(--red)">全面升級 / 政權更迭</td><td>攻擊石油基建 + 海峽完全關閉 + 伊朗核設施被炸</td><td>$130–$164</td><td>尾部風險</td></tr>
+    </table>
+    <div class="implication">
+      <div class="label">投資啟示</div>
+      三種情境的油價區間差距達$100/桶。在不確定性如此之高的環境下，期權波動率（OVX）才是最直接的交易標的，而非方向性押注。
+    </div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">美軍打擊未必導致油價飆升 — 七種後續情境分析</div>
+    <div class="article-title-cn">Would a US Military Strike on Iran Send Oil Soaring? Not Necessarily</div>
+    <p>彭博分析七種美軍打擊後的可能發展。關鍵結論：只有<span style="color:#fff;font-weight:700">3種情境會導致油價持續飆升</span>（攻擊煉油設施、封鎖海峽、或全面戰爭），其餘4種（精準打擊軍事目標、伊朗克制回應、國際調停、或「象徵性」報復）下油價衝高後快速回落。歷史先例：2020年蘇萊曼尼事件後，布倫特僅漲4%便回落。</p>
+    <div class="data-point">
+      持續飆升情境：<span class="num">3/7（43%）</span> &nbsp;|&nbsp;
+      衝高回落情境：<span class="num">4/7（57%）</span> &nbsp;|&nbsp;
+      2020年蘇萊曼尼先例：<span class="num">僅+4%</span>
+    </div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">伊朗戰火恐非川普想滅就滅</div>
+    <div class="article-title-cn">Iran War May Prove Hard for Trump to End</div>
+    <p>川普想結束戰爭，但伊朗和以色列都有話語權。四大壓力點阻礙停火：<strong>（1）</strong>以色列極右翼閣員（Ben Gvir、Smotrich）要求徹底摧毀伊朗核計劃；<strong>（2）</strong>伊朗認為可在消耗戰中拖垮美國 — 複製阿富汗「戰略耐心」；<strong>（3）</strong>沙烏地和阿聯酋被捲入，不願在伊朗未受懲罰情況下停火；<strong>（4）</strong>國會民主黨以「未授權戰爭」為由阻撓預算。美國民眾反對開戰比率達<span style="color:#fff;font-weight:700">60%</span>，但川普基本盤支持率仍穩。</p>
+    <div class="implication">
+      <div class="label">投資啟示</div>
+      「川普通話就能結束戰爭」是市場最大的認知偏差。伊朗和以色列的利益結構決定衝突短期內無法收場。戰爭溢價消退的時點需看實質進展（如秘密管道接觸），而非推文或聲明。
+    </div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">密集外交疑為緩兵之計 — 戰前最後分析</div>
+    <div class="article-title-cn">Flurry of Mideast Diplomacy Masks Preparations for War</div>
+    <p>戰爭爆發前一周的預言性分析：各方表面密集外交，實為軍事部署。美國在波斯灣增派第二個航母打擊群，以色列空軍預備基地進入戰備狀態，伊朗革命衛隊將部分彈道飛彈移至機動發射平台。分析師當時研判：<span style="color:#fff;font-weight:700">和平機率僅35%</span>，戰爭於72小時內爆發。</p>
+  </div>
+
+  <div class="article">
+    <div class="article-title">油價破百後五大關鍵問題</div>
+    <div class="article-title-cn">5 Questions as Oil Tops $100</div>
+    <p>當布倫特突破$100/桶時，五大問題浮現：<strong>（1）</strong>沙烏地煉油設施遭無人機攻擊，Ras Tanura部分離線 — 全球每日損失<span style="color:#fff;font-weight:700">約50萬桶</span>產能；<strong>（2）</strong>卡達LNG出口因水雷威脅被迫暫停，全球LNG現貨價格飆升30%；<strong>（3）</strong>SPR釋放的時機和規模 — 拜登時代已消耗4億桶，目前儲備僅3.5億桶；<strong>（4）</strong>OPEC+增產意願 — 沙烏地不願在自身設施受攻擊時為敵方提供產能替代；<strong>（5）</strong>再保險市場凍結 — 戰爭險保費飆升400%，波斯灣航運成本倍增。</p>
+    <div class="data-point">
+      沙烏地產能損失：<span class="num">~50萬桶/日</span> &nbsp;|&nbsp;
+      LNG現貨漲幅：<span class="num">+30%</span> &nbsp;|&nbsp;
+      SPR剩餘：<span class="num">3.5億桶</span> &nbsp;|&nbsp;
+      戰爭險保費：<span class="num">+400%</span>
+    </div>
+  </div>
+</div>
+
+<!-- ======== SECTION 2: IRAN MILITARY ======== -->
+<div class="section" id="iran-military">
+  <h2><span class="tag tag-war">軍事</span> 伊朗軍事能力評估</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--red)">3,678</div><div class="lbl">已發射彈藥<br>（飛彈+無人機）</div></div>
+    <div class="stat"><div class="val" style="color:var(--yellow)">&darr;88%</div><div class="lbl">攻擊頻次峰值<br>以來的降幅</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">400架/日</div><div class="lbl">伊朗無人機<br>月產能估計</div></div>
   </div>
 
   <div class="article">
@@ -99,6 +176,12 @@
   </div>
 
   <div class="article">
+    <div class="article-title">攻擊勢頭減弱 ≠ 戰爭即將結束</div>
+    <div class="article-title-cn">GLOBAL INSIGHT: Slowing Iran Attack Tempo Doesn't Mean War Is Ending</div>
+    <p>彭博軍事分析師認為：88%的攻擊頻次下降是<span style="color:#fff;font-weight:700">「戰術性暫停」</span>而非能力枯竭。原因：<strong>（1）</strong>伊朗正將地對地彈道飛彈轉移至加固掩體，防止美軍首輪打擊摧毀；<strong>（2）</strong>無人機生產線每月可補充約400架；<strong>（3）</strong>革命衛隊已啟用分散式指揮結構，即使德黑蘭通訊被切斷仍可獨立作戰。歷史類比：黎巴嫩真主黨在2006年戰爭中同樣在中期降低攻擊頻次，最終反彈。</p>
+  </div>
+
+  <div class="article">
     <div class="article-title">新最高領袖：哈梅內伊之子 — 延續而非投降</div>
     <div class="article-title-cn">GLOBAL REACT: What Iran's New Leader Means for Middle East War</div>
     <p>伊朗選擇已故最高領袖之子穆吉塔巴·哈梅內伊繼任，信號明確：<span style="color:#fff;font-weight:700">政權延續，戰爭繼續</span>。新領袖與革命衛隊關係深厚，可能比其父更務實，但不會主動求和。戰爭前48小時內，伊朗向巴林、約旦、科威特、卡達、阿聯酋發射了密集彈藥。</p>
@@ -106,32 +189,75 @@
 
   <div class="article">
     <div class="article-title">伊朗展現韌性 — 為長期鬥爭做好準備</div>
-    <p>進入第三周，德黑蘭的韌性超出華盛頓預期。美以打擊削弱了彈藥儲備，但<span style="color:#fff;font-weight:700">未能摧毀伊朗的能力或領導層</span>。更關鍵的是，伊朗已跨越多條紅線 — 包括直接攻擊海灣阿拉伯鄰國。這些國家擔憂，一旦戰爭結束，被削弱且心懷復仇的伊朗將不再受約束。</p>
-  </div>
-
-  <div class="article">
-    <div class="article-title">戰爭越打越大、盟友越打越少</div>
-    <p>此次對伊作戰動用的空軍力量是<span style="color:#fff;font-weight:700">2003年入侵伊拉克初期的兩倍</span>，但美國未尋求國會授權或廣泛盟友聯盟。川普政府稱可依據行政權力行事。國會議員質疑此規模已超越總統權限。</p>
-  </div>
-
-  <div class="article">
-    <div class="article-title">三大因素決定衝突走向</div>
-    <p>油價衝高回落，川普預測衝突「很快」解決。但三大關鍵因素仍不確定：<strong>（1）</strong>伊朗維持進攻的能力 — 襲擊海灣國家加劇持久化風險；<strong>（2）</strong>能源 — 原油期貨本周初再度飆升，霍爾木茲海峽威脅懸而未決；<strong>（3）</strong>美國國內政治 — 汽油均價突破<span style="color:#fff;font-weight:700">$3.58/加侖</span>創川普任期新高，中期選舉壓力升溫。</p>
+    <p>進入第三周，德黑蘭的韌性超出華盛頓預期。美以打擊削弱了彈藥儲備，但<span style="color:#fff;font-weight:700">未能摧毀伊朗的能力或領導層</span>。更關鍵的是，伊朗已跨越多條紅線 — 包括直接攻擊海灣阿拉伯鄰國。這些國家擔憂，一旦戰爭結束，被削弱且心懷復仇的伊朗將不再受約束。動用的空軍力量是<span style="color:#fff;font-weight:700">2003年入侵伊拉克初期的兩倍</span>，但美國未尋求國會授權。</p>
     <div class="implication">
       <div class="label">投資啟示</div>
-      衝突持續時間比強度更重要。關注汽油價格作為政策轉向指標 — 若持續高於$3.50，川普面臨的政治壓力將迫使談判。
+      戰爭越打越大、盟友越打越少。國防股（LMT、RTX、NOC）短期受益於耗材補充訂單，但中期面臨預算爭議。
     </div>
   </div>
 </div>
 
-<!-- ======== OIL & COMMODITIES ======== -->
-<div class="section" id="oil-commodities">
-  <h2><span class="tag tag-oil">石油</span> <span class="tag tag-commodity">大宗商品</span> 石油與大宗商品衝擊</h2>
+<!-- ======== SECTION 3: HORMUZ ======== -->
+<div class="section" id="hormuz">
+  <h2><span class="tag tag-oil">石油</span> <span class="tag tag-geo">地緣</span> 霍爾木茲海峽：石油的咽喉</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--red)">~20%</div><div class="lbl">全球石油運輸<br>經霍爾木茲海峽</div></div>
+    <div class="stat"><div class="val" style="color:var(--yellow)">4億桶</div><div class="lbl">IEA戰略儲備<br>可協調釋放量</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">僅20天</div><div class="lbl">SPR釋放<br>可覆蓋天數</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">水雷威脅：海峽封鎖的最大風險</div>
+    <div class="article-title-cn">ENERGY DAILY: Mine Threat Is Biggest Risk to Hormuz Chokepoint</div>
+    <p>伊朗不需要海軍正面對決便可封鎖海峽 — <span style="color:#fff;font-weight:700">水雷才是最致命的非對稱武器</span>。伊朗據估計擁有超過6,000枚各型水雷，包括俄製和國產智能水雷。一旦佈雷，掃雷行動需要數週至數月。IEA成員國可協調釋放4億桶戰略儲備，但以目前每日2,000萬桶的霍爾木茲通行量計算，<span style="color:#fff;font-weight:700">僅能覆蓋約20天</span>。更嚴重的是，保險公司已將波斯灣列為「戰爭風險區」，油輪保費飆升，即使海峽物理上可通行，商業船隻也可能拒絕進入。</p>
+    <div class="implication">
+      <div class="label">投資啟示</div>
+      水雷是「便宜的非對稱武器」— 佈設成本極低但清除代價極高。航運股（STNG、FRO）因運費飆升短期受益，但若海峽長期關閉，全球貿易衝擊將拖累所有板塊。做多掃雷/國防承包商。
+    </div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">川普護航計畫的局限性</div>
+    <div class="article-title-cn">Trump's Convoy Plan May Fall Short of Clearing Gulf Energy Exports</div>
+    <p>川普宣布由美國海軍護航油輪通過波斯灣，但計畫面臨三大瓶頸：<strong>（1）</strong>美國海軍掃雷艦數量有限，僅11艘MCM級 — 冷戰高峰時有44艘；<strong>（2）</strong>DFC（開發金融公司）提供的$205B戰爭保險上限，在商業損失面前杯水車薪；<strong>（3）</strong>盟友不願參與 — 日本僅9%民眾支持戰爭，歐洲海軍力量分散。結果是：護航僅能保護<span style="color:#fff;font-weight:700">少數高優先級船隻</span>，無法恢復正常貿易流量。</p>
+    <div class="data-point">
+      美軍掃雷艦：<span class="num">11艘</span>（冷戰高峰44艘）&nbsp;|&nbsp;
+      DFC保險上限：<span class="num">$205B</span> &nbsp;|&nbsp;
+      盟友參與度：<span class="num">極低</span>
+    </div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">替代路線能力有限 — 僅覆蓋正常運量的一半</div>
+    <p>繞過霍爾木茲的替代路線受限：<strong>（1）</strong>沙烏地東西管線（容量500萬桶/日）可繞過海峽從紅海出口，但管線利用率已超過70%，增量空間約<span style="color:#fff;font-weight:700">150萬桶/日</span>；<strong>（2）</strong>阿聯酋富查伊拉港可處理部分繞行運輸，但基礎設施瓶頸限制增量至<span style="color:#fff;font-weight:700">100萬桶/日</span>。兩者合計僅約250萬桶/日 — 不到正常霍爾木茲通行量（2,000萬桶/日）的<span style="color:#fff;font-weight:700">13%</span>。再加上阿曼灣和阿拉伯海部分替代路線，樂觀估計可恢復約50%的正常運量。</p>
+  </div>
+
+  <div class="article">
+    <div class="article-title">亞洲各國嚴陣以待：日本、台灣、韓國首當其衝</div>
+    <div class="article-title-cn">Asia Braces for Impact as Hormuz Risks Rise</div>
+    <p>亞洲是霍爾木茲中斷的最大受害者：</p>
+    <ul>
+      <li><strong>日本：</strong><span style="color:#fff;font-weight:700">90%原油</span>經霍爾木茲海峽進口。儲備可覆蓋約200天，但煉油廠配置依賴中東品級原油，難以迅速轉換供應來源。</li>
+      <li><strong>台灣：</strong>全球<span style="color:#fff;font-weight:700">第三大</span>卡達LNG買家。發電用天然氣佔比38%，LNG斷供將直接威脅電力供應和晶片製造（台積電用電量佔全國7%）。</li>
+      <li><strong>韓國：</strong>原油進口70%來自中東。64.7%的氦氣來自卡達，記憶體晶片生產面臨雙重威脅。</li>
+      <li><strong>印度：</strong>80%+原油依賴進口，經常帳赤字將急劇擴大。盧比面臨貶值壓力。</li>
+    </ul>
+    <div class="implication">
+      <div class="label">投資啟示</div>
+      亞洲高Beta + 石油淨進口國貨幣最脆弱：日圓、韓圜、盧比。台灣半導體供應鏈面臨「能源安全」新風險溢價。做多LNG替代供應商（美國Cheniere、澳洲Woodside），做空亞洲航空股。
+    </div>
+  </div>
+</div>
+
+<!-- ======== SECTION 4: OIL SCENARIOS ======== -->
+<div class="section" id="oil-scenarios">
+  <h2><span class="tag tag-oil">石油</span> <span class="tag tag-commodity">大宗商品</span> 石油價格情境與市場衝擊</h2>
 
   <div class="stat-grid">
     <div class="stat"><div class="val" style="color:var(--red)">$110</div><div class="lbl">布倫特原油<br>戰時高點</div></div>
-    <div class="stat"><div class="val" style="color:var(--yellow)">+60%</div><div class="lbl">原油一周<br>漲幅（至3/9）</div></div>
-    <div class="stat"><div class="val" style="color:var(--green)">+28%</div><div class="lbl">鋁價潛在<br>漲幅空間</div></div>
+    <div class="stat"><div class="val" style="color:var(--yellow)">$65–$164</div><div class="lbl">情境分析<br>油價區間</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">~$23/桶</div><div class="lbl">當前戰爭<br>風險溢價</div></div>
   </div>
 
   <div class="article">
@@ -146,12 +272,30 @@
   </div>
 
   <div class="article">
-    <div class="article-title">第二周：川普釋放混合訊號，油價震盪</div>
-    <div class="article-title-cn">Iran War Week Two: Mixed Trump Signals Keep Oil Volatile</div>
-    <p>霍爾木茲海峽仍<span style="color:#fff;font-weight:700">無法通行</span>，中東能源流通持續受阻。布倫特從高點回落至<span style="color:#fff;font-weight:700">$90以下</span>。美方暗示升級軍事行動，但即使尋求談判，伊朗和以色列也未必願意收手。德黑蘭研判可在消耗戰中拖垮對手。</p>
+    <div class="article-title">三大情境油價矩陣</div>
+    <div class="article-title-cn">China Faces Mild But Manageable Inflationary Impulse From Iran</div>
+    <p>彭博經濟研究建構三大情境的油價矩陣：</p>
+    <table class="scenario-table">
+      <tr><th>情境</th><th>布倫特價格</th><th>觸發條件</th><th>對全球GDP影響</th></tr>
+      <tr><td class="scenario-name" style="color:var(--green)">停火</td><td>$65/桶</td><td>戰爭風險溢價消退，回歸戰前均價</td><td>中性偏正</td></tr>
+      <tr><td class="scenario-name" style="color:var(--yellow)">基準（持續消耗）</td><td>$80–$108/桶</td><td>海峽部分通行，供應中斷持續</td><td>美-0.1ppt、歐-0.6ppt</td></tr>
+      <tr><td class="scenario-name" style="color:var(--red)">全面升級</td><td>$130–$164/桶</td><td>石油基建遭攻擊+海峽完全關閉</td><td>全球衰退風險</td></tr>
+    </table>
     <div class="implication">
       <div class="label">投資啟示</div>
-      油價在$80-$110區間寬幅震盪。BofA建議在油價>$100時逢高放空、DXY>100時做空美元、30年期殖利率>5%時買入。S&P 500跌至6,600以下時可做多，因為這些極端水位將觸發政策回應。
+      停火情境下油價可回落$40+/桶 — 能源股賣出信號。但「全面升級」尾部風險意味著原油看漲期權（far OTM calls）是低成本對沖。
+    </div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">第二周：川普混合訊號，BofA戰術閾值</div>
+    <div class="article-title-cn">Iran War Week Two: Mixed Trump Signals Keep Oil Volatile</div>
+    <p>霍爾木茲海峽仍<span style="color:#fff;font-weight:700">無法通行</span>。布倫特從高點回落至$90以下。Hartnett團隊建議在極端水位進行<span style="color:#fff;font-weight:700">逆向操作</span>，因為這些價位將觸發政策回應：</p>
+    <div class="data-point">
+      逢高放空油價 <span class="num">&gt;$100/桶</span> &nbsp;|&nbsp;
+      逢高放空美元 <span class="num">DXY &gt;100</span> &nbsp;|&nbsp;
+      做多30年期國債 殖利率 <span class="num">&gt;5%</span> &nbsp;|&nbsp;
+      做多S&P 500 <span class="num">&lt;6,600</span>
     </div>
   </div>
 
@@ -159,43 +303,81 @@
     <div class="article-title">2022年翻版：能源+防禦性板塊輪動</div>
     <div class="article-title-cn">Trade Like It's 2022 as Iran War Boosts Energy, Defensives</div>
     <p>伊朗戰爭衝擊與2022年俄烏戰爭高度相似：布倫特在兩年的同期間均暴漲約60%。化石燃料和清潔能源股齊漲，其他板塊因全球增長擔憂下跌。板塊輪動向<span style="color:#fff;font-weight:700">低波動率+高價值因子</span>傾斜 — 典型的防禦性配置。阿聯酋石油產出因無人機攻擊其港口和船隻而<span style="color:#fff;font-weight:700">接近腰斬</span>。</p>
+    <div class="data-point">
+      能源（XLE）：<span class="num">YTD +28%</span> &nbsp;|&nbsp;
+      防禦性策略：<span class="num">低波動+高價值</span> &nbsp;|&nbsp;
+      阿聯酋產出：<span class="num">↓近50%</span>
+    </div>
   </div>
 
   <div class="article">
-    <div class="article-title">鋁價可漲28%至$3,250/噸</div>
-    <div class="article-title-cn">LME Aluminum Price Can Climb 28% on Iran War</div>
-    <p>伊朗衝突導致供應中斷，全球鋁市場赤字擴大。中國產量預計+0.8%至4,550萬噸（接近政策上限），中國以外產量將<span style="color:#fff;font-weight:700">下降3.3%</span>。若中東戰爭中斷持續4個月，全球鋁產量將減少230萬噸。</p>
-  </div>
-
-  <div class="article">
-    <div class="article-title">肥料價格飆升：氮肥+7%、硫酸銨+14%</div>
-    <div class="article-title-cn">Middle East War Lifts Fertilizer Prices as Supply Concerns Build</div>
-    <p>巴西市場：尿素報價$620-$700/噸（週環比+7.3%），硫酸銨漲至$255-$280/噸（<span style="color:#fff;font-weight:700">+14%</span>），磷酸一銨$790-$800/噸，鉀肥$380-$385/噸。中東生產和物流中斷持續推高價格。</p>
+    <div class="article-title">大宗商品連鎖漲價：鋁+28%、肥料+14%</div>
+    <div class="article-title-cn">LME Aluminum / Fertilizer Prices on Iran War</div>
+    <p>衝突導致的供應中斷在金屬和農產品市場持續發酵：<strong>鋁</strong>可漲28%至$3,250/噸（中國產量接近政策上限4,550萬噸，中國以外產量降3.3%）；<strong>尿素</strong>報價$620-$700/噸（+7.3%），<strong>硫酸銨</strong>漲至$255-$280/噸（<span style="color:#fff;font-weight:700">+14%</span>）。化肥價格上漲將傳導至糧食成本，進一步加劇全球通膨壓力。</p>
     <div class="implication">
       <div class="label">投資啟示</div>
-      化肥價格上漲將傳導至糧食成本。做多農業化工股（如Nutrien、Mosaic），但需關注衝突持續時間。若短期停火，價格回調風險大。
+      做多農業化工股（Nutrien、Mosaic、CF Industries），做多鋁生產商（Alcoa、Hindalco）。但需關注衝突持續時間 — 短期停火下，大宗商品回調風險大。
     </div>
   </div>
 </div>
 
-<!-- ======== SUPPLY CHAIN ======== -->
+<!-- ======== SECTION 5: GOLD ======== -->
+<div class="section" id="gold">
+  <h2><span class="tag tag-gold">黃金</span> <span class="tag tag-hedge">對沖</span> 黃金：戰爭的終極對沖</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--gold)">&#x2191;調預測</div><div class="lbl">彭博上調<br>黃金價格預測</div></div>
+    <div class="stat"><div class="val" style="color:var(--green)">雙贏結構</div><div class="lbl">停火或升級<br>黃金均受益</div></div>
+    <div class="stat"><div class="val" style="color:var(--cyan)">央行+ETF</div><div class="lbl">需求端<br>雙引擎</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">彭博上調黃金預測：「黏性對沖」結構性需求</div>
+    <div class="article-title-cn">Precious Comment: Raising Our Gold Price Forecast on Sticky Hedges</div>
+    <p>彭博上調黃金價格預測，理由是<span style="color:#fff;font-weight:700">「黏性對沖需求」（sticky hedges）</span>— 即使地緣風險消退，央行和機構投資者的黃金配置也不會大幅減少。三大結構性驅動力：<strong>（1）</strong>全球央行連續第三年淨購買超過1,000噸，中國人行和波蘭央行領銜；<strong>（2）</strong>黃金ETF在2026年Q1創紀錄流入，散戶追逐「去美元化」敘事；<strong>（3）</strong>實際利率預期下行 — 若Fed下半年降息，黃金的機會成本下降。</p>
+    <div class="implication">
+      <div class="label">投資啟示</div>
+      黃金的最大優勢是「不對稱結構」— 停火情境下回調有限（黏性需求托底），升級情境下漲幅無上限。在portfolio層面，5-10%的黃金配置（GLD/IAU）是低成本的尾部風險保險。
+    </div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">黃金 vs 石油：戰爭對沖的不對稱性</div>
+    <p>石油與黃金在戰爭情境下呈現截然不同的風險收益特徵：</p>
+    <table class="scenario-table">
+      <tr><th>情境</th><th>石油表現</th><th>黃金表現</th><th>說明</th></tr>
+      <tr><td class="scenario-name" style="color:var(--green)">停火</td><td style="color:var(--red)">大跌（-30%+）</td><td style="color:var(--yellow)">小幅回調（-5~8%）</td><td>戰爭溢價消退，但央行需求托底</td></tr>
+      <tr><td class="scenario-name" style="color:var(--yellow)">持續消耗</td><td style="color:var(--yellow)">震盪（$80-$108）</td><td style="color:var(--green)">穩步上漲</td><td>不確定性持續推升避險需求</td></tr>
+      <tr><td class="scenario-name" style="color:var(--red)">全面升級</td><td style="color:var(--green)">暴漲（$130-$164）</td><td style="color:var(--green)">暴漲（新高）</td><td>雙雙受益，但黃金波動更小</td></tr>
+    </table>
+    <p>結論：<span style="color:#fff;font-weight:700">黃金在三種情境中均不虧損或小幅回調，而石油在停火情境面臨暴跌風險</span>。這使黃金成為比石油更優的「戰爭對沖」工具。</p>
+  </div>
+
+  <div class="article">
+    <div class="article-title">金屬和記憶體價格已在推升CPI — 戰前通膨加速器</div>
+    <div class="article-title-cn">Metals, Memory Prices Already Pushing CPI Before War</div>
+    <p>早在戰爭爆發前，金屬和記憶體價格的上漲已在推升核心CPI。HBM（高頻寬記憶體）價格因AI需求飆升帶動DRAM報價上漲25%以上，銅價因電網升級需求年初以來漲12%。戰爭衝擊疊加在<span style="color:#fff;font-weight:700">已經升溫的原物料通膨之上</span>，使央行的「暫時性」論述更難成立。黃金在此環境中受益於「通膨對沖+避險」的雙重敘事。</p>
+    <div class="data-point">
+      HBM價格：<span class="num">+25%</span>（YTD）&nbsp;|&nbsp;
+      銅價：<span class="num">+12%</span>（YTD）&nbsp;|&nbsp;
+      黃金定位：<span class="num">通膨對沖 + 避險雙重身份</span>
+    </div>
+  </div>
+</div>
+
+<!-- ======== SECTION 6: SUPPLY CHAIN ======== -->
 <div class="section" id="supply-chain">
   <h2><span class="tag tag-semicon">半導體</span> <span class="tag tag-inflation">通膨</span> 供應鏈連鎖效應</h2>
 
   <div class="stat-grid">
     <div class="stat"><div class="val" style="color:var(--cyan)">1/3</div><div class="lbl">全球氦氣產能<br>已離線（卡達）</div></div>
-    <div class="stat"><div class="val" style="color:var(--orange)">3%</div><div class="lbl">美國CPI可能<br>攀升至（3月）</div></div>
-    <div class="stat"><div class="val" style="color:var(--red)">+$1萬-$1.5萬</div><div class="lbl">2027年新款<br>重卡漲價幅度</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">64.7%</div><div class="lbl">韓國氦氣<br>對卡達依賴度</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">~3%</div><div class="lbl">美國CPI可能<br>攀升至（3月）</div></div>
   </div>
 
   <div class="article">
     <div class="article-title">氦氣斷供恐加劇晶片短缺</div>
-    <p>卡達關閉拉斯拉凡（Ras Laffan）LNG工廠，導致全球<span style="color:#fff;font-weight:700">約1/3氦氣產能下線</span>。氦氣在晶片製造中無可替代（用於熱管理、洩漏檢測、蝕刻載氣），已充裝的運輸船因霍爾木茲海峽中斷而滯留。韓國（全球2/3記憶體晶片產地）去年64.7%的氦氣進口來自卡達。</p>
-    <div class="data-point">
-      卡達氦氣份額：<span class="num">全球1/3</span> &nbsp;|&nbsp;
-      韓國氦氣對卡達依賴度：<span class="num">64.7%</span> &nbsp;|&nbsp;
-      替代來源：<span class="num">極其有限</span>（俄羅斯Amur廠仍在爬坡且受制裁）
-    </div>
+    <p>卡達關閉拉斯拉凡（Ras Laffan）LNG工廠，導致全球<span style="color:#fff;font-weight:700">約1/3氦氣產能下線</span>。氦氣在晶片製造中無可替代（用於熱管理、洩漏檢測、蝕刻載氣），已充裝的運輸船因霍爾木茲海峽中斷而滯留。韓國（全球2/3記憶體晶片產地）去年64.7%的氦氣進口來自卡達。替代來源極其有限（俄羅斯Amur廠仍在爬坡且受制裁）。</p>
     <div class="implication">
       <div class="label">投資啟示</div>
       若中斷持續數周，晶片廠將優先削減低利潤產品線，進一步傾斜向AI記憶體，加劇消費電子晶片短缺。記憶體價格看漲（SK海力士、三星）。半導體設備（如ASML）短期承壓但長期受益於重建需求。
@@ -205,13 +387,24 @@
   <div class="article">
     <div class="article-title">戰前通膨本在降溫 — 油價衝擊改變格局</div>
     <div class="article-title-cn">Pre-War Forecast Showed Global Inflation Ebbing to Year End</div>
-    <p>2026年開局全球通膨普遍放緩，但中東戰爭改變了一切。<span style="color:#fff;font-weight:700">若衝突短暫</span>，通膨衝擊將是暫時的；若持續，央行面臨艱難抉擇。美國CPI可能在3月升向3%，歐元區面臨上行風險，英國通膨將遠超目標。日銀可能提前加息以防通膨預期脫錨。</p>
+    <p>2026年開局全球通膨普遍放緩，但中東戰爭改變了一切。<span style="color:#fff;font-weight:700">若衝突短暫</span>，通膨衝擊將是暫時的；若持續，央行面臨艱難抉擇。美國CPI可能在3月升向3%，歐元區面臨上行風險，英國通膨將遠超目標。油價帶動的食品+燃料雙重通膨壓力，使央行的降息計劃被迫推遲。</p>
   </div>
 
   <div class="article">
-    <div class="article-title">機械成本壓力復活，但需求暫穩</div>
+    <div class="article-title">機械成本壓力復活 — 但需求暫穩</div>
     <div class="article-title-cn">Iran Conflict Revives Machinery Cost Pressure, Yet Demand Intact</div>
-    <p>油價上漲推高柴油價格，擠壓卡車運營商利潤。但EPA 2027年排放新規將推動重卡價格上漲<span style="color:#fff;font-weight:700">$10,000-$15,000</span>，支撐2026年Class 8卡車訂單。Caterpillar定位最佳。若衝突不持久，需求影響有限。</p>
+    <p>油價上漲推高柴油價格，擠壓卡車運營商利潤。EPA 2027年排放新規將推動重卡價格上漲<span style="color:#fff;font-weight:700">$10,000-$15,000</span>，支撐2026年Class 8卡車訂單。Caterpillar定位最佳 — 同時受益於國防和基建支出增加。若衝突不持久，需求影響有限。</p>
+  </div>
+</div>
+
+<!-- ======== SECTION 7: CENTRAL BANKS ======== -->
+<div class="section" id="central-banks">
+  <h2><span class="tag tag-rates">利率</span> <span class="tag tag-geo">央行</span> 央行反應與利率啟示</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--accent)">按兵不動</div><div class="lbl">ECB維持<br>中性利率</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">4月加息</div><div class="lbl">BOJ升至1.0%<br>概率37%</div></div>
+    <div class="stat"><div class="val" style="color:var(--yellow)">$3.58/加侖</div><div class="lbl">美國汽油<br>川普任期新高</div></div>
   </div>
 
   <div class="article">
@@ -223,60 +416,47 @@
       ECB「按兵不動」代表歐洲滯脹風險上升。歐元區外銷股持續承壓。做多德國基建相關標的（受益於財政刺激），做空歐洲高能耗出口商。
     </div>
   </div>
-</div>
-
-<!-- ======== POSITIONING ======== -->
-<div class="section" id="positioning">
-  <h2><span class="tag tag-hedge">對沖</span> <span class="tag tag-oil">市場</span> 市場部位與對沖策略</h2>
-
-  <div class="stat-grid">
-    <div class="stat"><div class="val" style="color:var(--red)">$3.7B</div><div class="lbl">金融股<br>創紀錄流出</div></div>
-    <div class="stat"><div class="val" style="color:var(--green)">$8.9B</div><div class="lbl">韓國股市<br>創紀錄流入</div></div>
-    <div class="stat"><div class="val" style="color:var(--yellow)">$5B</div><div class="lbl">高收益債<br>流出（4月以來最大）</div></div>
-  </div>
 
   <div class="article">
-    <div class="article-title">BofA：避險流出加劇，但尚未「恐慌性拋售」</div>
-    <div class="article-title-cn">Risk-Off Outflows More Visible as Sentiment Gets Hit</div>
-    <p>BofA Bull &amp; Bear Indicator已見頂。風險偏好下降在美國高收益債（-$5B）、新興市場債務（-$3.1B）和金融股（<span style="color:#fff;font-weight:700">創紀錄-$3.7B</span>）中尤為明顯。但「大圖景」部位尚未顯示「熊市恐慌」— 反向投資者的買入信號尚未觸發。</p>
+    <div class="article-title">油價接近$100加劇鷹派利率風險</div>
+    <div class="article-title-cn">Oil Near $100 Adds Hawkish Rate Risk for Central Banks</div>
+    <p>多位紅色州民主黨參議員要求白宮釋放戰略儲備以壓低油價，但SPR僅剩3.5億桶，釋放空間有限。FOMC內部鷹派借油價施壓：<span style="color:#fff;font-weight:700">若CPI在3月升向3%，下半年降息計劃將被擱置</span>。即便最鴿的Waller也承認「油價衝擊改變了數據面貌」。汽油均價突破$3.58/加侖創川普任期新高，中期選舉壓力升溫。</p>
     <div class="data-point">
-      科技股：<span class="num">7周來首次流出</span>（-$900M）&nbsp;|&nbsp;
-      醫療保健：<span class="num">7月以來最大流出</span>（-$1.6B）&nbsp;|&nbsp;
-      日本股市：<span class="num">5周連續流入</span>（+$6.3B，2013年以來最大）
+      Fed按兵不動概率：<span class="num">95%+</span> &nbsp;|&nbsp;
+      CPI 3月估計：<span class="num">~3.0%</span> &nbsp;|&nbsp;
+      下半年降息窗口：<span class="num">取決於5月CPI見頂</span>
     </div>
   </div>
 
   <div class="article">
-    <div class="article-title">BofA Hartnett交易建議：逆向操作四大閾值</div>
-    <p>Hartnett團隊建議在以下極端水位進行<span style="color:#fff;font-weight:700">逆向操作</span>，因為這些價位將觸發戰爭/石油/聯準會/關稅的政策回應：</p>
-    <div class="data-point">
-      逢高放空油價 <span class="num">&gt;$100/桶</span> &nbsp;|&nbsp;
-      逢高放空美元 <span class="num">DXY &gt;100</span> &nbsp;|&nbsp;
-      做多30年期國債 殖利率 <span class="num">&gt;5%</span> &nbsp;|&nbsp;
-      做多S&P 500 <span class="num">&lt;6,600</span>
-    </div>
+    <div class="article-title">BOJ：4月加息越來越可能 — 1970年代石油危機教訓</div>
+    <div class="article-title-cn">BOJ REACT: Rate Hold Shifts Focus to April Hike</div>
+    <p>BOJ以8-1投票維持0.75%不變（田端委員主張加息），但彭博經濟研究已將加息預期從7月提前至<span style="color:#fff;font-weight:700">4月</span>。理由：日本90%原油經霍爾木茲進口，油價衝擊直接推升通膨預期。1970年代的教訓是 — 面對供給面衝擊，正確的回應是及時收緊政策，展示價格穩定承諾。延遲的成本（通膨預期脫錨）遠大於提前行動的成本（些微增長拖累）。</p>
     <div class="implication">
       <div class="label">投資啟示</div>
-      Hartnett的邏輯是：極端價位觸發政策回應 &rarr; 限制進一步惡化。但這依賴「政策理性」假設。若戰爭長期化，這些閾值可能被突破。建議作為參考框架而非機械性交易規則。
+      若4月確認加息至1%，日經面臨進一步壓力（尤其出口商），但日本銀行股受益於NIM擴大。短期做空日圓（BOJ可能暫時按兵不動讓日圓進一步走弱），中期做多（加息確認後日圓走強）。
     </div>
   </div>
 
   <div class="article">
-    <div class="article-title">2022年翻版策略：能源、防禦、低波動因子</div>
-    <p>實際操作中的2022年翻版策略：<strong>做多</strong>能源（傳統+清潔）、國防、低波動率因子；<strong>減持</strong>高Beta成長股、非必需消費品。板塊分化（dispersion）上升，但「便宜的價值股」更難找到 — 防禦性板塊已被追捧。</p>
+    <div class="article-title">投資者能承受霍爾木茲的現實嗎？</div>
+    <div class="article-title-cn">Investors Can Handle What's Happening in Hormuz — John Authers</div>
+    <p>Authers的專欄反思市場對霍爾木茲中斷的心理適應：<span style="color:#fff;font-weight:700">恐懼的高峰已過，但風險並未消退</span>。市場從「恐慌」轉向「定價持久中斷」— 波動率回落但戰爭溢價維持。三大結論：<strong>（1）</strong>市場能承受壞消息，但無法承受「意外更壞的消息」（tail risk）；<strong>（2）</strong>金融條件已因油價收緊，等同Fed「影子加息」25bp；<strong>（3）</strong>對沖需求已從「恐慌性買入」轉為「結構性配置」— 這正是黃金和波動率策略的甜蜜點。</p>
   </div>
 </div>
 
-<!-- ======== TAKEAWAYS ======== -->
+<!-- ======== SECTION 8: TAKEAWAYS ======== -->
 <div class="callout" id="takeaways">
-  <div class="callout-title">基金經理人重點摘要</div>
+  <div class="callout-title">基金經理人重點摘要 — 八大核心判斷</div>
   <ul>
-    <li><strong>戰爭持續時間 > 強度：</strong>伊朗發射3,678枚彈藥後仍具作戰能力，新領袖信號延續戰爭。市場需定價「衝突持久化」而非「即將結束」。持續時間對全球經濟的威脅遠超短期暴力強度。</li>
-    <li><strong>石油：</strong>$80-$110寬幅震盪。BofA建議>$100時逢高放空，認為政策回應將介入。但霍爾木茲海峽通行恢復前，下行空間有限。阿聯酋產量腰斬是關鍵供應風險。</li>
-    <li><strong>通膨衝擊：</strong>美國CPI可能升向3%，歐洲通膨面臨上行壓力。戰前通膨正在降溫 — 油價衝擊改變了全局。食品+燃料雙重通膨壓力下，央行難以降息。</li>
-    <li><strong>供應鏈：</strong>卡達氦氣斷供（全球1/3）威脅半導體生產，尤其韓國記憶體（64.7%依賴卡達）。肥料漲14%將傳導至糧食成本。鋁可漲28%。</li>
-    <li><strong>板塊配置：</strong>2022年翻版 — 做多能源+防禦性，減持高Beta。金融股創紀錄流出。日本逆勢獲流入但日經暴跌7%反映矛盾心態。</li>
-    <li><strong>政策轉向觸發點：</strong>汽油$3.58/加侖（川普任期最高）是政治壓力指標。中期選舉前，能源價格居高+軍事傷亡上升將迫使談判。</li>
+    <li><strong>戰爭持續時間 &gt; 強度：</strong>伊朗發射3,678枚彈藥後仍具作戰能力，新領袖延續戰爭路線，無人機月產能400架。三大情境（停火/消耗戰/全面升級）的油價區間差距達$100/桶。市場最大認知偏差 = 「川普通話就能結束戰爭」。</li>
+    <li><strong>霍爾木茲是核心變量：</strong>全球20%石油運輸經此海峽。水雷是最大威脅 — 佈設低成本、清除需數月。替代路線僅能覆蓋正常運量的13-50%。IEA 4億桶戰略儲備僅覆蓋20天。</li>
+    <li><strong>石油：</strong>$65-$164區間取決於戰爭走向。BofA建議&gt;$100時逢高放空，認為政策回應將介入。但霍爾木茲通行恢復前，下行空間有限。沙烏地煉油設施受損（-50萬桶/日）和阿聯酋產量腰斬是關鍵供應風險。</li>
+    <li><strong>黃金 — 最優戰爭對沖：</strong>三種情境中均不虧損或僅小幅回調。「黏性對沖需求」（央行+ETF）托底，停火時石油暴跌-30%但黃金僅回調-5~8%。Portfolio層面5-10%配置（GLD/IAU）是低成本尾部風險保險。</li>
+    <li><strong>亞洲最脆弱：</strong>日本90%原油經霍爾木茲，台灣第三大卡達LNG買家（台積電用電佔7%），韓國64.7%氦氣靠卡達。高Beta+石油淨進口國貨幣（日圓、韓圜、盧比）壓力最大。</li>
+    <li><strong>供應鏈連鎖：</strong>卡達氦氣斷供威脅韓國記憶體生產。肥料漲14%→糧食成本上升→CPI壓力。鋁可漲28%至$3,250/噸。HBM/DRAM戰前已漲25% — 戰爭疊加更難「暫時性」。</li>
+    <li><strong>央行困局：</strong>ECB按兵不動（滯脹兩難），BOJ可能4月加息至1%（1970年代教訓），Fed上半年不動但油價衝擊等同「影子加息」25bp。CPI 3月升向3%，下半年降息取決於5月見頂。</li>
+    <li><strong>板塊配置：</strong>2022年翻版 — 做多能源（XLE +28%）+防禦性+黃金，減持高Beta。金融股創紀錄流出（-$3.7B）。做多LNG替代供應商、農業化工、掃雷國防股。做空亞洲航空、歐洲高能耗出口商。</li>
   </ul>
 </div>
 

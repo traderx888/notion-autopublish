@@ -209,6 +209,12 @@ class TelegramScheduleAuditTests(unittest.TestCase):
             self.assertEqual(by_key["crypto_etf_flow_mid"]["schedule_text"], "Daily 11:50 HKT")
             self.assertEqual(by_key["crypto_news_daily"]["command"], "run_crypto_news.bat")
             self.assertEqual(by_key["crypto_news_daily"]["schedule_text"], "Daily 11:00 HKT")
+            self.assertEqual(by_key["friday_volume"]["command"], "run_friday_volume.bat")
+            self.assertEqual(by_key["friday_volume"]["schedule_text"], "Mon-Fri 09:30 HKT")
+            self.assertEqual(by_key["futu_signals"]["command"], "run_futu_signals.bat")
+            self.assertEqual(by_key["futu_signals"]["schedule_text"], "Mon-Fri 09:45 HKT")
+            self.assertEqual(by_key["friday_options"]["command"], "run_friday_options.bat")
+            self.assertEqual(by_key["friday_options"]["schedule_text"], "Mon-Fri 17:00 HKT")
             self.assertEqual(by_key["options_earnings_2100"]["command"], "run_options_expiry.bat")
             self.assertEqual(by_key["options_earnings_2100"]["schedule_text"], "Daily 21:00 HKT")
             self.assertEqual(by_key["options_earnings_2330"]["command"], "run_options_expiry.bat")
@@ -277,6 +283,12 @@ class TelegramScheduleAuditTests(unittest.TestCase):
             self.assertEqual(by_key["jarvis_cbbc_tracker_am"]["display_name"], "HK CBBC Tracker (牛熊證)")
             self.assertEqual(by_key["jarvis_cbbc_tracker_am"]["lane"], "live_scheduler")
             self.assertEqual(by_key["jarvis_cbbc_tracker_am"]["time_slots"], ["09:00 HKT"])
+            self.assertEqual(by_key["friday_volume"]["time_slots"], ["09:30 HKT"])
+            self.assertEqual(by_key["futu_signals"]["time_slots"], ["09:45 HKT"])
+            self.assertEqual(by_key["friday_options"]["time_slots"], ["17:00 HKT"])
+            self.assertIn("orphaned_wrapper", by_key["friday_volume"]["issues"])
+            self.assertIn("orphaned_wrapper", by_key["futu_signals"]["issues"])
+            self.assertIn("orphaned_wrapper", by_key["friday_options"]["issues"])
             self.assertEqual(by_key["jarvis_portfolio_am"]["lane"], "live_scheduler")
             self.assertEqual(by_key["jarvis_portfolio_pm"]["time_slots"], ["20:30 HKT"])
             self.assertEqual(by_key["crypto_etf_flow_am"]["lane"], "repo_only")
@@ -445,6 +457,18 @@ class TelegramScheduleAuditTests(unittest.TestCase):
         )
         (fundman / "run_crypto_news.bat").write_text(
             "@echo off\npython send_crypto_news.py\n",
+            encoding="utf-8",
+        )
+        (fundman / "run_friday_volume.bat").write_text(
+            "@echo off\npython send_friday_volume_check.py\n",
+            encoding="utf-8",
+        )
+        (fundman / "run_futu_signals.bat").write_text(
+            "@echo off\npython send_futu_options_signals.py\n",
+            encoding="utf-8",
+        )
+        (fundman / "run_friday_options.bat").write_text(
+            "@echo off\npython send_friday_options_check.py\n",
             encoding="utf-8",
         )
         (fundman / "run_options_expiry.bat").write_text(

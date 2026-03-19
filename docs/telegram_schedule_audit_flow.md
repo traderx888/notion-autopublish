@@ -47,12 +47,21 @@ Excel sync workflow"]
         N_jarvis_excel_sync_late["Jarvis Excel Sync Late
 23:50 HKT
 run_excel_sync.bat"]
+        N_futu_signals["Futu HSI Options Signals
+09:45 HKT
+Real-time HSI options signals after market open"]
         N_georisk["GeoRisk Update
 20:00 HKT
 Geopolitics risk monitor and Telegram update"]
         N_jarvis_cbbc_tracker_am["HK CBBC Tracker (牛熊證)
 09:00 HKT
 SG Warrants bull/bear distribution"]
+        N_friday_options["HSI Options Daily Check
+17:00 HKT
+End-of-day HSI options volume and put/call anomaly check"]
+        N_friday_volume["HSI Opening Volume
+09:30 HKT
+HSI futures opening volume/OI baseline with Friday spike alert"]
         N_usdata["US Data Calendar
 18:30 HKT
 Calendar screenshot and macro data table"]
@@ -89,6 +98,9 @@ Expiring options contracts and Dash earnings reminder"]
         N_polymarket["JARVIS-Reminder-polymarket
 20:05 HKT
 run_daily_reminder.bat polymarket"]
+        N_blp_pdf_title_pipeline["BLP-PDF-Title-Pipeline
+22:15 HKT
+run_blp_title_pipeline.bat --folder 'C:\blp\data' --retag-all"]
         N_p_model_check["P-model Check
 05:00 HKT
 Pre-market PAM / P-model signal check"]
@@ -98,6 +110,9 @@ Portfolio actions vs model signals"]
         N_jarvis_portfolio_pm["JARVIS Portfolio Commentary (PM)
 20:30 HKT
 Portfolio actions vs model signals"]
+        N_model_update_checker["Model Update Checker (2h)
+Every 2h 05:00-23:00 HKT
+H-Model + P-Model change detection and Telegram alert"]
     end
     subgraph REPO_ONLY["Repo-defined / Not Currently Scheduled"]
         N_jarvis_light["Jarvis Light
@@ -143,8 +158,11 @@ Hourly cross-repo Telegram digest"]
     N_jarvis_excel_sync_am --> TG
     N_jarvis_excel_sync_pm --> TG
     N_jarvis_excel_sync_late --> TG
+    N_futu_signals --> TG
     N_georisk --> TG
     N_jarvis_cbbc_tracker_am --> TG
+    N_friday_options --> TG
+    N_friday_volume --> TG
     N_usdata --> TG
     N_jarvis_full --> TG
     N_jarvis_light_0950 --> TG
@@ -157,9 +175,11 @@ Hourly cross-repo Telegram digest"]
     N_options_earnings_2100 --> TG
     N_options_earnings_2330 --> TG
     N_polymarket --> TG
+    N_blp_pdf_title_pipeline --> TG
     N_p_model_check --> TG
     N_jarvis_portfolio_am --> TG
     N_jarvis_portfolio_pm --> TG
+    N_model_update_checker --> TG
     N_jarvis_light --> TG
     N_scrape_cw --> TG
     N_newsletter --> TG
@@ -192,8 +212,11 @@ Hourly cross-repo Telegram digest"]
 - `10:30 HKT` | **Jarvis Excel Sync AM** | Excel sync workflow | `run_excel_sync.bat`
 - `21:00 HKT` | **Jarvis Excel Sync PM** | Excel sync workflow | `run_excel_sync.bat`
 - `23:50 HKT` | **Jarvis Excel Sync Late** | run_excel_sync.bat | `run_excel_sync.bat`
+- `09:45 HKT` | **Futu HSI Options Signals** | Real-time HSI options signals after market open | `run_futu_signals.bat`
 - `20:00 HKT` | **GeoRisk Update** | Geopolitics risk monitor and Telegram update | `daily_reminders.py --task georisk`
 - `09:00 HKT` | **HK CBBC Tracker (牛熊證)** | SG Warrants bull/bear distribution | `send_cbbc_tracker.py`
+- `17:00 HKT` | **HSI Options Daily Check** | End-of-day HSI options volume and put/call anomaly check | `run_friday_options.bat`
+- `09:30 HKT` | **HSI Opening Volume** | HSI futures opening volume/OI baseline with Friday spike alert | `run_friday_volume.bat`
 - `18:30 HKT` | **US Data Calendar** | Calendar screenshot and macro data table | `daily_reminders.py --task usdata`
 - `05:00 HKT` | **JARVIS Full** | Full controller run | `run_full.bat`
 - `09:50 HKT` | **JARVIS Light 09:50** | Light controller run | `run_light.bat`
@@ -206,9 +229,11 @@ Hourly cross-repo Telegram digest"]
 - `21:00 HKT` | **Options & Earnings Alert (21:00)** | Expiring options contracts and Dash earnings reminder | `run_options_expiry.bat`
 - `23:30 HKT` | **Options & Earnings Alert (23:30)** | Expiring options contracts and Dash earnings reminder | `run_options_expiry.bat`
 - `20:05 HKT` | **JARVIS-Reminder-polymarket** | run_daily_reminder.bat polymarket | `run_daily_reminder.bat polymarket`
+- `22:15 HKT` | **BLP-PDF-Title-Pipeline** | run_blp_title_pipeline.bat --folder "C:\blp\data" --retag-all | `run_blp_title_pipeline.bat --folder "C:\blp\data" --retag-all`
 - `05:00 HKT` | **P-model Check** | Pre-market PAM / P-model signal check | `daily_reminders.py --task pam_check`
 - `09:00 HKT` | **JARVIS Portfolio Commentary (AM)** | Portfolio actions vs model signals | `run_portfolio_commentary.bat`
 - `20:30 HKT` | **JARVIS Portfolio Commentary (PM)** | Portfolio actions vs model signals | `run_portfolio_commentary.bat`
+- `Every 2h` | **Model Update Checker** | H-Model + P-Model change detection and Telegram alert | `run_check_model_updates.bat`
 
 ## Repo-defined / Not Currently Scheduled
 
@@ -242,8 +267,11 @@ Hourly cross-repo Telegram digest"]
 | Live scheduler | 10:30 HKT | Jarvis Excel Sync AM | `jarvis_excel_sync_am` | Excel sync workflow | `run_excel_sync.bat` | Scheduler + repo |
 | Live scheduler | 21:00 HKT | Jarvis Excel Sync PM | `jarvis_excel_sync_pm` | Excel sync workflow | `run_excel_sync.bat` | Scheduler + repo |
 | Live scheduler | 23:50 HKT | Jarvis Excel Sync Late | `jarvis_excel_sync_late` | run_excel_sync.bat | `run_excel_sync.bat` | Scheduler + repo |
+| Live scheduler | 09:45 HKT | Futu HSI Options Signals | `futu_signals` | Real-time HSI options signals after market open | `run_futu_signals.bat` | Scheduler + repo |
 | Live scheduler | 20:00 HKT | GeoRisk Update | `georisk` | Geopolitics risk monitor and Telegram update | `daily_reminders.py --task georisk` | Scheduler + repo |
 | Live scheduler | 09:00 HKT | HK CBBC Tracker (牛熊證) | `jarvis_cbbc_tracker_am` | SG Warrants bull/bear distribution | `send_cbbc_tracker.py` | Scheduler + repo |
+| Live scheduler | 17:00 HKT | HSI Options Daily Check | `friday_options` | End-of-day HSI options volume and put/call anomaly check | `run_friday_options.bat` | Scheduler + repo |
+| Live scheduler | 09:30 HKT | HSI Opening Volume | `friday_volume` | HSI futures opening volume/OI baseline with Friday spike alert | `run_friday_volume.bat` | Scheduler + repo |
 | Live scheduler | 18:30 HKT | US Data Calendar | `usdata` | Calendar screenshot and macro data table | `daily_reminders.py --task usdata` | Scheduler + repo |
 | Live scheduler | 05:00 HKT | JARVIS Full | `jarvis_full` | Full controller run | `run_full.bat` | Scheduler + repo |
 | Live scheduler | 09:50 HKT | JARVIS Light 09:50 | `jarvis_light_0950` | Light controller run | `run_light.bat` | Scheduler + repo |
@@ -256,9 +284,11 @@ Hourly cross-repo Telegram digest"]
 | Live scheduler | 21:00 HKT | Options &amp; Earnings Alert (21:00) | `options_earnings_2100` | Expiring options contracts and Dash earnings reminder | `run_options_expiry.bat` | Scheduler + repo |
 | Live scheduler | 23:30 HKT | Options &amp; Earnings Alert (23:30) | `options_earnings_2330` | Expiring options contracts and Dash earnings reminder | `run_options_expiry.bat` | Scheduler + repo |
 | Live scheduler | 20:05 HKT | JARVIS-Reminder-polymarket | `polymarket` | run_daily_reminder.bat polymarket | `run_daily_reminder.bat polymarket` | Scheduler + repo |
+| Live scheduler | 22:15 HKT | BLP-PDF-Title-Pipeline | `blp_pdf_title_pipeline` | run_blp_title_pipeline.bat --folder &quot;C:\blp\data&quot; --retag-all | `run_blp_title_pipeline.bat --folder "C:\blp\data" --retag-all` | Scheduler + repo |
 | Live scheduler | 05:00 HKT | P-model Check | `p_model_check` | Pre-market PAM / P-model signal check | `daily_reminders.py --task pam_check` | Scheduler + repo |
 | Live scheduler | 09:00 HKT | JARVIS Portfolio Commentary (AM) | `jarvis_portfolio_am` | Portfolio actions vs model signals | `run_portfolio_commentary.bat` | Scheduler + repo |
 | Live scheduler | 20:30 HKT | JARVIS Portfolio Commentary (PM) | `jarvis_portfolio_pm` | Portfolio actions vs model signals | `run_portfolio_commentary.bat` | Scheduler + repo |
+| Live scheduler | Every 2h | Model Update Checker | `model_update_checker` | H-Model + P-Model change detection and Telegram alert | `run_check_model_updates.bat` | Scheduler + repo |
 | Repo only | n/a | Jarvis Light | `jarvis_light` | run_light.bat | `run_light.bat` | Repo only |
 | Repo only | 10:00 HKT | Scrape Cw | `scrape_cw` | daily_reminders.py --task scrape_cw | `daily_reminders.py --task scrape_cw` | Repo only |
 | Repo only | 11:00 HKT | Newsletter | `newsletter` | daily_reminders.py --task newsletter | `daily_reminders.py --task newsletter` | Repo only |

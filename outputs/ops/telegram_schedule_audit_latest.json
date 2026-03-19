@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-18T11:51:45.892709+08:00",
+  "generated_at": "2026-03-19T09:32:00.142449+08:00",
   "root": "C:\\Users\\User\\Documents\\GitHub",
   "repos": [
     "All-in-one",
@@ -7,6 +7,32 @@
     "notion-autopublish"
   ],
   "records": [
+    {
+      "task_key": "blp_pdf_title_pipeline",
+      "scheduler_name": "BLP-PDF-Title-Pipeline",
+      "owner_repo": "notion-autopublish",
+      "source_type": "scheduler",
+      "command": "cmd.exe /c \"\"C:\\Users\\User\\Documents\\GitHub\\notion-autopublish-blp-title-pipeline\\run_blp_title_pipeline.bat\" --folder \"C:\\blp\\data\" --retag-all\"",
+      "schedule_text": "Daily 22:15 HKT",
+      "enabled": true,
+      "telegram_related": true,
+      "observed_in": [
+        "scheduler"
+      ],
+      "issues": [
+        "missing_in_control",
+        "missing_in_repo"
+      ],
+      "display_name": "BLP-PDF-Title-Pipeline",
+      "lane": "live_scheduler",
+      "source_group": "Other Telegram task",
+      "source_detail": "run_blp_title_pipeline.bat --folder \"C:\\blp\\data\" --retag-all",
+      "time_slots": [
+        "22:15 HKT"
+      ],
+      "runtime_entry": "run_blp_title_pipeline.bat --folder \"C:\\blp\\data\" --retag-all",
+      "state_reason": "active scheduler job"
+    },
     {
       "task_key": "crypto_etf_flow_am",
       "scheduler_name": "JARVIS-Reminder-crypto-etf-flow-am",
@@ -186,6 +212,56 @@
       "state_reason": "active scheduler job"
     },
     {
+      "task_key": "friday_options",
+      "scheduler_name": "JARVIS-Reminder-friday-options",
+      "owner_repo": "fundman-jarvis",
+      "source_type": "scheduler",
+      "command": "cmd.exe /c \"C:\\Users\\User\\Documents\\GitHub\\fundman-jarvis\\run_friday_options.bat\"",
+      "schedule_text": "Mon-Fri 17:00 HKT",
+      "enabled": true,
+      "telegram_related": true,
+      "observed_in": [
+        "control",
+        "repo",
+        "scheduler"
+      ],
+      "issues": [],
+      "display_name": "HSI Options Daily Check",
+      "lane": "live_scheduler",
+      "source_group": "HKEX HSI options daily report",
+      "source_detail": "End-of-day HSI options volume and put/call anomaly check",
+      "time_slots": [
+        "17:00 HKT"
+      ],
+      "runtime_entry": "run_friday_options.bat",
+      "state_reason": "active scheduler job"
+    },
+    {
+      "task_key": "friday_volume",
+      "scheduler_name": "JARVIS-Reminder-friday-volume",
+      "owner_repo": "fundman-jarvis",
+      "source_type": "scheduler",
+      "command": "cmd.exe /c \"C:\\Users\\User\\Documents\\GitHub\\fundman-jarvis\\run_friday_volume.bat\"",
+      "schedule_text": "Mon-Fri 09:30 HKT",
+      "enabled": true,
+      "telegram_related": true,
+      "observed_in": [
+        "control",
+        "repo",
+        "scheduler"
+      ],
+      "issues": [],
+      "display_name": "HSI Opening Volume",
+      "lane": "live_scheduler",
+      "source_group": "HSI futures opening check",
+      "source_detail": "HSI futures opening volume/OI baseline with Friday spike alert",
+      "time_slots": [
+        "09:30 HKT"
+      ],
+      "runtime_entry": "run_friday_volume.bat",
+      "state_reason": "active scheduler job"
+    },
+    {
       "task_key": "fundman_telegram_ops_listener",
       "scheduler_name": "Fundman-Telegram-Ops-Listener",
       "owner_repo": "fundman-jarvis",
@@ -209,6 +285,31 @@
         "00:01 HKT"
       ],
       "runtime_entry": "start_ops_listener.bat",
+      "state_reason": "active scheduler job"
+    },
+    {
+      "task_key": "futu_signals",
+      "scheduler_name": "JARVIS-Reminder-futu-signals",
+      "owner_repo": "fundman-jarvis",
+      "source_type": "scheduler",
+      "command": "cmd.exe /c \"C:\\Users\\User\\Documents\\GitHub\\fundman-jarvis\\run_futu_signals.bat\"",
+      "schedule_text": "Mon-Fri 09:45 HKT",
+      "enabled": true,
+      "telegram_related": true,
+      "observed_in": [
+        "control",
+        "repo",
+        "scheduler"
+      ],
+      "issues": [],
+      "display_name": "Futu HSI Options Signals",
+      "lane": "live_scheduler",
+      "source_group": "Futu OpenD",
+      "source_detail": "Real-time HSI options signals after market open",
+      "time_slots": [
+        "09:45 HKT"
+      ],
+      "runtime_entry": "run_futu_signals.bat",
       "state_reason": "active scheduler job"
     },
     {
@@ -1012,12 +1113,12 @@
     }
   ],
   "summary": {
-    "total_records": 40,
-    "records_with_issues": 24,
+    "total_records": 44,
+    "records_with_issues": 25,
     "issues_by_kind": {
       "info_only_schedule": 1,
-      "missing_in_control": 21,
-      "missing_in_repo": 4,
+      "missing_in_control": 22,
+      "missing_in_repo": 5,
       "orphaned_wrapper": 2
     }
   }

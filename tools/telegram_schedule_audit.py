@@ -49,6 +49,24 @@ WRAPPER_TASKS = {
         "telegram_related": True,
         "command": "run_deepvue_dashboard.bat",
     },
+    "run_friday_volume.bat": {
+        "task_key": "friday_volume",
+        "schedule_text": "Mon-Fri 09:30 HKT",
+        "telegram_related": True,
+        "command": "run_friday_volume.bat",
+    },
+    "run_futu_signals.bat": {
+        "task_key": "futu_signals",
+        "schedule_text": "Mon-Fri 09:45 HKT",
+        "telegram_related": True,
+        "command": "run_futu_signals.bat",
+    },
+    "run_friday_options.bat": {
+        "task_key": "friday_options",
+        "schedule_text": "Mon-Fri 17:00 HKT",
+        "telegram_related": True,
+        "command": "run_friday_options.bat",
+    },
     "run_sector_screenshots.bat": {
         "task_key": "sector_heatmap",
         "schedule_text": "Mon-Fri 15:30 HKT",
@@ -265,6 +283,27 @@ CHART_METADATA = {
         "source_detail": "SG Warrants bull/bear distribution",
         "default_time": "09:00 HKT",
         "runtime_entry": "send_cbbc_tracker.py",
+    },
+    "friday_volume": {
+        "display_name": "HSI Opening Volume",
+        "source_group": "HSI futures opening check",
+        "source_detail": "HSI futures opening volume/OI baseline with Friday spike alert",
+        "default_time": "09:30 HKT",
+        "runtime_entry": "run_friday_volume.bat",
+    },
+    "futu_signals": {
+        "display_name": "Futu HSI Options Signals",
+        "source_group": "Futu OpenD",
+        "source_detail": "Real-time HSI options signals after market open",
+        "default_time": "09:45 HKT",
+        "runtime_entry": "run_futu_signals.bat",
+    },
+    "friday_options": {
+        "display_name": "HSI Options Daily Check",
+        "source_group": "HKEX HSI options daily report",
+        "source_detail": "End-of-day HSI options volume and put/call anomaly check",
+        "default_time": "17:00 HKT",
+        "runtime_entry": "run_friday_options.bat",
     },
     "crypto_etf_flow_am": {
         "display_name": "Crypto ETF Flow (AM)",
@@ -1478,6 +1517,12 @@ def normalize_task_key(task_name: str, command: str = "") -> str:
         return "crypto_news_daily"
     if "run_cbbc_tracker.bat" in command_lower or "send_cbbc_tracker.py" in command_lower:
         return "jarvis_cbbc_tracker_am"
+    if "run_friday_volume.bat" in command_lower or "send_friday_volume_check.py" in command_lower:
+        return "friday_volume"
+    if "run_futu_signals.bat" in command_lower or "send_futu_options_signals.py" in command_lower:
+        return "futu_signals"
+    if "run_friday_options.bat" in command_lower or "send_friday_options_check.py" in command_lower:
+        return "friday_options"
     if "run_options_expiry.bat" in command_lower or "send_options_expiry.py" in command_lower:
         if "2330" in lower or "23:30" in command_lower:
             return "options_earnings_2330"
