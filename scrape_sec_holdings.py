@@ -59,6 +59,18 @@ FUNDS: dict[str, Fund] = {
         cik="0001536411",
         manager="Stanley Druckenmiller",
     ),
+    "atreides": Fund(
+        slug="atreides",
+        name="Atreides Management, LP",
+        cik="0001777813",
+        manager="Gavin Baker",
+    ),
+    "octahedron": Fund(
+        slug="octahedron",
+        name="Octahedron Capital Management L.P.",
+        cik="0001891904",
+        manager="",
+    ),
 }
 
 # ── constants ────────────────────────────────────────────────────────
@@ -211,9 +223,15 @@ def parse_13f_holdings(xml_text: str) -> list[dict[str, Any]]:
 
     # Detect whether values are in dollars or thousands.
     # SEC standard is thousands, but some filers report in whole dollars.
-    # Heuristic: if total assuming thousands exceeds $500B, values are in dollars.
-    total_raw = sum(h["value_raw"] for h in raw_holdings)
-    value_is_dollars = total_raw > 500_000_000  # >$500B if thousands → likely dollars
+    # Heuristic: compute median price-per-share. If > $1, values are in dollars.
+    # (In thousands mode, $1 raw / 1 share = $1k/share which is unrealistic for median)
+    prices = sorted(
+        h["value_raw"] / h["shares"]
+        for h in raw_holdings
+        if h["shares"] > 0
+    )
+    median_price = prices[len(prices) // 2] if prices else 0
+    value_is_dollars = median_price > 1.0  # median $/share > $1 → raw is in dollars
     for h in raw_holdings:
         h["value_thousands"] = (
             h["value_raw"] // 1000 if value_is_dollars else h["value_raw"]
