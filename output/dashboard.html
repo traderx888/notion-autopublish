@@ -79,6 +79,19 @@
   .synth-sources { color: var(--muted); font-size: 12px; flex: 1; }
   .synth-signal { font-weight: 600; font-size: 13px; white-space: nowrap; }
 
+  /* Breadth meters */
+  .meter { height: 8px; border-radius: 4px; background: rgba(48,54,61,0.6); overflow: hidden; margin: 4px 0; }
+  .meter-fill { height: 100%; border-radius: 4px; transition: width 0.3s; }
+  .meter-red { background: var(--red); }
+  .meter-yellow { background: var(--yellow); }
+  .meter-green { background: var(--green); }
+  .meter-blue { background: var(--accent); }
+  .breadth-stat { display: flex; justify-content: space-between; align-items: center; font-size: 12px; margin-bottom: 2px; }
+  .breadth-stat .label { color: var(--muted); }
+  .breadth-stat .value { font-family: 'SF Mono', 'Fira Code', monospace; font-weight: 600; }
+  .breadth-gauge { margin-bottom: 10px; }
+  .score-ring { width: 80px; height: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px; font-weight: 700; flex-shrink: 0; }
+
   .footer { text-align: center; color: var(--muted); font-size: 11px; margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--border); }
 
   @media (max-width: 900px) { .grid { grid-template-columns: 1fr; } }
@@ -100,6 +113,7 @@
   <div class="signal-chip chip-yellow"><span class="dot"></span>GS: Market Fragile</div>
   <div class="signal-chip chip-blue"><span class="dot"></span>AI Infra: Silicon Shortage</div>
   <div class="signal-chip chip-red"><span class="dot"></span>Geopolitical: Hormuz/Iran</div>
+  <div class="signal-chip chip-red"><span class="dot"></span>T2108: Extreme Oversold</div>
   <div class="signal-chip chip-green"><span class="dot"></span>CVNA: Mega Conviction</div>
 </div>
 
@@ -146,6 +160,207 @@
       <strong>Key articles:</strong> "Three 0DTE Greeks Screaming Sell" (Mar 13) &rarr; "Structure Flips Market Positive Into Mar 20 OpEx" (Mar 16) &rarr; "$523M Put Selling Built Today's Floor" (Mar 17) &rarr; "Smart Money Builds The Launchpad" (Mar 18) &rarr; "VIX Crushed, Charm Flip Loaded" (Mar 20)
     </div>
   </div>
+</div>
+
+<!-- MARKET BREADTH -->
+<div class="section-title">Market Breadth</div>
+<div class="grid">
+
+  <!-- US Stockbee SMM -->
+  <div class="card">
+    <div class="card-header">
+      <div class="score-ring" style="border: 3px solid var(--yellow); color: var(--yellow);">56.5</div>
+      <div>
+        <div class="card-title">US Stockbee SMM</div>
+        <div style="font-size:12px;color:var(--muted);">Mar 20, 2026 &bull; 6,395 stocks</div>
+      </div>
+      <div style="margin-left:auto;text-align:right;">
+        <span class="badge badge-neutral">YELLOW</span>
+        <span class="badge badge-caution">NEUTRAL</span>
+      </div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+      <div>
+        <div style="font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:6px;">SMM Primary</div>
+        <div class="breadth-gauge">
+          <div class="breadth-stat"><span class="label">Daily Up &ge;4%</span><span class="value">146 (2.3%)</span></div>
+          <div class="meter"><div class="meter-fill meter-green" style="width:23%"></div></div>
+        </div>
+        <div class="breadth-gauge">
+          <div class="breadth-stat"><span class="label">Daily Down &ge;4%</span><span class="value down">662 (10.4%)</span></div>
+          <div class="meter"><div class="meter-fill meter-red" style="width:100%"></div></div>
+        </div>
+        <div class="breadth-gauge">
+          <div class="breadth-stat"><span class="label">5-Day Ratio</span><span class="value down">0.60</span></div>
+          <div class="meter"><div class="meter-fill meter-red" style="width:30%"></div></div>
+        </div>
+        <div class="breadth-gauge">
+          <div class="breadth-stat"><span class="label">10-Day Ratio</span><span class="value down">0.68 <span style="font-size:10px">BEARISH</span></span></div>
+          <div class="meter"><div class="meter-fill meter-red" style="width:34%"></div></div>
+        </div>
+        <div class="breadth-gauge">
+          <div class="breadth-stat"><span class="label">Qtr Up &ge;25%</span><span class="value">829 (13.0%)</span></div>
+          <div class="meter"><div class="meter-fill meter-green" style="width:52%"></div></div>
+        </div>
+        <div class="breadth-gauge">
+          <div class="breadth-stat"><span class="label">Qtr Down &ge;25%</span><span class="value down">1,572 (24.6%) BEAR</span></div>
+          <div class="meter"><div class="meter-fill meter-red" style="width:98%"></div></div>
+        </div>
+      </div>
+
+      <div>
+        <div style="font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:6px;">SMM Secondary</div>
+        <div class="breadth-gauge">
+          <div class="breadth-stat"><span class="label">T2108 (% &gt; 40MA)</span><span class="value down">16.74%</span></div>
+          <div class="meter"><div class="meter-fill meter-red" style="width:16.7%"></div></div>
+          <div style="font-size:11px;color:var(--red);font-weight:600;margin-top:2px;">EXTREME OVERSOLD &mdash; high-probability rebound within 5 days</div>
+        </div>
+        <div class="breadth-gauge">
+          <div class="breadth-stat"><span class="label">Stocks Above 40MA</span><span class="value">1,071 / 6,395</span></div>
+        </div>
+        <div class="breadth-gauge">
+          <div class="breadth-stat"><span class="label">SPX Close</span><span class="value">5,662.89</span></div>
+          <div class="breadth-stat"><span class="label">SPX 1D</span><span class="value down">-1.51%</span></div>
+          <div class="breadth-stat"><span class="label">SPX 5D</span><span class="value down">-2.88%</span></div>
+        </div>
+
+        <div style="font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:0.5px;margin:12px 0 6px;">20% Study</div>
+        <div class="breadth-gauge">
+          <div class="breadth-stat"><span class="label">Stocks Up &ge;20% in 63d</span><span class="value">685 (13.6%)</span></div>
+          <div class="meter"><div class="meter-fill meter-green" style="width:55%"></div></div>
+          <div style="font-size:11px;color:var(--green);margin-top:2px;">NEUTRAL LEAN BULL</div>
+        </div>
+
+        <div style="font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:0.5px;margin:12px 0 6px;">Episodic Pivots</div>
+        <div class="breadth-gauge">
+          <div class="breadth-stat"><span class="label">Total EPs</span><span class="value">250</span></div>
+          <div class="breadth-stat"><span class="label">Golden EPs</span><span class="value up">4</span></div>
+          <div class="breadth-stat"><span class="label">Day 7 Sustain Rate</span><span class="value flat">41%</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="thesis" style="margin-top:12px;">
+      <strong>SMM Signal:</strong> Heavy selling pressure (662 stocks down &ge;4%) but T2108 at 16.74% signals EXTREME OVERSOLD &mdash; historically high-probability rebound zone. 10-day ratio bearish at 0.68, quarterly confirms BEAR (1,572 down &ge;25%). Contrarian buy setup developing. Top EP: CTRN (Super Swan, +18.7% gap, 5.2x volume).
+    </div>
+  </div>
+
+  <!-- DeepVue US Market -->
+  <div class="card">
+    <div class="card-header">
+      <div class="card-icon" style="background:rgba(248,81,73,0.2);color:var(--red);">DV</div>
+      <div class="card-title">DeepVue US Market</div>
+      <div class="card-date">Mar 13</div>
+    </div>
+    <div class="card-subtitle">Stage Analysis &amp; Breadth Overview</div>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+      <div>
+        <div style="font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:6px;">Breadth Indicators</div>
+        <div class="breadth-gauge">
+          <div class="breadth-stat"><span class="label">Advance / Decline</span><span class="value down">466 / 1,874 (20%)</span></div>
+          <div class="meter"><div class="meter-fill meter-red" style="width:20%"></div></div>
+        </div>
+        <div class="breadth-gauge">
+          <div class="breadth-stat"><span class="label">New Highs vs Lows</span><span class="value down">76 / 131 (37%)</span></div>
+          <div class="meter"><div class="meter-fill meter-red" style="width:37%"></div></div>
+        </div>
+        <div class="breadth-gauge">
+          <div class="breadth-stat"><span class="label">Up from Open</span><span class="value down">33%</span></div>
+          <div class="meter"><div class="meter-fill meter-red" style="width:33%"></div></div>
+        </div>
+        <div class="breadth-gauge">
+          <div class="breadth-stat"><span class="label">Up Volume</span><span class="value down">13%</span></div>
+          <div class="meter"><div class="meter-fill meter-red" style="width:13%"></div></div>
+        </div>
+        <div class="breadth-gauge">
+          <div class="breadth-stat"><span class="label">Up &ge;4%</span><span class="value down">17%</span></div>
+          <div class="meter"><div class="meter-fill meter-red" style="width:17%"></div></div>
+        </div>
+      </div>
+
+      <div>
+        <div style="font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:6px;">Weinstein Stage Distribution</div>
+        <div class="breadth-gauge">
+          <div class="breadth-stat"><span class="label">Stage 1 (Base)</span><span class="value">51 (1%)</span></div>
+          <div class="meter"><div class="meter-fill meter-blue" style="width:1%"></div></div>
+        </div>
+        <div class="breadth-gauge">
+          <div class="breadth-stat"><span class="label">Stage 2 (Uptrend)</span><span class="value up">1,381 (25%)</span></div>
+          <div class="meter"><div class="meter-fill meter-green" style="width:25%"></div></div>
+        </div>
+        <div class="breadth-gauge">
+          <div class="breadth-stat"><span class="label">Stage 3 (Top)</span><span class="value flat">1,048 (19%)</span></div>
+          <div class="meter"><div class="meter-fill meter-yellow" style="width:19%"></div></div>
+        </div>
+        <div class="breadth-gauge">
+          <div class="breadth-stat"><span class="label">Stage 4 (Decline)</span><span class="value down">3,096 (56%)</span></div>
+          <div class="meter"><div class="meter-fill meter-red" style="width:56%"></div></div>
+        </div>
+        <div style="font-size:11px;color:var(--red);font-weight:600;margin-top:8px;">56% of stocks in Stage 4 &mdash; broad downtrend</div>
+      </div>
+    </div>
+
+    <div class="thesis" style="margin-top:12px;">
+      <strong>DeepVue:</strong> Only 20% of stocks advancing. 56% in Stage 4 (decline) vs 25% in Stage 2 (uptrend). Volume extremely bearish at 13% up. New lows outpacing new highs. Broad market structure is decisively bearish.
+    </div>
+  </div>
+
+  <!-- HK Breadth -->
+  <div class="card">
+    <div class="card-header">
+      <div class="score-ring" style="border: 3px solid var(--yellow); color: var(--yellow); width:60px; height:60px; font-size:18px;">54.5</div>
+      <div>
+        <div class="card-title">Hong Kong Breadth</div>
+        <div style="font-size:12px;color:var(--muted);">Mar 11, 2026 &bull; 995 liquid stocks</div>
+      </div>
+      <div style="margin-left:auto;">
+        <span class="badge badge-neutral">NEUTRAL</span>
+      </div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+      <div>
+        <div style="font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:6px;">Moving Average Participation</div>
+        <div class="breadth-gauge">
+          <div class="breadth-stat"><span class="label">% Above 20MA</span><span class="value down">33.9%</span></div>
+          <div class="meter"><div class="meter-fill meter-red" style="width:33.9%"></div></div>
+        </div>
+        <div class="breadth-gauge">
+          <div class="breadth-stat"><span class="label">% Above 50MA</span><span class="value flat">42.5%</span></div>
+          <div class="meter"><div class="meter-fill meter-yellow" style="width:42.5%"></div></div>
+        </div>
+        <div class="breadth-gauge">
+          <div class="breadth-stat"><span class="label">% Above 200MA</span><span class="value flat">49.4%</span></div>
+          <div class="meter"><div class="meter-fill meter-yellow" style="width:49.4%"></div></div>
+        </div>
+      </div>
+      <div>
+        <div style="font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:6px;">Internals</div>
+        <div class="breadth-gauge">
+          <div class="breadth-stat"><span class="label">Advance / Decline</span><span class="value up">53.4% / 39.0% (1.37x)</span></div>
+          <div class="meter"><div class="meter-fill meter-green" style="width:53.4%"></div></div>
+        </div>
+        <div class="breadth-gauge">
+          <div class="breadth-stat"><span class="label">New 52W Highs / Lows</span><span class="value up">29 / 20 (1.45x)</span></div>
+        </div>
+        <div class="breadth-gauge">
+          <div class="breadth-stat"><span class="label">Up &ge;20% in 63d</span><span class="value up">20.3%</span></div>
+          <div class="meter"><div class="meter-fill meter-green" style="width:40%"></div></div>
+        </div>
+        <div class="breadth-gauge">
+          <div class="breadth-stat"><span class="label">Strong Up (&ge;4%/day)</span><span class="value up">9.5%</span></div>
+          <div class="breadth-stat"><span class="label">Strong Down</span><span class="value">3.3%</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="thesis" style="margin-top:12px;">
+      <strong>HK:</strong> Neutral breadth (54.5/100). Advances outpacing declines (1.37x) with impulse RISK_ON. Short-term participation weak (33.9% above 20MA) but longer-term holds (49.4% above 200MA). HK diverging positively from US breadth deterioration.
+    </div>
+  </div>
+
 </div>
 
 <!-- MACRO & LIQUIDITY -->
@@ -497,10 +712,15 @@
     <div class="synth-sources">Duquesne (SEC 13F)</div>
     <div class="synth-signal up">$4.5B across 62 names &mdash; NTRA, INSM, TEVA top picks, EM tech (TSM, CPNG, Sea)</div>
   </div>
+  <div class="synth-row">
+    <div class="synth-theme" style="color:var(--red);">Breadth: Extreme Oversold</div>
+    <div class="synth-sources">Stockbee SMM &bull; DeepVue &bull; HK Breadth</div>
+    <div class="synth-signal down">T2108=16.7% (rebound zone) &bull; 56% Stage 4 &bull; 10d ratio bearish &bull; HK diverging positive</div>
+  </div>
 </div>
 
 <div class="footer">
-  Generated by notion-autopublish scrapers &bull; P-Model (SA), H-Model, Greenoaks/CAS/Duquesne/Atreides/Octahedron (SEC 13F), SemiAnalysis, Finally Nitin, FOMO, Systematic LS, GS, Citadel, MS &bull; All data updated March 20, 2026
+  Generated by notion-autopublish scrapers &bull; P-Model (SA), Stockbee SMM, DeepVue, HK Breadth, H-Model, Greenoaks/CAS/Duquesne/Atreides/Octahedron (SEC 13F), SemiAnalysis, Finally Nitin, FOMO, Systematic LS, GS, Citadel, MS &bull; All data updated March 20, 2026
 </div>
 
 </body>
