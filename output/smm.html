@@ -340,28 +340,34 @@ function zoomTo(chartName, days) {
 }
 
 // ── Chart zoom/pan config ──
-const zoomPlugin = {
-  zoom: {
-    wheel: { enabled: true, modifierKey: null },
-    pinch: { enabled: true },
-    drag: { enabled: true, backgroundColor: 'rgba(88,166,255,0.1)', borderColor: 'rgba(88,166,255,0.3)', borderWidth: 1 },
-    mode: 'x',
-    onZoomComplete: function() {}
-  },
-  pan: {
-    enabled: true,
-    mode: 'x',
-    modifierKey: 'shift'
-  },
-  limits: {
-    x: { minRange: 7 * 86400000 }  // min 1 week
-  }
-};
+// Built dynamically after data load so we can set limits
+function makeZoomPlugin(minDate, maxDate) {
+  return {
+    zoom: {
+      wheel: { enabled: true, modifierKey: null },
+      pinch: { enabled: true },
+      drag: { enabled: true, backgroundColor: 'rgba(88,166,255,0.1)', borderColor: 'rgba(88,166,255,0.3)', borderWidth: 1 },
+      mode: 'x',
+    },
+    pan: {
+      enabled: true,
+      mode: 'x',
+      modifierKey: 'shift'
+    },
+    limits: {
+      x: { min: minDate.getTime(), max: maxDate.getTime(), minRange: 7 * 86400000 }
+    }
+  };
+}
 
 // ── Charts ──
 function renderCharts(rows) {
   const data = [...rows].reverse(); // oldest first
   const labels = data.map(r => r.date);
+
+  // Clamp x-axis to actual data range (prevents extrapolation into the future)
+  const xMin = data[0].date;
+  const xMax = data[data.length - 1].date;
 
   // Reduce point radius for large datasets
   const pr = data.length > 200 ? 0 : 1.5;
@@ -388,11 +394,12 @@ function renderCharts(rows) {
       plugins: {
         legend: { labels: { color: '#8b949e', font: { size: 11 }, usePointStyle: true, pointStyle: 'line' } },
         tooltip: { backgroundColor: '#161b22', titleColor: '#e6edf3', bodyColor: '#e6edf3', borderColor: '#30363d', borderWidth: 1 },
-        zoom: zoomPlugin
+        zoom: makeZoomPlugin(xMin, xMax)
       },
       scales: {
         x: {
           type: 'time',
+          min: xMin, max: xMax,
           time: { unit: 'month', displayFormats: { month: 'yyyy-MM', week: 'yyyy-MM-dd' } },
           ticks: { color: '#8b949e', font: { size: 10 }, maxRotation: 45, autoSkip: true, maxTicksLimit: 24 },
           grid: { color: 'rgba(48,54,61,0.3)' }
@@ -451,11 +458,12 @@ function renderCharts(rows) {
       plugins: {
         legend: { labels: { color: '#8b949e', font: { size: 11 }, usePointStyle: true, pointStyle: 'line' } },
         tooltip: { backgroundColor: '#161b22', titleColor: '#e6edf3', bodyColor: '#e6edf3', borderColor: '#30363d', borderWidth: 1 },
-        zoom: zoomPlugin
+        zoom: makeZoomPlugin(xMin, xMax)
       },
       scales: {
         x: {
           type: 'time',
+          min: xMin, max: xMax,
           time: { unit: 'month', displayFormats: { month: 'yyyy-MM', week: 'yyyy-MM-dd' } },
           ticks: { color: '#8b949e', font: { size: 10 }, maxRotation: 45, autoSkip: true, maxTicksLimit: 24 },
           grid: { color: 'rgba(48,54,61,0.3)' }
