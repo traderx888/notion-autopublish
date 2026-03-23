@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SMM — US Market Monitor Detail</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns@3.0.0/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
+<style>
+  :root {
+    --bg: #0d1117; --card: #161b22; --border: #30363d;
+    --text: #e6edf3; --muted: #8b949e; --accent: #58a6ff;
+    --green: #3fb950; --red: #f85149; --yellow: #d29922; --orange: #db6d28;
+    --purple: #bc8cff;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; padding: 24px; line-height: 1.5; }
+
+  .header { text-align: center; margin-bottom: 28px; padding-bottom: 16px; border-bottom: 1px solid var(--border); }
+  .header h1 { font-size: 28px; font-weight: 600; margin-bottom: 4px; }
+  .header .subtitle { color: var(--muted); font-size: 14px; }
+  .back-link { color: var(--accent); text-decoration: none; font-size: 13px; }
+  .back-link:hover { text-decoration: underline; }
+
+  .section-title { font-size: 18px; font-weight: 600; margin: 24px 0 12px; padding-bottom: 8px; border-bottom: 1px solid var(--border); }
+
+  /* Chart */
+  .chart-container { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 24px; }
+  .chart-title { font-size: 14px; font-weight: 600; margin-bottom: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.5px; }
+  canvas { width: 100% !important; }
+
+  /* Table */
+  .table-container { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 16px; overflow-x: auto; margin-bottom: 24px; }
+  table { width: 100%; border-collapse: collapse; font-size: 12px; white-space: nowrap; }
+  thead th { position: sticky; top: 0; background: var(--card); z-index: 2; }
+  th { text-align: right; color: var(--muted); font-weight: 500; padding: 6px 10px; border-bottom: 1px solid var(--border); font-size: 10px; text-transform: uppercase; letter-spacing: 0.3px; }
+  th:first-child { text-align: left; }
+  td { padding: 5px 10px; border-bottom: 1px solid rgba(48,54,61,0.4); font-family: 'SF Mono', 'Fira Code', monospace; font-size: 12px; text-align: right; }
+  td:first-child { text-align: left; color: var(--muted); font-family: inherit; }
+  tr:last-child td { border-bottom: none; }
+
+  .group-header { text-align: center !important; font-weight: 600; color: var(--accent); padding: 8px 10px; border-bottom: 2px solid var(--border); font-size: 11px; letter-spacing: 0.5px; }
+  .group-primary { background: rgba(88,166,255,0.04); }
+  .group-secondary { background: rgba(188,140,255,0.04); }
+  .group-market { background: rgba(63,185,80,0.04); }
+
+  /* Heatmap colours for cells */
+  .heat-green-1 { background: rgba(63,185,80,0.08); color: var(--green); }
+  .heat-green-2 { background: rgba(63,185,80,0.18); color: var(--green); }
+  .heat-green-3 { background: rgba(63,185,80,0.30); color: #2ee04a; }
+  .heat-yellow { background: rgba(210,153,34,0.15); color: var(--yellow); }
+  .heat-red-1 { background: rgba(248,81,73,0.08); color: var(--red); }
+  .heat-red-2 { background: rgba(248,81,73,0.18); color: var(--red); }
+  .heat-red-3 { background: rgba(248,81,73,0.30); color: #ff5555; }
+
+  .footer { text-align: center; color: var(--muted); font-size: 12px; margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--border); }
+
+  #loading { text-align: center; padding: 60px; color: var(--muted); font-size: 16px; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <a href="dashboard.html" class="back-link">&larr; Back to Dashboard</a>
+  <h1>US Market Monitor (SMM)</h1>
+  <div class="subtitle">Daily Breadth Indicators &mdash; Live from Source</div>
+</div>
+
+<div id="loading">Loading data...</div>
+
+<!-- Primary Breadth Chart -->
+<div class="chart-container" id="chart1-wrap" style="display:none;">
+  <div class="chart-title">Primary Breadth Indicators</div>
+  <canvas id="primaryChart" height="280"></canvas>
+</div>
+
+<!-- Secondary Breadth + Market Chart -->
+<div class="chart-container" id="chart2-wrap" style="display:none;">
+  <div class="chart-title">MA40 &amp; S&amp;P 500</div>
+  <canvas id="secondaryChart" height="200"></canvas>
+</div>
+
+<!-- Data Table -->
+<div class="section-title" id="table-title" style="display:none;">Daily Data Table</div>
+<div class="table-container" id="table-wrap" style="display:none;">
+  <table id="dataTable">
+    <thead>
+      <tr>
+        <th rowspan="2" style="text-align:left;">Date</th>
+        <th colspan="7" class="group-header group-primary">Primary Breadth Indicators</th>
+        <th colspan="5" class="group-header group-secondary">Secondary Breadth Indicators</th>
+        <th colspan="2" class="group-header group-market">Market Data</th>
+      </tr>
+      <tr>
+        <!-- Primary -->
+        <th>Up &ge;4%</th>
+        <th>Down &ge;4%</th>
+        <th>5-Day Ratio</th>
+        <th>10-Day Ratio</th>
+        <th>Qtr Up &ge;25%</th>
+        <th>Qtr Down &ge;25%</th>
+        <th>34d Up &ge;13%</th>
+        <!-- Secondary -->
+        <th>Mo Up &ge;25%</th>
+        <th>Mo Down &ge;25%</th>
+        <th>Mo Up &ge;50%</th>
+        <th>Mo Down &ge;50%</th>
+        <th>34d Down &ge;13%</th>
+        <!-- Market -->
+        <th>MA40</th>
+        <th>S&amp;P 500</th>
+      </tr>
+    </thead>
+    <tbody id="tableBody"></tbody>
+  </table>
+</div>
+
+<div class="footer" id="footer" style="display:none;">
+  Data sourced from SMM spreadsheet &bull; Auto-refreshed on page load &bull; <a href="dashboard.html" style="color:var(--accent);">Back to Dashboard</a>
+</div>
+
+<script>
+const SHEET_URL = 'https://docs.google.com/spreadsheets/d/1O6OhS7ciA8zwfycBfGPbP2fWJnR0pn2UUvFZVDP9jpE/pub?output=csv';
+
+async function fetchData() {
+  const resp = await fetch(SHEET_URL);
+  const text = await resp.text();
+  const lines = text.trim().split('\n');
+  // Row 0 = group header, Row 1 = column names, Row 2+ = data
+  const rows = [];
+  for (let i = 2; i < lines.length; i++) {
+    const cols = parseCSVLine(lines[i]);
+    if (!cols[0]) continue;
+    rows.push({
+      date: parseDate(cols[0]),
+      dateStr: cols[0],
+      up4: num(cols[1]),
+      down4: num(cols[2]),
+      ratio5d: numF(cols[3]),
+      ratio10d: numF(cols[4]),
+      qtrUp25: num(cols[5]),
+      qtrDown25: num(cols[6]),
+      moUp25: num(cols[7]),
+      moDown25: num(cols[8]),
+      moUp50: num(cols[9]),
+      moDown50: num(cols[10]),
+      d34Up13: num(cols[11]),
+      d34Down13: num(cols[12]),
+      universe: num(cols[13]),
+      ma40: numF(cols[14]),
+      spx: numF(cols[15])
+    });
+  }
+  return rows;
+}
+
+function parseCSVLine(line) {
+  const result = [];
+  let current = '';
+  let inQuotes = false;
+  for (let i = 0; i < line.length; i++) {
+    const c = line[i];
+    if (c === '"') { inQuotes = !inQuotes; continue; }
+    if (c === ',' && !inQuotes) { result.push(current.trim()); current = ''; continue; }
+    current += c;
+  }
+  result.push(current.trim());
+  return result;
+}
+
+function parseDate(s) {
+  // M/D/YYYY or YYYY-MM-DD
+  if (s.includes('/')) {
+    const [m, d, y] = s.split('/');
+    return new Date(+y, +m - 1, +d);
+  }
+  return new Date(s);
+}
+function num(s) { return parseInt((s || '0').replace(/,/g, ''), 10) || 0; }
+function numF(s) { return parseFloat((s || '0').replace(/,/g, '')) || 0; }
+
+function renderTable(rows) {
+  const tbody = document.getElementById('tableBody');
+  tbody.innerHTML = '';
+  for (const r of rows) {
+    const tr = document.createElement('tr');
+    const d = r.date;
+    const dateLabel = `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
+    tr.innerHTML = `
+      <td>${dateLabel}</td>
+      <td class="${heatUp4(r.up4)}">${r.up4.toLocaleString()}</td>
+      <td class="${heatDown4(r.down4)}">${r.down4.toLocaleString()}</td>
+      <td class="${heatRatio(r.ratio5d)}">${r.ratio5d.toFixed(2)}</td>
+      <td class="${heatRatio(r.ratio10d)}">${r.ratio10d.toFixed(2)}</td>
+      <td class="${heatQtrUp(r.qtrUp25)}">${r.qtrUp25.toLocaleString()}</td>
+      <td class="${heatQtrDown(r.qtrDown25)}">${r.qtrDown25.toLocaleString()}</td>
+      <td>${r.d34Up13.toLocaleString()}</td>
+      <td>${r.moUp25.toLocaleString()}</td>
+      <td>${r.moDown25.toLocaleString()}</td>
+      <td>${r.moUp50.toLocaleString()}</td>
+      <td>${r.moDown50.toLocaleString()}</td>
+      <td>${r.d34Down13.toLocaleString()}</td>
+      <td class="${heatMA40(r.ma40)}">${r.ma40.toFixed(2)}%</td>
+      <td>${r.spx.toLocaleString(undefined, {minimumFractionDigits:2})}</td>
+    `;
+    tbody.appendChild(tr);
+  }
+}
+
+// Heatmap helpers
+function heatUp4(v) {
+  if (v >= 500) return 'heat-green-3';
+  if (v >= 300) return 'heat-green-2';
+  if (v >= 200) return 'heat-green-1';
+  return '';
+}
+function heatDown4(v) {
+  if (v >= 500) return 'heat-red-3';
+  if (v >= 300) return 'heat-red-2';
+  if (v >= 200) return 'heat-red-1';
+  return '';
+}
+function heatRatio(v) {
+  if (v >= 2.0) return 'heat-green-3';
+  if (v >= 1.5) return 'heat-green-2';
+  if (v >= 1.0) return 'heat-green-1';
+  if (v >= 0.8) return 'heat-yellow';
+  if (v >= 0.5) return 'heat-red-1';
+  return 'heat-red-2';
+}
+function heatQtrUp(v) {
+  if (v >= 1500) return 'heat-green-3';
+  if (v >= 1000) return 'heat-green-2';
+  if (v >= 800) return 'heat-green-1';
+  return '';
+}
+function heatQtrDown(v) {
+  if (v >= 1500) return 'heat-red-3';
+  if (v >= 1000) return 'heat-red-2';
+  if (v >= 800) return 'heat-red-1';
+  return '';
+}
+function heatMA40(v) {
+  if (v >= 70) return 'heat-green-3';
+  if (v >= 50) return 'heat-green-2';
+  if (v >= 30) return 'heat-green-1';
+  if (v >= 20) return 'heat-yellow';
+  return 'heat-red-2';
+}
+
+function renderCharts(rows) {
+  // Reverse so oldest first for chart
+  const data = [...rows].reverse();
+  const labels = data.map(r => r.date);
+
+  // Primary chart
+  const ctx1 = document.getElementById('primaryChart').getContext('2d');
+  new Chart(ctx1, {
+    type: 'line',
+    data: {
+      labels,
+      datasets: [
+        { label: 'Up >=4% (count)', data: data.map(r => r.up4), borderColor: '#58a6ff', backgroundColor: 'rgba(88,166,255,0.1)', borderWidth: 1.5, pointRadius: 2, tension: 0.3, yAxisID: 'y' },
+        { label: 'Down >=4% (count)', data: data.map(r => r.down4), borderColor: '#f85149', backgroundColor: 'rgba(248,81,73,0.1)', borderWidth: 1.5, pointRadius: 2, tension: 0.3, yAxisID: 'y' },
+        { label: '5-Day Ratio', data: data.map(r => r.ratio5d), borderColor: '#d29922', borderWidth: 2, pointRadius: 2, tension: 0.3, yAxisID: 'y1' },
+        { label: '10-Day Ratio', data: data.map(r => r.ratio10d), borderColor: '#db6d28', borderWidth: 2, pointRadius: 2, tension: 0.3, yAxisID: 'y1' },
+        { label: 'Qtr Up >=25%', data: data.map(r => r.qtrUp25), borderColor: '#3fb950', borderWidth: 1, pointRadius: 1.5, tension: 0.3, borderDash: [4,2], yAxisID: 'y' },
+        { label: 'Qtr Down >=25%', data: data.map(r => r.qtrDown25), borderColor: '#ff7b72', borderWidth: 1, pointRadius: 1.5, tension: 0.3, borderDash: [4,2], yAxisID: 'y' },
+        { label: 'S&P 500', data: data.map(r => r.spx), borderColor: 'rgba(230,237,243,0.4)', borderWidth: 1, pointRadius: 0, tension: 0.3, yAxisID: 'y2' },
+      ]
+    },
+    options: {
+      responsive: true,
+      interaction: { mode: 'index', intersect: false },
+      plugins: {
+        legend: { labels: { color: '#8b949e', font: { size: 11 }, usePointStyle: true, pointStyle: 'line' } },
+        tooltip: { backgroundColor: '#161b22', titleColor: '#e6edf3', bodyColor: '#e6edf3', borderColor: '#30363d', borderWidth: 1 }
+      },
+      scales: {
+        x: {
+          type: 'time',
+          time: { unit: 'week', displayFormats: { week: 'yyyy-MM-dd' } },
+          ticks: { color: '#8b949e', font: { size: 10 }, maxRotation: 45 },
+          grid: { color: 'rgba(48,54,61,0.3)' }
+        },
+        y: {
+          position: 'left',
+          title: { display: true, text: 'Count', color: '#8b949e' },
+          ticks: { color: '#8b949e', font: { size: 10 } },
+          grid: { color: 'rgba(48,54,61,0.3)' }
+        },
+        y1: {
+          position: 'right',
+          title: { display: true, text: 'Ratio', color: '#d29922' },
+          ticks: { color: '#d29922', font: { size: 10 } },
+          grid: { drawOnChartArea: false },
+          min: 0
+        },
+        y2: {
+          display: false,
+        }
+      }
+    }
+  });
+
+  // Secondary chart: MA40 + SPX
+  const ctx2 = document.getElementById('secondaryChart').getContext('2d');
+  new Chart(ctx2, {
+    type: 'line',
+    data: {
+      labels,
+      datasets: [
+        {
+          label: 'MA40 (%)',
+          data: data.map(r => r.ma40),
+          borderColor: '#bc8cff',
+          backgroundColor: 'rgba(188,140,255,0.08)',
+          fill: true,
+          borderWidth: 2,
+          pointRadius: 3,
+          pointBackgroundColor: data.map(r => r.ma40 <= 20 ? '#f85149' : r.ma40 >= 70 ? '#3fb950' : '#bc8cff'),
+          tension: 0.3,
+          yAxisID: 'y'
+        },
+        {
+          label: 'S&P 500',
+          data: data.map(r => r.spx),
+          borderColor: 'rgba(230,237,243,0.5)',
+          borderWidth: 1.5,
+          pointRadius: 1,
+          tension: 0.3,
+          yAxisID: 'y1'
+        }
+      ]
+    },
+    options: {
+      responsive: true,
+      interaction: { mode: 'index', intersect: false },
+      plugins: {
+        legend: { labels: { color: '#8b949e', font: { size: 11 }, usePointStyle: true, pointStyle: 'line' } },
+        tooltip: { backgroundColor: '#161b22', titleColor: '#e6edf3', bodyColor: '#e6edf3', borderColor: '#30363d', borderWidth: 1 },
+        annotation: undefined
+      },
+      scales: {
+        x: {
+          type: 'time',
+          time: { unit: 'week', displayFormats: { week: 'yyyy-MM-dd' } },
+          ticks: { color: '#8b949e', font: { size: 10 }, maxRotation: 45 },
+          grid: { color: 'rgba(48,54,61,0.3)' }
+        },
+        y: {
+          position: 'left',
+          title: { display: true, text: 'MA40 (%)', color: '#bc8cff' },
+          ticks: { color: '#bc8cff', font: { size: 10 }, callback: v => v + '%' },
+          grid: { color: 'rgba(48,54,61,0.3)' },
+          min: 0, max: 100
+        },
+        y1: {
+          position: 'right',
+          title: { display: true, text: 'S&P 500', color: '#8b949e' },
+          ticks: { color: '#8b949e', font: { size: 10 } },
+          grid: { drawOnChartArea: false }
+        }
+      }
+    }
+  });
+}
+
+// Init
+fetchData().then(rows => {
+  document.getElementById('loading').style.display = 'none';
+  document.getElementById('chart1-wrap').style.display = 'block';
+  document.getElementById('chart2-wrap').style.display = 'block';
+  document.getElementById('table-title').style.display = 'block';
+  document.getElementById('table-wrap').style.display = 'block';
+  document.getElementById('footer').style.display = 'block';
+  renderCharts(rows);
+  renderTable(rows);
+}).catch(err => {
+  document.getElementById('loading').textContent = 'Error loading data: ' + err.message;
+});
+</script>
+</body>
+</html>
