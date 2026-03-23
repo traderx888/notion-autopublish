@@ -64,22 +64,67 @@
   .footer { text-align: center; color: var(--muted); font-size: 12px; margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--border); }
 
   #loading { text-align: center; padding: 60px; color: var(--muted); font-size: 16px; }
+
+  /* Language toggle */
+  .lang-toggle { position: fixed; top: 16px; right: 16px; z-index: 100; display: flex; gap: 2px; background: var(--card); border: 1px solid var(--border); border-radius: 6px; overflow: hidden; }
+  .lang-btn { padding: 6px 12px; font-size: 12px; font-weight: 600; cursor: pointer; border: none; background: transparent; color: var(--muted); transition: all 0.15s; }
+  .lang-btn.active { background: var(--accent); color: #fff; }
+  .lang-btn:hover:not(.active) { color: var(--text); }
+
+  /* Login overlay */
+  .login-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: var(--bg); z-index: 9999; display: flex; align-items: center; justify-content: center; }
+  .login-box { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 40px; text-align: center; width: 360px; }
+  .login-box h2 { font-size: 20px; margin-bottom: 8px; }
+  .login-box p { color: var(--muted); font-size: 13px; margin-bottom: 20px; }
+  .login-box input { width: 100%; padding: 10px 14px; border-radius: 6px; border: 1px solid var(--border); background: var(--bg); color: var(--text); font-size: 14px; margin-bottom: 12px; outline: none; }
+  .login-box input:focus { border-color: var(--accent); }
+  .login-box button { width: 100%; padding: 10px; border-radius: 6px; border: none; background: var(--accent); color: #fff; font-size: 14px; font-weight: 600; cursor: pointer; }
+  .login-box button:hover { opacity: 0.9; }
+  .login-error { color: var(--red); font-size: 12px; margin-top: 8px; display: none; }
 </style>
 </head>
 <body>
 
+<!-- Login Gate -->
+<div class="login-overlay" id="loginOverlay">
+  <div class="login-box">
+    <h2 data-i18n="login_title">Dashboard Access</h2>
+    <p data-i18n="login_subtitle">Enter password to continue</p>
+    <input type="password" id="loginPassword" placeholder="Password" autofocus onkeydown="if(event.key==='Enter')doLogin()">
+    <button onclick="doLogin()" data-i18n="login_btn">Sign In</button>
+    <div class="login-error" id="loginError" data-i18n="login_error">Incorrect password</div>
+  </div>
+</div>
+
+<!-- Language Toggle -->
+<div class="lang-toggle">
+  <button class="lang-btn active" id="btn-en" onclick="setLang('en')">EN</button>
+  <button class="lang-btn" id="btn-zh" onclick="setLang('zh')">中文</button>
+</div>
+
+<script>
+const PASS_HASH = '5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8';
+async function sha256(t){const b=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(t));return Array.from(new Uint8Array(b)).map(x=>x.toString(16).padStart(2,'0')).join('')}
+async function doLogin(){const h=await sha256(document.getElementById('loginPassword').value);if(h===PASS_HASH){sessionStorage.setItem('dashboard_auth','1');document.getElementById('loginOverlay').style.display='none'}else{document.getElementById('loginError').style.display='block';document.getElementById('loginPassword').value='';document.getElementById('loginPassword').focus()}}
+if(sessionStorage.getItem('dashboard_auth')==='1')document.getElementById('loginOverlay').style.display='none';
+
+const smm_i18n={en:{login_title:'Dashboard Access',login_subtitle:'Enter password to continue',login_btn:'Sign In',login_error:'Incorrect password',smm_title:'US Market Monitor (SMM)',smm_sub:'Daily Breadth Indicators — Live from Source',smm_back:'← Back to Dashboard',smm_chart1:'Primary Breadth Indicators',smm_hint:'Scroll to zoom • Drag to pan • Double-click to reset',smm_chart2:'MA40 & S&P 500',smm_table:'Daily Data Table (2025–Present)',smm_footer:'Data sourced from SMM spreadsheet • Auto-refreshed on page load'},zh:{login_title:'儀表板存取',login_subtitle:'請輸入密碼繼續',login_btn:'登入',login_error:'密碼錯誤',smm_title:'美股市場監測 (SMM)',smm_sub:'每日廣度指標 — 即時更新',smm_back:'← 返回儀表板',smm_chart1:'主要廣度指標',smm_hint:'滾輪縮放 • 拖曳平移 • 雙擊重置',smm_chart2:'MA40 與 S&P 500',smm_table:'每日數據表（2025至今）',smm_footer:'數據來自 SMM 試算表 • 頁面載入時自動更新'}};
+function setLang(lang){const d=smm_i18n[lang];if(!d)return;document.querySelectorAll('[data-i18n]').forEach(el=>{const k=el.getAttribute('data-i18n');if(d[k])el.innerHTML=d[k]});document.getElementById('btn-en').classList.toggle('active',lang==='en');document.getElementById('btn-zh').classList.toggle('active',lang==='zh');localStorage.setItem('dashboard_lang',lang)}
+const sl=localStorage.getItem('dashboard_lang');if(sl&&sl!=='en')setLang(sl);
+</script>
+
 <div class="header">
-  <a href="dashboard.html" class="back-link">&larr; Back to Dashboard</a>
-  <h1>US Market Monitor (SMM)</h1>
-  <div class="subtitle">Daily Breadth Indicators &mdash; Live from Source (2014&ndash;Present)</div>
+  <a href="dashboard.html" class="back-link" data-i18n="smm_back">&larr; Back to Dashboard</a>
+  <h1 data-i18n="smm_title">US Market Monitor (SMM)</h1>
+  <div class="subtitle" data-i18n="smm_sub">Daily Breadth Indicators &mdash; Live from Source</div>
 </div>
 
 <div id="loading">Loading data from 17 tabs...</div>
 
 <!-- Primary Breadth Chart -->
 <div class="chart-container" id="chart1-wrap" style="display:none;">
-  <div class="chart-title">Primary Breadth Indicators</div>
-  <div class="chart-hint">Scroll to zoom &bull; Drag to pan &bull; Double-click to reset</div>
+  <div class="chart-title" data-i18n="smm_chart1">Primary Breadth Indicators</div>
+  <div class="chart-hint" data-i18n="smm_hint">Scroll to zoom &bull; Drag to pan &bull; Double-click to reset</div>
   <div class="zoom-controls" id="zoom1">
     <button class="zoom-btn" onclick="zoomTo('primary', 90)">3M</button>
     <button class="zoom-btn" onclick="zoomTo('primary', 180)">6M</button>
@@ -94,8 +139,8 @@
 
 <!-- MA40 + SPX Chart -->
 <div class="chart-container" id="chart2-wrap" style="display:none;">
-  <div class="chart-title">MA40 &amp; S&amp;P 500</div>
-  <div class="chart-hint">Scroll to zoom &bull; Drag to pan &bull; Double-click to reset</div>
+  <div class="chart-title" data-i18n="smm_chart2">MA40 &amp; S&amp;P 500</div>
+  <div class="chart-hint" data-i18n="smm_hint">Scroll to zoom &bull; Drag to pan &bull; Double-click to reset</div>
   <div class="zoom-controls" id="zoom2">
     <button class="zoom-btn" onclick="zoomTo('secondary', 90)">3M</button>
     <button class="zoom-btn" onclick="zoomTo('secondary', 180)">6M</button>
@@ -109,7 +154,7 @@
 </div>
 
 <!-- Data Table (2025+ only) -->
-<div class="section-title" id="table-title" style="display:none;">Daily Data Table (2025&ndash;Present)</div>
+<div class="section-title" id="table-title" style="display:none;" data-i18n="smm_table">Daily Data Table (2025&ndash;Present)</div>
 <div class="table-container" id="table-wrap" style="display:none;">
   <table id="dataTable">
     <thead>
@@ -141,7 +186,7 @@
 </div>
 
 <div class="footer" id="footer" style="display:none;">
-  Data sourced from SMM spreadsheet &bull; Auto-refreshed on page load &bull; <a href="dashboard.html" style="color:var(--accent);">Back to Dashboard</a>
+  <span data-i18n="smm_footer">Data sourced from SMM spreadsheet &bull; Auto-refreshed on page load</span> &bull; <a href="dashboard.html" style="color:var(--accent);" data-i18n="smm_back">&larr; Back to Dashboard</a>
 </div>
 
 <script>

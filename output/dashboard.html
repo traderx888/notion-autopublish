@@ -95,30 +95,64 @@
   .footer { text-align: center; color: var(--muted); font-size: 11px; margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--border); }
 
   @media (max-width: 900px) { .grid { grid-template-columns: 1fr; } }
+
+  /* Language toggle */
+  .lang-toggle { position: fixed; top: 16px; right: 16px; z-index: 100; display: flex; gap: 2px; background: var(--card); border: 1px solid var(--border); border-radius: 6px; overflow: hidden; }
+  .lang-btn { padding: 6px 12px; font-size: 12px; font-weight: 600; cursor: pointer; border: none; background: transparent; color: var(--muted); transition: all 0.15s; }
+  .lang-btn.active { background: var(--accent); color: #fff; }
+  .lang-btn:hover:not(.active) { color: var(--text); }
+
+  /* Login overlay */
+  .login-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: var(--bg); z-index: 9999; display: flex; align-items: center; justify-content: center; }
+  .login-box { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 40px; text-align: center; width: 360px; }
+  .login-box h2 { font-size: 20px; margin-bottom: 8px; }
+  .login-box p { color: var(--muted); font-size: 13px; margin-bottom: 20px; }
+  .login-box input { width: 100%; padding: 10px 14px; border-radius: 6px; border: 1px solid var(--border); background: var(--bg); color: var(--text); font-size: 14px; margin-bottom: 12px; outline: none; }
+  .login-box input:focus { border-color: var(--accent); }
+  .login-box button { width: 100%; padding: 10px; border-radius: 6px; border: none; background: var(--accent); color: #fff; font-size: 14px; font-weight: 600; cursor: pointer; }
+  .login-box button:hover { opacity: 0.9; }
+  .login-error { color: var(--red); font-size: 12px; margin-top: 8px; display: none; }
 </style>
 </head>
 <body>
 
+<!-- Login Gate -->
+<div class="login-overlay" id="loginOverlay">
+  <div class="login-box">
+    <h2 data-i18n="login_title">Dashboard Access</h2>
+    <p data-i18n="login_subtitle">Enter password to continue</p>
+    <input type="password" id="loginPassword" placeholder="Password" autofocus onkeydown="if(event.key==='Enter')doLogin()">
+    <button onclick="doLogin()" data-i18n="login_btn">Sign In</button>
+    <div class="login-error" id="loginError" data-i18n="login_error">Incorrect password</div>
+  </div>
+</div>
+
+<!-- Language Toggle -->
+<div class="lang-toggle">
+  <button class="lang-btn active" id="btn-en" onclick="setLang('en')">EN</button>
+  <button class="lang-btn" id="btn-zh" onclick="setLang('zh')">中文</button>
+</div>
+
 <div class="header">
-  <h1>External Intelligence Dashboard</h1>
-  <div class="subtitle">All Sources &mdash; Latest Update</div>
-  <div class="timestamp">March 20, 2026 &bull; Largest Monthly OpEx Day &bull; All data as of 18:51-23:38 HKT</div>
+  <h1 data-i18n="title">External Intelligence Dashboard</h1>
+  <div class="subtitle" data-i18n="subtitle">All Sources &mdash; Latest Update</div>
+  <div class="timestamp" data-i18n="timestamp">March 20, 2026 &bull; Largest Monthly OpEx Day &bull; All data as of 18:51-23:38 HKT</div>
 </div>
 
 <!-- Aggregate Signal Bar -->
 <div class="signal-bar">
-  <div class="signal-chip chip-green"><span class="dot"></span>P-Model: NET LONG</div>
-  <div class="signal-chip chip-red"><span class="dot"></span>Liquidity: Deteriorating</div>
-  <div class="signal-chip chip-red"><span class="dot"></span>India: All RED</div>
-  <div class="signal-chip chip-yellow"><span class="dot"></span>GS: Market Fragile</div>
-  <div class="signal-chip chip-blue"><span class="dot"></span>AI Infra: Silicon Shortage</div>
-  <div class="signal-chip chip-red"><span class="dot"></span>Geopolitical: Hormuz/Iran</div>
-  <div class="signal-chip chip-red"><span class="dot"></span>MA40: Extreme Oversold</div>
-  <div class="signal-chip chip-green"><span class="dot"></span>CVNA: Mega Conviction</div>
+  <div class="signal-chip chip-green"><span class="dot"></span><span data-i18n="chip_pmodel">P-Model: NET LONG</span></div>
+  <div class="signal-chip chip-red"><span class="dot"></span><span data-i18n="chip_liq">Liquidity: Deteriorating</span></div>
+  <div class="signal-chip chip-red"><span class="dot"></span><span data-i18n="chip_india">India: All RED</span></div>
+  <div class="signal-chip chip-yellow"><span class="dot"></span><span data-i18n="chip_gs">GS: Market Fragile</span></div>
+  <div class="signal-chip chip-blue"><span class="dot"></span><span data-i18n="chip_ai">AI Infra: Silicon Shortage</span></div>
+  <div class="signal-chip chip-red"><span class="dot"></span><span data-i18n="chip_geo">Geopolitical: Hormuz/Iran</span></div>
+  <div class="signal-chip chip-red"><span class="dot"></span><span data-i18n="chip_ma40">MA40: Extreme Oversold</span></div>
+  <div class="signal-chip chip-green"><span class="dot"></span><span data-i18n="chip_cvna">CVNA: Mega Conviction</span></div>
 </div>
 
 <!-- P-MODEL -->
-<div class="section-title">Trading Signals</div>
+<div class="section-title" data-i18n="sec_trading">Trading Signals</div>
 <div class="grid">
   <div class="card card-full">
     <div class="card-header">
@@ -163,7 +197,7 @@
 </div>
 
 <!-- MARKET BREADTH -->
-<div class="section-title">Market Breadth</div>
+<div class="section-title" data-i18n="sec_breadth">Market Breadth</div>
 <div class="grid">
 
   <!-- US SMM -->
@@ -364,7 +398,7 @@
 </div>
 
 <!-- MACRO & LIQUIDITY -->
-<div class="section-title">Macro &amp; Liquidity</div>
+<div class="section-title" data-i18n="sec_macro">Macro &amp; Liquidity</div>
 <div class="grid">
 
   <!-- H-Model -->
@@ -451,7 +485,7 @@
 </div>
 
 <!-- HEDGEFOLLOW INSIDERS -->
-<div class="section-title">Insider Flow</div>
+<div class="section-title" data-i18n="sec_insider">Insider Flow</div>
 <div class="grid">
   <div class="card">
     <div class="card-header">
@@ -497,7 +531,7 @@
 </div>
 
 <!-- GREENOAKS -->
-<div class="section-title">Institutional Holdings</div>
+<div class="section-title" data-i18n="sec_holdings">Institutional Holdings</div>
 <div class="grid">
   <div class="card card-full">
     <div class="card-header">
@@ -631,7 +665,7 @@
 </div>
 
 <!-- SECTOR & THEMATIC -->
-<div class="section-title">Sector &amp; Thematic Intelligence</div>
+<div class="section-title" data-i18n="sec_sector">Sector &amp; Thematic Intelligence</div>
 <div class="grid">
 
   <!-- SemiAnalysis -->
@@ -711,7 +745,7 @@
 </div>
 
 <!-- CROSS-SOURCE SYNTHESIS -->
-<div class="section-title">Cross-Source Synthesis</div>
+<div class="section-title" data-i18n="sec_synthesis">Cross-Source Synthesis</div>
 <div class="card card-full">
   <div class="synth-row">
     <div class="synth-theme" style="color:var(--red);">Liquidity Deteriorating</div>
@@ -765,9 +799,121 @@
   </div>
 </div>
 
-<div class="footer">
+<div class="footer" data-i18n="footer">
   Generated by notion-autopublish scrapers &bull; P-Model (SA), SMM, DV, HK Breadth, HedgeFollow insiders, H-Model, Greenoaks/CAS/Duquesne/Atreides/Octahedron (SEC 13F), SemiAnalysis, Finally Nitin, FOMO, Systematic LS, GS, Citadel, MS &bull; All data updated March 23, 2026
 </div>
 
+<script>
+// ── Login System ──
+// SHA-256 hash of the password (client-side gate)
+const PASS_HASH = '5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8'; // default: "password"
+
+async function sha256(text) {
+  const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(text));
+  return Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2, '0')).join('');
+}
+
+async function doLogin() {
+  const pw = document.getElementById('loginPassword').value;
+  const hash = await sha256(pw);
+  if (hash === PASS_HASH) {
+    sessionStorage.setItem('dashboard_auth', '1');
+    document.getElementById('loginOverlay').style.display = 'none';
+  } else {
+    document.getElementById('loginError').style.display = 'block';
+    document.getElementById('loginPassword').value = '';
+    document.getElementById('loginPassword').focus();
+  }
+}
+
+// Check if already authed this session
+if (sessionStorage.getItem('dashboard_auth') === '1') {
+  document.getElementById('loginOverlay').style.display = 'none';
+}
+
+// ── i18n Translation System ──
+const i18n = {
+  en: {
+    title: 'External Intelligence Dashboard',
+    subtitle: 'All Sources — Latest Update',
+    timestamp: 'March 20, 2026 • Largest Monthly OpEx Day • All data as of 18:51-23:38 HKT',
+    login_title: 'Dashboard Access',
+    login_subtitle: 'Enter password to continue',
+    login_btn: 'Sign In',
+    login_error: 'Incorrect password',
+
+    // Signal chips
+    chip_pmodel: 'P-Model: NET LONG',
+    chip_liq: 'Liquidity: Deteriorating',
+    chip_india: 'India: All RED',
+    chip_gs: 'GS: Market Fragile',
+    chip_ai: 'AI Infra: Silicon Shortage',
+    chip_geo: 'Geopolitical: Hormuz/Iran',
+    chip_ma40: 'MA40: Extreme Oversold',
+    chip_cvna: 'CVNA: Mega Conviction',
+
+    // Section titles
+    sec_trading: 'Trading Signals',
+    sec_breadth: 'Market Breadth',
+    sec_macro: 'Macro & Liquidity',
+    sec_insider: 'Insider Flow',
+    sec_holdings: 'Institutional Holdings',
+    sec_sector: 'Sector & Thematic Intelligence',
+    sec_synthesis: 'Cross-Source Synthesis',
+
+    footer: 'Generated by notion-autopublish scrapers • P-Model (SA), SMM, DV, HK Breadth, HedgeFollow insiders, H-Model, Greenoaks/CAS/Duquesne/Atreides/Octahedron (SEC 13F), SemiAnalysis, Finally Nitin, FOMO, Systematic LS, GS, Citadel, MS • All data updated March 23, 2026',
+  },
+  zh: {
+    title: '外部情報儀表板',
+    subtitle: '所有來源 — 最新更新',
+    timestamp: '2026年3月20日 • 最大月度期權到期日 • 數據截至 18:51-23:38 HKT',
+    login_title: '儀表板存取',
+    login_subtitle: '請輸入密碼繼續',
+    login_btn: '登入',
+    login_error: '密碼錯誤',
+
+    // Signal chips
+    chip_pmodel: 'P-Model：淨多頭',
+    chip_liq: '流動性：惡化中',
+    chip_india: '印度：全面紅燈',
+    chip_gs: 'GS：市場脆弱',
+    chip_ai: 'AI基建：矽晶圓短缺',
+    chip_geo: '地緣政治：荷姆茲/伊朗',
+    chip_ma40: 'MA40：極度超賣',
+    chip_cvna: 'CVNA：超級重倉',
+
+    // Section titles
+    sec_trading: '交易訊號',
+    sec_breadth: '市場廣度',
+    sec_macro: '宏觀與流動性',
+    sec_insider: '內部人交易',
+    sec_holdings: '機構持股',
+    sec_sector: '板塊與主題情報',
+    sec_synthesis: '跨源綜合分析',
+
+    footer: '由 notion-autopublish 爬蟲生成 • P-Model (SA)、SMM、DV、港股廣度、HedgeFollow 內部人、H-Model、Greenoaks/CAS/Duquesne/Atreides/Octahedron (SEC 13F)、SemiAnalysis、Finally Nitin、FOMO、Systematic LS、GS、Citadel、MS • 數據更新於 2026年3月23日',
+  }
+};
+
+function setLang(lang) {
+  const dict = i18n[lang];
+  if (!dict) return;
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (dict[key]) {
+      if (el.tagName === 'INPUT') el.placeholder = dict[key];
+      else el.innerHTML = dict[key];
+    }
+  });
+  document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+  document.getElementById('btn-zh').classList.toggle('active', lang === 'zh');
+  document.documentElement.lang = lang === 'zh' ? 'zh-TW' : 'en';
+  localStorage.setItem('dashboard_lang', lang);
+}
+
+// Restore saved language
+const savedLang = localStorage.getItem('dashboard_lang');
+if (savedLang && savedLang !== 'en') setLang(savedLang);
+</script>
 </body>
 </html>
