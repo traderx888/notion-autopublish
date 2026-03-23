@@ -6,6 +6,7 @@
 <title>SMM — US Market Monitor Detail</title>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns@3.0.0/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-zoom@2.0.1/dist/chartjs-plugin-zoom.min.js"></script>
 <style>
   :root {
     --bg: #0d1117; --card: #161b22; --border: #30363d;
@@ -25,12 +26,19 @@
   .section-title { font-size: 18px; font-weight: 600; margin: 24px 0 12px; padding-bottom: 8px; border-bottom: 1px solid var(--border); }
 
   /* Chart */
-  .chart-container { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 24px; }
-  .chart-title { font-size: 14px; font-weight: 600; margin-bottom: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.5px; }
+  .chart-container { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 24px; position: relative; }
+  .chart-title { font-size: 14px; font-weight: 600; margin-bottom: 4px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.5px; }
+  .chart-hint { font-size: 11px; color: var(--muted); margin-bottom: 12px; }
   canvas { width: 100% !important; }
 
+  /* Zoom controls */
+  .zoom-controls { display: flex; gap: 6px; position: absolute; top: 16px; right: 16px; z-index: 5; flex-wrap: wrap; }
+  .zoom-btn { background: var(--bg); border: 1px solid var(--border); color: var(--muted); padding: 4px 10px; border-radius: 4px; font-size: 11px; cursor: pointer; transition: all 0.15s; }
+  .zoom-btn:hover { color: var(--text); border-color: var(--accent); }
+  .zoom-btn.active { color: var(--accent); border-color: var(--accent); background: rgba(88,166,255,0.1); }
+
   /* Table */
-  .table-container { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 16px; overflow-x: auto; margin-bottom: 24px; }
+  .table-container { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 16px; overflow-x: auto; margin-bottom: 24px; max-height: 600px; overflow-y: auto; }
   table { width: 100%; border-collapse: collapse; font-size: 12px; white-space: nowrap; }
   thead th { position: sticky; top: 0; background: var(--card); z-index: 2; }
   th { text-align: right; color: var(--muted); font-weight: 500; padding: 6px 10px; border-bottom: 1px solid var(--border); font-size: 10px; text-transform: uppercase; letter-spacing: 0.3px; }
@@ -44,7 +52,7 @@
   .group-secondary { background: rgba(188,140,255,0.04); }
   .group-market { background: rgba(63,185,80,0.04); }
 
-  /* Heatmap colours for cells */
+  /* Heatmap colours */
   .heat-green-1 { background: rgba(63,185,80,0.08); color: var(--green); }
   .heat-green-2 { background: rgba(63,185,80,0.18); color: var(--green); }
   .heat-green-3 { background: rgba(63,185,80,0.30); color: #2ee04a; }
@@ -63,25 +71,43 @@
 <div class="header">
   <a href="dashboard.html" class="back-link">&larr; Back to Dashboard</a>
   <h1>US Market Monitor (SMM)</h1>
-  <div class="subtitle">Daily Breadth Indicators &mdash; Live from Source</div>
+  <div class="subtitle">Daily Breadth Indicators &mdash; Live from Source (2014&ndash;Present)</div>
 </div>
 
-<div id="loading">Loading data...</div>
+<div id="loading">Loading data from 2 sources...</div>
 
 <!-- Primary Breadth Chart -->
 <div class="chart-container" id="chart1-wrap" style="display:none;">
   <div class="chart-title">Primary Breadth Indicators</div>
-  <canvas id="primaryChart" height="280"></canvas>
+  <div class="chart-hint">Scroll to zoom &bull; Drag to pan &bull; Double-click to reset</div>
+  <div class="zoom-controls" id="zoom1">
+    <button class="zoom-btn" onclick="zoomTo('primary', 90)">3M</button>
+    <button class="zoom-btn" onclick="zoomTo('primary', 180)">6M</button>
+    <button class="zoom-btn" onclick="zoomTo('primary', 365)">1Y</button>
+    <button class="zoom-btn" onclick="zoomTo('primary', 730)">2Y</button>
+    <button class="zoom-btn" onclick="zoomTo('primary', 1825)">5Y</button>
+    <button class="zoom-btn active" onclick="zoomTo('primary', 0)">ALL</button>
+  </div>
+  <canvas id="primaryChart" height="320"></canvas>
 </div>
 
-<!-- Secondary Breadth + Market Chart -->
+<!-- MA40 + SPX Chart -->
 <div class="chart-container" id="chart2-wrap" style="display:none;">
   <div class="chart-title">MA40 &amp; S&amp;P 500</div>
-  <canvas id="secondaryChart" height="200"></canvas>
+  <div class="chart-hint">Scroll to zoom &bull; Drag to pan &bull; Double-click to reset</div>
+  <div class="zoom-controls" id="zoom2">
+    <button class="zoom-btn" onclick="zoomTo('secondary', 90)">3M</button>
+    <button class="zoom-btn" onclick="zoomTo('secondary', 180)">6M</button>
+    <button class="zoom-btn" onclick="zoomTo('secondary', 365)">1Y</button>
+    <button class="zoom-btn" onclick="zoomTo('secondary', 730)">2Y</button>
+    <button class="zoom-btn" onclick="zoomTo('secondary', 1825)">5Y</button>
+    <button class="zoom-btn active" onclick="zoomTo('secondary', 0)">ALL</button>
+  </div>
+  <canvas id="secondaryChart" height="240"></canvas>
 </div>
 
-<!-- Data Table -->
-<div class="section-title" id="table-title" style="display:none;">Daily Data Table</div>
+<!-- Data Table (2025+ only) -->
+<div class="section-title" id="table-title" style="display:none;">Daily Data Table (2025&ndash;Present)</div>
 <div class="table-container" id="table-wrap" style="display:none;">
   <table id="dataTable">
     <thead>
@@ -92,7 +118,6 @@
         <th colspan="2" class="group-header group-market">Market Data</th>
       </tr>
       <tr>
-        <!-- Primary -->
         <th>Up &ge;4%</th>
         <th>Down &ge;4%</th>
         <th>5-Day Ratio</th>
@@ -100,13 +125,11 @@
         <th>Qtr Up &ge;25%</th>
         <th>Qtr Down &ge;25%</th>
         <th>34d Up &ge;13%</th>
-        <!-- Secondary -->
         <th>Mo Up &ge;25%</th>
         <th>Mo Down &ge;25%</th>
         <th>Mo Up &ge;50%</th>
         <th>Mo Down &ge;50%</th>
         <th>34d Down &ge;13%</th>
-        <!-- Market -->
         <th>MA40</th>
         <th>S&amp;P 500</th>
       </tr>
@@ -120,20 +143,45 @@
 </div>
 
 <script>
-const SHEET_URL = 'https://docs.google.com/spreadsheets/d/1O6OhS7ciA8zwfycBfGPbP2fWJnR0pn2UUvFZVDP9jpE/pub?output=csv';
+// Two data sources: recent (default tab) and historical (GID=0)
+const SHEET_BASE = 'https://docs.google.com/spreadsheets/d/1O6OhS7ciA8zwfycBfGPbP2fWJnR0pn2UUvFZVDP9jpE/pub';
+const RECENT_URL = SHEET_BASE + '?output=csv';
+const HIST_URL   = SHEET_BASE + '?gid=0&output=csv';
 
-async function fetchData() {
-  const resp = await fetch(SHEET_URL);
-  const text = await resp.text();
+let primaryChart = null, secondaryChart = null;
+let allData = [];
+
+async function fetchAllData() {
+  const [recentResp, histResp] = await Promise.all([
+    fetch(RECENT_URL), fetch(HIST_URL)
+  ]);
+  const recentText = await recentResp.text();
+  const histText = await histResp.text();
+
+  const recentRows = parseSheet(recentText, 2);  // skip 2 header rows
+  const histRows = parseSheet(histText, 3);       // skip 3 header rows (row 2 is empty)
+
+  // Merge: use a date map to deduplicate (recent takes priority)
+  const byDate = new Map();
+  for (const r of histRows)   byDate.set(r.date.getTime(), r);
+  for (const r of recentRows) byDate.set(r.date.getTime(), r);
+
+  // Sort newest first
+  const merged = Array.from(byDate.values());
+  merged.sort((a, b) => b.date - a.date);
+  return merged;
+}
+
+function parseSheet(text, skipRows) {
   const lines = text.trim().split('\n');
-  // Row 0 = group header, Row 1 = column names, Row 2+ = data
   const rows = [];
-  for (let i = 2; i < lines.length; i++) {
+  for (let i = skipRows; i < lines.length; i++) {
     const cols = parseCSVLine(lines[i]);
-    if (!cols[0]) continue;
+    if (!cols[0] || !cols[0].includes('/')) continue;
+    const d = parseDate(cols[0]);
+    if (isNaN(d.getTime())) continue;
     rows.push({
-      date: parseDate(cols[0]),
-      dateStr: cols[0],
+      date: d,
       up4: num(cols[1]),
       down4: num(cols[2]),
       ratio5d: numF(cols[3]),
@@ -169,7 +217,6 @@ function parseCSVLine(line) {
 }
 
 function parseDate(s) {
-  // M/D/YYYY or YYYY-MM-DD
   if (s.includes('/')) {
     const [m, d, y] = s.split('/');
     return new Date(+y, +m - 1, +d);
@@ -179,13 +226,16 @@ function parseDate(s) {
 function num(s) { return parseInt((s || '0').replace(/,/g, ''), 10) || 0; }
 function numF(s) { return parseFloat((s || '0').replace(/,/g, '')) || 0; }
 
+// ── Table (2025+ only) ──
 function renderTable(rows) {
+  const cutoff = new Date(2025, 0, 1);
+  const filtered = rows.filter(r => r.date >= cutoff);
   const tbody = document.getElementById('tableBody');
   tbody.innerHTML = '';
-  for (const r of rows) {
-    const tr = document.createElement('tr');
+  for (const r of filtered) {
     const d = r.date;
     const dateLabel = `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
+    const tr = document.createElement('tr');
     tr.innerHTML = `
       <td>${dateLabel}</td>
       <td class="${heatUp4(r.up4)}">${r.up4.toLocaleString()}</td>
@@ -207,7 +257,7 @@ function renderTable(rows) {
   }
 }
 
-// Heatmap helpers
+// ── Heatmap helpers ──
 function heatUp4(v) {
   if (v >= 500) return 'heat-green-3';
   if (v >= 300) return 'heat-green-2';
@@ -248,25 +298,66 @@ function heatMA40(v) {
   return 'heat-red-2';
 }
 
+// ── Zoom presets ──
+function zoomTo(chartName, days) {
+  const chart = chartName === 'primary' ? primaryChart : secondaryChart;
+  const controlsId = chartName === 'primary' ? 'zoom1' : 'zoom2';
+
+  // Update active button
+  document.querySelectorAll(`#${controlsId} .zoom-btn`).forEach(b => b.classList.remove('active'));
+  event.target.classList.add('active');
+
+  if (days === 0) {
+    chart.resetZoom();
+    return;
+  }
+
+  const now = new Date();
+  const minDate = new Date(now.getTime() - days * 86400000);
+  chart.zoomScale('x', { min: minDate.getTime(), max: now.getTime() }, 'default');
+}
+
+// ── Chart zoom/pan config ──
+const zoomPlugin = {
+  zoom: {
+    wheel: { enabled: true, modifierKey: null },
+    pinch: { enabled: true },
+    drag: { enabled: true, backgroundColor: 'rgba(88,166,255,0.1)', borderColor: 'rgba(88,166,255,0.3)', borderWidth: 1 },
+    mode: 'x',
+    onZoomComplete: function() {}
+  },
+  pan: {
+    enabled: true,
+    mode: 'x',
+    modifierKey: 'shift'
+  },
+  limits: {
+    x: { minRange: 7 * 86400000 }  // min 1 week
+  }
+};
+
+// ── Charts ──
 function renderCharts(rows) {
-  // Reverse so oldest first for chart
-  const data = [...rows].reverse();
+  const data = [...rows].reverse(); // oldest first
   const labels = data.map(r => r.date);
+
+  // Reduce point radius for large datasets
+  const pr = data.length > 200 ? 0 : 1.5;
 
   // Primary chart
   const ctx1 = document.getElementById('primaryChart').getContext('2d');
-  new Chart(ctx1, {
+  primaryChart = new Chart(ctx1, {
     type: 'line',
     data: {
       labels,
       datasets: [
-        { label: 'Up >=4% (count)', data: data.map(r => r.up4), borderColor: '#58a6ff', backgroundColor: 'rgba(88,166,255,0.1)', borderWidth: 1.5, pointRadius: 2, tension: 0.3, yAxisID: 'y' },
-        { label: 'Down >=4% (count)', data: data.map(r => r.down4), borderColor: '#f85149', backgroundColor: 'rgba(248,81,73,0.1)', borderWidth: 1.5, pointRadius: 2, tension: 0.3, yAxisID: 'y' },
-        { label: '5-Day Ratio', data: data.map(r => r.ratio5d), borderColor: '#d29922', borderWidth: 2, pointRadius: 2, tension: 0.3, yAxisID: 'y1' },
-        { label: '10-Day Ratio', data: data.map(r => r.ratio10d), borderColor: '#db6d28', borderWidth: 2, pointRadius: 2, tension: 0.3, yAxisID: 'y1' },
-        { label: 'Qtr Up >=25%', data: data.map(r => r.qtrUp25), borderColor: '#3fb950', borderWidth: 1, pointRadius: 1.5, tension: 0.3, borderDash: [4,2], yAxisID: 'y' },
-        { label: 'Qtr Down >=25%', data: data.map(r => r.qtrDown25), borderColor: '#ff7b72', borderWidth: 1, pointRadius: 1.5, tension: 0.3, borderDash: [4,2], yAxisID: 'y' },
-        { label: 'S&P 500', data: data.map(r => r.spx), borderColor: 'rgba(230,237,243,0.4)', borderWidth: 1, pointRadius: 0, tension: 0.3, yAxisID: 'y2' },
+        { label: 'Up >=4%', data: data.map(r => r.up4), borderColor: '#58a6ff', backgroundColor: 'rgba(88,166,255,0.05)', borderWidth: 1.2, pointRadius: pr, tension: 0.3, yAxisID: 'y' },
+        { label: 'Down >=4%', data: data.map(r => r.down4), borderColor: '#f85149', backgroundColor: 'rgba(248,81,73,0.05)', borderWidth: 1.2, pointRadius: pr, tension: 0.3, yAxisID: 'y' },
+        { label: '5-Day Ratio', data: data.map(r => r.ratio5d), borderColor: '#d29922', borderWidth: 1.5, pointRadius: 0, tension: 0.3, yAxisID: 'y1' },
+        { label: '10-Day Ratio', data: data.map(r => r.ratio10d), borderColor: '#db6d28', borderWidth: 1.5, pointRadius: 0, tension: 0.3, yAxisID: 'y1' },
+        { label: 'Qtr Up >=25%', data: data.map(r => r.qtrUp25), borderColor: '#3fb950', borderWidth: 1, pointRadius: 0, tension: 0.3, borderDash: [4,2], yAxisID: 'y' },
+        { label: 'Qtr Down >=25%', data: data.map(r => r.qtrDown25), borderColor: '#ff7b72', borderWidth: 1, pointRadius: 0, tension: 0.3, borderDash: [4,2], yAxisID: 'y' },
+        { label: 'S&P 500', data: data.map(r => r.spx), borderColor: 'rgba(230,237,243,0.35)', borderWidth: 1, pointRadius: 0, tension: 0.3, yAxisID: 'y2' },
       ]
     },
     options: {
@@ -274,13 +365,14 @@ function renderCharts(rows) {
       interaction: { mode: 'index', intersect: false },
       plugins: {
         legend: { labels: { color: '#8b949e', font: { size: 11 }, usePointStyle: true, pointStyle: 'line' } },
-        tooltip: { backgroundColor: '#161b22', titleColor: '#e6edf3', bodyColor: '#e6edf3', borderColor: '#30363d', borderWidth: 1 }
+        tooltip: { backgroundColor: '#161b22', titleColor: '#e6edf3', bodyColor: '#e6edf3', borderColor: '#30363d', borderWidth: 1 },
+        zoom: zoomPlugin
       },
       scales: {
         x: {
           type: 'time',
-          time: { unit: 'week', displayFormats: { week: 'yyyy-MM-dd' } },
-          ticks: { color: '#8b949e', font: { size: 10 }, maxRotation: 45 },
+          time: { unit: 'month', displayFormats: { month: 'yyyy-MM', week: 'yyyy-MM-dd' } },
+          ticks: { color: '#8b949e', font: { size: 10 }, maxRotation: 45, autoSkip: true, maxTicksLimit: 24 },
           grid: { color: 'rgba(48,54,61,0.3)' }
         },
         y: {
@@ -296,16 +388,14 @@ function renderCharts(rows) {
           grid: { drawOnChartArea: false },
           min: 0
         },
-        y2: {
-          display: false,
-        }
+        y2: { display: false }
       }
     }
   });
 
   // Secondary chart: MA40 + SPX
   const ctx2 = document.getElementById('secondaryChart').getContext('2d');
-  new Chart(ctx2, {
+  secondaryChart = new Chart(ctx2, {
     type: 'line',
     data: {
       labels,
@@ -314,10 +404,10 @@ function renderCharts(rows) {
           label: 'MA40 (%)',
           data: data.map(r => r.ma40),
           borderColor: '#bc8cff',
-          backgroundColor: 'rgba(188,140,255,0.08)',
+          backgroundColor: 'rgba(188,140,255,0.06)',
           fill: true,
-          borderWidth: 2,
-          pointRadius: 3,
+          borderWidth: 1.5,
+          pointRadius: pr,
           pointBackgroundColor: data.map(r => r.ma40 <= 20 ? '#f85149' : r.ma40 >= 70 ? '#3fb950' : '#bc8cff'),
           tension: 0.3,
           yAxisID: 'y'
@@ -327,7 +417,7 @@ function renderCharts(rows) {
           data: data.map(r => r.spx),
           borderColor: 'rgba(230,237,243,0.5)',
           borderWidth: 1.5,
-          pointRadius: 1,
+          pointRadius: 0,
           tension: 0.3,
           yAxisID: 'y1'
         }
@@ -339,13 +429,13 @@ function renderCharts(rows) {
       plugins: {
         legend: { labels: { color: '#8b949e', font: { size: 11 }, usePointStyle: true, pointStyle: 'line' } },
         tooltip: { backgroundColor: '#161b22', titleColor: '#e6edf3', bodyColor: '#e6edf3', borderColor: '#30363d', borderWidth: 1 },
-        annotation: undefined
+        zoom: zoomPlugin
       },
       scales: {
         x: {
           type: 'time',
-          time: { unit: 'week', displayFormats: { week: 'yyyy-MM-dd' } },
-          ticks: { color: '#8b949e', font: { size: 10 }, maxRotation: 45 },
+          time: { unit: 'month', displayFormats: { month: 'yyyy-MM', week: 'yyyy-MM-dd' } },
+          ticks: { color: '#8b949e', font: { size: 10 }, maxRotation: 45, autoSkip: true, maxTicksLimit: 24 },
           grid: { color: 'rgba(48,54,61,0.3)' }
         },
         y: {
@@ -366,18 +456,27 @@ function renderCharts(rows) {
   });
 }
 
-// Init
-fetchData().then(rows => {
+// ── Init ──
+fetchAllData().then(rows => {
+  allData = rows;
   document.getElementById('loading').style.display = 'none';
   document.getElementById('chart1-wrap').style.display = 'block';
   document.getElementById('chart2-wrap').style.display = 'block';
   document.getElementById('table-title').style.display = 'block';
   document.getElementById('table-wrap').style.display = 'block';
   document.getElementById('footer').style.display = 'block';
+
+  const dateRange = rows.length > 0
+    ? `${rows[rows.length-1].date.toISOString().slice(0,10)} to ${rows[0].date.toISOString().slice(0,10)}`
+    : '';
+  document.querySelector('.header .subtitle').textContent =
+    `Daily Breadth Indicators — ${rows.length} data points (${dateRange})`;
+
   renderCharts(rows);
   renderTable(rows);
 }).catch(err => {
   document.getElementById('loading').textContent = 'Error loading data: ' + err.message;
+  console.error(err);
 });
 </script>
 </body>
