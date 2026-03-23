@@ -74,7 +74,7 @@
   <div class="subtitle">Daily Breadth Indicators &mdash; Live from Source (2014&ndash;Present)</div>
 </div>
 
-<div id="loading">Loading data from 2 sources...</div>
+<div id="loading">Loading data from 17 tabs...</div>
 
 <!-- Primary Breadth Chart -->
 <div class="chart-container" id="chart1-wrap" style="display:none;">
@@ -86,6 +86,7 @@
     <button class="zoom-btn" onclick="zoomTo('primary', 365)">1Y</button>
     <button class="zoom-btn" onclick="zoomTo('primary', 730)">2Y</button>
     <button class="zoom-btn" onclick="zoomTo('primary', 1825)">5Y</button>
+    <button class="zoom-btn" onclick="zoomTo('primary', 3650)">10Y</button>
     <button class="zoom-btn active" onclick="zoomTo('primary', 0)">ALL</button>
   </div>
   <canvas id="primaryChart" height="320"></canvas>
@@ -101,6 +102,7 @@
     <button class="zoom-btn" onclick="zoomTo('secondary', 365)">1Y</button>
     <button class="zoom-btn" onclick="zoomTo('secondary', 730)">2Y</button>
     <button class="zoom-btn" onclick="zoomTo('secondary', 1825)">5Y</button>
+    <button class="zoom-btn" onclick="zoomTo('secondary', 3650)">10Y</button>
     <button class="zoom-btn active" onclick="zoomTo('secondary', 0)">ALL</button>
   </div>
   <canvas id="secondaryChart" height="240"></canvas>
@@ -143,28 +145,45 @@
 </div>
 
 <script>
-// Two data sources: recent (default tab) and historical (GID=0)
+// All data tabs from the Google Sheet (one per year, plus current)
 const SHEET_BASE = 'https://docs.google.com/spreadsheets/d/1O6OhS7ciA8zwfycBfGPbP2fWJnR0pn2UUvFZVDP9jpE/pub';
-const RECENT_URL = SHEET_BASE + '?output=csv';
-const HIST_URL   = SHEET_BASE + '?gid=0&output=csv';
+const DATA_GIDS = [
+  '1082103394',  // 2025-2026 (current)
+  '780188096',   // 2024-2025
+  '1146204629',  // 2023-2024
+  '632667710',   // 2022-2024
+  '1394777987',  // 2021-2022
+  '1981550515',  // 2020-2021
+  '2093835319',  // 2019-2020
+  '1089581064',  // 2018-2019
+  '280217788',   // 2017-2018
+  '1391207759',  // 2016-2017
+  '233732777',   // 2016
+  '0',           // 2014-2015
+  '1622090416',  // 2013-2014
+  '2142678713',  // 2011-2012
+  '24026662',    // 2011
+  '1622166415',  // 2010
+  '269978205',   // 2007
+];
 
 let primaryChart = null, secondaryChart = null;
 let allData = [];
 
 async function fetchAllData() {
-  const [recentResp, histResp] = await Promise.all([
-    fetch(RECENT_URL), fetch(HIST_URL)
-  ]);
-  const recentText = await recentResp.text();
-  const histText = await histResp.text();
+  // Fetch all tabs in parallel
+  const urls = DATA_GIDS.map(gid => SHEET_BASE + '?gid=' + gid + '&output=csv');
+  const responses = await Promise.all(urls.map(u => fetch(u).catch(() => null)));
+  const texts = await Promise.all(responses.map(r => r && r.ok ? r.text() : ''));
 
-  const recentRows = parseSheet(recentText, 2);  // skip 2 header rows
-  const histRows = parseSheet(histText, 3);       // skip 3 header rows (row 2 is empty)
-
-  // Merge: use a date map to deduplicate (recent takes priority)
+  // Parse all and merge, deduplicating by date (later tabs = newer data wins)
   const byDate = new Map();
-  for (const r of histRows)   byDate.set(r.date.getTime(), r);
-  for (const r of recentRows) byDate.set(r.date.getTime(), r);
+  for (const text of texts) {
+    if (!text) continue;
+    // Try both header formats (some tabs skip 2, some skip 3 rows)
+    const rows = parseSheet(text);
+    for (const r of rows) byDate.set(r.date.getTime(), r);
+  }
 
   // Sort newest first
   const merged = Array.from(byDate.values());
@@ -172,14 +191,17 @@ async function fetchAllData() {
   return merged;
 }
 
-function parseSheet(text, skipRows) {
+function parseSheet(text) {
   const lines = text.trim().split('\n');
   const rows = [];
-  for (let i = skipRows; i < lines.length; i++) {
+  for (let i = 0; i < lines.length; i++) {
     const cols = parseCSVLine(lines[i]);
-    if (!cols[0] || !cols[0].includes('/')) continue;
+    // Auto-detect data rows: first column must look like a date (M/D/YYYY)
+    if (!cols[0] || !/^\d{1,2}\/\d{1,2}\/\d{4}/.test(cols[0])) continue;
     const d = parseDate(cols[0]);
     if (isNaN(d.getTime())) continue;
+    // Need at least a few numeric columns
+    if (!cols[1] || num(cols[1]) === 0 && num(cols[2]) === 0) continue;
     rows.push({
       date: d,
       up4: num(cols[1]),
