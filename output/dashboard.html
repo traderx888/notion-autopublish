@@ -141,7 +141,7 @@
 
 <!-- Aggregate Signal Bar -->
 <div class="signal-bar">
-  <div class="signal-chip chip-green"><span class="dot"></span><span data-i18n="chip_pmodel">P-Model: NET LONG</span></div>
+  <div class="signal-chip chip-yellow"><span class="dot"></span><span data-i18n="chip_pmodel">P-Model: NET SHORT + TMV HEDGE</span></div>
   <div class="signal-chip chip-red"><span class="dot"></span><span data-i18n="chip_liq">Liquidity: Deteriorating</span></div>
   <div class="signal-chip chip-red"><span class="dot"></span><span data-i18n="chip_india">India: All RED</span></div>
   <div class="signal-chip chip-yellow"><span class="dot"></span><span data-i18n="chip_gs">GS: Market Fragile</span></div>
@@ -164,15 +164,25 @@
     </div>
 
     <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
-      <!-- Position -->
+      <!-- Multi-Instrument Positions -->
       <div>
-        <div style="font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:8px;">Current Position</div>
-        <div class="kv-row"><span class="kv-label">Direction</span><span class="kv-val up">LONG SCALPERS</span></div>
-        <div class="kv-row"><span class="kv-label">Contracts</span><span class="kv-val">240 each</span></div>
-        <div class="kv-row"><span class="kv-label">ES H26 Entry</span><span class="kv-val">6720.25</span></div>
-        <div class="kv-row"><span class="kv-label">NQ H26 Entry</span><span class="kv-val">24,725</span></div>
-        <div class="kv-row"><span class="kv-label">TMV</span><span class="kv-val">Long @ 35.29</span></div>
-        <div class="kv-row"><span class="kv-label">Net Position</span><span class="kv-val up">NET LONG</span></div>
+        <div style="font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:8px;">Active Positions</div>
+        <!-- ES/NQ Core -->
+        <div style="border-left:3px solid var(--red);padding-left:10px;margin-bottom:10px;">
+          <div style="font-size:13px;font-weight:600;color:var(--red);">&darr; ES / NQ &mdash; SHORT</div>
+          <div class="kv-row"><span class="kv-label">Size</span><span class="kv-val">240 contracts each</span></div>
+          <div class="kv-row"><span class="kv-label">ES H26</span><span class="kv-val">6720.25</span></div>
+          <div class="kv-row"><span class="kv-label">NQ H26</span><span class="kv-val">24,725</span></div>
+          <div class="kv-row"><span class="kv-label">Type</span><span class="kv-val down">Long Scalpers (tactical)</span></div>
+        </div>
+        <!-- TMV Hedge -->
+        <div style="border-left:3px solid var(--green);padding-left:10px;margin-bottom:10px;">
+          <div style="font-size:13px;font-weight:600;color:var(--green);">&uarr; TMV &mdash; LONG (Rates Hedge)</div>
+          <div class="kv-row"><span class="kv-label">Size</span><span class="kv-val">$2M notional</span></div>
+          <div class="kv-row"><span class="kv-label">Entry</span><span class="kv-val">35.29</span></div>
+          <div class="kv-row"><span class="kv-label">Rationale</span><span class="kv-val">Crude oil / Hormuz inflation hedge</span></div>
+        </div>
+        <div class="kv-row"><span class="kv-label">Net Position</span><span class="kv-val down">NET SHORT (hedged with TMV)</span></div>
       </div>
       <!-- OpEx Advisory -->
       <div>
@@ -187,11 +197,11 @@
     </div>
 
     <div class="thesis" style="margin-top: 14px;">
-      <strong>PROMETHEUS Thesis:</strong> Regime transitioned Bearish (Mar 16-17) &rarr; Positive into Mar 20 OpEx. Compound tailwind delivering. VIX crushed, charm flip loaded for settlement. SPX 6630 mega floor holds. Structure favors upside grind into close with 6720-6735 target zone.
+      <strong>PROMETHEUS Thesis (Mar 23):</strong> Crude oil (prime mover) trading in a range since Mar 18 sell-off. Expecting stabilization once US boots on ground in Hormuz. Long TMVs hedge inflation/rate-rise risk from crude oil &mdash; does not need to be unwound quickly if futures recover. Short ES/NQ via underlying with TMV as protection against inflationary pressure.
     </div>
 
     <div style="margin-top:10px;font-size:12px;color:var(--muted);">
-      <strong>Key articles:</strong> "Three 0DTE Greeks Screaming Sell" (Mar 13) &rarr; "Structure Flips Market Positive Into Mar 20 OpEx" (Mar 16) &rarr; "$523M Put Selling Built Today's Floor" (Mar 17) &rarr; "Smart Money Builds The Launchpad" (Mar 18) &rarr; "VIX Crushed, Charm Flip Loaded" (Mar 20)
+      <strong>Key articles:</strong> "Three 0DTE Greeks Screaming Sell" (Mar 13) &rarr; "Structure Flips Market Positive Into Mar 20 OpEx" (Mar 16) &rarr; "$523M Put Selling Built Today's Floor" (Mar 17) &rarr; "Smart Money Builds The Launchpad" (Mar 18) &rarr; "VIX Crushed, Charm Flip Loaded" (Mar 20) &rarr; "Crude Oil, 10Yr Yield, &amp; TMV Hedge" (Mar 23)
     </div>
   </div>
 </div>
@@ -843,7 +853,7 @@ const i18n = {
     login_error: 'Incorrect password',
 
     // Signal chips
-    chip_pmodel: 'P-Model: NET LONG',
+    chip_pmodel: 'P-Model: NET SHORT + TMV HEDGE',
     chip_liq: 'Liquidity: Deteriorating',
     chip_india: 'India: All RED',
     chip_gs: 'GS: Market Fragile',
@@ -873,7 +883,7 @@ const i18n = {
     login_error: '密碼錯誤',
 
     // Signal chips
-    chip_pmodel: 'P-Model：淨多頭',
+    chip_pmodel: 'P-Model：淨空頭 + TMV對沖',
     chip_liq: '流動性：惡化中',
     chip_india: '印度：全面紅燈',
     chip_gs: 'GS：市場脆弱',
