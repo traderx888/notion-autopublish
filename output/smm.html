@@ -200,6 +200,8 @@ function parseSheet(text) {
     if (!cols[0] || !/^\d{1,2}\/\d{1,2}\/\d{4}/.test(cols[0])) continue;
     const d = parseDate(cols[0]);
     if (isNaN(d.getTime())) continue;
+    // Reject future dates (bad parse) and dates before 2007
+    if (d > TODAY || d.getFullYear() < 2007) continue;
     // Need at least a few numeric columns
     if (!cols[1] || num(cols[1]) === 0 && num(cols[2]) === 0) continue;
     rows.push({
@@ -240,11 +242,16 @@ function parseCSVLine(line) {
 
 function parseDate(s) {
   if (s.includes('/')) {
-    const [m, d, y] = s.split('/');
-    return new Date(+y, +m - 1, +d);
+    const parts = s.split('/');
+    let m = +parts[0], d = +parts[1], y = +parts[2];
+    // Detect DD/MM/YYYY (day > 12 in first position)
+    if (m > 12) { const tmp = m; m = d; d = tmp; }
+    return new Date(y, m - 1, d);
   }
   return new Date(s);
 }
+const TODAY = new Date();
+TODAY.setDate(TODAY.getDate() + 7); // small buffer for timezone
 function num(s) { return parseInt((s || '0').replace(/,/g, ''), 10) || 0; }
 function numF(s) { return parseFloat((s || '0').replace(/,/g, '')) || 0; }
 
