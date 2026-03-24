@@ -92,6 +92,13 @@
   .breadth-gauge { margin-bottom: 10px; }
   .score-ring { width: 80px; height: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px; font-weight: 700; flex-shrink: 0; }
 
+  .bofa-chart { margin: 12px 0 14px; padding: 14px; background: #ffffff; border: 1px solid #d0d7de; border-radius: 10px; color: #1f2328; }
+  .bofa-chart-head { font-size: 16px; font-weight: 700; color: #0f172a; }
+  .bofa-chart-subhead { font-size: 13px; color: #475467; margin-bottom: 10px; }
+  .bofa-chart-svg { width: 100%; height: auto; display: block; }
+  .bofa-chart-footnote { font-size: 11px; color: #475467; line-height: 1.45; margin-top: 8px; }
+  .bofa-chart-footnote strong { color: #0f172a; }
+
   .footer { text-align: center; color: var(--muted); font-size: 11px; margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--border); }
 
   @media (max-width: 900px) { .grid { grid-template-columns: 1fr; } }
@@ -478,6 +485,34 @@
       <div class="card-date">Mar 19</div>
     </div>
     <div class="card-subtitle">"The Flow Show &mdash; The Gravy Pain"</div>
+    <div class="bofa-chart">
+      <div class="bofa-chart-head">Chart 1: BofA Bull &amp; Bear Indicator</div>
+      <div class="bofa-chart-subhead">Down to 8.4 from 8.5</div>
+      <svg class="bofa-chart-svg" viewBox="0 0 300 210" role="img" aria-label="BofA Bull and Bear Indicator down to 8.4 from 8.5">
+        <path d="M55 148 A95 95 0 0 1 99 66" fill="none" stroke="#34c759" stroke-width="34" stroke-linecap="round"></path>
+        <path d="M99 66 A95 95 0 0 1 196 60" fill="none" stroke="#7ea21c" stroke-width="34" stroke-linecap="round"></path>
+        <path d="M196 60 A95 95 0 0 1 232 97" fill="none" stroke="#cc8d1d" stroke-width="34" stroke-linecap="round"></path>
+        <path d="M232 97 A95 95 0 0 1 245 148" fill="none" stroke="#d92d42" stroke-width="34" stroke-linecap="round"></path>
+        <circle cx="150" cy="148" r="58" fill="#ffffff"></circle>
+        <text x="74" y="153" font-size="14" font-weight="700" fill="#1f6f3d">Buy</text>
+        <text x="203" y="153" font-size="14" font-weight="700" fill="#b42318">Sell</text>
+        <text x="55" y="188" font-size="11" font-weight="600" fill="#1f2328">Extreme</text>
+        <text x="58" y="201" font-size="11" font-weight="600" fill="#1f2328">Bearish</text>
+        <text x="201" y="188" font-size="11" font-weight="600" fill="#1f2328">Extreme</text>
+        <text x="203" y="201" font-size="11" font-weight="600" fill="#1f2328">Bullish</text>
+        <text x="96" y="125" font-size="13" font-weight="600" fill="#1f2328">2</text>
+        <text x="125" y="107" font-size="13" font-weight="600" fill="#1f2328">4</text>
+        <text x="157" y="107" font-size="13" font-weight="600" fill="#1f2328">6</text>
+        <text x="187" y="124" font-size="13" font-weight="600" fill="#1f2328">8</text>
+        <text x="210" y="153" font-size="13" font-weight="600" fill="#1f2328">10</text>
+        <text x="84" y="153" font-size="13" font-weight="600" fill="#1f2328">0</text>
+        <line x1="150" y1="148" x2="211" y2="114" stroke="#1f2328" stroke-width="4" stroke-linecap="round"></line>
+        <circle cx="150" cy="148" r="5" fill="#1f2328"></circle>
+        <circle cx="248" cy="102" r="18" fill="#d92d42"></circle>
+        <text x="248" y="107" font-size="12" font-weight="700" text-anchor="middle" fill="#ffffff">8.4</text>
+      </svg>
+      <div class="bofa-chart-footnote"><strong>Source: BofA Global Investment Strategy.</strong> Dashboard recreation of Chart 1 for the Mar 19 Flow Show note.</div>
+    </div>
     <table>
       <tr><th>Metric</th><th>Value</th><th>Read</th></tr>
       <tr><td>Bull &amp; Bear</td><td class="val">8.4 (from 8.5)</td><td><span class="badge badge-caution">SELL STILL ON</span></td></tr>
