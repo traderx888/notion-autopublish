@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>External Intelligence Dashboard — 2026-03-20</title>
+<title>External Intelligence Dashboard - 2026-03-24</title>
 <style>
   :root {
     --bg: #0d1117; --card: #161b22; --border: #30363d;
@@ -135,18 +135,18 @@
 
 <div class="header">
   <h1 data-i18n="title">External Intelligence Dashboard</h1>
-  <div class="subtitle" data-i18n="subtitle">All Sources &mdash; Latest Update</div>
-  <div class="timestamp" data-i18n="timestamp">March 20, 2026 &bull; Largest Monthly OpEx Day &bull; All data as of 18:51-23:38 HKT</div>
+  <div class="subtitle" data-i18n="subtitle">All Sources &mdash; Latest Available Artifacts</div>
+  <div class="timestamp" data-i18n="timestamp">March 24, 2026 &bull; Dashboard refreshed from latest available artifacts &bull; Section dates show source freshness</div>
 </div>
 
 <!-- Aggregate Signal Bar -->
 <div class="signal-bar">
-  <div class="signal-chip chip-green"><span class="dot"></span><span data-i18n="chip_pmodel">P-Model: NET LONG</span></div>
+  <div class="signal-chip chip-yellow"><span class="dot"></span><span data-i18n="chip_pmodel">P-Model: Tactical Long, Rally Rented</span></div>
   <div class="signal-chip chip-red"><span class="dot"></span><span data-i18n="chip_liq">Liquidity: Deteriorating</span></div>
   <div class="signal-chip chip-red"><span class="dot"></span><span data-i18n="chip_india">India: All RED</span></div>
   <div class="signal-chip chip-yellow"><span class="dot"></span><span data-i18n="chip_gs">GS: Market Fragile</span></div>
-  <div class="signal-chip chip-blue"><span class="dot"></span><span data-i18n="chip_ai">AI Infra: Silicon Shortage</span></div>
-  <div class="signal-chip chip-red"><span class="dot"></span><span data-i18n="chip_geo">Geopolitical: Hormuz/Iran</span></div>
+  <div class="signal-chip chip-blue"><span class="dot"></span><span data-i18n="chip_ai">AI Infra: Nvidia Roadmap</span></div>
+  <div class="signal-chip chip-red"><span class="dot"></span><span data-i18n="chip_geo">Geopolitical: Iran Pause Risk</span></div>
   <div class="signal-chip chip-red"><span class="dot"></span><span data-i18n="chip_ma40">MA40: Extreme Oversold</span></div>
   <div class="signal-chip chip-green"><span class="dot"></span><span data-i18n="chip_cvna">CVNA: Mega Conviction</span></div>
 </div>
@@ -160,38 +160,45 @@
       <div>
         <div class="card-title">P-Model &mdash; Seeking Alpha</div>
       </div>
-      <div class="card-date">Last trade: Mar 16 &bull; Advisory: Mar 20</div>
+      <div class="card-date">Last trade: Mar 16 &bull; Flow advisory: Mar 24</div>
     </div>
 
     <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
-      <!-- Position -->
+      <!-- Multi-Instrument Positions -->
       <div>
-        <div style="font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:8px;">Current Position</div>
-        <div class="kv-row"><span class="kv-label">Direction</span><span class="kv-val up">LONG SCALPERS</span></div>
-        <div class="kv-row"><span class="kv-label">Contracts</span><span class="kv-val">240 each</span></div>
-        <div class="kv-row"><span class="kv-label">ES H26 Entry</span><span class="kv-val">6720.25</span></div>
-        <div class="kv-row"><span class="kv-label">NQ H26 Entry</span><span class="kv-val">24,725</span></div>
-        <div class="kv-row"><span class="kv-label">TMV</span><span class="kv-val">Long @ 35.29</span></div>
-        <div class="kv-row"><span class="kv-label">Net Position</span><span class="kv-val up">NET LONG</span></div>
+        <div style="font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:8px;">Current Positioning</div>
+        <div style="border-left:3px solid var(--green);padding-left:10px;margin-bottom:10px;">
+          <div style="font-size:13px;font-weight:600;color:var(--green);">&uarr; ES / NQ &mdash; LONG SCALPERS</div>
+          <div class="kv-row"><span class="kv-label">Size</span><span class="kv-val">240 contracts each</span></div>
+          <div class="kv-row"><span class="kv-label">ES H26</span><span class="kv-val">6720.25</span></div>
+          <div class="kv-row"><span class="kv-label">NQ H26</span><span class="kv-val">24,725</span></div>
+          <div class="kv-row"><span class="kv-label">Type</span><span class="kv-val up">Tactical futures long</span></div>
+        </div>
+        <div style="border-left:3px solid var(--green);padding-left:10px;margin-bottom:10px;">
+          <div style="font-size:13px;font-weight:600;color:var(--green);">&uarr; TMV &mdash; LONG (Rates Hedge)</div>
+          <div class="kv-row"><span class="kv-label">Size</span><span class="kv-val">$2M notional</span></div>
+          <div class="kv-row"><span class="kv-label">Entry</span><span class="kv-val">35.29</span></div>
+          <div class="kv-row"><span class="kv-label">Rationale</span><span class="kv-val">Crude oil / Hormuz inflation hedge</span></div>
+        </div>
+        <div class="kv-row"><span class="kv-label">Net Position</span><span class="kv-val flat">TACTICAL LONG + TMV HEDGE</span></div>
       </div>
-      <!-- OpEx Advisory -->
       <div>
-        <div style="font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:8px;">March 20 OpEx Structure</div>
-        <div class="kv-row"><span class="kv-label">SPX Level</span><span class="kv-val">6630</span></div>
-        <div class="kv-row"><span class="kv-label">VIX</span><span class="kv-val down">23.76 (&darr;2.34)</span></div>
-        <div class="kv-row"><span class="kv-label">Mega Floor</span><span class="kv-val up">6630</span></div>
-        <div class="kv-row"><span class="kv-label">Greeks</span><span class="kv-val up">4/5 Supportive</span></div>
-        <div class="kv-row"><span class="kv-label">Charm Flip</span><span class="kv-val up">LOADED</span></div>
-        <div class="kv-row"><span class="kv-label">Put Selling</span><span class="kv-val">$523M floor</span></div>
+        <div style="font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:8px;">Latest Flow Read</div>
+        <div class="kv-row"><span class="kv-label">Close Zone</span><span class="kv-val">6595-6606</span></div>
+        <div class="kv-row"><span class="kv-label">Spot / VIX</span><span class="kv-val down">6588 / 26.18</span></div>
+        <div class="kv-row"><span class="kv-label">Catalyst</span><span class="kv-val">5-day Iran pause</span></div>
+        <div class="kv-row"><span class="kv-label">Support</span><span class="kv-val up">4 channels active</span></div>
+        <div class="kv-row"><span class="kv-label">Ownership</span><span class="kv-val flat">Rented, not owned</span></div>
+        <div class="kv-row"><span class="kv-label">Risk Trigger</span><span class="kv-val down">Pause expiry / VIX re-acceleration</span></div>
       </div>
     </div>
 
     <div class="thesis" style="margin-top: 14px;">
-      <strong>PROMETHEUS Thesis:</strong> Regime transitioned Bearish (Mar 16-17) &rarr; Positive into Mar 20 OpEx. Compound tailwind delivering. VIX crushed, charm flip loaded for settlement. SPX 6630 mega floor holds. Structure favors upside grind into close with 6720-6735 target zone.
+      <strong>PROMETHEUS Thesis (Mar 23-24):</strong> The rally still has mechanical support through VIX compression, renewed floor-building, and call-premium acceleration, but it is defined-risk positioning around a temporary geopolitical pause. The tactical futures long and TMV hedge can coexist, yet the setup is not durable ownership and can unwind quickly if the pause expires or vol re-accelerates.
     </div>
 
     <div style="margin-top:10px;font-size:12px;color:var(--muted);">
-      <strong>Key articles:</strong> "Three 0DTE Greeks Screaming Sell" (Mar 13) &rarr; "Structure Flips Market Positive Into Mar 20 OpEx" (Mar 16) &rarr; "$523M Put Selling Built Today's Floor" (Mar 17) &rarr; "Smart Money Builds The Launchpad" (Mar 18) &rarr; "VIX Crushed, Charm Flip Loaded" (Mar 20)
+      <strong>Key articles:</strong> "The Positioning Has Shifted: Structure Flips Market Positive Into March 20 OpEx" (Mar 16) &rarr; "VIX Crushed 2.34 Points, SPX Sits On The 6630 Mega Floor" (Mar 20) &rarr; "The Ceasefire Rally Has Mechanical Support &mdash; But It Is Rented, Not Owned" (Mar 23) &rarr; "EOD Close Area Shaping Up To Be At, Or Below, The 6595 - 6606 Zone" (Mar 24)
     </div>
   </div>
 </div>
@@ -429,19 +436,19 @@
     <div class="card-header">
       <div class="card-icon" style="background:rgba(219,109,40,0.2);color:var(--orange);">CS</div>
       <div class="card-title">Citadel Securities</div>
-      <div class="card-date">Mar 2026</div>
+      <div class="card-date">Mar 24</div>
     </div>
-    <div class="card-subtitle">Global Macro Strategy &amp; Macro Thoughts Series</div>
+    <div class="card-subtitle">Fresh market-insights front page snapshot</div>
     <table>
-      <tr><th>Publication</th><th>Signal</th></tr>
-      <tr><td>"Underestimating Risks"</td><td><span class="badge badge-bearish">BEARISH</span></td></tr>
-      <tr><td>"Liquidity Stress Building Beneath Surface"</td><td><span class="badge badge-bearish">BEARISH</span></td></tr>
-      <tr><td>"Inflation Wake Up Call"</td><td><span class="badge badge-caution">CAUTION</span></td></tr>
-      <tr><td>"Per Mare Necessarium: Rates"</td><td><span class="badge badge-neutral">NEUTRAL</span></td></tr>
-      <tr><td>"AI Will Displace&hellip;Fed's Neutral"</td><td><span class="badge badge-info">STRUCTURAL</span></td></tr>
-      <tr><td>"March Macro Checklist"</td><td><span class="badge badge-caution">CAUTION</span></td></tr>
+      <tr><th>Publication</th><th>Series</th><th>Signal</th></tr>
+      <tr><td>"April Capitulation Checklist"</td><td>Global Market Intelligence</td><td><span class="badge badge-caution">CAUTION</span></td></tr>
+      <tr><td>"Escalation Causing Lasting Damage"</td><td>Some Macro Thoughts</td><td><span class="badge badge-bearish">BEARISH</span></td></tr>
+      <tr><td>"Per Mare Necessarium: Views on Rates and Financial Conditions"</td><td>Global Macro Strategy</td><td><span class="badge badge-neutral">RATES</span></td></tr>
+      <tr><td>"Underestimating Risks"</td><td>Some Macro Thoughts</td><td><span class="badge badge-bearish">BEARISH</span></td></tr>
+      <tr><td>"Liquidity Stress Building Beneath the Surface"</td><td>Market Insights</td><td><span class="badge badge-bearish">STRESS</span></td></tr>
+      <tr><td>"Inflation Wake Up Call"</td><td>Some Macro Thoughts</td><td><span class="badge badge-caution">INFLATION</span></td></tr>
     </table>
-    <div class="thesis">Multiple macro stress indicators flagged. Liquidity deteriorating beneath the surface. Inflation not contained. AI disrupting monetary policy frameworks &mdash; Fed's neutral rate assumptions may be obsolete. Defensive positioning warranted.</div>
+    <div class="thesis">Citadel's latest front page is stacked with capitulation, escalation, liquidity stress, and inflation warnings. The tone remains defensive, with rates and financial conditions still central to the macro playbook.</div>
   </div>
 
   <!-- Goldman Sachs -->
@@ -673,28 +680,28 @@
     <div class="card-header">
       <div class="card-icon" style="background:rgba(88,166,255,0.2);color:var(--accent);">SA</div>
       <div class="card-title">SemiAnalysis</div>
-      <div class="card-date">Mar 12</div>
+      <div class="card-date">Mar 24</div>
     </div>
-    <div class="card-subtitle">"The Great AI Silicon Shortage"</div>
+    <div class="card-subtitle">"Nvidia &mdash; The Inference Kingdom Expands"</div>
     <table>
-      <tr><th>Metric</th><th>Value</th><th>Outlook</th></tr>
-      <tr><td>TSMC N3 Utilization</td><td class="val">100%</td><td class="down">Maxed out</td></tr>
-      <tr><td>AI Wafer Allocation</td><td class="val">60% &rarr; 86%</td><td class="up">2026 &rarr; 2027</td></tr>
-      <tr><td>HBM/DRAM Wafer Ratio</td><td class="val">3-4x</td><td class="down">Bottleneck</td></tr>
-      <tr><td>Anthropic ARR</td><td class="val">+$6B</td><td class="up">Claude Code</td></tr>
-      <tr><td>Google Capex</td><td class="val">~Doubled</td><td class="up">vs. forecasts</td></tr>
+      <tr><th>Theme</th><th>Detail</th><th>Signal</th></tr>
+      <tr><td>Groq</td><td class="val">LP30 + LPX rack</td><td class="up">Decode engine</td></tr>
+      <tr><td>Inference</td><td class="val">Attention / FFN disaggregation</td><td class="up">Utilization lever</td></tr>
+      <tr><td>Scale-Up</td><td class="val">Rubin Ultra NVL576</td><td class="up">CPO arrives</td></tr>
+      <tr><td>Multi-Rack</td><td class="val">Feynman NVL1152</td><td class="up">Roadmap expands</td></tr>
+      <tr><td>Dense Systems</td><td class="val">Vera ETL256, STX, Kyber</td><td class="up">Stack broadens</td></tr>
     </table>
     <div style="margin-top: 10px;">
-      <div style="font-size:12px;color:var(--muted);text-transform:uppercase;margin-bottom:6px;">Product Roadmaps</div>
+      <div style="font-size:12px;color:var(--muted);text-transform:uppercase;margin-bottom:6px;">Platform Stack</div>
       <table>
-        <tr><th>Company</th><th>Current</th><th>Next</th></tr>
-        <tr><td>NVIDIA</td><td class="val">Blackwell</td><td class="val up">Rubin</td></tr>
-        <tr><td>AMD</td><td class="val">MI350X</td><td class="val up">MI400</td></tr>
-        <tr><td>Google</td><td class="val">TPU v6</td><td class="val up">TPU v7/v8</td></tr>
-        <tr><td>AWS</td><td class="val">Trainium2</td><td class="val up">Trainium3</td></tr>
+        <tr><th>Platform</th><th>Current</th><th>Takeaway</th></tr>
+        <tr><td>Groq LP30</td><td class="val">SF4 SRAM-heavy LPU</td><td class="val up">Latency-first decode</td></tr>
+        <tr><td>Groq LP35</td><td class="val">Minor LP30 refresh</td><td class="val up">Faster time-to-market</td></tr>
+        <tr><td>Rubin Ultra</td><td class="val">NVL576 + CPO</td><td class="val up">Scale-up networking</td></tr>
+        <tr><td>Feynman</td><td class="val">NVL1152 roadmap</td><td class="val up">Multi-rack inference</td></tr>
       </table>
     </div>
-    <div class="thesis">Silicon shortage is real and worsening. TSMC N3 at 100% — smartphone softness (10-15% decline) is the only release valve, freeing wafers for 0.1-0.7M extra Rubin GPUs. 2027 even tighter despite TSMC capacity additions.</div>
+    <div class="thesis">SemiAnalysis has shifted from a pure shortage framing to Nvidia's full-stack inference roadmap: LPUs for low-latency decode, rack-level disaggregation, denser Vera / STX systems, Kyber updates, and CPO-enabled scale-up paths into Rubin Ultra and Feynman.</div>
   </div>
 
   <!-- Finally Nitin -->
@@ -736,11 +743,18 @@
     <div class="card-header">
       <div class="card-icon" style="background:rgba(188,140,255,0.2);color:var(--purple);">SL</div>
       <div class="card-title">Systematic Long Short</div>
-      <div class="card-date">Mar 19</div>
+      <div class="card-date">Mar 21</div>
     </div>
-    <div class="card-subtitle">"Institutional Dataset: Crowdsourced Forward Expectations"</div>
-    <div style="font-size:13px;color:var(--muted);padding:8px 0;">Crowdsourced EPS/revenue estimates represent a live market for forward expectations. Unlike narrow sell-side consensus (subject to herding, career risk), this aggregates broader views with genuine alpha. Monitor crowdsourced revisions vs. consensus.</div>
-    <div><span class="badge badge-info">METHODOLOGY</span> <span class="badge badge-neutral">ALPHA SIGNAL</span></div>
+    <div class="card-subtitle">"Your Agents Produce Slop Because You're Poor"</div>
+    <div style="font-size:13px;color:var(--muted);padding:8px 0;">The latest note argues that agent quality is mostly a token-budget and verification problem: more budget improves planning, recovery, and fresh-context review loops, while genuinely novel work still requires human-guided discovery.</div>
+    <table>
+      <tr><th>Topic</th><th>Takeaway</th></tr>
+      <tr><td>Primary Lever</td><td class="val">More tokens = fewer errors</td></tr>
+      <tr><td>Workflow</td><td class="val">Fresh-context review loops</td></tr>
+      <tr><td>Verification</td><td class="val">Tests and tools early/often</td></tr>
+      <tr><td>Constraint</td><td class="val">Novel problems still need humans</td></tr>
+    </table>
+    <div><span class="badge badge-info">AGENTIC ENGINEERING</span> <span class="badge badge-caution">VERIFY EARLY</span></div>
   </div>
 </div>
 
@@ -753,19 +767,19 @@
     <div class="synth-signal down">BEARISH &mdash; 3M lagged risk asset weakness</div>
   </div>
   <div class="synth-row">
-    <div class="synth-theme" style="color:var(--red);">Geopolitical Risk (Hormuz/Iran)</div>
-    <div class="synth-sources">GS ($120 oil) &bull; H-Model &bull; P-Model (crude $98)</div>
-    <div class="synth-signal down">OIL $98-120 &mdash; risk-off catalyst</div>
+    <div class="synth-theme" style="color:var(--red);">Geopolitical Pause Risk</div>
+    <div class="synth-sources">P-Model flow note &bull; Goldman Sachs &bull; Citadel</div>
+    <div class="synth-signal down">TEMPORARY RELIEF &mdash; risk appetite is leased to a 5-day Iran pause</div>
   </div>
   <div class="synth-row">
-    <div class="synth-theme" style="color:var(--green);">OpEx Day Structure</div>
+    <div class="synth-theme" style="color:var(--yellow);">Flow-Rented Rally</div>
     <div class="synth-sources">P-Model PROMETHEUS &bull; Gamma/Charm</div>
-    <div class="synth-signal up">BULLISH &mdash; charm flip loaded, 4/5 Greeks supportive</div>
+    <div class="synth-signal flat">TACTICAL SUPPORT &mdash; 4 mechanical channels, but no durable ownership</div>
   </div>
   <div class="synth-row">
-    <div class="synth-theme" style="color:var(--accent);">AI Infrastructure Boom</div>
+    <div class="synth-theme" style="color:var(--accent);">AI Infrastructure Roadmap</div>
     <div class="synth-sources">SemiAnalysis &bull; Morgan Stanley</div>
-    <div class="synth-signal up">STRUCTURAL &mdash; silicon shortage + power bottleneck</div>
+    <div class="synth-signal up">STRUCTURAL &mdash; inference stack expands while the power bottleneck persists</div>
   </div>
   <div class="synth-row">
     <div class="synth-theme" style="color:var(--yellow);">Market Fragility</div>
@@ -800,7 +814,7 @@
 </div>
 
 <div class="footer" data-i18n="footer">
-  Generated by notion-autopublish scrapers &bull; P-Model (SA), SMM, DV, HK Breadth, HedgeFollow insiders, H-Model, Greenoaks/CAS/Duquesne/Atreides/Octahedron (SEC 13F), SemiAnalysis, Finally Nitin, FOMO, Systematic LS, GS, Citadel, MS &bull; All data updated March 23, 2026
+  Generated by notion-autopublish scrapers &bull; P-Model (SA), SMM, DV, HK Breadth, HedgeFollow insiders, H-Model, Greenoaks/CAS/Duquesne/Atreides/Octahedron (SEC 13F), SemiAnalysis, Finally Nitin, FOMO, Systematic LS, GS, Citadel, MS &bull; Dashboard refreshed March 24, 2026; section dates show source freshness
 </div>
 
 <script>
@@ -835,20 +849,20 @@ if (sessionStorage.getItem('dashboard_auth') === '1') {
 const i18n = {
   en: {
     title: 'External Intelligence Dashboard',
-    subtitle: 'All Sources — Latest Update',
-    timestamp: 'March 20, 2026 • Largest Monthly OpEx Day • All data as of 18:51-23:38 HKT',
+    subtitle: 'All Sources - Latest Available Artifacts',
+    timestamp: 'March 24, 2026 - Dashboard refreshed from latest available artifacts - Section dates show source freshness',
     login_title: 'Dashboard Access',
     login_subtitle: 'Enter password to continue',
     login_btn: 'Sign In',
     login_error: 'Incorrect password',
 
     // Signal chips
-    chip_pmodel: 'P-Model: NET LONG',
+    chip_pmodel: 'P-Model: Tactical Long, Rally Rented',
     chip_liq: 'Liquidity: Deteriorating',
     chip_india: 'India: All RED',
     chip_gs: 'GS: Market Fragile',
-    chip_ai: 'AI Infra: Silicon Shortage',
-    chip_geo: 'Geopolitical: Hormuz/Iran',
+    chip_ai: 'AI Infra: Nvidia Roadmap',
+    chip_geo: 'Geopolitical: Iran Pause Risk',
     chip_ma40: 'MA40: Extreme Oversold',
     chip_cvna: 'CVNA: Mega Conviction',
 
@@ -861,7 +875,7 @@ const i18n = {
     sec_sector: 'Sector & Thematic Intelligence',
     sec_synthesis: 'Cross-Source Synthesis',
 
-    footer: 'Generated by notion-autopublish scrapers • P-Model (SA), SMM, DV, HK Breadth, HedgeFollow insiders, H-Model, Greenoaks/CAS/Duquesne/Atreides/Octahedron (SEC 13F), SemiAnalysis, Finally Nitin, FOMO, Systematic LS, GS, Citadel, MS • All data updated March 23, 2026',
+    footer: 'Generated by notion-autopublish scrapers - P-Model (SA), SMM, DV, HK Breadth, HedgeFollow insiders, H-Model, Greenoaks/CAS/Duquesne/Atreides/Octahedron (SEC 13F), SemiAnalysis, Finally Nitin, FOMO, Systematic LS, GS, Citadel, MS - Dashboard refreshed March 24, 2026; section dates show source freshness',
   },
   zh: {
     title: '外部情報儀表板',
@@ -873,7 +887,7 @@ const i18n = {
     login_error: '密碼錯誤',
 
     // Signal chips
-    chip_pmodel: 'P-Model：淨多頭',
+    chip_pmodel: 'P-Model：淨空頭 + TMV對沖',
     chip_liq: '流動性：惡化中',
     chip_india: '印度：全面紅燈',
     chip_gs: 'GS：市場脆弱',
