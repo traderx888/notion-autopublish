@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>彭博研究摘要 #6 — 其他</title>
+<title>彭博研究摘要 #6 — 伊朗戰火重塑全球格局：從油價飆升到央行困局</title>
 <style>
   :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --accent: #58a6ff;
           --green: #3fb950; --red: #f85149; --yellow: #d29922; --text: #c9d1d9; --muted: #8b949e;
@@ -32,10 +32,26 @@
   .tag-misc  { background: rgba(139,148,158,0.15); color: var(--muted); }
   .section { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 16px; }
   .section h2 { color: #fff; font-size: 1.15em; margin-bottom: 12px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+  .section h3 { color: var(--accent); font-size: 0.95em; margin: 14px 0 6px; }
   .article { margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid rgba(48,54,61,0.5); }
   .article:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
   .article-title { color: #fff; font-weight: 700; font-size: 0.95em; margin-bottom: 4px; }
+  .article-title-cn { color: var(--muted); font-size: 0.85em; margin-bottom: 8px; }
   .article p { font-size: 0.9em; margin: 6px 0; }
+  .data-point { background: rgba(255,255,255,0.03); padding: 8px 12px; border-radius: 6px; margin: 8px 0; font-size: 0.85em; }
+  .data-point .num { color: #fff; font-weight: 700; }
+  .implication { background: rgba(88,166,255,0.06); border-left: 3px solid var(--accent); padding: 10px 14px; margin: 10px 0; border-radius: 0 6px 6px 0; font-size: 0.88em; }
+  .implication .label { color: var(--accent); font-weight: 700; font-size: 0.8em; text-transform: uppercase; margin-bottom: 4px; }
+  .callout { background: rgba(210,153,34,0.08); border: 1px solid rgba(210,153,34,0.3); border-radius: 6px; padding: 16px; margin: 16px 0; }
+  .callout-title { color: var(--yellow); font-weight: 700; font-size: 0.95em; margin-bottom: 8px; }
+  .callout ul { padding-left: 18px; }
+  .callout li { margin: 4px 0; font-size: 0.88em; }
+  ul { padding-left: 18px; }
+  li { margin: 3px 0; font-size: 0.88em; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(255,255,255,0.03); padding: 12px; border-radius: 6px; text-align: center; }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: #fff; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
   .toc { background: rgba(88,166,255,0.05); border: 1px solid rgba(88,166,255,0.2); border-radius: 8px; padding: 16px 20px; margin-bottom: 20px; }
   .toc-title { color: var(--accent); font-weight: 700; font-size: 0.9em; margin-bottom: 8px; }
   .toc a { color: var(--accent); text-decoration: none; font-size: 0.88em; }
@@ -55,7 +71,7 @@
 <body>
 
 <h1>彭博研究摘要</h1>
-<p class="subtitle">第6期 — 其他 | Miscellaneous</p>
+<p class="subtitle">第6期 | 伊朗戰火重塑全球格局：從油價飆升到央行困局</p>
 <span class="issue-badge">2026年三月下旬更新</span>
 
 <div class="nav-links">
@@ -63,304 +79,182 @@
   <span><a href="student.html">返回目錄 &rarr;</a></span>
 </div>
 
-<div class="stat-grid">
-    <div class="stat"><div class="val">57</div><div class="lbl">其他<br>Miscellaneous</div></div>
-</div>
-
 <div class="toc">
   <div class="toc-title">目錄</div>
   <ol>
-    <li><a href="#uncategorized">其他 Miscellaneous &rarr;</a></li>
+    <li><a href="#iran-war-energy">地緣政治 霍爾木茲斷航，油價破百</a></li>
+    <li><a href="#macro-central-banks">央行與宏觀 滯脹陰影籠罩，央行進退兩難</a></li>
+    <li><a href="#market-strategy">市場策略 熊市情緒升溫，但遠未觸底</a></li>
+    <li><a href="#ai-credit-boom">AI與信用 三萬億美元AI基建，債市買單</a></li>
+    <li><a href="#asia-pacific">亞太聚焦 中日裂痕加深，港樓回暖</a></li>
+    <li><a href="#takeaways">基金經理人重點摘要</a></li>
   </ol>
 </div>
 
-<div class="section" id="uncategorized">
-  <h2><span class="tag tag-misc">其他</span> Miscellaneous (57 articles)</h2>
+<div class="section" id="iran-war-energy">
+  <h2><span class="tag tag-geo">地緣政治</span> 霍爾木茲斷航，油價破百</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--red)">$100+</div><div class="lbl">布倫特原油
+戰爭期間高位</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">4億桶</div><div class="lbl">IEA計畫釋放
+史上最大規模</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">7名</div><div class="lbl">美軍陣亡
+戰爭至今</div></div>
+  </div>
+
   <div class="article">
-    <div class="article-title">AIs Trillion BuildOut Spurs D</div>
-    <div style="margin-bottom:6px"><span class="tag tag-misc">其他</span> </div>
-    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:52:50+08:00</p>
+    <div class="article-title">轟炸、石油和大空話 — 圖解伊朗戰爭的虛虛實實</div>
+    <p>美國總統川普的伊朗戰爭言論令石油市場劇烈震盪。兩周前他表示戰爭將「很快結束」，但空襲仍在繼續。彭博經濟研究認為川普意在安撫市場、為退路爭取時間，飛彈攻擊旨在迫使伊朗回到談判桌。問題在於：伊朗已認識到以<span style="color:#fff;font-weight:700">相對低成本</span>即可擾亂全球石油市場，挨打越多、持續擾亂的動機越大。而飛彈襲擊持續越久，市場越不把川普的退出言論當回事。半數以上美國人反對對伊動武，油價和傷亡數字正加重川普的政治壓力。</p>
+    <div class="data-point">布倫特原油：<span style="color:#fff;font-weight:700">突破$100/桶</span> &nbsp;|&nbsp; 美軍72小時打擊：<span style="color:#fff;font-weight:700">2,000+目標</span> &nbsp;|&nbsp; 擊沉伊朗軍艦：<span style="color:#fff;font-weight:700">20艘</span> &nbsp;|&nbsp; 美國民調反對率：<span style="color:#fff;font-weight:700">&gt;50%</span></div>
+    <div class="implication"><div class="label">投資啟示</div>戰爭持續時間超預期，但和談窗口正在打開。<span style="color:#fff;font-weight:700">做多原油看漲期權</span>作為尾部對沖，同時關注和談信號帶來的油價回落機會。</div>
   </div>
   <div class="article">
-    <div class="article-title">BE Primer Australia&#x27;s Energy Mix Means Export Boom, Petrol Pain</div>
-    <div style="margin-bottom:6px"><span class="tag tag-misc">其他</span> </div>
-    <p># BE Primer Australia&#x27;s Energy Mix Means Export Boom, Petrol Pain</p>
+    <div class="article-title">水雷威脅下的霍爾木茲海峽 — 伊朗如何扼住石油的咽喉</div>
+    <p>伊朗已開始在霍爾木茲海峽布設水雷，將封鎖威脅升級為實際行動。IEA計畫釋放高達<span style="color:#fff;font-weight:700">4億桶</span>應急儲備——史上最大規模，但僅相當於海峽正常通航<span style="color:#fff;font-weight:700">20天</span>的運量。如果海峽一周內恢復通航，儲備足以填補缺口；否則短缺將迅速重現。伊朗的策略是分階段升級：先威脅、再零星襲船、最後布雷。掃雷行動緩慢且危險，美軍已擊沈<span style="color:#fff;font-weight:700">10艘</span>布雷艦，但低技術含量的小型布雷船更難攔截。</p>
+    <div class="data-point">IEA釋放規模：<span style="color:#fff;font-weight:700">4億桶（20天通航量）</span> &nbsp;|&nbsp; 美軍擊沈布雷艦：<span style="color:#fff;font-weight:700">10艘</span> &nbsp;|&nbsp; 戰爭風險溢價佔油價漲幅：<span style="color:#fff;font-weight:700">近1/4</span></div>
+    <div class="implication"><div class="label">投資啟示</div>霍爾木茲斷航持續超過一周將耗盡IEA儲備緩衝。<span style="color:#fff;font-weight:700">增持能源股和國防板塊</span>，減持對中東燃料依賴度高的亞洲航運股。</div>
   </div>
   <div class="article">
-    <div class="article-title">BE Primer Energy Spike Could Derail New Zealand&#x27;s Recovery</div>
-    <div style="margin-bottom:6px"><span class="tag tag-misc">其他</span> </div>
-    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:52:55+08:00</p>
+    <div class="article-title">債券義警定價財政風險，和平壓力升溫</div>
+    <p>債券義警正在加速推動和平進程。飆升的借貸成本威脅到美國<span style="color:#fff;font-weight:700">$39萬億</span>國債的可持續性，促使川普盟友和市場施壓推動和談。交易員已撤回美、英、歐的降息押注，拖累增長前景。EU主席馮德萊恩承諾在停戰後協助保護霍爾木茲海峽。投資者情緒顯示：油價若超過<span style="color:#fff;font-weight:700">$100</span>將引發拋售，S&amp;P 500在<span style="color:#fff;font-weight:700">5,600</span>才構成買點，30年期美債在<span style="color:#fff;font-weight:700">5%收益率</span>才值得進場。</p>
+    <div class="data-point">美國國債總額：<span style="color:#fff;font-weight:700">$39萬億</span> &nbsp;|&nbsp; 30年期美債買入門檻：<span style="color:#fff;font-weight:700">5%收益率</span> &nbsp;|&nbsp; S&amp;P 500買入水平：<span style="color:#fff;font-weight:700">5,600</span> &nbsp;|&nbsp; 2026年降息預期：<span style="color:#fff;font-weight:700">歸零</span></div>
+    <div class="implication"><div class="label">投資啟示</div>利率市場已完全定價「全年不降息」。<span style="color:#fff;font-weight:700">做多30年期美債</span>若收益率觸及5%，同時<span style="color:#fff;font-weight:700">做空美元</span>待和談明朗化。</div>
+  </div>
+</div>
+
+<div class="section" id="macro-central-banks">
+  <h2><span class="tag tag-misc">央行與宏觀</span> 滯脹陰影籠罩，央行進退兩難</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val">3.50-3.75%</div><div class="lbl">聯邦基金利率
+全年料按兵不動</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">0.75%→1.0%</div><div class="lbl">日銀利率
+4月料加息</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">-5.0</div><div class="lbl">中國經濟活動指數
+弱於去年同期</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">沃什若任聯儲會主席，可單方面做什麼？</div>
+    <p>川普提名凱文·沃什擔任聯儲會主席，但主席的實際權力遠低於公眾認知。聯邦基金利率由<span style="color:#fff;font-weight:700">12人FOMC</span>多數票決定，資產負債表政策由FOMC和<span style="color:#fff;font-weight:700">7人理事會</span>共同制定。沃什主張縮減資產負債表、改變FOMC評估方式、重定義與財政部關係、減少官員公開發言頻率。他過去<span style="color:#fff;font-weight:700">15年</span>一貫支持聯儲會獨立性，但質疑者追問他為獲提名是否向川普作出承諾。公眾對聯儲會信任度仍接近歷史低位。</p>
+    <div class="data-point">FOMC投票成員：<span style="color:#fff;font-weight:700">12人</span> &nbsp;|&nbsp; 理事會成員：<span style="color:#fff;font-weight:700">7人</span> &nbsp;|&nbsp; 沃什捍衛獨立性歷史：<span style="color:#fff;font-weight:700">15年</span> &nbsp;|&nbsp; 聯儲會公眾信任度：<span style="color:#fff;font-weight:700">接近歷史低位</span></div>
+    <div class="implication"><div class="label">投資啟示</div>沃什上任不會帶來激進政策轉向。<span style="color:#fff;font-weight:700">關注FOMC票委構成變化</span>，短期內聯儲會政策方向由通膨數據主導。</div>
   </div>
   <div class="article">
-    <div class="article-title">BofAs Hartnett Sees European J</div>
-    <div style="margin-bottom:6px"><span class="tag tag-misc">其他</span> </div>
-    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:52:56+08:00</p>
+    <div class="article-title">日本隱性供應緊張將放大石油引發的通膨</div>
+    <p>日本經濟正面臨<span style="color:#fff;font-weight:700">至少1990年代初</span>以來最嚴峻的供應緊張。GDP庫存數據顯示：在製品庫存迅速上升，但批零庫存持平——表明生產瓶頸嚴重，主因勞動力短缺。2025年因勞動力短缺導致的企業破產增長<span style="color:#fff;font-weight:700">35.9%</span>，比十年前高出<span style="color:#fff;font-weight:700">6.5倍</span>。中東石油供應中斷將通過石化產品短缺進一步加劇供應緊張。日銀行長植田暗示鷹派立場，彭博經濟研究預計<span style="color:#fff;font-weight:700">4月再次加息</span>至1.0%。</p>
+    <div class="data-point">供應緊張程度：<span style="color:#fff;font-weight:700">1990年代初以來最嚴峻</span> &nbsp;|&nbsp; 勞動力短缺破產增長：<span style="color:#fff;font-weight:700">35.9% YoY</span> &nbsp;|&nbsp; 日銀4月加息預期：<span style="color:#fff;font-weight:700">至1.0%</span> &nbsp;|&nbsp; 日本中東原油依賴度：<span style="color:#fff;font-weight:700">&gt;90%</span></div>
+    <div class="implication"><div class="label">投資啟示</div>日銀4月加息幾成定局。<span style="color:#fff;font-weight:700">減持日圓套利交易</span>（carry trade unwind風險），關注日本能源密集型企業的成本壓力。</div>
   </div>
   <div class="article">
-    <div class="article-title">Bond Vigilantes Pricing in Fis</div>
-    <div style="margin-bottom:6px"><span class="tag tag-misc">其他</span> </div>
-    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:52:57+08:00</p>
+    <div class="article-title">中國春節後經濟反彈力度不及2025年同期</div>
+    <p>彭博經濟研究中國經濟活動指數3月13日當周錄得<span style="color:#fff;font-weight:700">-5.0</span>，遠弱於去年同期的<span style="color:#fff;font-weight:700">-1.8</span>。負值意味著經濟動能仍弱於2024年全年平均水平。需求端，新房和汽車銷售大幅下滑：汽車零售同比降約<span style="color:#fff;font-weight:700">20%</span>，較去年Q4周均水平降<span style="color:#fff;font-weight:700">42%</span>。生產端，煉油廠開工率從86.2%降至<span style="color:#fff;font-weight:700">78.3%</span>，螺紋鋼庫存堆積。伊朗戰爭影響開始顯現，中國已暫停燃料出口。唯一亮點是國補政策下的家電銷售。</p>
+    <div class="data-point">經濟活動指數：<span style="color:#fff;font-weight:700">-5.0</span>（去年同期-1.8） &nbsp;|&nbsp; 汽車零售：<span style="color:#fff;font-weight:700">同比-20%</span> &nbsp;|&nbsp; 煉油廠開工率：<span style="color:#fff;font-weight:700">78.3%</span>（從86.2%下降） &nbsp;|&nbsp; 工業利潤預測：<span style="color:#fff;font-weight:700">+10.6% YoY</span>（1-2月）</div>
+    <div class="implication"><div class="label">投資啟示</div>中國復甦動能不及預期，但工業利潤數據（週五公佈）或帶來短期反彈。<span style="color:#fff;font-weight:700">逢低佈局A股消費板塊</span>，但需警惕能源成本上升對製造業利潤率的擠壓。</div>
+  </div>
+</div>
+
+<div class="section" id="market-strategy">
+  <h2><span class="tag tag-misc">市場策略</span> 熊市情緒升溫，但遠未觸底</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--orange)">4.2%</div><div class="lbl">BofA調查現金水平
+結束反向賣出信號</div></div>
+    <div class="stat"><div class="val">net 37%</div><div class="lbl">機構股票超配
+（上月48%）</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">~$100</div><div class="lbl">布倫特原油
+市場拋售觸發點</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">BofA基金經理調查：投資者轉向看空</div>
+    <p>BofA全球基金經理調查顯示，伊朗戰爭和私募信貸擔憂終結了近月的「泡沫牛市」情緒。現金水平飆升至<span style="color:#fff;font-weight:700">4.2%</span>，結束了反向賣出信號。增長樂觀度從淨<span style="color:#fff;font-weight:700">39%</span>暴跌至<span style="color:#fff;font-weight:700">7%</span>，通膨預期從淨<span style="color:#fff;font-weight:700">9%</span>飆升至<span style="color:#fff;font-weight:700">45%</span>，降息樂觀度降至<span style="color:#fff;font-weight:700">2023年2月</span>以來最低。然而硬著陸概率僅<span style="color:#fff;font-weight:700">5%</span>，機構股票超配仍達淨<span style="color:#fff;font-weight:700">37%</span>——遠未至歷史大底水平。新興市場股票超配達<span style="color:#fff;font-weight:700">2021年2月</span>以來最高（淨53%），大宗商品多頭為<span style="color:#fff;font-weight:700">2022年4月</span>以來最高。</p>
+    <div class="data-point">增長樂觀度：<span style="color:#fff;font-weight:700">net 7%</span>（上月39%） &nbsp;|&nbsp; 通膨預期：<span style="color:#fff;font-weight:700">net 45%</span> &nbsp;|&nbsp; 硬著陸概率：<span style="color:#fff;font-weight:700">僅5%</span> &nbsp;|&nbsp; EM股票超配：<span style="color:#fff;font-weight:700">net 53%（2021年2月以來最高）</span></div>
+    <div class="implication"><div class="label">投資啟示</div>情緒轉空但倉位未極端——<span style="color:#fff;font-weight:700">不宜逆勢抄底</span>。等待現金水平突破5%或股票超配降至net 20%以下再考慮加倉。</div>
   </div>
   <div class="article">
-    <div class="article-title">CHINA PREVIEW Profit Growth Li</div>
-    <div style="margin-bottom:6px"><span class="tag tag-misc">其他</span> </div>
-    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:53:03+08:00</p>
+    <div class="article-title">FTSE 100在亂世中的避風港效應</div>
+    <p>英國FTSE 100再次展現危機避風港特質，伊朗戰爭爆發後表現優於歐洲和美國市場。Citi和Barclays均將其列為更安全選擇。FTSE 100的結構性優勢來自：醫療和必需消費品佔約<span style="color:#fff;font-weight:700">30%</span>、大宗商品佔約<span style="color:#fff;font-weight:700">18%</span>、航太國防佔約<span style="color:#fff;font-weight:700">7.4%</span>。英鎊走弱進一步利好——成分股<span style="color:#fff;font-weight:700">75%</span>收入來自海外。在戰爭爆發前，FTSE 100已跑贏歐美主要市場。</p>
+    <div class="data-point">防禦性板塊佔比：<span style="color:#fff;font-weight:700">~30%</span> &nbsp;|&nbsp; 大宗商品板塊：<span style="color:#fff;font-weight:700">~18%</span> &nbsp;|&nbsp; 航太國防：<span style="color:#fff;font-weight:700">~7.4%</span> &nbsp;|&nbsp; 海外收入佔比：<span style="color:#fff;font-weight:700">75%</span></div>
+    <div class="implication"><div class="label">投資啟示</div>FTSE 100是當前地緣風險下的<span style="color:#fff;font-weight:700">天然對沖</span>。<span style="color:#fff;font-weight:700">增配UK大盤股ETF</span>，同時受益於英鎊貶值和能源板塊權重。</div>
   </div>
   <div class="article">
-    <div class="article-title">Circle Stablecoin Boom Defies</div>
-    <div style="margin-bottom:6px"><span class="tag tag-misc">其他</span> </div>
-    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:53:03+08:00</p>
+    <div class="article-title">60/40組合在油價和通膨衝擊下的壓力測試</div>
+    <p>Bloomberg對經典60/40組合進行情景分析：油價飆升<span style="color:#fff;font-weight:700">30%</span>的情景下，組合回報<span style="color:#fff;font-weight:700">+3.6%</span>，能源股強勁收益抵消債券小幅虧損；美國盈虧平衡通膨跳升<span style="color:#fff;font-weight:700">100bp</span>的情景下，組合回報<span style="color:#fff;font-weight:700">+7.9%</span>，工業和材料股受益於廣泛商品通膨，儘管固收虧損更大。這為基金經理提供了重要參考：在供給側衝擊下，60/40不會崩潰，但<span style="color:#fff;font-weight:700">配置結構決定成敗</span>。</p>
+    <div class="data-point">油價+30%情景回報：<span style="color:#fff;font-weight:700">+3.6%</span> &nbsp;|&nbsp; 通膨+100bp情景回報：<span style="color:#fff;font-weight:700">+7.9%</span> &nbsp;|&nbsp; 能源股對沖效果：<span style="color:#fff;font-weight:700">顯著正貢獻</span> &nbsp;|&nbsp; 固收在通膨衝擊下：<span style="color:#fff;font-weight:700">虧損加大</span></div>
+    <div class="implication"><div class="label">投資啟示</div>60/40組合在供給衝擊下仍可正回報，關鍵在於<span style="color:#fff;font-weight:700">提高能源和材料配置權重</span>。考慮用TIPS替代部分名義債券。</div>
+  </div>
+</div>
+
+<div class="section" id="ai-credit-boom">
+  <h2><span class="tag tag-misc">AI與信用</span> 三萬億美元AI基建，債市買單</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val">$3萬億+</div><div class="lbl">全球數據中心
+建設價格標籤</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">$2,000億</div><div class="lbl">2025年AI相關
+債務融資</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">$2,800億</div><div class="lbl">面臨AI替代風險
+的應用軟件支出</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">AI三萬億美元基建潮催生債務繁榮與新風險</div>
+    <p>超過<span style="color:#fff;font-weight:700">$3萬億</span>的數據中心建設需求正催生史上罕見的債務熱潮。即便是Amazon、Microsoft和Meta也無法僅靠自有現金支撐。去年AI相關企業和項目從債市融資至少<span style="color:#fff;font-weight:700">$2,000億</span>——而這很可能被大幅低估，因為許多交易是私下進行的。藍籌債券、高收益債、私募信貸和複雜的資產證券化貸款池——「所有渠道都要用上」。BofA全球信貸負責人形容這些數字「是我們從業25年來從未見過的」。</p>
+    <div class="data-point">數據中心建設成本：<span style="color:#fff;font-weight:700">&gt;$3萬億</span> &nbsp;|&nbsp; 2025年AI債務融資：<span style="color:#fff;font-weight:700">≥$2,000億</span> &nbsp;|&nbsp; 融資渠道：<span style="color:#fff;font-weight:700">IG、HY、私募信貸、ABS全覆蓋</span></div>
+    <div class="implication"><div class="label">投資啟示</div>AI基建債務擴張是信用市場的雙刃劍——短期利好spread收窄，但<span style="color:#fff;font-weight:700">長期集中度風險</span>不容忽視。關注數據中心ABS產品的信用評級遷移。</div>
   </div>
   <div class="article">
-    <div class="article-title">Dollar&#x27;s Short-Term Rally Made Sense, Midterm View Not So Clear</div>
-    <div style="margin-bottom:6px"><span class="tag tag-misc">其他</span> </div>
-    <p># Dollar&#x27;s Short-Term Rally Made Sense, Midterm View Not So Clear</p>
+    <div class="article-title">Anthropic Cowork威脅應用軟件層——$2,800億支出面臨風險</div>
+    <p>Anthropic的Claude Cowork及第三方插件正威脅SaaS的界面層。彭博情報估算約<span style="color:#fff;font-weight:700">$2,800億</span>的界面密集型應用軟件支出面臨風險，涉及Adobe、Microsoft、HubSpot、Zoom等。Cowork可與Jira、Snowflake等數據層系統互補，但在用戶互動層形成直接競爭。如果AI成為主要界面，SaaS供應商面臨UI黏性削弱、功能差異化下降和長期定價壓力。隨著插件擴展至HR、設計、財務分析等領域，Cowork正從助手進化為<span style="color:#fff;font-weight:700">工作流控制層</span>。</p>
+    <div class="data-point">面臨風險的應用軟件支出：<span style="color:#fff;font-weight:700">~$2,800億</span> &nbsp;|&nbsp; 受影響領域：<span style="color:#fff;font-weight:700">HR、設計、財務分析、運營</span> &nbsp;|&nbsp; 競爭模式：<span style="color:#fff;font-weight:700">AI界面層 vs SaaS功能層</span></div>
+    <div class="implication"><div class="label">投資啟示</div>SaaS板塊估值將承壓。<span style="color:#fff;font-weight:700">減持純UI/功能驅動的SaaS股</span>（如CRM、HubSpot），增持擁有獨特數據壁壘的系統記錄層公司（如Snowflake、SAP）。</div>
   </div>
   <div class="article">
-    <div class="article-title">DraftKings Low Value Overstates Prediction-Market Risk BI Focus</div>
-    <div style="margin-bottom:6px"><span class="tag tag-misc">其他</span> </div>
-    <p># DraftKings Low Value Overstates Prediction-Market Risk BI Focus</p>
+    <div class="article-title">伊朗將海灣AI數據中心列為打擊目標</div>
+    <p>伊朗已將海灣地區AI數據中心納入報復打擊目標清單。3月1日伊朗襲擊了阿聯酋和巴林的三處數據中心；3月11日塔斯尼姆通訊社公布了<span style="color:#fff;font-weight:700">29處</span>美國科技設施清單，涵蓋Amazon、Google、Microsoft和Palantir。這直接威脅到川普去年海灣之行促成的超<span style="color:#fff;font-weight:700">$2萬億</span>投資承諾，其核心是Stargate聯盟在阿布達比的<span style="color:#fff;font-weight:700">5GW</span>AI超算園區。AWS曾與Anthropic和Palantir合作為美軍提供Claude模型進行情報評估，這模糊了商用與軍用基礎設施的界限。</p>
+    <div class="data-point">被列為目標的美國科技設施：<span style="color:#fff;font-weight:700">29處</span> &nbsp;|&nbsp; 海灣AI投資承諾：<span style="color:#fff;font-weight:700">&gt;$2萬億</span> &nbsp;|&nbsp; Stargate阿布達比園區：<span style="color:#fff;font-weight:700">5GW</span> &nbsp;|&nbsp; AWS數據中心已遭襲次數：<span style="color:#fff;font-weight:700">≥2次</span></div>
+    <div class="implication"><div class="label">投資啟示</div>海灣AI基建面臨地緣風險重定價。<span style="color:#fff;font-weight:700">關注數據中心建設向北美和歐洲回流</span>的趨勢，利好美國本土數據中心REITs和電力基建股。</div>
+  </div>
+</div>
+
+<div class="section" id="asia-pacific">
+  <h2><span class="tag tag-misc">亞太聚焦</span> 中日裂痕加深，港樓回暖</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--red)">&gt;90%</div><div class="lbl">日本中東原油
+進口依賴度</div></div>
+    <div class="stat"><div class="val" style="color:var(--green)">10%+</div><div class="lbl">UBS預測港樓
+未來兩年漲幅</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">70%+</div><div class="lbl">日本稀土進口
+仍依賴中國</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">中日裂痕擴大：五個面向值得關注</div>
+    <p>日本首相高市早苗選舉大勝是對其強硬外交立場的認可。她承諾今年底前修訂三份戰略防禦文件，可能將防禦支出比例提升至GDP的<span style="color:#fff;font-weight:700">2%以上</span>並放寬防禦出口限制。中國已從多個維度施壓：赴日大陸遊客驟減（2024年消費額超<span style="color:#fff;font-weight:700">$100億</span>）、要求航空公司減少中日航線、加強兩用物項出口管制。中國仍佔日本稀土進口<span style="color:#fff;font-weight:700">70%以上</span>、重稀土超<span style="color:#fff;font-weight:700">90%</span>。高市還計劃設立國家情報機構，進一步刺激北京。</p>
+    <div class="data-point">日本防禦支出目標：<span style="color:#fff;font-weight:700">GDP 2%+</span> &nbsp;|&nbsp; 中國大陸遊客在日消費：<span style="color:#fff;font-weight:700">&gt;$100億/年</span> &nbsp;|&nbsp; 稀土對華依賴：<span style="color:#fff;font-weight:700">&gt;70%</span> &nbsp;|&nbsp; 重稀土對華依賴：<span style="color:#fff;font-weight:700">&gt;90%</span></div>
+    <div class="implication"><div class="label">投資啟示</div>中日摩擦長期化。<span style="color:#fff;font-weight:700">增配日本國防相關股</span>（三菱重工等），但需對沖稀土供應中斷風險。減持依賴中國遊客的日本消費股。</div>
   </div>
   <div class="article">
-    <div class="article-title">Drone Defense, US in NATO Lessons From Ret. Air Force General</div>
-    <div style="margin-bottom:6px"><span class="tag tag-misc">其他</span> </div>
-    <p># Drone Defense, US in NATO Lessons From Ret. Air Force General</p>
+    <div class="article-title">香港樓市復甦：回流移民成未被定價的催化劑</div>
+    <p>UBS認為香港樓市2026年開局強勁，部分股票已接近歷史高位。住宅市場已基本定價了利率下降、內地人才流入和供應減少的復甦敘事，但<span style="color:#fff;font-weight:700">回流移民</span>的潛在推動力尚未被充分反映。2020-25年間約<span style="color:#fff;font-weight:700">32.1萬</span>港人申請了英國BNO簽證、台灣居留權或加拿大移民，部分人正在回流。UBS預測未來兩年樓價漲幅<span style="color:#fff;font-weight:700">10%+</span>。估值日趨豐富，UBS建議偏好低淨負債率（信和、長實、嘉里）和高息率個股（太古地產、信和、嘉里）。</p>
+    <div class="data-point">未來兩年樓價預測：<span style="color:#fff;font-weight:700">+10%+</span> &nbsp;|&nbsp; 2020-25年離港人數：<span style="color:#fff;font-weight:700">~32.1萬</span> &nbsp;|&nbsp; 偏好個股：<span style="color:#fff;font-weight:700">信和、長實、嘉里、太古地產</span> &nbsp;|&nbsp; 選股邏輯：<span style="color:#fff;font-weight:700">低槓桿+高息率</span></div>
+    <div class="implication"><div class="label">投資啟示</div>回流移民是港樓未被定價的催化劑。<span style="color:#fff;font-weight:700">選擇性增持低槓桿港資地產股</span>（信和、嘉里），避免高槓桿名稱的配股風險。</div>
   </div>
-  <div class="article">
-    <div class="article-title">Equity Rotation Lifts Dispersion, But Value Is Harder to Find</div>
-    <div style="margin-bottom:6px"><span class="tag tag-misc">其他</span> </div>
-    <p># Equity Rotation Lifts Dispersion, But Value Is Harder to Find</p>
-  </div>
-  <div class="article">
-    <div class="article-title">EUROPE INSIGHT Break from Russ</div>
-    <div style="margin-bottom:6px"><span class="tag tag-misc">其他</span> </div>
-    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:53:06+08:00</p>
-  </div>
-  <div class="article">
-    <div class="article-title">EUROPE INSIGHT Energy Shock L</div>
-    <div style="margin-bottom:6px"><span class="tag tag-misc">其他</span> </div>
-    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:53:06+08:00</p>
-  </div>
-  <div class="article">
-    <div class="article-title">EUROPE INSIGHT How Middle East</div>
-    <div style="margin-bottom:6px"><span class="tag tag-misc">其他</span> </div>
-    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:53:06+08:00</p>
-  </div>
-  <div class="article">
-    <div class="article-title">Fear and Greed (3) (1)</div>
-    <div style="margin-bottom:6px"><span class="tag tag-misc">其他</span> </div>
-    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:53:06+08:00</p>
-  </div>
-  <div class="article">
-    <div class="article-title">Fear and Greed (3)</div>
-    <div style="margin-bottom:6px"><span class="tag tag-misc">其他</span> </div>
-    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:53:06+08:00</p>
-  </div>
-  <div class="article">
-    <div class="article-title">FTSE Offers Haven Appeal in T</div>
-    <div style="margin-bottom:6px"><span class="tag tag-misc">其他</span> </div>
-    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:53:15+08:00</p>
-  </div>
-  <div class="article">
-    <div class="article-title">GLOBAL INSIGHT Bombs or Deal</div>
-    <div style="margin-bottom:6px"><span class="tag tag-misc">其他</span> </div>
-    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:53:16+08:00</p>
-  </div>
-  <div class="article">
-    <div class="article-title">GLOBAL INSIGHT Questions as I</div>
-    <div style="margin-bottom:6px"><span class="tag tag-misc">其他</span> </div>
-    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:53:17+08:00</p>
-  </div>
-  <div class="article">
-    <div class="article-title">GLOBAL REACT What Irans New Le</div>
-    <div style="margin-bottom:6px"><span class="tag tag-misc">其他</span> </div>
-    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:53:17+08:00</p>
-  </div>
-  <div class="article">
-    <div class="article-title">Hopes of a Luxury Stock Reviva</div>
-    <div style="margin-bottom:6px"><span class="tag tag-misc">其他</span> </div>
-    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:53:18+08:00</p>
-  </div>
-  <div class="article">
-    <div class="article-title">Infleqtions Public Debut to Te</div>
-    <div style="margin-bottom:6px"><span class="tag tag-misc">其他</span> </div>
-    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:53:22+08:00</p>
-  </div>
-  <div class="article">
-    <div class="article-title">instOf_7f277707-ea30-40c8-8542-694bb85b0847</div>
-    <div style="margin-bottom:6px"><span class="tag tag-misc">其他</span> </div>
-    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:53:38+08:00</p>
-  </div>
-  <div class="article">
-    <div class="article-title">Investors Can Handle Whats Hap</div>
-    <div style="margin-bottom:6px"><span class="tag tag-misc">其他</span> </div>
-    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:53:38+08:00</p>
-  </div>
-  <div class="article">
-    <div class="article-title">Investors Turn Bearish Over Wa</div>
-    <div style="margin-bottom:6px"><span class="tag tag-misc">其他</span> </div>
-    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:53:38+08:00</p>
-  </div>
-  <div class="article">
-    <div class="article-title">JAPAN INSIGHT Quiet Supply Cru</div>
-    <div style="margin-bottom:6px"><span class="tag tag-misc">其他</span> </div>
-    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:53:48+08:00</p>
-  </div>
-  <div class="article">
-    <div class="article-title">JM Financial Institutional Securities Limited Utilities &amp; Power Equipment 10 POWER points; weekly ro</div>
-    <div style="margin-bottom:6px"><span class="tag tag-misc">其他</span> </div>
-    <p># JM Financial Institutional Securities Limited Utilities &amp; Power Equipment 10 POWER points; weekly ro</p>
-  </div>
-  <div class="article">
-    <div class="article-title">Market Underpricing LongTerm R</div>
-    <div style="margin-bottom:6px"><span class="tag tag-misc">其他</span> </div>
-    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:53:50+08:00</p>
-  </div>
-  <div class="article">
-    <div class="article-title">Pattern-Based, Heavy-Language Apps at High Risk</div>
-    <div style="margin-bottom:6px"><span class="tag tag-misc">其他</span> </div>
-    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:53:54+08:00</p>
-  </div>
-  <div class="article">
-    <div class="article-title">SP Slumps As Data Shows Weake</div>
-    <div style="margin-bottom:6px"><span class="tag tag-misc">其他</span> </div>
-    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:53:57+08:00</p>
-  </div>
-  <div class="article">
-    <div class="article-title">SpaceXs Mega IPO Reshapes Lis</div>
-    <div style="margin-bottom:6px"><span class="tag tag-misc">其他</span> </div>
-    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:53:58+08:00</p>
-  </div>
-  <div class="article">
-    <div class="article-title">Strategists Say European Marke</div>
-    <div style="margin-bottom:6px"><span class="tag tag-misc">其他</span> </div>
-    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:53:59+08:00</p>
-  </div>
-  <div class="article">
-    <div class="article-title">TCDX9OT9NJM1fe67f306-ea37-4f7c-91cb-85762ec9b1b0</div>
-    <div style="margin-bottom:6px"><span class="tag tag-misc">其他</span> </div>
-    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:54:00+08:00</p>
-  </div>
-  <div class="article">
-    <div class="article-title">TCDZ93T9NJLS002e46c2-758e-4f0f-86a0-fefb91afe605</div>
-    <div style="margin-bottom:6px"><span class="tag tag-misc">其他</span> </div>
-    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:54:00+08:00</p>
-  </div>
-  <div class="article">
-    <div class="article-title">TCE40IKJH6V4ad2b838d-e3f0-4971-aa2e-77baaf108c79</div>
-    <div style="margin-bottom:6px"><span class="tag tag-misc">其他</span> </div>
-    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:54:01+08:00</p>
-  </div>
-  <div class="article">
-    <div class="article-title">TCFQPEKJH6V61e0de781-5f1f-44f3-b3ec-d5690ba8e47f</div>
-    <div style="margin-bottom:6px"><span class="tag tag-misc">其他</span> </div>
-    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:54:01+08:00</p>
-  </div>
-  <div class="article">
-    <div class="article-title">TCFSG4KGZAJR06f6f9c1-3c1b-42aa-a8f0-4d9103f22bfb</div>
-    <div style="margin-bottom:6px"><span class="tag tag-misc">其他</span> </div>
-    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:54:02+08:00</p>
-  </div>
-  <div class="article">
-    <div class="article-title">TCHTU3KJH6V5088aaa77-1e88-421b-bcc4-3359d3321eee</div>
-    <div style="margin-bottom:6px"><span class="tag tag-misc">其他</span> </div>
-    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:54:02+08:00</p>
-  </div>
-  <div class="article">
-    <div class="article-title">Tesla to by June Moonshot Bet</div>
-    <div style="margin-bottom:6px"><span class="tag tag-misc">其他</span> </div>
-    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:54:03+08:00</p>
-  </div>
-  <div class="article">
-    <div class="article-title">To Hedge or Not Why Protection</div>
-    <div style="margin-bottom:6px"><span class="tag tag-misc">其他</span> </div>
-    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:54:08+08:00</p>
-  </div>
-  <div class="article">
-    <div class="article-title">UBS Faces More Risk From Credi</div>
-    <div style="margin-bottom:6px"><span class="tag tag-misc">其他</span> </div>
-    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:54:08+08:00</p>
-  </div>
-  <div class="article">
-    <div class="article-title">UBS Hong Kong Property What could extend the property rally</div>
-    <div style="margin-bottom:6px"><span class="tag tag-misc">其他</span> </div>
-    <p># UBS Hong Kong Property What could extend the property rally</p>
-  </div>
-  <div class="article">
-    <div class="article-title">What Happens to Portfolio If</div>
-    <div style="margin-bottom:6px"><span class="tag tag-misc">其他</span> </div>
-    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:54:16+08:00</p>
-  </div>
-  <div class="article">
-    <div class="article-title">⽔雷威脅下的霍爾⽊茲海峽 伊朗如何扼住了⽯油的咽喉</div>
-    <div style="margin-bottom:6px"><span class="tag tag-misc">其他</span> </div>
-    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:54:26+08:00</p>
-  </div>
-  <div class="article">
-    <div class="article-title">《美墨加協定》迎來六年審查 談判可能如何收場？</div>
-    <div style="margin-bottom:6px"><span class="tag tag-misc">其他</span> </div>
-    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:54:29+08:00</p>
-  </div>
-  <div class="article">
-    <div class="article-title">中⽇裂痕擴⼤ 五個⾯向的情勢發展值得關注</div>
-    <div style="margin-bottom:6px"><span class="tag tag-misc">其他</span> </div>
-    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:54:32+08:00</p>
-  </div>
-  <div class="article">
-    <div class="article-title">中東戰⽕延燒 亞洲各國嚴陣以待應對霍爾⽊茲斷航衝擊</div>
-    <div style="margin-bottom:6px"><span class="tag tag-misc">其他</span> </div>
-    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:54:39+08:00</p>
-  </div>
-  <div class="article">
-    <div class="article-title">以⾊列继续对伊朗实施 “ 斩⾸ ” ⾏动 接下来会发⽣什么？</div>
-    <div style="margin-bottom:6px"><span class="tag tag-misc">其他</span> </div>
-    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:54:40+08:00</p>
-  </div>
-  <div class="article">
-    <div class="article-title">伊朗戰⽕恐⾮川普想滅就滅 伊以也有話語權</div>
-    <div style="margin-bottom:6px"><span class="tag tag-misc">其他</span> </div>
-    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:54:46+08:00</p>
-  </div>
-  <div class="article">
-    <div class="article-title">伊朗戰⽕波及⾮洲 礦產供應擾動或令銅鈷⾯臨停產⾵險</div>
-    <div style="margin-bottom:6px"><span class="tag tag-misc">其他</span> </div>
-    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:54:47+08:00</p>
-  </div>
-  <div class="article">
-    <div class="article-title">受天氣和節後消費回落影響 美國 1 ⽉整體零售料出現下滑</div>
-    <div style="margin-bottom:6px"><span class="tag tag-misc">其他</span> </div>
-    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:54:57+08:00</p>
-  </div>
-  <div class="article">
-    <div class="article-title">如果你無法關注伊朗，⾄少可以關注⽯油：約翰 · 奧瑟斯 對於美國可能發動攻擊的⾵險，⽬前卻出奇地平靜，令⼈不安。</div>
-    <div style="margin-bottom:6px"><span class="tag tag-misc">其他</span> </div>
-    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:54:59+08:00</p>
-  </div>
-  <div class="article">
-    <div class="article-title">如果沃什擔任聯儲會主席 他可以單⽅⾯採取哪些⾏動？</div>
-    <div style="margin-bottom:6px"><span class="tag tag-misc">其他</span> </div>
-    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:55:00+08:00</p>
-  </div>
-  <div class="article">
-    <div class="article-title">密集外交疑為緩兵之計 對伊朗軍事打擊可能性依然存在</div>
-    <div style="margin-bottom:6px"><span class="tag tag-misc">其他</span> </div>
-    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:55:01+08:00</p>
-  </div>
-  <div class="article">
-    <div class="article-title">從過往⾔⾏來看 沃什⼀貫⽀持聯儲會保持獨⽴性</div>
-    <div style="margin-bottom:6px"><span class="tag tag-misc">其他</span> </div>
-    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:55:11+08:00</p>
-  </div>
-  <div class="article">
-    <div class="article-title">美國 1 ⽉零售受到冬季⾵暴影響 天氣好轉料帶動動能反彈</div>
-    <div style="margin-bottom:6px"><span class="tag tag-misc">其他</span> </div>
-    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:55:27+08:00</p>
-  </div>
-  <div class="article">
-    <div class="article-title">美國下⼀波伊朗攻勢－⽬標難度加⼤ ⾵險上升</div>
-    <div style="margin-bottom:6px"><span class="tag tag-misc">其他</span> </div>
-    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:55:27+08:00</p>
-  </div>
+</div>
+
+<div class="callout" id="takeaways">
+  <div class="callout-title">基金經理人重點摘要</div>
+  <ul>
+    <li><strong>伊朗戰爭：</strong>霍爾木茲海峽水雷威脅升級，IEA釋放4億桶儲備僅夠20天。油價$100+已定價短期衝擊，關注和談信號的做空油價時機。</li>
+    <li><strong>聯儲會：</strong>全年不降息已成市場共識。沃什上任不改政策方向，30年期美債5%收益率為買入區間。</li>
+    <li><strong>日銀：</strong>供應緊張至1990年代以來最嚴峻，4月加息至1.0%幾成定局。減持日圓套利交易。</li>
+    <li><strong>中國：</strong>春節後復甦動能弱於去年，經濟活動指數-5.0。工業利潤數據（週五）或提供短期交易機會。</li>
+    <li><strong>AI基建：</strong>$3萬億數據中心建設催生債務繁榮，但海灣設施遭伊朗列為打擊目標。做多美國本土數據中心REITs。</li>
+    <li><strong>資產配置：</strong>BofA調查顯示情緒轉空但倉位未極端。FTSE 100是天然地緣對沖，60/40組合需提高能源和TIPS配置。</li>
+  </ul>
 </div>
 
 <div class="nav-links">

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>彭博研究摘要 #18 — 波動</title>
+<title>彭博研究摘要 #18 — 伊朗戰爭與避險浪潮：波動率何去何從</title>
 <style>
   :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --accent: #58a6ff;
           --green: #3fb950; --red: #f85149; --yellow: #d29922; --text: #c9d1d9; --muted: #8b949e;
@@ -32,10 +32,26 @@
   .tag-misc  { background: rgba(139,148,158,0.15); color: var(--muted); }
   .section { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 16px; }
   .section h2 { color: #fff; font-size: 1.15em; margin-bottom: 12px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+  .section h3 { color: var(--accent); font-size: 0.95em; margin: 14px 0 6px; }
   .article { margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid rgba(48,54,61,0.5); }
   .article:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
   .article-title { color: #fff; font-weight: 700; font-size: 0.95em; margin-bottom: 4px; }
+  .article-title-cn { color: var(--muted); font-size: 0.85em; margin-bottom: 8px; }
   .article p { font-size: 0.9em; margin: 6px 0; }
+  .data-point { background: rgba(255,255,255,0.03); padding: 8px 12px; border-radius: 6px; margin: 8px 0; font-size: 0.85em; }
+  .data-point .num { color: #fff; font-weight: 700; }
+  .implication { background: rgba(88,166,255,0.06); border-left: 3px solid var(--accent); padding: 10px 14px; margin: 10px 0; border-radius: 0 6px 6px 0; font-size: 0.88em; }
+  .implication .label { color: var(--accent); font-weight: 700; font-size: 0.8em; text-transform: uppercase; margin-bottom: 4px; }
+  .callout { background: rgba(210,153,34,0.08); border: 1px solid rgba(210,153,34,0.3); border-radius: 6px; padding: 16px; margin: 16px 0; }
+  .callout-title { color: var(--yellow); font-weight: 700; font-size: 0.95em; margin-bottom: 8px; }
+  .callout ul { padding-left: 18px; }
+  .callout li { margin: 4px 0; font-size: 0.88em; }
+  ul { padding-left: 18px; }
+  li { margin: 3px 0; font-size: 0.88em; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(255,255,255,0.03); padding: 12px; border-radius: 6px; text-align: center; }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: #fff; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
   .toc { background: rgba(88,166,255,0.05); border: 1px solid rgba(88,166,255,0.2); border-radius: 8px; padding: 16px 20px; margin-bottom: 20px; }
   .toc-title { color: var(--accent); font-weight: 700; font-size: 0.9em; margin-bottom: 8px; }
   .toc a { color: var(--accent); text-decoration: none; font-size: 0.88em; }
@@ -55,7 +71,7 @@
 <body>
 
 <h1>彭博研究摘要</h1>
-<p class="subtitle">第18期 — 波動 | Volatility</p>
+<p class="subtitle">第18期 | 伊朗戰爭與避險浪潮：波動率何去何從</p>
 <span class="issue-badge">2026年三月下旬更新</span>
 
 <div class="nav-links">
@@ -63,34 +79,70 @@
   <span><a href="student.html">返回目錄 &rarr;</a></span>
 </div>
 
-<div class="stat-grid">
-    <div class="stat"><div class="val">3</div><div class="lbl">波動<br>Volatility</div></div>
-</div>
-
 <div class="toc">
   <div class="toc-title">目錄</div>
   <ol>
-    <li><a href="#volatility">波動 Volatility &rarr;</a></li>
+    <li><a href="#iran-oil-volatility">地緣政治 伊朗戰事膠著，油價牽動全局</a></li>
+    <li><a href="#risk-off-flows">資金流向 避險資金暗流湧動，尚未恐慌</a></li>
+    <li><a href="#takeaways">基金經理人重點摘要</a></li>
   </ol>
 </div>
 
-<div class="section" id="volatility">
-  <h2><span class="tag tag-vol">波動</span> Volatility (3 articles)</h2>
+<div class="section" id="iran-oil-volatility">
+  <h2><span class="tag tag-geo">地緣政治</span> 伊朗戰事膠著，油價牽動全局</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--orange)">&lt;$90</div><div class="lbl">布蘭特原油
+從高位回落</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">$3.58</div><div class="lbl">美國汽油零售
+每加侖（新高）</div></div>
+    <div class="stat"><div class="val" style="color:var(--green)">-83%</div><div class="lbl">伊朗對海灣國家
+打擊頻率跌幅</div></div>
+  </div>
+
   <div class="article">
-    <div class="article-title">GLOBAL INSIGHT Iran Charts to Watch — Attacks, Oil, Uncertainty</div>
-    <div style="margin-bottom:6px"><span class="tag tag-vol">波動</span> <span class="tag tag-geo">地緣政治</span> <span class="tag tag-oil">石油</span> </div>
-    <p># GLOBAL INSIGHT Iran Charts to Watch — Attacks, Oil, Uncertainty</p>
+    <div class="article-title">伊朗戰爭關鍵圖表 — 攻擊頻率、油價與不確定性</div>
+    <p>伊朗戰爭進入第12天，油價從高位回落，投資者一度因Trump預言衝突將「很快」結束而稍感安慰。但三大因素仍主導走向：<span style="color:#fff;font-weight:700">伊朗攻擊能力</span>方面，對海灣國家的打擊頻率已從高峰下降<span style="color:#fff;font-weight:700">83%</span>，3月9日僅發射<span style="color:#fff;font-weight:700">83枚</span>飛彈與無人機，為開戰以來最低。然而德黑蘭仍保有大量無人機庫存與反艦巡弋飛彈，並據報已開始在荷莫茲海峽布設水雷。<span style="color:#fff;font-weight:700">能源衝擊</span>層面，原油期貨本週初再度飆升，引發能源、股票、債券市場動盪。<span style="color:#fff;font-weight:700">美國內政</span>方面，汽油均價已觸及<span style="color:#fff;font-weight:700">$3.58/加侖</span>，超過Trump兩任總統期間的任何水平，共和黨人開始對中期選舉前景拉響警報。</p>
+    <div class="data-point">伊朗3/9日攻擊量：<span style="color:#fff;font-weight:700">83次</span>（較高峰降83%） &nbsp;|&nbsp; 美國汽油均價：<span style="color:#fff;font-weight:700">$3.58/加侖</span>（歷史新高） &nbsp;|&nbsp; 荷莫茲海峽：<span style="color:#fff;font-weight:700">水雷布設中</span></div>
+    <div class="implication"><div class="label">投資啟示</div>海峽通行風險是伊朗最強籌碼。油價短期仍有尾部風險 — <span style="color:#fff;font-weight:700">持有原油看漲期權作為尾部對沖</span>，但避免追高。</div>
   </div>
   <div class="article">
-    <div class="article-title">Iran War Week Two – Mixed Trump Signals Keep Oil Volatile</div>
-    <div style="margin-bottom:6px"><span class="tag tag-vol">波動</span> <span class="tag tag-geo">地緣政治</span> <span class="tag tag-oil">石油</span> </div>
-    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:53:48+08:00</p>
+    <div class="article-title">伊朗戰爭第二週 — Trump矛盾信號令油價反覆</div>
+    <p>荷莫茲海峽實質上已無法通行，中東能源流動受阻。布蘭特原油從3月9日高點回落至<span style="color:#fff;font-weight:700">$90以下</span>，但美國官員同時釋出軍事行動升級信號。即使Trump政府尋求談判，伊朗與以色列均有各自未達成的目標。德黑蘭判斷自身可在消耗戰中撐得更久。對全球經濟而言，<span style="color:#fff;font-weight:700">持續時間與衝突強度同等重要</span> — 中斷越久，通膨上行風險越大，增長下行壓力越強。Trump面臨四重壓力：油價上漲、已有<span style="color:#fff;font-weight:700">7名美軍陣亡</span>、民調顯示大量民眾反戰、區域盟友積極遊說停火。</p>
+    <div class="data-point">布蘭特原油：<span style="color:#fff;font-weight:700">&lt;$90/桶</span>（從高位回落） &nbsp;|&nbsp; 美軍陣亡：<span style="color:#fff;font-weight:700">7人</span> &nbsp;|&nbsp; 衝突持續時間：<span style="color:#fff;font-weight:700">影響等同強度</span></div>
+    <div class="implication"><div class="label">投資啟示</div>衝突持續時間是關鍵變量。通膨預期面臨上修壓力 — <span style="color:#fff;font-weight:700">減持對油價敏感的航空與消費股</span>，增配能源上游。</div>
   </div>
+</div>
+
+<div class="section" id="risk-off-flows">
+  <h2><span class="tag tag-misc">資金流向</span> 避險資金暗流湧動，尚未恐慌</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--red)">-$5B</div><div class="lbl">高收益債
+單週流出</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">-$3.7B</div><div class="lbl">金融股
+歷史最大流出</div></div>
+    <div class="stat"><div class="val" style="color:var(--green)">$5.4B</div><div class="lbl">美國國債
+連續第6週流入</div></div>
+  </div>
+
   <div class="article">
-    <div class="article-title">RiskOff Outflows More Visible</div>
-    <div style="margin-bottom:6px"><span class="tag tag-vol">波動</span> </div>
-    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:53:57+08:00</p>
+    <div class="article-title">避險資金流出加劇，但「恐慌性拋售」尚未出現</div>
+    <p>美銀援引EPFR數據指出，截至3月11日當週，股票仍獲<span style="color:#fff;font-weight:700">$132億</span>淨流入、債券<span style="color:#fff;font-weight:700">$34億</span>，但結構性避險訊號愈發明顯。金融股錄得歷史最大單週流出<span style="color:#fff;font-weight:700">$37億</span>，科技股七週以來首次流出<span style="color:#fff;font-weight:700">$9億</span>，醫療保健流出<span style="color:#fff;font-weight:700">$16億</span>為去年7月以來最大。固收方面，高收益債連續第三週流出達<span style="color:#fff;font-weight:700">$50億</span>，銀行貸款流出<span style="color:#fff;font-weight:700">$24億</span>，新興市場債券流出<span style="color:#fff;font-weight:700">$31億</span>。美銀策略師Hartnett團隊指出，Bull &amp; Bear指標已見頂，避險資金在美國高收益債、新興市場債、金融股中更為明顯，但整體倉位尚未出現「熊市恐慌」級別的投降式拋售。建議在油價突破<span style="color:#fff;font-weight:700">$100</span>、DXY突破<span style="color:#fff;font-weight:700">100</span>、30年期美債收益率突破<span style="color:#fff;font-weight:700">5%</span>、S&amp;P 500跌破<span style="color:#fff;font-weight:700">6,600</span>時逆向操作。</p>
+    <div class="data-point">高收益債流出：<span style="color:#fff;font-weight:700">$50億</span>（連續3週） &nbsp;|&nbsp; 金融股流出：<span style="color:#fff;font-weight:700">$37億</span>（創紀錄） &nbsp;|&nbsp; 韓國股市流入：<span style="color:#fff;font-weight:700">$89億</span>（創紀錄） &nbsp;|&nbsp; 日本股市流入：<span style="color:#fff;font-weight:700">$63億</span>（2013年來最大）</div>
+    <div class="implication"><div class="label">投資啟示</div>尚未到恐慌性買入時機。關注BofA建議的關鍵閾值 — <span style="color:#fff;font-weight:700">S&amp;P 500若跌破6,600可逆向做多</span>，油價若突破$100則fade。</div>
   </div>
+</div>
+
+<div class="callout" id="takeaways">
+  <div class="callout-title">基金經理人重點摘要</div>
+  <ul>
+    <li><strong>伊朗局勢：</strong>打擊頻率下降83%但水雷威脅升級。荷莫茲海峽通行風險是油價核心變量 — **持有原油尾部看漲期權對沖**。</li>
+    <li><strong>油價：</strong>布蘭特回落至$90下方，但衝突持續時間風險仍在。BofA建議**油價突破$100時做空**。</li>
+    <li><strong>美國政治：</strong>汽油$3.58創Trump任期新高，7名美軍陣亡。政治壓力或加速停火談判。</li>
+    <li><strong>資金流向：</strong>金融股創紀錄流出$37億，高收益債連三週流出$50億。Bull & Bear指標見頂但未觸發恐慌信號。</li>
+    <li><strong>逆向操作：</strong>S&P 500跌破6,600、30年期收益率破5%時為政策回應觸發點 — **屆時可逆向做多風險資產**。</li>
+  </ul>
 </div>
 
 <div class="nav-links">

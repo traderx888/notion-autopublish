@@ -1262,7 +1262,7 @@
   "newsletters": {
     "6": {
       "filename": "newsletter_6_uncategorized.html",
-      "generatedAt": "2026-03-26T15:56:29+08:00",
+      "generatedAt": "2026-03-26T18:42:10+08:00",
       "articleCount": 57,
       "topics": [
         "uncategorized"
@@ -1270,7 +1270,7 @@
     },
     "7": {
       "filename": "newsletter_7_geopolitics.html",
-      "generatedAt": "2026-03-26T15:56:29+08:00",
+      "generatedAt": "2026-03-26T18:44:43+08:00",
       "articleCount": 19,
       "topics": [
         "geopolitics"
@@ -1278,7 +1278,7 @@
     },
     "8": {
       "filename": "newsletter_8_growth.html",
-      "generatedAt": "2026-03-26T15:56:29+08:00",
+      "generatedAt": "2026-03-26T18:47:32+08:00",
       "articleCount": 18,
       "topics": [
         "growth"
@@ -1286,7 +1286,7 @@
     },
     "9": {
       "filename": "newsletter_9_rates.html",
-      "generatedAt": "2026-03-26T15:56:29+08:00",
+      "generatedAt": "2026-03-26T18:49:13+08:00",
       "articleCount": 14,
       "topics": [
         "rates"
@@ -1294,7 +1294,7 @@
     },
     "10": {
       "filename": "newsletter_10_trade.html",
-      "generatedAt": "2026-03-26T15:56:30+08:00",
+      "generatedAt": "2026-03-26T18:51:29+08:00",
       "articleCount": 12,
       "topics": [
         "trade"
@@ -1302,7 +1302,7 @@
     },
     "11": {
       "filename": "newsletter_11_inflation.html",
-      "generatedAt": "2026-03-26T15:56:30+08:00",
+      "generatedAt": "2026-03-26T18:52:56+08:00",
       "articleCount": 8,
       "topics": [
         "inflation"
@@ -1310,7 +1310,7 @@
     },
     "12": {
       "filename": "newsletter_12_china.html",
-      "generatedAt": "2026-03-26T15:56:30+08:00",
+      "generatedAt": "2026-03-26T18:54:34+08:00",
       "articleCount": 7,
       "topics": [
         "china"
@@ -1318,7 +1318,7 @@
     },
     "13": {
       "filename": "newsletter_13_policy.html",
-      "generatedAt": "2026-03-26T15:56:30+08:00",
+      "generatedAt": "2026-03-26T18:55:33+08:00",
       "articleCount": 5,
       "topics": [
         "policy"
@@ -1326,7 +1326,7 @@
     },
     "14": {
       "filename": "newsletter_14_metals.html",
-      "generatedAt": "2026-03-26T15:56:30+08:00",
+      "generatedAt": "2026-03-26T18:56:31+08:00",
       "articleCount": 4,
       "topics": [
         "metals"
@@ -1334,7 +1334,7 @@
     },
     "15": {
       "filename": "newsletter_15_oil.html",
-      "generatedAt": "2026-03-26T15:56:30+08:00",
+      "generatedAt": "2026-03-26T18:57:52+08:00",
       "articleCount": 4,
       "topics": [
         "oil"
@@ -1342,7 +1342,7 @@
     },
     "16": {
       "filename": "newsletter_16_japan.html",
-      "generatedAt": "2026-03-26T15:56:30+08:00",
+      "generatedAt": "2026-03-26T18:58:54+08:00",
       "articleCount": 4,
       "topics": [
         "japan"
@@ -1350,7 +1350,7 @@
     },
     "17": {
       "filename": "newsletter_17_valuations.html",
-      "generatedAt": "2026-03-26T15:56:30+08:00",
+      "generatedAt": "2026-03-26T18:59:46+08:00",
       "articleCount": 3,
       "topics": [
         "valuations"
@@ -1358,7 +1358,7 @@
     },
     "18": {
       "filename": "newsletter_18_volatility.html",
-      "generatedAt": "2026-03-26T15:56:30+08:00",
+      "generatedAt": "2026-03-26T19:00:40+08:00",
       "articleCount": 3,
       "topics": [
         "volatility"
@@ -1366,19 +1366,12 @@
     },
     "19": {
       "filename": "newsletter_19_credit.html",
-      "generatedAt": "2026-03-26T15:56:30+08:00",
+      "generatedAt": "2026-03-26T19:01:20+08:00",
       "articleCount": 3,
       "topics": [
         "credit"
       ]
     }
   },
-  "weeklyDigests": {
-    "2026-W13": {
-      "filename": "newsletter_digest_2026w13.html",
-      "generatedAt": "2026-03-26T15:56:35+08:00",
-      "articleCount": 162,
-      "topicCount": 15
-    }
-  }
+  "weeklyDigests": {}
 }

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>彭博研究摘要 #13 — 政策</title>
+<title>彭博研究摘要 #13 — 日本政局轉向與美中貿易博弈</title>
 <style>
   :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --accent: #58a6ff;
           --green: #3fb950; --red: #f85149; --yellow: #d29922; --text: #c9d1d9; --muted: #8b949e;
@@ -32,10 +32,26 @@
   .tag-misc  { background: rgba(139,148,158,0.15); color: var(--muted); }
   .section { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 16px; }
   .section h2 { color: #fff; font-size: 1.15em; margin-bottom: 12px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+  .section h3 { color: var(--accent); font-size: 0.95em; margin: 14px 0 6px; }
   .article { margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid rgba(48,54,61,0.5); }
   .article:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
   .article-title { color: #fff; font-weight: 700; font-size: 0.95em; margin-bottom: 4px; }
+  .article-title-cn { color: var(--muted); font-size: 0.85em; margin-bottom: 8px; }
   .article p { font-size: 0.9em; margin: 6px 0; }
+  .data-point { background: rgba(255,255,255,0.03); padding: 8px 12px; border-radius: 6px; margin: 8px 0; font-size: 0.85em; }
+  .data-point .num { color: #fff; font-weight: 700; }
+  .implication { background: rgba(88,166,255,0.06); border-left: 3px solid var(--accent); padding: 10px 14px; margin: 10px 0; border-radius: 0 6px 6px 0; font-size: 0.88em; }
+  .implication .label { color: var(--accent); font-weight: 700; font-size: 0.8em; text-transform: uppercase; margin-bottom: 4px; }
+  .callout { background: rgba(210,153,34,0.08); border: 1px solid rgba(210,153,34,0.3); border-radius: 6px; padding: 16px; margin: 16px 0; }
+  .callout-title { color: var(--yellow); font-weight: 700; font-size: 0.95em; margin-bottom: 8px; }
+  .callout ul { padding-left: 18px; }
+  .callout li { margin: 4px 0; font-size: 0.88em; }
+  ul { padding-left: 18px; }
+  li { margin: 3px 0; font-size: 0.88em; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(255,255,255,0.03); padding: 12px; border-radius: 6px; text-align: center; }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: #fff; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
   .toc { background: rgba(88,166,255,0.05); border: 1px solid rgba(88,166,255,0.2); border-radius: 8px; padding: 16px 20px; margin-bottom: 20px; }
   .toc-title { color: var(--accent); font-weight: 700; font-size: 0.9em; margin-bottom: 8px; }
   .toc a { color: var(--accent); text-decoration: none; font-size: 0.88em; }
@@ -55,7 +71,7 @@
 <body>
 
 <h1>彭博研究摘要</h1>
-<p class="subtitle">第13期 — 政策 | Policy</p>
+<p class="subtitle">第13期 | 日本政局轉向與美中貿易博弈</p>
 <span class="issue-badge">2026年三月下旬更新</span>
 
 <div class="nav-links">
@@ -63,44 +79,85 @@
   <span><a href="student.html">返回目錄 &rarr;</a></span>
 </div>
 
-<div class="stat-grid">
-    <div class="stat"><div class="val">5</div><div class="lbl">政策<br>Policy</div></div>
-</div>
-
 <div class="toc">
   <div class="toc-title">目錄</div>
   <ol>
-    <li><a href="#policy">政策 Policy &rarr;</a></li>
+    <li><a href="#japan-election">日本大選 高市大勝，走向「總統制化」</a></li>
+    <li><a href="#takaichi-trump">美日峰會 伊朗戰雲下的白宮會談</a></li>
+    <li><a href="#us-china-tariff">美中關稅 最高法院判了，但籌碼還在</a></li>
+    <li><a href="#takeaways">基金經理人重點摘要</a></li>
   </ol>
 </div>
 
-<div class="section" id="policy">
-  <h2><span class="tag tag-policy">政策</span> Policy (5 articles)</h2>
-  <div class="article">
-    <div class="article-title">JAPAN PREVIEW Election LDP Wi</div>
-    <div style="margin-bottom:6px"><span class="tag tag-policy">政策</span> <span class="tag tag-japan">日本</span> </div>
-    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:53:49+08:00</p>
+<div class="section" id="japan-election">
+  <h2><span class="tag tag-misc">日本大選</span> 高市大勝，走向「總統制化」</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val">5,500億</div><div class="lbl">對美投資承諾
+（美元）</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">&lt;10%</div><div class="lbl">已公佈項目
+佔承諾總額</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">90%</div><div class="lbl">日本原油經
+霍爾木茲海峽</div></div>
   </div>
+
   <div class="article">
-    <div class="article-title">⽇本⾸相頂著伊朗戰事陰雲訪美 雙⽅會談及哪些議題</div>
-    <div style="margin-bottom:6px"><span class="tag tag-policy">政策</span> <span class="tag tag-japan">日本</span> <span class="tag tag-policy">政策</span> <span class="tag tag-japan">日本</span> </div>
-    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:54:25+08:00</p>
+    <div class="article-title">自民黨大選獲勝或令高市走向「總統制化」執政</div>
+    <p>如果民調準確，首相高市早苗領導的自民黨在週日眾議院選舉中大幅增加席次，將鞏固她對權力的掌控，並推動日本政治向「總統制化」方向演變。這種以個人人氣主導選舉的模式，被認為是小泉純一郎以來最鮮明的例子。在財政政策上，單一政黨多數將讓高市更容易推進AI、半導體、造船及國防等領域的<span style="color:#fff;font-weight:700">大規模國家主導投資</span>，同時擋下在野黨要求的食品消費稅削減。市場短期反應預計為<span style="color:#fff;font-weight:700">債券殖利率上升、日圓走弱、股市上漲</span>，但中期來看，穩定政府減少了倉促減稅的風險。</p>
+    <div class="data-point">選舉策略：<span style="color:#fff;font-weight:700">小泉式「選領袖」路線</span> &nbsp;|&nbsp; 財政方向：<span style="color:#fff;font-weight:700">負責任的財政擴張</span> &nbsp;|&nbsp; 食品消費稅：<span style="color:#fff;font-weight:700">大概率擱置</span></div>
+    <div class="implication"><div class="label">投資啟示</div>高市勝選後財政擴張預期升溫。短期<span style="color:#fff;font-weight:700">做多日股、做空JGB長端</span>；中期關注國防與半導體產業鏈受惠標的。</div>
   </div>
+</div>
+
+<div class="section" id="takaichi-trump">
+  <h2><span class="tag tag-misc">美日峰會</span> 伊朗戰雲下的白宮會談</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--red)">$360億</div><div class="lbl">已公佈投資額
+（三個項目）</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">9%</div><div class="lbl">日本國內
+支持伊朗戰爭</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">$1,000億+</div><div class="lbl">美方期望
+今年新增投資</div></div>
+  </div>
+
   <div class="article">
-    <div class="article-title">⽇本⾸相頂著伊朗戰事陰雲訪美 雙⽅會談及哪些議題</div>
-    <div style="margin-bottom:6px"><span class="tag tag-policy">政策</span> <span class="tag tag-japan">日本</span> </div>
-    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:54:25+08:00</p>
+    <div class="article-title">日本首相頂著伊朗戰事陰雲訪美 — 投資、軍事與外匯三重壓力</div>
+    <p>高市早苗3月19日赴白宮與川普會晤，但美伊戰爭徹底改變了會談焦點。川普對盟國未響應霍爾木茲海峽聯合護航行動表示不滿，而日本<span style="color:#fff;font-weight:700">90%原油進口</span>經由該海峽，封鎖風險直接衝擊物價與經濟成長。投資履約壓力同樣嚴峻：<span style="color:#fff;font-weight:700">5,500億美元</span>承諾須於2029年前完成，但目前僅公佈不到<span style="color:#fff;font-weight:700">360億美元</span>的項目。川普政府期望今年新增投資超過<span style="color:#fff;font-weight:700">1,000億美元</span>。在外匯議題上，華盛頓對日圓走軟感到不安，若雙方討論匯率，高市可能面臨容忍日銀加息的隱性壓力，這支持彭博對<span style="color:#fff;font-weight:700">日銀4月加息</span>的預期。</p>
+    <div class="data-point">投資缺口：已公佈 <span style="color:#fff;font-weight:700">&lt;$360億</span> vs 承諾 <span style="color:#fff;font-weight:700">$5,500億</span> &nbsp;|&nbsp; 軍事選項：<span style="color:#fff;font-weight:700">排雷培訓、金穹反導合作</span> &nbsp;|&nbsp; 日銀：<span style="color:#fff;font-weight:700">4月加息概率上升</span></div>
+    <div class="implication"><div class="label">投資啟示</div>日銀4月加息預期強化，<span style="color:#fff;font-weight:700">減持日圓套利倉位</span>。日本國防股與核電概念（Westinghouse合作）或有事件驅動機會。</div>
   </div>
+</div>
+
+<div class="section" id="us-china-tariff">
+  <h2><span class="tag tag-misc">美中關稅</span> 最高法院判了，但籌碼還在</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--green)">-10pp</div><div class="lbl">中國輸美有效
+關稅率降幅</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">~30天</div><div class="lbl">新關稅政策
+實施所需時間</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">50%</div><div class="lbl">第338條款
+最高加徵幅度</div></div>
+  </div>
+
   <div class="article">
-    <div class="article-title">美國對華貿易政策籌碼並不會因最⾼法院裁決⽽減弱</div>
-    <div style="margin-bottom:6px"><span class="tag tag-policy">政策</span> </div>
-    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:55:31+08:00</p>
+    <div class="article-title">美國對華貿易政策籌碼並不會因最高法院裁決而減弱</div>
+    <p>美國最高法院裁定推翻川普依據IEEPA加徵的關稅，導致過半關稅機制失效，中國輸美有效關稅率即刻下降約<span style="color:#fff;font-weight:700">10個百分點</span>，成為裁決短期最大受益方。然而華盛頓手中仍握有多張牌：2018年第<span style="color:#fff;font-weight:700">301條款</span>調查結論依然有效，針對半導體的301調查已完成，另一項審查中國履行第一階段協議的調查亦可迅速出結果。此外，第<span style="color:#fff;font-weight:700">338條款</span>允許單方面加徵最多比最惠國稅率高出<span style="color:#fff;font-weight:700">50%</span>的關稅。新關稅約需<span style="color:#fff;font-weight:700">30天</span>完成公示流程，意味著政府若本周行動，可趕在川普訪華前生效。北京方面反應克制，短期不太可能報復，但若美方舉措超出預期，緊張局勢可能迅速升級。</p>
+    <div class="data-point">IEEPA關稅：<span style="color:#fff;font-weight:700">全部失效</span> &nbsp;|&nbsp; 替代工具：<span style="color:#fff;font-weight:700">301條款、338條款</span> &nbsp;|&nbsp; 新關稅時間表：<span style="color:#fff;font-weight:700">約30天</span> &nbsp;|&nbsp; 北京反應：<span style="color:#fff;font-weight:700">短期克制</span></div>
+    <div class="implication"><div class="label">投資啟示</div>關稅重建路徑明確，中美貿易戰實質影響有限。<span style="color:#fff;font-weight:700">避免過度做多中國出口概念股</span>，301條款新關稅可能在4月落地。</div>
   </div>
-  <div class="article">
-    <div class="article-title">美國對華貿易政策籌碼並不會因最⾼法院裁決⽽減弱</div>
-    <div style="margin-bottom:6px"><span class="tag tag-policy">政策</span> </div>
-    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:55:31+08:00</p>
-  </div>
+</div>
+
+<div class="callout" id="takeaways">
+  <div class="callout-title">基金經理人重點摘要</div>
+  <ul>
+    <li><strong>日本政治：</strong>高市大選勝利推動「總統制化」執政，財政擴張方向明確。做多日股國防、半導體產業鏈。</li>
+    <li><strong>日銀：</strong>美方對日圓走軟不滿＋油價壓力，4月加息概率上升。減持日圓套利倉位。</li>
+    <li><strong>美日投資：</strong>5,500億美元承諾進度嚴重落後（<7%），核電與銅冶煉項目或於峰會期間宣布，關注Westinghouse相關標的。</li>
+    <li><strong>美中關稅：</strong>最高法院裁決短期利好中國（有效稅率降10pp），但301/338條款可在30天內重建關稅體系，實質影響有限。</li>
+    <li><strong>地緣風險：</strong>霍爾木茲海峽封鎖風險推升油價、打擊日本經濟。中國對日經濟施壓持續（旅遊預警、稀土管制），台海議題敏感度上升。</li>
+  </ul>
 </div>
 
 <div class="nav-links">

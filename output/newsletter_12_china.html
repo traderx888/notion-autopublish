@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>彭博研究摘要 #12 — 中國</title>
+<title>彭博研究摘要 #12 — 中國經濟全景：十五五規劃、樓市拐點與人民幣新局</title>
 <style>
   :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --accent: #58a6ff;
           --green: #3fb950; --red: #f85149; --yellow: #d29922; --text: #c9d1d9; --muted: #8b949e;
@@ -32,10 +32,26 @@
   .tag-misc  { background: rgba(139,148,158,0.15); color: var(--muted); }
   .section { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 16px; }
   .section h2 { color: #fff; font-size: 1.15em; margin-bottom: 12px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+  .section h3 { color: var(--accent); font-size: 0.95em; margin: 14px 0 6px; }
   .article { margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid rgba(48,54,61,0.5); }
   .article:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
   .article-title { color: #fff; font-weight: 700; font-size: 0.95em; margin-bottom: 4px; }
+  .article-title-cn { color: var(--muted); font-size: 0.85em; margin-bottom: 8px; }
   .article p { font-size: 0.9em; margin: 6px 0; }
+  .data-point { background: rgba(255,255,255,0.03); padding: 8px 12px; border-radius: 6px; margin: 8px 0; font-size: 0.85em; }
+  .data-point .num { color: #fff; font-weight: 700; }
+  .implication { background: rgba(88,166,255,0.06); border-left: 3px solid var(--accent); padding: 10px 14px; margin: 10px 0; border-radius: 0 6px 6px 0; font-size: 0.88em; }
+  .implication .label { color: var(--accent); font-weight: 700; font-size: 0.8em; text-transform: uppercase; margin-bottom: 4px; }
+  .callout { background: rgba(210,153,34,0.08); border: 1px solid rgba(210,153,34,0.3); border-radius: 6px; padding: 16px; margin: 16px 0; }
+  .callout-title { color: var(--yellow); font-weight: 700; font-size: 0.95em; margin-bottom: 8px; }
+  .callout ul { padding-left: 18px; }
+  .callout li { margin: 4px 0; font-size: 0.88em; }
+  ul { padding-left: 18px; }
+  li { margin: 3px 0; font-size: 0.88em; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(255,255,255,0.03); padding: 12px; border-radius: 6px; text-align: center; }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: #fff; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
   .toc { background: rgba(88,166,255,0.05); border: 1px solid rgba(88,166,255,0.2); border-radius: 8px; padding: 16px 20px; margin-bottom: 20px; }
   .toc-title { color: var(--accent); font-weight: 700; font-size: 0.9em; margin-bottom: 8px; }
   .toc a { color: var(--accent); text-decoration: none; font-size: 0.88em; }
@@ -55,7 +71,7 @@
 <body>
 
 <h1>彭博研究摘要</h1>
-<p class="subtitle">第12期 — 中國 | China</p>
+<p class="subtitle">第12期 | 中國經濟全景：十五五規劃、樓市拐點與人民幣新局</p>
 <span class="issue-badge">2026年三月下旬更新</span>
 
 <div class="nav-links">
@@ -63,54 +79,119 @@
   <span><a href="student.html">返回目錄 &rarr;</a></span>
 </div>
 
-<div class="stat-grid">
-    <div class="stat"><div class="val">7</div><div class="lbl">中國<br>China</div></div>
-</div>
-
 <div class="toc">
   <div class="toc-title">目錄</div>
   <ol>
-    <li><a href="#china">中國 China &rarr;</a></li>
+    <li><a href="#macro-data">經濟數據 低欄過關，慢增長困局未解</a></li>
+    <li><a href="#fyp-policy">十五五規劃 硬科技為核，消費升格為戰略支點</a></li>
+    <li><a href="#housing">樓市 調整七成已過，2027年或見底</a></li>
+    <li><a href="#yuan-credit">人民幣與融資 強幣信號疊加信貸脈衝</a></li>
+    <li><a href="#takeaways">基金經理人重點摘要</a></li>
   </ol>
 </div>
 
-<div class="section" id="china">
-  <h2><span class="tag tag-china">中國</span> China (7 articles)</h2>
+<div class="section" id="macro-data">
+  <h2><span class="tag tag-misc">經濟數據</span> 低欄過關，慢增長困局未解</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--green)">6.3%</div><div class="lbl">1-2月工業增加值
+同比增速</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">2.8%</div><div class="lbl">1-2月零售銷售
+同比增速</div></div>
+    <div class="stat"><div class="val" style="color:var(--green)">+1.8%</div><div class="lbl">固定資產投資
+（扭轉收縮）</div></div>
+  </div>
+
   <div class="article">
-    <div class="article-title">CHINA INSIGHT Holiday Spending</div>
-    <div style="margin-bottom:6px"><span class="tag tag-china">中國</span> </div>
-    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:53:02+08:00</p>
+    <div class="article-title">經濟數據過低欄 — 慢增長均衡未脫</div>
+    <p>2026年首份經濟數據勉強越過低門檻，但中國經濟依然深陷慢增長均衡。工業生產同比增長<span style="color:#fff;font-weight:700">6.3%</span>，較12月的<span style="color:#fff;font-weight:700">5.2%</span>明顯加速，大幅高於市場共識的<span style="color:#fff;font-weight:700">5.3%</span>。零售銷售增速從12月的<span style="color:#fff;font-weight:700">0.9%</span>回升至<span style="color:#fff;font-weight:700">2.8%</span>，略優於預期。最大的驚喜來自固定資產投資：同比增長<span style="color:#fff;font-weight:700">1.8%</span>，市場此前預期為再度收縮<span style="color:#fff;font-weight:700">5.1%</span>。然而，與歷史水平相比，消費和投資增速仍顯疲弱。彭博經濟研究預計人行將在第二季度下調政策利率<span style="color:#fff;font-weight:700">10個基點</span>，以應對持續的內需逆風。政府已釋放支持信號，但明確表態將循序漸進。</p>
+    <div class="data-point">工業增加值：<span style="color:#fff;font-weight:700">6.3%</span> vs 共識 5.3% &nbsp;|&nbsp; 零售銷售：<span style="color:#fff;font-weight:700">2.8%</span> vs 共識 2.5% &nbsp;|&nbsp; 固投：<span style="color:#fff;font-weight:700">+1.8%</span> vs 共識 -5.1% &nbsp;|&nbsp; 預期降息：<span style="color:#fff;font-weight:700">Q2減10bp</span></div>
+    <div class="implication"><div class="label">投資啟示</div>數據超預期但絕對水平偏低。<span style="color:#fff;font-weight:700">做多中國利率下行</span>（Q2降息預期強化），短期可戰術性看多A股週期板塊但需控制倉位。</div>
   </div>
   <div class="article">
-    <div class="article-title">CHINA INSIGHT New FiveYear Pla</div>
-    <div style="margin-bottom:6px"><span class="tag tag-china">中國</span> </div>
-    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:53:03+08:00</p>
+    <div class="article-title">春節消費回暖 — 高頻數據透露曙光</div>
+    <p>春節假期（2月15-23日）數據為低迷的消費注入一絲暖意。假期跨區域出行總量達<span style="color:#fff;font-weight:700">28.2億人次</span>，日均同比增長<span style="color:#fff;font-weight:700">8.7%</span>。上海錄得<span style="color:#fff;font-weight:700">603億元</span>消費支出，同比增長<span style="color:#fff;font-weight:700">12.8%</span>；湖南和重慶分別增長<span style="color:#fff;font-weight:700">7.6%</span>和<span style="color:#fff;font-weight:700">7.1%</span>。截至2月6日的四週內，家電線上銷售環比增長<span style="color:#fff;font-weight:700">22%</span>，顯示以舊換新政策的持續拉動效應。但出口相關指標喜憂參半：出口貨物價格環比下跌<span style="color:#fff;font-weight:700">3%</span>，而對美出口噸位環比上升<span style="color:#fff;font-weight:700">3%</span>，暗示企業在關稅風險下「搶運」。生產端，煉油開工率升至<span style="color:#fff;font-weight:700">86%</span>，但主要鋼廠螺紋鋼日均產量同比下滑<span style="color:#fff;font-weight:700">8.8%</span>。</p>
+    <div class="data-point">春節日均出行：<span style="color:#fff;font-weight:700">+8.7% YoY</span> &nbsp;|&nbsp; 上海消費：<span style="color:#fff;font-weight:700">603億元 (+12.8%)</span> &nbsp;|&nbsp; 家電線上銷售：<span style="color:#fff;font-weight:700">+22% MoM</span> &nbsp;|&nbsp; 煉油開工率：<span style="color:#fff;font-weight:700">86%</span></div>
+    <div class="implication"><div class="label">投資啟示</div>消費脈衝式回暖尚不構成趨勢。<span style="color:#fff;font-weight:700">關注3-4月零售數據持續性</span>，家電/消費電子板塊短線有催化但需等待全國數據確認。</div>
+  </div>
+</div>
+
+<div class="section" id="fyp-policy">
+  <h2><span class="tag tag-misc">十五五規劃</span> 硬科技為核，消費升格為戰略支點</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--green)">~20%</div><div class="lbl">高技術+綠色產業
+佔GDP比重（2026E）</div></div>
+    <div class="stat"><div class="val">5年</div><div class="lbl">2026-2030
+規劃週期</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">首次</div><div class="lbl">生育支持
+獨立成章</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">十五五規劃：科技自立為核心，消費戰略升級</div>
+    <p>全國人大審議的十五五規劃（2026-2030）將科技自立自強置於核心，同時將消費從附屬章節<span style="color:#fff;font-weight:700">首次升格為獨立戰略支柱</span>。與上份規劃不同，促消費和擴投資被拆分為兩個獨立章節，緊隨科技之後，凸顯政策重心轉移。規劃承認結構性瓶頸，提出通過促就業、增收入、穩預期來破解需求疲軟。到<span style="color:#fff;font-weight:700">2026年</span>，高技術與綠色產業佔GDP比重預計達<span style="color:#fff;font-weight:700">約20%</span>，首次超越房地產相關行業。同時，規劃首次以獨立章節闡述生育支持措施，涵蓋育兒補貼、稅收優惠、彈性工作制等，顯示人口問題的緊迫性。財稅方面，規劃暗示將<span style="color:#fff;font-weight:700">提高中央財政支出比重</span>，整合三本預算，解決央地財權與事權錯配。</p>
+    <div class="data-point">消費章節：<span style="color:#fff;font-weight:700">首次獨立成章</span> &nbsp;|&nbsp; 高技術+綠色占GDP：<span style="color:#fff;font-weight:700">~20%（2026E）</span> &nbsp;|&nbsp; 生育支持：<span style="color:#fff;font-weight:700">獨立章節（規劃史上首次）</span> &nbsp;|&nbsp; 財稅改革：<span style="color:#fff;font-weight:700">提高中央支出比重</span></div>
+    <div class="implication"><div class="label">投資啟示</div>規劃利好<span style="color:#fff;font-weight:700">半導體、AI、新能源</span>等硬科技板塊的長線配置。消費升級方向關注<span style="color:#fff;font-weight:700">服務消費（冰雪旅遊、低空經濟）</span>。央地財稅改革若落地，有助修復地方政府信用——<span style="color:#fff;font-weight:700">關注城投債利差收窄機會</span>。</div>
+  </div>
+</div>
+
+<div class="section" id="housing">
+  <h2><span class="tag tag-misc">樓市</span> 調整七成已過，2027年或見底</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--orange)">~70%</div><div class="lbl">房地產調整
+完成進度</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">-13.5%</div><div class="lbl">1-2月新房銷售
+面積同比</div></div>
+    <div class="stat"><div class="val">~15%</div><div class="lbl">房地產佔GDP
+（2027E）</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">中國樓市調整進度條已近七成 — 2027年或可止跌</div>
+    <p>中國房地產下滑進入第五年，但曙光初現。彭博經濟研究測算，房地產建設規模需從2021年峰值<span style="color:#fff;font-weight:700">15.65億平方米</span>下降約<span style="color:#fff;font-weight:700">55%</span>至<span style="color:#fff;font-weight:700">7億平方米</span>才能匹配潛在需求。截至目前，開發投資已下滑約<span style="color:#fff;font-weight:700">40%</span>，意味著調整完成度約<span style="color:#fff;font-weight:700">70%</span>，剩餘<span style="color:#fff;font-weight:700">30%</span>預計在兩年內消化，<span style="color:#fff;font-weight:700">2027年</span>有望觸底。2026年前兩月出現復甦跡象：70城中有<span style="color:#fff;font-weight:700">10個城市</span>2月房價環比上漲（為2025年6月以來最多），但全國新房銷售面積同比仍下降<span style="color:#fff;font-weight:700">13.5%</span>。回暖主要集中於一線城市，得益於上海、北京等地放寬限購。房地產佔GDP比重從2024年的<span style="color:#fff;font-weight:700">19.2%</span>降至2025年的<span style="color:#fff;font-weight:700">18.3%</span>，但到2027年仍將維持在<span style="color:#fff;font-weight:700">15%以上</span>。房產佔家庭財富<span style="color:#fff;font-weight:700">60%-70%</span>，止跌對消費信心至關重要。</p>
+    <div class="data-point">調整完成度：<span style="color:#fff;font-weight:700">~70%</span> &nbsp;|&nbsp; 預計觸底：<span style="color:#fff;font-weight:700">2027年</span> &nbsp;|&nbsp; 1-2月銷售面積：<span style="color:#fff;font-weight:700">-13.5% YoY</span> &nbsp;|&nbsp; 房地產佔GDP：<span style="color:#fff;font-weight:700">18.3%（2025）→ ~15%（2027E）</span></div>
+    <div class="implication"><div class="label">投資啟示</div>樓市最壞時期或已過去但復甦路徑漫長。<span style="color:#fff;font-weight:700">避免重倉內房股</span>，但可關注物管和建材板塊的均值回歸機會。一線城市房價企穩對<span style="color:#fff;font-weight:700">消費信心修復</span>有傳導效應。</div>
+  </div>
+</div>
+
+<div class="section" id="yuan-credit">
+  <h2><span class="tag tag-misc">人民幣與融資</span> 強幣信號疊加信貸脈衝</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--green)">7.6萬億</div><div class="lbl">1月社融總量
+（預估）</div></div>
+    <div class="stat"><div class="val" style="color:var(--green)">5.2萬億</div><div class="lbl">1月新增人民幣
+貸款（預估）</div></div>
+    <div class="stat"><div class="val">CNY</div><div class="lbl">習近平「強幣」
+表態</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">習近平「強大人民幣」表態 — 這次可能意味著升值</div>
+    <p>彭博策略師Stephen Chiu指出，美元兌亞洲貨幣在2026年上半年可能受季節性和倉位因素支撐，但一旦<span style="color:#fff;font-weight:700">去美元化主題</span>重新浮現，美元可能轉弱——尤其若市場質疑美國債務可持續性或聯儲獨立性。在此背景下，<span style="color:#fff;font-weight:700">人民幣、馬來西亞令吉</span>以及港元、新加坡元等區域避風港貨幣的外匯組合價值高於同類。人民幣受益於結構性順風：習近平的「強大貨幣」表態、全球科技週期可能見頂對美國國際收支的衝擊，以及穩定幣助推的美元化趨勢或引發政策反制。聯儲在12月降息<span style="color:#fff;font-weight:700">25個基點</span>後，2026年寬鬆路徑溫和，短期利差仍偏向美元。</p>
+    <div class="data-point">亞洲貨幣首選：<span style="color:#fff;font-weight:700">CNY、MYR、HKD、SGD</span> &nbsp;|&nbsp; 去美元化觸發點：<span style="color:#fff;font-weight:700">Q2（類似2025年Q2走勢）</span> &nbsp;|&nbsp; 聯儲2026年降息預期：<span style="color:#fff;font-weight:700">溫和</span></div>
+    <div class="implication"><div class="label">投資啟示</div>短期美元仍有韌性，<span style="color:#fff;font-weight:700">不急於做空美元兌亞幣</span>。但Q2後關注去美元化交易——<span style="color:#fff;font-weight:700">逢低增持人民幣和新加坡元</span>。黃金作為儲備貨幣替代的主題持續。</div>
   </div>
   <div class="article">
-    <div class="article-title">CHINA PREVIEW Seasonality and</div>
-    <div style="margin-bottom:6px"><span class="tag tag-china">中國</span> </div>
-    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:53:03+08:00</p>
+    <div class="article-title">1月信貸有望跳升 — 季節性與債券發行共振</div>
+    <p>中國1月社會融資規模預計跳升至<span style="color:#fff;font-weight:700">7.6萬億元</span>，較12月的<span style="color:#fff;font-weight:700">2.2萬億元</span>大幅增加，亦高於去年同期的<span style="color:#fff;font-weight:700">7.1萬億元</span>。新增人民幣貸款料攀升至<span style="color:#fff;font-weight:700">5.2萬億元</span>，為12月水平的五倍以上。中央和地方政府通過債券市場淨融資預計達<span style="color:#fff;font-weight:700">1.6萬億元</span>，較12月翻倍。企業債融資約<span style="color:#fff;font-weight:700">0.2萬億元</span>，較12月增加約<span style="color:#fff;font-weight:700">600億元</span>。年初效應（銀行搶投放）和政府專項債提前發行是主要推動力。</p>
+    <div class="data-point">社融總量：<span style="color:#fff;font-weight:700">7.6萬億元（預估）</span> vs 上月 2.2萬億 &nbsp;|&nbsp; 新增貸款：<span style="color:#fff;font-weight:700">5.2萬億元</span> &nbsp;|&nbsp; 政府債淨融資：<span style="color:#fff;font-weight:700">1.6萬億元（+2x MoM）</span></div>
+    <div class="implication"><div class="label">投資啟示</div>信貸脈衝回升為短期流動性提供支撐。<span style="color:#fff;font-weight:700">關注2-3月數據是否延續</span>——若持續高增，利好A股及中國信用債。</div>
   </div>
-  <div class="article">
-    <div class="article-title">CHINA REACT Data Clears Low Ba</div>
-    <div style="margin-bottom:6px"><span class="tag tag-china">中國</span> </div>
-    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:53:03+08:00</p>
-  </div>
-  <div class="article">
-    <div class="article-title">Xi&#x27;s &#x27;Powerful&#x27; Yuan Vow Could Mean FX Appreciation This Time</div>
-    <div style="margin-bottom:6px"><span class="tag tag-china">中國</span> </div>
-    <p># Xi&#x27;s &#x27;Powerful&#x27; Yuan Vow Could Mean FX Appreciation This Time</p>
-  </div>
-  <div class="article">
-    <div class="article-title">中国的⼗五五规划重点着眼于推动科技发展和消费</div>
-    <div style="margin-bottom:6px"><span class="tag tag-china">中國</span> </div>
-    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:54:33+08:00</p>
-  </div>
-  <div class="article">
-    <div class="article-title">中國樓市調整「進度條」已近 70% 2027 年或可結束下滑</div>
-    <div style="margin-bottom:6px"><span class="tag tag-china">中國</span> </div>
-    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:54:38+08:00</p>
-  </div>
+</div>
+
+<div class="callout" id="takeaways">
+  <div class="callout-title">基金經理人重點摘要</div>
+  <ul>
+    <li><strong>宏觀數據：</strong>首份經濟數據超低預期但絕對水平偏弱。Q2人行料降息10bp。**短線戰術做多中國利率債**。</li>
+    <li><strong>十五五規劃：</strong>硬科技+消費雙核。高技術佔GDP首超房地產。**長線增配半導體、AI、新能源**；關注央地財稅改革下城投債機會。</li>
+    <li><strong>樓市：</strong>調整已完成約70%，2027年或止跌。一線城市回暖但全國仍下行。**避免重倉內房，關注物管均值回歸**。</li>
+    <li><strong>人民幣：</strong>短期美元韌性猶存，Q2後去美元化交易或重啟。**逢低增持CNY和SGD**。</li>
+    <li><strong>信貸：</strong>1月社融預計7.6萬億，年初效應+政府債共振。若2-3月延續，**利好A股及中國信用債**。</li>
+    <li><strong>消費：</strong>春節數據回暖但脈衝式特徵明顯。家電以舊換新仍有催化，**等全國數據確認後再加倉消費板塊**。</li>
+  </ul>
 </div>
 
 <div class="nav-links">

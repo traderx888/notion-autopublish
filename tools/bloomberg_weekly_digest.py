@@ -1,8 +1,7 @@
 """Bloomberg Weekly Digest — Sunday summary of past 7 days.
 
-Generates a condensed "Week in Review" newsletter from all articles
-processed in the last 7 days, grouped by topic with first-paragraph
-excerpts and a key-themes callout.
+Uses Claude to synthesize a "Week in Review" editorial newsletter
+from all articles processed in the last 7 days.
 """
 from __future__ import annotations
 
@@ -12,14 +11,17 @@ import re
 import sys
 from datetime import datetime, timedelta
 from pathlib import Path
-from textwrap import shorten
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 if str(REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(REPO_ROOT))
 
+# Fix Windows cp950 encoding
+if sys.stdout.encoding and sys.stdout.encoding.lower() not in ("utf-8", "utf8"):
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+    sys.stderr.reconfigure(encoding="utf-8", errors="replace")
+
 from tools.bloomberg_pdf_convert import (
-    STATE_PATH,
     read_state,
     write_state,
     now_hkt_iso,
@@ -31,14 +33,16 @@ from tools.bloomberg_newsletter_build import (
     DEFAULT_META,
     OUTPUT_DIR,
     STUDENT_HTML,
-    _excerpt,
     _title_from_md,
     _date_label,
+    _read_article_text,
+    synthesize_with_claude,
+    _render_section_html,
+    _bold_to_html,
 )
 
 
 def _iso_to_dt(s: str) -> datetime:
-    """Parse ISO timestamp to datetime."""
     return datetime.fromisoformat(s)
 
 
@@ -49,7 +53,6 @@ def _week_label() -> str:
 
 
 def _collect_recent_articles(state: dict, days: int = 7) -> dict[str, list[dict]]:
-    """Collect articles processed in the last N days, grouped by primary topic."""
     cutoff = datetime.now(HKT) - timedelta(days=days)
     groups: dict[str, list[dict]] = {}
 
@@ -63,7 +66,6 @@ def _collect_recent_articles(state: dict, days: int = 7) -> dict[str, list[dict]
                 dt = dt.replace(tzinfo=HKT)
         except Exception:
             continue
-
         if dt < cutoff:
             continue
 
@@ -80,69 +82,161 @@ def _collect_recent_articles(state: dict, days: int = 7) -> dict[str, list[dict]
             "title": _title_from_md(md_path),
         }
         groups.setdefault(primary, []).append(entry)
-
     return groups
 
 
-def _render_digest_section(topic: str, articles: list[dict]) -> str:
-    """Render a condensed topic section for the digest."""
-    meta = TOPIC_META.get(topic, DEFAULT_META)
-    zh_name, en_name, css_class, _ = meta
+# ---------------------------------------------------------------------------
+# Weekly digest synthesis prompt
+# ---------------------------------------------------------------------------
+DIGEST_PROMPT = """\
+You are an editorial assistant for a fund management weekly digest targeting finance students in Hong Kong.
 
-    items_html = ""
-    for a in articles:
-        title = html_mod.escape(a["title"])
-        excerpt = ""
-        try:
-            text = Path(a["mdPath"]).read_text(encoding="utf-8")
-            excerpt = html_mod.escape(_excerpt(text, max_chars=200))
-        except Exception:
-            pass
-        items_html += f"""\
-  <div class="article">
-    <div class="article-title">{title}</div>
-    <p>{excerpt}</p>
-  </div>
+You will receive Bloomberg research articles from the past week grouped by topic. Synthesize them into a concise weekly digest in JSON format.
+
+## Output Format (strict JSON)
+
+```json
+{
+  "title_zh": "本週市場回顧",
+  "title_en": "Week in Review",
+  "sections": [
+    {
+      "id": "section-anchor",
+      "tag_zh": "利率",
+      "tag_en": "Rates",
+      "heading_zh": "央行政策與利率走向",
+      "stats": [
+        {"val": "3.50%", "lbl_zh": "Fed利率\\n維持不變", "color": ""},
+        {"val": "+0.25%", "lbl_zh": "BOJ加息\\n4月預期", "color": "red"}
+      ],
+      "articles": [
+        {
+          "title": "本週利率焦點",
+          "summary_zh": "本週三大央行政策動態：聯準會按兵不動，日銀... **關鍵數據**突出顯示。",
+          "data_points": "Fed利率：**3.50-3.75%** | BOJ下次決議：**4月** | ECB通膨目標：**2%**",
+          "implication_zh": "利率前端仍有空間。**關注4月BOJ決議**。"
+        }
+      ]
+    }
+  ],
+  "fund_manager_takeaways": [
+    "<strong>本週最重要：</strong>概述要點。",
+    "<strong>利率：</strong>要點與行動建議。",
+    "<strong>下週關注：</strong>即將到來的事件。"
+  ]
+}
+```
+
+## Rules
+
+1. **This is a WEEKLY DIGEST** — condense each topic into 1-2 synthesized articles (not one per source article). Merge related information.
+2. **Language**: Traditional Chinese (繁體中文). English for proper nouns, tickers, technical terms.
+3. **Stat grids**: 2-3 key numbers per section. Color: "red" negative, "orange" warning, "green" positive, "" neutral.
+4. **Summaries**: 100-200 words per synthesized article. **Bold** key numbers. Tell the story of the week.
+5. **Data points**: Key metrics with " | " separators.
+6. **Implications**: Actionable and specific.
+7. **Fund manager takeaways**: 4-6 bullets. Always include "下週關注" as the last bullet.
+8. **Don't invent data**: Only use facts from source articles.
+9. Output ONLY the JSON, no markdown fences, no explanation.
+
+## This Week's Articles
+
 """
 
-    return f"""\
-<div class="section" id="{topic}">
-  <h2><span class="tag {css_class}">{zh_name}</span> {en_name} ({len(articles)})</h2>
-{items_html}</div>"""
 
-
-def render_digest_html(
-    week_label: str,
-    groups: dict[str, list[dict]],
-) -> str:
-    """Render the weekly digest newsletter."""
-    total = sum(len(v) for v in groups.values())
-    date_label = _date_label()
-
-    # Stat grid: top 3 topics by article count
-    sorted_topics = sorted(groups.keys(), key=lambda t: len(groups[t]), reverse=True)
-
-    stat_items = ""
-    for topic in sorted_topics[:3]:
+def _build_digest_prompt(groups: dict[str, list[dict]]) -> str:
+    prompt = DIGEST_PROMPT
+    for topic, articles in sorted(groups.items(), key=lambda x: -len(x[1])):
         meta = TOPIC_META.get(topic, DEFAULT_META)
-        stat_items += f'    <div class="stat"><div class="val">{len(groups[topic])}</div><div class="lbl">{meta[0]}<br>{meta[1]}</div></div>\n'
+        prompt += f"\n### Topic: {meta[1]} ({meta[0]}) — {len(articles)} articles\n\n"
+        for a in articles:
+            body = _read_article_text(a["mdPath"], max_chars=2000)
+            prompt += f"#### {a['title']}\n{body}\n\n---\n\n"
+    return prompt
+
+
+def _synthesize_digest(groups: dict[str, list[dict]]) -> dict | None:
+    """Use Claude to synthesize the weekly digest."""
+    all_articles = [a for arts in groups.values() for a in arts]
+    topics = list(groups.keys())
+    prompt = _build_digest_prompt(groups)
+
+    from tools.bloomberg_newsletter_build import _parse_claude_json
+    import subprocess
+    try:
+        print(f"  [CLAUDE] Synthesizing weekly digest: {len(all_articles)} articles across {len(topics)} topics ({len(prompt)} chars)...")
+        result = subprocess.run(
+            ["claude", "-p", "--output-format", "json"],
+            input=prompt,
+            capture_output=True,
+            text=True,
+            timeout=300,
+            encoding="utf-8",
+            errors="replace",
+        )
+        if result.returncode != 0:
+            print(f"  [CLAUDE ERR] rc={result.returncode}")
+            return None
+
+        parsed = _parse_claude_json(result.stdout.strip())
+        if parsed:
+            return parsed
+        print("  [CLAUDE ERR] No valid JSON in response")
+        return None
+    except FileNotFoundError:
+        # Fallback to SDK
+        try:
+            import anthropic
+            client = anthropic.Anthropic()
+            message = client.messages.create(
+                model="claude-sonnet-4-20250514",
+                max_tokens=8000,
+                messages=[{"role": "user", "content": prompt}],
+            )
+            raw_text = message.content[0].text
+            json_match = re.search(r"\{[\s\S]*\}", raw_text)
+            if json_match:
+                return json.loads(json_match.group())
+        except Exception as e:
+            print(f"  [ERR] {e}")
+        return None
+    except Exception as e:
+        print(f"  [CLAUDE ERR] {e}")
+        return None
+
+
+def render_digest_html(week_label: str, synthesized: dict) -> str:
+    """Render digest HTML from Claude-synthesized content."""
+    title_zh = synthesized.get("title_zh", "本週市場回顧")
+    title_en = synthesized.get("title_en", "Week in Review")
+    sections = synthesized.get("sections", [])
+    date_label = _date_label()
 
     # TOC
     toc_items = ""
-    for topic in sorted_topics:
-        meta = TOPIC_META.get(topic, DEFAULT_META)
-        toc_items += f'    <li><a href="#{topic}">{meta[0]} {meta[1]} ({len(groups[topic])}) &rarr;</a></li>\n'
+    for s in sections:
+        sid = s.get("id", "section")
+        label = s.get("tag_zh", "") + " " + s.get("heading_zh", "")
+        toc_items += f'    <li><a href="#{sid}">{label}</a></li>\n'
 
     # Sections
+    topics_all = [s.get("tag_en", "").lower() for s in sections]
     sections_html = "\n\n".join(
-        _render_digest_section(topic, groups[topic]) for topic in sorted_topics
+        _render_section_html(s, topics_all) for s in sections
     )
 
-    # Key themes callout
-    themes_html = ""
-    for topic in sorted_topics[:5]:
-        meta = TOPIC_META.get(topic, DEFAULT_META)
-        themes_html += f"    <li><strong>{meta[0]} {meta[1]}:</strong> {len(groups[topic])} articles this week</li>\n"
+    # Takeaways
+    takeaways = synthesized.get("fund_manager_takeaways", [])
+    takeaways_html = ""
+    if takeaways:
+        items = "\n".join(f"    <li>{t}</li>" for t in takeaways)
+        takeaways_html = f"""\
+<div class="callout" id="takeaways">
+  <div class="callout-title">基金經理人本週重點摘要</div>
+  <ul>
+{items}
+  </ul>
+</div>"""
 
     return f"""\
 <!DOCTYPE html>
@@ -150,7 +244,7 @@ def render_digest_html(
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>彭博週報 {week_label} — Week in Review</title>
+<title>彭博週報 {week_label} — {title_zh}</title>
 <style>
 {NEWSLETTER_CSS}
   .callout {{ background: rgba(210,153,34,0.08); border: 1px solid rgba(210,153,34,0.3); border-radius: 6px; padding: 16px; margin: 16px 0; }}
@@ -162,7 +256,7 @@ def render_digest_html(
 <body>
 
 <h1>彭博週報 Week in Review</h1>
-<p class="subtitle">{week_label} | {total} articles across {len(groups)} topics</p>
+<p class="subtitle">{week_label} | {title_zh}</p>
 <span class="issue-badge">{date_label} 週報</span>
 
 <div class="nav-links">
@@ -170,22 +264,16 @@ def render_digest_html(
   <span><a href="student.html">返回目錄 &rarr;</a></span>
 </div>
 
-<div class="stat-grid">
-{stat_items}</div>
-
 <div class="toc">
   <div class="toc-title">本週主題 Topics This Week</div>
   <ol>
-{toc_items}  </ol>
+{toc_items}    <li><a href="#takeaways">基金經理人重點摘要</a></li>
+  </ol>
 </div>
 
 {sections_html}
 
-<div class="callout">
-  <div class="callout-title">本週重點主題 Key Themes This Week</div>
-  <ul>
-{themes_html}  </ul>
-</div>
+{takeaways_html}
 
 <div class="nav-links">
   <span></span>
@@ -201,8 +289,7 @@ def render_digest_html(
 </html>"""
 
 
-def _update_student_portal_digest(week_label: str, filename: str, total: int, topic_count: int) -> None:
-    """Insert a weekly digest card into student.html."""
+def _update_student_portal_digest(week_label: str, filename: str, title_zh: str, total: int) -> None:
     from bs4 import BeautifulSoup
 
     html_text = STUDENT_HTML.read_text(encoding="utf-8")
@@ -213,7 +300,7 @@ def _update_student_portal_digest(week_label: str, filename: str, total: int, to
         print("[WARN] Could not find footer in student.html")
         return
 
-    # Check if there's already a WEEKLY DIGESTS section label
+    # Check for existing WEEKLY DIGESTS label
     digest_label = None
     for el in soup.find_all("div", class_="section-label"):
         if "WEEKLY" in (el.get_text() or "").upper():
@@ -226,19 +313,18 @@ def _update_student_portal_digest(week_label: str, filename: str, total: int, to
 <a class="card" href="{filename}">
   <div class="card-header">
     <span class="card-icon">&#128214;</span>
-    <span class="card-title">週報 {week_label} — Week in Review</span>
+    <span class="card-title">週報 {week_label} — {title_zh}</span>
     <span class="card-date">{date_label}</span>
   </div>
   <div class="card-desc">
     <span class="tag tag-rates">週報</span><br>
-    {total} articles across {topic_count} topics
+    {total} articles — Week in Review
   </div>
 </a>
 """
     new_card = BeautifulSoup(card_html, "html.parser")
 
     if not digest_label:
-        # Create the section label
         label_html = '<div class="section-label">週報 WEEKLY DIGESTS</div>\n'
         label_el = BeautifulSoup(label_html, "html.parser")
         footer.insert_before(label_el)
@@ -251,15 +337,10 @@ def _update_student_portal_digest(week_label: str, filename: str, total: int, to
     print(f"[OK] Updated student.html with weekly digest {week_label}")
 
 
-# ---------------------------------------------------------------------------
-# Main
-# ---------------------------------------------------------------------------
 def build_digest(dry_run: bool = False) -> dict | None:
-    """Build the weekly digest. Returns metadata or None if nothing to digest."""
     state = read_state()
     week_label = _week_label()
 
-    # Check if already generated this week
     if week_label in state.get("weeklyDigests", {}):
         print(f"Weekly digest for {week_label} already exists, skipping.")
         return None
@@ -280,11 +361,18 @@ def build_digest(dry_run: bool = False) -> dict | None:
         print(f"[DRY-RUN] Would generate {filename}")
         return {"week": week_label, "filename": filename, "total": total}
 
-    html_content = render_digest_html(week_label, groups)
+    # Claude synthesis
+    synthesized = _synthesize_digest(groups)
+    if not synthesized:
+        print("[SKIP] Claude synthesis failed for weekly digest")
+        return None
+
+    html_content = render_digest_html(week_label, synthesized)
     out_path.write_text(html_content, encoding="utf-8")
     print(f"[OK] Generated {filename}")
 
-    # Update state
+    title_zh = synthesized.get("title_zh", "本週市場回顧")
+
     state.setdefault("weeklyDigests", {})[week_label] = {
         "filename": filename,
         "generatedAt": now_hkt_iso(),
@@ -293,8 +381,7 @@ def build_digest(dry_run: bool = False) -> dict | None:
     }
     write_state(state)
 
-    # Update student portal
-    _update_student_portal_digest(week_label, filename, total, len(groups))
+    _update_student_portal_digest(week_label, filename, title_zh, total)
 
     return {"week": week_label, "filename": filename, "total": total}
 
@@ -302,7 +389,7 @@ def build_digest(dry_run: bool = False) -> dict | None:
 if __name__ == "__main__":
     import argparse
 
-    parser = argparse.ArgumentParser(description="Build Bloomberg weekly digest")
+    parser = argparse.ArgumentParser(description="Build Bloomberg weekly digest with Claude synthesis")
     parser.add_argument("--dry-run", action="store_true")
     args = parser.parse_args()
     build_digest(dry_run=args.dry_run)

@@ -41,7 +41,7 @@
       "x": 24,
       "y": 118.0,
       "width": 980,
-      "height": 3420.0,
+      "height": 4830.0,
       "backgroundColor": "#e7f5ff",
       "strokeColor": "#74c0fc",
       "strokeStyle": "solid",
@@ -119,7 +119,301 @@
         ],
         [
           638.0,
-          2110.0
+          2767.0
+        ]
+      ],
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "card-commodity_live_overlay_0945",
+      "type": "rectangle",
+      "x": 42.0,
+      "y": 242.0,
+      "width": 430.0,
+      "height": 96.0,
+      "backgroundColor": "#d0ebff",
+      "strokeColor": "#1c7ed6",
+      "strokeStyle": "solid",
+      "label": {
+        "text": "Commodity Model - Live Overlay Report\n09:45 HKT\nFresh gold, silver, copper, and DXY live-\noverlay summary"
+      },
+      "roundness": {
+        "type": 3
+      },
+      "fillStyle": "solid",
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "arrow-commodity_live_overlay_0945",
+      "type": "arrow",
+      "x": 472.0,
+      "y": 290.0,
+      "strokeColor": "#495057",
+      "strokeStyle": "solid",
+      "label": {
+        "text": ""
+      },
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          638.0,
+          2662.0
+        ]
+      ],
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "card-commodity_live_overlay_2145",
+      "type": "rectangle",
+      "x": 42.0,
+      "y": 356.0,
+      "width": 430.0,
+      "height": 96.0,
+      "backgroundColor": "#d0ebff",
+      "strokeColor": "#1c7ed6",
+      "strokeStyle": "solid",
+      "label": {
+        "text": "Commodity Model - Live Overlay Report\n21:45 HKT\nFresh gold, silver, copper, and DXY live-\noverlay summary"
+      },
+      "roundness": {
+        "type": 3
+      },
+      "fillStyle": "solid",
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "arrow-commodity_live_overlay_2145",
+      "type": "arrow",
+      "x": 472.0,
+      "y": 404.0,
+      "strokeColor": "#495057",
+      "strokeStyle": "solid",
+      "label": {
+        "text": ""
+      },
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          638.0,
+          2548.0
+        ]
+      ],
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "card-cross_asset_momentum_0905",
+      "type": "rectangle",
+      "x": 42.0,
+      "y": 470.0,
+      "width": 430.0,
+      "height": 96.0,
+      "backgroundColor": "#d0ebff",
+      "strokeColor": "#1c7ed6",
+      "strokeStyle": "solid",
+      "label": {
+        "text": "Cross-Asset Momentum (1D)\n09:05 HKT\nOne-day momentum snapshot across equity,\ndollar, gold, crypto, and vol proxies"
+      },
+      "roundness": {
+        "type": 3
+      },
+      "fillStyle": "solid",
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "arrow-cross_asset_momentum_0905",
+      "type": "arrow",
+      "x": 472.0,
+      "y": 518.0,
+      "strokeColor": "#495057",
+      "strokeStyle": "solid",
+      "label": {
+        "text": ""
+      },
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          638.0,
+          2434.0
+        ]
+      ],
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "card-cross_asset_momentum_1145",
+      "type": "rectangle",
+      "x": 42.0,
+      "y": 584.0,
+      "width": 430.0,
+      "height": 96.0,
+      "backgroundColor": "#d0ebff",
+      "strokeColor": "#1c7ed6",
+      "strokeStyle": "solid",
+      "label": {
+        "text": "Cross-Asset Momentum (1D)\n11:45 HKT\nOne-day momentum snapshot across equity,\ndollar, gold, crypto, and vol proxies"
+      },
+      "roundness": {
+        "type": 3
+      },
+      "fillStyle": "solid",
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "arrow-cross_asset_momentum_1145",
+      "type": "arrow",
+      "x": 472.0,
+      "y": 632.0,
+      "strokeColor": "#495057",
+      "strokeStyle": "solid",
+      "label": {
+        "text": ""
+      },
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          638.0,
+          2320.0
+        ]
+      ],
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "card-cross_asset_momentum_1545",
+      "type": "rectangle",
+      "x": 42.0,
+      "y": 698.0,
+      "width": 430.0,
+      "height": 96.0,
+      "backgroundColor": "#d0ebff",
+      "strokeColor": "#1c7ed6",
+      "strokeStyle": "solid",
+      "label": {
+        "text": "Cross-Asset Momentum (1D)\n15:45 HKT\nOne-day momentum snapshot across equity,\ndollar, gold, crypto, and vol proxies"
+      },
+      "roundness": {
+        "type": 3
+      },
+      "fillStyle": "solid",
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "arrow-cross_asset_momentum_1545",
+      "type": "arrow",
+      "x": 472.0,
+      "y": 746.0,
+      "strokeColor": "#495057",
+      "strokeStyle": "solid",
+      "label": {
+        "text": ""
+      },
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          638.0,
+          2206.0
+        ]
+      ],
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "card-cross_asset_momentum_2100",
+      "type": "rectangle",
+      "x": 42.0,
+      "y": 812.0,
+      "width": 430.0,
+      "height": 96.0,
+      "backgroundColor": "#d0ebff",
+      "strokeColor": "#1c7ed6",
+      "strokeStyle": "solid",
+      "label": {
+        "text": "Cross-Asset Momentum (1D)\n21:00 HKT\nOne-day momentum snapshot across equity,\ndollar, gold, crypto, and vol proxies"
+      },
+      "roundness": {
+        "type": 3
+      },
+      "fillStyle": "solid",
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "arrow-cross_asset_momentum_2100",
+      "type": "arrow",
+      "x": 472.0,
+      "y": 860.0,
+      "strokeColor": "#495057",
+      "strokeStyle": "solid",
+      "label": {
+        "text": ""
+      },
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          638.0,
+          2092.0
         ]
       ],
       "syncedAt": "2026-03-12T13:30:00.000Z",
@@ -129,7 +423,7 @@
       "id": "card-morning_digest",
       "type": "rectangle",
       "x": 42.0,
-      "y": 242.0,
+      "y": 926.0,
       "width": 430.0,
       "height": 78.0,
       "backgroundColor": "#d0ebff",
@@ -152,7 +446,7 @@
       "id": "arrow-morning_digest",
       "type": "arrow",
       "x": 472.0,
-      "y": 281.0,
+      "y": 965.0,
       "strokeColor": "#495057",
       "strokeStyle": "solid",
       "label": {
@@ -168,7 +462,7 @@
         ],
         [
           638.0,
-          2014.0
+          1987.0
         ]
       ],
       "syncedAt": "2026-03-12T13:30:00.000Z",
@@ -178,7 +472,7 @@
       "id": "card-daily_synthesis",
       "type": "rectangle",
       "x": 42.0,
-      "y": 338.0,
+      "y": 1022.0,
       "width": 430.0,
       "height": 78.0,
       "backgroundColor": "#d0ebff",
@@ -201,7 +495,7 @@
       "id": "arrow-daily_synthesis",
       "type": "arrow",
       "x": 472.0,
-      "y": 377.0,
+      "y": 1061.0,
       "strokeColor": "#495057",
       "strokeStyle": "solid",
       "label": {
@@ -217,7 +511,7 @@
         ],
         [
           638.0,
-          1918.0
+          1891.0
         ]
       ],
       "syncedAt": "2026-03-12T13:30:00.000Z",
@@ -227,7 +521,7 @@
       "id": "card-evening_digest",
       "type": "rectangle",
       "x": 42.0,
-      "y": 434.0,
+      "y": 1118.0,
       "width": 430.0,
       "height": 78.0,
       "backgroundColor": "#d0ebff",
@@ -250,7 +544,7 @@
       "id": "arrow-evening_digest",
       "type": "arrow",
       "x": 472.0,
-      "y": 473.0,
+      "y": 1157.0,
       "strokeColor": "#495057",
       "strokeStyle": "solid",
       "label": {
@@ -266,7 +560,7 @@
         ],
         [
           638.0,
-          1822.0
+          1795.0
         ]
       ],
       "syncedAt": "2026-03-12T13:30:00.000Z",
@@ -276,7 +570,7 @@
       "id": "card-night_digest",
       "type": "rectangle",
       "x": 42.0,
-      "y": 530.0,
+      "y": 1214.0,
       "width": 430.0,
       "height": 78.0,
       "backgroundColor": "#d0ebff",
@@ -299,7 +593,7 @@
       "id": "arrow-night_digest",
       "type": "arrow",
       "x": 472.0,
-      "y": 569.0,
+      "y": 1253.0,
       "strokeColor": "#495057",
       "strokeStyle": "solid",
       "label": {
@@ -315,7 +609,7 @@
         ],
         [
           638.0,
-          1726.0
+          1699.0
         ]
       ],
       "syncedAt": "2026-03-12T13:30:00.000Z",
@@ -325,7 +619,7 @@
       "id": "card-crypto_etf_flow_am",
       "type": "rectangle",
       "x": 42.0,
-      "y": 626.0,
+      "y": 1310.0,
       "width": 430.0,
       "height": 78.0,
       "backgroundColor": "#d0ebff",
@@ -348,7 +642,7 @@
       "id": "arrow-crypto_etf_flow_am",
       "type": "arrow",
       "x": 472.0,
-      "y": 665.0,
+      "y": 1349.0,
       "strokeColor": "#495057",
       "strokeStyle": "solid",
       "label": {
@@ -364,7 +658,7 @@
         ],
         [
           638.0,
-          1630.0
+          1603.0
         ]
       ],
       "syncedAt": "2026-03-12T13:30:00.000Z",
@@ -374,7 +668,7 @@
       "id": "card-crypto_etf_flow_mid",
       "type": "rectangle",
       "x": 42.0,
-      "y": 722.0,
+      "y": 1406.0,
       "width": 430.0,
       "height": 78.0,
       "backgroundColor": "#d0ebff",
@@ -397,7 +691,7 @@
       "id": "arrow-crypto_etf_flow_mid",
       "type": "arrow",
       "x": 472.0,
-      "y": 761.0,
+      "y": 1445.0,
       "strokeColor": "#495057",
       "strokeStyle": "solid",
       "label": {
@@ -413,7 +707,56 @@
         ],
         [
           638.0,
-          1534.0
+          1507.0
+        ]
+      ],
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "card-crypto_news_1000",
+      "type": "rectangle",
+      "x": 42.0,
+      "y": 1502.0,
+      "width": 430.0,
+      "height": 78.0,
+      "backgroundColor": "#d0ebff",
+      "strokeColor": "#1c7ed6",
+      "strokeStyle": "solid",
+      "label": {
+        "text": "Crypto Daily News\n10:00 HKT\nTop 8 Chinese + English crypto headlines"
+      },
+      "roundness": {
+        "type": 3
+      },
+      "fillStyle": "solid",
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "arrow-crypto_news_1000",
+      "type": "arrow",
+      "x": 472.0,
+      "y": 1541.0,
+      "strokeColor": "#495057",
+      "strokeStyle": "solid",
+      "label": {
+        "text": ""
+      },
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          638.0,
+          1411.0
         ]
       ],
       "syncedAt": "2026-03-12T13:30:00.000Z",
@@ -423,7 +766,7 @@
       "id": "card-crypto_news_daily",
       "type": "rectangle",
       "x": 42.0,
-      "y": 818.0,
+      "y": 1598.0,
       "width": 430.0,
       "height": 78.0,
       "backgroundColor": "#d0ebff",
@@ -446,7 +789,7 @@
       "id": "arrow-crypto_news_daily",
       "type": "arrow",
       "x": 472.0,
-      "y": 857.0,
+      "y": 1637.0,
       "strokeColor": "#495057",
       "strokeStyle": "solid",
       "label": {
@@ -462,7 +805,56 @@
         ],
         [
           638.0,
-          1438.0
+          1315.0
+        ]
+      ],
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "card-crypto_news_1140",
+      "type": "rectangle",
+      "x": 42.0,
+      "y": 1694.0,
+      "width": 430.0,
+      "height": 78.0,
+      "backgroundColor": "#d0ebff",
+      "strokeColor": "#1c7ed6",
+      "strokeStyle": "solid",
+      "label": {
+        "text": "Crypto Daily News\n11:40 HKT\nTop 8 Chinese + English crypto headlines"
+      },
+      "roundness": {
+        "type": 3
+      },
+      "fillStyle": "solid",
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "arrow-crypto_news_1140",
+      "type": "arrow",
+      "x": 472.0,
+      "y": 1733.0,
+      "strokeColor": "#495057",
+      "strokeStyle": "solid",
+      "label": {
+        "text": ""
+      },
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          638.0,
+          1219.0
         ]
       ],
       "syncedAt": "2026-03-12T13:30:00.000Z",
@@ -472,7 +864,7 @@
       "id": "card-deepvue_dashboard",
       "type": "rectangle",
       "x": 42.0,
-      "y": 914.0,
+      "y": 1790.0,
       "width": 430.0,
       "height": 78.0,
       "backgroundColor": "#d0ebff",
@@ -495,7 +887,7 @@
       "id": "arrow-deepvue_dashboard",
       "type": "arrow",
       "x": 472.0,
-      "y": 953.0,
+      "y": 1829.0,
       "strokeColor": "#495057",
       "strokeStyle": "solid",
       "label": {
@@ -511,7 +903,56 @@
         ],
         [
           638.0,
-          1342.0
+          1123.0
+        ]
+      ],
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "card-southbound_1230",
+      "type": "rectangle",
+      "x": 42.0,
+      "y": 1886.0,
+      "width": 430.0,
+      "height": 96.0,
+      "backgroundColor": "#d0ebff",
+      "strokeColor": "#1c7ed6",
+      "strokeStyle": "solid",
+      "label": {
+        "text": "Southbound Flow\n12:30 HKT\nMidday Southbound screenshot and screen\nbrief"
+      },
+      "roundness": {
+        "type": 3
+      },
+      "fillStyle": "solid",
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "arrow-southbound_1230",
+      "type": "arrow",
+      "x": 472.0,
+      "y": 1934.0,
+      "strokeColor": "#495057",
+      "strokeStyle": "solid",
+      "label": {
+        "text": ""
+      },
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          638.0,
+          1018.0
         ]
       ],
       "syncedAt": "2026-03-12T13:30:00.000Z",
@@ -521,7 +962,7 @@
       "id": "card-southbound",
       "type": "rectangle",
       "x": 42.0,
-      "y": 1010.0,
+      "y": 2000.0,
       "width": 430.0,
       "height": 78.0,
       "backgroundColor": "#d0ebff",
@@ -544,7 +985,7 @@
       "id": "arrow-southbound",
       "type": "arrow",
       "x": 472.0,
-      "y": 1049.0,
+      "y": 2039.0,
       "strokeColor": "#495057",
       "strokeStyle": "solid",
       "label": {
@@ -560,7 +1001,7 @@
         ],
         [
           638.0,
-          1246.0
+          913.0
         ]
       ],
       "syncedAt": "2026-03-12T13:30:00.000Z",
@@ -570,7 +1011,7 @@
       "id": "card-jarvis_excel_sync_am",
       "type": "rectangle",
       "x": 42.0,
-      "y": 1106.0,
+      "y": 2096.0,
       "width": 430.0,
       "height": 78.0,
       "backgroundColor": "#d0ebff",
@@ -593,7 +1034,7 @@
       "id": "arrow-jarvis_excel_sync_am",
       "type": "arrow",
       "x": 472.0,
-      "y": 1145.0,
+      "y": 2135.0,
       "strokeColor": "#495057",
       "strokeStyle": "solid",
       "label": {
@@ -609,7 +1050,7 @@
         ],
         [
           638.0,
-          1150.0
+          817.0
         ]
       ],
       "syncedAt": "2026-03-12T13:30:00.000Z",
@@ -619,7 +1060,7 @@
       "id": "card-jarvis_excel_sync_pm",
       "type": "rectangle",
       "x": 42.0,
-      "y": 1202.0,
+      "y": 2192.0,
       "width": 430.0,
       "height": 78.0,
       "backgroundColor": "#d0ebff",
@@ -642,7 +1083,7 @@
       "id": "arrow-jarvis_excel_sync_pm",
       "type": "arrow",
       "x": 472.0,
-      "y": 1241.0,
+      "y": 2231.0,
       "strokeColor": "#495057",
       "strokeStyle": "solid",
       "label": {
@@ -658,7 +1099,7 @@
         ],
         [
           638.0,
-          1054.0
+          721.0
         ]
       ],
       "syncedAt": "2026-03-12T13:30:00.000Z",
@@ -668,7 +1109,7 @@
       "id": "card-jarvis_excel_sync_late",
       "type": "rectangle",
       "x": 42.0,
-      "y": 1298.0,
+      "y": 2288.0,
       "width": 430.0,
       "height": 78.0,
       "backgroundColor": "#d0ebff",
@@ -691,7 +1132,7 @@
       "id": "arrow-jarvis_excel_sync_late",
       "type": "arrow",
       "x": 472.0,
-      "y": 1337.0,
+      "y": 2327.0,
       "strokeColor": "#495057",
       "strokeStyle": "solid",
       "label": {
@@ -707,7 +1148,7 @@
         ],
         [
           638.0,
-          958.0
+          625.0
         ]
       ],
       "syncedAt": "2026-03-12T13:30:00.000Z",
@@ -717,7 +1158,7 @@
       "id": "card-futu_signals",
       "type": "rectangle",
       "x": 42.0,
-      "y": 1394.0,
+      "y": 2384.0,
       "width": 430.0,
       "height": 96.0,
       "backgroundColor": "#d0ebff",
@@ -740,7 +1181,7 @@
       "id": "arrow-futu_signals",
       "type": "arrow",
       "x": 472.0,
-      "y": 1442.0,
+      "y": 2432.0,
       "strokeColor": "#495057",
       "strokeStyle": "solid",
       "label": {
@@ -756,7 +1197,56 @@
         ],
         [
           638.0,
-          853.0
+          520.0
+        ]
+      ],
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "card-gdrive_breadth_regime_2045",
+      "type": "rectangle",
+      "x": 42.0,
+      "y": 2498.0,
+      "width": 430.0,
+      "height": 96.0,
+      "backgroundColor": "#d0ebff",
+      "strokeColor": "#1c7ed6",
+      "strokeStyle": "solid",
+      "label": {
+        "text": "GDrive Breadth & Regime Snapshot\n20:45 HKT\nBreadth, stage, regime, and factor snapshot\nfrom the daily GDrive recap"
+      },
+      "roundness": {
+        "type": 3
+      },
+      "fillStyle": "solid",
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "arrow-gdrive_breadth_regime_2045",
+      "type": "arrow",
+      "x": 472.0,
+      "y": 2546.0,
+      "strokeColor": "#495057",
+      "strokeStyle": "solid",
+      "label": {
+        "text": ""
+      },
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          638.0,
+          406.0
         ]
       ],
       "syncedAt": "2026-03-12T13:30:00.000Z",
@@ -766,7 +1256,7 @@
       "id": "card-georisk",
       "type": "rectangle",
       "x": 42.0,
-      "y": 1508.0,
+      "y": 2612.0,
       "width": 430.0,
       "height": 78.0,
       "backgroundColor": "#d0ebff",
@@ -789,7 +1279,7 @@
       "id": "arrow-georisk",
       "type": "arrow",
       "x": 472.0,
-      "y": 1547.0,
+      "y": 2651.0,
       "strokeColor": "#495057",
       "strokeStyle": "solid",
       "label": {
@@ -805,7 +1295,7 @@
         ],
         [
           638.0,
-          748.0
+          301.0
         ]
       ],
       "syncedAt": "2026-03-12T13:30:00.000Z",
@@ -815,7 +1305,7 @@
       "id": "card-jarvis_cbbc_tracker_am",
       "type": "rectangle",
       "x": 42.0,
-      "y": 1604.0,
+      "y": 2708.0,
       "width": 430.0,
       "height": 78.0,
       "backgroundColor": "#d0ebff",
@@ -838,7 +1328,7 @@
       "id": "arrow-jarvis_cbbc_tracker_am",
       "type": "arrow",
       "x": 472.0,
-      "y": 1643.0,
+      "y": 2747.0,
       "strokeColor": "#495057",
       "strokeStyle": "solid",
       "label": {
@@ -854,7 +1344,7 @@
         ],
         [
           638.0,
-          652.0
+          205.0
         ]
       ],
       "syncedAt": "2026-03-12T13:30:00.000Z",
@@ -864,7 +1354,7 @@
       "id": "card-friday_options",
       "type": "rectangle",
       "x": 42.0,
-      "y": 1700.0,
+      "y": 2804.0,
       "width": 430.0,
       "height": 96.0,
       "backgroundColor": "#d0ebff",
@@ -887,7 +1377,7 @@
       "id": "arrow-friday_options",
       "type": "arrow",
       "x": 472.0,
-      "y": 1748.0,
+      "y": 2852.0,
       "strokeColor": "#495057",
       "strokeStyle": "solid",
       "label": {
@@ -903,7 +1393,7 @@
         ],
         [
           638.0,
-          547.0
+          100.0
         ]
       ],
       "syncedAt": "2026-03-12T13:30:00.000Z",
@@ -913,7 +1403,7 @@
       "id": "card-friday_volume",
       "type": "rectangle",
       "x": 42.0,
-      "y": 1814.0,
+      "y": 2918.0,
       "width": 430.0,
       "height": 96.0,
       "backgroundColor": "#d0ebff",
@@ -936,7 +1426,7 @@
       "id": "arrow-friday_volume",
       "type": "arrow",
       "x": 472.0,
-      "y": 1862.0,
+      "y": 2966.0,
       "strokeColor": "#495057",
       "strokeStyle": "solid",
       "label": {
@@ -952,7 +1442,7 @@
         ],
         [
           638.0,
-          433.0
+          -14.0
         ]
       ],
       "syncedAt": "2026-03-12T13:30:00.000Z",
@@ -962,7 +1452,7 @@
       "id": "card-usdata",
       "type": "rectangle",
       "x": 42.0,
-      "y": 1928.0,
+      "y": 3032.0,
       "width": 430.0,
       "height": 78.0,
       "backgroundColor": "#d0ebff",
@@ -985,7 +1475,7 @@
       "id": "arrow-usdata",
       "type": "arrow",
       "x": 472.0,
-      "y": 1967.0,
+      "y": 3071.0,
       "strokeColor": "#495057",
       "strokeStyle": "solid",
       "label": {
@@ -1001,7 +1491,7 @@
         ],
         [
           638.0,
-          328.0
+          -119.0
         ]
       ],
       "syncedAt": "2026-03-12T13:30:00.000Z",
@@ -1011,7 +1501,7 @@
       "id": "card-jarvis_full",
       "type": "rectangle",
       "x": 42.0,
-      "y": 2024.0,
+      "y": 3128.0,
       "width": 430.0,
       "height": 78.0,
       "backgroundColor": "#d0ebff",
@@ -1034,7 +1524,7 @@
       "id": "arrow-jarvis_full",
       "type": "arrow",
       "x": 472.0,
-      "y": 2063.0,
+      "y": 3167.0,
       "strokeColor": "#495057",
       "strokeStyle": "solid",
       "label": {
@@ -1050,7 +1540,7 @@
         ],
         [
           638.0,
-          232.0
+          -215.0
         ]
       ],
       "syncedAt": "2026-03-12T13:30:00.000Z",
@@ -1060,7 +1550,7 @@
       "id": "card-jarvis_light_0950",
       "type": "rectangle",
       "x": 42.0,
-      "y": 2120.0,
+      "y": 3224.0,
       "width": 430.0,
       "height": 78.0,
       "backgroundColor": "#d0ebff",
@@ -1083,7 +1573,7 @@
       "id": "arrow-jarvis_light_0950",
       "type": "arrow",
       "x": 472.0,
-      "y": 2159.0,
+      "y": 3263.0,
       "strokeColor": "#495057",
       "strokeStyle": "solid",
       "label": {
@@ -1099,7 +1589,7 @@
         ],
         [
           638.0,
-          136.0
+          -311.0
         ]
       ],
       "syncedAt": "2026-03-12T13:30:00.000Z",
@@ -1109,7 +1599,7 @@
       "id": "card-jarvis_light_2100",
       "type": "rectangle",
       "x": 42.0,
-      "y": 2216.0,
+      "y": 3320.0,
       "width": 430.0,
       "height": 78.0,
       "backgroundColor": "#d0ebff",
@@ -1132,7 +1622,7 @@
       "id": "arrow-jarvis_light_2100",
       "type": "arrow",
       "x": 472.0,
-      "y": 2255.0,
+      "y": 3359.0,
       "strokeColor": "#495057",
       "strokeStyle": "solid",
       "label": {
@@ -1148,7 +1638,7 @@
         ],
         [
           638.0,
-          40.0
+          -407.0
         ]
       ],
       "syncedAt": "2026-03-12T13:30:00.000Z",
@@ -1158,7 +1648,7 @@
       "id": "card-jarvis_light_2230",
       "type": "rectangle",
       "x": 42.0,
-      "y": 2312.0,
+      "y": 3416.0,
       "width": 430.0,
       "height": 78.0,
       "backgroundColor": "#d0ebff",
@@ -1181,7 +1671,7 @@
       "id": "arrow-jarvis_light_2230",
       "type": "arrow",
       "x": 472.0,
-      "y": 2351.0,
+      "y": 3455.0,
       "strokeColor": "#495057",
       "strokeStyle": "solid",
       "label": {
@@ -1197,56 +1687,7 @@
         ],
         [
           638.0,
-          -56.0
-        ]
-      ],
-      "syncedAt": "2026-03-12T13:30:00.000Z",
-      "source": "codex"
-    },
-    {
-      "id": "card-excel",
-      "type": "rectangle",
-      "x": 42.0,
-      "y": 2408.0,
-      "width": 430.0,
-      "height": 78.0,
-      "backgroundColor": "#d0ebff",
-      "strokeColor": "#1c7ed6",
-      "strokeStyle": "solid",
-      "label": {
-        "text": "Excel Reminder\n10:00 HKT\nManual Excel and data reminder"
-      },
-      "roundness": {
-        "type": 3
-      },
-      "fillStyle": "solid",
-      "createdAt": "2026-03-12T13:30:00.000Z",
-      "updatedAt": "2026-03-12T13:30:00.000Z",
-      "version": 1,
-      "syncedAt": "2026-03-12T13:30:00.000Z",
-      "source": "codex"
-    },
-    {
-      "id": "arrow-excel",
-      "type": "arrow",
-      "x": 472.0,
-      "y": 2447.0,
-      "strokeColor": "#495057",
-      "strokeStyle": "solid",
-      "label": {
-        "text": ""
-      },
-      "createdAt": "2026-03-12T13:30:00.000Z",
-      "updatedAt": "2026-03-12T13:30:00.000Z",
-      "version": 1,
-      "points": [
-        [
-          0,
-          0
-        ],
-        [
-          638.0,
-          -152.0
+          -503.0
         ]
       ],
       "syncedAt": "2026-03-12T13:30:00.000Z",
@@ -1256,7 +1697,7 @@
       "id": "card-story_1030",
       "type": "rectangle",
       "x": 42.0,
-      "y": 2504.0,
+      "y": 3512.0,
       "width": 430.0,
       "height": 96.0,
       "backgroundColor": "#d0ebff",
@@ -1279,7 +1720,7 @@
       "id": "arrow-story_1030",
       "type": "arrow",
       "x": 472.0,
-      "y": 2552.0,
+      "y": 3560.0,
       "strokeColor": "#495057",
       "strokeStyle": "solid",
       "label": {
@@ -1295,7 +1736,56 @@
         ],
         [
           638.0,
-          -257.0
+          -608.0
+        ]
+      ],
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "card-newsletter",
+      "type": "rectangle",
+      "x": 42.0,
+      "y": 3626.0,
+      "width": 430.0,
+      "height": 96.0,
+      "backgroundColor": "#d0ebff",
+      "strokeColor": "#1c7ed6",
+      "strokeStyle": "solid",
+      "label": {
+        "text": "Newsletter\n11:00 HKT\nGenerate newsletter, publish site, and send\nthe live link to Telegram"
+      },
+      "roundness": {
+        "type": 3
+      },
+      "fillStyle": "solid",
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "arrow-newsletter",
+      "type": "arrow",
+      "x": 472.0,
+      "y": 3674.0,
+      "strokeColor": "#495057",
+      "strokeStyle": "solid",
+      "label": {
+        "text": ""
+      },
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          638.0,
+          -722.0
         ]
       ],
       "syncedAt": "2026-03-12T13:30:00.000Z",
@@ -1305,7 +1795,7 @@
       "id": "card-fundman_telegram_ops_listener",
       "type": "rectangle",
       "x": 42.0,
-      "y": 2618.0,
+      "y": 3740.0,
       "width": 430.0,
       "height": 78.0,
       "backgroundColor": "#d0ebff",
@@ -1328,7 +1818,7 @@
       "id": "arrow-fundman_telegram_ops_listener",
       "type": "arrow",
       "x": 472.0,
-      "y": 2657.0,
+      "y": 3779.0,
       "strokeColor": "#495057",
       "strokeStyle": "solid",
       "label": {
@@ -1344,7 +1834,7 @@
         ],
         [
           638.0,
-          -362.0
+          -827.0
         ]
       ],
       "syncedAt": "2026-03-12T13:30:00.000Z",
@@ -1354,7 +1844,7 @@
       "id": "card-schedule_audit",
       "type": "rectangle",
       "x": 42.0,
-      "y": 2714.0,
+      "y": 3836.0,
       "width": 430.0,
       "height": 78.0,
       "backgroundColor": "#d0ebff",
@@ -1377,7 +1867,7 @@
       "id": "arrow-schedule_audit",
       "type": "arrow",
       "x": 472.0,
-      "y": 2753.0,
+      "y": 3875.0,
       "strokeColor": "#495057",
       "strokeStyle": "solid",
       "label": {
@@ -1393,7 +1883,7 @@
         ],
         [
           638.0,
-          -458.0
+          -923.0
         ]
       ],
       "syncedAt": "2026-03-12T13:30:00.000Z",
@@ -1403,7 +1893,7 @@
       "id": "card-options_earnings_2100",
       "type": "rectangle",
       "x": 42.0,
-      "y": 2810.0,
+      "y": 3932.0,
       "width": 430.0,
       "height": 96.0,
       "backgroundColor": "#d0ebff",
@@ -1426,7 +1916,7 @@
       "id": "arrow-options_earnings_2100",
       "type": "arrow",
       "x": 472.0,
-      "y": 2858.0,
+      "y": 3980.0,
       "strokeColor": "#495057",
       "strokeStyle": "solid",
       "label": {
@@ -1442,7 +1932,7 @@
         ],
         [
           638.0,
-          -563.0
+          -1028.0
         ]
       ],
       "syncedAt": "2026-03-12T13:30:00.000Z",
@@ -1452,7 +1942,7 @@
       "id": "card-options_earnings_2330",
       "type": "rectangle",
       "x": 42.0,
-      "y": 2924.0,
+      "y": 4046.0,
       "width": 430.0,
       "height": 96.0,
       "backgroundColor": "#d0ebff",
@@ -1475,7 +1965,7 @@
       "id": "arrow-options_earnings_2330",
       "type": "arrow",
       "x": 472.0,
-      "y": 2972.0,
+      "y": 4094.0,
       "strokeColor": "#495057",
       "strokeStyle": "solid",
       "label": {
@@ -1491,7 +1981,105 @@
         ],
         [
           638.0,
-          -677.0
+          -1142.0
+        ]
+      ],
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "card-jarvis_cot_refresh",
+      "type": "rectangle",
+      "x": 42.0,
+      "y": 4160.0,
+      "width": 430.0,
+      "height": 78.0,
+      "backgroundColor": "#d0ebff",
+      "strokeColor": "#1c7ed6",
+      "strokeStyle": "solid",
+      "label": {
+        "text": "JARVIS-COT-refresh\n08:00 HKT\nrun_cot_refresh.bat"
+      },
+      "roundness": {
+        "type": 3
+      },
+      "fillStyle": "solid",
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "arrow-jarvis_cot_refresh",
+      "type": "arrow",
+      "x": 472.0,
+      "y": 4199.0,
+      "strokeColor": "#495057",
+      "strokeStyle": "solid",
+      "label": {
+        "text": ""
+      },
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          638.0,
+          -1247.0
+        ]
+      ],
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "card-ciovacco_weekly_feed",
+      "type": "rectangle",
+      "x": 42.0,
+      "y": 4256.0,
+      "width": 430.0,
+      "height": 78.0,
+      "backgroundColor": "#d0ebff",
+      "strokeColor": "#1c7ed6",
+      "strokeStyle": "solid",
+      "label": {
+        "text": "Ciovacco-Weekly-Feed\n14:00 HKT\nrun_ciovacco_weekly.bat"
+      },
+      "roundness": {
+        "type": 3
+      },
+      "fillStyle": "solid",
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "arrow-ciovacco_weekly_feed",
+      "type": "arrow",
+      "x": 472.0,
+      "y": 4295.0,
+      "strokeColor": "#495057",
+      "strokeStyle": "solid",
+      "label": {
+        "text": ""
+      },
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          638.0,
+          -1343.0
         ]
       ],
       "syncedAt": "2026-03-12T13:30:00.000Z",
@@ -1501,7 +2089,7 @@
       "id": "card-polymarket",
       "type": "rectangle",
       "x": 42.0,
-      "y": 3038.0,
+      "y": 4352.0,
       "width": 430.0,
       "height": 78.0,
       "backgroundColor": "#d0ebff",
@@ -1524,7 +2112,7 @@
       "id": "arrow-polymarket",
       "type": "arrow",
       "x": 472.0,
-      "y": 3077.0,
+      "y": 4391.0,
       "strokeColor": "#495057",
       "strokeStyle": "solid",
       "label": {
@@ -1540,7 +2128,7 @@
         ],
         [
           638.0,
-          -782.0
+          -1439.0
         ]
       ],
       "syncedAt": "2026-03-12T13:30:00.000Z",
@@ -1550,7 +2138,7 @@
       "id": "card-blp_pdf_title_pipeline",
       "type": "rectangle",
       "x": 42.0,
-      "y": 3134.0,
+      "y": 4448.0,
       "width": 430.0,
       "height": 96.0,
       "backgroundColor": "#d0ebff",
@@ -1573,7 +2161,7 @@
       "id": "arrow-blp_pdf_title_pipeline",
       "type": "arrow",
       "x": 472.0,
-      "y": 3182.0,
+      "y": 4496.0,
       "strokeColor": "#495057",
       "strokeStyle": "solid",
       "label": {
@@ -1589,7 +2177,56 @@
         ],
         [
           638.0,
-          -887.0
+          -1544.0
+        ]
+      ],
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "card-jarvis_polymarketmonitor",
+      "type": "rectangle",
+      "x": 42.0,
+      "y": 4562.0,
+      "width": 430.0,
+      "height": 78.0,
+      "backgroundColor": "#d0ebff",
+      "strokeColor": "#1c7ed6",
+      "strokeStyle": "solid",
+      "label": {
+        "text": "Jarvis-PolymarketMonitor\nn/a\nrun_polymarket_monitor.bat"
+      },
+      "roundness": {
+        "type": 3
+      },
+      "fillStyle": "solid",
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "arrow-jarvis_polymarketmonitor",
+      "type": "arrow",
+      "x": 472.0,
+      "y": 4601.0,
+      "strokeColor": "#495057",
+      "strokeStyle": "solid",
+      "label": {
+        "text": ""
+      },
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          638.0,
+          -1649.0
         ]
       ],
       "syncedAt": "2026-03-12T13:30:00.000Z",
@@ -1599,7 +2236,7 @@
       "id": "card-p_model_check",
       "type": "rectangle",
       "x": 42.0,
-      "y": 3248.0,
+      "y": 4658.0,
       "width": 430.0,
       "height": 78.0,
       "backgroundColor": "#d0ebff",
@@ -1622,7 +2259,7 @@
       "id": "arrow-p_model_check",
       "type": "arrow",
       "x": 472.0,
-      "y": 3287.0,
+      "y": 4697.0,
       "strokeColor": "#495057",
       "strokeStyle": "solid",
       "label": {
@@ -1638,7 +2275,7 @@
         ],
         [
           638.0,
-          -992.0
+          -1745.0
         ]
       ],
       "syncedAt": "2026-03-12T13:30:00.000Z",
@@ -1648,7 +2285,7 @@
       "id": "card-jarvis_portfolio_am",
       "type": "rectangle",
       "x": 42.0,
-      "y": 3344.0,
+      "y": 4754.0,
       "width": 430.0,
       "height": 78.0,
       "backgroundColor": "#d0ebff",
@@ -1671,7 +2308,7 @@
       "id": "arrow-jarvis_portfolio_am",
       "type": "arrow",
       "x": 472.0,
-      "y": 3383.0,
+      "y": 4793.0,
       "strokeColor": "#495057",
       "strokeStyle": "solid",
       "label": {
@@ -1687,7 +2324,7 @@
         ],
         [
           638.0,
-          -1088.0
+          -1841.0
         ]
       ],
       "syncedAt": "2026-03-12T13:30:00.000Z",
@@ -1697,7 +2334,7 @@
       "id": "card-jarvis_portfolio_pm",
       "type": "rectangle",
       "x": 42.0,
-      "y": 3440.0,
+      "y": 4850.0,
       "width": 430.0,
       "height": 78.0,
       "backgroundColor": "#d0ebff",
@@ -1720,7 +2357,7 @@
       "id": "arrow-jarvis_portfolio_pm",
       "type": "arrow",
       "x": 472.0,
-      "y": 3479.0,
+      "y": 4889.0,
       "strokeColor": "#495057",
       "strokeStyle": "solid",
       "label": {
@@ -1736,7 +2373,7 @@
         ],
         [
           638.0,
-          -1184.0
+          -1937.0
         ]
       ],
       "syncedAt": "2026-03-12T13:30:00.000Z",
@@ -1746,9 +2383,9 @@
       "id": "lane-repo_only",
       "type": "rectangle",
       "x": 24,
-      "y": 3554.0,
+      "y": 4964.0,
       "width": 980,
-      "height": 798.0,
+      "height": 702.0,
       "backgroundColor": "#fff9db",
       "strokeColor": "#fcc419",
       "strokeStyle": "solid",
@@ -1770,7 +2407,7 @@
       "id": "lane-title-repo_only",
       "type": "text",
       "x": 40,
-      "y": 3560.0,
+      "y": 4970.0,
       "width": 420,
       "height": 24,
       "strokeColor": "#1e1e1e",
@@ -1787,7 +2424,7 @@
       "id": "card-jarvis_light",
       "type": "rectangle",
       "x": 42.0,
-      "y": 3582.0,
+      "y": 4992.0,
       "width": 430.0,
       "height": 78.0,
       "backgroundColor": "#fff3bf",
@@ -1810,7 +2447,7 @@
       "id": "arrow-jarvis_light",
       "type": "arrow",
       "x": 472.0,
-      "y": 3621.0,
+      "y": 5031.0,
       "strokeColor": "#495057",
       "strokeStyle": "solid",
       "label": {
@@ -1826,7 +2463,7 @@
         ],
         [
           638.0,
-          -1326.0
+          -2079.0
         ]
       ],
       "syncedAt": "2026-03-12T13:30:00.000Z",
@@ -1836,7 +2473,7 @@
       "id": "card-scrape_cw",
       "type": "rectangle",
       "x": 42.0,
-      "y": 3678.0,
+      "y": 5088.0,
       "width": 430.0,
       "height": 78.0,
       "backgroundColor": "#fff3bf",
@@ -1859,7 +2496,7 @@
       "id": "arrow-scrape_cw",
       "type": "arrow",
       "x": 472.0,
-      "y": 3717.0,
+      "y": 5127.0,
       "strokeColor": "#495057",
       "strokeStyle": "solid",
       "label": {
@@ -1875,56 +2512,7 @@
         ],
         [
           638.0,
-          -1422.0
-        ]
-      ],
-      "syncedAt": "2026-03-12T13:30:00.000Z",
-      "source": "codex"
-    },
-    {
-      "id": "card-newsletter",
-      "type": "rectangle",
-      "x": 42.0,
-      "y": 3774.0,
-      "width": 430.0,
-      "height": 78.0,
-      "backgroundColor": "#fff3bf",
-      "strokeColor": "#f08c00",
-      "strokeStyle": "solid",
-      "label": {
-        "text": "Newsletter\n11:00 HKT\ndaily_reminders.py --task newsletter"
-      },
-      "roundness": {
-        "type": 3
-      },
-      "fillStyle": "solid",
-      "createdAt": "2026-03-12T13:30:00.000Z",
-      "updatedAt": "2026-03-12T13:30:00.000Z",
-      "version": 1,
-      "syncedAt": "2026-03-12T13:30:00.000Z",
-      "source": "codex"
-    },
-    {
-      "id": "arrow-newsletter",
-      "type": "arrow",
-      "x": 472.0,
-      "y": 3813.0,
-      "strokeColor": "#495057",
-      "strokeStyle": "solid",
-      "label": {
-        "text": ""
-      },
-      "createdAt": "2026-03-12T13:30:00.000Z",
-      "updatedAt": "2026-03-12T13:30:00.000Z",
-      "version": 1,
-      "points": [
-        [
-          0,
-          0
-        ],
-        [
-          638.0,
-          -1518.0
+          -2175.0
         ]
       ],
       "syncedAt": "2026-03-12T13:30:00.000Z",
@@ -1934,7 +2522,7 @@
       "id": "card-northbound",
       "type": "rectangle",
       "x": 42.0,
-      "y": 3870.0,
+      "y": 5184.0,
       "width": 430.0,
       "height": 78.0,
       "backgroundColor": "#fff3bf",
@@ -1957,7 +2545,7 @@
       "id": "arrow-northbound",
       "type": "arrow",
       "x": 472.0,
-      "y": 3909.0,
+      "y": 5223.0,
       "strokeColor": "#495057",
       "strokeStyle": "solid",
       "label": {
@@ -1973,7 +2561,7 @@
         ],
         [
           638.0,
-          -1614.0
+          -2271.0
         ]
       ],
       "syncedAt": "2026-03-12T13:30:00.000Z",
@@ -1983,7 +2571,7 @@
       "id": "card-scrape_p_model",
       "type": "rectangle",
       "x": 42.0,
-      "y": 3966.0,
+      "y": 5280.0,
       "width": 430.0,
       "height": 78.0,
       "backgroundColor": "#fff3bf",
@@ -2006,7 +2594,7 @@
       "id": "arrow-scrape_p_model",
       "type": "arrow",
       "x": 472.0,
-      "y": 4005.0,
+      "y": 5319.0,
       "strokeColor": "#495057",
       "strokeStyle": "solid",
       "label": {
@@ -2022,7 +2610,7 @@
         ],
         [
           638.0,
-          -1710.0
+          -2367.0
         ]
       ],
       "syncedAt": "2026-03-12T13:30:00.000Z",
@@ -2032,7 +2620,7 @@
       "id": "card-scrape_all",
       "type": "rectangle",
       "x": 42.0,
-      "y": 4062.0,
+      "y": 5376.0,
       "width": 430.0,
       "height": 78.0,
       "backgroundColor": "#fff3bf",
@@ -2055,7 +2643,7 @@
       "id": "arrow-scrape_all",
       "type": "arrow",
       "x": 472.0,
-      "y": 4101.0,
+      "y": 5415.0,
       "strokeColor": "#495057",
       "strokeStyle": "solid",
       "label": {
@@ -2071,7 +2659,7 @@
         ],
         [
           638.0,
-          -1806.0
+          -2463.0
         ]
       ],
       "syncedAt": "2026-03-12T13:30:00.000Z",
@@ -2081,7 +2669,7 @@
       "id": "card-scrape_pam",
       "type": "rectangle",
       "x": 42.0,
-      "y": 4158.0,
+      "y": 5472.0,
       "width": 430.0,
       "height": 78.0,
       "backgroundColor": "#fff3bf",
@@ -2104,7 +2692,7 @@
       "id": "arrow-scrape_pam",
       "type": "arrow",
       "x": 472.0,
-      "y": 4197.0,
+      "y": 5511.0,
       "strokeColor": "#495057",
       "strokeStyle": "solid",
       "label": {
@@ -2120,7 +2708,7 @@
         ],
         [
           638.0,
-          -1902.0
+          -2559.0
         ]
       ],
       "syncedAt": "2026-03-12T13:30:00.000Z",
@@ -2130,7 +2718,7 @@
       "id": "card-portfolio_digest",
       "type": "rectangle",
       "x": 42.0,
-      "y": 4254.0,
+      "y": 5568.0,
       "width": 430.0,
       "height": 78.0,
       "backgroundColor": "#fff3bf",
@@ -2153,7 +2741,7 @@
       "id": "arrow-portfolio_digest",
       "type": "arrow",
       "x": 472.0,
-      "y": 4293.0,
+      "y": 5607.0,
       "strokeColor": "#495057",
       "strokeStyle": "solid",
       "label": {
@@ -2169,7 +2757,7 @@
         ],
         [
           638.0,
-          -1998.0
+          -2655.0
         ]
       ],
       "syncedAt": "2026-03-12T13:30:00.000Z",
@@ -2179,7 +2767,7 @@
       "id": "lane-disabled",
       "type": "rectangle",
       "x": 24,
-      "y": 4368.0,
+      "y": 5682.0,
       "width": 980,
       "height": 126.0,
       "backgroundColor": "#f1f3f5",
@@ -2203,7 +2791,7 @@
       "id": "lane-title-disabled",
       "type": "text",
       "x": 40,
-      "y": 4374.0,
+      "y": 5688.0,
       "width": 420,
       "height": 24,
       "strokeColor": "#1e1e1e",
@@ -2220,7 +2808,7 @@
       "id": "card-telegram_hub_hourly",
       "type": "rectangle",
       "x": 42.0,
-      "y": 4396.0,
+      "y": 5710.0,
       "width": 430.0,
       "height": 78.0,
       "backgroundColor": "#f1f3f5",
@@ -2243,7 +2831,7 @@
       "id": "arrow-telegram_hub_hourly",
       "type": "arrow",
       "x": 472.0,
-      "y": 4435.0,
+      "y": 5749.0,
       "strokeColor": "#495057",
       "strokeStyle": "dashed",
       "label": {
@@ -2259,7 +2847,7 @@
         ],
         [
           638.0,
-          -2140.0
+          -2797.0
         ]
       ],
       "syncedAt": "2026-03-12T13:30:00.000Z",
@@ -2269,7 +2857,7 @@
       "id": "tg-box",
       "type": "rectangle",
       "x": 1110,
-      "y": 2215.0,
+      "y": 2872.0,
       "width": 280,
       "height": 160,
       "backgroundColor": "#fff4e6",
@@ -2288,5 +2876,5 @@
       "source": "codex"
     }
   ],
-  "count": 95
+  "count": 119
 }

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>彭博研究摘要 #9 — 利率</title>
+<title>彭博研究摘要 #9 — 戰爭陰霾下的全球利率博弈</title>
 <style>
   :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --accent: #58a6ff;
           --green: #3fb950; --red: #f85149; --yellow: #d29922; --text: #c9d1d9; --muted: #8b949e;
@@ -32,10 +32,26 @@
   .tag-misc  { background: rgba(139,148,158,0.15); color: var(--muted); }
   .section { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 16px; }
   .section h2 { color: #fff; font-size: 1.15em; margin-bottom: 12px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+  .section h3 { color: var(--accent); font-size: 0.95em; margin: 14px 0 6px; }
   .article { margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid rgba(48,54,61,0.5); }
   .article:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
   .article-title { color: #fff; font-weight: 700; font-size: 0.95em; margin-bottom: 4px; }
+  .article-title-cn { color: var(--muted); font-size: 0.85em; margin-bottom: 8px; }
   .article p { font-size: 0.9em; margin: 6px 0; }
+  .data-point { background: rgba(255,255,255,0.03); padding: 8px 12px; border-radius: 6px; margin: 8px 0; font-size: 0.85em; }
+  .data-point .num { color: #fff; font-weight: 700; }
+  .implication { background: rgba(88,166,255,0.06); border-left: 3px solid var(--accent); padding: 10px 14px; margin: 10px 0; border-radius: 0 6px 6px 0; font-size: 0.88em; }
+  .implication .label { color: var(--accent); font-weight: 700; font-size: 0.8em; text-transform: uppercase; margin-bottom: 4px; }
+  .callout { background: rgba(210,153,34,0.08); border: 1px solid rgba(210,153,34,0.3); border-radius: 6px; padding: 16px; margin: 16px 0; }
+  .callout-title { color: var(--yellow); font-weight: 700; font-size: 0.95em; margin-bottom: 8px; }
+  .callout ul { padding-left: 18px; }
+  .callout li { margin: 4px 0; font-size: 0.88em; }
+  ul { padding-left: 18px; }
+  li { margin: 3px 0; font-size: 0.88em; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(255,255,255,0.03); padding: 12px; border-radius: 6px; text-align: center; }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: #fff; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
   .toc { background: rgba(88,166,255,0.05); border: 1px solid rgba(88,166,255,0.2); border-radius: 8px; padding: 16px 20px; margin-bottom: 20px; }
   .toc-title { color: var(--accent); font-weight: 700; font-size: 0.9em; margin-bottom: 8px; }
   .toc a { color: var(--accent); text-decoration: none; font-size: 0.88em; }
@@ -55,7 +71,7 @@
 <body>
 
 <h1>彭博研究摘要</h1>
-<p class="subtitle">第9期 — 利率 | Rates</p>
+<p class="subtitle">第9期 | 戰爭陰霾下的全球利率博弈</p>
 <span class="issue-badge">2026年三月下旬更新</span>
 
 <div class="nav-links">
@@ -63,89 +79,130 @@
   <span><a href="student.html">返回目錄 &rarr;</a></span>
 </div>
 
-<div class="stat-grid">
-    <div class="stat"><div class="val">14</div><div class="lbl">利率<br>Rates</div></div>
-</div>
-
 <div class="toc">
   <div class="toc-title">目錄</div>
   <ol>
-    <li><a href="#rates">利率 Rates &rarr;</a></li>
+    <li><a href="#fed-hold">聯準會 鷹派當道，按兵不動</a></li>
+    <li><a href="#boj-hike">日銀 油價火上澆油，4月加息箭在弦上</a></li>
+    <li><a href="#ecb-vol">歐央行 能源衝擊撕裂低波動幻象</a></li>
+    <li><a href="#china-pboc">中國央行 LPR按兵不動，人民幣升值有節制</a></li>
+    <li><a href="#takeaways">基金經理人重點摘要</a></li>
   </ol>
 </div>
 
-<div class="section" id="rates">
-  <h2><span class="tag tag-rates">利率</span> Rates (14 articles)</h2>
+<div class="section" id="fed-hold">
+  <h2><span class="tag tag-misc">聯準會</span> 鷹派當道，按兵不動</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val">3.50-3.75%</div><div class="lbl">聯邦基金利率
+預計維持不變</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">-9.2萬</div><div class="lbl">2月非農就業
+（初值）</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">~3%</div><div class="lbl">3月PCE通膨預測
+（油價推升）</div></div>
+  </div>
+
   <div class="article">
-    <div class="article-title">BE Primer BOJ April Hike on Cards as Oil Rise Lifts Price Risks</div>
-    <div style="margin-bottom:6px"><span class="tag tag-rates">利率</span> <span class="tag tag-infl">通膨</span> <span class="tag tag-oil">石油</span> <span class="tag tag-japan">日本</span> </div>
-    <p># BE Primer BOJ April Hike on Cards as Oil Rise Lifts Price Risks</p>
+    <div class="article-title">聯儲會料按兵不動 — 利率路徑面臨雙向風險</div>
+    <p>FOMC預計在3月會議上維持利率在 <span style="color:#fff;font-weight:700">3.50%-3.75%</span> 不變。伊朗戰爭帶來的能源衝擊令鷹派論據進一步增強，聲明料將承認通膨上行風險與就業下行壓力並存。更新後的SEP預測中，整體PCE通膨中值可能從 <span style="color:#fff;font-weight:700">2.4%</span> 大幅上調至 <span style="color:#fff;font-weight:700">3.0%</span>，GDP增速下調至 <span style="color:#fff;font-weight:700">2.0%</span>（前值2.3%），失業率上修至 <span style="color:#fff;font-weight:700">4.5%</span>。儘管如此，點陣圖中位數預計仍保留今年降息 <span style="color:#fff;font-weight:700">25bp</span> 的空間，無人將加息納入考量。彭博經濟研究認為FOMC應忽略油價供給衝擊、維持寬鬆傾向，但現實是鷹派主導下上半年幾乎不可能降息。</p>
+    <div class="data-point">異議票預計：<span style="color:#fff;font-weight:700">Milan、Waller</span>（主張降息） &nbsp;|&nbsp; SEP整體PCE：<span style="color:#fff;font-weight:700">2.4% → 3.0%</span> &nbsp;|&nbsp; GDP預測：<span style="color:#fff;font-weight:700">2.3% → 2.0%</span> &nbsp;|&nbsp; 通膨見頂預期：<span style="color:#fff;font-weight:700">5月</span></div>
+    <div class="implication"><div class="label">投資啟示</div>Fed上半年按兵不動概率極高，但整體通膨料5月見頂、失業率上升將迫使下半年加速降息 — <span style="color:#fff;font-weight:700">做多前端利率期貨</span>，等待下半年降息窗口。</div>
   </div>
   <div class="article">
-    <div class="article-title">BOJ PREVIEW Hold Likely Watch</div>
-    <div style="margin-bottom:6px"><span class="tag tag-rates">利率</span> <span class="tag tag-japan">日本</span> </div>
-    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:52:56+08:00</p>
+    <div class="article-title">戰爭與通膨 — FOMC鷹派掌控方向盤</div>
+    <p>本輪能源衝擊與2022年俄烏戰爭初期如出一轍：先是油價飆升，繼而金屬與化肥價格跟進。但即便在戰爭之前，新的供給衝擊已在醞釀 — 金屬價格自去年底持續攀升。2月PPI料將反映部分傳導壓力。不過，消費者通膨直接傳導可能趨緩：組合管理費隨去年股市高位回落，機票與醫療費用亦料走軟。在 <span style="color:#fff;font-weight:700">$80-100/桶</span> 油價環境下，家庭支出將受抑制，就業增長放緩，核心PCE終將回落。</p>
+    <div class="data-point">油價區間：<span style="color:#fff;font-weight:700">$80-100/桶</span> &nbsp;|&nbsp; 2月非農初值：<span style="color:#fff;font-weight:700">-9.2萬</span>（料下修至-11.2萬） &nbsp;|&nbsp; 前瞻指引調整：「進一步調整」→「<span style="color:#fff;font-weight:700">未來調整</span>」</div>
+    <div class="implication"><div class="label">投資啟示</div>油價衝擊的二階效應（壓抑消費+拖累就業）終將迫使Fed轉向 — <span style="color:#fff;font-weight:700">短期避險，中期佈局降息交易</span>。</div>
+  </div>
+</div>
+
+<div class="section" id="boj-hike">
+  <h2><span class="tag tag-misc">日銀</span> 油價火上澆油，4月加息箭在弦上</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val">0.75%</div><div class="lbl">政策利率
+3月維持不變</div></div>
+    <div class="stat"><div class="val" style="color:var(--green)">5.26%</div><div class="lbl">春鬥薪資漲幅
+（初步結果）</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">1.0%</div><div class="lbl">4月加息目標
+（BE預測）</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">BOJ按兵不動 — 焦點轉向植田對油價與加息時機的看法</div>
+    <p>日銀在3月會議上以 <span style="color:#fff;font-weight:700">8-1</span> 票決維持政策利率於 <span style="color:#fff;font-weight:700">0.75%</span> 不變，唯一反對票來自鷹派委員高田創，主張加息至1.0%。市場焦點轉向行長植田和男對中東油價衝擊的表態。彭博調查顯示 <span style="color:#fff;font-weight:700">37%</span> 經濟學家（含BE）預期4月加息，<span style="color:#fff;font-weight:700">22%</span> 看6月，<span style="color:#fff;font-weight:700">29%</span> 看7月。BE認為央行將判斷風險偏向通膨一側，植田可能在記者會上暗示4月加息仍是選項 — 類似2024年6月會議後暗示7月加息並最終兌現的先例。</p>
+    <div class="data-point">投票結果：<span style="color:#fff;font-weight:700">8-1</span>（高田反對持有） &nbsp;|&nbsp; 4月加息預期：<span style="color:#fff;font-weight:700">37%</span> &nbsp;|&nbsp; 6月：<span style="color:#fff;font-weight:700">22%</span> &nbsp;|&nbsp; 7月：<span style="color:#fff;font-weight:700">29%</span></div>
+    <div class="implication"><div class="label">投資啟示</div>日銀4月加息至 <span style="color:#fff;font-weight:700">1.0%</span> 概率顯著上升。<span style="color:#fff;font-weight:700">減持日圓套利頭寸</span>，為日圓走強做準備。</div>
   </div>
   <div class="article">
-    <div class="article-title">BOJ REACT Rate Hold Shifts Foc</div>
-    <div style="margin-bottom:6px"><span class="tag tag-rates">利率</span> <span class="tag tag-japan">日本</span> </div>
-    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:52:56+08:00</p>
+    <div class="article-title">春鬥薪資穩健 — 為日銀繼續加息鋪路</div>
+    <p>日本最大工會組織Rengo公布春季工資談判初步結果：平均加薪 <span style="color:#fff;font-weight:700">5.26%</span>（去年5.46%），更關鍵的基本工資漲幅 <span style="color:#fff;font-weight:700">3.85%</span>，與去年 <span style="color:#fff;font-weight:700">3.84%</span> 基本持平。中小企業基本工資漲幅維持 <span style="color:#fff;font-weight:700">3.54%</span>。勞動力市場結構性緊張（人口老齡化）和企業利潤快速增長支撐了大幅加薪。穩健的工資漲幅將在夏季前逐步反映在宏觀數據中，增強日銀對工資-物價循環持續支撐通膨的信心，這支持了4月加息的判斷。</p>
+    <div class="data-point">總漲幅：<span style="color:#fff;font-weight:700">5.26%</span> &nbsp;|&nbsp; 基本工資漲幅：<span style="color:#fff;font-weight:700">3.85%</span> &nbsp;|&nbsp; 中小企業基本工資：<span style="color:#fff;font-weight:700">3.54%</span></div>
+    <div class="implication"><div class="label">投資啟示</div>工資數據為日銀加息提供堅實基礎。<span style="color:#fff;font-weight:700">日圓多頭</span>邏輯進一步強化。</div>
   </div>
   <div class="article">
-    <div class="article-title">ECB Policy Right Tail Depends on Access to Strait of Hormuz</div>
-    <div style="margin-bottom:6px"><span class="tag tag-rates">利率</span> <span class="tag tag-geo">地緣政治</span> </div>
-    <p># ECB Policy Right Tail Depends on Access to Strait of Hormuz</p>
+    <div class="article-title">高市早苗提名鴿派人選 — 但不改加息路徑</div>
+    <p>首相高市早苗提名兩名央行政策委員人選，均被市場解讀為偏鴿派：中央大學教授淺田統一郎將接替通貨再膨脹派野口旭，青山學院大學教授佐藤綾野將接替中川順子。消息公布後日圓小幅走低。然而，任命需經國會兩院批准，執政聯盟在參議院未佔多數，在野黨可能以「日圓貶值加劇民生成本」為由阻撓。BE認為這些人事變動不會改變日銀謹慎推進加息的路徑。</p>
+    <div class="data-point">新提名：<span style="color:#fff;font-weight:700">淺田統一郎</span>（接替野口旭）、<span style="color:#fff;font-weight:700">佐藤綾野</span>（接替中川順子） &nbsp;|&nbsp; 政策委員會：9人</div>
+    <div class="implication"><div class="label">投資啟示</div>鴿派提名增加短期不確定性，但不改加息大方向 — <span style="color:#fff;font-weight:700">關注國會審批進展</span>。</div>
+  </div>
+</div>
+
+<div class="section" id="ecb-vol">
+  <h2><span class="tag tag-misc">歐央行</span> 能源衝擊撕裂低波動幻象</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--orange)">~4bp</div><div class="lbl">Z6Z7 Euribor
+隱含加息幅度</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">右尾</div><div class="lbl">ECB利率分佈
+風險擴張方向</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">霍爾木茲</div><div class="lbl">油價關鍵變量
+海峽通行權</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">ECB政策右尾取決於霍爾木茲海峽通行權</div>
+    <p>中東衝突打破了歐元利率的低波動格局。前端利率波動率成為跨資產最大的波動率變動來源，部分原因是此前ECB長期按兵不動預期下，套息交易極為擁擠。Euribor期權市場隱含的12月期貨分佈顯示，ECB政策利率右尾（加息）概率顯著擴張，而左尾（降息）則相對受限。Euribor曲線已開始前置定價風險管理式加息，但幅度有限：Z6Z7僅 <span style="color:#fff;font-weight:700">~4bp</span>，Z7Z8僅 <span style="color:#fff;font-weight:700">~9bp</span>。若霍爾木茲海峽遭封鎖推高油價、長期通膨預期脫錨，ECB可能被迫加息 — 隨後市場將轉而定價更深遠的降息以應對二階增長衝擊。前端Swaption偏斜已急劇轉向看漲payer。</p>
+    <div class="data-point">Z6Z7隱含加息：<span style="color:#fff;font-weight:700">~4bp</span> &nbsp;|&nbsp; Z7Z8：<span style="color:#fff;font-weight:700">~9bp</span> &nbsp;|&nbsp; 前端偏斜：<span style="color:#fff;font-weight:700">payer大幅陡峭化</span></div>
+    <div class="implication"><div class="label">投資啟示</div>ECB加息非基準情景，但尾部風險已被定價。<span style="color:#fff;font-weight:700">賣出前端receiver swaption</span>以捕捉波動率回歸。若海峽封鎖，<span style="color:#fff;font-weight:700">做多payer swaption</span>。</div>
+  </div>
+</div>
+
+<div class="section" id="china-pboc">
+  <h2><span class="tag tag-misc">中國央行</span> LPR按兵不動，人民幣升值有節制</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val">3.00%</div><div class="lbl">1年期LPR
+維持不變</div></div>
+    <div class="stat"><div class="val">3.50%</div><div class="lbl">5年期LPR
+維持不變</div></div>
+    <div class="stat"><div class="val" style="color:var(--green)">4%</div><div class="lbl">人民幣三個月
+累計升幅</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">中國LPR預計維持穩定 — 降息窗口臨近</div>
+    <p>3月LPR預計維持不變：1年期 <span style="color:#fff;font-weight:700">3.00%</span>，5年期 <span style="color:#fff;font-weight:700">3.50%</span>。此前市場預期人大閉幕後降息，但2月CPI超出季節性趨勢，央行可能等待更多數據（如零售銷售）出爐後再行動。不過距離2026年首次降息已不遠 — 行長潘功勝在3月6日記者會上重申寬鬆立場，暗示未來將下調利率及存款準備金率。BE預計數週內可能迎來降息。</p>
+    <div class="data-point">1年期LPR：<span style="color:#fff;font-weight:700">3.00%</span> &nbsp;|&nbsp; 5年期LPR：<span style="color:#fff;font-weight:700">3.50%</span> &nbsp;|&nbsp; 潘功勝暗示：<span style="color:#fff;font-weight:700">降息+降準</span></div>
+    <div class="implication"><div class="label">投資啟示</div>LPR短期不動，但 <span style="color:#fff;font-weight:700">降息數週內落地的概率高</span> — 利好中國債市，可<span style="color:#fff;font-weight:700">提前佈局做多中國利率債</span>。</div>
   </div>
   <div class="article">
-    <div class="article-title">Fixed Income Bloomberg Terminal A Bloomberg Professional Services Offering Government fair value yield curves</div>
-    <div style="margin-bottom:6px"><span class="tag tag-rates">利率</span> </div>
-    <p># Fixed Income Bloomberg Terminal A Bloomberg Professional Services Offering Government fair value yield curves</p>
+    <div class="article-title">央行管控人民幣升值節奏 — 而非方向</div>
+    <p>中國央行將遠期售匯外匯風險準備金率從 <span style="color:#fff;font-weight:700">20%</span> 下調至 <span style="color:#fff;font-weight:700">0</span>，降低企業購匯成本、釋放美元需求。此舉針對的是人民幣「快速」升值，而非升值本身。過去三個月人民幣累計升值 <span style="color:#fff;font-weight:700">4%</span>，BE的人民幣壓力指標攀升至 <span style="color:#fff;font-weight:700">2018年末</span> 以來最高。IMF估計人民幣被低估 <span style="color:#fff;font-weight:700">16%</span>。北京正逐步擺脫「升值焦慮」，越來越多中國經濟學家認為貨幣升值有助高質量增長。央行允許中間價跟隨市場升值但錨定略低於即期匯率 — 信號明確：升值可以，但要循序漸進。</p>
+    <div class="data-point">外匯風險準備金率：<span style="color:#fff;font-weight:700">20% → 0</span> &nbsp;|&nbsp; 三個月升幅：<span style="color:#fff;font-weight:700">4%</span> &nbsp;|&nbsp; IMF低估幅度：<span style="color:#fff;font-weight:700">16%</span></div>
+    <div class="implication"><div class="label">投資啟示</div>人民幣升值趨勢未改，僅節奏放緩 — <span style="color:#fff;font-weight:700">逢回調做多人民幣</span>，但避免追漲。</div>
   </div>
-  <div class="article">
-    <div class="article-title">Nvidia AI Fed BOJ BOE ECB ZEW</div>
-    <div style="margin-bottom:6px"><span class="tag tag-rates">利率</span> <span class="tag tag-japan">日本</span> </div>
-    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:53:53+08:00</p>
-  </div>
-  <div class="article">
-    <div class="article-title">US WEEK AHEAD War, Inﬂation – Hawks on the FOMC Take the Reins</div>
-    <div style="margin-bottom:6px"><span class="tag tag-rates">利率</span> <span class="tag tag-infl">通膨</span> <span class="tag tag-geo">地緣政治</span> </div>
-    <p># US WEEK AHEAD War, Inﬂation – Hawks on the FOMC Take the Reins</p>
-  </div>
-  <div class="article">
-    <div class="article-title">⾼市早苗提名⼈選預⽰⽇本央⾏政策或趨向鴿派</div>
-    <div style="margin-bottom:6px"><span class="tag tag-rates">利率</span> <span class="tag tag-japan">日本</span> </div>
-    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:54:27+08:00</p>
-  </div>
-  <div class="article">
-    <div class="article-title">中國 3 ⽉貸款市場報價利率預計將保持穩定</div>
-    <div style="margin-bottom:6px"><span class="tag tag-rates">利率</span> <span class="tag tag-china">中國</span> </div>
-    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:54:35+08:00</p>
-  </div>
-  <div class="article">
-    <div class="article-title">中國央⾏意在管理⼈⺠幣升值節奏 ⽽⾮升值本⾝</div>
-    <div style="margin-bottom:6px"><span class="tag tag-rates">利率</span> <span class="tag tag-china">中國</span> </div>
-    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:54:36+08:00</p>
-  </div>
-  <div class="article">
-    <div class="article-title">彭博中國數據前瞻：貸款市場報價利率料不作調整</div>
-    <div style="margin-bottom:6px"><span class="tag tag-rates">利率</span> <span class="tag tag-china">中國</span> </div>
-    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:55:05+08:00</p>
-  </div>
-  <div class="article">
-    <div class="article-title">春季談判達成穩健漲薪 為⽇本央⾏繼續加息提供依據</div>
-    <div style="margin-bottom:6px"><span class="tag tag-rates">利率</span> <span class="tag tag-japan">日本</span> </div>
-    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:55:18+08:00</p>
-  </div>
-  <div class="article">
-    <div class="article-title">東京 CPI 因補貼效應⾛軟意味央⾏可放緩加息步伐</div>
-    <div style="margin-bottom:6px"><span class="tag tag-rates">利率</span> <span class="tag tag-infl">通膨</span> </div>
-    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:55:20+08:00</p>
-  </div>
-  <div class="article">
-    <div class="article-title">聯儲會料按兵不動 可能會指出利率路徑⾯臨雙向⾵險</div>
-    <div style="margin-bottom:6px"><span class="tag tag-rates">利率</span> </div>
-    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:55:33+08:00</p>
-  </div>
+</div>
+
+<div class="callout" id="takeaways">
+  <div class="callout-title">基金經理人重點摘要</div>
+  <ul>
+    <li><strong>聯準會：</strong>上半年按兵不動，鷹派主導。SEP整體PCE料上調至3.0%，但通膨預計5月見頂。下半年降息窗口開啟 — 做多前端利率期貨。</li>
+    <li><strong>日銀：</strong>3月持有0.75%，但春鬥基本工資漲3.85%+油價風險雙重支撐下，4月加息至1.0%概率顯著。減持日圓套利。</li>
+    <li><strong>歐央行：</strong>能源衝擊撕裂低波動格局，前端payer偏斜急劇陡峭化。霍爾木茲海峽為關鍵變量 — 加息非基準但尾部風險已被定價。</li>
+    <li><strong>中國：</strong>LPR維持不變，但降息數週內落地概率高。人民幣升值趨勢不變（三個月+4%），央行僅管控節奏。做多中國利率債+逢回調做多人民幣。</li>
+    <li><strong>跨市場：</strong>油價$80-100/桶是全球利率政策的核心變量。Fed與BOJ對同一衝擊的反應截然相反（按兵不動 vs 加息），製造利差交易機會。</li>
+  </ul>
 </div>
 
 <div class="nav-links">

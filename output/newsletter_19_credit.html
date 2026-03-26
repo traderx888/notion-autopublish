@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>彭博研究摘要 #19 — 信用</title>
+<title>彭博研究摘要 #19 — 中國信貸迷局：住戶退場，政府撐場</title>
 <style>
   :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --accent: #58a6ff;
           --green: #3fb950; --red: #f85149; --yellow: #d29922; --text: #c9d1d9; --muted: #8b949e;
@@ -32,10 +32,26 @@
   .tag-misc  { background: rgba(139,148,158,0.15); color: var(--muted); }
   .section { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 16px; }
   .section h2 { color: #fff; font-size: 1.15em; margin-bottom: 12px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+  .section h3 { color: var(--accent); font-size: 0.95em; margin: 14px 0 6px; }
   .article { margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid rgba(48,54,61,0.5); }
   .article:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
   .article-title { color: #fff; font-weight: 700; font-size: 0.95em; margin-bottom: 4px; }
+  .article-title-cn { color: var(--muted); font-size: 0.85em; margin-bottom: 8px; }
   .article p { font-size: 0.9em; margin: 6px 0; }
+  .data-point { background: rgba(255,255,255,0.03); padding: 8px 12px; border-radius: 6px; margin: 8px 0; font-size: 0.85em; }
+  .data-point .num { color: #fff; font-weight: 700; }
+  .implication { background: rgba(88,166,255,0.06); border-left: 3px solid var(--accent); padding: 10px 14px; margin: 10px 0; border-radius: 0 6px 6px 0; font-size: 0.88em; }
+  .implication .label { color: var(--accent); font-weight: 700; font-size: 0.8em; text-transform: uppercase; margin-bottom: 4px; }
+  .callout { background: rgba(210,153,34,0.08); border: 1px solid rgba(210,153,34,0.3); border-radius: 6px; padding: 16px; margin: 16px 0; }
+  .callout-title { color: var(--yellow); font-weight: 700; font-size: 0.95em; margin-bottom: 8px; }
+  .callout ul { padding-left: 18px; }
+  .callout li { margin: 4px 0; font-size: 0.88em; }
+  ul { padding-left: 18px; }
+  li { margin: 3px 0; font-size: 0.88em; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(255,255,255,0.03); padding: 12px; border-radius: 6px; text-align: center; }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: #fff; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
   .toc { background: rgba(88,166,255,0.05); border: 1px solid rgba(88,166,255,0.2); border-radius: 8px; padding: 16px 20px; margin-bottom: 20px; }
   .toc-title { color: var(--accent); font-weight: 700; font-size: 0.9em; margin-bottom: 8px; }
   .toc a { color: var(--accent); text-decoration: none; font-size: 0.88em; }
@@ -55,7 +71,7 @@
 <body>
 
 <h1>彭博研究摘要</h1>
-<p class="subtitle">第19期 — 信用 | Credit</p>
+<p class="subtitle">第19期 | 中國信貸迷局：住戶退場，政府撐場</p>
 <span class="issue-badge">2026年三月下旬更新</span>
 
 <div class="nav-links">
@@ -63,34 +79,55 @@
   <span><a href="student.html">返回目錄 &rarr;</a></span>
 </div>
 
-<div class="stat-grid">
-    <div class="stat"><div class="val">3</div><div class="lbl">信用<br>Credit</div></div>
-</div>
-
 <div class="toc">
   <div class="toc-title">目錄</div>
   <ol>
-    <li><a href="#credit">信用 Credit &rarr;</a></li>
+    <li><a href="#china-credit-pulse">中國信貸 社融超預期，但成色不足</a></li>
+    <li><a href="#takeaways">基金經理人重點摘要</a></li>
   </ol>
 </div>
 
-<div class="section" id="credit">
-  <h2><span class="tag tag-credit">信用</span> Credit (3 articles)</h2>
+<div class="section" id="china-credit-pulse">
+  <h2><span class="tag tag-misc">中國信貸</span> 社融超預期，但成色不足</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--green)">9.6萬億</div><div class="lbl">前兩月社融增量
+超預期（預期9.2萬億）</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">-1,942億</div><div class="lbl">前兩月住戶貸款
+淨減少</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">-30%</div><div class="lbl">1月房貸同比
+大幅下滑</div></div>
+  </div>
+
   <div class="article">
-    <div class="article-title">中國信貸成⻑乏⼒折射出私營部⾨信⼼的低迷</div>
-    <div style="margin-bottom:6px"><span class="tag tag-credit">信用</span> <span class="tag tag-china">中國</span> </div>
-    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:54:35+08:00</p>
+    <div class="article-title">中國年初信貸超預期成長 但住戶貸款有所減少</div>
+    <p>2026年前兩個月社會融資規模增量累計 <span style="color:#fff;font-weight:700">9.6萬億元</span>，高於市場預期的 <span style="color:#fff;font-weight:700">9.2萬億元</span>，同比多增 <span style="color:#fff;font-weight:700">3.4%</span>，表面數字尚可。然而細看結構令人擔憂：住戶貸款淨減少 <span style="color:#fff;font-weight:700">1,942億元</span>，去年同期則為增加 <span style="color:#fff;font-weight:700">546億元</span>，反映居民消費與購房信心持續萎靡。與此形成鮮明對比的是，企業融資總額達 <span style="color:#fff;font-weight:700">7.1萬億元</span>，同比增長 <span style="color:#fff;font-weight:700">6.8%</span>。這種「企業強、住戶弱」的分化格局暗示消費與生產之間的不平衡可能正在加劇，也向政府發出警訊：今年擴大消費的工作重點面臨的挑戰可能比預期更大。</p>
+    <div class="data-point">前兩月社融增量：<span style="color:#fff;font-weight:700">9.6萬億元</span>（預期9.2萬億） &nbsp;|&nbsp; 住戶貸款：<span style="color:#fff;font-weight:700">淨減少1,942億元</span> &nbsp;|&nbsp; 企業融資：<span style="color:#fff;font-weight:700">7.1萬億元</span>（同比+6.8%） &nbsp;|&nbsp; 新增人民幣貸款：<span style="color:#fff;font-weight:700">5.6萬億元</span>（同比-8.6%）</div>
+    <div class="implication"><div class="label">投資啟示</div>住戶去槓桿趨勢未止，消費刺激政策仍需加碼。<span style="color:#fff;font-weight:700">避免做多中國消費股</span>，關注政策端是否有更大力度的房貸利率下調或消費補貼。</div>
   </div>
   <div class="article">
-    <div class="article-title">中國年初信貸超預期成⻑ 但住戶貸款有所減少</div>
-    <div style="margin-bottom:6px"><span class="tag tag-credit">信用</span> <span class="tag tag-china">中國</span> </div>
-    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:54:37+08:00</p>
+    <div class="article-title">中國信貸成長乏力折射出私營部門信心的低迷</div>
+    <p>1月社融增量 <span style="color:#fff;font-weight:700">7.2萬億元</span>，僅略高於去年同期的 <span style="color:#fff;font-weight:700">7.1萬億元</span>，低於彭博經濟研究預期的 <span style="color:#fff;font-weight:700">7.6萬億元</span>。關鍵弱項在於私營部門：住戶中長期貸款（主要是房貸）僅增加 <span style="color:#fff;font-weight:700">3,470億元</span>，較去年同期暴跌 <span style="color:#fff;font-weight:700">30%</span>，房地產市場的長期低迷仍在持續壓制購房需求。企業中長期貸款增加 <span style="color:#fff;font-weight:700">3.2萬億元</span>，較上年同期少增 <span style="color:#fff;font-weight:700">2,800億元</span>，投資意願偏弱。唯一的亮點來自政府端——中央和地方政府債券淨融資 <span style="color:#fff;font-weight:700">9,760億元</span>，高於去年的 <span style="color:#fff;font-weight:700">6,930億元</span>，顯示財政正在接力支撐信用擴張。</p>
+    <div class="data-point">1月社融：<span style="color:#fff;font-weight:700">7.2萬億元</span>（預期7.6萬億） &nbsp;|&nbsp; 住戶房貸：<span style="color:#fff;font-weight:700">3,470億元</span>（同比-30%） &nbsp;|&nbsp; 企業中長期貸款少增：<span style="color:#fff;font-weight:700">2,800億元</span> &nbsp;|&nbsp; 政府債券淨融資：<span style="color:#fff;font-weight:700">9,760億元</span>（同比+41%）</div>
+    <div class="implication"><div class="label">投資啟示</div>私營部門信貸需求疲軟，信用擴張高度依賴政府債券。<span style="color:#fff;font-weight:700">做多中國國債</span>（政府加槓桿趨勢明確），<span style="color:#fff;font-weight:700">減持中資銀行股</span>（淨息差承壓、房貸萎縮）。</div>
   </div>
   <div class="article">
-    <div class="article-title">银⾏集中放贷和政府债券发⾏放量料提振中国信贷增速</div>
-    <div style="margin-bottom:6px"><span class="tag tag-credit">信用</span> <span class="tag tag-china">中國</span> </div>
-    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:55:33+08:00</p>
+    <div class="article-title">銀行集中放貸和政府債券發行放量料提振中國信貸增速</div>
+    <p>彭博經濟研究在數據發佈前預測，受年初銀行集中放貸的季節性因素及政府債券發行放量提振，1月社融增量有望達到 <span style="color:#fff;font-weight:700">7.6萬億元</span>，遠高於12月的 <span style="color:#fff;font-weight:700">2.2萬億元</span>。新增人民幣貸款預計攀升至 <span style="color:#fff;font-weight:700">5.2萬億元</span>，比12月約 <span style="color:#fff;font-weight:700">9,000億元</span> 高出四倍有餘。政府債券淨融資預計達 <span style="color:#fff;font-weight:700">1.6萬億元</span>，是12月 <span style="color:#fff;font-weight:700">7,000億元</span> 的一倍多。企業債券融資預計約 <span style="color:#fff;font-weight:700">2,000億元</span>。然而實際數據出爐後，貸款總量低於預期，尤其住戶端大幅遜色，說明即便季節性利好和政策推動，也難以完全彌補私營部門的信心缺口。</p>
+    <div class="data-point">1月社融預測：<span style="color:#fff;font-weight:700">7.6萬億元</span>（實際7.2萬億） &nbsp;|&nbsp; 新增貸款預測：<span style="color:#fff;font-weight:700">5.2萬億元</span>（實際4.7萬億） &nbsp;|&nbsp; 政府債券預測：<span style="color:#fff;font-weight:700">1.6萬億元</span>（實際0.98萬億）</div>
+    <div class="implication"><div class="label">投資啟示</div>季節性高峰仍未能推動信貸達標，反映結構性問題根深蒂固。<span style="color:#fff;font-weight:700">關注兩會後消費刺激政策細節</span>，短期內中國利率下行空間仍在。</div>
   </div>
+</div>
+
+<div class="callout" id="takeaways">
+  <div class="callout-title">基金經理人重點摘要</div>
+  <ul>
+    <li><strong>信貸結構：</strong>社融總量尚可但成色差。住戶前兩月淨減少1,942億元，房貸同比暴跌30%，消費去槓桿趨勢未止。</li>
+    <li><strong>政府接力：</strong>政府債券融資同比大增41%，財政加槓桿是唯一亮點。**做多中國國債**。</li>
+    <li><strong>企業端：</strong>企業融資同比增6.8%，但中長期貸款少增2,800億元，投資意願仍偏弱，警惕產能過剩風險。</li>
+    <li><strong>政策風險：</strong>擴大消費目標面臨挑戰，關注後續是否加碼房貸利率下調或消費補貼。**避免過早做多中國消費板塊**。</li>
+    <li><strong>利率展望：</strong>私營部門信貸需求疲軟支持進一步降息預期，**短期做多中國利率債前端**。</li>
+  </ul>
 </div>
 
 <div class="nav-links">
