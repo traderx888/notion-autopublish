@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>彭博週報 2026-W13 — Week in Review</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --accent: #58a6ff;
+          --green: #3fb950; --red: #f85149; --yellow: #d29922; --text: #c9d1d9; --muted: #8b949e;
+          --orange: #f0883e; --purple: #bc8cff; --cyan: #39d2c0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans TC', 'Microsoft JhengHei', Helvetica, Arial, sans-serif; line-height: 1.7; padding: 20px; max-width: 860px; margin: 0 auto; }
+  h1 { color: #fff; font-size: 1.7em; margin-bottom: 4px; }
+  .subtitle { color: var(--muted); font-size: 0.9em; margin-bottom: 8px; }
+  .issue-badge { display: inline-block; background: rgba(88,166,255,0.15); color: var(--accent); padding: 3px 10px; border-radius: 12px; font-size: 0.8em; font-weight: 600; margin-bottom: 20px; }
+  .tag { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 0.72em; font-weight: 600; margin-right: 4px; }
+  .tag-rates { background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-china { background: rgba(240,136,62,0.15); color: var(--orange); }
+  .tag-japan { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-geo   { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-oil   { background: rgba(210,153,34,0.15); color: var(--yellow); }
+  .tag-trade { background: rgba(210,153,34,0.15); color: var(--yellow); }
+  .tag-growth{ background: rgba(63,185,80,0.15); color: var(--green); }
+  .tag-metals{ background: rgba(188,140,255,0.15); color: var(--purple); }
+  .tag-infl  { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-policy{ background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-val   { background: rgba(63,185,80,0.15); color: var(--green); }
+  .tag-vol   { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-semi  { background: rgba(57,210,192,0.15); color: var(--cyan); }
+  .tag-credit{ background: rgba(188,140,255,0.15); color: var(--purple); }
+  .tag-space { background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-misc  { background: rgba(139,148,158,0.15); color: var(--muted); }
+  .section { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 16px; }
+  .section h2 { color: #fff; font-size: 1.15em; margin-bottom: 12px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+  .article { margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .article:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .article-title { color: #fff; font-weight: 700; font-size: 0.95em; margin-bottom: 4px; }
+  .article p { font-size: 0.9em; margin: 6px 0; }
+  .toc { background: rgba(88,166,255,0.05); border: 1px solid rgba(88,166,255,0.2); border-radius: 8px; padding: 16px 20px; margin-bottom: 20px; }
+  .toc-title { color: var(--accent); font-weight: 700; font-size: 0.9em; margin-bottom: 8px; }
+  .toc a { color: var(--accent); text-decoration: none; font-size: 0.88em; }
+  .toc a:hover { text-decoration: underline; }
+  .toc ol { padding-left: 20px; }
+  .toc li { margin: 4px 0; }
+  .nav-links { display: flex; justify-content: space-between; margin: 20px 0; font-size: 0.85em; }
+  .nav-links a { color: var(--accent); text-decoration: none; }
+  .nav-links a:hover { text-decoration: underline; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(255,255,255,0.03); padding: 12px; border-radius: 6px; text-align: center; }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: #fff; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
+  .footer { text-align: center; color: var(--muted); font-size: 0.75em; margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--border); }
+  .callout { background: rgba(210,153,34,0.08); border: 1px solid rgba(210,153,34,0.3); border-radius: 6px; padding: 16px; margin: 16px 0; }
+  .callout-title { color: var(--yellow); font-weight: 700; font-size: 0.95em; margin-bottom: 8px; }
+  .callout ul { padding-left: 18px; }
+  .callout li { margin: 4px 0; font-size: 0.88em; }
+</style>
+</head>
+<body>
+
+<h1>彭博週報 Week in Review</h1>
+<p class="subtitle">2026-W13 | 162 articles across 15 topics</p>
+<span class="issue-badge">2026年3月26日 週報</span>
+
+<div class="nav-links">
+  <span></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="stat-grid">
+    <div class="stat"><div class="val">57</div><div class="lbl">其他<br>Miscellaneous</div></div>
+    <div class="stat"><div class="val">19</div><div class="lbl">地緣政治<br>Geopolitics</div></div>
+    <div class="stat"><div class="val">18</div><div class="lbl">成長<br>Growth</div></div>
+</div>
+
+<div class="toc">
+  <div class="toc-title">本週主題 Topics This Week</div>
+  <ol>
+    <li><a href="#uncategorized">其他 Miscellaneous (57) &rarr;</a></li>
+    <li><a href="#geopolitics">地緣政治 Geopolitics (19) &rarr;</a></li>
+    <li><a href="#growth">成長 Growth (18) &rarr;</a></li>
+    <li><a href="#rates">利率 Rates (14) &rarr;</a></li>
+    <li><a href="#trade">貿易 Trade (12) &rarr;</a></li>
+    <li><a href="#inflation">通膨 Inflation (8) &rarr;</a></li>
+    <li><a href="#china">中國 China (7) &rarr;</a></li>
+    <li><a href="#policy">政策 Policy (5) &rarr;</a></li>
+    <li><a href="#metals">金屬 Metals (4) &rarr;</a></li>
+    <li><a href="#oil">石油 Oil & Energy (4) &rarr;</a></li>
+    <li><a href="#japan">日本 Japan (4) &rarr;</a></li>
+    <li><a href="#valuations">估值 Valuations (3) &rarr;</a></li>
+    <li><a href="#volatility">波動 Volatility (3) &rarr;</a></li>
+    <li><a href="#credit">信用 Credit (3) &rarr;</a></li>
+    <li><a href="#space">太空 Space (1) &rarr;</a></li>
+  </ol>
+</div>
+
+<div class="section" id="uncategorized">
+  <h2><span class="tag tag-misc">其他</span> Miscellaneous (57)</h2>
+  <div class="article">
+    <div class="article-title">AIs Trillion BuildOut Spurs D</div>
+    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:52:50+08:00</p>
+  </div>
+  <div class="article">
+    <div class="article-title">BE Primer Australia&#x27;s Energy Mix Means Export Boom, Petrol Pain</div>
+    <p># BE Primer Australia&#x27;s Energy Mix Means Export Boom, Petrol Pain</p>
+  </div>
+  <div class="article">
+    <div class="article-title">BE Primer Energy Spike Could Derail New Zealand&#x27;s Recovery</div>
+    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:52:55+08:00</p>
+  </div>
+  <div class="article">
+    <div class="article-title">BofAs Hartnett Sees European J</div>
+    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:52:56+08:00</p>
+  </div>
+  <div class="article">
+    <div class="article-title">Bond Vigilantes Pricing in Fis</div>
+    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:52:57+08:00</p>
+  </div>
+  <div class="article">
+    <div class="article-title">CHINA PREVIEW Profit Growth Li</div>
+    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:53:03+08:00</p>
+  </div>
+  <div class="article">
+    <div class="article-title">Circle Stablecoin Boom Defies</div>
+    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:53:03+08:00</p>
+  </div>
+  <div class="article">
+    <div class="article-title">Dollar&#x27;s Short-Term Rally Made Sense, Midterm View Not So Clear</div>
+    <p># Dollar&#x27;s Short-Term Rally Made Sense, Midterm View Not So Clear</p>
+  </div>
+  <div class="article">
+    <div class="article-title">DraftKings Low Value Overstates Prediction-Market Risk BI Focus</div>
+    <p># DraftKings Low Value Overstates Prediction-Market Risk BI Focus</p>
+  </div>
+  <div class="article">
+    <div class="article-title">Drone Defense, US in NATO Lessons From Ret. Air Force General</div>
+    <p># Drone Defense, US in NATO Lessons From Ret. Air Force General</p>
+  </div>
+  <div class="article">
+    <div class="article-title">Equity Rotation Lifts Dispersion, But Value Is Harder to Find</div>
+    <p># Equity Rotation Lifts Dispersion, But Value Is Harder to Find</p>
+  </div>
+  <div class="article">
+    <div class="article-title">EUROPE INSIGHT Break from Russ</div>
+    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:53:06+08:00</p>
+  </div>
+  <div class="article">
+    <div class="article-title">EUROPE INSIGHT Energy Shock L</div>
+    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:53:06+08:00</p>
+  </div>
+  <div class="article">
+    <div class="article-title">EUROPE INSIGHT How Middle East</div>
+    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:53:06+08:00</p>
+  </div>
+  <div class="article">
+    <div class="article-title">Fear and Greed (3) (1)</div>
+    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:53:06+08:00</p>
+  </div>
+  <div class="article">
+    <div class="article-title">Fear and Greed (3)</div>
+    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:53:06+08:00</p>
+  </div>
+  <div class="article">
+    <div class="article-title">FTSE Offers Haven Appeal in T</div>
+    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:53:15+08:00</p>
+  </div>
+  <div class="article">
+    <div class="article-title">GLOBAL INSIGHT Bombs or Deal</div>
+    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:53:16+08:00</p>
+  </div>
+  <div class="article">
+    <div class="article-title">GLOBAL INSIGHT Questions as I</div>
+    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:53:17+08:00</p>
+  </div>
+  <div class="article">
+    <div class="article-title">GLOBAL REACT What Irans New Le</div>
+    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:53:17+08:00</p>
+  </div>
+  <div class="article">
+    <div class="article-title">Hopes of a Luxury Stock Reviva</div>
+    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:53:18+08:00</p>
+  </div>
+  <div class="article">
+    <div class="article-title">Infleqtions Public Debut to Te</div>
+    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:53:22+08:00</p>
+  </div>
+  <div class="article">
+    <div class="article-title">instOf_7f277707-ea30-40c8-8542-694bb85b0847</div>
+    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:53:38+08:00</p>
+  </div>
+  <div class="article">
+    <div class="article-title">Investors Can Handle Whats Hap</div>
+    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:53:38+08:00</p>
+  </div>
+  <div class="article">
+    <div class="article-title">Investors Turn Bearish Over Wa</div>
+    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:53:38+08:00</p>
+  </div>
+  <div class="article">
+    <div class="article-title">JAPAN INSIGHT Quiet Supply Cru</div>
+    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:53:48+08:00</p>
+  </div>
+  <div class="article">
+    <div class="article-title">JM Financial Institutional Securities Limited Utilities &amp; Power Equipment 10 POWER points; weekly ro</div>
+    <p># JM Financial Institutional Securities Limited Utilities &amp; Power Equipment 10 POWER points; weekly ro</p>
+  </div>
+  <div class="article">
+    <div class="article-title">Market Underpricing LongTerm R</div>
+    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:53:50+08:00</p>
+  </div>
+  <div class="article">
+    <div class="article-title">Pattern-Based, Heavy-Language Apps at High Risk</div>
+    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:53:54+08:00</p>
+  </div>
+  <div class="article">
+    <div class="article-title">SP Slumps As Data Shows Weake</div>
+    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:53:57+08:00</p>
+  </div>
+  <div class="article">
+    <div class="article-title">SpaceXs Mega IPO Reshapes Lis</div>
+    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:53:58+08:00</p>
+  </div>
+  <div class="article">
+    <div class="article-title">Strategists Say European Marke</div>
+    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:53:59+08:00</p>
+  </div>
+  <div class="article">
+    <div class="article-title">TCDX9OT9NJM1fe67f306-ea37-4f7c-91cb-85762ec9b1b0</div>
+    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:54:00+08:00</p>
+  </div>
+  <div class="article">
+    <div class="article-title">TCDZ93T9NJLS002e46c2-758e-4f0f-86a0-fefb91afe605</div>
+    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:54:00+08:00</p>
+  </div>
+  <div class="article">
+    <div class="article-title">TCE40IKJH6V4ad2b838d-e3f0-4971-aa2e-77baaf108c79</div>
+    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:54:01+08:00</p>
+  </div>
+  <div class="article">
+    <div class="article-title">TCFQPEKJH6V61e0de781-5f1f-44f3-b3ec-d5690ba8e47f</div>
+    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:54:01+08:00</p>
+  </div>
+  <div class="article">
+    <div class="article-title">TCFSG4KGZAJR06f6f9c1-3c1b-42aa-a8f0-4d9103f22bfb</div>
+    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:54:02+08:00</p>
+  </div>
+  <div class="article">
+    <div class="article-title">TCHTU3KJH6V5088aaa77-1e88-421b-bcc4-3359d3321eee</div>
+    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:54:02+08:00</p>
+  </div>
+  <div class="article">
+    <div class="article-title">Tesla to by June Moonshot Bet</div>
+    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:54:03+08:00</p>
+  </div>
+  <div class="article">
+    <div class="article-title">To Hedge or Not Why Protection</div>
+    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:54:08+08:00</p>
+  </div>
+  <div class="article">
+    <div class="article-title">UBS Faces More Risk From Credi</div>
+    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:54:08+08:00</p>
+  </div>
+  <div class="article">
+    <div class="article-title">UBS Hong Kong Property What could extend the property rally</div>
+    <p># UBS Hong Kong Property What could extend the property rally</p>
+  </div>
+  <div class="article">
+    <div class="article-title">What Happens to Portfolio If</div>
+    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:54:16+08:00</p>
+  </div>
+  <div class="article">
+    <div class="article-title">⽔雷威脅下的霍爾⽊茲海峽 伊朗如何扼住了⽯油的咽喉</div>
+    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:54:26+08:00</p>
+  </div>
+  <div class="article">
+    <div class="article-title">《美墨加協定》迎來六年審查 談判可能如何收場？</div>
+    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:54:29+08:00</p>
+  </div>
+  <div class="article">
+    <div class="article-title">中⽇裂痕擴⼤ 五個⾯向的情勢發展值得關注</div>
+    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:54:32+08:00</p>
+  </div>
+  <div class="article">
+    <div class="article-title">中東戰⽕延燒 亞洲各國嚴陣以待應對霍爾⽊茲斷航衝擊</div>
+    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:54:39+08:00</p>
+  </div>
+  <div class="article">
+    <div class="article-title">以⾊列继续对伊朗实施 “ 斩⾸ ” ⾏动 接下来会发⽣什么？</div>
+    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:54:40+08:00</p>
+  </div>
+  <div class="article">
+    <div class="article-title">伊朗戰⽕恐⾮川普想滅就滅 伊以也有話語權</div>
+    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:54:46+08:00</p>
+  </div>
+  <div class="article">
+    <div class="article-title">伊朗戰⽕波及⾮洲 礦產供應擾動或令銅鈷⾯臨停產⾵險</div>
+    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:54:47+08:00</p>
+  </div>
+  <div class="article">
+    <div class="article-title">受天氣和節後消費回落影響 美國 1 ⽉整體零售料出現下滑</div>
+    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:54:57+08:00</p>
+  </div>
+  <div class="article">
+    <div class="article-title">如果你無法關注伊朗，⾄少可以關注⽯油：約翰 · 奧瑟斯 對於美國可能發動攻擊的⾵險，⽬前卻出奇地平靜，令⼈不安。</div>
+    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:54:59+08:00</p>
+  </div>
+  <div class="article">
+    <div class="article-title">如果沃什擔任聯儲會主席 他可以單⽅⾯採取哪些⾏動？</div>
+    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:55:00+08:00</p>
+  </div>
+  <div class="article">
+    <div class="article-title">密集外交疑為緩兵之計 對伊朗軍事打擊可能性依然存在</div>
+    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:55:01+08:00</p>
+  </div>
+  <div class="article">
+    <div class="article-title">從過往⾔⾏來看 沃什⼀貫⽀持聯儲會保持獨⽴性</div>
+    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:55:11+08:00</p>
+  </div>
+  <div class="article">
+    <div class="article-title">美國 1 ⽉零售受到冬季⾵暴影響 天氣好轉料帶動動能反彈</div>
+    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:55:27+08:00</p>
+  </div>
+  <div class="article">
+    <div class="article-title">美國下⼀波伊朗攻勢－⽬標難度加⼤ ⾵險上升</div>
+    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:55:27+08:00</p>
+  </div>
+</div>
+
+<div class="section" id="geopolitics">
+  <h2><span class="tag tag-geo">地緣政治</span> Geopolitics (19)</h2>
+  <div class="article">
+    <div class="article-title">At Oil a Longer War Is Here</div>
+    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:52:51+08:00</p>
+  </div>
+  <div class="article">
+    <div class="article-title">China Faces Mild But Manageable Inflationary Impulse From Iran</div>
+    <p># China Faces Mild But Manageable Inflationary Impulse From Iran</p>
+  </div>
+  <div class="article">
+    <div class="article-title">CHINA INSIGHT Iran War May Tes</div>
+    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:53:03+08:00</p>
+  </div>
+  <div class="article">
+    <div class="article-title">GLOBAL INSIGHT Iran Has Taken 3,600 Shots at Gulf — More Coming</div>
+    <p># GLOBAL INSIGHT Iran Has Taken 3,600 Shots at Gulf — More Coming</p>
+  </div>
+  <div class="article">
+    <div class="article-title">Hormuz, Markets, and the Elusive Art of the Exit</div>
+    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:53:21+08:00</p>
+  </div>
+  <div class="article">
+    <div class="article-title">If You Cant Follow Iran at Lea</div>
+    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:53:22+08:00</p>
+  </div>
+  <div class="article">
+    <div class="article-title">Iran Conflict Revives Machinery Cost Pressure, Yet Demand Intact</div>
+    <p># Iran Conflict Revives Machinery Cost Pressure, Yet Demand Intact</p>
+  </div>
+  <div class="article">
+    <div class="article-title">Iran War Forces Trump’s Hand on Russian Oil</div>
+    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:53:41+08:00</p>
+  </div>
+  <div class="article">
+    <div class="article-title">Iran War Hurts Africa, Risks Copper and Cobalt</div>
+    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:53:45+08:00</p>
+  </div>
+  <div class="article">
+    <div class="article-title">LME Aluminum Price Can Climb 28% on Iran War Despite Asia Supply</div>
+    <p># LME Aluminum Price Can Climb 28% on Iran War Despite Asia Supply</p>
+  </div>
+  <div class="article">
+    <div class="article-title">Middle East War Day Seven - Iran Isn&#x27;t Venezuela, What&#x27;s Next</div>
+    <p># Middle East War Day Seven - Iran Isn&#x27;t Venezuela, What&#x27;s Next</p>
+  </div>
+  <div class="article">
+    <div class="article-title">Middle East War Lifts Fertilizer Prices as Supply Concerns Build</div>
+    <p># Middle East War Lifts Fertilizer Prices as Supply Concerns Build</p>
+  </div>
+  <div class="article">
+    <div class="article-title">The $100 Oil War How Long Can the World Afford Iran</div>
+    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:54:06+08:00</p>
+  </div>
+  <div class="article">
+    <div class="article-title">伊朗在戰爭中展現出韌性——並為長期鬥爭做好了準備</div>
+    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:54:43+08:00</p>
+  </div>
+  <div class="article">
+    <div class="article-title">伊朗戰爭衝擊氦氣供應 恐加劇晶⽚短缺</div>
+    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:54:50+08:00</p>
+  </div>
+  <div class="article">
+    <div class="article-title">伊朗攻擊勢頭減弱並不意味著戰爭即將結束</div>
+    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:54:51+08:00</p>
+  </div>
+  <div class="article">
+    <div class="article-title">伊朗衝突會⾛向何⽅？三⼤因素值得關注</div>
+    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:54:53+08:00</p>
+  </div>
+  <div class="article">
+    <div class="article-title">戰爭越打越⼤ 盟友越打越少</div>
+    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:55:14+08:00</p>
+  </div>
+  <div class="article">
+    <div class="article-title">打擊範圍擴⼤ 成本不斷攀升 —— 透過數字看伊朗戰爭</div>
+    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:55:16+08:00</p>
+  </div>
+</div>
+
+<div class="section" id="growth">
+  <h2><span class="tag tag-growth">成長</span> Growth (18)</h2>
+  <div class="article">
+    <div class="article-title">Aluminum Prices Shift From China PMI Link to Copper Correlation</div>
+    <p># Aluminum Prices Shift From China PMI Link to Copper Correlation</p>
+  </div>
+  <div class="article">
+    <div class="article-title">BE Primer Euro-Area Economy Weakened by Oil Surge, US Tariffs</div>
+    <p># BE Primer Euro-Area Economy Weakened by Oil Surge, US Tariffs</p>
+  </div>
+  <div class="article">
+    <div class="article-title">Change of PM How Starmer&#x27;s Exit Could Shift UK Economic Outlook</div>
+    <p># Change of PM How Starmer&#x27;s Exit Could Shift UK Economic Outlook</p>
+  </div>
+  <div class="article">
+    <div class="article-title">Global Aluminum Demand Growth Will Ease to 0.9%</div>
+    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:53:15+08:00</p>
+  </div>
+  <div class="article">
+    <div class="article-title">⽇本⼯業產出成⻑勢頭仍顯乏⼒預⽰第⼀季度 GDP 疲軟</div>
+    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:54:22+08:00</p>
+  </div>
+  <div class="article">
+    <div class="article-title">上市公司⾼管眼中的美國經濟</div>
+    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:54:30+08:00</p>
+  </div>
+  <div class="article">
+    <div class="article-title">中國 2 ⽉ PMI 數據顯⽰製造業放緩 假⽇消費表現強勁</div>
+    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:54:35+08:00</p>
+  </div>
+  <div class="article">
+    <div class="article-title">伊朗战争可能令中国经济增⻓⾯临考验 刺激或需加码</div>
+    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:54:44+08:00</p>
+  </div>
+  <div class="article">
+    <div class="article-title">低預期下中國年初經濟數據⾼於預估 但成⻑依舊乏⼒</div>
+    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:54:54+08:00</p>
+  </div>
+  <div class="article">
+    <div class="article-title">即便是 15% 的美國新關稅也不會對⽇本經濟造成重⼤衝擊</div>
+    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:54:56+08:00</p>
+  </div>
+  <div class="article">
+    <div class="article-title">年初兩個⽉中國經濟運⾏依舊疲軟 多項產需指標⾛弱</div>
+    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:55:03+08:00</p>
+  </div>
+  <div class="article">
+    <div class="article-title">強⼤的貨幣需要更⾃由的流動 中國經濟學家呼籲進⼀步開放資本項⽬ (1) 多位經濟學家稱開放的內部和外部時間已成熟，不必擔⼼招致⼤幅外流壓⼒ 學者鞠建東認為 2026-2027 年將</div>
+    <p># 強⼤的貨幣需要更⾃由的流動 中國經濟學家呼籲進⼀步開放資本項⽬ (1) 多位經濟學家稱開放的內部和外部時間已成熟，不必擔⼼招致⼤幅外流壓⼒ 學者鞠建東認為 2026-2027 年將</p>
+  </div>
+  <div class="article">
+    <div class="article-title">彭博美國數據前瞻：嚴寒多雪天氣或抑制非農就業和零售銷售</div>
+    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:55:07+08:00</p>
+  </div>
+  <div class="article">
+    <div class="article-title">彭博美國數據前瞻：霍爾⽊茲海峽能否較快復航將影響美國經濟未來⾛向</div>
+    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:55:09+08:00</p>
+  </div>
+  <div class="article">
+    <div class="article-title">成長、消費、政策——兩會對於中國經濟為何意義重大</div>
+    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:55:13+08:00</p>
+  </div>
+  <div class="article">
+    <div class="article-title">為何⾦屬價格不再緊密追隨中國經濟⾛勢</div>
+    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:55:22+08:00</p>
+  </div>
+  <div class="article">
+    <div class="article-title">為何⾦屬價格不再緊密追隨中國經濟⾛勢</div>
+    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:55:22+08:00</p>
+  </div>
+  <div class="article">
+    <div class="article-title">開年活動數據料顯⽰中國經濟疲軟態勢延續到 2026 年</div>
+    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:55:34+08:00</p>
+  </div>
+</div>
+
+<div class="section" id="rates">
+  <h2><span class="tag tag-rates">利率</span> Rates (14)</h2>
+  <div class="article">
+    <div class="article-title">BE Primer BOJ April Hike on Cards as Oil Rise Lifts Price Risks</div>
+    <p># BE Primer BOJ April Hike on Cards as Oil Rise Lifts Price Risks</p>
+  </div>
+  <div class="article">
+    <div class="article-title">BOJ PREVIEW Hold Likely Watch</div>
+    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:52:56+08:00</p>
+  </div>
+  <div class="article">
+    <div class="article-title">BOJ REACT Rate Hold Shifts Foc</div>
+    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:52:56+08:00</p>
+  </div>
+  <div class="article">
+    <div class="article-title">ECB Policy Right Tail Depends on Access to Strait of Hormuz</div>
+    <p># ECB Policy Right Tail Depends on Access to Strait of Hormuz</p>
+  </div>
+  <div class="article">
+    <div class="article-title">Fixed Income Bloomberg Terminal A Bloomberg Professional Services Offering Government fair value yield curves</div>
+    <p># Fixed Income Bloomberg Terminal A Bloomberg Professional Services Offering Government fair value yield curves</p>
+  </div>
+  <div class="article">
+    <div class="article-title">Nvidia AI Fed BOJ BOE ECB ZEW</div>
+    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:53:53+08:00</p>
+  </div>
+  <div class="article">
+    <div class="article-title">US WEEK AHEAD War, Inﬂation – Hawks on the FOMC Take the Reins</div>
+    <p># US WEEK AHEAD War, Inﬂation – Hawks on the FOMC Take the Reins</p>
+  </div>
+  <div class="article">
+    <div class="article-title">⾼市早苗提名⼈選預⽰⽇本央⾏政策或趨向鴿派</div>
+    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:54:27+08:00</p>
+  </div>
+  <div class="article">
+    <div class="article-title">中國 3 ⽉貸款市場報價利率預計將保持穩定</div>
+    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:54:35+08:00</p>
+  </div>
+  <div class="article">
+    <div class="article-title">中國央⾏意在管理⼈⺠幣升值節奏 ⽽⾮升值本⾝</div>
+    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:54:36+08:00</p>
+  </div>
+  <div class="article">
+    <div class="article-title">彭博中國數據前瞻：貸款市場報價利率料不作調整</div>
+    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:55:05+08:00</p>
+  </div>
+  <div class="article">
+    <div class="article-title">春季談判達成穩健漲薪 為⽇本央⾏繼續加息提供依據</div>
+    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:55:18+08:00</p>
+  </div>
+  <div class="article">
+    <div class="article-title">東京 CPI 因補貼效應⾛軟意味央⾏可放緩加息步伐</div>
+    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:55:20+08:00</p>
+  </div>
+  <div class="article">
+    <div class="article-title">聯儲會料按兵不動 可能會指出利率路徑⾯臨雙向⾵險</div>
+    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:55:33+08:00</p>
+  </div>
+</div>
+
+<div class="section" id="trade">
+  <h2><span class="tag tag-trade">貿易</span> Trade (12)</h2>
+  <div class="article">
+    <div class="article-title">CHINA INSIGHT Exports Are Soli</div>
+    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:53:02+08:00</p>
+  </div>
+  <div class="article">
+    <div class="article-title">New Aluminum Tariffs Won&#x27;t Cut US Imports; Industry Cost to Rise</div>
+    <p># New Aluminum Tariffs Won&#x27;t Cut US Imports; Industry Cost to Rise</p>
+  </div>
+  <div class="article">
+    <div class="article-title">Trade Like Its as Iran War Bo</div>
+    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:54:08+08:00</p>
+  </div>
+  <div class="article">
+    <div class="article-title">Who Can Win From Tariff Refund</div>
+    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:54:16+08:00</p>
+  </div>
+  <div class="article">
+    <div class="article-title">伊朗戰爭中表現落後的亞洲貨幣：高beta與石油淨進口國</div>
+    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:54:49+08:00</p>
+  </div>
+  <div class="article">
+    <div class="article-title">兩項貿易調查為川普政府⼀勞永逸徵收關稅鋪平道路</div>
+    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:54:56+08:00</p>
+  </div>
+  <div class="article">
+    <div class="article-title">川普的護航計畫恐怕難以為海灣能源出⼝掃清障礙</div>
+    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:55:03+08:00</p>
+  </div>
+  <div class="article">
+    <div class="article-title">新年⾸份貿易數據料將顯現中國出⼝穩健成⻑</div>
+    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:55:17+08:00</p>
+  </div>
+  <div class="article">
+    <div class="article-title">特朗普的贸易政策⼯具正显现出裂痕</div>
+    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:55:24+08:00</p>
+  </div>
+  <div class="article">
+    <div class="article-title">美国最⾼法院关税裁决后哪些进⼝商获益最⼤</div>
+    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:55:25+08:00</p>
+  </div>
+  <div class="article">
+    <div class="article-title">美國新關稅效果主次不分 盟友獲益反不及競爭對⼿</div>
+    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:55:32+08:00</p>
+  </div>
+  <div class="article">
+    <div class="article-title">關稅下調固然是利好 但中國⾯臨的博弈格局已變</div>
+    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:55:35+08:00</p>
+  </div>
+</div>
+
+<div class="section" id="inflation">
+  <h2><span class="tag tag-infl">通膨</span> Inflation (8)</h2>
+  <div class="article">
+    <div class="article-title">Pre-War Forecast Showed Global Inflation Ebbing to Year End</div>
+    <p># Pre-War Forecast Showed Global Inflation Ebbing to Year End</p>
+  </div>
+  <div class="article">
+    <div class="article-title">Spain&#x27;s Surprise February CPI Rise Underscores Slow Path to 2%</div>
+    <p># Spain&#x27;s Surprise February CPI Rise Underscores Slow Path to 2%</p>
+  </div>
+  <div class="article">
+    <div class="article-title">US INSIGHT CPI Flags New Suppl</div>
+    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:54:15+08:00</p>
+  </div>
+  <div class="article">
+    <div class="article-title">⾦屬和內存價格對美國 CPI 的衝擊在伊戰前就開始顯現</div>
+    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:54:27+08:00</p>
+  </div>
+  <div class="article">
+    <div class="article-title">中國 2 ⽉ CPI 漲幅⾼於季節性⽔平 消費仍存在不確定性</div>
+    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:54:34+08:00</p>
+  </div>
+  <div class="article">
+    <div class="article-title">中國 2 ⽉ CPI 漲幅⾼於季節性⽔平 消費仍存在不確定性</div>
+    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:54:34+08:00</p>
+  </div>
+  <div class="article">
+    <div class="article-title">川普平價醫療努⼒效果初現 美國 CPI 藥品價格或降 3%</div>
+    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:55:02+08:00</p>
+  </div>
+  <div class="article">
+    <div class="article-title">成⻑ vs 通膨</div>
+    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:55:12+08:00</p>
+  </div>
+</div>
+
+<div class="section" id="china">
+  <h2><span class="tag tag-china">中國</span> China (7)</h2>
+  <div class="article">
+    <div class="article-title">CHINA INSIGHT Holiday Spending</div>
+    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:53:02+08:00</p>
+  </div>
+  <div class="article">
+    <div class="article-title">CHINA INSIGHT New FiveYear Pla</div>
+    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:53:03+08:00</p>
+  </div>
+  <div class="article">
+    <div class="article-title">CHINA PREVIEW Seasonality and</div>
+    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:53:03+08:00</p>
+  </div>
+  <div class="article">
+    <div class="article-title">CHINA REACT Data Clears Low Ba</div>
+    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:53:03+08:00</p>
+  </div>
+  <div class="article">
+    <div class="article-title">Xi&#x27;s &#x27;Powerful&#x27; Yuan Vow Could Mean FX Appreciation This Time</div>
+    <p># Xi&#x27;s &#x27;Powerful&#x27; Yuan Vow Could Mean FX Appreciation This Time</p>
+  </div>
+  <div class="article">
+    <div class="article-title">中国的⼗五五规划重点着眼于推动科技发展和消费</div>
+    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:54:33+08:00</p>
+  </div>
+  <div class="article">
+    <div class="article-title">中國樓市調整「進度條」已近 70% 2027 年或可結束下滑</div>
+    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:54:38+08:00</p>
+  </div>
+</div>
+
+<div class="section" id="policy">
+  <h2><span class="tag tag-policy">政策</span> Policy (5)</h2>
+  <div class="article">
+    <div class="article-title">JAPAN PREVIEW Election LDP Wi</div>
+    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:53:49+08:00</p>
+  </div>
+  <div class="article">
+    <div class="article-title">⽇本⾸相頂著伊朗戰事陰雲訪美 雙⽅會談及哪些議題</div>
+    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:54:25+08:00</p>
+  </div>
+  <div class="article">
+    <div class="article-title">⽇本⾸相頂著伊朗戰事陰雲訪美 雙⽅會談及哪些議題</div>
+    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:54:25+08:00</p>
+  </div>
+  <div class="article">
+    <div class="article-title">美國對華貿易政策籌碼並不會因最⾼法院裁決⽽減弱</div>
+    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:55:31+08:00</p>
+  </div>
+  <div class="article">
+    <div class="article-title">美國對華貿易政策籌碼並不會因最⾼法院裁決⽽減弱</div>
+    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:55:31+08:00</p>
+  </div>
+</div>
+
+<div class="section" id="metals">
+  <h2><span class="tag tag-metals">金屬</span> Metals (4)</h2>
+  <div class="article">
+    <div class="article-title">2026 Outlook Global Aluminum Producers</div>
+    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:52:49+08:00</p>
+  </div>
+  <div class="article">
+    <div class="article-title">China Aluminum Unit Profit to Stay Robust Despite Holiday Lull</div>
+    <p># China Aluminum Unit Profit to Stay Robust Despite Holiday Lull</p>
+  </div>
+  <div class="article">
+    <div class="article-title">Global Bauxite Market Can Shift to Surplus on Massive Expansion</div>
+    <p># Global Bauxite Market Can Shift to Surplus on Massive Expansion</p>
+  </div>
+  <div class="article">
+    <div class="article-title">Precious Comment Raising Our Gold Price Forecast on Sticky Hedges</div>
+    <p># Precious Comment Raising Our Gold Price Forecast on Sticky Hedges</p>
+  </div>
+</div>
+
+<div class="section" id="oil">
+  <h2><span class="tag tag-oil">石油</span> Oil & Energy (4)</h2>
+  <div class="article">
+    <div class="article-title">Europes LNG Supplies at Risk a</div>
+    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:53:06+08:00</p>
+  </div>
+  <div class="article">
+    <div class="article-title">Oil Near Adds Hawkish Rate Ri</div>
+    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:53:54+08:00</p>
+  </div>
+  <div class="article">
+    <div class="article-title">伊戰引發的油價上漲對共和黨⽀持州的消費者衝擊更⼤</div>
+    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:54:42+08:00</p>
+  </div>
+  <div class="article">
+    <div class="article-title">美國對伊朗發動軍事打擊會導致油價飆升嗎？未必</div>
+    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:55:29+08:00</p>
+  </div>
+</div>
+
+<div class="section" id="japan">
+  <h2><span class="tag tag-japan">日本</span> Japan (4)</h2>
+  <div class="article">
+    <div class="article-title">JAPAN INSIGHT Three Fixes to M</div>
+    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:53:48+08:00</p>
+  </div>
+  <div class="article">
+    <div class="article-title">JAPAN REACT Solid WageRise Agr</div>
+    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:53:49+08:00</p>
+  </div>
+  <div class="article">
+    <div class="article-title">JAPAN REACT Takaichi Picks for</div>
+    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:53:49+08:00</p>
+  </div>
+  <div class="article">
+    <div class="article-title">Three Fixes to Make Takaichi’s Japan Fiscal Bet Pay Off</div>
+    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:54:07+08:00</p>
+  </div>
+</div>
+
+<div class="section" id="valuations">
+  <h2><span class="tag tag-val">估值</span> Valuations (3)</h2>
+  <div class="article">
+    <div class="article-title">Challenger Pepper Money Dalliance Seems a Folly Equity Outlook</div>
+    <p># Challenger Pepper Money Dalliance Seems a Folly Equity Outlook</p>
+  </div>
+  <div class="article">
+    <div class="article-title">China Hongqiao Set for Robust Earnings in 2026 Equity Outlook</div>
+    <p># China Hongqiao Set for Robust Earnings in 2026 Equity Outlook</p>
+  </div>
+  <div class="article">
+    <div class="article-title">Hapag-Lloyd Relative Value Erodes Amid Industry Volatility, M&amp;A</div>
+    <p># Hapag-Lloyd Relative Value Erodes Amid Industry Volatility, M&amp;A</p>
+  </div>
+</div>
+
+<div class="section" id="volatility">
+  <h2><span class="tag tag-vol">波動</span> Volatility (3)</h2>
+  <div class="article">
+    <div class="article-title">GLOBAL INSIGHT Iran Charts to Watch — Attacks, Oil, Uncertainty</div>
+    <p># GLOBAL INSIGHT Iran Charts to Watch — Attacks, Oil, Uncertainty</p>
+  </div>
+  <div class="article">
+    <div class="article-title">Iran War Week Two – Mixed Trump Signals Keep Oil Volatile</div>
+    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:53:48+08:00</p>
+  </div>
+  <div class="article">
+    <div class="article-title">RiskOff Outflows More Visible</div>
+    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:53:57+08:00</p>
+  </div>
+</div>
+
+<div class="section" id="credit">
+  <h2><span class="tag tag-credit">信用</span> Credit (3)</h2>
+  <div class="article">
+    <div class="article-title">中國信貸成⻑乏⼒折射出私營部⾨信⼼的低迷</div>
+    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:54:35+08:00</p>
+  </div>
+  <div class="article">
+    <div class="article-title">中國年初信貸超預期成⻑ 但住戶貸款有所減少</div>
+    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:54:37+08:00</p>
+  </div>
+  <div class="article">
+    <div class="article-title">银⾏集中放贷和政府债券发⾏放量料提振中国信贷增速</div>
+    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:55:33+08:00</p>
+  </div>
+</div>
+
+<div class="section" id="space">
+  <h2><span class="tag tag-space">太空</span> Space (1)</h2>
+  <div class="article">
+    <div class="article-title">Is SpaceX Worth Trillion Key</div>
+    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:53:48+08:00</p>
+  </div>
+</div>
+
+<div class="callout">
+  <div class="callout-title">本週重點主題 Key Themes This Week</div>
+  <ul>
+    <li><strong>其他 Miscellaneous:</strong> 57 articles this week</li>
+    <li><strong>地緣政治 Geopolitics:</strong> 19 articles this week</li>
+    <li><strong>成長 Growth:</strong> 18 articles this week</li>
+    <li><strong>利率 Rates:</strong> 14 articles this week</li>
+    <li><strong>貿易 Trade:</strong> 12 articles this week</li>
+  </ul>
+</div>
+
+<div class="nav-links">
+  <span></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="footer">
+  彭博週報 | 僅供教學與討論用途 | 2026年3月26日<br>
+  資料來源：Bloomberg Intelligence, Bloomberg Economics, Bloomberg News
+</div>
+
+</body>
+</html>

@@ -286,3 +286,99 @@ Status meanings:
 - `stale`: H-model article is older than 120 hours
 - `divergence_flag=true`: the internal checker disagrees with the H-model baseline
 - `override_active=true`: the checker is temporarily overriding the H-model baseline because the H model is stale or divergence has persisted
+
+## Ciovacco Weekly Feed
+
+This repo can now capture the latest `CiovaccoCapital` YouTube update as a recurring external-observation artifact.
+
+Run manually:
+```bash
+python scrape_ciovacco.py
+python scrape_ciovacco.py --video-url "https://www.youtube.com/watch?v=6JCqUhMsPeM"
+```
+
+Generated files:
+- `scraped_data/ciovacco/ciovacco_latest.json`
+- `scraped_data/ciovacco/<video_id>.json`
+- `scraped_data/ciovacco/<video_id>_transcript.txt`
+- `output/ciovacco_latest_preview.html`
+
+The JSON artifact includes:
+- latest video metadata
+- normalized transcript path
+- raw ratio mentions and keyword hits
+- `analysis` with situation, core conclusion, ratio-specific reason/action, and watch items
+
+Optional NotebookLM enrichment:
+```bash
+python -m notebooklm login
+python scrape_ciovacco.py --sync-notebooklm --notebook-id 99e260ac-3813-4c85-9eee-c05bd3f57b50
+```
+
+NotebookLM notes:
+- keep NotebookLM as historical-context enrichment, not the primary ingest path
+- set `CIOVACCO_NOTEBOOKLM_NOTEBOOK_ID` to avoid passing `--notebook-id` every run
+- set `NOTEBOOKLM_STORAGE_PATH` if you do not want the default `~/.notebooklm/storage_state.json`
+- successful sync writes a `notebooklm` block into `scraped_data/ciovacco/ciovacco_latest.json`
+- successful sync also writes `scraped_data/ciovacco/ciovacco_notebooklm_latest.json`
+
+Weekend schedule:
+```powershell
+.\register_ciovacco_weekly_task.ps1 -WhatIf
+.\register_ciovacco_weekly_task.ps1
+```
+
+Registered run windows:
+- Saturday 14:00 HKT
+- Sunday 14:00 HKT
+- `run_ciovacco_weekly.bat` will automatically add `--sync-notebooklm` when `CIOVACCO_NOTEBOOKLM_NOTEBOOK_ID` is defined in the task environment
+
+## NotebookLM: Signal-Triggered Fundamental Research
+
+### One-time setup
+
+```bash
+# Install the library (if not already in requirements.txt)
+pip install "notebooklm-py[browser]"
+
+# Log in once — opens a browser window for Google sign-in
+python -m notebooklm login
+
+# Create one NLM notebook per ticker at notebooklm.google.com
+# Copy the notebook ID from the URL:  .../notebook/<NOTEBOOK_ID>
+```
+
+### Running research
+
+```bash
+# Manual trigger (e.g. after DeepVue flags NVDA):
+python scrape_fundamental_research.py \
+    --ticker NVDA \
+    --sector semiconductors \
+    --trigger-source DEEPVUE \
+    --trigger-signal momentum_breakout \
+    --notebook-id <YOUR_NOTEBOOK_ID> \
+    --youtube "https://www.youtube.com/watch?v=<earnings_call_id>" \
+    --youtube "https://www.youtube.com/watch?v=<analyst_video_id>"
+
+# Or via signal file (for automated SMM/DeepVue triggers):
+python scrape_fundamental_research.py \
+    --signal-file path/to/smm_signal.json \
+    --notebook-id <YOUR_NOTEBOOK_ID>
+```
+
+### Output
+
+`scraped_data/notebooklm/{ticker_lower}_fundamental.md` — human-readable MD with
+YAML frontmatter. Open directly in any editor; fundman-jarvis reads it via
+`external_scrapers.read_fundamental_research(ticker)`.
+
+### Auth note
+
+NotebookLM uses cookie-based sessions (1-2 hour expiry). Re-run `python -m notebooklm login`
+if you get auth errors. Store the storage path in `NOTEBOOKLM_STORAGE_PATH` env var.
+
+### Interactive / ad-hoc path
+
+Use the `notebooklm-skill-master` skill in Claude Code to query NLM notebooks
+directly mid-conversation — no script needed for one-off analyst questions.
