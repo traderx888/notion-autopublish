@@ -31,6 +31,7 @@ class DeepVueScraper(BrowserAutomation):
     DASHBOARD_URL = "https://app.deepvue.com/dashboard"
     MARKET_OVERVIEW_TAB = "Market overview11"
     PREOPEN_TAB = "PreOpen"
+    CAPSCREEN_TAB = "CapScreen"
 
     def __init__(self, **kwargs):
         # Wider viewport for dashboard panels
@@ -447,13 +448,119 @@ class DeepVueScraper(BrowserAutomation):
 
         return movers
 
+    def capture_capscreen(self) -> dict:
+        """
+        Capture CapScreen dashboard — extract individual stock tickers
+        from the screener table.
+        """
+        print("[DeepVue] Capturing CapScreen...")
+        ts = datetime.now().strftime("%Y%m%d_%H%M%S")
+        result = {
+            "dashboard": "capscreen",
+            "timestamp": datetime.now().isoformat(),
+            "screenshot": None,
+            "tickers": [],
+        }
+
+        # Navigate and switch to CapScreen tab
+        self.page.goto(self.DASHBOARD_URL, wait_until="domcontentloaded")
+        self._wait_for_dashboard_load()
+
+        # Try tab name variations (exact name may differ on the live site)
+        tab_found = self._switch_tab(self.CAPSCREEN_TAB)
+        if not tab_found:
+            for variant in ["Cap Screen", "Capscreen", "Screen", "Screener"]:
+                tab_found = self._switch_tab(variant)
+                if tab_found:
+                    break
+
+        if not tab_found:
+            print("  CapScreen tab not found — check tab name on app.deepvue.com")
+            data_path = self.output_dir / "capscreen.json"
+            with open(data_path, "w", encoding="utf-8") as f:
+                json.dump(result, f, indent=2, ensure_ascii=False)
+            return result
+
+        self._close_sidebar()
+
+        # Screenshot
+        screenshot_path = self.output_dir / f"capscreen_{ts}.png"
+        self.page.screenshot(path=str(screenshot_path), full_page=False)
+        result["screenshot"] = str(screenshot_path)
+        print(f"  Screenshot: {screenshot_path}")
+
+        # Extract tickers from screener table
+        try:
+            result["tickers"] = self._extract_capscreen_tickers()
+        except Exception as e:
+            print(f"  CapScreen extraction error: {e}")
+
+        # Save data
+        data_path = self.output_dir / "capscreen.json"
+        with open(data_path, "w", encoding="utf-8") as f:
+            json.dump(result, f, indent=2, ensure_ascii=False)
+        print(f"  Data saved: {data_path}")
+
+        return result
+
+    def _extract_capscreen_tickers(self) -> list:
+        """Extract tickers from CapScreen screener table rows."""
+        tickers = []
+
+        try:
+            rows = self.page.locator("table tbody tr").all()
+            for row in rows[:50]:  # Up to 50 tickers
+                try:
+                    cells = row.locator("td").all()
+                    if len(cells) < 3:
+                        continue
+
+                    symbol = cells[0].inner_text().strip()
+                    symbol = re.sub(r'[^\w\s.-]', '', symbol).strip().split()[0] if symbol else ""
+                    if not symbol or len(symbol) > 6:
+                        continue
+
+                    entry = {"ticker": symbol}
+
+                    # Try to extract stage, gap%, volume data from subsequent cells
+                    for i, cell in enumerate(cells[1:8], 1):
+                        try:
+                            val = cell.inner_text().strip()
+                            if not val:
+                                continue
+                            # Heuristic column mapping
+                            if "%" in val and i <= 3:
+                                try:
+                                    entry["gap_pct"] = float(val.replace("%", "").replace(",", ""))
+                                except ValueError:
+                                    entry[f"col_{i}"] = val
+                            elif val.upper() in ("1", "2", "2A", "3", "4",
+                                                   "S1", "S2", "S2A", "S3", "S4"):
+                                entry["stage"] = val.upper().replace("S", "")
+                            else:
+                                entry[f"col_{i}"] = val
+                        except Exception:
+                            pass
+
+                    tickers.append(entry)
+                except Exception:
+                    continue
+
+        except Exception as e:
+            print(f"  Table extraction error: {e}")
+
+        if tickers:
+            print(f"  Found {len(tickers)} tickers")
+
+        return tickers
+
     def run(self, dashboards: list[str] | None = None):
         """
-        Capture specified dashboards (default: both).
+        Capture specified dashboards (default: all three).
 
         Args:
             dashboards: List of dashboard names to capture.
-                Options: "market_overview", "preopen"
+                Options: "market_overview", "preopen", "capscreen"
         """
         if dashboards is None:
             dashboards = ["market_overview", "preopen"]
@@ -466,5 +573,8 @@ class DeepVueScraper(BrowserAutomation):
 
         if "preopen" in dashboards:
             results["preopen"] = self.capture_preopen()
+
+        if "capscreen" in dashboards:
+            results["capscreen"] = self.capture_capscreen()
 
         return results

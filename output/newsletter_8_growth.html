@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>彭博研究摘要 #8 — 成長</title>
+<title>彭博研究摘要 #8 — 全球成長困局：中國低速均衡、伊朗衝突與金屬脫鉤</title>
 <style>
   :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --accent: #58a6ff;
           --green: #3fb950; --red: #f85149; --yellow: #d29922; --text: #c9d1d9; --muted: #8b949e;
@@ -32,10 +32,26 @@
   .tag-misc  { background: rgba(139,148,158,0.15); color: var(--muted); }
   .section { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 16px; }
   .section h2 { color: #fff; font-size: 1.15em; margin-bottom: 12px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+  .section h3 { color: var(--accent); font-size: 0.95em; margin: 14px 0 6px; }
   .article { margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid rgba(48,54,61,0.5); }
   .article:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
   .article-title { color: #fff; font-weight: 700; font-size: 0.95em; margin-bottom: 4px; }
+  .article-title-cn { color: var(--muted); font-size: 0.85em; margin-bottom: 8px; }
   .article p { font-size: 0.9em; margin: 6px 0; }
+  .data-point { background: rgba(255,255,255,0.03); padding: 8px 12px; border-radius: 6px; margin: 8px 0; font-size: 0.85em; }
+  .data-point .num { color: #fff; font-weight: 700; }
+  .implication { background: rgba(88,166,255,0.06); border-left: 3px solid var(--accent); padding: 10px 14px; margin: 10px 0; border-radius: 0 6px 6px 0; font-size: 0.88em; }
+  .implication .label { color: var(--accent); font-weight: 700; font-size: 0.8em; text-transform: uppercase; margin-bottom: 4px; }
+  .callout { background: rgba(210,153,34,0.08); border: 1px solid rgba(210,153,34,0.3); border-radius: 6px; padding: 16px; margin: 16px 0; }
+  .callout-title { color: var(--yellow); font-weight: 700; font-size: 0.95em; margin-bottom: 8px; }
+  .callout ul { padding-left: 18px; }
+  .callout li { margin: 4px 0; font-size: 0.88em; }
+  ul { padding-left: 18px; }
+  li { margin: 3px 0; font-size: 0.88em; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(255,255,255,0.03); padding: 12px; border-radius: 6px; text-align: center; }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: #fff; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
   .toc { background: rgba(88,166,255,0.05); border: 1px solid rgba(88,166,255,0.2); border-radius: 8px; padding: 16px 20px; margin-bottom: 20px; }
   .toc-title { color: var(--accent); font-weight: 700; font-size: 0.9em; margin-bottom: 8px; }
   .toc a { color: var(--accent); text-decoration: none; font-size: 0.88em; }
@@ -55,7 +71,7 @@
 <body>
 
 <h1>彭博研究摘要</h1>
-<p class="subtitle">第8期 — 成長 | Growth</p>
+<p class="subtitle">第8期 | 全球成長困局：中國低速均衡、伊朗衝突與金屬脫鉤</p>
 <span class="issue-badge">2026年三月下旬更新</span>
 
 <div class="nav-links">
@@ -63,109 +79,161 @@
   <span><a href="student.html">返回目錄 &rarr;</a></span>
 </div>
 
-<div class="stat-grid">
-    <div class="stat"><div class="val">18</div><div class="lbl">成長<br>Growth</div></div>
-</div>
-
 <div class="toc">
   <div class="toc-title">目錄</div>
   <ol>
-    <li><a href="#growth">成長 Growth &rarr;</a></li>
+    <li><a href="#china-growth">中國經濟 低速均衡，刺激謹慎</a></li>
+    <li><a href="#global-headwinds">全球逆風 霍爾木茲、關稅與天氣三重夾擊</a></li>
+    <li><a href="#metals-decoupling">金屬脫鉤 鋁銅聯動，中國因素褪色</a></li>
+    <li><a href="#japan-outlook">日本 產出疲軟，關稅衝擊有限</a></li>
+    <li><a href="#takeaways">基金經理人重點摘要</a></li>
   </ol>
 </div>
 
-<div class="section" id="growth">
-  <h2><span class="tag tag-growth">成長</span> Growth (18 articles)</h2>
+<div class="section" id="china-growth">
+  <h2><span class="tag tag-china">中國經濟</span> 低速均衡，刺激謹慎</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--red)">49.0</div><div class="lbl">2月官方製造業PMI
+連續收縮</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">4.5%</div><div class="lbl">彭博預測2026
+GDP增速</div></div>
+    <div class="stat"><div class="val" style="color:var(--green)">6.3%</div><div class="lbl">1-2月工業增加值
+同比增速</div></div>
+  </div>
+
   <div class="article">
-    <div class="article-title">Aluminum Prices Shift From China PMI Link to Copper Correlation</div>
-    <div style="margin-bottom:6px"><span class="tag tag-growth">成長</span> <span class="tag tag-metals">金屬</span> <span class="tag tag-china">中國</span> </div>
-    <p># Aluminum Prices Shift From China PMI Link to Copper Correlation</p>
+    <div class="article-title">低預期下中國年初經濟數據高於預估 但成長依舊乏力</div>
+    <p>2026年首份經濟活動數據揭示了一個嚴峻現實：儘管跨過了較低的門檻，中國經濟仍處於<span style="color:#fff;font-weight:700">低成長均衡</span>狀態。前兩個月工業增加值同比成長<span style="color:#fff;font-weight:700">6.3%</span>，顯著高於預期的<span style="color:#fff;font-weight:700">5.3%</span>，但仍為2020年以來同期第二慢增速。固定資產投資意外恢復正成長（<span style="color:#fff;font-weight:700">+1.8%</span>），基礎設施支出成為主力。社會消費品零售總額增速回升至<span style="color:#fff;font-weight:700">2.8%</span>，受九天超長春節假期提振，但遠低於2023-2025年疫後平均<span style="color:#fff;font-weight:700">4.8%</span>。出口依然是工業生產的核心支撐，但伊朗局勢升級給本已脆弱的經濟增添了嚴峻外部風險。</p>
+    <div class="data-point">工業增加值：<span style="color:#fff;font-weight:700">6.3%</span> vs 預期 5.3% &nbsp;|&nbsp; 固投：<span style="color:#fff;font-weight:700">+1.8%</span> vs 預期 -5.1% &nbsp;|&nbsp; 零售：<span style="color:#fff;font-weight:700">+2.8%</span> vs 預期 2.5% &nbsp;|&nbsp; 廣義赤字率：<span style="color:#fff;font-weight:700">~7.9%</span></div>
+    <div class="implication"><div class="label">投資啟示</div>經濟超預期可能強化「穩健節奏」立場。預計央行Q2<span style="color:#fff;font-weight:700">降息10bp</span>，全年累計降息20bp + 降準50bp。<span style="color:#fff;font-weight:700">減持中國週期股，增配政策受益的消費以舊換新板塊</span>。</div>
   </div>
   <div class="article">
-    <div class="article-title">BE Primer Euro-Area Economy Weakened by Oil Surge, US Tariffs</div>
-    <div style="margin-bottom:6px"><span class="tag tag-growth">成長</span> <span class="tag tag-trade">貿易</span> <span class="tag tag-policy">政策</span> <span class="tag tag-oil">石油</span> </div>
-    <p># BE Primer Euro-Area Economy Weakened by Oil Surge, US Tariffs</p>
+    <div class="article-title">中國2月PMI數據顯示製造業放緩 假日消費表現強勁</div>
+    <p>2月官方製造業PMI從1月的<span style="color:#fff;font-weight:700">49.3</span>進一步下滑至<span style="color:#fff;font-weight:700">49.0</span>，低於市場預期的<span style="color:#fff;font-weight:700">49.2</span>，收縮幅度擴大與春節假期的季節性規律基本一致。今年前兩個月製造業PMI均值為<span style="color:#fff;font-weight:700">49.2</span>，略低於2025年Q4平均<span style="color:#fff;font-weight:700">49.4</span>，顯示工廠生產活動保持低位。然而非製造業指數小幅回升至<span style="color:#fff;font-weight:700">49.5</span>，打破常規假日下滑規律，九天超長假期帶動出行和旅遊需求。側重出口的RatingDog PMI則從<span style="color:#fff;font-weight:700">50.3</span>升至<span style="color:#fff;font-weight:700">52.1</span>，顯示外需韌性。全國人大會議即將揭曉新的政策方向，市場關注成長目標是否鬆動。</p>
+    <div class="data-point">官方製造業PMI：<span style="color:#fff;font-weight:700">49.0</span>（低於預期49.2）| 非製造業：<span style="color:#fff;font-weight:700">49.5</span> &nbsp;|&nbsp; RatingDog PMI：<span style="color:#fff;font-weight:700">52.1</span> &nbsp;|&nbsp; 前兩月出口：<span style="color:#fff;font-weight:700">+21.8%</span></div>
+    <div class="implication"><div class="label">投資啟示</div>內需持續疲軟，外需成唯一亮點但面臨伊朗戰爭威脅。<span style="color:#fff;font-weight:700">關注人民幣匯率政策窗口期</span> — 資本帳開放討論升溫，人民幣被低估18-25%。</div>
   </div>
   <div class="article">
-    <div class="article-title">Change of PM How Starmer&#x27;s Exit Could Shift UK Economic Outlook</div>
-    <div style="margin-bottom:6px"><span class="tag tag-growth">成長</span> </div>
-    <p># Change of PM How Starmer&#x27;s Exit Could Shift UK Economic Outlook</p>
+    <div class="article-title">伊朗戰爭可能令中國經濟增長面臨考驗 刺激或需加碼</div>
+    <p>伊朗戰事升級令中國經濟面臨二次衝擊風險。彭博經濟研究測算，若油價升至每桶<span style="color:#fff;font-weight:700">$108</span>，美國GDP被拉低<span style="color:#fff;font-weight:700">0.1ppt</span>，歐元區被拉低<span style="color:#fff;font-weight:700">0.6ppt</span>。對中國而言，主要風險不是通膨而是全球需求萎縮拖累出口：出口增速若被拉低<span style="color:#fff;font-weight:700">5ppt</span>，GDP增速低<span style="color:#fff;font-weight:700">0.16ppt</span>；若拉低<span style="color:#fff;font-weight:700">10ppt</span>，GDP增速低<span style="color:#fff;font-weight:700">0.31ppt</span>。這將令已處於目標區間低端的<span style="color:#fff;font-weight:700">4.5%</span>基準預測面臨更大壓力。政策工具方面，<span style="color:#fff;font-weight:700">10bp降息</span>幾乎可抵消輕度衝擊，嚴峻情景則需降息<span style="color:#fff;font-weight:700">20bp</span>或降準<span style="color:#fff;font-weight:700">25bp</span>，財政赤字需擴大<span style="color:#fff;font-weight:700">2,200-4,500億元</span>。</p>
+    <div class="data-point">油價衝擊情景：<span style="color:#fff;font-weight:700">$108/桶</span> &nbsp;|&nbsp; 出口-5ppt → GDP <span style="color:#fff;font-weight:700">-0.16ppt</span> &nbsp;|&nbsp; 出口-10ppt → GDP <span style="color:#fff;font-weight:700">-0.31ppt</span> &nbsp;|&nbsp; 財政對沖：赤字率升至 <span style="color:#fff;font-weight:700">8.0%-8.2%</span></div>
+    <div class="implication"><div class="label">投資啟示</div>戰爭持續將迫使中國加碼刺激。<span style="color:#fff;font-weight:700">做多中國國債</span>（降息預期上升）；<span style="color:#fff;font-weight:700">減持出口導向型A股</span>，伊朗局勢惡化時避險。</div>
   </div>
   <div class="article">
-    <div class="article-title">Global Aluminum Demand Growth Will Ease to 0.9%</div>
-    <div style="margin-bottom:6px"><span class="tag tag-growth">成長</span> <span class="tag tag-metals">金屬</span> </div>
-    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:53:15+08:00</p>
+    <div class="article-title">成長目標與兩會 — 中國可能弱化5%硬性目標</div>
+    <p>全國人大會議釋出明確信號：中國政府在刺激經濟上選擇<span style="color:#fff;font-weight:700">穩健持續而非大開大合</span>。逾半數省區市下調成長目標，彭博經濟研究認為兩種選擇可能：設定以<span style="color:#fff;font-weight:700">5%為上限的目標區間</span>（如4.5%-5.0%），或維持5%但允許增速低於目標。2026年預算結構與2025年接近，廣義赤字率維持<span style="color:#fff;font-weight:700">~7.9%</span>。Q1財政主力是消費品以舊換新補貼，年初已下達<span style="color:#fff;font-weight:700">625億元</span>（約$90億）。若預算能全額執行（而非如2025年低於預算），實際刺激力度將顯著提升。</p>
+    <div class="data-point">成長目標：<span style="color:#fff;font-weight:700">4.5%-5.0%區間</span>（彈性化）| 以舊換新補貼：<span style="color:#fff;font-weight:700">625億元</span> &nbsp;|&nbsp; 廣義赤字率：<span style="color:#fff;font-weight:700">~7.9%</span> &nbsp;|&nbsp; BE預測：<span style="color:#fff;font-weight:700">4.5%</span></div>
+    <div class="implication"><div class="label">投資啟示</div>目標彈性化意味著政策不會為保5%而大舉刺激。<span style="color:#fff;font-weight:700">偏防守配置</span>，關注年中是否因戰爭衝擊而政策轉向。</div>
+  </div>
+</div>
+
+<div class="section" id="global-headwinds">
+  <h2><span class="tag tag-misc">全球逆風</span> 霍爾木茲、關稅與天氣三重夾擊</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--red)">~1%</div><div class="lbl">美國3月CPI
+環比漲幅預測</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">0.2%</div><div class="lbl">歐元區Q1 GDP
+季環比預測</div></div>
+    <div class="stat"><div class="val">3.25%</div><div class="lbl">英國央行年底
+利率預測</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">霍爾木茲海峽能否較快復航將影響美國經濟未來走向</div>
+    <p>美國經濟前景歸根結底取決於一個問題：能否在兩周內打通<span style="color:#fff;font-weight:700">霍爾木茲海峽</span>。若海峽重開且伊朗戰爭未升級，市場應趨於平穩；若雙方繼續打擊關鍵能源基礎設施，油價可能迅速上漲並波及實體經濟。通膨已然抬頭，3月CPI環比漲幅預計接近<span style="color:#fff;font-weight:700">1%</span>，能源是主要推手但價格壓力呈擴大之勢。原油期貨曲線不斷上移，市場對聯儲會今年降息的預期在消散。但經濟基本面仍有亮點：數據中心和金屬製品建設強勁，首次申領失業救濟人數處於低位，製造業有初步改善跡象。</p>
+    <div class="data-point">3月CPI環比：<span style="color:#fff;font-weight:700">~1%</span> &nbsp;|&nbsp; 首次申領失業金：<span style="color:#fff;font-weight:700">連續6周低於去年</span> &nbsp;|&nbsp; 建築支出（1月）：<span style="color:#fff;font-weight:700">+0.2%</span> &nbsp;|&nbsp; Richmond聯儲（3月）：<span style="color:#fff;font-weight:700">-8</span></div>
+    <div class="implication"><div class="label">投資啟示</div>霍爾木茲海峽是短期最大變量。<span style="color:#fff;font-weight:700">做多能源對沖通膨風險</span>；聯儲會降息預期消散，<span style="color:#fff;font-weight:700">減持長端美債</span>。</div>
   </div>
   <div class="article">
-    <div class="article-title">⽇本⼯業產出成⻑勢頭仍顯乏⼒預⽰第⼀季度 GDP 疲軟</div>
-    <div style="margin-bottom:6px"><span class="tag tag-growth">成長</span> <span class="tag tag-japan">日本</span> </div>
-    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:54:22+08:00</p>
+    <div class="article-title">歐元區經濟受油價飆升與美國關稅雙重打擊</div>
+    <p>歐元區前景正被商品價格飆升所動搖。能源衝擊疊加美國關稅令經濟雪上加霜：淨出口已在Q4拖累成長<span style="color:#fff;font-weight:700">0.1ppt</span>，未來數月損害將更加明顯。彭博經濟研究預測Q1 GDP僅增長<span style="color:#fff;font-weight:700">0.2%</span>。ECB料將維持利率不變 — 商品價格帶來的通膨上行風險與能源衝擊抑制產出、外需走弱和歐元走強帶來的下行風險大致平衡。唯一亮點是德國的<span style="color:#fff;font-weight:700">財政刺激</span>可能在未來逐步支撐成長，但醫藥品額外關稅可能進一步打擊出口。</p>
+    <div class="data-point">Q1 GDP預測：<span style="color:#fff;font-weight:700">+0.2% QoQ</span> &nbsp;|&nbsp; 淨出口拖累：<span style="color:#fff;font-weight:700">-0.1ppt</span>（Q4）| ECB利率：<span style="color:#fff;font-weight:700">持穩近中性</span> &nbsp;|&nbsp; 潛在新關稅：<span style="color:#fff;font-weight:700">醫藥品</span></div>
+    <div class="implication"><div class="label">投資啟示</div>歐元區成長低迷但ECB按兵不動。<span style="color:#fff;font-weight:700">減持歐洲週期股</span>，德國財政刺激受益板塊例外。</div>
   </div>
   <div class="article">
-    <div class="article-title">上市公司⾼管眼中的美國經濟</div>
-    <div style="margin-bottom:6px"><span class="tag tag-growth">成長</span> </div>
-    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:54:30+08:00</p>
+    <div class="article-title">UK GDP軟著陸 BOE料再降息兩次至3.25%</div>
+    <p>英國經濟在2025年下半年顯著失速，Q3和Q4均僅增長<span style="color:#fff;font-weight:700">0.1%</span>，與上半年（Q1 +0.7%、Q2 +0.3%）形成鮮明對比。但前瞻性指標在2026年初出現回升跡象。彭博預測2026年GDP成長<span style="color:#fff;font-weight:700">1.1%</span>，低於2025年的<span style="color:#fff;font-weight:700">1.3%</span>。通膨預計春季降至接近<span style="color:#fff;font-weight:700">2%</span>，為英國央行進一步降息打開空間 — 預計2026年降息兩次至<span style="color:#fff;font-weight:700">3.25%</span>。兩大風險：勞動力市場鬆動可能變得無序（加速降息），以及工黨領導層更迭可能打亂財政政策前景。</p>
+    <div class="data-point">2026 GDP預測：<span style="color:#fff;font-weight:700">1.1%</span> &nbsp;|&nbsp; BOE利率路徑：<span style="color:#fff;font-weight:700">降至3.25%</span>（兩次降息）| CPI目標：<span style="color:#fff;font-weight:700">春季降至~2%</span> &nbsp;|&nbsp; Q4 GDP：<span style="color:#fff;font-weight:700">+0.1%</span></div>
+    <div class="implication"><div class="label">投資啟示</div>BOE降息路徑確認。<span style="color:#fff;font-weight:700">做多英國前端利率</span>。留意工黨領導層變動對財政預期的衝擊。</div>
   </div>
   <div class="article">
-    <div class="article-title">中國 2 ⽉ PMI 數據顯⽰製造業放緩 假⽇消費表現強勁</div>
-    <div style="margin-bottom:6px"><span class="tag tag-growth">成長</span> <span class="tag tag-china">中國</span> </div>
-    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:54:35+08:00</p>
+    <div class="article-title">上市公司高管眼中的美國經濟 —《橙皮書》報告</div>
+    <p>彭博經濟研究首份《橙皮書》報告匯集了<span style="color:#fff;font-weight:700">365家</span>標普500成分股公司Q4財報電話會議的高管評論。三分之二行業報告業務活動<span style="color:#fff;font-weight:700">加速</span>，AI應用增加、關稅影響小於預期和政策調整被視為利好因素。過半數行業在運營中加大AI技術整合或加大AI資本支出。但報告主要基於<span style="color:#fff;font-weight:700">2月20日最高法院關稅裁決</span>和<span style="color:#fff;font-weight:700">2月28日伊朗戰爭爆發前</span>的數據，後續版本將納入這些重大事件影響。經歷關稅風波後企業看到復甦跡象，但這份樂觀情緒能否延續至戰後環境仍是未知數。</p>
+    <div class="data-point">行業覆蓋：<span style="color:#fff;font-weight:700">365家</span>S&amp;P 500公司 &nbsp;|&nbsp; 業務加速行業：<span style="color:#fff;font-weight:700">三分之二</span> &nbsp;|&nbsp; AI整合：<span style="color:#fff;font-weight:700">過半數行業</span> &nbsp;|&nbsp; 數據截止：<span style="color:#fff;font-weight:700">2月20日前</span></div>
+    <div class="implication"><div class="label">投資啟示</div>企業微觀面優於宏觀預期，但數據滯後於伊朗衝突。<span style="color:#fff;font-weight:700">關注Q1財報是否出現情緒反轉</span>。</div>
+  </div>
+</div>
+
+<div class="section" id="metals-decoupling">
+  <h2><span class="tag tag-metals">金屬脫鉤</span> 鋁銅聯動，中國因素褪色</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--green)">$3,250/噸</div><div class="lbl">LME鋁價目標
+（伊朗衝突情景）</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">0.9%</div><div class="lbl">全球鋁需求
+增速預測</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">-0.2</div><div class="lbl">滬鋁vs中國PMI
+相關性（2021後）</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">鋁價從追蹤中國PMI轉向與銅聯動</div>
+    <p>鋁價的定價邏輯正在發生根本轉變。上海鋁價與中國PMI的相關性從2000-2020年的<span style="color:#fff;font-weight:700">0.64</span>驟降至2021年後的<span style="color:#fff;font-weight:700">-0.2</span>，LME鋁價相關性更從<span style="color:#fff;font-weight:700">0.6</span>跌至<span style="color:#fff;font-weight:700">0.03</span>。儘管中國PMI在1月收縮至<span style="color:#fff;font-weight:700">49.3</span>，預示2026年開局疲弱，但今年以來鋁的日均價格仍較去年同期飆升<span style="color:#fff;font-weight:700">15%</span>至<span style="color:#fff;font-weight:700">$3,140/噸</span>。替代效應和共同宏觀因子正驅動鋁價與銅價日益同步，而非追隨中國製造業基本面。這意味著鋁的交易框架需要從「中國需求代理」轉向「全球工業金屬」。</p>
+    <div class="data-point">滬鋁-PMI相關性：<span style="color:#fff;font-weight:700">-0.2</span>（vs 歷史0.64）| LME鋁均價：<span style="color:#fff;font-weight:700">$3,140/噸</span>（+15% YoY）| 中國1月PMI：<span style="color:#fff;font-weight:700">49.3</span>（收縮）</div>
+    <div class="implication"><div class="label">投資啟示</div>鋁價定價錨已從中國PMI轉向銅。<span style="color:#fff;font-weight:700">交易鋁應參考銅的結構性供應短缺邏輯</span>，而非押注中國復甦。</div>
   </div>
   <div class="article">
-    <div class="article-title">伊朗战争可能令中国经济增⻓⾯临考验 刺激或需加码</div>
-    <div style="margin-bottom:6px"><span class="tag tag-growth">成長</span> <span class="tag tag-geo">地緣政治</span> <span class="tag tag-china">中國</span> </div>
-    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:54:44+08:00</p>
+    <div class="article-title">LME鋁價可因伊朗戰爭上漲28%至$3,250</div>
+    <p>伊朗衝突正在重塑全球鋁市場供需格局。彭博行業研究測算，LME鋁價可在上半年上漲<span style="color:#fff;font-weight:700">28%</span>至約<span style="color:#fff;font-weight:700">$3,250/噸</span>。儘管印尼和印度合計新增<span style="color:#fff;font-weight:700">140萬噸</span>產能，但中東戰爭若持續四個月可導致全球產出下降<span style="color:#fff;font-weight:700">0.8%</span>（減少<span style="color:#fff;font-weight:700">230萬噸</span>至<span style="color:#fff;font-weight:700">7,350萬噸</span>）。中國產量預計升<span style="color:#fff;font-weight:700">0.8%</span>至<span style="color:#fff;font-weight:700">4,550萬噸</span>，接近政府產能上限，中國以外產出則將下降<span style="color:#fff;font-weight:700">3.3%</span>。需求增速放緩至<span style="color:#fff;font-weight:700">0.9%</span>，但供應缺口擴大意味著市場赤字加深。Alcoa將以<span style="color:#fff;font-weight:700">7.8%</span>的供應增幅領跑同業。</p>
+    <div class="data-point">鋁價目標：<span style="color:#fff;font-weight:700">$3,250/噸</span>（+28%）| 全球產出：<span style="color:#fff;font-weight:700">-0.8%</span>（若衝突持續4月）| 中國產量：<span style="color:#fff;font-weight:700">4,550萬噸</span>（接近上限）| 需求增速：<span style="color:#fff;font-weight:700">0.9%</span></div>
+    <div class="implication"><div class="label">投資啟示</div>伊朗衝突是鋁價短期最大催化劑。<span style="color:#fff;font-weight:700">做多LME鋁</span>；留意Alcoa等受益於供應增長的西方冶煉商。</div>
   </div>
   <div class="article">
-    <div class="article-title">低預期下中國年初經濟數據⾼於預估 但成⻑依舊乏⼒</div>
-    <div style="margin-bottom:6px"><span class="tag tag-growth">成長</span> <span class="tag tag-china">中國</span> </div>
-    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:54:54+08:00</p>
+    <div class="article-title">為何金屬價格不再緊密追隨中國經濟走勢</div>
+    <p>工業金屬與中國經濟曾經緊密的聯繫已然鬆動。自「解放日」衝擊以來，銅價漲幅高達<span style="color:#fff;font-weight:700">~40%</span>，鋁價上漲<span style="color:#fff;font-weight:700">24%</span>，但同期中國經濟增速僅<span style="color:#fff;font-weight:700">5%</span>（vs 疫前6%、十年均值7%）。2020年前，中國GDP每成長1%可推高全球銅價通膨約<span style="color:#fff;font-weight:700">0.1ppt</span>且影響持久；2020年後這種傳導在迅速消退。中國對全球金屬需求增長的貢獻從2008-2020年的<span style="color:#fff;font-weight:700">137%</span>降至2020-2025年的<span style="color:#fff;font-weight:700">~60%</span>。背後驅動力包括：銅的供應限制、數據中心和電動車支撐中國以外需求、貶值交易推動貴金屬溢出至工業金屬，以及中國從房地產轉向高科技的結構性轉型。</p>
+    <div class="data-point">銅價（自解放日）：<span style="color:#fff;font-weight:700">+~40%</span> &nbsp;|&nbsp; 中國金屬需求貢獻：<span style="color:#fff;font-weight:700">~60%</span>（vs 歷史137%）| GDP-銅價傳導：<span style="color:#fff;font-weight:700">2020年後迅速消退</span> &nbsp;|&nbsp; 2025中國GDP：<span style="color:#fff;font-weight:700">5%</span></div>
+    <div class="implication"><div class="label">投資啟示</div>金屬已從「中國代理」變為「全球供需+貶值交易」。<span style="color:#fff;font-weight:700">工業金屬配置應聚焦供應約束（銅）和地緣溢價（鋁）</span>，而非押注中國需求復甦。</div>
+  </div>
+</div>
+
+<div class="section" id="japan-outlook">
+  <h2><span class="tag tag-japan">日本</span> 產出疲軟，關稅衝擊有限</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--orange)">2.2%</div><div class="lbl">1月工業產出
+環比增長</div></div>
+    <div class="stat"><div class="val">13.5%</div><div class="lbl">日本輸美有效
+關稅稅率</div></div>
+    <div class="stat"><div class="val">7月</div><div class="lbl">日銀下次
+加息預期</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">日本工業產出成長勢頭仍顯乏力 預示Q1 GDP疲軟</div>
+    <p>日本1月工業產出環比成長<span style="color:#fff;font-weight:700">2.2%</span>，較前月的<span style="color:#fff;font-weight:700">-0.1%</span>反彈，但增幅顯著低於市場預期（<span style="color:#fff;font-weight:700">5.5%</span>）和彭博預測（<span style="color:#fff;font-weight:700">6.4%</span>）。反彈主要由運輸設備（含汽車）<span style="color:#fff;font-weight:700">+9.1%</span>驅動，但這更多反映的是搶在2月中國春節假期前出口的季節性因素。剔除日曆效應後，成長勢頭疲軟，尤其是生產設備產出<span style="color:#fff;font-weight:700">-2.0%</span>，折射出中國對日本晶片製造設備需求的疲弱。經濟產業省調查預示2月產出將較1月<span style="color:#fff;font-weight:700">下降1.9%</span>，電子設備領域降幅最大。整體數據預示Q1 GDP成長將表現疲軟。</p>
+    <div class="data-point">1月工業產出：<span style="color:#fff;font-weight:700">+2.2% MoM</span>（vs 預期5.5%）| 運輸設備：<span style="color:#fff;font-weight:700">+9.1%</span> &nbsp;|&nbsp; 生產設備：<span style="color:#fff;font-weight:700">-2.0%</span> &nbsp;|&nbsp; 2月展望：<span style="color:#fff;font-weight:700">-1.9%</span></div>
+    <div class="implication"><div class="label">投資啟示</div>Q1 GDP疲軟強化日銀<span style="color:#fff;font-weight:700">推遲至7月加息</span>的預期。<span style="color:#fff;font-weight:700">做空USD/JPY的時機尚早</span>。</div>
   </div>
   <div class="article">
-    <div class="article-title">即便是 15% 的美國新關稅也不會對⽇本經濟造成重⼤衝擊</div>
-    <div style="margin-bottom:6px"><span class="tag tag-growth">成長</span> <span class="tag tag-trade">貿易</span> <span class="tag tag-policy">政策</span> <span class="tag tag-japan">日本</span> </div>
-    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:54:56+08:00</p>
+    <div class="article-title">即便15%的美國新關稅也不會對日本經濟造成重大衝擊</div>
+    <p>川普揚言的<span style="color:#fff;font-weight:700">15%</span>關稅對日本宏觀經濟衝擊有限。核心在於：作為美日貿易談判焦點的汽車已根據去年7月協議適用<span style="color:#fff;font-weight:700">15%</span>關稅，最高法院推翻IEEPA關稅的裁決不影響這些行業關稅。川普隨後依據《1974年貿易法》第122條實施的全球統一關稅從<span style="color:#fff;font-weight:700">10%</span>提至<span style="color:#fff;font-weight:700">15%</span>，但日本已爭取到IEEPA產品<span style="color:#fff;font-weight:700">15%的關稅上限</span>。彭博經濟研究估算，日本輸美平均有效稅率僅從<span style="color:#fff;font-weight:700">12.8%</span>小幅升至<span style="color:#fff;font-weight:700">13.5%</span>。高市早苗政府正利用該協議深化與華盛頓的經濟聯繫，尤其是在中日緊張關係加劇的背景下。</p>
+    <div class="data-point">日本輸美有效稅率：<span style="color:#fff;font-weight:700">12.8% → 13.5%</span> &nbsp;|&nbsp; 汽車關稅：<span style="color:#fff;font-weight:700">15%</span>（7月協議）| 日本對美投資計畫：<span style="color:#fff;font-weight:700">$5,500億</span> &nbsp;|&nbsp; 統一關稅：<span style="color:#fff;font-weight:700">15%</span></div>
+    <div class="implication"><div class="label">投資啟示</div>關稅影響有限，日本出口商受損程度可控。<span style="color:#fff;font-weight:700">日本汽車股的關稅折價已充分反映</span>，存在估值修復空間。</div>
   </div>
-  <div class="article">
-    <div class="article-title">年初兩個⽉中國經濟運⾏依舊疲軟 多項產需指標⾛弱</div>
-    <div style="margin-bottom:6px"><span class="tag tag-growth">成長</span> <span class="tag tag-china">中國</span> </div>
-    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:55:03+08:00</p>
-  </div>
-  <div class="article">
-    <div class="article-title">強⼤的貨幣需要更⾃由的流動 中國經濟學家呼籲進⼀步開放資本項⽬ (1) 多位經濟學家稱開放的內部和外部時間已成熟，不必擔⼼招致⼤幅外流壓⼒ 學者鞠建東認為 2026-2027 年將</div>
-    <div style="margin-bottom:6px"><span class="tag tag-growth">成長</span> <span class="tag tag-china">中國</span> </div>
-    <p># 強⼤的貨幣需要更⾃由的流動 中國經濟學家呼籲進⼀步開放資本項⽬ (1) 多位經濟學家稱開放的內部和外部時間已成熟，不必擔⼼招致⼤幅外流壓⼒ 學者鞠建東認為 2026-2027 年將</p>
-  </div>
-  <div class="article">
-    <div class="article-title">彭博美國數據前瞻：嚴寒多雪天氣或抑制非農就業和零售銷售</div>
-    <div style="margin-bottom:6px"><span class="tag tag-growth">成長</span> </div>
-    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:55:07+08:00</p>
-  </div>
-  <div class="article">
-    <div class="article-title">彭博美國數據前瞻：霍爾⽊茲海峽能否較快復航將影響美國經濟未來⾛向</div>
-    <div style="margin-bottom:6px"><span class="tag tag-growth">成長</span> </div>
-    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:55:09+08:00</p>
-  </div>
-  <div class="article">
-    <div class="article-title">成長、消費、政策——兩會對於中國經濟為何意義重大</div>
-    <div style="margin-bottom:6px"><span class="tag tag-growth">成長</span> <span class="tag tag-china">中國</span> </div>
-    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:55:13+08:00</p>
-  </div>
-  <div class="article">
-    <div class="article-title">為何⾦屬價格不再緊密追隨中國經濟⾛勢</div>
-    <div style="margin-bottom:6px"><span class="tag tag-growth">成長</span> <span class="tag tag-china">中國</span> </div>
-    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:55:22+08:00</p>
-  </div>
-  <div class="article">
-    <div class="article-title">為何⾦屬價格不再緊密追隨中國經濟⾛勢</div>
-    <div style="margin-bottom:6px"><span class="tag tag-growth">成長</span> <span class="tag tag-china">中國</span> </div>
-    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:55:22+08:00</p>
-  </div>
-  <div class="article">
-    <div class="article-title">開年活動數據料顯⽰中國經濟疲軟態勢延續到 2026 年</div>
-    <div style="margin-bottom:6px"><span class="tag tag-growth">成長</span> <span class="tag tag-china">中國</span> </div>
-    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:55:34+08:00</p>
-  </div>
+</div>
+
+<div class="callout" id="takeaways">
+  <div class="callout-title">基金經理人重點摘要</div>
+  <ul>
+    <li><strong>中國經濟：</strong>低速均衡延續，Q1數據超預期但動能仍弱。央行料Q2降息10bp。成長目標彈性化（4.5%-5.0%）意味著不會為保5%大舉刺激。**偏防守配置，增配以舊換新受益板塊**。</li>
+    <li><strong>伊朗衝突：</strong>霍爾木茲海峽能否兩周內復航是全球經濟最大變量。中國出口增速若被拉低5-10ppt，GDP受損0.16-0.31ppt。**做多能源對沖；做多中國國債押注加碼寬鬆**。</li>
+    <li><strong>美國：</strong>3月CPI環比接近1%，降息預期消散。但企業微觀面（橙皮書）顯示Q4業務加速，AI投資擴張。**減持長端美債，關注Q1財報情緒是否反轉**。</li>
+    <li><strong>歐洲/英國：</strong>歐元區受油價+關稅雙重打擊，GDP僅+0.2%。英國BOE料降息至3.25%。**做多英國前端利率，減持歐洲週期股**。</li>
+    <li><strong>工業金屬：</strong>鋁價已從追蹤中國PMI轉向與銅聯動，LME鋁可因伊朗衝突漲28%至$3,250/噸。金屬定價錨從中國需求轉向全球供應約束+貶值交易。**做多LME鋁，銅以供應邏輯而非中國復甦邏輯配置**。</li>
+    <li><strong>日本：</strong>Q1 GDP料疲軟，但15%美國關稅影響有限（有效稅率僅升0.7ppt）。日銀加息推遲至7月。**日本汽車股關稅折價已充分反映，存在修復空間**。</li>
+  </ul>
 </div>
 
 <div class="nav-links">

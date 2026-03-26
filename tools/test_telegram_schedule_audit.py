@@ -1,13 +1,92 @@
 from __future__ import annotations
 
+import json
 import tempfile
 import unittest
+from datetime import datetime
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
 from tools import telegram_schedule_audit as audit
 
 
 class TelegramScheduleAuditTests(unittest.TestCase):
+    def test_resolve_resume_catchup_decision_sends_when_same_day_slot_was_missed(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            (root / "All-in-one" / "workflow").mkdir(parents=True)
+            (root / "All-in-one" / "workflow" / "cross_repo_tasks.yaml").write_text(
+                json.dumps(
+                    {
+                        "version": 1,
+                        "tasks": {
+                            "JARVIS-Reminder-schedule-audit": {
+                                "enabled": True,
+                                "owner_repo": "fundman-jarvis",
+                                "schedule": "Mon-Fri 06:15 HKT",
+                                "catchup_on_resume": True,
+                                "catchup_window_hours": 18,
+                            }
+                        },
+                    }
+                ),
+                encoding="utf-8",
+            )
+
+            decision = audit.resolve_resume_catchup_decision(
+                root=root,
+                task_name="JARVIS-Reminder-schedule-audit",
+                now=datetime(2026, 3, 26, 9, 0, tzinfo=ZoneInfo("Asia/Hong_Kong")),
+                state_path=root / "state.json",
+            )
+
+            self.assertTrue(decision["should_send"])
+            self.assertEqual(decision["reason"], "missed_slot_unsent")
+            self.assertEqual(decision["slot_time_hkt"], "2026-03-26T06:15:00+08:00")
+
+    def test_resolve_resume_catchup_decision_skips_when_slot_already_sent(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            state_path = root / "state.json"
+            (root / "All-in-one" / "workflow").mkdir(parents=True)
+            (root / "All-in-one" / "workflow" / "cross_repo_tasks.yaml").write_text(
+                json.dumps(
+                    {
+                        "version": 1,
+                        "tasks": {
+                            "JARVIS-Reminder-schedule-audit": {
+                                "enabled": True,
+                                "owner_repo": "fundman-jarvis",
+                                "schedule": "Mon-Fri 06:15 HKT",
+                                "catchup_on_resume": True,
+                                "catchup_window_hours": 18,
+                            }
+                        },
+                    }
+                ),
+                encoding="utf-8",
+            )
+            state_path.write_text(
+                json.dumps(
+                    {
+                        "last_sent_slot_hkt": "2026-03-26T06:15:00+08:00",
+                        "last_sent_at": "2026-03-26T09:01:00+08:00",
+                    }
+                ),
+                encoding="utf-8",
+            )
+
+            decision = audit.resolve_resume_catchup_decision(
+                root=root,
+                task_name="JARVIS-Reminder-schedule-audit",
+                now=datetime(2026, 3, 26, 9, 5, tzinfo=ZoneInfo("Asia/Hong_Kong")),
+                state_path=state_path,
+            )
+
+            self.assertFalse(decision["should_send"])
+            self.assertEqual(decision["reason"], "already_sent")
+            self.assertEqual(decision["slot_time_hkt"], "2026-03-26T06:15:00+08:00")
+
     def test_extract_daily_reminder_config_reads_tasks_and_aliases(self):
         with tempfile.TemporaryDirectory() as tmp:
             path = Path(tmp) / "daily_reminders.py"
@@ -118,6 +197,24 @@ class TelegramScheduleAuditTests(unittest.TestCase):
             audit.normalize_task_key("Crypto ETF Flow Mid", command="send_crypto_etf_flows.py --label midday"),
             "crypto_etf_flow_mid",
         )
+        self.assertEqual(
+            audit.normalize_task_key(
+                "JARVIS-Reminder-crypto-news-1000",
+                command='cmd.exe /c "C:\\Users\\User\\Documents\\GitHub\\fundman-jarvis\\run_crypto_news.bat 1000"',
+            ),
+            "crypto_news_1000",
+        )
+        self.assertEqual(
+            audit.normalize_task_key("Crypto News 11:40", command="python send_crypto_news.py --slot 1140"),
+            "crypto_news_1140",
+        )
+        self.assertEqual(
+            audit.normalize_task_key(
+                "Cross Asset Momentum PM",
+                command='cmd.exe /c "C:\\Users\\User\\Documents\\GitHub\\fundman-jarvis\\run_cross_asset_momentum.bat 2100"',
+            ),
+            "cross_asset_momentum_2100",
+        )
 
     def test_audit_schedule_state_classifies_missing_in_control_and_enabled_mismatch(self):
         with tempfile.TemporaryDirectory() as tmp:
@@ -209,12 +306,30 @@ class TelegramScheduleAuditTests(unittest.TestCase):
             self.assertEqual(by_key["crypto_etf_flow_mid"]["schedule_text"], "Daily 11:50 HKT")
             self.assertEqual(by_key["crypto_news_daily"]["command"], "run_crypto_news.bat")
             self.assertEqual(by_key["crypto_news_daily"]["schedule_text"], "Daily 11:00 HKT")
+            self.assertEqual(by_key["crypto_news_1000"]["command"], "run_crypto_news.bat 1000")
+            self.assertEqual(by_key["crypto_news_1000"]["schedule_text"], "Daily 10:00 HKT")
+            self.assertEqual(by_key["crypto_news_1140"]["command"], "run_crypto_news.bat 1140")
+            self.assertEqual(by_key["crypto_news_1140"]["schedule_text"], "Daily 11:40 HKT")
             self.assertEqual(by_key["friday_volume"]["command"], "run_friday_volume.bat")
             self.assertEqual(by_key["friday_volume"]["schedule_text"], "Mon-Fri 09:30 HKT")
             self.assertEqual(by_key["futu_signals"]["command"], "run_futu_signals.bat")
             self.assertEqual(by_key["futu_signals"]["schedule_text"], "Mon-Fri 09:45 HKT")
             self.assertEqual(by_key["friday_options"]["command"], "run_friday_options.bat")
             self.assertEqual(by_key["friday_options"]["schedule_text"], "Mon-Fri 17:00 HKT")
+            self.assertEqual(by_key["commodity_live_overlay_0945"]["command"], "run_commodity_live_overlay_report.bat 0945")
+            self.assertEqual(by_key["commodity_live_overlay_0945"]["schedule_text"], "Mon-Fri 09:45 HKT")
+            self.assertEqual(by_key["commodity_live_overlay_2145"]["command"], "run_commodity_live_overlay_report.bat 2145")
+            self.assertEqual(by_key["commodity_live_overlay_2145"]["schedule_text"], "Mon-Fri 21:45 HKT")
+            self.assertEqual(by_key["gdrive_breadth_regime_2045"]["command"], "run_gdrive_breadth_regime_snapshot.bat")
+            self.assertEqual(by_key["gdrive_breadth_regime_2045"]["schedule_text"], "Mon-Fri 20:45 HKT")
+            self.assertEqual(by_key["cross_asset_momentum_0905"]["command"], "run_cross_asset_momentum.bat 0905")
+            self.assertEqual(by_key["cross_asset_momentum_0905"]["schedule_text"], "Mon-Fri 09:05 HKT")
+            self.assertEqual(by_key["cross_asset_momentum_2100"]["command"], "run_cross_asset_momentum.bat 2100")
+            self.assertEqual(by_key["cross_asset_momentum_2100"]["schedule_text"], "Mon-Fri 21:00 HKT")
+            self.assertEqual(by_key["southbound_1230"]["command"], "python daily_reminders.py --task southbound_1230")
+            self.assertEqual(by_key["southbound_1230"]["schedule_text"], "Daily 12:30 HKT")
+            self.assertEqual(by_key["newsletter"]["command"], "python daily_reminders.py --task newsletter")
+            self.assertEqual(by_key["newsletter"]["schedule_text"], "Daily 11:00 HKT")
             self.assertEqual(by_key["options_earnings_2100"]["command"], "run_options_expiry.bat")
             self.assertEqual(by_key["options_earnings_2100"]["schedule_text"], "Daily 21:00 HKT")
             self.assertEqual(by_key["options_earnings_2330"]["command"], "run_options_expiry.bat")
@@ -425,6 +540,8 @@ class TelegramScheduleAuditTests(unittest.TestCase):
                     "TASKS = {",
                     "    'morning_digest': {'time': '07:00', 'title': 'Morning'},",
                     "    'deepvue_dashboard': {'time': '15:30', 'title': 'DeepVue'},",
+                    "    'southbound_1230': {'time': '12:30', 'title': 'Southbound'},",
+                    "    'newsletter': {'time': '11:00', 'title': 'Newsletter'},",
                     "}",
                     "TASK_ALIASES = {'pam_check': 'p_model_check'}",
                 ]
@@ -456,7 +573,19 @@ class TelegramScheduleAuditTests(unittest.TestCase):
             encoding="utf-8",
         )
         (fundman / "run_crypto_news.bat").write_text(
-            "@echo off\npython send_crypto_news.py\n",
+            "@echo off\npython send_crypto_news.py --slot %1\n",
+            encoding="utf-8",
+        )
+        (fundman / "run_commodity_live_overlay_report.bat").write_text(
+            "@echo off\npython send_commodity_live_overlay_report.py --slot %1\n",
+            encoding="utf-8",
+        )
+        (fundman / "run_gdrive_breadth_regime_snapshot.bat").write_text(
+            "@echo off\npython send_gdrive_breadth_regime_snapshot.py\n",
+            encoding="utf-8",
+        )
+        (fundman / "run_cross_asset_momentum.bat").write_text(
+            "@echo off\npython send_cross_asset_momentum.py --slot %1\n",
             encoding="utf-8",
         )
         (fundman / "run_friday_volume.bat").write_text(

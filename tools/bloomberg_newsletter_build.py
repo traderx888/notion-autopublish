@@ -1,15 +1,18 @@
-"""Bloomberg Newsletter Builder.
+"""Bloomberg Newsletter Builder — Editorial Synthesis via Claude.
 
 Reads unprocessed markdown articles from state, groups by topic,
-generates a newsletter HTML (dark-theme, bilingual), and updates
-the student portal (output/student.html).
+uses Claude to synthesize editorial summaries (stat grids, investment
+implications, bilingual conclusions), then generates newsletter HTML
+matching the hand-crafted style of newsletters #4 and #5.
 
 Continues newsletter numbering from the last issued number in state.
 """
 from __future__ import annotations
 
 import json
+import os
 import re
+import subprocess
 import sys
 import html as html_mod
 from datetime import datetime, timezone, timedelta
@@ -19,6 +22,11 @@ from textwrap import shorten
 REPO_ROOT = Path(__file__).resolve().parents[1]
 if str(REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(REPO_ROOT))
+
+# Fix Windows cp950 encoding
+if sys.stdout.encoding and sys.stdout.encoding.lower() not in ("utf-8", "utf8"):
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+    sys.stderr.reconfigure(encoding="utf-8", errors="replace")
 
 from tools.bloomberg_pdf_convert import (
     STATE_PATH,
@@ -30,10 +38,10 @@ from tools.bloomberg_pdf_convert import (
 
 OUTPUT_DIR = REPO_ROOT / "output"
 STUDENT_HTML = OUTPUT_DIR / "student.html"
-MIN_ARTICLES = 3  # minimum to generate a newsletter
+MIN_ARTICLES = 3
 
 # ---------------------------------------------------------------------------
-# Topic metadata: slug → (display_zh, display_en, css_class, icon)
+# Topic metadata
 # ---------------------------------------------------------------------------
 TOPIC_META: dict[str, tuple[str, str, str, str]] = {
     "rates":        ("利率",       "Rates",         "tag-rates",  "&#127975;"),
@@ -52,14 +60,11 @@ TOPIC_META: dict[str, tuple[str, str, str, str]] = {
     "credit":       ("信用",       "Credit",        "tag-credit", "&#127974;"),
     "space":        ("太空",       "Space",         "tag-space",  "&#128640;"),
 }
-
 DEFAULT_META = ("其他", "Miscellaneous", "tag-misc", "&#128196;")
-
-# Icons to cycle through for newsletter cards
 CARD_ICONS = ["&#128202;", "&#127975;", "&#128165;", "&#128176;", "&#127760;", "&#9889;", "&#128293;", "&#128200;"]
 
 # ---------------------------------------------------------------------------
-# CSS (extracted from newsletter_5_central_banks_china.html)
+# CSS (from newsletter_5)
 # ---------------------------------------------------------------------------
 NEWSLETTER_CSS = """\
   :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --accent: #58a6ff;
@@ -89,10 +94,26 @@ NEWSLETTER_CSS = """\
   .tag-misc  { background: rgba(139,148,158,0.15); color: var(--muted); }
   .section { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 16px; }
   .section h2 { color: #fff; font-size: 1.15em; margin-bottom: 12px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+  .section h3 { color: var(--accent); font-size: 0.95em; margin: 14px 0 6px; }
   .article { margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid rgba(48,54,61,0.5); }
   .article:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
   .article-title { color: #fff; font-weight: 700; font-size: 0.95em; margin-bottom: 4px; }
+  .article-title-cn { color: var(--muted); font-size: 0.85em; margin-bottom: 8px; }
   .article p { font-size: 0.9em; margin: 6px 0; }
+  .data-point { background: rgba(255,255,255,0.03); padding: 8px 12px; border-radius: 6px; margin: 8px 0; font-size: 0.85em; }
+  .data-point .num { color: #fff; font-weight: 700; }
+  .implication { background: rgba(88,166,255,0.06); border-left: 3px solid var(--accent); padding: 10px 14px; margin: 10px 0; border-radius: 0 6px 6px 0; font-size: 0.88em; }
+  .implication .label { color: var(--accent); font-weight: 700; font-size: 0.8em; text-transform: uppercase; margin-bottom: 4px; }
+  .callout { background: rgba(210,153,34,0.08); border: 1px solid rgba(210,153,34,0.3); border-radius: 6px; padding: 16px; margin: 16px 0; }
+  .callout-title { color: var(--yellow); font-weight: 700; font-size: 0.95em; margin-bottom: 8px; }
+  .callout ul { padding-left: 18px; }
+  .callout li { margin: 4px 0; font-size: 0.88em; }
+  ul { padding-left: 18px; }
+  li { margin: 3px 0; font-size: 0.88em; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(255,255,255,0.03); padding: 12px; border-radius: 6px; text-align: center; }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: #fff; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
   .toc { background: rgba(88,166,255,0.05); border: 1px solid rgba(88,166,255,0.2); border-radius: 8px; padding: 16px 20px; margin-bottom: 20px; }
   .toc-title { color: var(--accent); font-weight: 700; font-size: 0.9em; margin-bottom: 8px; }
   .toc a { color: var(--accent); text-decoration: none; font-size: 0.88em; }
@@ -110,31 +131,65 @@ NEWSLETTER_CSS = """\
 
 
 # ---------------------------------------------------------------------------
-# Helpers
+# Claude editorial synthesis prompt
 # ---------------------------------------------------------------------------
-def _slug(topics: list[str]) -> str:
-    """Generate a filename slug from a list of topics."""
-    if not topics:
-        return "misc"
-    return "_".join(topics[:3])
+SYNTHESIS_PROMPT = """\
+You are an editorial assistant for a fund management research newsletter targeting finance students in Hong Kong.
 
+You will receive raw Bloomberg research articles grouped by topic. Your job is to synthesize them into a structured newsletter in JSON format.
 
-def _excerpt(md_text: str, max_chars: int = 400) -> str:
-    """Extract a readable excerpt from markdown text (after the header)."""
-    # Skip the header block (title, tags, source, ---)
-    parts = md_text.split("---", 2)
-    body = parts[2] if len(parts) >= 3 else md_text
-    # Take first meaningful paragraph
-    paragraphs = [p.strip() for p in body.strip().split("\n\n") if p.strip()]
-    for para in paragraphs[:3]:
-        # Skip very short lines (likely metadata)
-        if len(para) > 60:
-            return shorten(para, width=max_chars, placeholder="...")
-    return shorten(body[:max_chars], width=max_chars, placeholder="...")
+## Output Format (strict JSON)
+
+```json
+{
+  "title_zh": "央行困局與全球利率前景",
+  "title_en": "Central Bank Dilemma & Global Rate Outlook",
+  "sections": [
+    {
+      "id": "section-anchor",
+      "tag_zh": "聯準會",
+      "tag_en": "Fed",
+      "heading_zh": "鷹派當道，按兵不動",
+      "stats": [
+        {"val": "3.50-3.75%", "lbl_zh": "聯邦基金利率\\n預計維持不變", "color": ""},
+        {"val": "-9.2萬", "lbl_zh": "2月非農就業\\n（初值）", "color": "red"},
+        {"val": "~3%", "lbl_zh": "3月CPI預測\\n（受油價推升）", "color": "orange"}
+      ],
+      "articles": [
+        {
+          "title": "聯儲會料按兵不動 — 利率路徑面臨雙向風險",
+          "summary_zh": "FOMC預計在3月會議上維持利率在 **3.50%-3.75%** 不變。會後聲明將承認...",
+          "data_points": "預計異議票：**Milan、Waller**（主張降息） | SEP中位數：**今年仍降息25bp** | 通膨見頂預期：**5月**",
+          "implication_zh": "Fed上半年按兵不動的概率極高。下半年降息路徑仍在 — **做多前端利率期貨**。"
+        }
+      ]
+    }
+  ],
+  "fund_manager_takeaways": [
+    "<strong>聯準會：</strong>上半年按兵不動。PCE通膨預計5月見頂。做多前端利率期貨。",
+    "<strong>日銀：</strong>3月持有0.75%，但4月加息概率高。"
+  ]
+}
+```
+
+## Rules
+
+1. **Language**: Write primarily in Traditional Chinese (繁體中文). Use English for proper nouns, tickers, and technical terms.
+2. **Stat grids**: Extract 3 key numbers per section. Use color "red" for negative/risk, "orange" for warning, "green" for positive, "" for neutral.
+3. **Article summaries**: Write 100-150 words of narrative prose per article. Bold key numbers with **double asterisks**. Don't just list facts — tell a story.
+4. **Data points**: Structured "label: **value**" pairs separated by " | ". Extract 2-4 key metrics.
+5. **Investment implications**: Actionable advice for fund managers. Be specific (e.g., "做多前端利率期貨", "減持日圓套利"). Bold the action.
+6. **Fund manager takeaways**: 3-6 bullet points covering all sections. Each starts with a bold category label followed by colon. Mix facts + actions.
+7. **Sections**: Group related articles into 3-5 sections. Each section has a short punchy Chinese heading.
+8. **Don't invent data**: Only use numbers and facts from the source articles.
+9. Output ONLY the JSON, no markdown fences, no explanation.
+
+## Source Articles
+
+"""
 
 
 def _date_label() -> str:
-    """Current date in Chinese format for display."""
     now = datetime.now(HKT)
     return f"{now.year}年{now.month}月{now.day}日"
 
@@ -147,18 +202,20 @@ def _month_label() -> str:
     return f"{now.year}年{months_zh[now.month]}{period}"
 
 
+def _slug(topics: list[str]) -> str:
+    if not topics:
+        return "misc"
+    return "_".join(topics[:3])
+
+
 # ---------------------------------------------------------------------------
-# Group articles by topic
+# Article grouping (reused from before)
 # ---------------------------------------------------------------------------
 def _group_articles(state: dict) -> dict[str, list[dict]]:
-    """Group unassigned articles by their primary topic.
-
-    Returns {topic: [{"filename": ..., "mdPath": ..., "topics": [...], "title": ...}]}
-    """
     groups: dict[str, list[dict]] = {}
     for fname, info in state["processedFiles"].items():
         if info.get("newsletterNumber") is not None:
-            continue  # already in a newsletter
+            continue
         md_path = Path(info["mdPath"])
         if not md_path.exists():
             continue
@@ -175,7 +232,6 @@ def _group_articles(state: dict) -> dict[str, list[dict]]:
 
 
 def _title_from_md(md_path: Path) -> str:
-    """Read the first H1 from a markdown file."""
     try:
         text = md_path.read_text(encoding="utf-8")
         m = re.match(r"^#\s+(.+)$", text, re.MULTILINE)
@@ -189,11 +245,6 @@ def _title_from_md(md_path: Path) -> str:
 def _merge_small_groups(
     groups: dict[str, list[dict]], min_size: int = 3
 ) -> list[tuple[list[str], list[dict]]]:
-    """Merge small topic groups into combined newsletters.
-
-    Returns [(topic_list, articles), ...] where each tuple is one newsletter.
-    """
-    # Affinity map: related topics that merge well together
     affinity = {
         "rates": {"japan", "inflation", "policy", "credit"},
         "japan": {"rates", "inflation", "policy"},
@@ -204,11 +255,8 @@ def _merge_small_groups(
         "metals": {"oil", "china", "growth"},
         "growth": {"china", "trade", "valuations"},
     }
-
     used: set[str] = set()
     newsletters: list[tuple[list[str], list[dict]]] = []
-
-    # Sort topics by article count descending
     sorted_topics = sorted(groups.keys(), key=lambda t: len(groups[t]), reverse=True)
 
     for topic in sorted_topics:
@@ -217,8 +265,6 @@ def _merge_small_groups(
         articles = list(groups[topic])
         merged_topics = [topic]
         used.add(topic)
-
-        # Try merging related small groups
         if len(articles) < min_size:
             for related in affinity.get(topic, set()):
                 if related in groups and related not in used:
@@ -227,99 +273,251 @@ def _merge_small_groups(
                     used.add(related)
                     if len(articles) >= min_size:
                         break
-
         newsletters.append((merged_topics, articles))
-
     return newsletters
 
 
 # ---------------------------------------------------------------------------
-# HTML rendering
+# Claude synthesis
 # ---------------------------------------------------------------------------
-def _render_article_html(article: dict) -> str:
-    """Render a single article block."""
-    title = html_mod.escape(article["title"])
-    md_path = Path(article["mdPath"])
-    excerpt = ""
+def _read_article_text(md_path: str, max_chars: int = 3000) -> str:
+    """Read article markdown, truncated to max_chars."""
     try:
-        text = md_path.read_text(encoding="utf-8")
-        excerpt = html_mod.escape(_excerpt(text))
+        text = Path(md_path).read_text(encoding="utf-8")
+        # Skip the header block
+        parts = text.split("---", 2)
+        body = parts[2] if len(parts) >= 3 else text
+        return body.strip()[:max_chars]
     except Exception:
-        pass
-
-    tags_html = ""
-    for t in article.get("topics", []):
-        meta = TOPIC_META.get(t, DEFAULT_META)
-        tags_html += f'<span class="tag {meta[2]}">{meta[0]}</span> '
-
-    return f"""\
-  <div class="article">
-    <div class="article-title">{title}</div>
-    <div style="margin-bottom:6px">{tags_html}</div>
-    <p>{excerpt}</p>
-  </div>"""
+        return ""
 
 
-def _render_section_html(topic: str, articles: list[dict]) -> str:
-    """Render a topic section with all its articles."""
-    meta = TOPIC_META.get(topic, DEFAULT_META)
-    zh_name, en_name, css_class, _ = meta
-    section_id = topic.replace(" ", "-")
+def _build_prompt(topics: list[str], articles: list[dict]) -> str:
+    """Build the full prompt with article content for Claude."""
+    prompt = SYNTHESIS_PROMPT
 
-    articles_html = "\n".join(_render_article_html(a) for a in articles)
+    # For large groups, reduce per-article text to fit context
+    max_chars_per_article = 3000
+    if len(articles) > 15:
+        max_chars_per_article = 1500
+    elif len(articles) > 30:
+        max_chars_per_article = 800
 
-    return f"""\
-<div class="section" id="{section_id}">
-  <h2><span class="tag {css_class}">{zh_name}</span> {en_name} ({len(articles)} articles)</h2>
-{articles_html}
-</div>"""
-
-
-def render_newsletter_html(
-    number: int,
-    topics: list[str],
-    articles: list[dict],
-    prev_newsletter: str | None = None,
-) -> str:
-    """Render a complete newsletter HTML page."""
-    # Group articles by topic for sections
+    # Group articles by topic for the prompt
     by_topic: dict[str, list[dict]] = {}
     for a in articles:
         primary = a["topics"][0] if a.get("topics") else "uncategorized"
         by_topic.setdefault(primary, []).append(a)
 
-    # Title
-    topic_names_zh = [TOPIC_META.get(t, DEFAULT_META)[0] for t in topics]
-    topic_names_en = [TOPIC_META.get(t, DEFAULT_META)[1] for t in topics]
-    title_zh = "、".join(topic_names_zh[:3])
-    title_en = ", ".join(topic_names_en[:3])
-    full_title = f"第{number}期 — {title_zh}"
+    for topic, arts in by_topic.items():
+        meta = TOPIC_META.get(topic, DEFAULT_META)
+        prompt += f"\n### Topic: {meta[1]} ({meta[0]})\n\n"
+        for a in arts:
+            body = _read_article_text(a["mdPath"], max_chars=max_chars_per_article)
+            prompt += f"#### {a['title']}\n{body}\n\n---\n\n"
+
+    return prompt
+
+
+def _parse_claude_json(output: str) -> dict | None:
+    """Parse JSON from Claude CLI or SDK output."""
+    # claude --output-format json wraps in {"result": "...", ...}
+    try:
+        wrapper = json.loads(output)
+        raw_text = wrapper.get("result", output)
+    except json.JSONDecodeError:
+        raw_text = output
+
+    # Extract JSON from the response
+    json_match = re.search(r"\{[\s\S]*\}", raw_text)
+    if not json_match:
+        return None
+    try:
+        return json.loads(json_match.group())
+    except json.JSONDecodeError:
+        return None
+
+
+def synthesize_with_claude(topics: list[str], articles: list[dict]) -> dict | None:
+    """Call Claude to synthesize articles into structured editorial content."""
+    prompt = _build_prompt(topics, articles)
+
+    # Try claude CLI (non-interactive) — pipe prompt via stdin to avoid
+    # Windows command-line length limits
+    try:
+        print(f"  [CLAUDE] Synthesizing {len(articles)} articles ({len(prompt)} chars)...")
+        result = subprocess.run(
+            ["claude", "-p", "--output-format", "json"],
+            input=prompt,
+            capture_output=True,
+            text=True,
+            timeout=300,
+            encoding="utf-8",
+            errors="replace",
+        )
+        if result.returncode != 0:
+            print(f"  [CLAUDE ERR] rc={result.returncode}: {result.stderr[:300]}")
+            return None
+
+        parsed = _parse_claude_json(result.stdout.strip())
+        if not parsed:
+            print(f"  [CLAUDE ERR] No valid JSON found in response")
+            return None
+        return parsed
+
+    except FileNotFoundError:
+        print("  [CLAUDE] 'claude' CLI not found, trying Anthropic SDK...")
+        return _synthesize_with_sdk(prompt)
+    except subprocess.TimeoutExpired:
+        print("  [CLAUDE ERR] Timeout after 300s")
+        return None
+    except Exception as e:
+        print(f"  [CLAUDE ERR] {e}")
+        return None
+
+
+def _synthesize_with_sdk(prompt: str) -> dict | None:
+    """Fallback: use Anthropic SDK if available."""
+    try:
+        import anthropic
+        client = anthropic.Anthropic()  # uses ANTHROPIC_API_KEY env var
+        message = client.messages.create(
+            model="claude-sonnet-4-20250514",
+            max_tokens=8000,
+            messages=[{"role": "user", "content": prompt}],
+        )
+        raw_text = message.content[0].text
+        json_match = re.search(r"\{[\s\S]*\}", raw_text)
+        if json_match:
+            return json.loads(json_match.group())
+        return None
+    except ImportError:
+        print("  [ERR] Neither 'claude' CLI nor anthropic SDK available.")
+        return None
+    except Exception as e:
+        print(f"  [SDK ERR] {e}")
+        return None
+
+
+# ---------------------------------------------------------------------------
+# HTML rendering from synthesized content
+# ---------------------------------------------------------------------------
+def _bold_to_html(text: str) -> str:
+    """Convert **bold** markdown to <span> with white bold styling."""
+    return re.sub(
+        r"\*\*(.+?)\*\*",
+        r'<span style="color:#fff;font-weight:700">\1</span>',
+        text,
+    )
+
+
+def _render_section_html(section: dict, topics: list[str]) -> str:
+    """Render a section from synthesized JSON."""
+    section_id = section.get("id", "section")
+    tag_zh = section.get("tag_zh", "")
+    tag_en = section.get("tag_en", "")
+    heading = section.get("heading_zh", tag_en)
+
+    # Find matching CSS class
+    css_class = "tag-misc"
+    for topic in topics:
+        if topic in TOPIC_META:
+            meta = TOPIC_META[topic]
+            # Match by Chinese or English name
+            if meta[0] == tag_zh or meta[1].lower() == tag_en.lower():
+                css_class = meta[2]
+                break
+    # Fallback: try matching tag_en directly
+    if css_class == "tag-misc":
+        for k, v in TOPIC_META.items():
+            if v[0] == tag_zh or v[1].lower() == tag_en.lower() or k == tag_en.lower():
+                css_class = v[2]
+                break
+
+    # Stat grid
+    stats_html = ""
+    stats = section.get("stats") or []
+    if stats:
+        stat_items = ""
+        for s in stats[:3]:
+            color = s.get("color", "")
+            style = f' style="color:var(--{color})"' if color else ""
+            lbl = s.get("lbl_zh", "").replace("\\n", "<br>")
+            stat_items += f'    <div class="stat"><div class="val"{style}>{html_mod.escape(s.get("val", ""))}</div><div class="lbl">{lbl}</div></div>\n'
+        stats_html = f'\n  <div class="stat-grid">\n{stat_items}  </div>\n'
+
+    # Articles
+    articles_html = ""
+    for a in section.get("articles", []):
+        title = html_mod.escape(a.get("title", ""))
+        summary = _bold_to_html(html_mod.escape(a.get("summary_zh", "")))
+
+        dp_html = ""
+        dp = a.get("data_points", "")
+        if dp:
+            # Convert **bold** in data points
+            dp_formatted = _bold_to_html(html_mod.escape(dp))
+            dp_formatted = dp_formatted.replace(" | ", " &nbsp;|&nbsp; ")
+            dp_html = f'\n    <div class="data-point">{dp_formatted}</div>'
+
+        impl_html = ""
+        impl = a.get("implication_zh", "")
+        if impl:
+            impl_formatted = _bold_to_html(html_mod.escape(impl))
+            impl_html = f'\n    <div class="implication"><div class="label">投資啟示</div>{impl_formatted}</div>'
+
+        articles_html += f"""\
+  <div class="article">
+    <div class="article-title">{title}</div>
+    <p>{summary}</p>{dp_html}{impl_html}
+  </div>
+"""
+
+    return f"""\
+<div class="section" id="{section_id}">
+  <h2><span class="tag {css_class}">{tag_zh}</span> {heading}</h2>
+{stats_html}
+{articles_html}</div>"""
+
+
+def render_newsletter_html(
+    number: int,
+    synthesized: dict,
+    topics: list[str],
+    prev_newsletter: str | None = None,
+) -> str:
+    """Render the full newsletter HTML from synthesized editorial content."""
+    title_zh = synthesized.get("title_zh", "研究摘要")
+    title_en = synthesized.get("title_en", "Research Summary")
 
     # TOC
     toc_items = ""
-    for i, topic in enumerate(by_topic.keys(), 1):
-        meta = TOPIC_META.get(topic, DEFAULT_META)
-        toc_items += f'    <li><a href="#{topic.replace(" ", "-")}">{meta[0]} {meta[1]} &rarr;</a></li>\n'
+    sections = synthesized.get("sections", [])
+    for s in sections:
+        sid = s.get("id", "section")
+        label = s.get("tag_zh", "") + " " + s.get("heading_zh", "")
+        toc_items += f'    <li><a href="#{sid}">{label}</a></li>\n'
 
-    # Sections
+    # Sections HTML
     sections_html = "\n\n".join(
-        _render_section_html(topic, arts) for topic, arts in by_topic.items()
+        _render_section_html(s, topics) for s in sections
     )
 
-    # Nav links
-    prev_link = ""
-    if prev_newsletter:
-        prev_link = f'<span><a href="{prev_newsletter}">&larr; 前期</a></span>'
-    else:
-        prev_link = "<span></span>"
+    # Fund manager takeaways
+    takeaways = synthesized.get("fund_manager_takeaways", [])
+    takeaways_html = ""
+    if takeaways:
+        items = "\n".join(f"    <li>{t}</li>" for t in takeaways)
+        takeaways_html = f"""\
+<div class="callout" id="takeaways">
+  <div class="callout-title">基金經理人重點摘要</div>
+  <ul>
+{items}
+  </ul>
+</div>"""
 
-    # Stat grid
-    stat_items = ""
-    for topic in list(by_topic.keys())[:3]:
-        meta = TOPIC_META.get(topic, DEFAULT_META)
-        count = len(by_topic[topic])
-        stat_items += f'    <div class="stat"><div class="val">{count}</div><div class="lbl">{meta[0]}<br>{meta[1]}</div></div>\n'
-
+    # Nav
+    prev_link = f'<span><a href="{prev_newsletter}">&larr; 前期</a></span>' if prev_newsletter else "<span></span>"
     date_label = _date_label()
     month_label = _month_label()
 
@@ -337,7 +535,7 @@ def render_newsletter_html(
 <body>
 
 <h1>彭博研究摘要</h1>
-<p class="subtitle">{full_title} | {title_en}</p>
+<p class="subtitle">第{number}期 | {title_zh}</p>
 <span class="issue-badge">{month_label}更新</span>
 
 <div class="nav-links">
@@ -345,16 +543,16 @@ def render_newsletter_html(
   <span><a href="student.html">返回目錄 &rarr;</a></span>
 </div>
 
-<div class="stat-grid">
-{stat_items}</div>
-
 <div class="toc">
   <div class="toc-title">目錄</div>
   <ol>
-{toc_items}  </ol>
+{toc_items}    <li><a href="#takeaways">基金經理人重點摘要</a></li>
+  </ol>
 </div>
 
 {sections_html}
+
+{takeaways_html}
 
 <div class="nav-links">
   {prev_link}
@@ -376,25 +574,20 @@ def render_newsletter_html(
 def update_student_portal(
     number: int,
     filename: str,
+    title_zh: str,
     topics: list[str],
     article_count: int,
 ) -> None:
-    """Insert a new newsletter card into student.html before the footer."""
     from bs4 import BeautifulSoup
 
     html_text = STUDENT_HTML.read_text(encoding="utf-8")
     soup = BeautifulSoup(html_text, "html.parser")
 
-    # Find the footer div
     footer = soup.find("div", class_="footer")
     if not footer:
-        print("[WARN] Could not find footer in student.html, skipping portal update")
+        print("[WARN] Could not find footer in student.html")
         return
 
-    # Build card
-    topic_names_zh = [TOPIC_META.get(t, DEFAULT_META)[0] for t in topics]
-    topic_names_en = [TOPIC_META.get(t, DEFAULT_META)[1] for t in topics]
-    title_zh = "、".join(topic_names_zh[:3])
     icon = CARD_ICONS[(number - 1) % len(CARD_ICONS)]
     date_label = _date_label()
 
@@ -412,7 +605,7 @@ def update_student_portal(
   </div>
   <div class="card-desc">
     {tags_html}<br>
-    {article_count} articles: {", ".join(topic_names_en[:3])}
+    {article_count} articles
   </div>
 </a>
 """
@@ -428,7 +621,6 @@ def update_student_portal(
 # Main build
 # ---------------------------------------------------------------------------
 def build(dry_run: bool = False) -> list[dict]:
-    """Build newsletters from unprocessed articles. Returns list of generated newsletters."""
     state = read_state()
     groups = _group_articles(state)
 
@@ -436,14 +628,13 @@ def build(dry_run: bool = False) -> list[dict]:
     print(f"Unprocessed articles: {total_unprocessed} across {len(groups)} topics")
 
     if total_unprocessed < MIN_ARTICLES:
-        print(f"Below minimum threshold ({MIN_ARTICLES}), skipping generation.")
+        print(f"Below minimum threshold ({MIN_ARTICLES}), skipping.")
         return []
 
     merged = _merge_small_groups(groups, min_size=MIN_ARTICLES)
     generated = []
     number = state["lastNewsletterNumber"]
 
-    # Find the previous newsletter filename for nav links
     prev_newsletter = None
     if state.get("newsletters"):
         last_num = str(number)
@@ -464,11 +655,18 @@ def build(dry_run: bool = False) -> list[dict]:
             print(f"  [DRY-RUN] Would generate {filename}: {len(articles)} articles, topics={topics}")
             continue
 
-        html_content = render_newsletter_html(number, topics, articles, prev_newsletter)
+        # Claude editorial synthesis
+        synthesized = synthesize_with_claude(topics, articles)
+        if not synthesized:
+            print(f"  [SKIP] Claude synthesis failed for {topics}, skipping")
+            continue
+
+        html_content = render_newsletter_html(number, synthesized, topics, prev_newsletter)
         out_path.write_text(html_content, encoding="utf-8")
         print(f"  [OK] Generated {filename}: {len(articles)} articles")
 
-        # Update state
+        title_zh = synthesized.get("title_zh", "研究摘要")
+
         state["newsletters"][str(number)] = {
             "filename": filename,
             "generatedAt": now_hkt_iso(),
@@ -480,8 +678,7 @@ def build(dry_run: bool = False) -> list[dict]:
             if fname in state["processedFiles"]:
                 state["processedFiles"][fname]["newsletterNumber"] = number
 
-        # Update student portal
-        update_student_portal(number, filename, topics, len(articles))
+        update_student_portal(number, filename, title_zh, topics, len(articles))
 
         generated.append({
             "number": number,
@@ -499,13 +696,10 @@ def build(dry_run: bool = False) -> list[dict]:
     return generated
 
 
-# ---------------------------------------------------------------------------
-# CLI
-# ---------------------------------------------------------------------------
 if __name__ == "__main__":
     import argparse
 
-    parser = argparse.ArgumentParser(description="Build Bloomberg newsletters from converted markdown")
-    parser.add_argument("--dry-run", action="store_true", help="Preview without writing")
+    parser = argparse.ArgumentParser(description="Build Bloomberg newsletters with Claude editorial synthesis")
+    parser.add_argument("--dry-run", action="store_true")
     args = parser.parse_args()
     build(dry_run=args.dry_run)

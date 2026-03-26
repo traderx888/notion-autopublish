@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>彭博研究摘要 #6 — 伊朗戰爭升級與油價衝擊：全球市場何去何從</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --accent: #58a6ff;
+          --green: #3fb950; --red: #f85149; --yellow: #d29922; --text: #c9d1d9; --muted: #8b949e;
+          --orange: #f0883e; --purple: #bc8cff; --cyan: #39d2c0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans TC', 'Microsoft JhengHei', Helvetica, Arial, sans-serif; line-height: 1.7; padding: 20px; max-width: 860px; margin: 0 auto; }
+  h1 { color: #fff; font-size: 1.7em; margin-bottom: 4px; }
+  .subtitle { color: var(--muted); font-size: 0.9em; margin-bottom: 8px; }
+  .issue-badge { display: inline-block; background: rgba(88,166,255,0.15); color: var(--accent); padding: 3px 10px; border-radius: 12px; font-size: 0.8em; font-weight: 600; margin-bottom: 20px; }
+  .tag { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 0.72em; font-weight: 600; margin-right: 4px; }
+  .tag-rates { background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-china { background: rgba(240,136,62,0.15); color: var(--orange); }
+  .tag-japan { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-geo   { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-oil   { background: rgba(210,153,34,0.15); color: var(--yellow); }
+  .tag-trade { background: rgba(210,153,34,0.15); color: var(--yellow); }
+  .tag-growth{ background: rgba(63,185,80,0.15); color: var(--green); }
+  .tag-metals{ background: rgba(188,140,255,0.15); color: var(--purple); }
+  .tag-infl  { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-policy{ background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-val   { background: rgba(63,185,80,0.15); color: var(--green); }
+  .tag-vol   { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-semi  { background: rgba(57,210,192,0.15); color: var(--cyan); }
+  .tag-credit{ background: rgba(188,140,255,0.15); color: var(--purple); }
+  .tag-space { background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-misc  { background: rgba(139,148,158,0.15); color: var(--muted); }
+  .section { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 16px; }
+  .section h2 { color: #fff; font-size: 1.15em; margin-bottom: 12px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+  .section h3 { color: var(--accent); font-size: 0.95em; margin: 14px 0 6px; }
+  .article { margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .article:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .article-title { color: #fff; font-weight: 700; font-size: 0.95em; margin-bottom: 4px; }
+  .article-title-cn { color: var(--muted); font-size: 0.85em; margin-bottom: 8px; }
+  .article p { font-size: 0.9em; margin: 6px 0; }
+  .data-point { background: rgba(255,255,255,0.03); padding: 8px 12px; border-radius: 6px; margin: 8px 0; font-size: 0.85em; }
+  .data-point .num { color: #fff; font-weight: 700; }
+  .implication { background: rgba(88,166,255,0.06); border-left: 3px solid var(--accent); padding: 10px 14px; margin: 10px 0; border-radius: 0 6px 6px 0; font-size: 0.88em; }
+  .implication .label { color: var(--accent); font-weight: 700; font-size: 0.8em; text-transform: uppercase; margin-bottom: 4px; }
+  .callout { background: rgba(210,153,34,0.08); border: 1px solid rgba(210,153,34,0.3); border-radius: 6px; padding: 16px; margin: 16px 0; }
+  .callout-title { color: var(--yellow); font-weight: 700; font-size: 0.95em; margin-bottom: 8px; }
+  .callout ul { padding-left: 18px; }
+  .callout li { margin: 4px 0; font-size: 0.88em; }
+  ul { padding-left: 18px; }
+  li { margin: 3px 0; font-size: 0.88em; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(255,255,255,0.03); padding: 12px; border-radius: 6px; text-align: center; }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: #fff; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
+  .toc { background: rgba(88,166,255,0.05); border: 1px solid rgba(88,166,255,0.2); border-radius: 8px; padding: 16px 20px; margin-bottom: 20px; }
+  .toc-title { color: var(--accent); font-weight: 700; font-size: 0.9em; margin-bottom: 8px; }
+  .toc a { color: var(--accent); text-decoration: none; font-size: 0.88em; }
+  .toc a:hover { text-decoration: underline; }
+  .toc ol { padding-left: 20px; }
+  .toc li { margin: 4px 0; }
+  .nav-links { display: flex; justify-content: space-between; margin: 20px 0; font-size: 0.85em; }
+  .nav-links a { color: var(--accent); text-decoration: none; }
+  .nav-links a:hover { text-decoration: underline; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(255,255,255,0.03); padding: 12px; border-radius: 6px; text-align: center; }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: #fff; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
+  .footer { text-align: center; color: var(--muted); font-size: 0.75em; margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--border); }
+</style>
+</head>
+<body>
+
+<h1>彭博研究摘要</h1>
+<p class="subtitle">第6期 | 伊朗戰爭升級與油價衝擊：全球市場何去何從</p>
+<span class="issue-badge">2026年三月下旬更新</span>
+
+<div class="nav-links">
+  <span></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="toc">
+  <div class="toc-title">目錄</div>
+  <ol>
+    <li><a href="#oil-war">原油 $110原油：長期戰爭定價</a></li>
+    <li><a href="#hormuz-supply">霍爾木茲海峽 $19戰爭溢價：航運癱瘓</a></li>
+    <li><a href="#china-impact">中國 出口衝擊才是真風險</a></li>
+    <li><a href="#takeaways">基金經理人重點摘要</a></li>
+  </ol>
+</div>
+
+<div class="section" id="oil-war">
+  <h2><span class="tag tag-oil">原油</span> $110原油：長期戰爭定價</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--red)">$110+</div><div class="lbl">布倫特原油
+四年新高</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">+60%</div><div class="lbl">原油單週漲幅</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">48%</div><div class="lbl">下月底前
+仍無停火概率</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">$110原油時代 — 長期戰爭正在被市場定價</div>
+    <p>伊朗新任最高領袖莫吉塔巴·哈梅內伊（已故前領袖之子）的上台，打破了政權更迭的幻想。布倫特原油飆升至 <span style="color:#fff;font-weight:700">$110/桶</span> 以上，單週漲幅達 <span style="color:#fff;font-weight:700">60%</span>，創四年新高。日經225指數單日暴跌 <span style="color:#fff;font-weight:700">7%</span>。預測市場顯示，下月底前仍無停火的概率已攀升至 <span style="color:#fff;font-weight:700">48%</span>。特朗普要求伊朗「無條件投降」並考慮派遣特種部隊奪取伊朗鈾設施，進一步加劇市場恐慌。值得注意的是，全球債券殖利率在過去一週反而上升 — 這不符合避險邏輯，反映的是市場對長期衝突導致油氣供應中斷的擔憂。沙烏地股市表現相對樂觀，戰爭爆發後反而走高，暗示當地投資者押注衝突不會擴散至沙國。</p>
+    <div class="data-point">布倫特原油：<span style="color:#fff;font-weight:700">$110+/桶（四年高位）</span> &nbsp;|&nbsp; 單週漲幅：<span style="color:#fff;font-weight:700">60%</span> &nbsp;|&nbsp; 日經225：<span style="color:#fff;font-weight:700">-7%</span> &nbsp;|&nbsp; 停火概率（下月底前）：<span style="color:#fff;font-weight:700">僅52%</span></div>
+    <div class="implication"><div class="label">投資啟示</div>油價短期難回落。<span style="color:#fff;font-weight:700">做多能源股及油氣ETF</span>，同時<span style="color:#fff;font-weight:700">減持對油價敏感的航空與物流板塊</span>。債券殖利率上行意味避險邏輯失效 — 慎用長債作對沖。</div>
+  </div>
+</div>
+
+<div class="section" id="hormuz-supply">
+  <h2><span class="tag tag-misc">霍爾木茲海峽</span> $19戰爭溢價：航運癱瘓</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--red)">$19</div><div class="lbl">伊朗戰爭
+原油溢價</div></div>
+    <div class="stat"><div class="val">2,000+</div><div class="lbl">美軍首72小時
+打擊目標數</div></div>
+    <div class="stat"><div class="val">20艘</div><div class="lbl">伊朗海軍
+被擊沉艦艇</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">霍爾木茲海峽：易癱難復，亞洲首當其衝</div>
+    <p>Bloomberg Intelligence估計伊朗戰爭已為布倫特原油增加約 <span style="color:#fff;font-weight:700">$19</span> 的溢價，其中三分之二來自 <span style="color:#fff;font-weight:700">2月28日</span> 開戰後。儘管特朗普提出由美國海軍護航油輪並提供保險擔保，市場仍不買賬 — 伊朗的威脅與零星攻擊已令油輪運輸陷入癱瘓。美軍在首 <span style="color:#fff;font-weight:700">72小時</span> 內打擊超過 <span style="color:#fff;font-weight:700">2,000</span> 個目標，擊沉 <span style="color:#fff;font-weight:700">20艘</span> 伊朗軍艦，但僅在伊朗部分地區建立了「局部」空中優勢。下一階段美軍將轉向近距離動態打擊，包括伊朗無人機、海軍資產及潛在核設施，風險進一步升級。霍爾木茲海峽的石油主要流向亞洲，亞洲經濟體承受的供應衝擊最為直接。</p>
+    <div class="data-point">戰爭溢價：<span style="color:#fff;font-weight:700">$19/桶</span> &nbsp;|&nbsp; 開戰前已計入：<span style="color:#fff;font-weight:700">約$6</span> &nbsp;|&nbsp; 開戰後新增：<span style="color:#fff;font-weight:700">約$13</span> &nbsp;|&nbsp; 主要受影響地區：<span style="color:#fff;font-weight:700">亞洲</span></div>
+    <div class="implication"><div class="label">投資啟示</div>亞洲煉油商與進口國風險最高。<span style="color:#fff;font-weight:700">增持亞洲能源安全概念股</span>，關注LNG替代供應鏈。<span style="color:#fff;font-weight:700">做空航運保險成本敏感的亞洲航運股</span>。</div>
+  </div>
+</div>
+
+<div class="section" id="china-impact">
+  <h2><span class="tag tag-china">中國</span> 出口衝擊才是真風險</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--orange)">4.5%</div><div class="lbl">Bloomberg
+2026中國GDP預測</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">-0.31ppt</div><div class="lbl">出口跌10%
+對GDP拖累</div></div>
+    <div class="stat"><div class="val">27萬億¥</div><div class="lbl">2025年中國出口
+佔GDP 19%</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">中國面對的不是通膨 — 是全球需求塌陷</div>
+    <p>Bloomberg Economics分析指出，伊朗戰爭對中國的主要風險並非油價通膨，而是「二次衝擊」— 全球需求急劇下滑導致出口萎縮。若油價升至 <span style="color:#fff;font-weight:700">$108/桶</span>，美國GDP將下降 <span style="color:#fff;font-weight:700">0.1個百分點</span>，歐元區更將下降 <span style="color:#fff;font-weight:700">0.6個百分點</span>，這將直接壓縮中國的外需。在輕度情境下（出口下跌 <span style="color:#fff;font-weight:700">5%</span>），中國GDP增速將被拖累 <span style="color:#fff;font-weight:700">0.16個百分點</span>；嚴重情境下（出口下跌 <span style="color:#fff;font-weight:700">10%</span>），拖累擴大至 <span style="color:#fff;font-weight:700">0.31個百分點</span>。Bloomberg Economics的基線預測為 <span style="color:#fff;font-weight:700">4.5%</span> — 已處於政府目標區間 <span style="color:#fff;font-weight:700">4.5%-5.0%</span> 的下限。好消息是北京仍有政策空間：<span style="color:#fff;font-weight:700">10個基點</span>的降息幾乎可以完全抵消5%出口衝擊的影響。但政策工具有其極限，短期陣痛不可避免。</p>
+    <div class="data-point">出口跌5%對GDP影響：<span style="color:#fff;font-weight:700">-0.16ppt</span> &nbsp;|&nbsp; 出口跌10%對GDP影響：<span style="color:#fff;font-weight:700">-0.31ppt</span> &nbsp;|&nbsp; 油價$108時美國GDP：<span style="color:#fff;font-weight:700">-0.1ppt</span> &nbsp;|&nbsp; 歐元區GDP：<span style="color:#fff;font-weight:700">-0.6ppt</span></div>
+    <div class="implication"><div class="label">投資啟示</div>中國寬鬆預期升溫。<span style="color:#fff;font-weight:700">做多中國國債</span>，押注降息降準。出口敏感型A股（電子、紡織）短期承壓 — <span style="color:#fff;font-weight:700">輪動至內需消費板塊</span>。</div>
+  </div>
+</div>
+
+<div class="callout" id="takeaways">
+  <div class="callout-title">基金經理人重點摘要</div>
+  <ul>
+    <li><strong>原油：</strong>布倫特突破$110創四年高位，戰爭溢價$19。停火遙遙無期 — **做多能源，減持航空物流**。</li>
+    <li><strong>霍爾木茲：</strong>亞洲首當其衝，油輪運輸癱瘓。關注**LNG替代供應鏈**及亞洲能源安全概念。</li>
+    <li><strong>中國：</strong>真正風險是出口需求塌陷而非通膨。基線GDP預測4.5%已在目標下限 — **押注寬鬆政策，做多中國國債**。</li>
+    <li><strong>美債：</strong>殖利率逆勢上行，傳統避險邏輯失效。**慎用長債對沖**，短端利率債相對安全。</li>
+    <li><strong>風險情境：</strong>若衝突擴大至沙國或海峽全面封鎖，油價可能進一步衝高 — **保留現金部位應對尾部風險**。</li>
+  </ul>
+</div>
+
+<div class="nav-links">
+  <span></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="footer">
+  彭博研究摘要 | 僅供教學與討論用途 | 2026年3月26日<br>
+  資料來源：Bloomberg Intelligence, Bloomberg Economics, Bloomberg News
+</div>
+
+</body>
+</html>

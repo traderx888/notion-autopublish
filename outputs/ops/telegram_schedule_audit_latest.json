@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-19T09:32:00.142449+08:00",
+  "generated_at": "2026-03-26T17:00:09.751508+08:00",
   "root": "C:\\Users\\User\\Documents\\GitHub",
   "repos": [
     "All-in-one",
@@ -31,6 +31,182 @@
         "22:15 HKT"
       ],
       "runtime_entry": "run_blp_title_pipeline.bat --folder \"C:\\blp\\data\" --retag-all",
+      "state_reason": "active scheduler job"
+    },
+    {
+      "task_key": "ciovacco_weekly_feed",
+      "scheduler_name": "Ciovacco-Weekly-Feed",
+      "owner_repo": "notion-autopublish",
+      "source_type": "scheduler",
+      "command": "cmd.exe /c \"C:\\Users\\User\\Documents\\GitHub\\notion-autopublish\\run_ciovacco_weekly.bat\"",
+      "schedule_text": "Sun 14:00 HKT",
+      "enabled": true,
+      "telegram_related": true,
+      "observed_in": [
+        "scheduler"
+      ],
+      "issues": [
+        "missing_in_control",
+        "missing_in_repo"
+      ],
+      "display_name": "Ciovacco-Weekly-Feed",
+      "lane": "live_scheduler",
+      "source_group": "Other Telegram task",
+      "source_detail": "run_ciovacco_weekly.bat",
+      "time_slots": [
+        "14:00 HKT"
+      ],
+      "runtime_entry": "run_ciovacco_weekly.bat",
+      "state_reason": "active scheduler job"
+    },
+    {
+      "task_key": "commodity_live_overlay_0945",
+      "scheduler_name": "JARVIS-Reminder-commodity-live-overlay-0945",
+      "owner_repo": "fundman-jarvis",
+      "source_type": "scheduler",
+      "command": "C:\\Users\\User\\AppData\\Local\\Programs\\Python\\Python311\\python.exe C:\\Users\\User\\Documents\\GitHub\\fundman-jarvis\\send_commodity_live_overlay_report.py --slot 0945",
+      "schedule_text": "Mon-Fri 09:45 HKT",
+      "enabled": true,
+      "telegram_related": true,
+      "observed_in": [
+        "control",
+        "repo",
+        "scheduler"
+      ],
+      "issues": [],
+      "display_name": "Commodity Model - Live Overlay Report",
+      "lane": "live_scheduler",
+      "source_group": "Commodity live overlay",
+      "source_detail": "Fresh gold, silver, copper, and DXY live-overlay summary",
+      "time_slots": [
+        "09:45 HKT"
+      ],
+      "runtime_entry": "run_commodity_live_overlay_report.bat 0945",
+      "state_reason": "active scheduler job"
+    },
+    {
+      "task_key": "commodity_live_overlay_2145",
+      "scheduler_name": "JARVIS-Reminder-commodity-live-overlay-2145",
+      "owner_repo": "fundman-jarvis",
+      "source_type": "scheduler",
+      "command": "C:\\Users\\User\\AppData\\Local\\Programs\\Python\\Python311\\python.exe C:\\Users\\User\\Documents\\GitHub\\fundman-jarvis\\send_commodity_live_overlay_report.py --slot 2145",
+      "schedule_text": "Mon-Fri 21:45 HKT",
+      "enabled": true,
+      "telegram_related": true,
+      "observed_in": [
+        "control",
+        "repo",
+        "scheduler"
+      ],
+      "issues": [],
+      "display_name": "Commodity Model - Live Overlay Report",
+      "lane": "live_scheduler",
+      "source_group": "Commodity live overlay",
+      "source_detail": "Fresh gold, silver, copper, and DXY live-overlay summary",
+      "time_slots": [
+        "21:45 HKT"
+      ],
+      "runtime_entry": "run_commodity_live_overlay_report.bat 2145",
+      "state_reason": "active scheduler job"
+    },
+    {
+      "task_key": "cross_asset_momentum_0905",
+      "scheduler_name": "JARVIS-Reminder-cross-asset-momentum-0905",
+      "owner_repo": "fundman-jarvis",
+      "source_type": "scheduler",
+      "command": "C:\\Users\\User\\AppData\\Local\\Programs\\Python\\Python311\\python.exe C:\\Users\\User\\Documents\\GitHub\\fundman-jarvis\\send_cross_asset_momentum.py --slot 0905",
+      "schedule_text": "Mon-Fri 09:05 HKT",
+      "enabled": true,
+      "telegram_related": true,
+      "observed_in": [
+        "control",
+        "repo",
+        "scheduler"
+      ],
+      "issues": [],
+      "display_name": "Cross-Asset Momentum (1D)",
+      "lane": "live_scheduler",
+      "source_group": "Cross-asset dashboard",
+      "source_detail": "One-day momentum snapshot across equity, dollar, gold, crypto, and vol proxies",
+      "time_slots": [
+        "09:05 HKT"
+      ],
+      "runtime_entry": "run_cross_asset_momentum.bat 0905",
+      "state_reason": "active scheduler job"
+    },
+    {
+      "task_key": "cross_asset_momentum_1145",
+      "scheduler_name": "JARVIS-Reminder-cross-asset-momentum-1145",
+      "owner_repo": "fundman-jarvis",
+      "source_type": "scheduler",
+      "command": "C:\\Users\\User\\AppData\\Local\\Programs\\Python\\Python311\\python.exe C:\\Users\\User\\Documents\\GitHub\\fundman-jarvis\\send_cross_asset_momentum.py --slot 1145",
+      "schedule_text": "Mon-Fri 11:45 HKT",
+      "enabled": true,
+      "telegram_related": true,
+      "observed_in": [
+        "control",
+        "repo",
+        "scheduler"
+      ],
+      "issues": [],
+      "display_name": "Cross-Asset Momentum (1D)",
+      "lane": "live_scheduler",
+      "source_group": "Cross-asset dashboard",
+      "source_detail": "One-day momentum snapshot across equity, dollar, gold, crypto, and vol proxies",
+      "time_slots": [
+        "11:45 HKT"
+      ],
+      "runtime_entry": "run_cross_asset_momentum.bat 1145",
+      "state_reason": "active scheduler job"
+    },
+    {
+      "task_key": "cross_asset_momentum_1545",
+      "scheduler_name": "JARVIS-Reminder-cross-asset-momentum-1545",
+      "owner_repo": "fundman-jarvis",
+      "source_type": "scheduler",
+      "command": "C:\\Users\\User\\AppData\\Local\\Programs\\Python\\Python311\\python.exe C:\\Users\\User\\Documents\\GitHub\\fundman-jarvis\\send_cross_asset_momentum.py --slot 1545",
+      "schedule_text": "Mon-Fri 15:45 HKT",
+      "enabled": true,
+      "telegram_related": true,
+      "observed_in": [
+        "control",
+        "repo",
+        "scheduler"
+      ],
+      "issues": [],
+      "display_name": "Cross-Asset Momentum (1D)",
+      "lane": "live_scheduler",
+      "source_group": "Cross-asset dashboard",
+      "source_detail": "One-day momentum snapshot across equity, dollar, gold, crypto, and vol proxies",
+      "time_slots": [
+        "15:45 HKT"
+      ],
+      "runtime_entry": "run_cross_asset_momentum.bat 1545",
+      "state_reason": "active scheduler job"
+    },
+    {
+      "task_key": "cross_asset_momentum_2100",
+      "scheduler_name": "JARVIS-Reminder-cross-asset-momentum-2100",
+      "owner_repo": "fundman-jarvis",
+      "source_type": "scheduler",
+      "command": "C:\\Users\\User\\AppData\\Local\\Programs\\Python\\Python311\\python.exe C:\\Users\\User\\Documents\\GitHub\\fundman-jarvis\\send_cross_asset_momentum.py --slot 2100",
+      "schedule_text": "Mon-Fri 21:00 HKT",
+      "enabled": true,
+      "telegram_related": true,
+      "observed_in": [
+        "control",
+        "repo",
+        "scheduler"
+      ],
+      "issues": [],
+      "display_name": "Cross-Asset Momentum (1D)",
+      "lane": "live_scheduler",
+      "source_group": "Cross-asset dashboard",
+      "source_detail": "One-day momentum snapshot across equity, dollar, gold, crypto, and vol proxies",
+      "time_slots": [
+        "21:00 HKT"
+      ],
+      "runtime_entry": "run_cross_asset_momentum.bat 2100",
       "state_reason": "active scheduler job"
     },
     {
@@ -81,6 +257,56 @@
         "11:50 HKT"
       ],
       "runtime_entry": "run_crypto_etf_flows.bat midday",
+      "state_reason": "active scheduler job"
+    },
+    {
+      "task_key": "crypto_news_1000",
+      "scheduler_name": "JARVIS-Reminder-crypto-news-1000",
+      "owner_repo": "fundman-jarvis",
+      "source_type": "scheduler",
+      "command": "C:\\Users\\User\\AppData\\Local\\Programs\\Python\\Python311\\python.exe C:\\Users\\User\\Documents\\GitHub\\fundman-jarvis\\send_crypto_news.py --slot 1000",
+      "schedule_text": "Daily 10:00 HKT",
+      "enabled": true,
+      "telegram_related": true,
+      "observed_in": [
+        "control",
+        "repo",
+        "scheduler"
+      ],
+      "issues": [],
+      "display_name": "Crypto Daily News",
+      "lane": "live_scheduler",
+      "source_group": "Crypto news",
+      "source_detail": "Top 8 Chinese + English crypto headlines",
+      "time_slots": [
+        "10:00 HKT"
+      ],
+      "runtime_entry": "run_crypto_news.bat 1000",
+      "state_reason": "active scheduler job"
+    },
+    {
+      "task_key": "crypto_news_1140",
+      "scheduler_name": "JARVIS-Reminder-crypto-news-1140",
+      "owner_repo": "fundman-jarvis",
+      "source_type": "scheduler",
+      "command": "C:\\Users\\User\\AppData\\Local\\Programs\\Python\\Python311\\python.exe C:\\Users\\User\\Documents\\GitHub\\fundman-jarvis\\send_crypto_news.py --slot 1140",
+      "schedule_text": "Daily 11:40 HKT",
+      "enabled": true,
+      "telegram_related": true,
+      "observed_in": [
+        "control",
+        "repo",
+        "scheduler"
+      ],
+      "issues": [],
+      "display_name": "Crypto Daily News",
+      "lane": "live_scheduler",
+      "source_group": "Crypto news",
+      "source_detail": "Top 8 Chinese + English crypto headlines",
+      "time_slots": [
+        "11:40 HKT"
+      ],
+      "runtime_entry": "run_crypto_news.bat 1140",
       "state_reason": "active scheduler job"
     },
     {
@@ -186,32 +412,6 @@
       "state_reason": "active scheduler job"
     },
     {
-      "task_key": "excel",
-      "scheduler_name": "JARVIS-Reminder-excel",
-      "owner_repo": "fundman-jarvis",
-      "source_type": "scheduler",
-      "command": "C:\\Users\\User\\AppData\\Local\\Programs\\Python\\Python311\\python.exe daily_reminders.py --task excel",
-      "schedule_text": "Mon-Fri 10:00 HKT",
-      "enabled": true,
-      "telegram_related": true,
-      "observed_in": [
-        "repo",
-        "scheduler"
-      ],
-      "issues": [
-        "missing_in_control"
-      ],
-      "display_name": "Excel Reminder",
-      "lane": "live_scheduler",
-      "source_group": "Manual reminder",
-      "source_detail": "Manual Excel and data reminder",
-      "time_slots": [
-        "10:00 HKT"
-      ],
-      "runtime_entry": "daily_reminders.py --task excel",
-      "state_reason": "active scheduler job"
-    },
-    {
       "task_key": "friday_options",
       "scheduler_name": "JARVIS-Reminder-friday-options",
       "owner_repo": "fundman-jarvis",
@@ -313,6 +513,31 @@
       "state_reason": "active scheduler job"
     },
     {
+      "task_key": "gdrive_breadth_regime_2045",
+      "scheduler_name": "JARVIS-Reminder-gdrive-breadth-regime-2045",
+      "owner_repo": "fundman-jarvis",
+      "source_type": "scheduler",
+      "command": "C:\\Users\\User\\AppData\\Local\\Programs\\Python\\Python311\\python.exe C:\\Users\\User\\Documents\\GitHub\\fundman-jarvis\\send_gdrive_breadth_regime_snapshot.py",
+      "schedule_text": "Mon-Fri 20:45 HKT",
+      "enabled": true,
+      "telegram_related": true,
+      "observed_in": [
+        "control",
+        "repo",
+        "scheduler"
+      ],
+      "issues": [],
+      "display_name": "GDrive Breadth & Regime Snapshot",
+      "lane": "live_scheduler",
+      "source_group": "GDrive research recap",
+      "source_detail": "Breadth, stage, regime, and factor snapshot from the daily GDrive recap",
+      "time_slots": [
+        "20:45 HKT"
+      ],
+      "runtime_entry": "run_gdrive_breadth_regime_snapshot.bat",
+      "state_reason": "active scheduler job"
+    },
+    {
       "task_key": "georisk",
       "scheduler_name": "JARVIS-Reminder-georisk",
       "owner_repo": "fundman-jarvis",
@@ -362,6 +587,32 @@
         "09:00 HKT"
       ],
       "runtime_entry": "send_cbbc_tracker.py",
+      "state_reason": "active scheduler job"
+    },
+    {
+      "task_key": "jarvis_cot_refresh",
+      "scheduler_name": "JARVIS-COT-refresh",
+      "owner_repo": "fundman-jarvis",
+      "source_type": "scheduler",
+      "command": "cmd.exe /c \"c:\\Users\\User\\Documents\\GitHub\\fundman-jarvis\\run_cot_refresh.bat\"",
+      "schedule_text": "Sat 08:00 HKT",
+      "enabled": true,
+      "telegram_related": true,
+      "observed_in": [
+        "scheduler"
+      ],
+      "issues": [
+        "missing_in_control",
+        "missing_in_repo"
+      ],
+      "display_name": "JARVIS-COT-refresh",
+      "lane": "live_scheduler",
+      "source_group": "Other Telegram task",
+      "source_detail": "run_cot_refresh.bat",
+      "time_slots": [
+        "08:00 HKT"
+      ],
+      "runtime_entry": "run_cot_refresh.bat",
       "state_reason": "active scheduler job"
     },
     {
@@ -570,6 +821,30 @@
       "state_reason": "active scheduler job"
     },
     {
+      "task_key": "jarvis_polymarketmonitor",
+      "scheduler_name": "Jarvis-PolymarketMonitor",
+      "owner_repo": "fundman-jarvis",
+      "source_type": "scheduler",
+      "command": "C:\\Users\\User\\Documents\\GitHub\\fundman-jarvis\\run_polymarket_monitor.bat",
+      "schedule_text": "Hourly",
+      "enabled": true,
+      "telegram_related": true,
+      "observed_in": [
+        "scheduler"
+      ],
+      "issues": [
+        "missing_in_control",
+        "missing_in_repo"
+      ],
+      "display_name": "Jarvis-PolymarketMonitor",
+      "lane": "live_scheduler",
+      "source_group": "Other Telegram task",
+      "source_detail": "run_polymarket_monitor.bat",
+      "time_slots": [],
+      "runtime_entry": "run_polymarket_monitor.bat",
+      "state_reason": "active scheduler job"
+    },
+    {
       "task_key": "jarvis_portfolio_am",
       "scheduler_name": "JARVIS_Portfolio_AM",
       "owner_repo": "fundman-jarvis",
@@ -649,26 +924,28 @@
     },
     {
       "task_key": "newsletter",
-      "scheduler_name": "",
+      "scheduler_name": "JARVIS-Reminder-newsletter",
       "owner_repo": "fundman-jarvis",
-      "source_type": "repo",
-      "command": "python daily_reminders.py --task newsletter",
-      "schedule_text": "Daily 11:00 HKT",
+      "source_type": "scheduler",
+      "command": "C:\\Users\\User\\AppData\\Local\\Programs\\Python\\Python311\\python.exe C:\\Users\\User\\Documents\\GitHub\\fundman-jarvis\\daily_reminders.py --task newsletter",
+      "schedule_text": "Mon-Fri 11:00 HKT",
       "enabled": true,
       "telegram_related": true,
       "observed_in": [
-        "repo"
+        "control",
+        "repo",
+        "scheduler"
       ],
       "issues": [],
       "display_name": "Newsletter",
-      "lane": "repo_only",
-      "source_group": "Other Telegram task",
-      "source_detail": "daily_reminders.py --task newsletter",
+      "lane": "live_scheduler",
+      "source_group": "Newsletter deploy",
+      "source_detail": "Generate newsletter, publish site, and send the live link to Telegram",
       "time_slots": [
         "11:00 HKT"
       ],
       "runtime_entry": "daily_reminders.py --task newsletter",
-      "state_reason": "repo sender with no scheduler match"
+      "state_reason": "active scheduler job"
     },
     {
       "task_key": "night_digest",
@@ -1035,6 +1312,31 @@
       "state_reason": "active scheduler job"
     },
     {
+      "task_key": "southbound_1230",
+      "scheduler_name": "JARVIS-Reminder-southbound-1230",
+      "owner_repo": "fundman-jarvis",
+      "source_type": "scheduler",
+      "command": "C:\\Users\\User\\AppData\\Local\\Programs\\Python\\Python311\\python.exe C:\\Users\\User\\Documents\\GitHub\\fundman-jarvis\\daily_reminders.py --task southbound_1230",
+      "schedule_text": "Mon-Fri 12:30 HKT",
+      "enabled": true,
+      "telegram_related": true,
+      "observed_in": [
+        "control",
+        "repo",
+        "scheduler"
+      ],
+      "issues": [],
+      "display_name": "Southbound Flow",
+      "lane": "live_scheduler",
+      "source_group": "Eastmoney + screen brief",
+      "source_detail": "Midday Southbound screenshot and screen brief",
+      "time_slots": [
+        "12:30 HKT"
+      ],
+      "runtime_entry": "daily_reminders.py --task southbound_1230",
+      "state_reason": "active scheduler job"
+    },
+    {
       "task_key": "story_1030",
       "scheduler_name": "Fundman-Storyteller-1030",
       "owner_repo": "fundman-jarvis",
@@ -1113,12 +1415,12 @@
     }
   ],
   "summary": {
-    "total_records": 44,
-    "records_with_issues": 25,
+    "total_records": 56,
+    "records_with_issues": 27,
     "issues_by_kind": {
       "info_only_schedule": 1,
-      "missing_in_control": 22,
-      "missing_in_repo": 5,
+      "missing_in_control": 24,
+      "missing_in_repo": 8,
       "orphaned_wrapper": 2
     }
   }

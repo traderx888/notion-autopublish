@@ -13,6 +13,7 @@ Headless (after session established):
 Specific dashboard:
     python scrape_deepvue.py --dashboard market_overview
     python scrape_deepvue.py --dashboard preopen
+    python scrape_deepvue.py --dashboard capscreen
 """
 
 import argparse
@@ -26,7 +27,7 @@ def main():
         help="Run in headless mode (requires existing session)",
     )
     parser.add_argument(
-        "--dashboard", choices=["market_overview", "preopen", "all"],
+        "--dashboard", choices=["market_overview", "preopen", "capscreen", "all"],
         default="all",
         help="Which dashboard to capture (default: all)",
     )
@@ -55,6 +56,10 @@ def main():
                 print(f"  Top movers: {len(data['movers'])}")
                 for m in data["movers"][:5]:
                     print(f"    {m}")
+            if data.get("tickers"):
+                print(f"  Tickers: {len(data['tickers'])}")
+                for t in data["tickers"][:10]:
+                    print(f"    {t}")
 
     print("\nDone!")
     return 0

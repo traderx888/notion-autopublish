@@ -11,6 +11,24 @@ flowchart LR
         N_sector_heatmap["Sector Heatmap
 15:30 HKT
 Sector screenshot flow and heatmap capture"]
+        N_commodity_live_overlay_0945["Commodity Model - Live Overlay Report
+09:45 HKT
+Fresh gold, silver, copper, and DXY live-overlay summary"]
+        N_commodity_live_overlay_2145["Commodity Model - Live Overlay Report
+21:45 HKT
+Fresh gold, silver, copper, and DXY live-overlay summary"]
+        N_cross_asset_momentum_0905["Cross-Asset Momentum (1D)
+09:05 HKT
+One-day momentum snapshot across equity, dollar, gold, crypto, and vol proxies"]
+        N_cross_asset_momentum_1145["Cross-Asset Momentum (1D)
+11:45 HKT
+One-day momentum snapshot across equity, dollar, gold, crypto, and vol proxies"]
+        N_cross_asset_momentum_1545["Cross-Asset Momentum (1D)
+15:45 HKT
+One-day momentum snapshot across equity, dollar, gold, crypto, and vol proxies"]
+        N_cross_asset_momentum_2100["Cross-Asset Momentum (1D)
+21:00 HKT
+One-day momentum snapshot across equity, dollar, gold, crypto, and vol proxies"]
         N_morning_digest["Morning Digest
 07:00 HKT
 Morning synthesis across core sources"]
@@ -29,12 +47,21 @@ Pre-Market Crypto ETF cash flow summary"]
         N_crypto_etf_flow_mid["Crypto ETF Flow (Mid)
 11:50 HKT
 Midday Crypto ETF cash flow update"]
+        N_crypto_news_1000["Crypto Daily News
+10:00 HKT
+Top 8 Chinese + English crypto headlines"]
         N_crypto_news_daily["Crypto Daily News
 11:00 HKT
+Top 8 Chinese + English crypto headlines"]
+        N_crypto_news_1140["Crypto Daily News
+11:40 HKT
 Top 8 Chinese + English crypto headlines"]
         N_deepvue_dashboard["DeepVue Dashboard
 15:30 HKT
 DeepVue market overview and screen brief"]
+        N_southbound_1230["Southbound Flow
+12:30 HKT
+Midday Southbound screenshot and screen brief"]
         N_southbound["Southbound Flow
 15:30 HKT
 Southbound screenshot and screen brief"]
@@ -50,6 +77,9 @@ run_excel_sync.bat"]
         N_futu_signals["Futu HSI Options Signals
 09:45 HKT
 Real-time HSI options signals after market open"]
+        N_gdrive_breadth_regime_2045["GDrive Breadth & Regime Snapshot
+20:45 HKT
+Breadth, stage, regime, and factor snapshot from the daily GDrive recap"]
         N_georisk["GeoRisk Update
 20:00 HKT
 Geopolitics risk monitor and Telegram update"]
@@ -77,12 +107,12 @@ Light controller run"]
         N_jarvis_light_2230["JARVIS Light 22:30
 22:30 HKT
 Light controller run"]
-        N_excel["Excel Reminder
-10:00 HKT
-Manual Excel and data reminder"]
         N_story_1030["Market Storyteller
 10:30 HKT
 Narrative market summary from storyteller model"]
+        N_newsletter["Newsletter
+11:00 HKT
+Generate newsletter, publish site, and send the live link to Telegram"]
         N_fundman_telegram_ops_listener["Fundman Telegram Ops Listener
 00:01 HKT
 Telegram operations listener"]
@@ -95,12 +125,21 @@ Expiring options contracts and Dash earnings reminder"]
         N_options_earnings_2330["Options & Earnings Alert (23:30)
 23:30 HKT
 Expiring options contracts and Dash earnings reminder"]
+        N_jarvis_cot_refresh["JARVIS-COT-refresh
+08:00 HKT
+run_cot_refresh.bat"]
+        N_ciovacco_weekly_feed["Ciovacco-Weekly-Feed
+14:00 HKT
+run_ciovacco_weekly.bat"]
         N_polymarket["JARVIS-Reminder-polymarket
 20:05 HKT
 run_daily_reminder.bat polymarket"]
         N_blp_pdf_title_pipeline["BLP-PDF-Title-Pipeline
 22:15 HKT
 run_blp_title_pipeline.bat --folder 'C:\blp\data' --retag-all"]
+        N_jarvis_polymarketmonitor["Jarvis-PolymarketMonitor
+n/a
+run_polymarket_monitor.bat"]
         N_p_model_check["P-model Check
 05:00 HKT
 Pre-market PAM / P-model signal check"]
@@ -110,9 +149,6 @@ Portfolio actions vs model signals"]
         N_jarvis_portfolio_pm["JARVIS Portfolio Commentary (PM)
 20:30 HKT
 Portfolio actions vs model signals"]
-        N_model_update_checker["Model Update Checker (2h)
-Every 2h 05:00-23:00 HKT
-H-Model + P-Model change detection and Telegram alert"]
     end
     subgraph REPO_ONLY["Repo-defined / Not Currently Scheduled"]
         N_jarvis_light["Jarvis Light
@@ -121,9 +157,6 @@ run_light.bat"]
         N_scrape_cw["Scrape Cw
 10:00 HKT
 daily_reminders.py --task scrape_cw"]
-        N_newsletter["Newsletter
-11:00 HKT
-daily_reminders.py --task newsletter"]
         N_northbound["Northbound
 15:30 HKT
 daily_reminders.py --task northbound"]
@@ -146,19 +179,29 @@ Consolidated portfolio monitor digest"]
 Hourly cross-repo Telegram digest"]
     end
     N_sector_heatmap --> TG
+    N_commodity_live_overlay_0945 --> TG
+    N_commodity_live_overlay_2145 --> TG
+    N_cross_asset_momentum_0905 --> TG
+    N_cross_asset_momentum_1145 --> TG
+    N_cross_asset_momentum_1545 --> TG
+    N_cross_asset_momentum_2100 --> TG
     N_morning_digest --> TG
     N_daily_synthesis --> TG
     N_evening_digest --> TG
     N_night_digest --> TG
     N_crypto_etf_flow_am --> TG
     N_crypto_etf_flow_mid --> TG
+    N_crypto_news_1000 --> TG
     N_crypto_news_daily --> TG
+    N_crypto_news_1140 --> TG
     N_deepvue_dashboard --> TG
+    N_southbound_1230 --> TG
     N_southbound --> TG
     N_jarvis_excel_sync_am --> TG
     N_jarvis_excel_sync_pm --> TG
     N_jarvis_excel_sync_late --> TG
     N_futu_signals --> TG
+    N_gdrive_breadth_regime_2045 --> TG
     N_georisk --> TG
     N_jarvis_cbbc_tracker_am --> TG
     N_friday_options --> TG
@@ -168,21 +211,22 @@ Hourly cross-repo Telegram digest"]
     N_jarvis_light_0950 --> TG
     N_jarvis_light_2100 --> TG
     N_jarvis_light_2230 --> TG
-    N_excel --> TG
     N_story_1030 --> TG
+    N_newsletter --> TG
     N_fundman_telegram_ops_listener --> TG
     N_schedule_audit --> TG
     N_options_earnings_2100 --> TG
     N_options_earnings_2330 --> TG
+    N_jarvis_cot_refresh --> TG
+    N_ciovacco_weekly_feed --> TG
     N_polymarket --> TG
     N_blp_pdf_title_pipeline --> TG
+    N_jarvis_polymarketmonitor --> TG
     N_p_model_check --> TG
     N_jarvis_portfolio_am --> TG
     N_jarvis_portfolio_pm --> TG
-    N_model_update_checker --> TG
     N_jarvis_light --> TG
     N_scrape_cw --> TG
-    N_newsletter --> TG
     N_northbound --> TG
     N_scrape_p_model --> TG
     N_scrape_all --> TG
@@ -200,19 +244,29 @@ Hourly cross-repo Telegram digest"]
 ## Live Scheduler Tasks
 
 - `15:30 HKT` | **Sector Heatmap** | Sector screenshot flow and heatmap capture | `run_sector_screenshots.bat`
+- `09:45 HKT` | **Commodity Model - Live Overlay Report** | Fresh gold, silver, copper, and DXY live-overlay summary | `run_commodity_live_overlay_report.bat 0945`
+- `21:45 HKT` | **Commodity Model - Live Overlay Report** | Fresh gold, silver, copper, and DXY live-overlay summary | `run_commodity_live_overlay_report.bat 2145`
+- `09:05 HKT` | **Cross-Asset Momentum (1D)** | One-day momentum snapshot across equity, dollar, gold, crypto, and vol proxies | `run_cross_asset_momentum.bat 0905`
+- `11:45 HKT` | **Cross-Asset Momentum (1D)** | One-day momentum snapshot across equity, dollar, gold, crypto, and vol proxies | `run_cross_asset_momentum.bat 1145`
+- `15:45 HKT` | **Cross-Asset Momentum (1D)** | One-day momentum snapshot across equity, dollar, gold, crypto, and vol proxies | `run_cross_asset_momentum.bat 1545`
+- `21:00 HKT` | **Cross-Asset Momentum (1D)** | One-day momentum snapshot across equity, dollar, gold, crypto, and vol proxies | `run_cross_asset_momentum.bat 2100`
 - `07:00 HKT` | **Morning Digest** | Morning synthesis across core sources | `daily_reminders.py --task morning_digest`
 - `19:00 HKT` | **Daily Synthesis** | Evening multi-source synthesis update | `daily_reminders.py --task daily_synthesis`
 - `21:00 HKT` | **Evening Digest** | Evening synthesis across core sources | `daily_reminders.py --task evening_digest`
 - `23:30 HKT` | **Night Digest** | Late-night synthesis across core sources | `daily_reminders.py --task night_digest`
 - `09:00 HKT` | **Crypto ETF Flow (AM)** | Pre-Market Crypto ETF cash flow summary | `run_crypto_etf_flows.bat morning`
 - `11:50 HKT` | **Crypto ETF Flow (Mid)** | Midday Crypto ETF cash flow update | `run_crypto_etf_flows.bat midday`
+- `10:00 HKT` | **Crypto Daily News** | Top 8 Chinese + English crypto headlines | `run_crypto_news.bat 1000`
 - `11:00 HKT` | **Crypto Daily News** | Top 8 Chinese + English crypto headlines | `run_crypto_news.bat`
+- `11:40 HKT` | **Crypto Daily News** | Top 8 Chinese + English crypto headlines | `run_crypto_news.bat 1140`
 - `15:30 HKT` | **DeepVue Dashboard** | DeepVue market overview and screen brief | `run_deepvue_dashboard.bat`
+- `12:30 HKT` | **Southbound Flow** | Midday Southbound screenshot and screen brief | `daily_reminders.py --task southbound_1230`
 - `15:30 HKT` | **Southbound Flow** | Southbound screenshot and screen brief | `daily_reminders.py --task southbound`
 - `10:30 HKT` | **Jarvis Excel Sync AM** | Excel sync workflow | `run_excel_sync.bat`
 - `21:00 HKT` | **Jarvis Excel Sync PM** | Excel sync workflow | `run_excel_sync.bat`
 - `23:50 HKT` | **Jarvis Excel Sync Late** | run_excel_sync.bat | `run_excel_sync.bat`
 - `09:45 HKT` | **Futu HSI Options Signals** | Real-time HSI options signals after market open | `run_futu_signals.bat`
+- `20:45 HKT` | **GDrive Breadth & Regime Snapshot** | Breadth, stage, regime, and factor snapshot from the daily GDrive recap | `run_gdrive_breadth_regime_snapshot.bat`
 - `20:00 HKT` | **GeoRisk Update** | Geopolitics risk monitor and Telegram update | `daily_reminders.py --task georisk`
 - `09:00 HKT` | **HK CBBC Tracker (牛熊證)** | SG Warrants bull/bear distribution | `send_cbbc_tracker.py`
 - `17:00 HKT` | **HSI Options Daily Check** | End-of-day HSI options volume and put/call anomaly check | `run_friday_options.bat`
@@ -222,24 +276,25 @@ Hourly cross-repo Telegram digest"]
 - `09:50 HKT` | **JARVIS Light 09:50** | Light controller run | `run_light.bat`
 - `21:00 HKT` | **JARVIS Light 21:00** | Light controller run | `run_light.bat`
 - `22:30 HKT` | **JARVIS Light 22:30** | Light controller run | `run_light.bat`
-- `10:00 HKT` | **Excel Reminder** | Manual Excel and data reminder | `daily_reminders.py --task excel`
 - `10:30 HKT` | **Market Storyteller** | Narrative market summary from storyteller model | `run_daily_reminder.bat story_1030`
+- `11:00 HKT` | **Newsletter** | Generate newsletter, publish site, and send the live link to Telegram | `daily_reminders.py --task newsletter`
 - `00:01 HKT` | **Fundman Telegram Ops Listener** | Telegram operations listener | `start_ops_listener.bat`
 - `06:15 HKT` | **Telegram Schedule Audit** | Cross-repo Telegram schedule drift audit | `run_schedule_audit.bat`
 - `21:00 HKT` | **Options & Earnings Alert (21:00)** | Expiring options contracts and Dash earnings reminder | `run_options_expiry.bat`
 - `23:30 HKT` | **Options & Earnings Alert (23:30)** | Expiring options contracts and Dash earnings reminder | `run_options_expiry.bat`
+- `08:00 HKT` | **JARVIS-COT-refresh** | run_cot_refresh.bat | `run_cot_refresh.bat`
+- `14:00 HKT` | **Ciovacco-Weekly-Feed** | run_ciovacco_weekly.bat | `run_ciovacco_weekly.bat`
 - `20:05 HKT` | **JARVIS-Reminder-polymarket** | run_daily_reminder.bat polymarket | `run_daily_reminder.bat polymarket`
 - `22:15 HKT` | **BLP-PDF-Title-Pipeline** | run_blp_title_pipeline.bat --folder "C:\blp\data" --retag-all | `run_blp_title_pipeline.bat --folder "C:\blp\data" --retag-all`
+- `n/a` | **Jarvis-PolymarketMonitor** | run_polymarket_monitor.bat | `run_polymarket_monitor.bat`
 - `05:00 HKT` | **P-model Check** | Pre-market PAM / P-model signal check | `daily_reminders.py --task pam_check`
 - `09:00 HKT` | **JARVIS Portfolio Commentary (AM)** | Portfolio actions vs model signals | `run_portfolio_commentary.bat`
 - `20:30 HKT` | **JARVIS Portfolio Commentary (PM)** | Portfolio actions vs model signals | `run_portfolio_commentary.bat`
-- `Every 2h` | **Model Update Checker** | H-Model + P-Model change detection and Telegram alert | `run_check_model_updates.bat`
 
 ## Repo-defined / Not Currently Scheduled
 
 - `n/a` | **Jarvis Light** | run_light.bat | `run_light.bat`
 - `10:00 HKT` | **Scrape Cw** | daily_reminders.py --task scrape_cw | `daily_reminders.py --task scrape_cw`
-- `11:00 HKT` | **Newsletter** | daily_reminders.py --task newsletter | `daily_reminders.py --task newsletter`
 - `15:30 HKT` | **Northbound** | daily_reminders.py --task northbound | `daily_reminders.py --task northbound`
 - `20:00 HKT` | **Scrape P Model** | daily_reminders.py --task scrape_p_model | `daily_reminders.py --task scrape_p_model`
 - `22:00 HKT` | **Scrape All** | daily_reminders.py --task scrape_all | `daily_reminders.py --task scrape_all`
@@ -255,19 +310,29 @@ Hourly cross-repo Telegram digest"]
 | State | Time (HKT) | Display Name | Task Key | Source / Model | Runtime Path | Evidence |
 |---|---|---|---|---|---|---|
 | Live scheduler | 15:30 HKT | Sector Heatmap | `sector_heatmap` | Sector screenshot flow and heatmap capture | `run_sector_screenshots.bat` | Scheduler + repo |
+| Live scheduler | 09:45 HKT | Commodity Model - Live Overlay Report | `commodity_live_overlay_0945` | Fresh gold, silver, copper, and DXY live-overlay summary | `run_commodity_live_overlay_report.bat 0945` | Scheduler + repo |
+| Live scheduler | 21:45 HKT | Commodity Model - Live Overlay Report | `commodity_live_overlay_2145` | Fresh gold, silver, copper, and DXY live-overlay summary | `run_commodity_live_overlay_report.bat 2145` | Scheduler + repo |
+| Live scheduler | 09:05 HKT | Cross-Asset Momentum (1D) | `cross_asset_momentum_0905` | One-day momentum snapshot across equity, dollar, gold, crypto, and vol proxies | `run_cross_asset_momentum.bat 0905` | Scheduler + repo |
+| Live scheduler | 11:45 HKT | Cross-Asset Momentum (1D) | `cross_asset_momentum_1145` | One-day momentum snapshot across equity, dollar, gold, crypto, and vol proxies | `run_cross_asset_momentum.bat 1145` | Scheduler + repo |
+| Live scheduler | 15:45 HKT | Cross-Asset Momentum (1D) | `cross_asset_momentum_1545` | One-day momentum snapshot across equity, dollar, gold, crypto, and vol proxies | `run_cross_asset_momentum.bat 1545` | Scheduler + repo |
+| Live scheduler | 21:00 HKT | Cross-Asset Momentum (1D) | `cross_asset_momentum_2100` | One-day momentum snapshot across equity, dollar, gold, crypto, and vol proxies | `run_cross_asset_momentum.bat 2100` | Scheduler + repo |
 | Live scheduler | 07:00 HKT | Morning Digest | `morning_digest` | Morning synthesis across core sources | `daily_reminders.py --task morning_digest` | Scheduler + repo |
 | Live scheduler | 19:00 HKT | Daily Synthesis | `daily_synthesis` | Evening multi-source synthesis update | `daily_reminders.py --task daily_synthesis` | Scheduler + repo |
 | Live scheduler | 21:00 HKT | Evening Digest | `evening_digest` | Evening synthesis across core sources | `daily_reminders.py --task evening_digest` | Scheduler + repo |
 | Live scheduler | 23:30 HKT | Night Digest | `night_digest` | Late-night synthesis across core sources | `daily_reminders.py --task night_digest` | Scheduler + repo |
 | Live scheduler | 09:00 HKT | Crypto ETF Flow (AM) | `crypto_etf_flow_am` | Pre-Market Crypto ETF cash flow summary | `run_crypto_etf_flows.bat morning` | Scheduler + repo |
 | Live scheduler | 11:50 HKT | Crypto ETF Flow (Mid) | `crypto_etf_flow_mid` | Midday Crypto ETF cash flow update | `run_crypto_etf_flows.bat midday` | Scheduler + repo |
+| Live scheduler | 10:00 HKT | Crypto Daily News | `crypto_news_1000` | Top 8 Chinese + English crypto headlines | `run_crypto_news.bat 1000` | Scheduler + repo |
 | Live scheduler | 11:00 HKT | Crypto Daily News | `crypto_news_daily` | Top 8 Chinese + English crypto headlines | `run_crypto_news.bat` | Scheduler + repo |
+| Live scheduler | 11:40 HKT | Crypto Daily News | `crypto_news_1140` | Top 8 Chinese + English crypto headlines | `run_crypto_news.bat 1140` | Scheduler + repo |
 | Live scheduler | 15:30 HKT | DeepVue Dashboard | `deepvue_dashboard` | DeepVue market overview and screen brief | `run_deepvue_dashboard.bat` | Scheduler + repo |
+| Live scheduler | 12:30 HKT | Southbound Flow | `southbound_1230` | Midday Southbound screenshot and screen brief | `daily_reminders.py --task southbound_1230` | Scheduler + repo |
 | Live scheduler | 15:30 HKT | Southbound Flow | `southbound` | Southbound screenshot and screen brief | `daily_reminders.py --task southbound` | Scheduler + repo |
 | Live scheduler | 10:30 HKT | Jarvis Excel Sync AM | `jarvis_excel_sync_am` | Excel sync workflow | `run_excel_sync.bat` | Scheduler + repo |
 | Live scheduler | 21:00 HKT | Jarvis Excel Sync PM | `jarvis_excel_sync_pm` | Excel sync workflow | `run_excel_sync.bat` | Scheduler + repo |
 | Live scheduler | 23:50 HKT | Jarvis Excel Sync Late | `jarvis_excel_sync_late` | run_excel_sync.bat | `run_excel_sync.bat` | Scheduler + repo |
 | Live scheduler | 09:45 HKT | Futu HSI Options Signals | `futu_signals` | Real-time HSI options signals after market open | `run_futu_signals.bat` | Scheduler + repo |
+| Live scheduler | 20:45 HKT | GDrive Breadth &amp; Regime Snapshot | `gdrive_breadth_regime_2045` | Breadth, stage, regime, and factor snapshot from the daily GDrive recap | `run_gdrive_breadth_regime_snapshot.bat` | Scheduler + repo |
 | Live scheduler | 20:00 HKT | GeoRisk Update | `georisk` | Geopolitics risk monitor and Telegram update | `daily_reminders.py --task georisk` | Scheduler + repo |
 | Live scheduler | 09:00 HKT | HK CBBC Tracker (牛熊證) | `jarvis_cbbc_tracker_am` | SG Warrants bull/bear distribution | `send_cbbc_tracker.py` | Scheduler + repo |
 | Live scheduler | 17:00 HKT | HSI Options Daily Check | `friday_options` | End-of-day HSI options volume and put/call anomaly check | `run_friday_options.bat` | Scheduler + repo |
@@ -277,21 +342,22 @@ Hourly cross-repo Telegram digest"]
 | Live scheduler | 09:50 HKT | JARVIS Light 09:50 | `jarvis_light_0950` | Light controller run | `run_light.bat` | Scheduler + repo |
 | Live scheduler | 21:00 HKT | JARVIS Light 21:00 | `jarvis_light_2100` | Light controller run | `run_light.bat` | Scheduler + repo |
 | Live scheduler | 22:30 HKT | JARVIS Light 22:30 | `jarvis_light_2230` | Light controller run | `run_light.bat` | Scheduler + repo |
-| Live scheduler | 10:00 HKT | Excel Reminder | `excel` | Manual Excel and data reminder | `daily_reminders.py --task excel` | Scheduler + repo |
 | Live scheduler | 10:30 HKT | Market Storyteller | `story_1030` | Narrative market summary from storyteller model | `run_daily_reminder.bat story_1030` | Scheduler + repo |
+| Live scheduler | 11:00 HKT | Newsletter | `newsletter` | Generate newsletter, publish site, and send the live link to Telegram | `daily_reminders.py --task newsletter` | Scheduler + repo |
 | Live scheduler | 00:01 HKT | Fundman Telegram Ops Listener | `fundman_telegram_ops_listener` | Telegram operations listener | `start_ops_listener.bat` | Scheduler + repo |
 | Live scheduler | 06:15 HKT | Telegram Schedule Audit | `schedule_audit` | Cross-repo Telegram schedule drift audit | `run_schedule_audit.bat` | Scheduler + repo |
 | Live scheduler | 21:00 HKT | Options &amp; Earnings Alert (21:00) | `options_earnings_2100` | Expiring options contracts and Dash earnings reminder | `run_options_expiry.bat` | Scheduler + repo |
 | Live scheduler | 23:30 HKT | Options &amp; Earnings Alert (23:30) | `options_earnings_2330` | Expiring options contracts and Dash earnings reminder | `run_options_expiry.bat` | Scheduler + repo |
+| Live scheduler | 08:00 HKT | JARVIS-COT-refresh | `jarvis_cot_refresh` | run_cot_refresh.bat | `run_cot_refresh.bat` | Scheduler + repo |
+| Live scheduler | 14:00 HKT | Ciovacco-Weekly-Feed | `ciovacco_weekly_feed` | run_ciovacco_weekly.bat | `run_ciovacco_weekly.bat` | Scheduler + repo |
 | Live scheduler | 20:05 HKT | JARVIS-Reminder-polymarket | `polymarket` | run_daily_reminder.bat polymarket | `run_daily_reminder.bat polymarket` | Scheduler + repo |
 | Live scheduler | 22:15 HKT | BLP-PDF-Title-Pipeline | `blp_pdf_title_pipeline` | run_blp_title_pipeline.bat --folder &quot;C:\blp\data&quot; --retag-all | `run_blp_title_pipeline.bat --folder "C:\blp\data" --retag-all` | Scheduler + repo |
+| Live scheduler | n/a | Jarvis-PolymarketMonitor | `jarvis_polymarketmonitor` | run_polymarket_monitor.bat | `run_polymarket_monitor.bat` | Scheduler + repo |
 | Live scheduler | 05:00 HKT | P-model Check | `p_model_check` | Pre-market PAM / P-model signal check | `daily_reminders.py --task pam_check` | Scheduler + repo |
 | Live scheduler | 09:00 HKT | JARVIS Portfolio Commentary (AM) | `jarvis_portfolio_am` | Portfolio actions vs model signals | `run_portfolio_commentary.bat` | Scheduler + repo |
 | Live scheduler | 20:30 HKT | JARVIS Portfolio Commentary (PM) | `jarvis_portfolio_pm` | Portfolio actions vs model signals | `run_portfolio_commentary.bat` | Scheduler + repo |
-| Live scheduler | Every 2h | Model Update Checker | `model_update_checker` | H-Model + P-Model change detection and Telegram alert | `run_check_model_updates.bat` | Scheduler + repo |
 | Repo only | n/a | Jarvis Light | `jarvis_light` | run_light.bat | `run_light.bat` | Repo only |
 | Repo only | 10:00 HKT | Scrape Cw | `scrape_cw` | daily_reminders.py --task scrape_cw | `daily_reminders.py --task scrape_cw` | Repo only |
-| Repo only | 11:00 HKT | Newsletter | `newsletter` | daily_reminders.py --task newsletter | `daily_reminders.py --task newsletter` | Repo only |
 | Repo only | 15:30 HKT | Northbound | `northbound` | daily_reminders.py --task northbound | `daily_reminders.py --task northbound` | Repo only |
 | Repo only | 20:00 HKT | Scrape P Model | `scrape_p_model` | daily_reminders.py --task scrape_p_model | `daily_reminders.py --task scrape_p_model` | Repo only |
 | Repo only | 22:00 HKT | Scrape All | `scrape_all` | daily_reminders.py --task scrape_all | `daily_reminders.py --task scrape_all` | Repo only |

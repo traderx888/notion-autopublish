@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>彭博研究摘要 #14 — 金屬</title>
+<title>彭博研究摘要 #14 — 鋁業盈利創新高與供應鏈重塑</title>
 <style>
   :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --accent: #58a6ff;
           --green: #3fb950; --red: #f85149; --yellow: #d29922; --text: #c9d1d9; --muted: #8b949e;
@@ -32,10 +32,26 @@
   .tag-misc  { background: rgba(139,148,158,0.15); color: var(--muted); }
   .section { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 16px; }
   .section h2 { color: #fff; font-size: 1.15em; margin-bottom: 12px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+  .section h3 { color: var(--accent); font-size: 0.95em; margin: 14px 0 6px; }
   .article { margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid rgba(48,54,61,0.5); }
   .article:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
   .article-title { color: #fff; font-weight: 700; font-size: 0.95em; margin-bottom: 4px; }
+  .article-title-cn { color: var(--muted); font-size: 0.85em; margin-bottom: 8px; }
   .article p { font-size: 0.9em; margin: 6px 0; }
+  .data-point { background: rgba(255,255,255,0.03); padding: 8px 12px; border-radius: 6px; margin: 8px 0; font-size: 0.85em; }
+  .data-point .num { color: #fff; font-weight: 700; }
+  .implication { background: rgba(88,166,255,0.06); border-left: 3px solid var(--accent); padding: 10px 14px; margin: 10px 0; border-radius: 0 6px 6px 0; font-size: 0.88em; }
+  .implication .label { color: var(--accent); font-weight: 700; font-size: 0.8em; text-transform: uppercase; margin-bottom: 4px; }
+  .callout { background: rgba(210,153,34,0.08); border: 1px solid rgba(210,153,34,0.3); border-radius: 6px; padding: 16px; margin: 16px 0; }
+  .callout-title { color: var(--yellow); font-weight: 700; font-size: 0.95em; margin-bottom: 8px; }
+  .callout ul { padding-left: 18px; }
+  .callout li { margin: 4px 0; font-size: 0.88em; }
+  ul { padding-left: 18px; }
+  li { margin: 3px 0; font-size: 0.88em; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(255,255,255,0.03); padding: 12px; border-radius: 6px; text-align: center; }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: #fff; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
   .toc { background: rgba(88,166,255,0.05); border: 1px solid rgba(88,166,255,0.2); border-radius: 8px; padding: 16px 20px; margin-bottom: 20px; }
   .toc-title { color: var(--accent); font-weight: 700; font-size: 0.9em; margin-bottom: 8px; }
   .toc a { color: var(--accent); text-decoration: none; font-size: 0.88em; }
@@ -55,7 +71,7 @@
 <body>
 
 <h1>彭博研究摘要</h1>
-<p class="subtitle">第14期 — 金屬 | Metals</p>
+<p class="subtitle">第14期 | 鋁業盈利創新高與供應鏈重塑</p>
 <span class="issue-badge">2026年三月下旬更新</span>
 
 <div class="nav-links">
@@ -63,39 +79,85 @@
   <span><a href="student.html">返回目錄 &rarr;</a></span>
 </div>
 
-<div class="stat-grid">
-    <div class="stat"><div class="val">4</div><div class="lbl">金屬<br>Metals</div></div>
-</div>
-
 <div class="toc">
   <div class="toc-title">目錄</div>
   <ol>
-    <li><a href="#metals">金屬 Metals &rarr;</a></li>
+    <li><a href="#aluminum-outlook">鋁業 供需收窄，估值仍有空間</a></li>
+    <li><a href="#china-aluminum-profit">中國鋁業 噸利潤近萬元，成本端持續改善</a></li>
+    <li><a href="#bauxite-supply">鋁土礦 幾內亞擴產推動供給過剩</a></li>
+    <li><a href="#takeaways">基金經理人重點摘要</a></li>
   </ol>
 </div>
 
-<div class="section" id="metals">
-  <h2><span class="tag tag-metals">金屬</span> Metals (4 articles)</h2>
-  <div class="article">
-    <div class="article-title">2026 Outlook Global Aluminum Producers</div>
-    <div style="margin-bottom:6px"><span class="tag tag-metals">金屬</span> </div>
-    <p>**Source:** Bloomberg **Converted:** 2026-03-26T15:52:49+08:00</p>
+<div class="section" id="aluminum-outlook">
+  <h2><span class="tag tag-misc">鋁業</span> 供需收窄，估值仍有空間</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--orange)">$2,540/噸</div><div class="lbl">2026年LME鋁價
+預測（跌2%）</div></div>
+    <div class="stat"><div class="val">7.4x</div><div class="lbl">全球鋁企EV/Ebitda
+（五年均值5.9x）</div></div>
+    <div class="stat"><div class="val" style="color:var(--green)">+52.6%</div><div class="lbl">鋁企股價
+前11月平均漲幅</div></div>
   </div>
+
   <div class="article">
-    <div class="article-title">China Aluminum Unit Profit to Stay Robust Despite Holiday Lull</div>
-    <div style="margin-bottom:6px"><span class="tag tag-metals">金屬</span> <span class="tag tag-china">中國</span> </div>
-    <p># China Aluminum Unit Profit to Stay Robust Despite Holiday Lull</p>
+    <div class="article-title">全球鋁業2026展望 — 供需缺口收窄，估值仍低於大盤</div>
+    <p>全球鋁市場預計2026年需求增長將落後於供應，<span style="color:#fff;font-weight:700">市場缺口將收窄</span>。中國產能上限將約束國內產出，而東南亞的擴產則推動供應增長。Bloomberg Intelligence預測LME鋁均價將下跌約<span style="color:#fff;font-weight:700">2%</span>至<span style="color:#fff;font-weight:700">$2,540/噸</span>。儘管如此，受盈利飆升支撐，全球鋁企股價在前11個月<span style="color:#fff;font-weight:700">平均上漲52.61%</span>，大幅跑贏MSCI ACWI指數。板塊目前交易於<span style="color:#fff;font-weight:700">7.4x EV/Ebitda</span>，雖高於五年均值5.9x，但仍遠低於MSCI ACWI的<span style="color:#fff;font-weight:700">14.3x</span>。中國宏橋以<span style="color:#fff;font-weight:700">151%</span>的漲幅領跑同業，但即便經歷配股折價後回調8.6%，其PE仍低於國內同業，估值折讓明顯。</p>
+    <div class="data-point">LME鋁價前11月漲幅：<span style="color:#fff;font-weight:700">+9%</span> &nbsp;|&nbsp; 氧化鋁價格跌幅：<span style="color:#fff;font-weight:700">-50%</span> &nbsp;|&nbsp; 中國宏橋股價漲幅：<span style="color:#fff;font-weight:700">+151%</span> &nbsp;|&nbsp; MSCI ACWI EV/Ebitda：<span style="color:#fff;font-weight:700">14.3x</span></div>
+    <div class="implication"><div class="label">投資啟示</div>鋁企盈利擴張驅動估值重估仍未結束。<span style="color:#fff;font-weight:700">關注中國宏橋的估值折讓修復機會</span>，氧化鋁持續過剩壓低成本端是核心利好。</div>
   </div>
+</div>
+
+<div class="section" id="china-aluminum-profit">
+  <h2><span class="tag tag-misc">中國鋁業</span> 噸利潤近萬元，成本端持續改善</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--green)">¥8,234</div><div class="lbl">1月噸利潤（元）
+歷史新高</div></div>
+    <div class="stat"><div class="val" style="color:var(--green)">¥7,678</div><div class="lbl">2月噸利潤（元）
+同比+82%</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">41.9%</div><div class="lbl">鋁型材開工率
+1月（季節性低位）</div></div>
+  </div>
+
   <div class="article">
-    <div class="article-title">Global Bauxite Market Can Shift to Surplus on Massive Expansion</div>
-    <div style="margin-bottom:6px"><span class="tag tag-metals">金屬</span> </div>
-    <p># Global Bauxite Market Can Shift to Surplus on Massive Expansion</p>
+    <div class="article-title">中國鋁企噸利潤維持高位 — 春節淡季難撼盈利韌性</div>
+    <p>中國鋁冶煉企業盈利正處於歷史高位附近。2月噸利潤達<span style="color:#fff;font-weight:700">7,678元</span>，同比大漲<span style="color:#fff;font-weight:700">82%</span>，雖較1月創紀錄的<span style="color:#fff;font-weight:700">8,234元</span>略有回落，但主因是春節淡季效應。成本端持續改善是核心支撐：氧化鋁及其他投入成本的下降有效對沖了金屬價格的回落，單位生產成本預計維持在<span style="color:#fff;font-weight:700">15,700-16,100元</span>區間。電力成本因旱季上升至佔比<span style="color:#fff;font-weight:700">37%</span>，但2月後料將企穩。值得注意的是，1月全行業<span style="color:#fff;font-weight:700">100%產能均處於盈利狀態</span>。需求端，鋁型材開工率降至<span style="color:#fff;font-weight:700">41.9%</span>，其中建築用途僅<span style="color:#fff;font-weight:700">33.5%</span>，但汽車板材以<span style="color:#fff;font-weight:700">70.2%</span>的開工率領跑下游。</p>
+    <div class="data-point">鋁價區間：<span style="color:#fff;font-weight:700">22,800-24,200元/噸</span> &nbsp;|&nbsp; LME現貨：<span style="color:#fff;font-weight:700">&gt;$3,000/噸</span> &nbsp;|&nbsp; 電力成本佔比：<span style="color:#fff;font-weight:700">37%</span> &nbsp;|&nbsp; 汽車板材開工率：<span style="color:#fff;font-weight:700">70.2%</span></div>
+    <div class="implication"><div class="label">投資啟示</div>成本端紅利仍在釋放，<span style="color:#fff;font-weight:700">鋁企利潤韌性超預期</span>。汽車用鋁需求結構性增長，<span style="color:#fff;font-weight:700">關注汽車板材相關鋁加工企業</span>。</div>
   </div>
+</div>
+
+<div class="section" id="bauxite-supply">
+  <h2><span class="tag tag-misc">鋁土礦</span> 幾內亞擴產推動供給過剩</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val">3.98億噸</div><div class="lbl">2026全球鋁土礦
+產量預測（+4.4%）</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">-45%</div><div class="lbl">幾內亞鋁土礦
+1月進口價跌幅</div></div>
+    <div class="stat"><div class="val">1.8億噸</div><div class="lbl">幾內亞2027年
+產量目標</div></div>
+  </div>
+
   <div class="article">
-    <div class="article-title">Precious Comment Raising Our Gold Price Forecast on Sticky Hedges</div>
-    <div style="margin-bottom:6px"><span class="tag tag-metals">金屬</span> </div>
-    <p># Precious Comment Raising Our Gold Price Forecast on Sticky Hedges</p>
+    <div class="article-title">全球鋁土礦市場轉為過剩 — 幾內亞與印度擴產主導</div>
+    <p>全球鋁土礦市場正從短缺轉向過剩。2026年產量預計增長<span style="color:#fff;font-weight:700">4.4%</span>至<span style="color:#fff;font-weight:700">3.98億噸</span>，主要由幾內亞和印度的擴產驅動，而需求增長僅<span style="color:#fff;font-weight:700">2.9%</span>。過剩局面在2027年料將進一步擴大：Rio Tinto計劃將Weipa產量翻倍至<span style="color:#fff;font-weight:700">4,300萬噸</span>，印尼產量可增加<span style="color:#fff;font-weight:700">1,000萬噸</span>至2,920萬噸以支撐新建氧化鋁廠。中國1月幾內亞鋁土礦進口均價暴跌<span style="color:#fff;font-weight:700">45%</span>至<span style="color:#fff;font-weight:700">$64.18/噸</span>，反映庫存充裕。中國對幾內亞的依賴將進一步加深——中鋁Boffa二期目標2027年產能達<span style="color:#fff;font-weight:700">3,000萬噸</span>，SMB計劃2026年底增產<span style="color:#fff;font-weight:700">1,000萬噸</span>。但幾內亞面臨勞工罷工頻繁、電網覆蓋僅<span style="color:#fff;font-weight:700">34%</span>及運輸瓶頸等營運風險，5-10月雨季亦將階段性收緊供應。</p>
+    <div class="data-point">幾內亞佔全球產量：<span style="color:#fff;font-weight:700">~1/3</span> &nbsp;|&nbsp; 中鋁Boffa二期目標：<span style="color:#fff;font-weight:700">3,000萬噸（2027年）</span> &nbsp;|&nbsp; SMB增產計劃：<span style="color:#fff;font-weight:700">+1,000萬噸</span> &nbsp;|&nbsp; 印尼新增需求：<span style="color:#fff;font-weight:700">2,000萬噸/年</span></div>
+    <div class="implication"><div class="label">投資啟示</div>鋁土礦價格下行趨勢確立，<span style="color:#fff;font-weight:700">利好中下游氧化鋁及鋁冶煉企業的成本壓縮</span>。但幾內亞集中度風險上升，雨季及罷工可能帶來短期價格波動，<span style="color:#fff;font-weight:700">建議關注Q2-Q3的季節性擾動窗口</span>。</div>
   </div>
+</div>
+
+<div class="callout" id="takeaways">
+  <div class="callout-title">基金經理人重點摘要</div>
+  <ul>
+    <li><strong>鋁企估值：</strong>全球鋁企EV/Ebitda 7.4x仍低於MSCI ACWI的14.3x，盈利擴張驅動的重估尚未結束。**中國宏橋估值折讓最大**。</li>
+    <li><strong>成本紅利：</strong>氧化鋁跌50%、鋁土礦進口價跌45%，中國鋁企噸利潤維持¥7,600+歷史高位。**成本端改善是核心Alpha**。</li>
+    <li><strong>供應鏈重塑：</strong>幾內亞、印度、印尼擴產推動鋁土礦轉為過剩，2027年過剩將擴大。**做多鋁冶煉、減持上游礦企**。</li>
+    <li><strong>需求結構：</strong>建築用鋁開工率僅33.5%拖累總需求，但汽車板材70.2%開工率反映新能源車結構性需求。**聚焦汽車鋁加工標的**。</li>
+    <li><strong>風險日曆：</strong>幾內亞5-10月雨季及頻繁罷工可能短期推升鋁土礦價格，**注意Q2季節性波動**。</li>
+  </ul>
 </div>
 
 <div class="nav-links">

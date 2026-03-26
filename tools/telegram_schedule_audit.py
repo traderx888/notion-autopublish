@@ -9,7 +9,7 @@ import subprocess
 import sys
 import textwrap
 from collections import Counter
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import Any, Iterable, Sequence
 from zoneinfo import ZoneInfo
@@ -23,11 +23,15 @@ except ImportError:  # pragma: no cover - script execution fallback
 DEFAULT_ROOT = Path(r"C:\Users\User\Documents\GitHub")
 DEFAULT_REPOS = ("All-in-one", "fundman-jarvis", "notion-autopublish")
 DEFAULT_OUTPUT_REL = Path("outputs") / "ops" / "telegram_schedule_audit_latest.json"
+DEFAULT_DELIVERY_STATE_REL = Path("outputs") / "ops" / "telegram_schedule_audit_delivery_state.json"
 FLOW_DOC_REL = Path("docs") / "telegram_schedule_audit_flow.md"
 FLOW_SVG_REL = Path("docs") / "telegram_schedule_audit_flow.svg"
 FLOW_EXCALIDRAW_REL = Path("docs") / "telegram_schedule_audit_flow.excalidraw"
 HK_TZ = ZoneInfo("Asia/Hong_Kong")
 CONTROL_FILE_REL = Path("workflow") / "cross_repo_tasks.yaml"
+DEFAULT_AUDIT_TASK_NAME = "JARVIS-Reminder-schedule-audit"
+DEFAULT_AUDIT_SCHEDULE = "Mon-Fri 06:15 HKT"
+DEFAULT_AUDIT_CATCHUP_WINDOW_HOURS = 18
 KNOWN_SCHEDULER_FIELDS = (
     "Repeat: Until: Time:",
     "Repeat: Every:",
@@ -103,17 +107,17 @@ WRAPPER_TASKS = {
         "telegram_related": True,
         "command": "run_cbbc_tracker.bat",
     },
-    "run_crypto_news.bat": {
-        "task_key": "crypto_news_daily",
-        "schedule_text": "Daily 11:00 HKT",
-        "telegram_related": True,
-        "command": "run_crypto_news.bat",
-    },
     "run_portfolio_digest.bat": {
         "task_key": "portfolio_digest",
         "schedule_text": "",
         "telegram_related": True,
         "command": "run_portfolio_digest.bat",
+    },
+    "run_gdrive_breadth_regime_snapshot.bat": {
+        "task_key": "gdrive_breadth_regime_2045",
+        "schedule_text": "Mon-Fri 20:45 HKT",
+        "telegram_related": True,
+        "command": "run_gdrive_breadth_regime_snapshot.bat",
     },
 }
 SHARED_WRAPPER_INSTANCES = (
@@ -169,6 +173,69 @@ ARGUMENT_WRAPPER_INSTANCES = (
         "telegram_related": True,
         "command": "run_crypto_etf_flows.bat midday",
     },
+    {
+        "file_name": "run_crypto_news.bat",
+        "task_key": "crypto_news_daily",
+        "schedule_text": "Daily 11:00 HKT",
+        "telegram_related": True,
+        "command": "run_crypto_news.bat",
+    },
+    {
+        "file_name": "run_crypto_news.bat",
+        "task_key": "crypto_news_1000",
+        "schedule_text": "Daily 10:00 HKT",
+        "telegram_related": True,
+        "command": "run_crypto_news.bat 1000",
+    },
+    {
+        "file_name": "run_crypto_news.bat",
+        "task_key": "crypto_news_1140",
+        "schedule_text": "Daily 11:40 HKT",
+        "telegram_related": True,
+        "command": "run_crypto_news.bat 1140",
+    },
+    {
+        "file_name": "run_commodity_live_overlay_report.bat",
+        "task_key": "commodity_live_overlay_0945",
+        "schedule_text": "Mon-Fri 09:45 HKT",
+        "telegram_related": True,
+        "command": "run_commodity_live_overlay_report.bat 0945",
+    },
+    {
+        "file_name": "run_commodity_live_overlay_report.bat",
+        "task_key": "commodity_live_overlay_2145",
+        "schedule_text": "Mon-Fri 21:45 HKT",
+        "telegram_related": True,
+        "command": "run_commodity_live_overlay_report.bat 2145",
+    },
+    {
+        "file_name": "run_cross_asset_momentum.bat",
+        "task_key": "cross_asset_momentum_0905",
+        "schedule_text": "Mon-Fri 09:05 HKT",
+        "telegram_related": True,
+        "command": "run_cross_asset_momentum.bat 0905",
+    },
+    {
+        "file_name": "run_cross_asset_momentum.bat",
+        "task_key": "cross_asset_momentum_1145",
+        "schedule_text": "Mon-Fri 11:45 HKT",
+        "telegram_related": True,
+        "command": "run_cross_asset_momentum.bat 1145",
+    },
+    {
+        "file_name": "run_cross_asset_momentum.bat",
+        "task_key": "cross_asset_momentum_1545",
+        "schedule_text": "Mon-Fri 15:45 HKT",
+        "telegram_related": True,
+        "command": "run_cross_asset_momentum.bat 1545",
+    },
+    {
+        "file_name": "run_cross_asset_momentum.bat",
+        "task_key": "cross_asset_momentum_2100",
+        "schedule_text": "Mon-Fri 21:00 HKT",
+        "telegram_related": True,
+        "command": "run_cross_asset_momentum.bat 2100",
+    },
 )
 ISSUE_ORDER = (
     "missing_in_control",
@@ -220,6 +287,13 @@ CHART_METADATA = {
         "source_detail": "Southbound screenshot and screen brief",
         "default_time": "15:30 HKT",
         "runtime_entry": "daily_reminders.py --task southbound",
+    },
+    "southbound_1230": {
+        "display_name": "Southbound Flow",
+        "source_group": "Eastmoney + screen brief",
+        "source_detail": "Midday Southbound screenshot and screen brief",
+        "default_time": "12:30 HKT",
+        "runtime_entry": "daily_reminders.py --task southbound_1230",
     },
     "deepvue_dashboard": {
         "display_name": "DeepVue Dashboard",
@@ -325,6 +399,76 @@ CHART_METADATA = {
         "source_detail": "Top 8 Chinese + English crypto headlines",
         "default_time": "11:00 HKT",
         "runtime_entry": "run_crypto_news.bat",
+    },
+    "crypto_news_1000": {
+        "display_name": "Crypto Daily News",
+        "source_group": "Crypto news",
+        "source_detail": "Top 8 Chinese + English crypto headlines",
+        "default_time": "10:00 HKT",
+        "runtime_entry": "run_crypto_news.bat 1000",
+    },
+    "crypto_news_1140": {
+        "display_name": "Crypto Daily News",
+        "source_group": "Crypto news",
+        "source_detail": "Top 8 Chinese + English crypto headlines",
+        "default_time": "11:40 HKT",
+        "runtime_entry": "run_crypto_news.bat 1140",
+    },
+    "newsletter": {
+        "display_name": "Newsletter",
+        "source_group": "Newsletter deploy",
+        "source_detail": "Generate newsletter, publish site, and send the live link to Telegram",
+        "default_time": "11:00 HKT",
+        "runtime_entry": "daily_reminders.py --task newsletter",
+    },
+    "commodity_live_overlay_0945": {
+        "display_name": "Commodity Model - Live Overlay Report",
+        "source_group": "Commodity live overlay",
+        "source_detail": "Fresh gold, silver, copper, and DXY live-overlay summary",
+        "default_time": "09:45 HKT",
+        "runtime_entry": "run_commodity_live_overlay_report.bat 0945",
+    },
+    "commodity_live_overlay_2145": {
+        "display_name": "Commodity Model - Live Overlay Report",
+        "source_group": "Commodity live overlay",
+        "source_detail": "Fresh gold, silver, copper, and DXY live-overlay summary",
+        "default_time": "21:45 HKT",
+        "runtime_entry": "run_commodity_live_overlay_report.bat 2145",
+    },
+    "gdrive_breadth_regime_2045": {
+        "display_name": "GDrive Breadth & Regime Snapshot",
+        "source_group": "GDrive research recap",
+        "source_detail": "Breadth, stage, regime, and factor snapshot from the daily GDrive recap",
+        "default_time": "20:45 HKT",
+        "runtime_entry": "run_gdrive_breadth_regime_snapshot.bat",
+    },
+    "cross_asset_momentum_0905": {
+        "display_name": "Cross-Asset Momentum (1D)",
+        "source_group": "Cross-asset dashboard",
+        "source_detail": "One-day momentum snapshot across equity, dollar, gold, crypto, and vol proxies",
+        "default_time": "09:05 HKT",
+        "runtime_entry": "run_cross_asset_momentum.bat 0905",
+    },
+    "cross_asset_momentum_1145": {
+        "display_name": "Cross-Asset Momentum (1D)",
+        "source_group": "Cross-asset dashboard",
+        "source_detail": "One-day momentum snapshot across equity, dollar, gold, crypto, and vol proxies",
+        "default_time": "11:45 HKT",
+        "runtime_entry": "run_cross_asset_momentum.bat 1145",
+    },
+    "cross_asset_momentum_1545": {
+        "display_name": "Cross-Asset Momentum (1D)",
+        "source_group": "Cross-asset dashboard",
+        "source_detail": "One-day momentum snapshot across equity, dollar, gold, crypto, and vol proxies",
+        "default_time": "15:45 HKT",
+        "runtime_entry": "run_cross_asset_momentum.bat 1545",
+    },
+    "cross_asset_momentum_2100": {
+        "display_name": "Cross-Asset Momentum (1D)",
+        "source_group": "Cross-asset dashboard",
+        "source_detail": "One-day momentum snapshot across equity, dollar, gold, crypto, and vol proxies",
+        "default_time": "21:00 HKT",
+        "runtime_entry": "run_cross_asset_momentum.bat 2100",
     },
     "jarvis_portfolio_am": {
         "display_name": "JARVIS Portfolio Commentary (AM)",
@@ -669,8 +813,15 @@ def parse_args() -> argparse.Namespace:
         help="Repo names to audit under the root directory",
     )
     parser.add_argument("--send", action="store_true", help="Send the rendered report to Telegram")
+    parser.add_argument(
+        "--send-missed-on-resume",
+        action="store_true",
+        help="Send only when today's scheduled audit slot was missed and has not already been delivered",
+    )
     parser.add_argument("--only-issues", action="store_true", help="Hide records without issues in the report")
     parser.add_argument("--json-out", type=Path, default=None, help="Override JSON output path")
+    parser.add_argument("--task-name", type=str, default=DEFAULT_AUDIT_TASK_NAME, help="Control task name for resume catch-up policy")
+    parser.add_argument("--state-out", type=Path, default=None, help="Override delivery state path")
     return parser.parse_args()
 
 
@@ -688,12 +839,49 @@ def main() -> int:
         print(chunk)
         print("=" * 56)
     if args.send:
+        state_path = _resolve_delivery_state_path(root=root, explicit=args.state_out)
+        send_decision: dict[str, Any] | None = None
+        if args.send_missed_on_resume:
+            send_decision = resolve_resume_catchup_decision(
+                root=root,
+                task_name=args.task_name,
+                now=datetime.now(HK_TZ),
+                state_path=state_path,
+            )
+            if not send_decision["should_send"]:
+                print(f"Telegram delivery: skipped ({send_decision['reason']})")
+                return 0
         token, chat_id = load_telegram_credentials()
-        send_messages(
-            bot_token=token,
-            chat_id=chat_id,
-            messages=split_message(report, max_length=3900),
-        )
+        try:
+            send_messages(
+                bot_token=token,
+                chat_id=chat_id,
+                messages=split_message(report, max_length=3900),
+            )
+        except Exception as exc:
+            if send_decision is not None:
+                _update_delivery_state(
+                    state_path,
+                    task_name=args.task_name,
+                    schedule_text=send_decision["schedule_text"],
+                    last_attempted_at=datetime.now(HK_TZ).isoformat(),
+                    last_attempted_slot_hkt=send_decision["slot_time_hkt"],
+                    last_attempt_reason=send_decision["reason"],
+                    last_error=str(exc),
+                )
+            raise
+        if send_decision is not None:
+            _update_delivery_state(
+                state_path,
+                task_name=args.task_name,
+                schedule_text=send_decision["schedule_text"],
+                last_attempted_at=datetime.now(HK_TZ).isoformat(),
+                last_attempted_slot_hkt=send_decision["slot_time_hkt"],
+                last_attempt_reason=send_decision["reason"],
+                last_sent_at=datetime.now(HK_TZ).isoformat(),
+                last_sent_slot_hkt=send_decision["slot_time_hkt"],
+                last_error="",
+            )
         print("Telegram delivery: sent")
     else:
         print("Telegram delivery: skipped (--send not set)")
@@ -1514,7 +1702,22 @@ def normalize_task_key(task_name: str, command: str = "") -> str:
             return "crypto_etf_flow_mid"
         return "crypto_etf_flow_am"
     if "run_crypto_news.bat" in command_lower or "send_crypto_news.py" in command_lower:
+        if "1140" in lower or "1140" in command_lower or "--slot 1140" in command_lower:
+            return "crypto_news_1140"
+        if "1000" in lower or "1000" in command_lower or "--slot 1000" in command_lower:
+            return "crypto_news_1000"
         return "crypto_news_daily"
+    if "run_commodity_live_overlay_report.bat" in command_lower or "send_commodity_live_overlay_report.py" in command_lower:
+        if "2145" in lower or "2145" in command_lower or "--slot 2145" in command_lower:
+            return "commodity_live_overlay_2145"
+        return "commodity_live_overlay_0945"
+    if "run_gdrive_breadth_regime_snapshot.bat" in command_lower or "send_gdrive_breadth_regime_snapshot.py" in command_lower:
+        return "gdrive_breadth_regime_2045"
+    if "run_cross_asset_momentum.bat" in command_lower or "send_cross_asset_momentum.py" in command_lower:
+        for slot in ("0905", "1145", "1545", "2100"):
+            if slot in lower or slot in command_lower or f"--slot {slot}" in command_lower:
+                return f"cross_asset_momentum_{slot}"
+        return "cross_asset_momentum_0905"
     if "run_cbbc_tracker.bat" in command_lower or "send_cbbc_tracker.py" in command_lower:
         return "jarvis_cbbc_tracker_am"
     if "run_friday_volume.bat" in command_lower or "send_friday_volume_check.py" in command_lower:
@@ -1669,6 +1872,98 @@ def _load_structured_config(path: Path) -> dict[str, Any]:
     except Exception:
         pass
     return {}
+
+
+def _load_control_task_config(*, root: Path, task_name: str) -> dict[str, Any]:
+    control_path = root / DEFAULT_REPOS[0] / CONTROL_FILE_REL
+    payload = _load_structured_config(control_path)
+    tasks = payload.get("tasks") if isinstance(payload, dict) else {}
+    if not isinstance(tasks, dict):
+        return {}
+    config = tasks.get(task_name)
+    return config if isinstance(config, dict) else {}
+
+
+def _config_bool(value: Any, default: bool = False) -> bool:
+    if isinstance(value, bool):
+        return value
+    if isinstance(value, str):
+        lowered = value.strip().lower()
+        if lowered in {"1", "true", "yes", "on", "enabled"}:
+            return True
+        if lowered in {"0", "false", "no", "off", "disabled"}:
+            return False
+    return default
+
+
+def _config_positive_int(value: Any, default: int) -> int:
+    try:
+        parsed = int(value)
+    except Exception:
+        return default
+    return parsed if parsed > 0 else default
+
+
+def _resolve_delivery_state_path(*, root: Path, explicit: Path | None) -> Path:
+    if explicit is not None:
+        return explicit.resolve() if explicit.is_absolute() else (Path.cwd() / explicit).resolve()
+    return (root / "notion-autopublish" / DEFAULT_DELIVERY_STATE_REL).resolve()
+
+
+def _resolve_due_slot_hkt(*, schedule_text: str, now: datetime) -> datetime | None:
+    normalized = normalize_schedule_text(schedule_text)
+    match = re.search(r"\b(\d{2}):(\d{2})\b", normalized)
+    if not match:
+        return None
+    now_hkt = now.astimezone(HK_TZ)
+    if normalized.lower().startswith("mon-fri") and now_hkt.weekday() > 4:
+        return None
+    slot_time = now_hkt.replace(hour=int(match.group(1)), minute=int(match.group(2)), second=0, microsecond=0)
+    if now_hkt < slot_time:
+        return None
+    return slot_time
+
+
+def resolve_resume_catchup_decision(
+    *,
+    root: Path,
+    task_name: str = DEFAULT_AUDIT_TASK_NAME,
+    now: datetime | None = None,
+    state_path: Path | None = None,
+) -> dict[str, Any]:
+    current_time = (now or datetime.now(HK_TZ)).astimezone(HK_TZ)
+    config = _load_control_task_config(root=root, task_name=task_name)
+    schedule_text = str(config.get("schedule", DEFAULT_AUDIT_SCHEDULE)).strip() or DEFAULT_AUDIT_SCHEDULE
+    catchup_enabled = _config_bool(config.get("catchup_on_resume"), False)
+    window_hours = _config_positive_int(config.get("catchup_window_hours"), DEFAULT_AUDIT_CATCHUP_WINDOW_HOURS)
+    slot_time = _resolve_due_slot_hkt(schedule_text=schedule_text, now=current_time)
+    decision = {
+        "should_send": False,
+        "reason": "catchup_disabled" if not catchup_enabled else "no_due_slot",
+        "slot_time_hkt": slot_time.isoformat() if slot_time else "",
+        "schedule_text": schedule_text,
+        "window_hours": window_hours,
+        "task_name": task_name,
+    }
+    if not catchup_enabled or slot_time is None:
+        return decision
+    if current_time - slot_time > timedelta(hours=window_hours):
+        decision["reason"] = "slot_expired"
+        return decision
+    state = _load_structured_config(_resolve_delivery_state_path(root=root, explicit=state_path))
+    if str(state.get("last_sent_slot_hkt", "")).strip() == slot_time.isoformat():
+        decision["reason"] = "already_sent"
+        return decision
+    decision["should_send"] = True
+    decision["reason"] = "missed_slot_unsent"
+    return decision
+
+
+def _update_delivery_state(path: Path, **fields: Any) -> None:
+    current = _load_structured_config(path)
+    current.update(fields)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps(current, indent=2, ensure_ascii=False), encoding="utf-8")
 
 
 def _control_schedule_fallback(raw_name: str, config: dict[str, Any]) -> str:

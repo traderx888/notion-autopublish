@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>External Intelligence Dashboard - 2026-03-25</title>
+<title>External Intelligence Dashboard - Mar 25, 2026 23:44 HKT</title>
 <style>
   :root {
     --bg: #0d1117; --card: #161b22; --border: #30363d;
@@ -92,13 +92,6 @@
   .breadth-gauge { margin-bottom: 10px; }
   .score-ring { width: 80px; height: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px; font-weight: 700; flex-shrink: 0; }
 
-  .bofa-chart { margin: 12px 0 14px; padding: 14px; background: #ffffff; border: 1px solid #d0d7de; border-radius: 10px; color: #1f2328; }
-  .bofa-chart-head { font-size: 16px; font-weight: 700; color: #0f172a; }
-  .bofa-chart-subhead { font-size: 13px; color: #475467; margin-bottom: 10px; }
-  .bofa-chart-svg { width: 100%; height: auto; display: block; }
-  .bofa-chart-footnote { font-size: 11px; color: #475467; line-height: 1.45; margin-top: 8px; }
-  .bofa-chart-footnote strong { color: #0f172a; }
-
   .footer { text-align: center; color: var(--muted); font-size: 11px; margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--border); }
 
   @media (max-width: 900px) { .grid { grid-template-columns: 1fr; } }
@@ -142,8 +135,8 @@
 
 <div class="header">
   <h1 data-i18n="title">External Intelligence Dashboard</h1>
-  <div class="subtitle" data-i18n="subtitle">All Sources &mdash; Latest Available Artifacts</div>
-  <div class="timestamp" data-i18n="timestamp">March 25, 2026 &bull; Dashboard refreshed with latest artifacts and BofA Flow Show PDF &bull; Section dates show source freshness</div>
+  <div class="subtitle" data-i18n="subtitle">All Sources &mdash; Market Breadth auto-refreshed; other sections remain manually curated</div>
+  <div class="timestamp" data-i18n="timestamp">Mar 25, 2026 23:44 HKT &bull; Market Breadth auto-refreshes on schedule &bull; Other sections may reflect manual updates</div>
 </div>
 
 <!-- Aggregate Signal Bar -->
@@ -213,202 +206,116 @@
 <!-- MARKET BREADTH -->
 <div class="section-title" data-i18n="sec_breadth">Market Breadth</div>
 <div class="grid">
-
-  <!-- US SMM -->
+  <div class="card card-full" style="padding:14px 18px;">
+    <div style="font-size:12px;color:var(--muted);">
+      <strong>Freshness note:</strong> Market Breadth auto-refreshes on schedule. This build used source artifacts generated at Mar 25, 2026 23:44 HKT. Other dashboard sections may reflect manual updates in this phase.
+    </div>
+  </div>
   <div class="card">
     <div class="card-header">
-      <div class="score-ring" style="border: 3px solid var(--yellow); color: var(--yellow);">56.5</div>
+      <div class="score-ring" style="border: 3px solid var(--red); color: var(--red); ">30.8</div>
       <div>
         <div class="card-title"><a href="smm.html" style="color:var(--text);text-decoration:none;">US Market Monitor (SMM)</a></div>
-        <div style="font-size:12px;color:var(--muted);">Mar 20, 2026 &bull; 6,395 stocks &bull; <a href="smm.html" style="color:var(--accent);text-decoration:none;font-size:11px;">View Detail &rarr;</a></div>
+        <div style="font-size:12px;color:var(--muted);">Mar 24, 2026 &bull; 6,402 stocks &bull; captured 23:44 HKT</div>
       </div>
       <div style="margin-left:auto;text-align:right;">
-        <span class="badge badge-neutral">YELLOW</span>
-        <span class="badge badge-caution">NEUTRAL</span>
+        <span class="badge badge-info">FRESH</span>
+        <span class="badge badge-bearish">RED</span>
       </div>
     </div>
-
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
       <div>
         <div style="font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:6px;">SMM Primary</div>
-        <div class="breadth-gauge">
-          <div class="breadth-stat"><span class="label">Daily Up &ge;4%</span><span class="value">146 (2.3%)</span></div>
-          <div class="meter"><div class="meter-fill meter-green" style="width:23%"></div></div>
-        </div>
-        <div class="breadth-gauge">
-          <div class="breadth-stat"><span class="label">Daily Down &ge;4%</span><span class="value down">662 (10.4%)</span></div>
-          <div class="meter"><div class="meter-fill meter-red" style="width:100%"></div></div>
-        </div>
-        <div class="breadth-gauge">
-          <div class="breadth-stat"><span class="label">5-Day Ratio</span><span class="value down">0.60</span></div>
-          <div class="meter"><div class="meter-fill meter-red" style="width:30%"></div></div>
-        </div>
-        <div class="breadth-gauge">
-          <div class="breadth-stat"><span class="label">10-Day Ratio</span><span class="value down">0.68 <span style="font-size:10px">BEARISH</span></span></div>
-          <div class="meter"><div class="meter-fill meter-red" style="width:34%"></div></div>
-        </div>
-        <div class="breadth-gauge">
-          <div class="breadth-stat"><span class="label">Qtr Up &ge;25%</span><span class="value">829 (13.0%)</span></div>
-          <div class="meter"><div class="meter-fill meter-green" style="width:52%"></div></div>
-        </div>
-        <div class="breadth-gauge">
-          <div class="breadth-stat"><span class="label">Qtr Down &ge;25%</span><span class="value down">1,572 (24.6%) BEAR</span></div>
-          <div class="meter"><div class="meter-fill meter-red" style="width:98%"></div></div>
-        </div>
+        <div class="breadth-gauge"><div class="breadth-stat"><span class="label">Daily Up &gt;=4%</span><span class="value">223 (3.5%)</span></div><div class="meter"><div class="meter-fill meter-green" style="width:3.5%"></div></div></div>
+        <div class="breadth-gauge"><div class="breadth-stat"><span class="label">Daily Down &gt;=4%</span><span class="value">285 (4.5%)</span></div><div class="meter"><div class="meter-fill meter-red" style="width:4.5%"></div></div></div>
+        <div class="breadth-gauge"><div class="breadth-stat"><span class="label">5-Day Ratio</span><span class="value">0.50</span></div><div class="meter"><div class="meter-fill meter-yellow" style="width:25.0%"></div></div></div>
+        <div class="breadth-gauge"><div class="breadth-stat"><span class="label">10-Day Ratio</span><span class="value">0.63</span></div><div class="meter"><div class="meter-fill meter-yellow" style="width:31.5%"></div></div></div>
+        <div class="breadth-gauge"><div class="breadth-stat"><span class="label">Qtr Up &gt;=25%</span><span class="value">951 (14.9%)</span></div><div class="meter"><div class="meter-fill meter-green" style="width:14.9%"></div></div></div>
+        <div class="breadth-gauge"><div class="breadth-stat"><span class="label">Qtr Down &gt;=25%</span><span class="value">1,474 (23.0%)</span></div><div class="meter"><div class="meter-fill meter-red" style="width:23.0%"></div></div></div>
       </div>
-
       <div>
         <div style="font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:6px;">SMM Secondary</div>
+        <div class="breadth-gauge"><div class="breadth-stat"><span class="label">MA40 (% &gt; 40MA)</span><span class="value">22.97%</span></div><div class="meter"><div class="meter-fill meter-blue" style="width:23.0%"></div></div></div>
+        <div class="breadth-gauge"><div class="breadth-stat"><span class="label">34d Up &gt;=13%</span><span class="value">1,110 (17.3%)</span></div><div class="meter"><div class="meter-fill meter-green" style="width:17.3%"></div></div></div>
+        <div class="breadth-gauge"><div class="breadth-stat"><span class="label">34d Down &gt;=13%</span><span class="value">2,236 (34.9%)</span></div><div class="meter"><div class="meter-fill meter-red" style="width:34.9%"></div></div></div>
+        <div class="breadth-gauge"><div class="breadth-stat"><span class="label">Month Up &gt;=25%</span><span class="value">105 (1.6%)</span></div><div class="meter"><div class="meter-fill meter-green" style="width:1.6%"></div></div></div>
+        <div class="breadth-gauge"><div class="breadth-stat"><span class="label">Month Down &gt;=25%</span><span class="value">195 (3.0%)</span></div><div class="meter"><div class="meter-fill meter-red" style="width:3.0%"></div></div></div>
         <div class="breadth-gauge">
-          <div class="breadth-stat"><span class="label">MA40 (% &gt; 40MA)</span><span class="value down">16.74%</span></div>
-          <div class="meter"><div class="meter-fill meter-red" style="width:16.7%"></div></div>
-          <div style="font-size:11px;color:var(--red);font-weight:600;margin-top:2px;">EXTREME OVERSOLD &mdash; high-probability rebound within 5 days</div>
-        </div>
-        <div class="breadth-gauge">
-          <div class="breadth-stat"><span class="label">Stocks Above 40MA</span><span class="value">1,071 / 6,395</span></div>
-        </div>
-        <div class="breadth-gauge">
-          <div class="breadth-stat"><span class="label">SPX Close</span><span class="value">5,662.89</span></div>
-          <div class="breadth-stat"><span class="label">SPX 1D</span><span class="value down">-1.51%</span></div>
-          <div class="breadth-stat"><span class="label">SPX 5D</span><span class="value down">-2.88%</span></div>
-        </div>
-
-        <div style="font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:0.5px;margin:12px 0 6px;">20% Study</div>
-        <div class="breadth-gauge">
-          <div class="breadth-stat"><span class="label">Stocks Up &ge;20% in 63d</span><span class="value">685 (13.6%)</span></div>
-          <div class="meter"><div class="meter-fill meter-green" style="width:55%"></div></div>
-          <div style="font-size:11px;color:var(--green);margin-top:2px;">NEUTRAL LEAN BULL</div>
-        </div>
-
-        <div style="font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:0.5px;margin:12px 0 6px;">Episodic Pivots</div>
-        <div class="breadth-gauge">
-          <div class="breadth-stat"><span class="label">Total EPs</span><span class="value">250</span></div>
-          <div class="breadth-stat"><span class="label">Golden EPs</span><span class="value up">4</span></div>
-          <div class="breadth-stat"><span class="label">Day 7 Sustain Rate</span><span class="value flat">41%</span></div>
+          <div class="breadth-stat"><span class="label">S&amp;P 500</span><span class="value">6556.37</span></div>
+          <div class="breadth-stat"><span class="label">SPX 1D</span><span class="value">-0.37%</span></div>
+          <div class="breadth-stat"><span class="label">SPX 5D</span><span class="value">-2.38%</span></div>
         </div>
       </div>
     </div>
-
-    <div class="thesis" style="margin-top:12px;">
-      <strong>SMM Signal:</strong> Heavy selling pressure (662 stocks down &ge;4%) but MA40 at 16.74% signals EXTREME OVERSOLD &mdash; historically high-probability rebound zone. 10-day ratio bearish at 0.68, quarterly confirms BEAR (1,572 down &ge;25%). Contrarian buy setup developing. Top EP: CTRN (Super Swan, +18.7% gap, 5.2x volume).
-    </div>
+    
+    <div class="thesis" style="margin-top:12px;"><strong>SMM:</strong> Public SMM sheet last closed on Mar 24, 2026 with MA40 at 22.97% and 10-day ratio at 0.63. Quarter breadth shows 1,474 stocks down 25%+ versus 951 up 25%+, so participation is still fragile.</div>
   </div>
-
-  <!-- DV US Market -->
   <div class="card">
     <div class="card-header">
       <div class="card-icon" style="background:rgba(248,81,73,0.2);color:var(--red);">DV</div>
-      <div class="card-title">DV US Market</div>
-      <div class="card-date">Mar 13</div>
+      <div>
+        <div class="card-title">DV US Market</div>
+        <div style="font-size:12px;color:var(--muted);">Mar 13, 2026 &bull; captured 19:02 HKT</div>
+      </div>
+      <div style="margin-left:auto;text-align:right;">
+        <span class="badge badge-bearish">ERROR</span>
+        <span class="badge badge-bearish">RED</span>
+      </div>
     </div>
     <div class="card-subtitle">Stage Analysis &amp; Breadth Overview</div>
-
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
       <div>
         <div style="font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:6px;">Breadth Indicators</div>
-        <div class="breadth-gauge">
-          <div class="breadth-stat"><span class="label">Advance / Decline</span><span class="value down">466 / 1,874 (20%)</span></div>
-          <div class="meter"><div class="meter-fill meter-red" style="width:20%"></div></div>
-        </div>
-        <div class="breadth-gauge">
-          <div class="breadth-stat"><span class="label">New Highs vs Lows</span><span class="value down">76 / 131 (37%)</span></div>
-          <div class="meter"><div class="meter-fill meter-red" style="width:37%"></div></div>
-        </div>
-        <div class="breadth-gauge">
-          <div class="breadth-stat"><span class="label">Up from Open</span><span class="value down">33%</span></div>
-          <div class="meter"><div class="meter-fill meter-red" style="width:33%"></div></div>
-        </div>
-        <div class="breadth-gauge">
-          <div class="breadth-stat"><span class="label">Up Volume</span><span class="value down">13%</span></div>
-          <div class="meter"><div class="meter-fill meter-red" style="width:13%"></div></div>
-        </div>
-        <div class="breadth-gauge">
-          <div class="breadth-stat"><span class="label">Up &ge;4%</span><span class="value down">17%</span></div>
-          <div class="meter"><div class="meter-fill meter-red" style="width:17%"></div></div>
-        </div>
+        <div class="breadth-gauge"><div class="breadth-stat"><span class="label">Advance / Decline</span><span class="value">466 / 1,874 (20%)</span></div><div class="meter"><div class="meter-fill meter-red" style="width:20.0%"></div></div></div>
+        <div class="breadth-gauge"><div class="breadth-stat"><span class="label">New Highs vs Lows</span><span class="value">76 / 131 (37%)</span></div><div class="meter"><div class="meter-fill meter-red" style="width:37.0%"></div></div></div>
+        <div class="breadth-gauge"><div class="breadth-stat"><span class="label">Up from Open</span><span class="value">33%</span></div><div class="meter"><div class="meter-fill meter-red" style="width:33.0%"></div></div></div>
+        <div class="breadth-gauge"><div class="breadth-stat"><span class="label">Up Volume</span><span class="value">13%</span></div><div class="meter"><div class="meter-fill meter-red" style="width:13.0%"></div></div></div>
+        <div class="breadth-gauge"><div class="breadth-stat"><span class="label">Up &gt;=4%</span><span class="value">17%</span></div><div class="meter"><div class="meter-fill meter-red" style="width:17.0%"></div></div></div>
       </div>
-
       <div>
         <div style="font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:6px;">Weinstein Stage Distribution</div>
-        <div class="breadth-gauge">
-          <div class="breadth-stat"><span class="label">Stage 1 (Base)</span><span class="value">51 (1%)</span></div>
-          <div class="meter"><div class="meter-fill meter-blue" style="width:1%"></div></div>
-        </div>
-        <div class="breadth-gauge">
-          <div class="breadth-stat"><span class="label">Stage 2 (Uptrend)</span><span class="value up">1,381 (25%)</span></div>
-          <div class="meter"><div class="meter-fill meter-green" style="width:25%"></div></div>
-        </div>
-        <div class="breadth-gauge">
-          <div class="breadth-stat"><span class="label">Stage 3 (Top)</span><span class="value flat">1,048 (19%)</span></div>
-          <div class="meter"><div class="meter-fill meter-yellow" style="width:19%"></div></div>
-        </div>
-        <div class="breadth-gauge">
-          <div class="breadth-stat"><span class="label">Stage 4 (Decline)</span><span class="value down">3,096 (56%)</span></div>
-          <div class="meter"><div class="meter-fill meter-red" style="width:56%"></div></div>
-        </div>
-        <div style="font-size:11px;color:var(--red);font-weight:600;margin-top:8px;">56% of stocks in Stage 4 &mdash; broad downtrend</div>
+        <div class="breadth-gauge"><div class="breadth-stat"><span class="label">Stage 1 (Base)</span><span class="value">51 (1.0%)</span></div><div class="meter"><div class="meter-fill meter-blue" style="width:1.0%"></div></div></div>
+        <div class="breadth-gauge"><div class="breadth-stat"><span class="label">Stage 2 (Uptrend)</span><span class="value">1,381 (25.0%)</span></div><div class="meter"><div class="meter-fill meter-green" style="width:25.0%"></div></div></div>
+        <div class="breadth-gauge"><div class="breadth-stat"><span class="label">Stage 3 (Top)</span><span class="value">1,048 (19.0%)</span></div><div class="meter"><div class="meter-fill meter-yellow" style="width:19.0%"></div></div></div>
+        <div class="breadth-gauge"><div class="breadth-stat"><span class="label">Stage 4 (Decline)</span><span class="value">3,096 (56.0%)</span></div><div class="meter"><div class="meter-fill meter-red" style="width:56.0%"></div></div></div>
       </div>
     </div>
-
-    <div class="thesis" style="margin-top:12px;">
-      <strong>DV:</strong> Only 20% of stocks advancing. 56% in Stage 4 (decline) vs 25% in Stage 2 (uptrend). Volume extremely bearish at 13% up. New lows outpacing new highs. Broad market structure is decisively bearish.
-    </div>
+    <div style="font-size:11px;color:var(--orange);margin-top:6px;">Latest issue: Traceback (most recent call last): File &quot;C:\Users\User\Documents\GitHub\notion-autopublish\scrape_deepvue.py&quot;, line 69, in &lt;module&gt; sys.exit(main()) ^^^^^^ File &quot;C:\Users\User\Documents\GitHub\notion-autopublish\scrape_deepvue.py&quot;, line 43, in main results = scraper.run(dashboards=dashboards) ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ File &quot;C:\Users\User\Documents\GitHub\notion-autopublish\browser\scra...</div>
+    <div class="thesis" style="margin-top:12px;"><strong>DV:</strong> Stage 4 accounts for 56% of the universe against 25% in Stage 2, while only 20% of stocks are advancing. DeepVue still reads as structurally weak.</div>
   </div>
-
-  <!-- HK Breadth -->
   <div class="card">
     <div class="card-header">
-      <div class="score-ring" style="border: 3px solid var(--yellow); color: var(--yellow); width:60px; height:60px; font-size:18px;">54.5</div>
+      <div class="score-ring" style="border: 3px solid var(--orange); color: var(--orange); width:60px; height:60px; font-size:18px;">--</div>
       <div>
         <div class="card-title">Hong Kong Breadth</div>
-        <div style="font-size:12px;color:var(--muted);">Mar 11, 2026 &bull; 995 liquid stocks</div>
+        <div style="font-size:12px;color:var(--muted);">Mar 25, 2026 &bull; AASTOCKS &bull; captured 23:44 HKT</div>
       </div>
-      <div style="margin-left:auto;">
-        <span class="badge badge-neutral">NEUTRAL</span>
+      <div style="margin-left:auto;text-align:right;">
+        <span class="badge badge-info">FRESH</span>
+        <span class="badge badge-caution">N/A</span>
       </div>
     </div>
-
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
       <div>
         <div style="font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:6px;">Moving Average Participation</div>
-        <div class="breadth-gauge">
-          <div class="breadth-stat"><span class="label">% Above 20MA</span><span class="value down">33.9%</span></div>
-          <div class="meter"><div class="meter-fill meter-red" style="width:33.9%"></div></div>
-        </div>
-        <div class="breadth-gauge">
-          <div class="breadth-stat"><span class="label">% Above 50MA</span><span class="value flat">42.5%</span></div>
-          <div class="meter"><div class="meter-fill meter-yellow" style="width:42.5%"></div></div>
-        </div>
-        <div class="breadth-gauge">
-          <div class="breadth-stat"><span class="label">% Above 200MA</span><span class="value flat">49.4%</span></div>
-          <div class="meter"><div class="meter-fill meter-yellow" style="width:49.4%"></div></div>
-        </div>
+        <div class="breadth-gauge"><div class="breadth-stat"><span class="label">% Above 20MA</span><span class="value">N/A</span></div><div class="meter"><div class="meter-fill meter-red" style="width:0.0%"></div></div></div>
+        <div class="breadth-gauge"><div class="breadth-stat"><span class="label">% Above 50MA</span><span class="value">N/A</span></div><div class="meter"><div class="meter-fill meter-yellow" style="width:0.0%"></div></div></div>
+        <div class="breadth-gauge"><div class="breadth-stat"><span class="label">% Above 200MA</span><span class="value">N/A</span></div><div class="meter"><div class="meter-fill meter-blue" style="width:0.0%"></div></div></div>
       </div>
       <div>
         <div style="font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:6px;">Internals</div>
+        <div class="breadth-gauge"><div class="breadth-stat"><span class="label">Advance / Decline</span><span class="value">N/A</span></div><div class="meter"><div class="meter-fill meter-green" style="width:0.0%"></div></div></div>
+        <div class="breadth-gauge"><div class="breadth-stat"><span class="label">New 52W Highs / Lows</span><span class="value">30 / 30 (1.00x)</span></div></div>
+        <div class="breadth-gauge"><div class="breadth-stat"><span class="label">Up &gt;=20% in 63d</span><span class="value">N/A</span></div><div class="meter"><div class="meter-fill meter-green" style="width:0.0%"></div></div></div>
         <div class="breadth-gauge">
-          <div class="breadth-stat"><span class="label">Advance / Decline</span><span class="value up">53.4% / 39.0% (1.37x)</span></div>
-          <div class="meter"><div class="meter-fill meter-green" style="width:53.4%"></div></div>
-        </div>
-        <div class="breadth-gauge">
-          <div class="breadth-stat"><span class="label">New 52W Highs / Lows</span><span class="value up">29 / 20 (1.45x)</span></div>
-        </div>
-        <div class="breadth-gauge">
-          <div class="breadth-stat"><span class="label">Up &ge;20% in 63d</span><span class="value up">20.3%</span></div>
-          <div class="meter"><div class="meter-fill meter-green" style="width:40%"></div></div>
-        </div>
-        <div class="breadth-gauge">
-          <div class="breadth-stat"><span class="label">Strong Up (&ge;4%/day)</span><span class="value up">9.5%</span></div>
-          <div class="breadth-stat"><span class="label">Strong Down</span><span class="value">3.3%</span></div>
+          <div class="breadth-stat"><span class="label">Strong Up (>=4%/day)</span><span class="value">N/A</span></div>
+          <div class="breadth-stat"><span class="label">Strong Down</span><span class="value">N/A</span></div>
         </div>
       </div>
     </div>
-
-    <div class="thesis" style="margin-top:12px;">
-      <strong>HK:</strong> Neutral breadth (54.5/100). Advances outpacing declines (1.37x) with impulse RISK_ON. Short-term participation weak (33.9% above 20MA) but longer-term holds (49.4% above 200MA). HK diverging positively from US breadth deterioration.
-    </div>
+    
+    <div class="thesis" style="margin-top:12px;"><strong>HK:</strong> AASTOCKS refreshed highs/lows on Mar 25, 2026 with 30 stocks at 52-week highs and 30 at 52-week lows. Moving-average breadth is unavailable in the current scraper and is shown as N/A.</div>
   </div>
-
 </div>
 
 <!-- MACRO & LIQUIDITY -->
@@ -475,54 +382,6 @@
       <tr><td class="val">Feb 27</td><td>"New Way to Trade EM"</td><td><span class="badge badge-bullish">OPPORTUNITY</span></td></tr>
     </table>
     <div class="thesis">S&P 500 surface calm masks significant stress beneath. SPX liquidity declining, macro hedging surging. "Asset-heavy" companies expected to outperform. Iran/Hormuz pushing oil toward $120 scenario.</div>
-  </div>
-
-  <!-- BofA -->
-  <div class="card">
-    <div class="card-header">
-      <div class="card-icon" style="background:rgba(219,109,40,0.2);color:var(--orange);">BA</div>
-      <div class="card-title">BofA Global Research</div>
-      <div class="card-date">Mar 19</div>
-    </div>
-    <div class="card-subtitle">"The Flow Show &mdash; The Gravy Pain"</div>
-    <div class="bofa-chart">
-      <div class="bofa-chart-head">Chart 1: BofA Bull &amp; Bear Indicator</div>
-      <div class="bofa-chart-subhead">Down to 8.4 from 8.5</div>
-      <svg class="bofa-chart-svg" viewBox="0 0 300 210" role="img" aria-label="BofA Bull and Bear Indicator down to 8.4 from 8.5">
-        <path d="M55 148 A95 95 0 0 1 99 66" fill="none" stroke="#34c759" stroke-width="34" stroke-linecap="round"></path>
-        <path d="M99 66 A95 95 0 0 1 196 60" fill="none" stroke="#7ea21c" stroke-width="34" stroke-linecap="round"></path>
-        <path d="M196 60 A95 95 0 0 1 232 97" fill="none" stroke="#cc8d1d" stroke-width="34" stroke-linecap="round"></path>
-        <path d="M232 97 A95 95 0 0 1 245 148" fill="none" stroke="#d92d42" stroke-width="34" stroke-linecap="round"></path>
-        <circle cx="150" cy="148" r="58" fill="#ffffff"></circle>
-        <text x="74" y="153" font-size="14" font-weight="700" fill="#1f6f3d">Buy</text>
-        <text x="203" y="153" font-size="14" font-weight="700" fill="#b42318">Sell</text>
-        <text x="55" y="188" font-size="11" font-weight="600" fill="#1f2328">Extreme</text>
-        <text x="58" y="201" font-size="11" font-weight="600" fill="#1f2328">Bearish</text>
-        <text x="201" y="188" font-size="11" font-weight="600" fill="#1f2328">Extreme</text>
-        <text x="203" y="201" font-size="11" font-weight="600" fill="#1f2328">Bullish</text>
-        <text x="96" y="125" font-size="13" font-weight="600" fill="#1f2328">2</text>
-        <text x="125" y="107" font-size="13" font-weight="600" fill="#1f2328">4</text>
-        <text x="157" y="107" font-size="13" font-weight="600" fill="#1f2328">6</text>
-        <text x="187" y="124" font-size="13" font-weight="600" fill="#1f2328">8</text>
-        <text x="210" y="153" font-size="13" font-weight="600" fill="#1f2328">10</text>
-        <text x="84" y="153" font-size="13" font-weight="600" fill="#1f2328">0</text>
-        <line x1="150" y1="148" x2="211" y2="114" stroke="#1f2328" stroke-width="4" stroke-linecap="round"></line>
-        <circle cx="150" cy="148" r="5" fill="#1f2328"></circle>
-        <circle cx="248" cy="102" r="18" fill="#d92d42"></circle>
-        <text x="248" y="107" font-size="12" font-weight="700" text-anchor="middle" fill="#ffffff">8.4</text>
-      </svg>
-      <div class="bofa-chart-footnote"><strong>Source: BofA Global Investment Strategy.</strong> Dashboard recreation of Chart 1 for the Mar 19 Flow Show note.</div>
-    </div>
-    <table>
-      <tr><th>Metric</th><th>Value</th><th>Read</th></tr>
-      <tr><td>Bull &amp; Bear</td><td class="val">8.4 (from 8.5)</td><td><span class="badge badge-caution">SELL STILL ON</span></td></tr>
-      <tr><td>Weekly Stock Flows</td><td class="val up">$62.2bn</td><td class="up">Risk still bid</td></tr>
-      <tr><td>US Equity Flows</td><td class="val up">$47.1bn</td><td class="up">Biggest since Dec '25</td></tr>
-      <tr><td>Treasury Flows</td><td class="val up">$12.9bn</td><td class="flat">Defensive bid</td></tr>
-      <tr><td>HY Bond Flows</td><td class="val down">-$5.2bn</td><td class="down">Credit stress</td></tr>
-      <tr><td>Private Clients</td><td class="val">63.7% eq / 18.3% bonds / 10.7% cash</td><td class="flat">Buying dips</td></tr>
-    </table>
-    <div class="thesis">Hartnett's message is that this is not true capitulation yet: the Bull &amp; Bear indicator remains above the sub-8 level that would end the contrarian sell signal, equity inflows are still strong, and the aggressive risk-add point waits for a deeper breadth washout. Tactical map: sell DXY above 100, buy 30Y Treasuries at 5%, and buy SPX below 6600.</div>
   </div>
 
   <!-- Morgan Stanley -->
@@ -842,11 +701,6 @@
     <div class="synth-signal flat">Surface calm masks stress &mdash; defensive positioning</div>
   </div>
   <div class="synth-row">
-    <div class="synth-theme" style="color:var(--yellow);">BofA: Not Capitulation Yet</div>
-    <div class="synth-sources">BofA Flow Show</div>
-    <div class="synth-signal flat">WAIT FOR WASHOUT &mdash; Bull &amp; Bear 8.4, equity inflows still near record</div>
-  </div>
-  <div class="synth-row">
     <div class="synth-theme" style="color:var(--red);">India All RED</div>
     <div class="synth-sources">Finally Nitin</div>
     <div class="synth-signal down">STAY CASH &mdash; zero swing confidence</div>
@@ -874,7 +728,7 @@
 </div>
 
 <div class="footer" data-i18n="footer">
-  Generated by notion-autopublish scrapers &bull; P-Model (SA), SMM, DV, HK Breadth, HedgeFollow insiders, H-Model, Greenoaks/CAS/Duquesne/Atreides/Octahedron (SEC 13F), SemiAnalysis, Finally Nitin, FOMO, Systematic LS, GS, Citadel, BofA, MS &bull; Dashboard refreshed March 25, 2026; section dates show source freshness
+  Generated by notion-autopublish scrapers &bull; Market Breadth auto-refreshed from source artifacts on Mar 25, 2026 23:44 HKT &bull; Other dashboard sections may reflect manual updates
 </div>
 
 <script>
@@ -909,8 +763,8 @@ if (sessionStorage.getItem('dashboard_auth') === '1') {
 const i18n = {
   en: {
     title: 'External Intelligence Dashboard',
-    subtitle: 'All Sources - Latest Available Artifacts',
-    timestamp: 'March 25, 2026 - Dashboard refreshed with latest artifacts and BofA Flow Show PDF - Section dates show source freshness',
+    subtitle: 'All Sources - Market Breadth auto-refreshed; other sections remain manually curated',
+    timestamp: 'Mar 25, 2026 23:44 HKT - Market Breadth auto-refreshes on schedule - Other sections may reflect manual updates',
     login_title: 'Dashboard Access',
     login_subtitle: 'Enter password to continue',
     login_btn: 'Sign In',
@@ -935,7 +789,7 @@ const i18n = {
     sec_sector: 'Sector & Thematic Intelligence',
     sec_synthesis: 'Cross-Source Synthesis',
 
-    footer: 'Generated by notion-autopublish scrapers - P-Model (SA), SMM, DV, HK Breadth, HedgeFollow insiders, H-Model, Greenoaks/CAS/Duquesne/Atreides/Octahedron (SEC 13F), SemiAnalysis, Finally Nitin, FOMO, Systematic LS, GS, Citadel, BofA, MS - Dashboard refreshed March 25, 2026; section dates show source freshness',
+    footer: 'Generated by notion-autopublish scrapers - Market Breadth auto-refreshed from source artifacts on Mar 25, 2026 23:44 HKT - Other dashboard sections may reflect manual updates',
   },
   zh: {
     title: '外部情報儀表板',
