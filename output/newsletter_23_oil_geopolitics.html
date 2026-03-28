@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>彭博研究摘要 #23 — 哈格島危機與中東戰爭下的石油市場</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --accent: #58a6ff;
+          --green: #3fb950; --red: #f85149; --yellow: #d29922; --text: #c9d1d9; --muted: #8b949e;
+          --orange: #f0883e; --purple: #bc8cff; --cyan: #39d2c0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans TC', 'Microsoft JhengHei', Helvetica, Arial, sans-serif; line-height: 1.7; padding: 20px; max-width: 860px; margin: 0 auto; }
+  h1 { color: #fff; font-size: 1.7em; margin-bottom: 4px; }
+  .subtitle { color: var(--muted); font-size: 0.9em; margin-bottom: 8px; }
+  .issue-badge { display: inline-block; background: rgba(88,166,255,0.15); color: var(--accent); padding: 3px 10px; border-radius: 12px; font-size: 0.8em; font-weight: 600; margin-bottom: 20px; }
+  .tag { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 0.72em; font-weight: 600; margin-right: 4px; }
+  .tag-rates { background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-china { background: rgba(240,136,62,0.15); color: var(--orange); }
+  .tag-japan { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-geo   { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-oil   { background: rgba(210,153,34,0.15); color: var(--yellow); }
+  .tag-trade { background: rgba(210,153,34,0.15); color: var(--yellow); }
+  .tag-growth{ background: rgba(63,185,80,0.15); color: var(--green); }
+  .tag-metals{ background: rgba(188,140,255,0.15); color: var(--purple); }
+  .tag-infl  { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-policy{ background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-val   { background: rgba(63,185,80,0.15); color: var(--green); }
+  .tag-vol   { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-semi  { background: rgba(57,210,192,0.15); color: var(--cyan); }
+  .tag-credit{ background: rgba(188,140,255,0.15); color: var(--purple); }
+  .tag-space { background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-misc  { background: rgba(139,148,158,0.15); color: var(--muted); }
+  .section { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 16px; }
+  .section h2 { color: #fff; font-size: 1.15em; margin-bottom: 12px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+  .section h3 { color: var(--accent); font-size: 0.95em; margin: 14px 0 6px; }
+  .article { margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .article:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .article-title { color: #fff; font-weight: 700; font-size: 0.95em; margin-bottom: 4px; }
+  .article-title-cn { color: var(--muted); font-size: 0.85em; margin-bottom: 8px; }
+  .article p { font-size: 0.9em; margin: 6px 0; }
+  .data-point { background: rgba(255,255,255,0.03); padding: 8px 12px; border-radius: 6px; margin: 8px 0; font-size: 0.85em; }
+  .data-point .num { color: #fff; font-weight: 700; }
+  .implication { background: rgba(88,166,255,0.06); border-left: 3px solid var(--accent); padding: 10px 14px; margin: 10px 0; border-radius: 0 6px 6px 0; font-size: 0.88em; }
+  .implication .label { color: var(--accent); font-weight: 700; font-size: 0.8em; text-transform: uppercase; margin-bottom: 4px; }
+  .callout { background: rgba(210,153,34,0.08); border: 1px solid rgba(210,153,34,0.3); border-radius: 6px; padding: 16px; margin: 16px 0; }
+  .callout-title { color: var(--yellow); font-weight: 700; font-size: 0.95em; margin-bottom: 8px; }
+  .callout ul { padding-left: 18px; }
+  .callout li { margin: 4px 0; font-size: 0.88em; }
+  ul { padding-left: 18px; }
+  li { margin: 3px 0; font-size: 0.88em; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(255,255,255,0.03); padding: 12px; border-radius: 6px; text-align: center; }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: #fff; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
+  .toc { background: rgba(88,166,255,0.05); border: 1px solid rgba(88,166,255,0.2); border-radius: 8px; padding: 16px 20px; margin-bottom: 20px; }
+  .toc-title { color: var(--accent); font-weight: 700; font-size: 0.9em; margin-bottom: 8px; }
+  .toc a { color: var(--accent); text-decoration: none; font-size: 0.88em; }
+  .toc a:hover { text-decoration: underline; }
+  .toc ol { padding-left: 20px; }
+  .toc li { margin: 4px 0; }
+  .nav-links { display: flex; justify-content: space-between; margin: 20px 0; font-size: 0.85em; }
+  .nav-links a { color: var(--accent); text-decoration: none; }
+  .nav-links a:hover { text-decoration: underline; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(255,255,255,0.03); padding: 12px; border-radius: 6px; text-align: center; }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: #fff; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
+  .footer { text-align: center; color: var(--muted); font-size: 0.75em; margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--border); }
+</style>
+<script>if(window.self===window.top&&sessionStorage.getItem("student_auth")!=="1"){document.body.innerHTML="";window.location.replace("student.html");}</script>
+</head>
+<body>
+
+<h1>彭博研究摘要</h1>
+<p class="subtitle">第23期 | 哈格島危機與中東戰爭下的石油市場</p>
+<span class="issue-badge">2026年三月下旬更新</span>
+
+<div class="nav-links">
+  <span><a href="newsletter_22_japan_inflation.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="toc">
+  <div class="toc-title">目錄</div>
+  <ol>
+    <li><a href="#iran-war-escalation">中東戰爭 五週激戰，和談遙遙無期</a></li>
+    <li><a href="#kharg-island-risk">石油供應 哈格島引爆點：$150油價的催化劑</a></li>
+    <li><a href="#oil-services-credit">能源信用 油服債遭戰爭重創，但流動性護體</a></li>
+    <li><a href="#takeaways">基金經理人重點摘要</a></li>
+  </ol>
+</div>
+
+<div class="section" id="iran-war-escalation">
+  <h2><span class="tag tag-misc">中東戰爭</span> 五週激戰，和談遙遙無期</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--red)">10,000+</div><div class="lbl">美軍對伊朗
+空襲次數</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">5,000+</div><div class="lbl">伊朗發射
+彈道飛彈數</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">21枚/日</div><div class="lbl">伊朗平均
+每日導彈發射</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">伊朗戰爭五週盤點 — 空襲升級、和平無期</div>
+    <p>中東戰爭即將進入第五週，美國與伊朗各自提出停火方案，但條件相距甚遠。美軍已對伊朗發動超過 <span style="color:#fff;font-weight:700">10,000次</span> 空襲，以色列持續斬首伊朗軍事領導層並打擊國防工業設施。特朗普已增派海軍陸戰隊及可能的第82空降師部隊至中東，並正考慮在伊朗領土部署地面部隊以重新開放霍爾木茲海峽。伊朗方面已發射超過 <span style="color:#fff;font-weight:700">5,000枚</span> 各式飛彈，平均每日 <span style="color:#fff;font-weight:700">21枚</span>，命中率持續提升，成功打擊海灣國家能源基礎設施，並有一枚導彈擊中以色列迪莫納核設施附近。伊朗更向迪戈加西亞發射彈道導彈，將已知射程延伸約 <span style="color:#fff;font-weight:700">2,000公里</span>。</p>
+    <div class="data-point">美軍空襲次數：<span style="color:#fff;font-weight:700">10,000+</span> &nbsp;|&nbsp; 伊朗發射飛彈：<span style="color:#fff;font-weight:700">5,000+枚</span> &nbsp;|&nbsp; 特朗普重開海峽最後期限：<span style="color:#fff;font-weight:700">4月6日</span> &nbsp;|&nbsp; 全球石油供應受阻比例：<span style="color:#fff;font-weight:700">約1/5</span></div>
+    <div class="implication"><div class="label">投資啟示</div>短期內戰事料進一步升級，尤其地面部隊部署風險。油價將持續受地緣headlines驅動 — <span style="color:#fff;font-weight:700">維持能源多頭敞口</span>，同時<span style="color:#fff;font-weight:700">買入原油看漲期權</span>對沖尾部風險。</div>
+  </div>
+</div>
+
+<div class="section" id="kharg-island-risk">
+  <h2><span class="tag tag-misc">石油供應</span> 哈格島引爆點：$150油價的催化劑</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--red)">~$150</div><div class="lbl">布蘭特原油
+已攀升至（美元/桶）</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">1.7百萬桶/日</div><div class="lbl">哈格島處理量
+（佔伊朗出口90%）</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">10百萬桶+</div><div class="lbl">全球已受限
+日產量</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">哈格島成油價下一引爆點 — 海灣供應衝擊風險攀升</div>
+    <p>哈格島處理伊朗約 <span style="color:#fff;font-weight:700">90%</span> 的原油出口，日均約 <span style="color:#fff;font-weight:700">170萬桶</span>，正成為油價的關鍵壓力點。隨著衝突進入第四週，該終端被視為美國反制德黑蘭控制霍爾木茲海峽的潛在籌碼。若美軍對哈格島發動打擊，伊朗最可能的反應是報復性攻擊沙特、阿聯酋和伊拉克的能源基礎設施，類似 <span style="color:#fff;font-weight:700">2019年Abqaiq襲擊</span> 曾一度移除逾 <span style="color:#fff;font-weight:700">500萬桶/日</span> 產能。即便僅部分中斷 <span style="color:#fff;font-weight:700">50-100萬桶/日</span>，也足以實質性收緊市場 — 中國作為伊朗廉價原油主要買家首當其衝，替代貨源來自俄羅斯或大西洋盆地但成本更高、運輸時間更長，進一步推升邊際桶價格。</p>
+    <div class="data-point">哈格島佔伊朗出口：<span style="color:#fff;font-weight:700">90%（~170萬桶/日）</span> &nbsp;|&nbsp; 部分中斷影響：<span style="color:#fff;font-weight:700">50-100萬桶/日</span> &nbsp;|&nbsp; 2019年Abqaiq先例：<span style="color:#fff;font-weight:700">移除500萬桶/日</span> &nbsp;|&nbsp; 主要受影響方：<span style="color:#fff;font-weight:700">中國</span></div>
+    <div class="implication"><div class="label">投資啟示</div>哈格島不是二元結局 — 即便部分中斷也會推升價差與運費。<span style="color:#fff;font-weight:700">增持Brent-WTI價差多頭</span>，<span style="color:#fff;font-weight:700">做多油運股（VLCC船東）</span>。中國煉廠成本上升利空下游石化。</div>
+  </div>
+</div>
+
+<div class="section" id="oil-services-credit">
+  <h2><span class="tag tag-misc">能源信用</span> 油服債遭戰爭重創，但流動性護體</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--red)">-240bps</div><div class="lbl">Weatherford債券
+跌幅（最大）</div></div>
+    <div class="stat"><div class="val" style="color:var(--green)">$730百萬</div><div class="lbl">Nabors流動性
+（無到期至2029）</div></div>
+    <div class="stat"><div class="val">~2.4x</div><div class="lbl">Nabors槓桿率
+（2026E）</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">油服債券遭伊朗戰爭重創 — 但復甦路徑可期</div>
+    <p>中東戰爭爆發以來，油田服務與鑽井公司債券顯著跑輸高收益能源板塊。Nabors 2031/2032年到期債券損失 <span style="color:#fff;font-weight:700">55-92個基點</span>，其沙特Aramco合資企業SANAD佔合併收入 <span style="color:#fff;font-weight:700">30%</span>。Weatherford受創更重，中東及北非佔其收入 <span style="color:#fff;font-weight:700">43%</span>，債券損失高達 <span style="color:#fff;font-weight:700">240個基點</span>。然而，兩家公司流動性充足 — Nabors擁有 <span style="color:#fff;font-weight:700">$7.3億</span> 流動性且債務最早至 <span style="color:#fff;font-weight:700">2029年</span> 才到期，Weatherford握有 <span style="color:#fff;font-weight:700">$15億</span> 流動性。Bloomberg高收益能源指數整體僅下跌 <span style="color:#fff;font-weight:700">38個基點</span>，顯示市場對油服板塊的懲罰遠超行業均值。戰爭持續時間將是信用結果的關鍵變量。</p>
+    <div class="data-point">Nabors債券跌幅：<span style="color:#fff;font-weight:700">55-92bps</span> &nbsp;|&nbsp; Weatherford債券跌幅：<span style="color:#fff;font-weight:700">最高240bps</span> &nbsp;|&nbsp; HY能源指數跌幅：<span style="color:#fff;font-weight:700">38bps</span> &nbsp;|&nbsp; Nabors 2026E Ebitda：<span style="color:#fff;font-weight:700">~$9億</span></div>
+    <div class="implication"><div class="label">投資啟示</div>油服債超跌提供逆向機會。Nabors流動性充裕、槓桿可控 — 若戰爭在H2結束，<span style="color:#fff;font-weight:700">逢低吸納Nabors 2031債券</span>。Weatherford中東敞口過大，等待戰事明朗化再介入。</div>
+  </div>
+</div>
+
+<div class="callout" id="takeaways">
+  <div class="callout-title">基金經理人重點摘要</div>
+  <ul>
+    <li><strong>地緣局勢：</strong>伊朗戰爭進入第五週，美軍考慮地面部署，4月6日為重開霍爾木茲海峽最後期限。短期升級概率高，**維持能源多頭並買入尾部對沖**。</li>
+    <li><strong>油價：</strong>布蘭特已逼近 **$150**，哈格島成下一催化劑。即便部分中斷（50-100萬桶/日）也將收緊市場。**做多Brent-WTI價差與油運股**。</li>
+    <li><strong>中國影響：</strong>中國高度依賴伊朗廉價原油，替代貨源成本更高。煉廠利潤承壓，**減持中國下游石化敞口**。</li>
+    <li><strong>油服信用：</strong>Nabors、Weatherford債券遭超額拋售，但流動性充足。**Nabors 2031債券具逆向價值**，Weatherford暫觀望。</li>
+    <li><strong>風險情景：</strong>若哈格島遇襲引發海灣全面報復，油價將遠超$150。**確保投資組合有能源尾部風險保護**。</li>
+  </ul>
+</div>
+
+<div class="nav-links">
+  <span><a href="newsletter_22_japan_inflation.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="footer">
+  彭博研究摘要 | 僅供教學與討論用途 | 2026年3月29日<br>
+  資料來源：Bloomberg Intelligence, Bloomberg Economics, Bloomberg News
+</div>
+
+</body>
+</html>

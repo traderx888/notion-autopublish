@@ -43,18 +43,15 @@
 </style>
 </head>
 <body>
-
 <div id="gate">
-  <div class="gate-box">
-    <h2>學生版登入</h2>
-    <p>請輸入密碼以瀏覽全部期數</p>
-    <input id="pw" type="password" placeholder="密碼" autofocus
-           onkeydown="if(event.key==='Enter')verify()"/>
-    <button onclick="verify()">進入</button>
-    <div id="gate-err" class="gate-err">密碼錯誤，請重試</div>
-  </div>
+<div class="gate-box">
+<h2>學生版登入</h2>
+<p>請輸入密碼以瀏覽全部期數</p>
+<input autofocus="" id="pw" onkeydown="if(event.key==='Enter')verify()" placeholder="密碼" type="password"/>
+<button onclick="verify()">進入</button>
+<div class="gate-err" id="gate-err">密碼錯誤，請重試</div>
 </div>
-
+</div>
 <div id="content">
 <h1>研究摘要</h1>
 <div class="subtitle">彭博研究 — 2026年3月中旬更新</div>
@@ -568,13 +565,62 @@
     3 articles
   </div>
 </a>
+<a class="card" href="newsletter_20_china.html">
+<div class="card-header">
+<span class="card-icon">💰</span>
+<span class="card-title">第20期 — 中國再通膨與板塊分化</span>
+<span class="card-date">2026年3月29日</span>
+</div>
+<div class="card-desc">
+<span class="tag tag-china">中國</span>
+<br/>
+    5 articles
+  </div>
+</a>
+<a class="card" href="newsletter_21_growth.html">
+<div class="card-header">
+<span class="card-icon">🌐</span>
+<span class="card-title">第21期 — 資金大逃殺與中國利潤反彈</span>
+<span class="card-date">2026年3月29日</span>
+</div>
+<div class="card-desc">
+<span class="tag tag-growth">成長</span>
+<br/>
+    3 articles
+  </div>
+</a>
+<a class="card" href="newsletter_22_japan_inflation.html">
+<div class="card-header">
+<span class="card-icon">⚡</span>
+<span class="card-title">第22期 — 通膨火燒連營與日銀棋局</span>
+<span class="card-date">2026年3月29日</span>
+</div>
+<div class="card-desc">
+<span class="tag tag-japan">日本</span>
+<span class="tag tag-infl">通膨</span>
+<br/>
+    4 articles
+  </div>
+</a>
+<a class="card" href="newsletter_23_oil_geopolitics.html">
+<div class="card-header">
+<span class="card-icon">🔥</span>
+<span class="card-title">第23期 — 哈格島危機與中東戰爭下的石油市場</span>
+<span class="card-date">2026年3月29日</span>
+</div>
+<div class="card-desc">
+<span class="tag tag-oil">石油</span>
+<span class="tag tag-geo">地緣政治</span>
+<br/>
+    3 articles
+  </div>
+</a>
 
 <div class="footer">
   僅供教學與討論用途，不構成投資建議。<br/>
   © 2026 Jeff 研究摘要
 </div>
 </div><!-- end #content -->
-
 <script>
 var H='cc4e157fae3281cfd0d2887016cf2dfa61223876272882d0ca9b3b7c4aea47de';
 async function sha256(s){var e=new TextEncoder().encode(s);var h=await crypto.subtle.digest('SHA-256',e);return Array.from(new Uint8Array(h)).map(function(b){return b.toString(16).padStart(2,'0')}).join('');}

@@ -1,6 +1,6 @@
 {
-  "lastRunAt": "2026-03-26T15:55:53+08:00",
-  "lastNewsletterNumber": 19,
+  "lastRunAt": "2026-03-29T01:48:25+08:00",
+  "lastNewsletterNumber": 23,
   "processedFiles": {
     "2026 Outlook Global Aluminum Producers #metals.pdf": {
       "processedAt": "2026-03-26T15:52:49+08:00",
@@ -1257,6 +1257,188 @@
         "china"
       ],
       "newsletterNumber": 10
+    },
+    "Anthropic Weighs IPO as Soon as October #semiconductor.pdf": {
+      "processedAt": "2026-03-29T01:48:08+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\Anthropic Weighs IPO as Soon as October.md",
+      "topics": [
+        "semiconductor"
+      ],
+      "newsletterNumber": null
+    },
+    "Bank Bonds Private-Credit Link Recession Risk #credit.pdf": {
+      "processedAt": "2026-03-29T01:48:08+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\Bank Bonds Private-Credit Link Recession Risk.md",
+      "topics": [
+        "credit"
+      ],
+      "newsletterNumber": null
+    },
+    "BofA Hartnett The Flow Show The Lame Buck #growth #volatility #policy.pdf": {
+      "processedAt": "2026-03-29T01:48:11+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\BofA Hartnett The Flow Show The Lame Buck.md",
+      "topics": [
+        "growth",
+        "volatility",
+        "policy"
+      ],
+      "newsletterNumber": 21
+    },
+    "BOJ New CPI Indicator Output Gap Revision #japan #inflation #policy.pdf": {
+      "processedAt": "2026-03-29T01:48:12+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\BOJ New CPI Indicator Output Gap Revision.md",
+      "topics": [
+        "japan",
+        "inflation",
+        "policy"
+      ],
+      "newsletterNumber": 22
+    },
+    "China Industrial Profits Reflation Recovery Part 2 #china #inflation #growth.pdf": {
+      "processedAt": "2026-03-29T01:48:13+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\China Industrial Profits Reflation Recovery Part 2.md",
+      "topics": [
+        "china",
+        "inflation",
+        "growth"
+      ],
+      "newsletterNumber": 20
+    },
+    "China Industrial Profits Surge Reflation Recovery #china #inflation #growth.pdf": {
+      "processedAt": "2026-03-29T01:48:13+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\China Industrial Profits Surge Reflation Recovery.md",
+      "topics": [
+        "china",
+        "inflation",
+        "growth"
+      ],
+      "newsletterNumber": 20
+    },
+    "CHINA PREVIEW Profit Growth Li #growth #china.pdf": {
+      "processedAt": "2026-03-29T01:48:13+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\CHINA PREVIEW Profit Growth Li.md",
+      "topics": [
+        "growth",
+        "china"
+      ],
+      "newsletterNumber": 21
+    },
+    "Iran War by the Numbers More Strikes No Peace #geopolitics #oil.pdf": {
+      "processedAt": "2026-03-29T01:48:14+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\Iran War by the Numbers More Strikes No Peace.md",
+      "topics": [
+        "geopolitics",
+        "oil"
+      ],
+      "newsletterNumber": 23
+    },
+    "JPM China Gold Tactical Entry Zijin SD Gold #china #metals.pdf": {
+      "processedAt": "2026-03-29T01:48:20+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\JPM China Gold Tactical Entry Zijin SD Gold.md",
+      "topics": [
+        "china",
+        "metals"
+      ],
+      "newsletterNumber": 20
+    },
+    "Kharg Risk Gulf Supply Shock Higher Oil #oil #geopolitics.pdf": {
+      "processedAt": "2026-03-29T01:48:20+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\Kharg Risk Gulf Supply Shock Higher Oil.md",
+      "topics": [
+        "oil",
+        "geopolitics"
+      ],
+      "newsletterNumber": 23
+    },
+    "Meta Alphabet Addiction Lawsuits Limited Impact.pdf": {
+      "processedAt": "2026-03-29T01:48:20+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\Meta Alphabet Addiction Lawsuits Limited Impact.md",
+      "topics": [],
+      "newsletterNumber": null
+    },
+    "MS Korea Tech FC-BGA GPU System-Level AI Upcycle #semiconductor.pdf": {
+      "processedAt": "2026-03-29T01:48:21+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\MS Korea Tech FC-BGA GPU System-Level AI Upcycle.md",
+      "topics": [
+        "semiconductor"
+      ],
+      "newsletterNumber": null
+    },
+    "MS Softbank NAV Discount ARM OpenAI #japan #valuations.pdf": {
+      "processedAt": "2026-03-29T01:48:22+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\MS Softbank NAV Discount ARM OpenAI.md",
+      "topics": [
+        "japan",
+        "valuations"
+      ],
+      "newsletterNumber": 22
+    },
+    "Oil Services Bonds Iran War Recovery Path #oil #credit #geopolitics.pdf": {
+      "processedAt": "2026-03-29T01:48:22+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\Oil Services Bonds Iran War Recovery Path.md",
+      "topics": [
+        "oil",
+        "credit",
+        "geopolitics"
+      ],
+      "newsletterNumber": 23
+    },
+    "Pop Mart 9992 HK Structural Reset DG to SELL #china.pdf": {
+      "processedAt": "2026-03-29T01:48:23+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\Pop Mart 9992 HK Structural Reset DG to SELL.md",
+      "topics": [
+        "china"
+      ],
+      "newsletterNumber": 20
+    },
+    "Private Credit Exit Fight Showing Its Limits #credit.pdf": {
+      "processedAt": "2026-03-29T01:48:23+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\Private Credit Exit Fight Showing Its Limits.md",
+      "topics": [
+        "credit"
+      ],
+      "newsletterNumber": null
+    },
+    "SenseTime Group DBS BUY GenAI Scaling #china #semiconductor.pdf": {
+      "processedAt": "2026-03-29T01:48:25+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\SenseTime Group DBS BUY GenAI Scaling.md",
+      "topics": [
+        "china",
+        "semiconductor"
+      ],
+      "newsletterNumber": 20
+    },
+    "UMich Sentiment Inflation Fears Consumer Toll #inflation #growth.pdf": {
+      "processedAt": "2026-03-29T01:48:25+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\UMich Sentiment Inflation Fears Consumer Toll.md",
+      "topics": [
+        "inflation",
+        "growth"
+      ],
+      "newsletterNumber": 22
+    },
+    "US Equity Funds Biggest Outflow 13 Weeks BofA #growth #volatility.pdf": {
+      "processedAt": "2026-03-29T01:48:25+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\US Equity Funds Biggest Outflow 13 Weeks BofA.md",
+      "topics": [
+        "growth",
+        "volatility"
+      ],
+      "newsletterNumber": 21
+    },
+    "US March CPI Preview Red-Hot Gasoline Driven #inflation.pdf": {
+      "processedAt": "2026-03-29T01:48:25+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\US March CPI Preview Red-Hot Gasoline Driven.md",
+      "topics": [
+        "inflation"
+      ],
+      "newsletterNumber": 22
+    },
+    "World's Top Companies Keep Delivering But AI's Bar Is Rising.pdf": {
+      "processedAt": "2026-03-29T01:48:25+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\World's Top Companies Keep Delivering But AI's Bar Is Rising.md",
+      "topics": [],
+      "newsletterNumber": null
     }
   },
   "newsletters": {
@@ -1370,6 +1552,40 @@
       "articleCount": 3,
       "topics": [
         "credit"
+      ]
+    },
+    "20": {
+      "filename": "newsletter_20_china.html",
+      "generatedAt": "2026-03-29T01:50:46+08:00",
+      "articleCount": 5,
+      "topics": [
+        "china"
+      ]
+    },
+    "21": {
+      "filename": "newsletter_21_growth.html",
+      "generatedAt": "2026-03-29T01:51:36+08:00",
+      "articleCount": 3,
+      "topics": [
+        "growth"
+      ]
+    },
+    "22": {
+      "filename": "newsletter_22_japan_inflation.html",
+      "generatedAt": "2026-03-29T01:52:48+08:00",
+      "articleCount": 4,
+      "topics": [
+        "japan",
+        "inflation"
+      ]
+    },
+    "23": {
+      "filename": "newsletter_23_oil_geopolitics.html",
+      "generatedAt": "2026-03-29T01:53:51+08:00",
+      "articleCount": 3,
+      "topics": [
+        "oil",
+        "geopolitics"
       ]
     }
   },

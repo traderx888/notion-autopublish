@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>彭博研究摘要 #20 — 中國再通膨與板塊分化</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --accent: #58a6ff;
+          --green: #3fb950; --red: #f85149; --yellow: #d29922; --text: #c9d1d9; --muted: #8b949e;
+          --orange: #f0883e; --purple: #bc8cff; --cyan: #39d2c0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans TC', 'Microsoft JhengHei', Helvetica, Arial, sans-serif; line-height: 1.7; padding: 20px; max-width: 860px; margin: 0 auto; }
+  h1 { color: #fff; font-size: 1.7em; margin-bottom: 4px; }
+  .subtitle { color: var(--muted); font-size: 0.9em; margin-bottom: 8px; }
+  .issue-badge { display: inline-block; background: rgba(88,166,255,0.15); color: var(--accent); padding: 3px 10px; border-radius: 12px; font-size: 0.8em; font-weight: 600; margin-bottom: 20px; }
+  .tag { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 0.72em; font-weight: 600; margin-right: 4px; }
+  .tag-rates { background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-china { background: rgba(240,136,62,0.15); color: var(--orange); }
+  .tag-japan { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-geo   { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-oil   { background: rgba(210,153,34,0.15); color: var(--yellow); }
+  .tag-trade { background: rgba(210,153,34,0.15); color: var(--yellow); }
+  .tag-growth{ background: rgba(63,185,80,0.15); color: var(--green); }
+  .tag-metals{ background: rgba(188,140,255,0.15); color: var(--purple); }
+  .tag-infl  { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-policy{ background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-val   { background: rgba(63,185,80,0.15); color: var(--green); }
+  .tag-vol   { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-semi  { background: rgba(57,210,192,0.15); color: var(--cyan); }
+  .tag-credit{ background: rgba(188,140,255,0.15); color: var(--purple); }
+  .tag-space { background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-misc  { background: rgba(139,148,158,0.15); color: var(--muted); }
+  .section { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 16px; }
+  .section h2 { color: #fff; font-size: 1.15em; margin-bottom: 12px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+  .section h3 { color: var(--accent); font-size: 0.95em; margin: 14px 0 6px; }
+  .article { margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .article:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .article-title { color: #fff; font-weight: 700; font-size: 0.95em; margin-bottom: 4px; }
+  .article-title-cn { color: var(--muted); font-size: 0.85em; margin-bottom: 8px; }
+  .article p { font-size: 0.9em; margin: 6px 0; }
+  .data-point { background: rgba(255,255,255,0.03); padding: 8px 12px; border-radius: 6px; margin: 8px 0; font-size: 0.85em; }
+  .data-point .num { color: #fff; font-weight: 700; }
+  .implication { background: rgba(88,166,255,0.06); border-left: 3px solid var(--accent); padding: 10px 14px; margin: 10px 0; border-radius: 0 6px 6px 0; font-size: 0.88em; }
+  .implication .label { color: var(--accent); font-weight: 700; font-size: 0.8em; text-transform: uppercase; margin-bottom: 4px; }
+  .callout { background: rgba(210,153,34,0.08); border: 1px solid rgba(210,153,34,0.3); border-radius: 6px; padding: 16px; margin: 16px 0; }
+  .callout-title { color: var(--yellow); font-weight: 700; font-size: 0.95em; margin-bottom: 8px; }
+  .callout ul { padding-left: 18px; }
+  .callout li { margin: 4px 0; font-size: 0.88em; }
+  ul { padding-left: 18px; }
+  li { margin: 3px 0; font-size: 0.88em; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(255,255,255,0.03); padding: 12px; border-radius: 6px; text-align: center; }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: #fff; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
+  .toc { background: rgba(88,166,255,0.05); border: 1px solid rgba(88,166,255,0.2); border-radius: 8px; padding: 16px 20px; margin-bottom: 20px; }
+  .toc-title { color: var(--accent); font-weight: 700; font-size: 0.9em; margin-bottom: 8px; }
+  .toc a { color: var(--accent); text-decoration: none; font-size: 0.88em; }
+  .toc a:hover { text-decoration: underline; }
+  .toc ol { padding-left: 20px; }
+  .toc li { margin: 4px 0; }
+  .nav-links { display: flex; justify-content: space-between; margin: 20px 0; font-size: 0.85em; }
+  .nav-links a { color: var(--accent); text-decoration: none; }
+  .nav-links a:hover { text-decoration: underline; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(255,255,255,0.03); padding: 12px; border-radius: 6px; text-align: center; }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: #fff; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
+  .footer { text-align: center; color: var(--muted); font-size: 0.75em; margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--border); }
+</style>
+<script>if(window.self===window.top&&sessionStorage.getItem("student_auth")!=="1"){document.body.innerHTML="";window.location.replace("student.html");}</script>
+</head>
+<body>
+
+<h1>彭博研究摘要</h1>
+<p class="subtitle">第20期 | 中國再通膨與板塊分化</p>
+<span class="issue-badge">2026年三月下旬更新</span>
+
+<div class="nav-links">
+  <span><a href="newsletter_19_credit.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="toc">
+  <div class="toc-title">目錄</div>
+  <ol>
+    <li><a href="#china-reflation">再通膨 工業利潤大增，再通膨曙光初現</a></li>
+    <li><a href="#china-gold">黃金 金價回調兩成，摩根大通喊買</a></li>
+    <li><a href="#china-consumer">消費 泡泡瑪特Labubu神話破滅，降至賣出</a></li>
+    <li><a href="#china-ai">人工智能 商湯科技GenAI放量，虧損收窄在望</a></li>
+    <li><a href="#takeaways">基金經理人重點摘要</a></li>
+  </ol>
+</div>
+
+<div class="section" id="china-reflation">
+  <h2><span class="tag tag-misc">再通膨</span> 工業利潤大增，再通膨曙光初現</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--green)">+15.2%</div><div class="lbl">1-2月工業利潤
+同比增速</div></div>
+    <div class="stat"><div class="val" style="color:var(--green)">0.8%</div><div class="lbl">2026年PPI預測
+（上調自0.4%）</div></div>
+    <div class="stat"><div class="val" style="color:var(--green)">+58.7%</div><div class="lbl">高技術製造業
+利潤增速</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">利潤大增預示中國企業盈利或在再通膨推動下持續復甦</div>
+    <p>2026年前兩個月中國工業企業利潤同比增長 <span style="color:#fff;font-weight:700">15.2%</span>，遠超去年12月的 <span style="color:#fff;font-weight:700">5.3%</span> 和2025年全年的 <span style="color:#fff;font-weight:700">0.6%</span>，也顯著高於彭博此前預估的 <span style="color:#fff;font-weight:700">10.6%</span>。製造業利潤增長 <span style="color:#fff;font-weight:700">18.9%</span>，采礦業由去年的 <span style="color:#fff;font-weight:700">-26.2%</span> 轉為增長 <span style="color:#fff;font-weight:700">9.9%</span>。高技術製造業是最大亮點，利潤飆升 <span style="color:#fff;font-weight:700">58.7%</span>，拉動全部規上工業利潤增長 <span style="color:#fff;font-weight:700">7.9個百分點</span>。IT和電子製造業利潤接近翻倍，有色金屬冶煉業利潤更飆升約 <span style="color:#fff;font-weight:700">150%</span>。不過，原材料成本上漲正侵蝕下游家具和服裝企業利潤。伊朗戰爭帶來雙面影響：全球需求受衝擊拖累製造業，但能源價格上漲推高出廠價，彭博已將2026年PPI預測從 <span style="color:#fff;font-weight:700">0.4%</span> 上調至 <span style="color:#fff;font-weight:700">0.8%</span>，整體PPI最早 <span style="color:#fff;font-weight:700">3月</span> 轉正。</p>
+    <div class="data-point">1-2月工業利潤增速：<span style="color:#fff;font-weight:700">15.2%</span>（前值5.3%） &nbsp;|&nbsp; 製造業利潤增速：<span style="color:#fff;font-weight:700">18.9%</span> &nbsp;|&nbsp; 高技術製造業：<span style="color:#fff;font-weight:700">+58.7%</span> &nbsp;|&nbsp; 有色金屬冶煉：<span style="color:#fff;font-weight:700">+~150%</span></div>
+    <div class="implication"><div class="label">投資啟示</div>PPI轉正在即，<span style="color:#fff;font-weight:700">做多上游資源及高技術製造業</span>龍頭。下游消費品企業面臨成本擠壓，<span style="color:#fff;font-weight:700">暫時迴避家具、服裝板塊</span>。</div>
+  </div>
+</div>
+
+<div class="section" id="china-gold">
+  <h2><span class="tag tag-misc">黃金</span> 金價回調兩成，摩根大通喊買</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--orange)">~US$4,200/oz</div><div class="lbl">金價回調至
+（高位跌逾20%）</div></div>
+    <div class="stat"><div class="val" style="color:var(--green)">13x</div><div class="lbl">紫金國際黃金
+FY26E P/E</div></div>
+    <div class="stat"><div class="val" style="color:var(--green)">64%</div><div class="lbl">紫金國際黃金
+三年盈利CAGR</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">金價回調創造戰術性入場點——首予紫金國際黃金及山東黃金評級</div>
+    <p>金價從 <span style="color:#fff;font-weight:700">US$5,000/oz</span> 以上回調逾 <span style="color:#fff;font-weight:700">20%</span> 至約 <span style="color:#fff;font-weight:700">US$4,200/oz</span>，中東衝突觸發去風險拋售而非避險買盤，中國黃金股從1月28日高位下跌 <span style="color:#fff;font-weight:700">30-32%</span>。摩根大通認為這是結構性牛市中的戰術性回調，首予紫金國際黃金（Zijin Gold）<span style="color:#fff;font-weight:700">增持</span>評級，山東黃金A/H股予<span style="color:#fff;font-weight:700">中性</span>。紫金國際黃金為首選，FY26E市盈率僅 <span style="color:#fff;font-weight:700">13倍</span>，三年盈利CAGR高達 <span style="color:#fff;font-weight:700">64%</span>，FY25資本回報率 <span style="color:#fff;font-weight:700">29%</span> 遠超行業均值 <span style="color:#fff;font-weight:700">19%</span>。Allied Gold收購預計2H26起貢獻產量，至2029年可增加約 <span style="color:#fff;font-weight:700">50%</span> 產量。黃金價格歷來解釋超過 <span style="color:#fff;font-weight:700">70%</span> 的股價回報，而板塊估值仍在 <span style="color:#fff;font-weight:700">~20倍</span> 一年前瞻P/E，遠低於歷史峰值 <span style="color:#fff;font-weight:700">50-100倍</span>，仍有擴張空間。</p>
+    <div class="data-point">金價回調幅度：<span style="color:#fff;font-weight:700">&gt;20%</span>（自US$5,000/oz） &nbsp;|&nbsp; 紫金國際黃金FY26E P/E：<span style="color:#fff;font-weight:700">13x</span>，ROLTA：<span style="color:#fff;font-weight:700">29%</span> &nbsp;|&nbsp; 山東黃金：評級<span style="color:#fff;font-weight:700">中性</span>（成本壓力+指引執行紀錄參差）</div>
+    <div class="implication"><div class="label">投資啟示</div>結構性牛市中的回調提供入場窗口。<span style="color:#fff;font-weight:700">戰術性增持紫金國際黃金（2099 HK）</span>，央行持續購金與投資者配置需求為長期支撐。山東黃金成本端有壓力，<span style="color:#fff;font-weight:700">觀望為主</span>。</div>
+  </div>
+</div>
+
+<div class="section" id="china-consumer">
+  <h2><span class="tag tag-misc">消費</span> 泡泡瑪特Labubu神話破滅，降至賣出</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--orange)">RMB13bn</div><div class="lbl">FY25淨利潤
+低於市場高預期</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">≥20%</div><div class="lbl">FY26營收增速指引
+（vs FY25 +185%）</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">-32%/-43%</div><div class="lbl">26/27E淨利潤
+下調幅度</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">Pop Mart結構性重估：由買入降至賣出</div>
+    <p>招商證券將泡泡瑪特（9992 HK）從 <span style="color:#fff;font-weight:700">買入</span> 降至 <span style="color:#fff;font-weight:700">賣出</span>，目標價基於 <span style="color:#fff;font-weight:700">11倍</span>（此前21倍）2026年底預測市盈率。FY25淨利潤 <span style="color:#fff;font-weight:700">RMB 130億</span>，淨利率 <span style="color:#fff;font-weight:700">34.4%</span> 均低於市場預期。更關鍵的是管理層給出FY26營收增速 <span style="color:#fff;font-weight:700">「不低於20%」</span> 的指引，較FY25的 <span style="color:#fff;font-weight:700">185%</span> 斷崖式放緩，遠低於市場 <span style="color:#fff;font-weight:700">30%-50%</span> 的預期。招商認為這不是一次性失速，而是結構性重估——市場必須重新審視Labubu單一IP依賴的核心風險。海外收入預測被大幅下調：美國及泰國單店銷售假設下調 <span style="color:#fff;font-weight:700">20%-30%</span>，2026/27年海外收入分別削減 <span style="color:#fff;font-weight:700">52%/60%</span>。公司承諾自2026年5月起提供季度財務更新，但重建投資者信心需要時間。</p>
+    <div class="data-point">FY26指引：營收增速 <span style="color:#fff;font-weight:700">≥20%</span>（vs FY25 +185%） &nbsp;|&nbsp; 2026/27E淨利潤下調：<span style="color:#fff;font-weight:700">-32%/-43%</span> &nbsp;|&nbsp; 目標倍數：<span style="color:#fff;font-weight:700">11x</span>（-1sd，此前21x +1sd） &nbsp;|&nbsp; 海外收入下調：<span style="color:#fff;font-weight:700">52%/60%</span></div>
+    <div class="implication"><div class="label">投資啟示</div>單一IP風險兌現，增長邏輯需要證偽後才能重建。<span style="color:#fff;font-weight:700">減持泡泡瑪特</span>，等待新IP複製成功的具體證據。短期內反彈可作為<span style="color:#fff;font-weight:700">減倉窗口</span>。</div>
+  </div>
+</div>
+
+<div class="section" id="china-ai">
+  <h2><span class="tag tag-misc">人工智能</span> 商湯科技GenAI放量，虧損收窄在望</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--green)">29%</div><div class="lbl">FY25-28F
+營收CAGR</div></div>
+    <div class="stat"><div class="val">12%</div><div class="lbl">中國大模型平台
+市場份額（1H25）</div></div>
+    <div class="stat"><div class="val" style="color:var(--green)">FY26F</div><div class="lbl">調整後EBITDA
+預計轉正</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">商湯科技：靈活擴張的純AI標的</div>
+    <p>DBS維持商湯科技（0020 HK）<span style="color:#fff;font-weight:700">買入</span>評級，目標價 <span style="color:#fff;font-weight:700">HKD 2.5</span>，基於 <span style="color:#fff;font-weight:700">13倍</span> FY26F EV/Sales（約為兩年均值9倍的+1個標準差）。商湯在中國大模型平台市場以 <span style="color:#fff;font-weight:700">12%</span> 份額位列第三，多模態GenAI能力（文本+圖像+音頻+視頻）為其核心壁壘。DBS上調FY26/27F收入各 <span style="color:#fff;font-weight:700">3%</span>，預測FY25-28F營收CAGR達 <span style="color:#fff;font-weight:700">29%</span>，受惠於企業GenAI需求尤其是多模態應用（AI伴侶、AI教學、具身智能等）加速落地。成本端，自FY21以來員工人數幾近減半，「1+X」策略下各業務由獨立CEO運營，改善成本紀律。早期業務佔集團虧損大部分，一旦外部融資稀釋商湯持股至 <span style="color:#fff;font-weight:700">50%以下</span>，可望出表改善底線。DBS預計 <span style="color:#fff;font-weight:700">FY26F</span> 調整後EBITDA將首次轉正。</p>
+    <div class="data-point">FY25-28F營收CAGR：<span style="color:#fff;font-weight:700">29%</span> &nbsp;|&nbsp; 大模型市場份額：<span style="color:#fff;font-weight:700">12%</span>（第三） &nbsp;|&nbsp; FY26F調整後EBITDA：<span style="color:#fff;font-weight:700">轉正</span> &nbsp;|&nbsp; 目標價：<span style="color:#fff;font-weight:700">HKD 2.5</span>（13x EV/Sales）</div>
+    <div class="implication"><div class="label">投資啟示</div>中國GenAI賽道加速，商湯是純AI敞口的稀缺標的。<span style="color:#fff;font-weight:700">可逢低建倉</span>，但需關注競爭加劇及企業AI支出放緩風險。EBITDA轉正為關鍵催化劑。</div>
+  </div>
+</div>
+
+<div class="callout" id="takeaways">
+  <div class="callout-title">基金經理人重點摘要</div>
+  <ul>
+    <li><strong>中國再通膨：</strong>工業利潤+15.2%，PPI最快3月轉正。做多上游資源及高技術製造業，迴避下游消費品。</li>
+    <li><strong>黃金：</strong>金價自US$5,000回調逾20%，結構性牛市未改。戰術性增持紫金國際黃金（13x FY26E P/E，64% 3yr CAGR）。</li>
+    <li><strong>泡泡瑪特：</strong>FY26增速指引斷崖式放緩至≥20%（vs FY25 +185%），單一IP風險兌現。減持，等待新IP證據。</li>
+    <li><strong>商湯科技：</strong>GenAI營收加速，FY26F EBITDA料轉正。純AI敞口稀缺，可逢低建倉。</li>
+    <li><strong>伊朗戰爭：</strong>雙面影響——壓制全球需求但推升能源及出廠價格，留意PPI上行風險對通膨交易的催化。</li>
+  </ul>
+</div>
+
+<div class="nav-links">
+  <span><a href="newsletter_19_credit.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="footer">
+  彭博研究摘要 | 僅供教學與討論用途 | 2026年3月29日<br>
+  資料來源：Bloomberg Intelligence, Bloomberg Economics, Bloomberg News
+</div>
+
+</body>
+</html>

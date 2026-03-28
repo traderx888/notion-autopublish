@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>彭博研究摘要 #21 — 資金大逃殺與中國利潤反彈</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --accent: #58a6ff;
+          --green: #3fb950; --red: #f85149; --yellow: #d29922; --text: #c9d1d9; --muted: #8b949e;
+          --orange: #f0883e; --purple: #bc8cff; --cyan: #39d2c0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans TC', 'Microsoft JhengHei', Helvetica, Arial, sans-serif; line-height: 1.7; padding: 20px; max-width: 860px; margin: 0 auto; }
+  h1 { color: #fff; font-size: 1.7em; margin-bottom: 4px; }
+  .subtitle { color: var(--muted); font-size: 0.9em; margin-bottom: 8px; }
+  .issue-badge { display: inline-block; background: rgba(88,166,255,0.15); color: var(--accent); padding: 3px 10px; border-radius: 12px; font-size: 0.8em; font-weight: 600; margin-bottom: 20px; }
+  .tag { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 0.72em; font-weight: 600; margin-right: 4px; }
+  .tag-rates { background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-china { background: rgba(240,136,62,0.15); color: var(--orange); }
+  .tag-japan { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-geo   { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-oil   { background: rgba(210,153,34,0.15); color: var(--yellow); }
+  .tag-trade { background: rgba(210,153,34,0.15); color: var(--yellow); }
+  .tag-growth{ background: rgba(63,185,80,0.15); color: var(--green); }
+  .tag-metals{ background: rgba(188,140,255,0.15); color: var(--purple); }
+  .tag-infl  { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-policy{ background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-val   { background: rgba(63,185,80,0.15); color: var(--green); }
+  .tag-vol   { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-semi  { background: rgba(57,210,192,0.15); color: var(--cyan); }
+  .tag-credit{ background: rgba(188,140,255,0.15); color: var(--purple); }
+  .tag-space { background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-misc  { background: rgba(139,148,158,0.15); color: var(--muted); }
+  .section { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 16px; }
+  .section h2 { color: #fff; font-size: 1.15em; margin-bottom: 12px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+  .section h3 { color: var(--accent); font-size: 0.95em; margin: 14px 0 6px; }
+  .article { margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .article:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .article-title { color: #fff; font-weight: 700; font-size: 0.95em; margin-bottom: 4px; }
+  .article-title-cn { color: var(--muted); font-size: 0.85em; margin-bottom: 8px; }
+  .article p { font-size: 0.9em; margin: 6px 0; }
+  .data-point { background: rgba(255,255,255,0.03); padding: 8px 12px; border-radius: 6px; margin: 8px 0; font-size: 0.85em; }
+  .data-point .num { color: #fff; font-weight: 700; }
+  .implication { background: rgba(88,166,255,0.06); border-left: 3px solid var(--accent); padding: 10px 14px; margin: 10px 0; border-radius: 0 6px 6px 0; font-size: 0.88em; }
+  .implication .label { color: var(--accent); font-weight: 700; font-size: 0.8em; text-transform: uppercase; margin-bottom: 4px; }
+  .callout { background: rgba(210,153,34,0.08); border: 1px solid rgba(210,153,34,0.3); border-radius: 6px; padding: 16px; margin: 16px 0; }
+  .callout-title { color: var(--yellow); font-weight: 700; font-size: 0.95em; margin-bottom: 8px; }
+  .callout ul { padding-left: 18px; }
+  .callout li { margin: 4px 0; font-size: 0.88em; }
+  ul { padding-left: 18px; }
+  li { margin: 3px 0; font-size: 0.88em; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(255,255,255,0.03); padding: 12px; border-radius: 6px; text-align: center; }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: #fff; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
+  .toc { background: rgba(88,166,255,0.05); border: 1px solid rgba(88,166,255,0.2); border-radius: 8px; padding: 16px 20px; margin-bottom: 20px; }
+  .toc-title { color: var(--accent); font-weight: 700; font-size: 0.9em; margin-bottom: 8px; }
+  .toc a { color: var(--accent); text-decoration: none; font-size: 0.88em; }
+  .toc a:hover { text-decoration: underline; }
+  .toc ol { padding-left: 20px; }
+  .toc li { margin: 4px 0; }
+  .nav-links { display: flex; justify-content: space-between; margin: 20px 0; font-size: 0.85em; }
+  .nav-links a { color: var(--accent); text-decoration: none; }
+  .nav-links a:hover { text-decoration: underline; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(255,255,255,0.03); padding: 12px; border-radius: 6px; text-align: center; }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: #fff; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
+  .footer { text-align: center; color: var(--muted); font-size: 0.75em; margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--border); }
+</style>
+<script>if(window.self===window.top&&sessionStorage.getItem("student_auth")!=="1"){document.body.innerHTML="";window.location.replace("student.html");}</script>
+</head>
+<body>
+
+<h1>彭博研究摘要</h1>
+<p class="subtitle">第21期 | 資金大逃殺與中國利潤反彈</p>
+<span class="issue-badge">2026年三月下旬更新</span>
+
+<div class="nav-links">
+  <span><a href="newsletter_20_china.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="toc">
+  <div class="toc-title">目錄</div>
+  <ol>
+    <li><a href="#us-flows-sentiment">美股資金流 資金出逃，政策恐慌醞釀中</a></li>
+    <li><a href="#china-growth">中國經濟 工業利潤回暖，通縮壓力緩解</a></li>
+    <li><a href="#takeaways">基金經理人重點摘要</a></li>
+  </ol>
+</div>
+
+<div class="section" id="us-flows-sentiment">
+  <h2><span class="tag tag-misc">美股資金流</span> 資金出逃，政策恐慌醞釀中</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--red)">-$29B</div><div class="lbl">全球股票基金
+單週淨流出</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">-$23.6B</div><div class="lbl">美股基金流出
+13週最大</div></div>
+    <div class="stat"><div class="val" style="color:var(--green)">$19.7B</div><div class="lbl">美債2週流入
+4月以來最大</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">BofA Hartnett：跛腳美元與消費逆向交易</div>
+    <p>Hartnett最新Flow Show報告揭示美股年初至今回報 <span style="color:#fff;font-weight:700">-5.4%</span>，比特幣 <span style="color:#fff;font-weight:700">-21.6%</span>，而原油 <span style="color:#fff;font-weight:700">+63.4%</span> 和黃金 <span style="color:#fff;font-weight:700">+1.0%</span> 領跑。BofA牛熊指標賣出訊號已結束（自12月17日以來SPX <span style="color:#fff;font-weight:700">-4%</span>，峰谷跌幅 <span style="color:#fff;font-weight:700">-7%</span>）。Hartnett警告，總統公信力的熊市等於美元的熊市（類比Nixon、Carter、Bush II），若Trump因伊朗問題導致公信力受損，將難以透過喊話提振華爾街及吸引外資。等權重消費非必需品指數已跌至 <span style="color:#fff;font-weight:700">2008 GFC及2020 COVID</span> 的相對低位，Hartnett視此為最佳逆向做多標的，押注Trump戰後轉向解決民生負擔問題，以及「<span style="color:#fff;font-weight:700">AI = UBI = YCC</span>」政策轉型。</p>
+    <div class="data-point">SPX YTD：<span style="color:#fff;font-weight:700">-5.4%</span> &nbsp;|&nbsp; 油價 YTD：<span style="color:#fff;font-weight:700">+63.4%</span> &nbsp;|&nbsp; 牛熊指標賣出訊號期間峰谷跌幅：<span style="color:#fff;font-weight:700">-7%</span> &nbsp;|&nbsp; 消費非必需品相對值：<span style="color:#fff;font-weight:700">GFC/COVID低位</span></div>
+    <div class="implication"><div class="label">投資啟示</div>Hartnett尚未見到牛市投降或宏觀恐慌（GDP/EPS下修），逆向買入訊號未觸發。美元仍處熊市 — <span style="color:#fff;font-weight:700">做多黃金、國際股票</span>。消費非必需品為中期逆向做多首選，尤其<span style="color:#fff;font-weight:700">低收入消費股</span>。</div>
+  </div>
+  <div class="article">
+    <div class="article-title">美股基金13週最大流出，債券成唯一避風港</div>
+    <p>截至3月25日當週，全球股票基金淨流出 <span style="color:#fff;font-weight:700">$29B</span>，其中美股佔 <span style="color:#fff;font-weight:700">$23.6B</span>（13週最大）。歐股流出 <span style="color:#fff;font-weight:700">$3.1B</span>（去年4月以來最大），原物料基金錄得 <span style="color:#fff;font-weight:700">史上最大流出$10.5B</span>。資金轉向避險：美國國債2週流入 <span style="color:#fff;font-weight:700">$19.7B</span>（去年4月以來最大），短期債券錄得 <span style="color:#fff;font-weight:700">史上第三大流入$13.3B</span>。但長期債券遭拋售 <span style="color:#fff;font-weight:700">$4.7B</span>（2020年3月以來最大流出），高收益債連續5週流出，3週累計 <span style="color:#fff;font-weight:700">$13.5B</span>。黃金基金流出 <span style="color:#fff;font-weight:700">$6.3B</span>（去年10月以來最大），加密貨幣失血 <span style="color:#fff;font-weight:700">$5億</span>。新興市場股票逆勢流入 <span style="color:#fff;font-weight:700">$7億</span>，日本連續第7週吸金。</p>
+    <div class="data-point">短期債券流入：<span style="color:#fff;font-weight:700">史上第三大$13.3B</span> &nbsp;|&nbsp; 長期債券流出：<span style="color:#fff;font-weight:700">$4.7B（2020年3月以來最大）</span> &nbsp;|&nbsp; 高收益債3週流出：<span style="color:#fff;font-weight:700">$13.5B</span> &nbsp;|&nbsp; 原物料流出：<span style="color:#fff;font-weight:700">史上最大$10.5B</span></div>
+    <div class="implication"><div class="label">投資啟示</div>資金極度防禦，短端湧入、長端拋售 — <span style="color:#fff;font-weight:700">做多收益率曲線陡峭化</span>。高收益債持續失血預示信用風險升溫，<span style="color:#fff;font-weight:700">減持HY倉位</span>。EM股票逆勢流入值得關注。</div>
+  </div>
+</div>
+
+<div class="section" id="china-growth">
+  <h2><span class="tag tag-china">中國經濟</span> 工業利潤回暖，通縮壓力緩解</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--green)">+10.6%</div><div class="lbl">1-2月工業利潤
+同比增速（預估）</div></div>
+    <div class="stat"><div class="val" style="color:var(--green)">6.3%</div><div class="lbl">1-2月工業產出
+同比增速</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">-0.9%</div><div class="lbl">2月PPI同比
+降幅收窄</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">中國工業利潤料加速回升，產出與價格雙改善</div>
+    <p>Bloomberg Economics預估中國1-2月工業利潤同比增長 <span style="color:#fff;font-weight:700">10.6%</span>，較12月的 <span style="color:#fff;font-weight:700">5.3%</span> 顯著加速，更遠高於2025全年僅 <span style="color:#fff;font-weight:700">0.6%</span> 的增速。兩大驅動力支撐反彈：首先，工業產出增速從12月的 <span style="color:#fff;font-weight:700">5.2%</span> 加快至 <span style="color:#fff;font-weight:700">6.3%</span>；其次，工廠出廠價格通縮壓力明顯緩解，PPI同比跌幅從12月的 <span style="color:#fff;font-weight:700">-1.9%</span> 收窄至2月的 <span style="color:#fff;font-weight:700">-0.9%</span>，意味著企業定價能力正在恢復。加上去年同期的低基數效應，利潤增速大幅改善符合預期。數據預計於週五公布。</p>
+    <div class="data-point">利潤增速：<span style="color:#fff;font-weight:700">10.6% vs 12月5.3%</span> &nbsp;|&nbsp; 工業產出：<span style="color:#fff;font-weight:700">6.3% vs 12月5.2%</span> &nbsp;|&nbsp; PPI跌幅收窄：<span style="color:#fff;font-weight:700">-0.9% vs 12月-1.9%</span></div>
+    <div class="implication"><div class="label">投資啟示</div>中國工業端基本面改善確認，PPI收窄利好上游材料板塊利潤率。<span style="color:#fff;font-weight:700">關注A股/港股工業及原材料板塊</span>的估值修復機會。</div>
+  </div>
+</div>
+
+<div class="callout" id="takeaways">
+  <div class="callout-title">基金經理人重點摘要</div>
+  <ul>
+    <li><strong>美股資金流：</strong>美股錄得13週最大流出$23.6B，但BofA尚未見牛市投降訊號，逆向買入時機未到。</li>
+    <li><strong>避險配置：</strong>短期美債錄得史上第三大流入，長債遭拋售 — **做多收益率曲線陡峭化交易**。</li>
+    <li><strong>美元與黃金：</strong>Hartnett判斷美元仍處結構性熊市，**做多黃金及國際股票**。</li>
+    <li><strong>逆向交易：</strong>等權消費非必需品跌至GFC/COVID相對低位，Hartnett視為最佳逆向做多 — 關注**低收入消費股**。</li>
+    <li><strong>中國：</strong>1-2月工業利潤預估增10.6%，PPI通縮收窄，**關注港股工業及原材料板塊**估值修復。</li>
+    <li><strong>信用風險：</strong>高收益債連續5週流出累計$13.5B，原物料基金史上最大流出 — **減持HY及商品相關倉位**。</li>
+  </ul>
+</div>
+
+<div class="nav-links">
+  <span><a href="newsletter_20_china.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="footer">
+  彭博研究摘要 | 僅供教學與討論用途 | 2026年3月29日<br>
+  資料來源：Bloomberg Intelligence, Bloomberg Economics, Bloomberg News
+</div>
+
+</body>
+</html>

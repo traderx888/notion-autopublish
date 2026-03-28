@@ -252,7 +252,7 @@ def render_digest_html(week_label: str, synthesized: dict) -> str:
   .callout ul {{ padding-left: 18px; }}
   .callout li {{ margin: 4px 0; font-size: 0.88em; }}
 </style>
-<script>if(window.self===window.top&&sessionStorage.getItem("student_auth")!=="1"){document.body.innerHTML="";window.location.replace("student.html");}</script>
+<script>if(window.self===window.top&&sessionStorage.getItem("student_auth")!=="1"){{document.body.innerHTML="";window.location.replace("student.html");}}</script>
 </head>
 <body>
 
