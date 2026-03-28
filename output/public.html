@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>研究摘要 — 公開閱覽</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --accent: #58a6ff;
+          --green: #3fb950; --red: #f85149; --yellow: #d29922; --text: #c9d1d9; --muted: #8b949e;
+          --orange: #f0883e; --purple: #bc8cff; --cyan: #39d2c0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans TC', 'Microsoft JhengHei', Helvetica, Arial, sans-serif; line-height: 1.7; }
+
+  /* Loading / error states */
+  .state-msg { text-align: center; padding: 120px 24px; max-width: 520px; margin: 0 auto; }
+  .state-msg h2 { color: #fff; font-size: 1.4em; margin-bottom: 12px; }
+  .state-msg p  { color: var(--muted); font-size: 0.95em; line-height: 1.6; }
+  .state-msg .icon { font-size: 3em; margin-bottom: 16px; }
+
+  /* Iframe fills viewport */
+  .viewer { width: 100%; height: 100vh; border: none; display: none; }
+
+  /* Public banner at top */
+  .public-banner {
+    background: var(--card); border-bottom: 1px solid var(--border);
+    padding: 10px 24px; text-align: center; font-size: 0.8em; color: var(--muted);
+    position: sticky; top: 0; z-index: 100;
+  }
+  .public-banner a { color: var(--accent); text-decoration: none; }
+  .public-banner a:hover { text-decoration: underline; }
+  .upgrade { background: rgba(88,166,255,0.12); color: var(--accent); padding: 3px 10px;
+             border-radius: 12px; font-weight: 600; margin-left: 8px; font-size: 0.95em; }
+</style>
+</head>
+<body>
+
+<div class="public-banner">
+  公開閱覽版 — 僅限本期內容
+  <span class="upgrade"><a href="student.html">升級學生版 — 瀏覽全部期數</a></span>
+</div>
+
+<div id="loading" class="state-msg">
+  <div class="icon">&#9711;</div>
+  <h2>載入中…</h2>
+</div>
+
+<div id="error" class="state-msg" style="display:none;">
+  <div class="icon">&#128274;</div>
+  <h2>需要有效的期數連結</h2>
+  <p>此頁面需要由分享連結開啟，無法直接瀏覽所有期數。<br/>
+     如需瀏覽全部內容，請聯繫升級至學生版。</p>
+</div>
+
+<iframe id="viewer" class="viewer" sandbox="allow-same-origin"></iframe>
+
+<script>
+(function () {
+  var params = new URLSearchParams(window.location.search);
+  var issue = params.get('issue');
+
+  // Whitelist: only allow newsletter_* filenames (no path traversal)
+  if (!issue || !/^newsletter_[\w]+$/.test(issue)) {
+    document.getElementById('loading').style.display = 'none';
+    document.getElementById('error').style.display = '';
+    return;
+  }
+
+  var file = issue + '.html';
+
+  // Fetch the newsletter HTML, strip nav links, inject into iframe
+  fetch(file)
+    .then(function (r) {
+      if (!r.ok) throw new Error(r.status);
+      return r.text();
+    })
+    .then(function (html) {
+      // Remove nav-links (prev/next/back-to-index)
+      html = html.replace(/<div class="nav-links">[\s\S]*?<\/div>/g, '');
+
+      // Replace "返回目錄" student.html links if any remain
+      html = html.replace(/<a[^>]*href="student\.html"[^>]*>[\s\S]*?<\/a>/g, '');
+
+      // Inject a style to disable any remaining internal links to other newsletters
+      var styleInject = '<style>'
+        + 'a[href*="newsletter_"]{pointer-events:none;color:var(--muted)!important;text-decoration:none!important;cursor:default;}'
+        + 'a[href="student.html"]{display:none!important;}'
+        + '</style>';
+      html = html.replace('</head>', styleInject + '</head>');
+
+      var iframe = document.getElementById('viewer');
+      iframe.srcdoc = html;
+      iframe.style.display = 'block';
+      document.getElementById('loading').style.display = 'none';
+
+      // Update page title from the newsletter
+      var m = html.match(/<title>(.*?)<\/title>/);
+      if (m) document.title = m[1] + ' — 公開閱覽';
+    })
+    .catch(function () {
+      document.getElementById('loading').style.display = 'none';
+      document.getElementById('error').style.display = '';
+    });
+})();
+</script>
+
+</body>
+</html>
