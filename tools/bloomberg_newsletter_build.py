@@ -531,6 +531,7 @@ def render_newsletter_html(
 <style>
 {NEWSLETTER_CSS}
 </style>
+<script>if(window.self===window.top&&sessionStorage.getItem("student_auth")!=="1"){document.body.innerHTML="";window.location.replace("student.html");}</script>
 </head>
 <body>
 

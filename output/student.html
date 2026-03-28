@@ -28,9 +28,34 @@
   .tag-rates { background: rgba(88,166,255,0.15); color: var(--accent); }
   .tag-china { background: rgba(240,136,62,0.15); color: var(--orange); }
   .footer { text-align: center; color: var(--muted); font-size: 0.75em; margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); }
+
+  /* Password gate */
+  #gate { display: flex; align-items: center; justify-content: center; min-height: 100vh; }
+  .gate-box { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 40px 36px; text-align: center; max-width: 380px; width: 100%; }
+  .gate-box h2 { color: #fff; font-size: 1.3em; margin-bottom: 6px; }
+  .gate-box p { color: var(--muted); font-size: 0.85em; margin-bottom: 20px; }
+  .gate-box input { width: 100%; padding: 12px 16px; border-radius: 8px; border: 1px solid var(--border); background: var(--bg); color: var(--text); font-size: 1em; outline: none; margin-bottom: 12px; text-align: center; letter-spacing: 2px; }
+  .gate-box input:focus { border-color: var(--accent); }
+  .gate-box button { width: 100%; padding: 12px; border-radius: 8px; border: none; background: var(--accent); color: #fff; font-size: 0.95em; font-weight: 700; cursor: pointer; transition: opacity 0.2s; }
+  .gate-box button:hover { opacity: 0.85; }
+  .gate-err { color: var(--red); font-size: 0.82em; margin-top: 8px; display: none; }
+  #content { display: none; }
 </style>
 </head>
 <body>
+
+<div id="gate">
+  <div class="gate-box">
+    <h2>學生版登入</h2>
+    <p>請輸入密碼以瀏覽全部期數</p>
+    <input id="pw" type="password" placeholder="密碼" autofocus
+           onkeydown="if(event.key==='Enter')verify()"/>
+    <button onclick="verify()">進入</button>
+    <div id="gate-err" class="gate-err">密碼錯誤，請重試</div>
+  </div>
+</div>
+
+<div id="content">
 <h1>研究摘要</h1>
 <div class="subtitle">彭博研究 — 2026年3月中旬更新</div>
 <div class="section-label">即時儀表板 LIVE DASHBOARD</div>
@@ -548,5 +573,14 @@
   僅供教學與討論用途，不構成投資建議。<br/>
   © 2026 Jeff 研究摘要
 </div>
+</div><!-- end #content -->
+
+<script>
+var H='cc4e157fae3281cfd0d2887016cf2dfa61223876272882d0ca9b3b7c4aea47de';
+async function sha256(s){var e=new TextEncoder().encode(s);var h=await crypto.subtle.digest('SHA-256',e);return Array.from(new Uint8Array(h)).map(function(b){return b.toString(16).padStart(2,'0')}).join('');}
+async function verify(){var p=document.getElementById('pw').value;if(!p)return;var h=await sha256(p);if(h===H){sessionStorage.setItem('student_auth','1');unlock();}else{document.getElementById('gate-err').style.display='block';document.getElementById('pw').value='';}}
+function unlock(){document.getElementById('gate').style.display='none';document.getElementById('content').style.display='block';}
+if(sessionStorage.getItem('student_auth')==='1')unlock();
+</script>
 </body>
 </html>
