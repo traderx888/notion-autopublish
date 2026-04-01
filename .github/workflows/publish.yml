@@ -1,16 +1,28 @@
-# 每天 HKT 9:00 (UTC 1:00) 自動檢查並發布
 name: Auto Publish from Notion
 
 on:
   schedule:
-    - cron: '0 1 * * *'  # 每天 UTC 01:00 = HKT 09:00
-  workflow_dispatch:       # 允許手動觸發
+    - cron: '0 1 * * *'
+  workflow_dispatch:
+
+env:
+  JARVIS_ALERTS_REF: 016bf23510b657c2bc9625fd57b010881d58fde4
 
 jobs:
   publish:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
+      - name: Checkout jarvis-alerts
+        id: jarvis_alerts
+        continue-on-error: true
+        uses: actions/checkout@v4
+        with:
+          repository: traderx888/jarvis-alerts
+          ref: ${{ env.JARVIS_ALERTS_REF }}
+          path: jarvis-alerts
+          token: ${{ secrets.JARVIS_ALERTS_REPO_TOKEN }}
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -31,3 +43,37 @@ jobs:
           PATREON_ACCESS_TOKEN: ${{ secrets.PATREON_ACCESS_TOKEN }}
           PATREON_CAMPAIGN_ID: ${{ secrets.PATREON_CAMPAIGN_ID }}
         run: python publish.py
+
+      - name: Notify publish success
+        if: ${{ success() && steps.jarvis_alerts.outcome == 'success' }}
+        uses: ./jarvis-alerts/.github/actions/send-alert
+        with:
+          alert_key: publish_success
+          source_repo: ${{ github.repository }}
+          source_app: ${{ github.workflow }}
+          env: github-actions
+          severity: info
+          category: automation
+          title: Notion publish succeeded
+          body: |
+            Publish workflow completed successfully for ${{ github.repository }}.
+            Run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          timestamp: ${{ github.run_id }}
+          link: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+
+      - name: Notify publish failure
+        if: ${{ failure() && steps.jarvis_alerts.outcome == 'success' }}
+        uses: ./jarvis-alerts/.github/actions/send-alert
+        with:
+          alert_key: publish_failure
+          source_repo: ${{ github.repository }}
+          source_app: ${{ github.workflow }}
+          env: github-actions
+          severity: error
+          category: automation
+          title: Notion publish failed
+          body: |
+            Publish workflow failed for ${{ github.repository }}.
+            Run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          timestamp: ${{ github.run_id }}
+          link: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
