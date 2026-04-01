@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>彭博研究摘要 #26 — AI驅動盈利分化與行業整合新局</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --accent: #58a6ff;
+          --green: #3fb950; --red: #f85149; --yellow: #d29922; --text: #c9d1d9; --muted: #8b949e;
+          --orange: #f0883e; --purple: #bc8cff; --cyan: #39d2c0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans TC', 'Microsoft JhengHei', Helvetica, Arial, sans-serif; line-height: 1.7; padding: 20px; max-width: 860px; margin: 0 auto; }
+  h1 { color: #fff; font-size: 1.7em; margin-bottom: 4px; }
+  .subtitle { color: var(--muted); font-size: 0.9em; margin-bottom: 8px; }
+  .issue-badge { display: inline-block; background: rgba(88,166,255,0.15); color: var(--accent); padding: 3px 10px; border-radius: 12px; font-size: 0.8em; font-weight: 600; margin-bottom: 20px; }
+  .tag { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 0.72em; font-weight: 600; margin-right: 4px; }
+  .tag-rates { background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-china { background: rgba(240,136,62,0.15); color: var(--orange); }
+  .tag-japan { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-geo   { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-oil   { background: rgba(210,153,34,0.15); color: var(--yellow); }
+  .tag-trade { background: rgba(210,153,34,0.15); color: var(--yellow); }
+  .tag-growth{ background: rgba(63,185,80,0.15); color: var(--green); }
+  .tag-metals{ background: rgba(188,140,255,0.15); color: var(--purple); }
+  .tag-infl  { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-policy{ background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-val   { background: rgba(63,185,80,0.15); color: var(--green); }
+  .tag-vol   { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-semi  { background: rgba(57,210,192,0.15); color: var(--cyan); }
+  .tag-credit{ background: rgba(188,140,255,0.15); color: var(--purple); }
+  .tag-space { background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-misc  { background: rgba(139,148,158,0.15); color: var(--muted); }
+  .section { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 16px; }
+  .section h2 { color: #fff; font-size: 1.15em; margin-bottom: 12px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+  .section h3 { color: var(--accent); font-size: 0.95em; margin: 14px 0 6px; }
+  .article { margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .article:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .article-title { color: #fff; font-weight: 700; font-size: 0.95em; margin-bottom: 4px; }
+  .article-title-cn { color: var(--muted); font-size: 0.85em; margin-bottom: 8px; }
+  .article p { font-size: 0.9em; margin: 6px 0; }
+  .data-point { background: rgba(255,255,255,0.03); padding: 8px 12px; border-radius: 6px; margin: 8px 0; font-size: 0.85em; }
+  .data-point .num { color: #fff; font-weight: 700; }
+  .implication { background: rgba(88,166,255,0.06); border-left: 3px solid var(--accent); padding: 10px 14px; margin: 10px 0; border-radius: 0 6px 6px 0; font-size: 0.88em; }
+  .implication .label { color: var(--accent); font-weight: 700; font-size: 0.8em; text-transform: uppercase; margin-bottom: 4px; }
+  .callout { background: rgba(210,153,34,0.08); border: 1px solid rgba(210,153,34,0.3); border-radius: 6px; padding: 16px; margin: 16px 0; }
+  .callout-title { color: var(--yellow); font-weight: 700; font-size: 0.95em; margin-bottom: 8px; }
+  .callout ul { padding-left: 18px; }
+  .callout li { margin: 4px 0; font-size: 0.88em; }
+  ul { padding-left: 18px; }
+  li { margin: 3px 0; font-size: 0.88em; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(255,255,255,0.03); padding: 12px; border-radius: 6px; text-align: center; }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: #fff; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
+  .toc { background: rgba(88,166,255,0.05); border: 1px solid rgba(88,166,255,0.2); border-radius: 8px; padding: 16px 20px; margin-bottom: 20px; }
+  .toc-title { color: var(--accent); font-weight: 700; font-size: 0.9em; margin-bottom: 8px; }
+  .toc a { color: var(--accent); text-decoration: none; font-size: 0.88em; }
+  .toc a:hover { text-decoration: underline; }
+  .toc ol { padding-left: 20px; }
+  .toc li { margin: 4px 0; }
+  .nav-links { display: flex; justify-content: space-between; margin: 20px 0; font-size: 0.85em; }
+  .nav-links a { color: var(--accent); text-decoration: none; }
+  .nav-links a:hover { text-decoration: underline; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(255,255,255,0.03); padding: 12px; border-radius: 6px; text-align: center; }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: #fff; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
+  .footer { text-align: center; color: var(--muted); font-size: 0.75em; margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--border); }
+</style>
+<script>if(window.self===window.top&&sessionStorage.getItem("student_auth")!=="1"){document.body.innerHTML="";window.location.replace("student.html");}</script>
+</head>
+<body>
+
+<h1>彭博研究摘要</h1>
+<p class="subtitle">第26期 | AI驅動盈利分化與行業整合新局</p>
+<span class="issue-badge">2026年四月上旬更新</span>
+
+<div class="nav-links">
+  <span><a href="newsletter_25_credit.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="toc">
+  <div class="toc-title">目錄</div>
+  <ol>
+    <li><a href="#ai-earnings-ipo">AI / 科技 AI撐起全球盈利，Anthropic搶閘上市</a></li>
+    <li><a href="#etf-consolidation">ETF 規模為王，ETF進入整合時代</a></li>
+    <li><a href="#social-media-litigation">訴訟 社交媒體成癮訴訟：雷聲大雨點小</a></li>
+    <li><a href="#takeaways">基金經理人重點摘要</a></li>
+  </ol>
+</div>
+
+<div class="section" id="ai-earnings-ipo">
+  <h2><span class="tag tag-misc">AI / 科技</span> AI撐起全球盈利，Anthropic搶閘上市</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--green)">81.1%</div><div class="lbl">2026年新興市場
+AI龍頭盈利增速</div></div>
+    <div class="stat"><div class="val">$600億+</div><div class="lbl">Anthropic IPO
+潛在估值</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">67.3%</div><div class="lbl">全球龍頭4Q
+EPS超預期比率</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">全球龍頭企業持續交付 但AI門檻不斷提高</div>
+    <p>全球135家市值最大企業（平均市值<span style="color:#fff;font-weight:700">$3,480億</span>）在4Q25再度超越預期，EPS增長<span style="color:#fff;font-weight:700">18.1%</span>，較預期高出<span style="color:#fff;font-weight:700">703個基點</span>。三星（+<span style="color:#fff;font-weight:700">21.7%</span>）、微軟（+<span style="color:#fff;font-weight:700">21.5%</span>）、Alphabet（+<span style="color:#fff;font-weight:700">8.2%</span>）和蘋果（+<span style="color:#fff;font-weight:700">7.1%</span>）是主要推手。然而盈利驅動力正加速向AI集中：2026年新興市場AI龍頭（以台積電、三星為首）預計盈利增長<span style="color:#fff;font-weight:700">81.1%</span>，AI相關公司將貢獻新興市場<span style="color:#fff;font-weight:700">80.1%</span>的盈利增長。美國方面，AI增速放緩至<span style="color:#fff;font-weight:700">24.3%</span>但仍佔總盈利增長逾<span style="color:#fff;font-weight:700">70%</span>。EPS超預期比率<span style="color:#fff;font-weight:700">67.3%</span>雖高於長期均值<span style="color:#fff;font-weight:700">65.1%</span>，卻為2022年4Q以來最低，顯示市場預期門檻正在抬升。</p>
+    <div class="data-point">新興市場2025 EPS增長：<span style="color:#fff;font-weight:700">18.2%</span> vs 美國<span style="color:#fff;font-weight:700">17.9%</span> &nbsp;|&nbsp; 美國4Q超預期率：<span style="color:#fff;font-weight:700">79.5%</span>（季減769bps） &nbsp;|&nbsp; 新興市場超預期率：<span style="color:#fff;font-weight:700">54.5%</span>（季減1,630bps）</div>
+    <div class="implication"><div class="label">投資啟示</div>AI盈利集中度持續上升，<span style="color:#fff;font-weight:700">加碼台積電、三星等EM半導體龍頭</span>。美國AI股增速放緩但基數高，留意估值壓力。</div>
+  </div>
+  <div class="article">
+    <div class="article-title">Anthropic據悉考慮最早10月進行IPO</div>
+    <p>ChatBot Claude的開發商Anthropic PBC正考慮最早於<span style="color:#fff;font-weight:700">2026年10月</span>上市，與OpenAI展開IPO競賽。據報導，公司已與華爾街銀行初步接洽，<span style="color:#fff;font-weight:700">高盛、摩根大通、摩根士丹利</span>均被納入牽頭角色考量。此次上市可能籌集超過<span style="color:#fff;font-weight:700">$600億</span>資金。相關討論仍在進行中，尚未做出最終決定。此舉標誌著生成式AI行業正從私募融資階段邁向公開市場，若成功上市將成為2026年最大科技IPO之一。</p>
+    <div class="data-point">預計IPO時間：<span style="color:#fff;font-weight:700">2026年10月</span> &nbsp;|&nbsp; 潛在募資規模：<span style="color:#fff;font-weight:700">&gt;$600億</span> &nbsp;|&nbsp; 牽頭行：<span style="color:#fff;font-weight:700">高盛、摩根大通、摩根士丹利</span></div>
+    <div class="implication"><div class="label">投資啟示</div>Anthropic與OpenAI雙雙衝刺IPO，AI板塊下半年將迎來大量新股供應。<span style="color:#fff;font-weight:700">關注AI概念股估值重定價風險</span>，同時留意投行承銷收入利好。</div>
+  </div>
+</div>
+
+<div class="section" id="etf-consolidation">
+  <h2><span class="tag tag-misc">ETF</span> 規模為王，ETF進入整合時代</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val">$20億</div><div class="lbl">高盛收購Innovator
+交易金額</div></div>
+    <div class="stat"><div class="val" style="color:var(--green)">36%</div><div class="lbl">Innovator結構化
+ETF市場份額</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">+24%</div><div class="lbl">2026年首兩月
+ETF清盤數增幅</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">高盛ETF收購揭開行業整合序幕</div>
+    <p>ETF行業正進入「整合時代」——規模致勝、弱者淘汰、收購取代試驗。高盛以<span style="color:#fff;font-weight:700">$20億</span>收購Innovator Capital Management，後者管理約<span style="color:#fff;font-weight:700">$287億</span>資產並佔結構化ETF市場<span style="color:#fff;font-weight:700">36%</span>份額。高盛此前自建的Buffer ETF系列表現慘淡，三隻基金平均AUM不足<span style="color:#fff;font-weight:700">$1,000萬</span>，市佔僅<span style="color:#fff;font-weight:700">0.01%</span>，已陸續清盤。BlackRock亦將iShares Large Cap Value Active ETF與CornerCap合併，吸收逾<span style="color:#fff;font-weight:700">$2億</span>主動管理資產。2026年首兩月已有<span style="color:#fff;font-weight:700">41隻</span>ETF清盤（同比+<span style="color:#fff;font-weight:700">24%</span>），且被清盤ETF的平均存續期僅<span style="color:#fff;font-weight:700">1年9個月</span>，較2025年的<span style="color:#fff;font-weight:700">3年半</span>和2024年的<span style="color:#fff;font-weight:700">4年半</span>大幅縮短，顯示發行商對慢熱產品的容忍度急劇下降。</p>
+    <div class="data-point">結構化ETF市場規模：<span style="color:#fff;font-weight:700">$800億</span> &nbsp;|&nbsp; 2026年清盤ETF平均壽命：<span style="color:#fff;font-weight:700">1年9個月</span>（2025年：3年半） &nbsp;|&nbsp; BlackRock合併吸收AUM：<span style="color:#fff;font-weight:700">&gt;$2億</span></div>
+    <div class="implication"><div class="label">投資啟示</div>ETF行業馬太效應加劇，<span style="color:#fff;font-weight:700">優先配置頭部發行商（BlackRock、Vanguard、高盛）旗艦產品</span>。小型ETF流動性風險上升，避免持有AUM &lt; $5,000萬的利基ETF。</div>
+  </div>
+</div>
+
+<div class="section" id="social-media-litigation">
+  <h2><span class="tag tag-misc">訴訟</span> 社交媒體成癮訴訟：雷聲大雨點小</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val">$600萬</div><div class="lbl">加州人身傷害
+判決金額</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">$3.75億</div><div class="lbl">新墨西哥州
+判決金額</div></div>
+    <div class="stat"><div class="val">1,200+</div><div class="lbl">已起訴
+學區數目</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">Meta、Alphabet社交媒體成癮訴訟影響有限</div>
+    <p>儘管社交媒體成癮訴訟將在2026年持續製造負面新聯，Bloomberg Intelligence認為對Meta和Alphabet的實質業務影響有限。加州陪審團裁定<span style="color:#fff;font-weight:700">$600萬</span>人身傷害賠償，新墨西哥州案判賠<span style="color:#fff;font-weight:700">$3.75億</span>，但這些金額對現金充裕的科技巨頭而言微不足道。關鍵的是，聯邦法院已駁回針對核心業務功能（算法推薦、通知推送、無限瀏覽）的訴求，訴訟僅聚焦於家長控制等非核心功能。《通訊規範法》第230條和第一修正案為平台提供了強力保護。BI預計最終可能達成每家公司<span style="color:#fff;font-weight:700">低個位數十億美元</span>的全面和解，其中Meta和TikTok敞口最大。超過<span style="color:#fff;font-weight:700">1,200個</span>學區已提起訴訟，6月將迎來首場學校訴訟庭審。Snap面臨相對風險更大，因其財務實力較弱。</p>
+    <div class="data-point">每生索賠：<span style="color:#fff;font-weight:700">$2,850</span> &nbsp;|&nbsp; 潛在和解規模：<span style="color:#fff;font-weight:700">每家公司低個位數十億美元</span> &nbsp;|&nbsp; 6月庭審：<span style="color:#fff;font-weight:700">學校訴訟首案</span></div>
+    <div class="implication"><div class="label">投資啟示</div>訴訟風險可控，不改變Meta/Alphabet長期投資邏輯。<span style="color:#fff;font-weight:700">短期利空已充分定價，回調可加倉META</span>。留意Snap因財務韌性不足的相對弱勢。</div>
+  </div>
+</div>
+
+<div class="callout" id="takeaways">
+  <div class="callout-title">基金經理人重點摘要</div>
+  <ul>
+    <li><strong>AI盈利：</strong>全球盈利增長愈發集中於AI。新興市場AI龍頭2026年預計增長81.1%，**加碼台積電、三星**。</li>
+    <li><strong>Anthropic IPO：</strong>最早10月上市，募資或逾$600億。AI板塊下半年新股供應激增，**留意估值重定價**。</li>
+    <li><strong>ETF整合：</strong>高盛$20億收購Innovator，清盤潮加速。**避免持有小型利基ETF**，優選頭部發行商旗艦產品。</li>
+    <li><strong>社媒訴訟：</strong>Meta/Alphabet成癮訴訟業務影響有限，和解規模預計低個位數十億。**META回調可加倉**。</li>
+    <li><strong>風險日曆：</strong>6月社媒學校訴訟首審 | 10月Anthropic/OpenAI IPO窗口 | EM盈利超預期率下滑需警惕。</li>
+  </ul>
+</div>
+
+<div class="nav-links">
+  <span><a href="newsletter_25_credit.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="footer">
+  彭博研究摘要 | 僅供教學與討論用途 | 2026年4月1日<br>
+  資料來源：Bloomberg Intelligence, Bloomberg Economics, Bloomberg News
+</div>
+
+</body>
+</html>

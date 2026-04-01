@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>彭博研究摘要 #27 — 伊朗戰爭第五週：霍爾木茲封鎖震盪全球</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --accent: #58a6ff;
+          --green: #3fb950; --red: #f85149; --yellow: #d29922; --text: #c9d1d9; --muted: #8b949e;
+          --orange: #f0883e; --purple: #bc8cff; --cyan: #39d2c0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans TC', 'Microsoft JhengHei', Helvetica, Arial, sans-serif; line-height: 1.7; padding: 20px; max-width: 860px; margin: 0 auto; }
+  h1 { color: #fff; font-size: 1.7em; margin-bottom: 4px; }
+  .subtitle { color: var(--muted); font-size: 0.9em; margin-bottom: 8px; }
+  .issue-badge { display: inline-block; background: rgba(88,166,255,0.15); color: var(--accent); padding: 3px 10px; border-radius: 12px; font-size: 0.8em; font-weight: 600; margin-bottom: 20px; }
+  .tag { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 0.72em; font-weight: 600; margin-right: 4px; }
+  .tag-rates { background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-china { background: rgba(240,136,62,0.15); color: var(--orange); }
+  .tag-japan { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-geo   { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-oil   { background: rgba(210,153,34,0.15); color: var(--yellow); }
+  .tag-trade { background: rgba(210,153,34,0.15); color: var(--yellow); }
+  .tag-growth{ background: rgba(63,185,80,0.15); color: var(--green); }
+  .tag-metals{ background: rgba(188,140,255,0.15); color: var(--purple); }
+  .tag-infl  { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-policy{ background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-val   { background: rgba(63,185,80,0.15); color: var(--green); }
+  .tag-vol   { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-semi  { background: rgba(57,210,192,0.15); color: var(--cyan); }
+  .tag-credit{ background: rgba(188,140,255,0.15); color: var(--purple); }
+  .tag-space { background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-misc  { background: rgba(139,148,158,0.15); color: var(--muted); }
+  .section { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 16px; }
+  .section h2 { color: #fff; font-size: 1.15em; margin-bottom: 12px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+  .section h3 { color: var(--accent); font-size: 0.95em; margin: 14px 0 6px; }
+  .article { margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .article:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .article-title { color: #fff; font-weight: 700; font-size: 0.95em; margin-bottom: 4px; }
+  .article-title-cn { color: var(--muted); font-size: 0.85em; margin-bottom: 8px; }
+  .article p { font-size: 0.9em; margin: 6px 0; }
+  .data-point { background: rgba(255,255,255,0.03); padding: 8px 12px; border-radius: 6px; margin: 8px 0; font-size: 0.85em; }
+  .data-point .num { color: #fff; font-weight: 700; }
+  .implication { background: rgba(88,166,255,0.06); border-left: 3px solid var(--accent); padding: 10px 14px; margin: 10px 0; border-radius: 0 6px 6px 0; font-size: 0.88em; }
+  .implication .label { color: var(--accent); font-weight: 700; font-size: 0.8em; text-transform: uppercase; margin-bottom: 4px; }
+  .callout { background: rgba(210,153,34,0.08); border: 1px solid rgba(210,153,34,0.3); border-radius: 6px; padding: 16px; margin: 16px 0; }
+  .callout-title { color: var(--yellow); font-weight: 700; font-size: 0.95em; margin-bottom: 8px; }
+  .callout ul { padding-left: 18px; }
+  .callout li { margin: 4px 0; font-size: 0.88em; }
+  ul { padding-left: 18px; }
+  li { margin: 3px 0; font-size: 0.88em; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(255,255,255,0.03); padding: 12px; border-radius: 6px; text-align: center; }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: #fff; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
+  .toc { background: rgba(88,166,255,0.05); border: 1px solid rgba(88,166,255,0.2); border-radius: 8px; padding: 16px 20px; margin-bottom: 20px; }
+  .toc-title { color: var(--accent); font-weight: 700; font-size: 0.9em; margin-bottom: 8px; }
+  .toc a { color: var(--accent); text-decoration: none; font-size: 0.88em; }
+  .toc a:hover { text-decoration: underline; }
+  .toc ol { padding-left: 20px; }
+  .toc li { margin: 4px 0; }
+  .nav-links { display: flex; justify-content: space-between; margin: 20px 0; font-size: 0.85em; }
+  .nav-links a { color: var(--accent); text-decoration: none; }
+  .nav-links a:hover { text-decoration: underline; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(255,255,255,0.03); padding: 12px; border-radius: 6px; text-align: center; }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: #fff; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
+  .footer { text-align: center; color: var(--muted); font-size: 0.75em; margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--border); }
+</style>
+<script>if(window.self===window.top&&sessionStorage.getItem("student_auth")!=="1"){document.body.innerHTML="";window.location.replace("student.html");}</script>
+</head>
+<body>
+
+<h1>彭博研究摘要</h1>
+<p class="subtitle">第27期 | 伊朗戰爭第五週：霍爾木茲封鎖震盪全球</p>
+<span class="issue-badge">2026年四月上旬更新</span>
+
+<div class="nav-links">
+  <span><a href="newsletter_26_uncategorized.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="toc">
+  <div class="toc-title">目錄</div>
+  <ol>
+    <li><a href="#iran-war-hormuz">伊朗戰爭 霍爾木茲仍封、油價飆升、胡塞威脅再起</a></li>
+    <li><a href="#asia-energy-shock">亞洲能源 亞洲首當其衝，衝擊冷熱不均</a></li>
+    <li><a href="#nato-europe-fallout">北約/歐洲 歐洲亮出王牌：領空禁飛</a></li>
+    <li><a href="#takeaways">基金經理人重點摘要</a></li>
+  </ol>
+</div>
+
+<div class="section" id="iran-war-hormuz">
+  <h2><span class="tag tag-misc">伊朗戰爭</span> 霍爾木茲仍封、油價飆升、胡塞威脅再起</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--red)">$110+</div><div class="lbl">布蘭特原油
+（霍爾木茲封鎖後）</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">$140</div><div class="lbl">油價潛在上限
+（若胡塞攻擊紅海）</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">500萬桶/日</div><div class="lbl">霍爾木茲海峽
+受威脅出口量</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">伊朗戰爭第五週 — 川普尋求退場但海峽仍封</div>
+    <p>伊朗戰爭進入第五週，美國總統川普暗示戰事可能在<span style="color:#fff;font-weight:700">兩到三週內</span>結束，但霍爾木茲海峽仍在伊朗控制下，美軍未能找到重新開放的方案。海峽封鎖持續推高全球通膨，即將公佈的數據預計將印證這一趨勢。更令人擔憂的是，也門胡塞武裝已介入戰爭，3月28日向以色列發射彈道導彈並威脅開闢新戰線。紅海航運自加薩戰爭以來尚未恢復，若胡塞攻擊沙烏地延布港等紅海沿岸能源設施，油價可能衝上<span style="color:#fff;font-weight:700">$140</span>。目前沙烏地東西管線已成為主要替代路線，約<span style="color:#fff;font-weight:700">500萬桶/日</span>的石油出口面臨風險。</p>
+    <div class="data-point">油價現況：<span style="color:#fff;font-weight:700">$110+</span>（霍爾木茲封鎖後） &nbsp;|&nbsp; 潛在衝擊：<span style="color:#fff;font-weight:700">$140</span>（胡塞攻擊紅海情境） &nbsp;|&nbsp; 受威脅出口：<span style="color:#fff;font-weight:700">500萬桶/日</span> &nbsp;|&nbsp; 川普預期結束時間：<span style="color:#fff;font-weight:700">2-3週</span></div>
+    <div class="implication"><div class="label">投資啟示</div>油價短期仍有上行風險。若胡塞開闢紅海戰線，能源股與油服股將進一步受益 — <span style="color:#fff;font-weight:700">加碼能源多頭部位</span>，同時<span style="color:#fff;font-weight:700">買入原油看漲期權</span>對沖尾部風險。</div>
+  </div>
+</div>
+
+<div class="section" id="asia-energy-shock">
+  <h2><span class="tag tag-misc">亞洲能源</span> 亞洲首當其衝，衝擊冷熱不均</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val">¥8000億</div><div class="lbl">日本燃油補貼
+（約$50億）</div></div>
+    <div class="stat"><div class="val">$160億+</div><div class="lbl">韓國追加預算
+（緩衝能源危機）</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">0.7%</div><div class="lbl">韓國GDP潛在拖累
+（石腦油中斷一年）</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">霍爾木茲能源衝擊：亞洲各國冷熱不均</div>
+    <p>亞洲作為波斯灣石油與天然氣的最大買家，正承受霍爾木茲封鎖的最直接打擊，但各國處境差異懸殊。<span style="color:#fff;font-weight:700">日本</span>已釋放一個月國家石油儲備，並削減民間儲備義務<span style="color:#fff;font-weight:700">15天</span>（從70天降至55天），動用約<span style="color:#fff;font-weight:700">¥8000億</span>（$50億）儲備金補貼燃油，將汽油價格穩定在<span style="color:#fff;font-weight:700">¥170/升</span>左右。<span style="color:#fff;font-weight:700">韓國</span>啟動有史以來最大規模的IEA協調釋放（<span style="color:#fff;font-weight:700">2,246萬桶</span>），並通過逾<span style="color:#fff;font-weight:700">$160億</span>追加預算緩衝衝擊，同時實施燃油價格上限。<span style="color:#fff;font-weight:700">澳洲</span>則臨時將最低庫存義務削減<span style="color:#fff;font-weight:700">20%</span>，釋放約<span style="color:#fff;font-weight:700">7.62億升</span>汽柴油。<span style="color:#fff;font-weight:700">中國</span>憑藉龐大原油庫存及持續的俄羅斯供應，餘裕最大；<span style="color:#fff;font-weight:700">印度</span>雖穩住零售油價，但液化石油氣短缺已波及餐飲酒店業，在4月邦選前成為政治議題。</p>
+    <div class="data-point">日本儲備釋放：<span style="color:#fff;font-weight:700">1個月國家儲備</span> &nbsp;|&nbsp; 韓國IEA釋放：<span style="color:#fff;font-weight:700">2,246萬桶</span>（歷來最大） &nbsp;|&nbsp; 澳洲釋放：<span style="color:#fff;font-weight:700">7.62億升</span> &nbsp;|&nbsp; 印度：LPG短缺已衝擊商業</div>
+    <div class="implication"><div class="label">投資啟示</div>亞洲大型經濟體短期可控，但<span style="color:#fff;font-weight:700">東南亞新興市場</span>缺乏緩衝工具，面臨供應短缺與社會不穩風險。<span style="color:#fff;font-weight:700">減持東南亞能源進口國貨幣</span>，<span style="color:#fff;font-weight:700">增持日圓與人民幣</span>作為相對避險。</div>
+  </div>
+  <div class="article">
+    <div class="article-title">韓國石腦油斷鏈衝擊製造業</div>
+    <p>能源衝擊不僅止於油價 — 韓國的石化產業正面臨<span style="color:#fff;font-weight:700">石腦油</span>（關鍵原料）供應中斷的二次打擊。經由霍爾木茲海峽的進口約佔韓國石腦油供應的<span style="color:#fff;font-weight:700">35%</span>，首爾已限制石腦油出口以優先保障國內需求。彭博經濟研究測算，若石腦油供應減少<span style="color:#fff;font-weight:700">35%</span>並持續三個月，將拖累2026年GDP約<span style="color:#fff;font-weight:700">0.2個百分點</span>；若中斷延續至一年，拖累將升至約<span style="color:#fff;font-weight:700">0.7%</span>，儘管替代供應來源可部分緩解壓力。製造業供應鏈的連鎖效應正迅速擴散。</p>
+    <div class="data-point">石腦油供應缺口：<span style="color:#fff;font-weight:700">35%</span>（霍爾木茲佔比） &nbsp;|&nbsp; GDP拖累（3個月）：<span style="color:#fff;font-weight:700">-0.2%</span> &nbsp;|&nbsp; GDP拖累（1年）：<span style="color:#fff;font-weight:700">-0.7%</span> &nbsp;|&nbsp; 應對措施：<span style="color:#fff;font-weight:700">限制石腦油出口</span></div>
+    <div class="implication"><div class="label">投資啟示</div>韓國石化與製造業面臨盈利壓力 — <span style="color:#fff;font-weight:700">減持韓國石化股</span>。KOSPI短期承壓，但政府$160億財政刺激提供下檔支撐。</div>
+  </div>
+</div>
+
+<div class="section" id="nato-europe-fallout">
+  <h2><span class="tag tag-misc">北約/歐洲</span> 歐洲亮出王牌：領空禁飛</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--red)">2.8%</div><div class="lbl">德國3月CPI
+（前值2.0%）</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">多國</div><div class="lbl">限制美軍領空
+使用權</div></div>
+    <div class="stat"><div class="val">2-3週</div><div class="lbl">川普預期
+戰爭結束時間</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">領空禁飛成為北約應對川普伊戰行動的王牌</div>
+    <p>歐洲多國已採取行動限制美軍利用其領空開展伊朗相關軍事行動，將軍事准入、飛越權和駐紮權打造成對美國單邊外交政策的<span style="color:#fff;font-weight:700">否決牌</span>。川普曾多次聲稱美國不需要歐洲盟友，但伊朗戰爭正在檢驗這一說法 — 美國長期依賴英國基地起飛空襲、德國軍醫院救治傷兵。領空限制不僅使美軍行動複雜化，更可能引發連鎖反應：<span style="color:#fff;font-weight:700">加速美國縮減歐洲駐軍</span>、迫使川普尋求更具體的軍事保障，甚至<span style="color:#fff;font-weight:700">削弱其對烏克蘭的有限支持</span>。歐洲民意對美國好感度已急劇下降，任何進一步挑釁（如關稅報復或重提格陵蘭）都可能推動歐洲實施更嚴格的基地限制。</p>
+    <div class="data-point">歐洲限制：<span style="color:#fff;font-weight:700">多國禁止美軍飛越</span> &nbsp;|&nbsp; 風險：<span style="color:#fff;font-weight:700">加速美軍撤離歐洲</span> &nbsp;|&nbsp; 烏克蘭影響：<span style="color:#fff;font-weight:700">可能終止情報與裝備支持</span> &nbsp;|&nbsp; 民意：<span style="color:#fff;font-weight:700">歐洲對美好感度急劇下降</span></div>
+    <div class="implication"><div class="label">投資啟示</div>美歐關係裂痕加深將削弱北約威懾力。<span style="color:#fff;font-weight:700">歐洲國防股</span>（Rheinmetall、BAE Systems）受益於歐洲自主國防加速 — <span style="color:#fff;font-weight:700">維持多頭</span>。</div>
+  </div>
+  <div class="article">
+    <div class="article-title">能源價格逆轉歐洲通縮趨勢</div>
+    <p>伊朗戰爭的能源衝擊已開始反映在歐洲硬數據中。<span style="color:#fff;font-weight:700">德國3月CPI同比躍升至2.8%</span>，較前值<span style="color:#fff;font-weight:700">2.0%</span>大幅反彈，通縮趨勢被能源價格逆轉。歐元區整體通膨數據（3月31日公佈）預計同樣加速。在大西洋彼岸，美國早期指標亦指向一個<span style="color:#fff;font-weight:700">自2022年6月以來最熱的3月CPI</span>，主要受汽油價格飆升推動，核心商品（尤其是電腦軟體與配件）價格亦在加速。全球通膨重新升溫的格局正在成形，央行降息路徑面臨重大挑戰。</p>
+    <div class="data-point">德國CPI：<span style="color:#fff;font-weight:700">2.8%</span>（前值2.0%） &nbsp;|&nbsp; 美國3月CPI：<span style="color:#fff;font-weight:700">預計為2022年6月以來最高</span> &nbsp;|&nbsp; 主因：<span style="color:#fff;font-weight:700">汽油價格飆升</span> &nbsp;|&nbsp; 核心商品：<span style="color:#fff;font-weight:700">電腦軟體配件加速</span></div>
+    <div class="implication"><div class="label">投資啟示</div>通膨重新升溫將迫使ECB與Fed推遲降息。<span style="color:#fff;font-weight:700">減持長天期歐債與美債</span>，<span style="color:#fff;font-weight:700">做多通膨掛鉤債券（TIPS/ILBs）</span>。</div>
+  </div>
+</div>
+
+<div class="callout" id="takeaways">
+  <div class="callout-title">基金經理人重點摘要</div>
+  <ul>
+    <li><strong>油價：</strong>霍爾木茲封鎖推動布蘭特至$110+，胡塞紅海威脅下可衝$140。加碼能源多頭，買入原油尾部看漲期權。</li>
+    <li><strong>亞洲分化：</strong>日韓澳靠儲備與財政緩衝短期可控；東南亞新興市場缺乏工具，減持其貨幣。</li>
+    <li><strong>韓國製造業：</strong>石腦油35%缺口威脅石化鏈，KOSPI短期承壓，減持韓國石化股。</li>
+    <li><strong>歐洲通膨：</strong>德國CPI從2.0%飆至2.8%，美國3月CPI料創2022年6月來新高。做多TIPS/ILBs，減持長天期債券。</li>
+    <li><strong>北約裂痕：</strong>歐洲領空禁飛削弱美軍投射能力，加速歐洲自主國防。維持歐洲國防股多頭。</li>
+    <li><strong>地緣風險：</strong>川普稱2-3週內結束戰爭，但霍爾木茲重開無期。保持投資組合防禦性配置。</li>
+  </ul>
+</div>
+
+<div class="nav-links">
+  <span><a href="newsletter_26_uncategorized.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="footer">
+  彭博研究摘要 | 僅供教學與討論用途 | 2026年4月1日<br>
+  資料來源：Bloomberg Intelligence, Bloomberg Economics, Bloomberg News
+</div>
+
+</body>
+</html>

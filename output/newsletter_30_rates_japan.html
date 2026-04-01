@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>彭博研究摘要 #30 — 日銀加息在即與美債融資動態</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --accent: #58a6ff;
+          --green: #3fb950; --red: #f85149; --yellow: #d29922; --text: #c9d1d9; --muted: #8b949e;
+          --orange: #f0883e; --purple: #bc8cff; --cyan: #39d2c0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans TC', 'Microsoft JhengHei', Helvetica, Arial, sans-serif; line-height: 1.7; padding: 20px; max-width: 860px; margin: 0 auto; }
+  h1 { color: #fff; font-size: 1.7em; margin-bottom: 4px; }
+  .subtitle { color: var(--muted); font-size: 0.9em; margin-bottom: 8px; }
+  .issue-badge { display: inline-block; background: rgba(88,166,255,0.15); color: var(--accent); padding: 3px 10px; border-radius: 12px; font-size: 0.8em; font-weight: 600; margin-bottom: 20px; }
+  .tag { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 0.72em; font-weight: 600; margin-right: 4px; }
+  .tag-rates { background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-china { background: rgba(240,136,62,0.15); color: var(--orange); }
+  .tag-japan { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-geo   { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-oil   { background: rgba(210,153,34,0.15); color: var(--yellow); }
+  .tag-trade { background: rgba(210,153,34,0.15); color: var(--yellow); }
+  .tag-growth{ background: rgba(63,185,80,0.15); color: var(--green); }
+  .tag-metals{ background: rgba(188,140,255,0.15); color: var(--purple); }
+  .tag-infl  { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-policy{ background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-val   { background: rgba(63,185,80,0.15); color: var(--green); }
+  .tag-vol   { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-semi  { background: rgba(57,210,192,0.15); color: var(--cyan); }
+  .tag-credit{ background: rgba(188,140,255,0.15); color: var(--purple); }
+  .tag-space { background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-misc  { background: rgba(139,148,158,0.15); color: var(--muted); }
+  .section { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 16px; }
+  .section h2 { color: #fff; font-size: 1.15em; margin-bottom: 12px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+  .section h3 { color: var(--accent); font-size: 0.95em; margin: 14px 0 6px; }
+  .article { margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .article:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .article-title { color: #fff; font-weight: 700; font-size: 0.95em; margin-bottom: 4px; }
+  .article-title-cn { color: var(--muted); font-size: 0.85em; margin-bottom: 8px; }
+  .article p { font-size: 0.9em; margin: 6px 0; }
+  .data-point { background: rgba(255,255,255,0.03); padding: 8px 12px; border-radius: 6px; margin: 8px 0; font-size: 0.85em; }
+  .data-point .num { color: #fff; font-weight: 700; }
+  .implication { background: rgba(88,166,255,0.06); border-left: 3px solid var(--accent); padding: 10px 14px; margin: 10px 0; border-radius: 0 6px 6px 0; font-size: 0.88em; }
+  .implication .label { color: var(--accent); font-weight: 700; font-size: 0.8em; text-transform: uppercase; margin-bottom: 4px; }
+  .callout { background: rgba(210,153,34,0.08); border: 1px solid rgba(210,153,34,0.3); border-radius: 6px; padding: 16px; margin: 16px 0; }
+  .callout-title { color: var(--yellow); font-weight: 700; font-size: 0.95em; margin-bottom: 8px; }
+  .callout ul { padding-left: 18px; }
+  .callout li { margin: 4px 0; font-size: 0.88em; }
+  ul { padding-left: 18px; }
+  li { margin: 3px 0; font-size: 0.88em; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(255,255,255,0.03); padding: 12px; border-radius: 6px; text-align: center; }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: #fff; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
+  .toc { background: rgba(88,166,255,0.05); border: 1px solid rgba(88,166,255,0.2); border-radius: 8px; padding: 16px 20px; margin-bottom: 20px; }
+  .toc-title { color: var(--accent); font-weight: 700; font-size: 0.9em; margin-bottom: 8px; }
+  .toc a { color: var(--accent); text-decoration: none; font-size: 0.88em; }
+  .toc a:hover { text-decoration: underline; }
+  .toc ol { padding-left: 20px; }
+  .toc li { margin: 4px 0; }
+  .nav-links { display: flex; justify-content: space-between; margin: 20px 0; font-size: 0.85em; }
+  .nav-links a { color: var(--accent); text-decoration: none; }
+  .nav-links a:hover { text-decoration: underline; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(255,255,255,0.03); padding: 12px; border-radius: 6px; text-align: center; }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: #fff; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
+  .footer { text-align: center; color: var(--muted); font-size: 0.75em; margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--border); }
+</style>
+<script>if(window.self===window.top&&sessionStorage.getItem("student_auth")!=="1"){document.body.innerHTML="";window.location.replace("student.html");}</script>
+</head>
+<body>
+
+<h1>彭博研究摘要</h1>
+<p class="subtitle">第30期 | 日銀加息在即與美債融資動態</p>
+<span class="issue-badge">2026年四月上旬更新</span>
+
+<div class="nav-links">
+  <span><a href="newsletter_29_growth_trade.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="toc">
+  <div class="toc-title">目錄</div>
+  <ol>
+    <li><a href="#boj-inflation">日銀 油價風暴前的短暫平靜</a></li>
+    <li><a href="#us-treasury">美債 供給密集週，通膨預期生變</a></li>
+    <li><a href="#takeaways">基金經理人重點摘要</a></li>
+  </ol>
+</div>
+
+<div class="section" id="boj-inflation">
+  <h2><span class="tag tag-misc">日銀</span> 油價風暴前的短暫平靜</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--green)">1.4%</div><div class="lbl">3月東京整體CPI
+（低於預期1.6%）</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">2.3%</div><div class="lbl">剔除鮮食及能源
+CPI同比</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">+25bp</div><div class="lbl">預計4月加息
+至0.75%→1.00%</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">東京CPI通膨走軟 — 日銀「石油風暴」前的平靜</div>
+    <p>3月東京CPI整體同比漲幅從2月的 <span style="color:#fff;font-weight:700">1.5%</span> 收窄至 <span style="color:#fff;font-weight:700">1.4%</span>，低於市場預期的 <span style="color:#fff;font-weight:700">1.6%</span>。剔除生鮮食品後的核心通膨率亦從 <span style="color:#fff;font-weight:700">1.8%</span> 降至 <span style="color:#fff;font-weight:700">1.7%</span>，剔除生鮮食品和能源後則從 <span style="color:#fff;font-weight:700">2.5%</span> 降至 <span style="color:#fff;font-weight:700">2.3%</span>。彭博經濟研究指出，回落主要源於基數效應，屬暫時性放緩，與日銀此前「年初通膨短暫降溫」的判斷一致。然而油價上行壓力正在醞釀，可能在未來數月重新推高消費物價，並帶動中長期通膨預期攀升。鑒於先前加息對經濟增長的拖累有限，日銀有空間在4月再加 <span style="color:#fff;font-weight:700">25個基點</span> 以彰顯價格穩定承諾。東京CPI為4月24日公佈的全國CPI數據風向球。</p>
+    <div class="data-point">東京整體CPI：<span style="color:#fff;font-weight:700">1.4%</span>（前值1.5%） &nbsp;|&nbsp; 核心CPI（剔除鮮食）：<span style="color:#fff;font-weight:700">1.7%</span>（前值1.8%） &nbsp;|&nbsp; 核心-核心CPI（剔除鮮食+能源）：<span style="color:#fff;font-weight:700">2.3%</span>（前值2.5%） &nbsp;|&nbsp; 預計加息時點：<span style="color:#fff;font-weight:700">4月</span></div>
+    <div class="implication"><div class="label">投資啟示</div>東京CPI短暫降溫不改日銀加息路徑。4月加息25bp幾成定局 — <span style="color:#fff;font-weight:700">減持日圓空頭，關注JGB短端收益率上行</span>。油價若持續攀升，下半年通膨或再度超預期。</div>
+  </div>
+  <div class="article">
+    <div class="article-title">日銀新CPI指標與產出缺口修正 — 改善溝通而非政策轉向</div>
+    <p>日銀發布剔除「制度性因素」（消費稅、手機資費、能源補貼等）的新核心CPI指標。調整後數據顯示：剔除生鮮食品CPI為 <span style="color:#fff;font-weight:700">2.2%</span>，剔除生鮮食品和能源為 <span style="color:#fff;font-weight:700">2.7%</span>，均印證通膨正向 <span style="color:#fff;font-weight:700">2%</span> 目標靠攏；但剔除所有食品和能源後僅 <span style="color:#fff;font-weight:700">1.7%</span>，反映部分觀點認為食品通膨主要由供給推動。與此同時，產出缺口估算值經修正後 <span style="color:#fff;font-weight:700">由負轉正</span>，主因是將工業產值核算從「基於產量」改為「基於增加值」，更好地捕捉了製造業附加值增長（如汽車自動駕駛等功能升級）。彭博經濟研究強調，此舉旨在提升溝通透明度，而非刻意在4月加息前釋放鷹派信號。</p>
+    <div class="data-point">新核心CPI（剔除鮮食）：<span style="color:#fff;font-weight:700">2.2%</span> &nbsp;|&nbsp; 新核心CPI（剔除鮮食+能源）：<span style="color:#fff;font-weight:700">2.7%</span> &nbsp;|&nbsp; 剔除所有食品+能源：<span style="color:#fff;font-weight:700">1.7%</span> &nbsp;|&nbsp; 產出缺口：<span style="color:#fff;font-weight:700">由負轉正</span></div>
+    <div class="implication"><div class="label">投資啟示</div>產出缺口轉正表面略偏鹰，但實質為技術性修正。新CPI指標更清晰反映潛在通膨 — <span style="color:#fff;font-weight:700">維持4月加息25bp基準預期不變</span>，勿過度解讀為額外鷹派信號。</div>
+  </div>
+</div>
+
+<div class="section" id="us-treasury">
+  <h2><span class="tag tag-misc">美債</span> 供給密集週，通膨預期生變</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val">$69B</div><div class="lbl">4月1日
+4個月期國庫券</div></div>
+    <div class="stat"><div class="val">$155B</div><div class="lbl">4月2日短期
+國庫券合計發行</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">~3%</div><div class="lbl">Fed Schmid警告
+通膨或卡在此處</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">美國國債觀察：融資動態與政策焦點</div>
+    <p>美國財政部本週密集發行短期國庫券：4月1日發售 <span style="color:#fff;font-weight:700">$690億</span> 4個月期票據，4月2日再發 <span style="color:#fff;font-weight:700">$800億</span> 4週期及 <span style="color:#fff;font-weight:700">$750億</span> 8週期票據，合計單日供給達 <span style="color:#fff;font-weight:700">$1,550億</span>。政策面訊號紛雜：Fed理事Schmid警告通膨可能 <span style="color:#fff;font-weight:700">卡在接近3%</span> 的水平；Bowman呼籲銀行加大小企業貸款；Barr則點名穩定幣風險。市場同時消化債券交易員因油價飆升削減通膨交易押注的訊息，以及伊朗衝突可能破壞Trump壓低利率願景的地緣風險。Trump再度公開施壓Fed主席Powell「盡快下台」，為利率政策前景增添不確定性。</p>
+    <div class="data-point">4個月期國庫券：<span style="color:#fff;font-weight:700">$690億</span> &nbsp;|&nbsp; 4週期+8週期合計：<span style="color:#fff;font-weight:700">$1,550億</span> &nbsp;|&nbsp; Schmid通膨警告：<span style="color:#fff;font-weight:700">~3%</span> &nbsp;|&nbsp; Trump施壓：<span style="color:#fff;font-weight:700">要求Powell下台</span></div>
+    <div class="implication"><div class="label">投資啟示</div>短期供給壓力可預見但可控。Schmid的「通膨卡3%」警告與油價上行共振 — <span style="color:#fff;font-weight:700">短期內降息預期繼續推遲，前端利率維持高位震盪</span>。地緣風險升溫下，<span style="color:#fff;font-weight:700">適度配置長端美債作避險</span>。</div>
+  </div>
+</div>
+
+<div class="callout" id="takeaways">
+  <div class="callout-title">基金經理人重點摘要</div>
+  <ul>
+    <li><strong>日銀：</strong>4月加息25bp至1.00%幾成定局。東京CPI短暫降溫為基數效應，油價上行將重新推高通膨。**減持日圓空頭、關注JGB短端拋售**。</li>
+    <li><strong>日銀溝通：</strong>新CPI指標與產出缺口修正為技術性改善，非額外鷹派信號。核心通膨（剔除制度因素）2.2%-2.7%印證通膨向2%目標靠攏。</li>
+    <li><strong>美債供給：</strong>本週短期國庫券密集發行逾$2,200億，關注拍賣尾利差。短期供給壓力可控但需監控。</li>
+    <li><strong>Fed通膨風險：</strong>Schmid警告通膨或卡在~3%，疊加油價與地緣衝突 — **上半年降息概率極低，維持短端利率多頭**。</li>
+    <li><strong>地緣政治：</strong>伊朗局勢升溫威脅油價穩定與利率前景。Trump持續施壓Powell離任，政策不確定性上升 — **適度增配長端美債避險**。</li>
+  </ul>
+</div>
+
+<div class="nav-links">
+  <span><a href="newsletter_29_growth_trade.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="footer">
+  彭博研究摘要 | 僅供教學與討論用途 | 2026年4月1日<br>
+  資料來源：Bloomberg Intelligence, Bloomberg Economics, Bloomberg News
+</div>
+
+</body>
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>彭博研究摘要 #28 — 中東戰火下的中國經濟：利潤反彈與政策博弈</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --accent: #58a6ff;
+          --green: #3fb950; --red: #f85149; --yellow: #d29922; --text: #c9d1d9; --muted: #8b949e;
+          --orange: #f0883e; --purple: #bc8cff; --cyan: #39d2c0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans TC', 'Microsoft JhengHei', Helvetica, Arial, sans-serif; line-height: 1.7; padding: 20px; max-width: 860px; margin: 0 auto; }
+  h1 { color: #fff; font-size: 1.7em; margin-bottom: 4px; }
+  .subtitle { color: var(--muted); font-size: 0.9em; margin-bottom: 8px; }
+  .issue-badge { display: inline-block; background: rgba(88,166,255,0.15); color: var(--accent); padding: 3px 10px; border-radius: 12px; font-size: 0.8em; font-weight: 600; margin-bottom: 20px; }
+  .tag { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 0.72em; font-weight: 600; margin-right: 4px; }
+  .tag-rates { background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-china { background: rgba(240,136,62,0.15); color: var(--orange); }
+  .tag-japan { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-geo   { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-oil   { background: rgba(210,153,34,0.15); color: var(--yellow); }
+  .tag-trade { background: rgba(210,153,34,0.15); color: var(--yellow); }
+  .tag-growth{ background: rgba(63,185,80,0.15); color: var(--green); }
+  .tag-metals{ background: rgba(188,140,255,0.15); color: var(--purple); }
+  .tag-infl  { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-policy{ background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-val   { background: rgba(63,185,80,0.15); color: var(--green); }
+  .tag-vol   { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-semi  { background: rgba(57,210,192,0.15); color: var(--cyan); }
+  .tag-credit{ background: rgba(188,140,255,0.15); color: var(--purple); }
+  .tag-space { background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-misc  { background: rgba(139,148,158,0.15); color: var(--muted); }
+  .section { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 16px; }
+  .section h2 { color: #fff; font-size: 1.15em; margin-bottom: 12px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+  .section h3 { color: var(--accent); font-size: 0.95em; margin: 14px 0 6px; }
+  .article { margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .article:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .article-title { color: #fff; font-weight: 700; font-size: 0.95em; margin-bottom: 4px; }
+  .article-title-cn { color: var(--muted); font-size: 0.85em; margin-bottom: 8px; }
+  .article p { font-size: 0.9em; margin: 6px 0; }
+  .data-point { background: rgba(255,255,255,0.03); padding: 8px 12px; border-radius: 6px; margin: 8px 0; font-size: 0.85em; }
+  .data-point .num { color: #fff; font-weight: 700; }
+  .implication { background: rgba(88,166,255,0.06); border-left: 3px solid var(--accent); padding: 10px 14px; margin: 10px 0; border-radius: 0 6px 6px 0; font-size: 0.88em; }
+  .implication .label { color: var(--accent); font-weight: 700; font-size: 0.8em; text-transform: uppercase; margin-bottom: 4px; }
+  .callout { background: rgba(210,153,34,0.08); border: 1px solid rgba(210,153,34,0.3); border-radius: 6px; padding: 16px; margin: 16px 0; }
+  .callout-title { color: var(--yellow); font-weight: 700; font-size: 0.95em; margin-bottom: 8px; }
+  .callout ul { padding-left: 18px; }
+  .callout li { margin: 4px 0; font-size: 0.88em; }
+  ul { padding-left: 18px; }
+  li { margin: 3px 0; font-size: 0.88em; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(255,255,255,0.03); padding: 12px; border-radius: 6px; text-align: center; }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: #fff; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
+  .toc { background: rgba(88,166,255,0.05); border: 1px solid rgba(88,166,255,0.2); border-radius: 8px; padding: 16px 20px; margin-bottom: 20px; }
+  .toc-title { color: var(--accent); font-weight: 700; font-size: 0.9em; margin-bottom: 8px; }
+  .toc a { color: var(--accent); text-decoration: none; font-size: 0.88em; }
+  .toc a:hover { text-decoration: underline; }
+  .toc ol { padding-left: 20px; }
+  .toc li { margin: 4px 0; }
+  .nav-links { display: flex; justify-content: space-between; margin: 20px 0; font-size: 0.85em; }
+  .nav-links a { color: var(--accent); text-decoration: none; }
+  .nav-links a:hover { text-decoration: underline; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(255,255,255,0.03); padding: 12px; border-radius: 6px; text-align: center; }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: #fff; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
+  .footer { text-align: center; color: var(--muted); font-size: 0.75em; margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--border); }
+</style>
+<script>if(window.self===window.top&&sessionStorage.getItem("student_auth")!=="1"){document.body.innerHTML="";window.location.replace("student.html");}</script>
+</head>
+<body>
+
+<h1>彭博研究摘要</h1>
+<p class="subtitle">第28期 | 中東戰火下的中國經濟：利潤反彈與政策博弈</p>
+<span class="issue-badge">2026年四月上旬更新</span>
+
+<div class="nav-links">
+  <span><a href="newsletter_27_geopolitics.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="toc">
+  <div class="toc-title">目錄</div>
+  <ol>
+    <li><a href="#growth-geopolitics">成長 戰爭陰霾籠罩脆弱復甦</a></li>
+    <li><a href="#monetary-policy">貨幣政策 央行降息立場不動搖</a></li>
+    <li><a href="#industrial-profits">企業盈利 利潤大增，再通膨點燃復甦火種</a></li>
+    <li><a href="#tech-transition">科技轉型 AI接棒房地產，新引擎啟動</a></li>
+    <li><a href="#takeaways">基金經理人重點摘要</a></li>
+  </ol>
+</div>
+
+<div class="section" id="growth-geopolitics">
+  <h2><span class="tag tag-growth">成長</span> 戰爭陰霾籠罩脆弱復甦</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--red)">5.3%</div><div class="lbl">城鎮調查失業率
+(1-2月)</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">16.5%</div><div class="lbl">青年失業率
+(仍處危機水平)</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">4.5-5.0%</div><div class="lbl">2026年GDP目標
+(達標難度加大)</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">中東戰爭給中國經濟成長帶來壓力</div>
+    <p>中東衝突令本已充滿挑戰的一年雪上加霜。儘管2026年前兩個月的需求較去年年底低點有所回升，但復甦基礎極為脆弱。對中國而言，最大的衝擊並非油價本身，而是<span style="color:#fff;font-weight:700">全球成長放緩</span>導致的外需萎縮——出口恰恰是當前經濟高度依賴的增長引擎。與此同時，就業市場壓力持續升溫：全國城鎮調查失業率從12月的<span style="color:#fff;font-weight:700">5.1%升至5.3%</span>，青年失業率雖從高點<span style="color:#fff;font-weight:700">18.9%</span>回落至<span style="color:#fff;font-weight:700">16.5%</span>，但仍處歷史高位。更令人擔憂的是，AI應用加速推進可能引發大規模崗位流失，現行政策尚無有效應對方案。若衝突持續至下半年，北京將需要<span style="color:#fff;font-weight:700">加碼刺激措施</span>以防經濟急劇放緩。</p>
+    <div class="data-point">城鎮失業率：<span style="color:#fff;font-weight:700">5.3%</span>（1-2月） &nbsp;|&nbsp; 青年失業率：<span style="color:#fff;font-weight:700">16.5%</span> &nbsp;|&nbsp; 原油儲備：<span style="color:#fff;font-weight:700">~80天</span>消費量 &nbsp;|&nbsp; 中東原油進口占比：<span style="color:#fff;font-weight:700">~40%</span></div>
+    <div class="implication"><div class="label">投資啟示</div>外需衝擊疊加內需疲軟，中國經濟下行風險顯著。<span style="color:#fff;font-weight:700">減持對中國出口依賴度高的亞太股票</span>，關注下半年財政加碼的時點信號。</div>
+  </div>
+  <div class="article">
+    <div class="article-title">石油衝擊溢出效應可能拖累中國出口</div>
+    <p>中國據悉已暫停燃料出口並收緊化肥出口管控，僅此兩項就可能使出口總額減少<span style="color:#fff;font-weight:700">1.4%</span>。但更大的風險在於石油衝擊是否會波及塑料行業——塑料原物料占出口總額<span style="color:#fff;font-weight:700">1.0%</span>，塑料製品占比更高達<span style="color:#fff;font-weight:700">2.8%</span>。2025年中國出口成品油<span style="color:#fff;font-weight:700">390億美元</span>（占比1.0%），化肥<span style="color:#fff;font-weight:700">130億美元</span>（占比0.4%）。對於本已面臨壓力的出口行業，能源供應鏈的擾動將進一步加大前景的不確定性。塑料行業若受波及，影響規模將遠超燃料和化肥的總和。</p>
+    <div class="data-point">燃料+化肥出口限制影響：<span style="color:#fff;font-weight:700">-1.4%</span>出口額 &nbsp;|&nbsp; 塑料製品出口占比：<span style="color:#fff;font-weight:700">2.8%</span> &nbsp;|&nbsp; 成品油出口(2025)：<span style="color:#fff;font-weight:700">390億美元</span></div>
+    <div class="implication"><div class="label">投資啟示</div>出口結構性風險上升。<span style="color:#fff;font-weight:700">關注中國塑料及化工板塊的盈利預警</span>，石化下游企業首當其衝。</div>
+  </div>
+</div>
+
+<div class="section" id="monetary-policy">
+  <h2><span class="tag tag-misc">貨幣政策</span> 央行降息立場不動搖</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--green)">-20bp</div><div class="lbl">預計全年
+政策利率降幅</div></div>
+    <div class="stat"><div class="val" style="color:var(--green)">-50bp</div><div class="lbl">預計全年
+存準率降幅</div></div>
+    <div class="stat"><div class="val">Q2</div><div class="lbl">首次降準
+預計時點</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">中東戰事不會改變中國央行的降息立場</div>
+    <p>市場因油價上漲和內需初步企穩而下調了對人行降息的預期，但彭博經濟研究認為這一判斷<span style="color:#fff;font-weight:700">為時尚早</span>。人行縮減寬鬆需要兩個前提：<span style="color:#fff;font-weight:700">內生動力驅動的內需穩健復甦</span>，以及<span style="color:#fff;font-weight:700">需求推動的持久通貨再膨脹</span>——目前兩者都不具備。因此，彭博維持全年政策利率下調<span style="color:#fff;font-weight:700">20bp</span>及存準率下調<span style="color:#fff;font-weight:700">50bp</span>的預測。第一步可能是Q2將存準率下調<span style="color:#fff;font-weight:700">25bp</span>。不過，鑒於聯儲會利率路徑的不確定性，降息時點可能推遲至<span style="color:#fff;font-weight:700">2026年下半年</span>。值得注意的是，油價走勢與經濟成長可能出現分化——油價上行而成長下行的「滯脹」組合將考驗政策空間。</p>
+    <div class="data-point">政策利率降幅預測：<span style="color:#fff;font-weight:700">-20bp</span>（全年） &nbsp;|&nbsp; 存準率降幅預測：<span style="color:#fff;font-weight:700">-50bp</span>（全年） &nbsp;|&nbsp; 首次降準：<span style="color:#fff;font-weight:700">Q2降25bp</span> &nbsp;|&nbsp; 降息時點：<span style="color:#fff;font-weight:700">推遲至H2</span></div>
+    <div class="implication"><div class="label">投資啟示</div>寬鬆方向確定但節奏推遲。<span style="color:#fff;font-weight:700">做多中國國債久期</span>，Q2降準落地前佈局。利率期貨隱含的降息預期偏低，存在定價修復空間。</div>
+  </div>
+</div>
+
+<div class="section" id="industrial-profits">
+  <h2><span class="tag tag-misc">企業盈利</span> 利潤大增，再通膨點燃復甦火種</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--green)">+15.2%</div><div class="lbl">1-2月工業利潤
+同比增速</div></div>
+    <div class="stat"><div class="val" style="color:var(--green)">+58.7%</div><div class="lbl">高技術製造業
+利潤增速</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">0.8%</div><div class="lbl">2026年PPI預測
+(上調自0.4%)</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">利潤大增預示中國企業盈利或在再通膨推動下持續復甦</div>
+    <p>2026年前兩個月工業企業利潤同比成長<span style="color:#fff;font-weight:700">15.2%</span>，遠超去年12月的<span style="color:#fff;font-weight:700">5.3%</span>和2025年全年的<span style="color:#fff;font-weight:700">0.6%</span>，也高於彭博此前預估的<span style="color:#fff;font-weight:700">10.6%</span>。製造業利潤大幅成長<span style="color:#fff;font-weight:700">18.9%</span>，采礦業從去年下滑<span style="color:#fff;font-weight:700">26.2%</span>轉為成長<span style="color:#fff;font-weight:700">9.9%</span>，高技術製造業更是飆升<span style="color:#fff;font-weight:700">58.7%</span>，拉動全部規上工業利潤成長<span style="color:#fff;font-weight:700">7.9個百分點</span>。IT和電子製造業利潤接近翻倍，反映AI及高技術設備需求旺盛。有色金屬冶煉業利潤同比飆升約<span style="color:#fff;font-weight:700">150%</span>，受益於大宗商品價格上漲。伊朗戰爭的影響具有兩面性：能源價格上漲推高出廠價格，PPI預測已從<span style="color:#fff;font-weight:700">0.4%上調至0.8%</span>，最早3月轉正；但全球需求萎縮可能拖累出口導向型製造業。下游家具和服裝企業利潤則繼續萎縮，原物料成本上升侵蝕了盈利能力。</p>
+    <div class="data-point">工業利潤增速：<span style="color:#fff;font-weight:700">15.2%</span>（vs 去年12月5.3%） &nbsp;|&nbsp; 高技術製造業：<span style="color:#fff;font-weight:700">+58.7%</span> &nbsp;|&nbsp; PPI預測上調：<span style="color:#fff;font-weight:700">0.4%→0.8%</span> &nbsp;|&nbsp; 有色金屬利潤：<span style="color:#fff;font-weight:700">+~150%</span></div>
+    <div class="implication"><div class="label">投資啟示</div>再通膨交易回歸。<span style="color:#fff;font-weight:700">增持中國高技術製造業和上游資源股</span>，但<span style="color:#fff;font-weight:700">減持下游消費品製造商</span>（原物料成本擠壓利潤）。PPI轉正將成為A股盈利修復的催化劑。</div>
+  </div>
+</div>
+
+<div class="section" id="tech-transition">
+  <h2><span class="tag tag-misc">科技轉型</span> AI接棒房地產，新引擎啟動</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--green)">~20%</div><div class="lbl">2026年高技術+綠色
+產業GDP占比</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">&lt;15%</div><div class="lbl">2030年房地產
+GDP占比預測</div></div>
+    <div class="stat"><div class="val" style="color:var(--green)">25%</div><div class="lbl">2030年高技術
+GDP占比目標</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">AI釋放動能：2026年科技將取代地產成中國經濟主引擎</div>
+    <p>科技自立自強是中國「十五五規劃」(2026-2030年)的核心目標。彭博經濟研究基於投入產出表的最新測算顯示，2026年高技術和綠色產業在GDP中的占比可能提高到<span style="color:#fff;font-weight:700">約20%</span>，有望<span style="color:#fff;font-weight:700">首次超越房地產相關行業</span>。到2030年，其占比有望進一步攀升至<span style="color:#fff;font-weight:700">25%</span>，而房地產行業占比可能降至<span style="color:#fff;font-weight:700">不足15%</span>。十五五規劃綱要草案將消費提升為戰略支點，並首次將綜合整治「內卷式」競爭寫入規劃。投資重點則轉向通信網絡、計算能力及數據基礎設施等新型基建。然而，AI技術發展雖能緩和經濟長期放緩趨勢，但<span style="color:#fff;font-weight:700">勞動力減少、結構性內卷及去全球化</span>等不利因素意味著其可能不足以扭轉增長放緩的大方向。</p>
+    <div class="data-point">高技術+綠色GDP占比(2026)：<span style="color:#fff;font-weight:700">~20%</span>（首超地產） &nbsp;|&nbsp; 2030年目標：<span style="color:#fff;font-weight:700">25%</span> &nbsp;|&nbsp; 房地產GDP占比(2030)：<span style="color:#fff;font-weight:700">&lt;15%</span> &nbsp;|&nbsp; 十五五核心：<span style="color:#fff;font-weight:700">科技自立+消費</span></div>
+    <div class="implication"><div class="label">投資啟示</div>中國經濟結構性轉型加速。<span style="color:#fff;font-weight:700">長線增持中國AI、半導體及新能源板塊</span>，<span style="color:#fff;font-weight:700">減持傳統房地產開發商</span>。十五五規劃下的算力基建需求將持續推動相關供應鏈。</div>
+  </div>
+</div>
+
+<div class="callout" id="takeaways">
+  <div class="callout-title">基金經理人重點摘要</div>
+  <ul>
+    <li><strong>中國成長：</strong>中東衝突衝擊外需，出口限制已開始——達標4.5-5.0% GDP目標難度加大。若衝突延續至H2，預期財政加碼。</li>
+    <li><strong>貨幣政策：</strong>人行全年料降息20bp、降準50bp，Q2先降準25bp。**做多中國國債久期**，降息預期存在定價修復空間。</li>
+    <li><strong>企業盈利：</strong>工業利潤+15.2%，高技術製造業+58.7%。PPI最早3月轉正——**再通膨交易回歸，增持上游資源和高技術製造**。</li>
+    <li><strong>結構轉型：</strong>高技術+綠色產業GDP占比2026年首超房地產。**長線佈局AI算力基建供應鏈，減持傳統地產**。</li>
+    <li><strong>風險提示：</strong>油價若持續高企，下游消費品製造商利潤承壓；塑料出口若受波及，影響規模遠超燃料化肥。**迴避下游成本敏感型出口企業**。</li>
+  </ul>
+</div>
+
+<div class="nav-links">
+  <span><a href="newsletter_27_geopolitics.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="footer">
+  彭博研究摘要 | 僅供教學與討論用途 | 2026年4月1日<br>
+  資料來源：Bloomberg Intelligence, Bloomberg Economics, Bloomberg News
+</div>
+
+</body>
+</html>

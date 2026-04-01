@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>彭博研究摘要 #24 — 霍爾木茲封鎖：油價、亞洲能源危機與滯脹陰影</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --accent: #58a6ff;
+          --green: #3fb950; --red: #f85149; --yellow: #d29922; --text: #c9d1d9; --muted: #8b949e;
+          --orange: #f0883e; --purple: #bc8cff; --cyan: #39d2c0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans TC', 'Microsoft JhengHei', Helvetica, Arial, sans-serif; line-height: 1.7; padding: 20px; max-width: 860px; margin: 0 auto; }
+  h1 { color: #fff; font-size: 1.7em; margin-bottom: 4px; }
+  .subtitle { color: var(--muted); font-size: 0.9em; margin-bottom: 8px; }
+  .issue-badge { display: inline-block; background: rgba(88,166,255,0.15); color: var(--accent); padding: 3px 10px; border-radius: 12px; font-size: 0.8em; font-weight: 600; margin-bottom: 20px; }
+  .tag { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 0.72em; font-weight: 600; margin-right: 4px; }
+  .tag-rates { background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-china { background: rgba(240,136,62,0.15); color: var(--orange); }
+  .tag-japan { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-geo   { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-oil   { background: rgba(210,153,34,0.15); color: var(--yellow); }
+  .tag-trade { background: rgba(210,153,34,0.15); color: var(--yellow); }
+  .tag-growth{ background: rgba(63,185,80,0.15); color: var(--green); }
+  .tag-metals{ background: rgba(188,140,255,0.15); color: var(--purple); }
+  .tag-infl  { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-policy{ background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-val   { background: rgba(63,185,80,0.15); color: var(--green); }
+  .tag-vol   { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-semi  { background: rgba(57,210,192,0.15); color: var(--cyan); }
+  .tag-credit{ background: rgba(188,140,255,0.15); color: var(--purple); }
+  .tag-space { background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-misc  { background: rgba(139,148,158,0.15); color: var(--muted); }
+  .section { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 16px; }
+  .section h2 { color: #fff; font-size: 1.15em; margin-bottom: 12px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+  .section h3 { color: var(--accent); font-size: 0.95em; margin: 14px 0 6px; }
+  .article { margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .article:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .article-title { color: #fff; font-weight: 700; font-size: 0.95em; margin-bottom: 4px; }
+  .article-title-cn { color: var(--muted); font-size: 0.85em; margin-bottom: 8px; }
+  .article p { font-size: 0.9em; margin: 6px 0; }
+  .data-point { background: rgba(255,255,255,0.03); padding: 8px 12px; border-radius: 6px; margin: 8px 0; font-size: 0.85em; }
+  .data-point .num { color: #fff; font-weight: 700; }
+  .implication { background: rgba(88,166,255,0.06); border-left: 3px solid var(--accent); padding: 10px 14px; margin: 10px 0; border-radius: 0 6px 6px 0; font-size: 0.88em; }
+  .implication .label { color: var(--accent); font-weight: 700; font-size: 0.8em; text-transform: uppercase; margin-bottom: 4px; }
+  .callout { background: rgba(210,153,34,0.08); border: 1px solid rgba(210,153,34,0.3); border-radius: 6px; padding: 16px; margin: 16px 0; }
+  .callout-title { color: var(--yellow); font-weight: 700; font-size: 0.95em; margin-bottom: 8px; }
+  .callout ul { padding-left: 18px; }
+  .callout li { margin: 4px 0; font-size: 0.88em; }
+  ul { padding-left: 18px; }
+  li { margin: 3px 0; font-size: 0.88em; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(255,255,255,0.03); padding: 12px; border-radius: 6px; text-align: center; }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: #fff; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
+  .toc { background: rgba(88,166,255,0.05); border: 1px solid rgba(88,166,255,0.2); border-radius: 8px; padding: 16px 20px; margin-bottom: 20px; }
+  .toc-title { color: var(--accent); font-weight: 700; font-size: 0.9em; margin-bottom: 8px; }
+  .toc a { color: var(--accent); text-decoration: none; font-size: 0.88em; }
+  .toc a:hover { text-decoration: underline; }
+  .toc ol { padding-left: 20px; }
+  .toc li { margin: 4px 0; }
+  .nav-links { display: flex; justify-content: space-between; margin: 20px 0; font-size: 0.85em; }
+  .nav-links a { color: var(--accent); text-decoration: none; }
+  .nav-links a:hover { text-decoration: underline; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(255,255,255,0.03); padding: 12px; border-radius: 6px; text-align: center; }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: #fff; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
+  .footer { text-align: center; color: var(--muted); font-size: 0.75em; margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--border); }
+</style>
+<script>if(window.self===window.top&&sessionStorage.getItem("student_auth")!=="1"){document.body.innerHTML="";window.location.replace("student.html");}</script>
+</head>
+<body>
+
+<h1>彭博研究摘要</h1>
+<p class="subtitle">第24期 | 霍爾木茲封鎖：油價、亞洲能源危機與滯脹陰影</p>
+<span class="issue-badge">2026年四月上旬更新</span>
+
+<div class="nav-links">
+  <span><a href="newsletter_23_oil_geopolitics.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="toc">
+  <div class="toc-title">目錄</div>
+  <ol>
+    <li><a href="#oil-price-geopolitics">油價 和談曙光初現，但140美元風險猶在</a></li>
+    <li><a href="#asia-energy-crisis">亞洲能源 儲備見底，東南亞告急</a></li>
+    <li><a href="#stagflation-strategy">滯脹 七〇年代劇本重演？聯準會進退維谷</a></li>
+    <li><a href="#takeaways">基金經理人重點摘要</a></li>
+  </ol>
+</div>
+
+<div class="section" id="oil-price-geopolitics">
+  <h2><span class="tag tag-misc">油價</span> 和談曙光初現，但140美元風險猶在</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--red)">$102-115</div><div class="lbl">WTI / Brent
+當前交易區間</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">$140</div><div class="lbl">紅海升級情景
+布倫特目標價</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">$4+/gal</div><div class="lbl">美國汽油價格
+2022年8月以來新高</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">紅海若遭襲擊 油價或飆至140美元</div>
+    <p>伊朗戰爭進入第二個月，布倫特原油維持在每桶<span style="color:#fff;font-weight:700">110美元</span>附近。胡塞武裝已於<span style="color:#fff;font-weight:700">3月28日</span>向以色列發射彈道飛彈，正式加入戰局。彭博經濟研究警告，若胡塞武裝開始襲擊沙烏地阿拉伯經紅海出口的原油運輸——目前已增至每日<span style="color:#fff;font-weight:700">500萬桶</span>——全球原油供應可能再減少<span style="color:#fff;font-weight:700">5%</span>，根據「供應中斷四倍」經驗法則，布倫特可能飆升至<span style="color:#fff;font-weight:700">140美元</span>。研究指出，美國若發動地面入侵或轟炸伊朗基礎設施，將是胡塞武裝全面行動的觸發點。自戰爭爆發以來，主要經濟體通膨率平均已上升<span style="color:#fff;font-weight:700">0.4個百分點</span>。</p>
+    <div class="data-point">紅海日運量：沙烏地經延布出口<span style="color:#fff;font-weight:700">500萬桶/日</span> &nbsp;|&nbsp; 胡塞加沙戰爭期間襲擊：<span style="color:#fff;font-weight:700">315+次</span>（命中率18%） &nbsp;|&nbsp; 美軍此前擊落胡塞無人機：<span style="color:#fff;font-weight:700">~480架</span></div>
+    <div class="implication"><div class="label">投資啟示</div>紅海升級是油價從110邁向140的關鍵催化劑。<span style="color:#fff;font-weight:700">做多布倫特遠月期貨看漲期權</span>（$130-140行權價），對沖尾部風險。</div>
+  </div>
+  <div class="article">
+    <div class="article-title">美伊釋放和談訊號 油價短線回落</div>
+    <p>伊朗總統裴澤什基安表示願意結束戰爭，川普亦稱美軍「不會待太久」，WTI應聲下跌<span style="color:#fff;font-weight:700">3%</span>至<span style="color:#fff;font-weight:700">102美元</span>附近。但市場仍高度警惕：伊朗於同日以無人機襲擊一艘停泊在杜拜港的科威特滿載超大型油輪<span style="color:#fff;font-weight:700">Al-Salmi號</span>，船體受損。Tiberius Group CEO認為「退出情景比市場預期更近」，但OnyxPoint CIO警告「即使明天停火，恢復海峽通行仍需數周至數月」。美國汽油價格突破<span style="color:#fff;font-weight:700">$4/加侖</span>，為川普中期選舉年帶來重大政治風險。</p>
+    <div class="data-point">WTI跌幅：<span style="color:#fff;font-weight:700">-3%</span>至$102 &nbsp;|&nbsp; 布倫特月度漲幅：<span style="color:#fff;font-weight:700">史上最強</span> &nbsp;|&nbsp; 美國汽油：<span style="color:#fff;font-weight:700">&gt;$4/gal</span>（2022年8月以來首次）</div>
+    <div class="implication"><div class="label">投資啟示</div>和談消息帶來的回落是短暫的——基礎設施損壞意味著即使停火，供應恢復需時。<span style="color:#fff;font-weight:700">逢跌買入能源股</span>，但設好止損。</div>
+  </div>
+</div>
+
+<div class="section" id="asia-energy-crisis">
+  <h2><span class="tag tag-misc">亞洲能源</span> 儲備見底，東南亞告急</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--red)">45天</div><div class="lbl">菲律賓燃料儲備
+僅餘天數</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">$420億</div><div class="lbl">中國2024年
+燃料出口額</div></div>
+    <div class="stat"><div class="val">¥8000億</div><div class="lbl">日本燃油補貼
+預算儲備金</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">亞洲全力應對霍爾木茲封鎖連鎖反應</div>
+    <p>作為海灣石油最大消費地，亞洲正經歷嚴重分化的能源衝擊。<span style="color:#fff;font-weight:700">日本</span>已將私營企業儲備義務從70天削減至<span style="color:#fff;font-weight:700">55天</span>，釋放一個月國家儲備，並動用<span style="color:#fff;font-weight:700">8,000億日圓</span>補貼將汽油穩定在每升<span style="color:#fff;font-weight:700">170日圓</span>。<span style="color:#fff;font-weight:700">韓國</span>批准超過<span style="color:#fff;font-weight:700">160億美元</span>追加預算，並在IEA協調下史上最大規模釋放儲備<span style="color:#fff;font-weight:700">2,246萬桶</span>。然而東南亞處境截然不同：<span style="color:#fff;font-weight:700">菲律賓</span>宣布國家能源緊急狀態，燃料僅夠<span style="color:#fff;font-weight:700">45天</span>；<span style="color:#fff;font-weight:700">泰國</span>柴油飆升<span style="color:#fff;font-weight:700">30%</span>，農村加油站見底；<span style="color:#fff;font-weight:700">柬埔寨</span>數百家加油站關閉；<span style="color:#fff;font-weight:700">孟加拉</span>航空燃油漲<span style="color:#fff;font-weight:700">80%</span>，正尋求<span style="color:#fff;font-weight:700">20億美元</span>多邊融資。印度<span style="color:#fff;font-weight:700">LPG短缺</span>已衝擊餐飲業，工業供應僅恢復至正常水平的<span style="color:#fff;font-weight:700">70%</span>。</p>
+    <div class="data-point">韓國IEA協調釋放：<span style="color:#fff;font-weight:700">2,246萬桶</span>（史上最大） &nbsp;|&nbsp; 澳洲燃油標準放寬：月增<span style="color:#fff;font-weight:700">1億升</span> &nbsp;|&nbsp; 印度工業LPG供應：<span style="color:#fff;font-weight:700">70%</span>（前值50%） &nbsp;|&nbsp; 泰國柴油漲幅：<span style="color:#fff;font-weight:700">30%</span></div>
+    <div class="implication"><div class="label">投資啟示</div>東南亞供應鏈斷裂風險上升。<span style="color:#fff;font-weight:700">減持菲律賓、泰國等前線經濟體資產</span>，關注日韓等有儲備緩衝的市場。</div>
+  </div>
+  <div class="article">
+    <div class="article-title">中國燃料出口禁令加劇亞洲能源困境</div>
+    <p>中國雖為全球最大原油淨進口國，但憑藉強大煉油能力，2024年燃料出口達<span style="color:#fff;font-weight:700">420億美元</span>，佔全球前20大出口國的<span style="color:#fff;font-weight:700">6.2%</span>。亞洲是主要買家，佔出口總量的<span style="color:#fff;font-weight:700">64%</span>。如今北京實施成品油出口禁令以保障國內需求，菲律賓首當其衝——2024年從中國進口<span style="color:#fff;font-weight:700">480萬噸</span>燃料，佔其進口總量的<span style="color:#fff;font-weight:700">三分之一</span>。日本和馬來西亞同樣面臨依賴風險。彭博經濟研究警告，若燃料短缺擾亂航運或工業生產，影響將波及全球供應鏈——澳洲和印尼是礦產材料供應國，韓國和日本是電子產品樞紐。晶片生產尤其脆弱。</p>
+    <div class="data-point">中國燃料出口：<span style="color:#fff;font-weight:700">$420億</span>（2024年） &nbsp;|&nbsp; 亞洲佔中國燃料出口：<span style="color:#fff;font-weight:700">64%</span> &nbsp;|&nbsp; 菲律賓對中國燃料依賴：<span style="color:#fff;font-weight:700">1/3進口量</span> &nbsp;|&nbsp; 歐洲佔比：<span style="color:#fff;font-weight:700">10%</span></div>
+    <div class="implication"><div class="label">投資啟示</div>中國「燃料自保」策略是亞洲供應鏈的額外風險層。<span style="color:#fff;font-weight:700">做空對華燃料依賴度高的亞洲貨幣</span>（PHP首選），關注半導體供應鏈中斷風險。</div>
+  </div>
+</div>
+
+<div class="section" id="stagflation-strategy">
+  <h2><span class="tag tag-misc">滯脹</span> 七〇年代劇本重演？聯準會進退維谷</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--red)">+0.4ppt</div><div class="lbl">戰爭以來
+主要經濟體通膨升幅</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">5%</div><div class="lbl">美國30年期國債
+收益率</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">&lt;6600</div><div class="lbl">S&P 500
+觸發政策恐慌水平</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">油價衝擊引發滯脹恐慌 聯準會陷入政策困境</div>
+    <p>伊朗戰爭引發的油價飆升正重演<span style="color:#fff;font-weight:700">1970年代</span>滯脹劇本——通膨黏性上升，同時經濟增長和就業動能放緩，聯準會左右為難。彭博將當前CPI軌跡與<span style="color:#fff;font-weight:700">1967-1982年</span>滯脹時期疊加比較，兩者驚人相似：初始通膨飆升、部分回落、然後更持久的第二波上行。若此類比成立，一場持續數年的「磨人型通膨」或正在醞釀。三月初股票、債券和黃金曾同步下跌，傳統相關性一度失效，但隨後投資者焦點在通膨與需求毀滅之間擺盪，相關性開始修復。本周非農數據將成為聯準會利率路徑的關鍵風向標。</p>
+    <div class="data-point">通膨類比：<span style="color:#fff;font-weight:700">1967-1982年</span>滯脹周期 &nbsp;|&nbsp; 3月異常：<span style="color:#fff;font-weight:700">股債金同跌</span> &nbsp;|&nbsp; 焦點數據：<span style="color:#fff;font-weight:700">本周非農就業</span></div>
+    <div class="implication"><div class="label">投資啟示</div>滯脹環境下傳統60/40組合失效。<span style="color:#fff;font-weight:700">增配大宗商品與實物資產</span>，減持長久期債券。等待非農數據確認方向。</div>
+  </div>
+  <div class="article">
+    <div class="article-title">BofA Hartnett：弱美元時代的逆向佈局</div>
+    <p>BofA首席策略師Hartnett指出，年初至今<span style="color:#fff;font-weight:700">油價+63.4%</span>領跑所有資產，美股<span style="color:#fff;font-weight:700">-5.4%</span>、比特幣<span style="color:#fff;font-weight:700">-21.6%</span>墊底。美國總統信譽的熊市等於美元熊市——歷史上尼克森、卡特、小布希時期皆如此，若川普因伊朗戰爭信譽受損，美元將繼續走弱。Bull &amp; Bear指標賣出信號結束（期間SPX累跌<span style="color:#fff;font-weight:700">4%</span>、峰谷跌幅<span style="color:#fff;font-weight:700">7%</span>），但目前既無牛市投降信號，也無宏觀恐慌（GDP/EPS下調），逆向投資者尚無買入依據。Hartnett最看好的世俗級逆向交易是<span style="color:#fff;font-weight:700">做多消費非必需品</span>——等權指數已跌至<span style="color:#fff;font-weight:700">GFC &#x27;08和COVID &#x27;20的相對低點</span>，押注川普戰後轉向解決生活成本問題，以及「<span style="color:#fff;font-weight:700">AI=UBI=YCC</span>」政策範式轉換。</p>
+    <div class="data-point">YTD表現：油<span style="color:#fff;font-weight:700">+63.4%</span> vs 美股<span style="color:#fff;font-weight:700">-5.4%</span> vs BTC<span style="color:#fff;font-weight:700">-21.6%</span> &nbsp;|&nbsp; 30年美債收益率：<span style="color:#fff;font-weight:700">5%</span> &nbsp;|&nbsp; 消費非必需品相對值：<span style="color:#fff;font-weight:700">GFC/COVID低點</span></div>
+    <div class="implication"><div class="label">投資啟示</div>Hartnett的框架：美元熊市+油價居高=<span style="color:#fff;font-weight:700">做多黃金與國際股市</span>。消費非必需品是中長線逆向機會，但需等待宏觀恐慌信號確認底部。</div>
+  </div>
+</div>
+
+<div class="callout" id="takeaways">
+  <div class="callout-title">基金經理人重點摘要</div>
+  <ul>
+    <li><strong>油價：</strong>和談訊號帶來短暫回落至$102，但基礎設施損壞意味即使停火恢復需時。紅海升級可推油至$140。**逢跌增持能源多頭**。</li>
+    <li><strong>亞洲能源：</strong>日韓有儲備緩衝，東南亞告急。菲律賓僅餘45天燃料、泰國柴油漲30%、中國出口禁令雪上加霜。**減持前線經濟體資產**。</li>
+    <li><strong>供應鏈：</strong>中國燃料自保+亞洲工業停產風險波及全球晶片、礦產供應。**關注半導體與航運板塊的二階衝擊**。</li>
+    <li><strong>滯脹：</strong>通膨軌跡與1970年代驚人相似，主要經濟體通膨已升0.4ppt。本周非農是關鍵。**增配大宗商品，減持長久期債券**。</li>
+    <li><strong>美元與配置：</strong>Hartnett判斷美元仍在熊市——總統信譽受損=弱美元。**做多黃金與國際股市**，消費非必需品為世俗級逆向交易。</li>
+  </ul>
+</div>
+
+<div class="nav-links">
+  <span><a href="newsletter_23_oil_geopolitics.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="footer">
+  彭博研究摘要 | 僅供教學與討論用途 | 2026年4月1日<br>
+  資料來源：Bloomberg Intelligence, Bloomberg Economics, Bloomberg News
+</div>
+
+</body>
+</html>

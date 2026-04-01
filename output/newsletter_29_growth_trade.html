@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>彭博研究摘要 #29 — 衰退隱憂、中國分化與關稅一週年</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --accent: #58a6ff;
+          --green: #3fb950; --red: #f85149; --yellow: #d29922; --text: #c9d1d9; --muted: #8b949e;
+          --orange: #f0883e; --purple: #bc8cff; --cyan: #39d2c0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans TC', 'Microsoft JhengHei', Helvetica, Arial, sans-serif; line-height: 1.7; padding: 20px; max-width: 860px; margin: 0 auto; }
+  h1 { color: #fff; font-size: 1.7em; margin-bottom: 4px; }
+  .subtitle { color: var(--muted); font-size: 0.9em; margin-bottom: 8px; }
+  .issue-badge { display: inline-block; background: rgba(88,166,255,0.15); color: var(--accent); padding: 3px 10px; border-radius: 12px; font-size: 0.8em; font-weight: 600; margin-bottom: 20px; }
+  .tag { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 0.72em; font-weight: 600; margin-right: 4px; }
+  .tag-rates { background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-china { background: rgba(240,136,62,0.15); color: var(--orange); }
+  .tag-japan { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-geo   { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-oil   { background: rgba(210,153,34,0.15); color: var(--yellow); }
+  .tag-trade { background: rgba(210,153,34,0.15); color: var(--yellow); }
+  .tag-growth{ background: rgba(63,185,80,0.15); color: var(--green); }
+  .tag-metals{ background: rgba(188,140,255,0.15); color: var(--purple); }
+  .tag-infl  { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-policy{ background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-val   { background: rgba(63,185,80,0.15); color: var(--green); }
+  .tag-vol   { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-semi  { background: rgba(57,210,192,0.15); color: var(--cyan); }
+  .tag-credit{ background: rgba(188,140,255,0.15); color: var(--purple); }
+  .tag-space { background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-misc  { background: rgba(139,148,158,0.15); color: var(--muted); }
+  .section { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 16px; }
+  .section h2 { color: #fff; font-size: 1.15em; margin-bottom: 12px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+  .section h3 { color: var(--accent); font-size: 0.95em; margin: 14px 0 6px; }
+  .article { margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .article:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .article-title { color: #fff; font-weight: 700; font-size: 0.95em; margin-bottom: 4px; }
+  .article-title-cn { color: var(--muted); font-size: 0.85em; margin-bottom: 8px; }
+  .article p { font-size: 0.9em; margin: 6px 0; }
+  .data-point { background: rgba(255,255,255,0.03); padding: 8px 12px; border-radius: 6px; margin: 8px 0; font-size: 0.85em; }
+  .data-point .num { color: #fff; font-weight: 700; }
+  .implication { background: rgba(88,166,255,0.06); border-left: 3px solid var(--accent); padding: 10px 14px; margin: 10px 0; border-radius: 0 6px 6px 0; font-size: 0.88em; }
+  .implication .label { color: var(--accent); font-weight: 700; font-size: 0.8em; text-transform: uppercase; margin-bottom: 4px; }
+  .callout { background: rgba(210,153,34,0.08); border: 1px solid rgba(210,153,34,0.3); border-radius: 6px; padding: 16px; margin: 16px 0; }
+  .callout-title { color: var(--yellow); font-weight: 700; font-size: 0.95em; margin-bottom: 8px; }
+  .callout ul { padding-left: 18px; }
+  .callout li { margin: 4px 0; font-size: 0.88em; }
+  ul { padding-left: 18px; }
+  li { margin: 3px 0; font-size: 0.88em; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(255,255,255,0.03); padding: 12px; border-radius: 6px; text-align: center; }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: #fff; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
+  .toc { background: rgba(88,166,255,0.05); border: 1px solid rgba(88,166,255,0.2); border-radius: 8px; padding: 16px 20px; margin-bottom: 20px; }
+  .toc-title { color: var(--accent); font-weight: 700; font-size: 0.9em; margin-bottom: 8px; }
+  .toc a { color: var(--accent); text-decoration: none; font-size: 0.88em; }
+  .toc a:hover { text-decoration: underline; }
+  .toc ol { padding-left: 20px; }
+  .toc li { margin: 4px 0; }
+  .nav-links { display: flex; justify-content: space-between; margin: 20px 0; font-size: 0.85em; }
+  .nav-links a { color: var(--accent); text-decoration: none; }
+  .nav-links a:hover { text-decoration: underline; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(255,255,255,0.03); padding: 12px; border-radius: 6px; text-align: center; }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: #fff; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
+  .footer { text-align: center; color: var(--muted); font-size: 0.75em; margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--border); }
+</style>
+<script>if(window.self===window.top&&sessionStorage.getItem("student_auth")!=="1"){document.body.innerHTML="";window.location.replace("student.html");}</script>
+</head>
+<body>
+
+<h1>彭博研究摘要</h1>
+<p class="subtitle">第29期 | 衰退隱憂、中國分化與關稅一週年</p>
+<span class="issue-badge">2026年四月上旬更新</span>
+
+<div class="nav-links">
+  <span><a href="newsletter_28_china.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="toc">
+  <div class="toc-title">目錄</div>
+  <ol>
+    <li><a href="#credit-risk">信用 私募信貸牽連，銀行債承壓</a></li>
+    <li><a href="#china-pmi">中國 製造業回暖，消費仍疲弱</a></li>
+    <li><a href="#trade-tariff">貿易 關稅一週年：雷聲大雨點小</a></li>
+    <li><a href="#takeaways">基金經理人重點摘要</a></li>
+  </ol>
+</div>
+
+<div class="section" id="credit-risk">
+  <h2><span class="tag tag-credit">信用</span> 私募信貸牽連，銀行債承壓</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--orange)">+4bp</div><div class="lbl">金融債利差
+年初至今走闊</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">$710億</div><div class="lbl">富國銀行
+私募信貸敞口</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">33%</div><div class="lbl">富國NDFI貸款中
+私募信貸佔比</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">美大行債券受私募信貸拖累 — 衰退風險下隱患加劇</div>
+    <p>2026年以來美國大型銀行債券表現落後大市，主因是年初<span style="color:#fff;font-weight:700">破紀錄的發行量</span>以及與私募信貸機構日益緊密的聯繫。私募基金正面臨贖回壓力，尤其是對受AI衝擊的軟件貸款敞口偏高。金融債利差較年初走闊約<span style="color:#fff;font-weight:700">4個基點</span>，結束了此前與企業債指數持平的局面。若經濟維持穩健，上述擔憂或屬過度；但中東戰爭若曠日持久，經濟放緩甚至衰退的風險將顯著上升，槓桿借款人違約率勢必攀升。富國銀行對商業信貸中介的貸款高達<span style="color:#fff;font-weight:700">710億美元</span>，為同業最高，約為花旗及美銀的<span style="color:#fff;font-weight:700">兩倍</span>，但其高級擔保敞口相當於投資級評級，一定程度上緩解了風險。</p>
+    <div class="data-point">金融債vs企業債利差：<span style="color:#fff;font-weight:700">+4bp</span>（年初持平） &nbsp;|&nbsp; 富國私募信貸敞口：<span style="color:#fff;font-weight:700">$710億</span>（同業最高） &nbsp;|&nbsp; 富國NDFI中私募佔比：<span style="color:#fff;font-weight:700">33%</span> &nbsp;|&nbsp; 2021年底金融債曾較企業債窄<span style="color:#fff;font-weight:700">10bp</span></div>
+    <div class="implication"><div class="label">投資啟示</div>銀行債短期面臨地緣政治與資產質量雙重逆風。<span style="color:#fff;font-weight:700">減持大行次級債</span>，關注私募信貸贖回壓力傳導路徑。若中東局勢緩和，金融債利差有回歸空間。</div>
+  </div>
+</div>
+
+<div class="section" id="china-pmi">
+  <h2><span class="tag tag-china">中國</span> 製造業回暖，消費仍疲弱</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--green)">50.4</div><div class="lbl">3月製造業PMI
+（預期50.1）</div></div>
+    <div class="stat"><div class="val">50.1</div><div class="lbl">3月非製造業PMI
+（預期49.9）</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">2Q</div><div class="lbl">降準/降息
+窗口期</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">中國3月PMI：製造業韌性超預期，服務業反彈乏力</div>
+    <p>中國3月官方製造業PMI回升至<span style="color:#fff;font-weight:700">50.4</span>，重返擴張區間，優於市場預期的<span style="color:#fff;font-weight:700">50.1</span>及彭博經濟預測的<span style="color:#fff;font-weight:700">49.7</span>，且漲幅超過春節後的季節性回暖幅度，顯示即使在中東衝突初期衝擊下，工業部門仍具韌性。然而非製造業PMI僅微升至<span style="color:#fff;font-weight:700">50.1</span>（前值49.5），服務業在春節長假後反彈力度偏弱，凸顯內需持續疲軟的結構性問題。製造業強、服務業弱的<span style="color:#fff;font-weight:700">分化格局</span>持續存在。隨着中東戰事升級，外需面臨進一步削弱，政策寬鬆的必要性上升——貨幣端（降準或降息）最快可能在<span style="color:#fff;font-weight:700">二季度</span>落地，財政端則可能等到下半年視戰爭影響程度而定。</p>
+    <div class="data-point">製造業PMI：<span style="color:#fff;font-weight:700">50.4</span>（前值49.1） &nbsp;|&nbsp; 非製造業PMI：<span style="color:#fff;font-weight:700">50.1</span>（前值49.5） &nbsp;|&nbsp; 貨幣寬鬆窗口：<span style="color:#fff;font-weight:700">2Q</span> &nbsp;|&nbsp; 財政發力：<span style="color:#fff;font-weight:700">下半年</span></div>
+    <div class="implication"><div class="label">投資啟示</div>製造業數據穩健但服務業拖累，政策寬鬆預期升溫。<span style="color:#fff;font-weight:700">做多中國國債</span>押注降準降息，短期可<span style="color:#fff;font-weight:700">增配工業/出口板塊</span>，但消費股仍需觀望刺激力度。</div>
+  </div>
+</div>
+
+<div class="section" id="trade-tariff">
+  <h2><span class="tag tag-trade">貿易</span> 關稅一週年：雷聲大雨點小</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--orange)">13.5%</div><div class="lbl">IEEPA裁決前
+美國平均關稅率</div></div>
+    <div class="stat"><div class="val">-1.7%</div><div class="lbl">美國進口變化
+（4-12月同比）</div></div>
+    <div class="stat"><div class="val">10%</div><div class="lbl">最高法院裁決後
+統一關稅率</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">關稅「解放日」一週年 — AI與貿易協議化解衝擊</div>
+    <p>距離特朗普宣佈「解放日」關稅已滿一年，當初市場普遍擔憂的貿易大崩潰並未兌現。2025年4月至12月，美國進口僅同比下滑<span style="color:#fff;font-weight:700">1.7%</span>，遠低於預期，部分歸功於<span style="color:#fff;font-weight:700">AI革命</span>推動的半導體及數據中心相關進口。原定將平均關稅率推高至約<span style="color:#fff;font-weight:700">20%</span>的對等關稅從未完整實施——豁免、延期、貿易協議及與中國的休戰逐步稀釋了政策衝擊。最高法院裁定IEEPA關稅違憲前夕，平均稅率已降至<span style="color:#fff;font-weight:700">13.5%</span>。裁決後政府改以統一<span style="color:#fff;font-weight:700">10%</span>稅率替代，並保留多數產品豁免。展望未來，中東戰爭推高成本疊加中期選舉壓力，特朗普在貿易政策上加碼的空間有限，預計將通過301條款重建針對特定國家的稅率，但力度將趨於審慎。</p>
+    <div class="data-point">原定對等關稅平均稅率：<span style="color:#fff;font-weight:700">~20%</span> &nbsp;|&nbsp; 實際平均稅率（裁決前）：<span style="color:#fff;font-weight:700">13.5%</span> &nbsp;|&nbsp; 裁決後統一稅率：<span style="color:#fff;font-weight:700">10%</span> &nbsp;|&nbsp; 美國進口降幅（4-12月）：<span style="color:#fff;font-weight:700">-1.7%</span></div>
+    <div class="implication"><div class="label">投資啟示</div>貿易衝擊遠低於預期，AI供應鏈韌性突出。關稅加碼風險因中東戰爭及選舉因素而降低。<span style="color:#fff;font-weight:700">維持全球供應鏈/半導體股配置</span>，關注301條款細則對特定國家出口商的影響。</div>
+  </div>
+</div>
+
+<div class="callout" id="takeaways">
+  <div class="callout-title">基金經理人重點摘要</div>
+  <ul>
+    <li><strong>信用風險：</strong>美國大行債券受私募信貸贖回壓力拖累，金融債利差走闊4bp。富國銀行敞口最高（$710億）。**減持大行次級債**，關注衰退傳導。</li>
+    <li><strong>中國經濟：</strong>製造業PMI超預期回升至50.4，但服務業僅50.1，分化加劇。**做多中國國債**押注2Q降準降息。</li>
+    <li><strong>全球貿易：</strong>關稅「解放日」一週年，實際影響遠低於預期。AI進口支撐供應鏈，統一稅率降至10%。**維持半導體/數據中心配置**。</li>
+    <li><strong>地緣政治：</strong>中東戰爭是貫穿三大主題的核心風險變量——加劇銀行資產質量壓力、削弱中國外需、抑制美國加關稅意願。**增配避險資產對沖尾部風險**。</li>
+  </ul>
+</div>
+
+<div class="nav-links">
+  <span><a href="newsletter_28_china.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="footer">
+  彭博研究摘要 | 僅供教學與討論用途 | 2026年4月1日<br>
+  資料來源：Bloomberg Intelligence, Bloomberg Economics, Bloomberg News
+</div>
+
+</body>
+</html>

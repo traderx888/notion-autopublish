@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>彭博研究摘要 #25 — 私募信貸裂痕與信用市場壓力測試</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --accent: #58a6ff;
+          --green: #3fb950; --red: #f85149; --yellow: #d29922; --text: #c9d1d9; --muted: #8b949e;
+          --orange: #f0883e; --purple: #bc8cff; --cyan: #39d2c0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans TC', 'Microsoft JhengHei', Helvetica, Arial, sans-serif; line-height: 1.7; padding: 20px; max-width: 860px; margin: 0 auto; }
+  h1 { color: #fff; font-size: 1.7em; margin-bottom: 4px; }
+  .subtitle { color: var(--muted); font-size: 0.9em; margin-bottom: 8px; }
+  .issue-badge { display: inline-block; background: rgba(88,166,255,0.15); color: var(--accent); padding: 3px 10px; border-radius: 12px; font-size: 0.8em; font-weight: 600; margin-bottom: 20px; }
+  .tag { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 0.72em; font-weight: 600; margin-right: 4px; }
+  .tag-rates { background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-china { background: rgba(240,136,62,0.15); color: var(--orange); }
+  .tag-japan { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-geo   { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-oil   { background: rgba(210,153,34,0.15); color: var(--yellow); }
+  .tag-trade { background: rgba(210,153,34,0.15); color: var(--yellow); }
+  .tag-growth{ background: rgba(63,185,80,0.15); color: var(--green); }
+  .tag-metals{ background: rgba(188,140,255,0.15); color: var(--purple); }
+  .tag-infl  { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-policy{ background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-val   { background: rgba(63,185,80,0.15); color: var(--green); }
+  .tag-vol   { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-semi  { background: rgba(57,210,192,0.15); color: var(--cyan); }
+  .tag-credit{ background: rgba(188,140,255,0.15); color: var(--purple); }
+  .tag-space { background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-misc  { background: rgba(139,148,158,0.15); color: var(--muted); }
+  .section { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 16px; }
+  .section h2 { color: #fff; font-size: 1.15em; margin-bottom: 12px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+  .section h3 { color: var(--accent); font-size: 0.95em; margin: 14px 0 6px; }
+  .article { margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .article:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .article-title { color: #fff; font-weight: 700; font-size: 0.95em; margin-bottom: 4px; }
+  .article-title-cn { color: var(--muted); font-size: 0.85em; margin-bottom: 8px; }
+  .article p { font-size: 0.9em; margin: 6px 0; }
+  .data-point { background: rgba(255,255,255,0.03); padding: 8px 12px; border-radius: 6px; margin: 8px 0; font-size: 0.85em; }
+  .data-point .num { color: #fff; font-weight: 700; }
+  .implication { background: rgba(88,166,255,0.06); border-left: 3px solid var(--accent); padding: 10px 14px; margin: 10px 0; border-radius: 0 6px 6px 0; font-size: 0.88em; }
+  .implication .label { color: var(--accent); font-weight: 700; font-size: 0.8em; text-transform: uppercase; margin-bottom: 4px; }
+  .callout { background: rgba(210,153,34,0.08); border: 1px solid rgba(210,153,34,0.3); border-radius: 6px; padding: 16px; margin: 16px 0; }
+  .callout-title { color: var(--yellow); font-weight: 700; font-size: 0.95em; margin-bottom: 8px; }
+  .callout ul { padding-left: 18px; }
+  .callout li { margin: 4px 0; font-size: 0.88em; }
+  ul { padding-left: 18px; }
+  li { margin: 3px 0; font-size: 0.88em; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(255,255,255,0.03); padding: 12px; border-radius: 6px; text-align: center; }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: #fff; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
+  .toc { background: rgba(88,166,255,0.05); border: 1px solid rgba(88,166,255,0.2); border-radius: 8px; padding: 16px 20px; margin-bottom: 20px; }
+  .toc-title { color: var(--accent); font-weight: 700; font-size: 0.9em; margin-bottom: 8px; }
+  .toc a { color: var(--accent); text-decoration: none; font-size: 0.88em; }
+  .toc a:hover { text-decoration: underline; }
+  .toc ol { padding-left: 20px; }
+  .toc li { margin: 4px 0; }
+  .nav-links { display: flex; justify-content: space-between; margin: 20px 0; font-size: 0.85em; }
+  .nav-links a { color: var(--accent); text-decoration: none; }
+  .nav-links a:hover { text-decoration: underline; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(255,255,255,0.03); padding: 12px; border-radius: 6px; text-align: center; }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: #fff; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
+  .footer { text-align: center; color: var(--muted); font-size: 0.75em; margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--border); }
+</style>
+<script>if(window.self===window.top&&sessionStorage.getItem("student_auth")!=="1"){document.body.innerHTML="";window.location.replace("student.html");}</script>
+</head>
+<body>
+
+<h1>彭博研究摘要</h1>
+<p class="subtitle">第25期 | 私募信貸裂痕與信用市場壓力測試</p>
+<span class="issue-badge">2026年四月上旬更新</span>
+
+<div class="nav-links">
+  <span><a href="newsletter_24_oil.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="toc">
+  <div class="toc-title">目錄</div>
+  <ol>
+    <li><a href="#private-credit-liquidity">私募信貸 贖回潮湧，流動性錯配浮現</a></li>
+    <li><a href="#high-yield-technicals">高收益債 供給衝擊醞釀，數據中心債成新變量</a></li>
+    <li><a href="#ai-credit-risk">AI風險對沖 渾水做空信用 — AI失業衝擊波</a></li>
+    <li><a href="#takeaways">基金經理人重點摘要</a></li>
+  </ol>
+</div>
+
+<div class="section" id="private-credit-liquidity">
+  <h2><span class="tag tag-misc">私募信貸</span> 贖回潮湧，流動性錯配浮現</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val">$1.8兆</div><div class="lbl">私募信貸市場
+總規模</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">11.6%</div><div class="lbl">Ares基金贖回申請
+（上限僅5%）</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">$710億</div><div class="lbl">富國銀行
+私募信貸敞口</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">私募信貸贖回大戰暴露結構性缺陷</div>
+    <p>私募信貸基金正面臨一波投資者贖回潮，多家巨頭被迫啟動季度贖回上限機制。Ares Management旗下基金收到相當於淨資產<span style="color:#fff;font-weight:700">11.6%</span>的贖回申請，但僅批准<span style="color:#fff;font-weight:700">5%</span>；Apollo同樣將贖回限制在標準季度上限，實際申請達<span style="color:#fff;font-weight:700">11.2%</span>。Blackrock、Blackstone、Morgan Stanley等旗下BDC基金均面臨高贖回壓力，部分基金更因持有貸款市值下跌而錄得季度虧損。Blue Owl Capital聯席CEO Doug Ostrover坦承，業界與銷售顧問在流動性條款上「溝通不夠清晰」。限制贖回雖屬正確決策——可阻止貸款拋售→價格下跌→恐慌贖回的惡性循環——但已引發散戶投資者及監管層關注。</p>
+    <div class="data-point">Ares贖回申請：<span style="color:#fff;font-weight:700">11.6%</span>（僅批5%） &nbsp;|&nbsp; Apollo贖回申請：<span style="color:#fff;font-weight:700">11.2%</span>（觸及季度上限） &nbsp;|&nbsp; 觸發因素：<span style="color:#fff;font-weight:700">AI衝擊軟件貸款</span>估值下跌 &nbsp;|&nbsp; BDC市場規模：<span style="color:#fff;font-weight:700">$1.8兆</span>私貸市場重要子集</div>
+    <div class="implication"><div class="label">投資啟示</div>BDC贖回壓力短期內不會消退，留意二級市場折價交易機會。<span style="color:#fff;font-weight:700">避免新增非上市BDC配置</span>，已持有者關注NAV折讓幅度。</div>
+  </div>
+  <div class="article">
+    <div class="article-title">銀行債券受私募信貸牽連 — 衰退情景下風險加劇</div>
+    <p>美國大型銀行債券今年表現落後，金融債利差較年初擴闊<span style="color:#fff;font-weight:700">4個基點</span>，結束了與企業債指數持平的局面。主因有二：一是年初創紀錄的發行量壓制價格；二是市場擔憂銀行與私募信貸機構日益緊密的關聯。富國銀行對「商業信貸中介機構」的貸款敞口達<span style="color:#fff;font-weight:700">$710億</span>，為同業最高，約為花旗和美銀的<span style="color:#fff;font-weight:700">2倍</span>，佔其非存款金融機構（NDFI）貸款的<span style="color:#fff;font-weight:700">33%</span>。儘管這些貸款多為高級擔保等級，信用質量目前仍穩健，但若中東戰爭持續導致經濟放緩或衰退，槓桿借款人違約率將顯著上升。</p>
+    <div class="data-point">富國私貸敞口：<span style="color:#fff;font-weight:700">$710億</span>（同業最高） &nbsp;|&nbsp; 金融債vs企業債利差：<span style="color:#fff;font-weight:700">+4bps</span>（年初持平） &nbsp;|&nbsp; NDFI佔比：<span style="color:#fff;font-weight:700">33%</span>（富國） &nbsp;|&nbsp; 衰退觸發：<span style="color:#fff;font-weight:700">中東戰爭延長</span></div>
+    <div class="implication"><div class="label">投資啟示</div>金融債短期承壓但非系統性風險。<span style="color:#fff;font-weight:700">減持富國銀行次級債</span>，偏好私貸敞口較低的摩根大通、美銀高級債。</div>
+  </div>
+</div>
+
+<div class="section" id="high-yield-technicals">
+  <h2><span class="tag tag-misc">高收益債</span> 供給衝擊醞釀，數據中心債成新變量</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--green)">有限</div><div class="lbl">疫後淨新增供給
+（技術面支撐）</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">數據中心</div><div class="lbl">新增供給主要
+來源板塊</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">數週內</div><div class="lbl">大型LBO債券
+即將發行</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">GSAM高收益主管：技術面強勁但消化壓力將至</div>
+    <p>Goldman Sachs Asset Management全球高收益及銀行貸款聯席主管John McClain指出，疫後高收益債的技術面一直非常強勁：淨新增供給有限、評級下調極少、在高基準利率下需求旺盛、信用利差合理。然而，變化正在醞釀——<span style="color:#fff;font-weight:700">數據中心相關債務</span>成為淨新增供給的重要來源，加上未來數週將有<span style="color:#fff;font-weight:700">大型LBO債券</span>集中發行，以及部分資本結構從投資級遷移至高收益，可能導致市場出現「<span style="color:#fff;font-weight:700">消化不良</span>」。McClain同時關注私募信貸的溢出效應，認為BDC贖回潮若持續，可能迫使部分貸款回流公開市場。</p>
+    <div class="data-point">疫後淨新供給：<span style="color:#fff;font-weight:700">有限</span>（技術面核心支撐） &nbsp;|&nbsp; 新增來源：<span style="color:#fff;font-weight:700">數據中心債務</span> &nbsp;|&nbsp; 即將落地：<span style="color:#fff;font-weight:700">大型LBO債券</span>（數週內） &nbsp;|&nbsp; 風險傳導：<span style="color:#fff;font-weight:700">私貸→公開市場</span>溢出</div>
+    <div class="implication"><div class="label">投資啟示</div>高收益債短期面臨供給消化壓力。<span style="color:#fff;font-weight:700">暫緩加倉BB級以下高收益</span>，等待LBO發行潮後的利差擴闊機會再進場。</div>
+  </div>
+</div>
+
+<div class="section" id="ai-credit-risk">
+  <h2><span class="tag tag-misc">AI風險對沖</span> 渾水做空信用 — AI失業衝擊波</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--red)">1:7</div><div class="lbl">AI熟手可替代
+同事人數</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">看跌期權</div><div class="lbl">做空工具：高收益
+及投資級ETF</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">GFC級</div><div class="lbl">Block預測
+最終市場衝擊</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">渾水Carson Block：做空公司債ETF對沖AI就業衝擊</div>
+    <p>知名做空機構渾水資本創始人Carson Block正對貝萊德旗下的高收益及投資級公司債ETF建立<span style="color:#fff;font-weight:700">看跌期權</span>頭寸，押注AI引發的大規模失業將擴大信用利差。Block指出，在領先企業中，最善用AI的員工已能<span style="color:#fff;font-weight:700">替代7名同事</span>的工作量，市場將在大規模裁員實際發生前就提前定價這一風險。這標誌著他立場的重大轉變——幾個月前他還看多美股、對經濟持樂觀態度。Block現在認為AI對勞動力市場的衝擊被嚴重低估，最終可能對市場造成「<span style="color:#fff;font-weight:700">類似全球金融危機</span>」級別的衝擊。他特別關注信用ETF的流動性錯配——底層資產流動性遠低於ETF本身的交易流動性。</p>
+    <div class="data-point">做空標的：<span style="color:#fff;font-weight:700">貝萊德高收益+投資級ETF</span>（看跌期權） &nbsp;|&nbsp; AI替代比：<span style="color:#fff;font-weight:700">1人替代7人</span> &nbsp;|&nbsp; 風險定價：<span style="color:#fff;font-weight:700">市場將提前反映裁員預期</span> &nbsp;|&nbsp; 最壞情景：<span style="color:#fff;font-weight:700">GFC級衝擊</span></div>
+    <div class="implication"><div class="label">投資啟示</div>Block的交易邏輯值得對沖組合參考。<span style="color:#fff;font-weight:700">買入HYG/LQD看跌期權</span>作為尾部風險對沖，成本可控但在AI裁員潮啟動時回報非線性。</div>
+  </div>
+</div>
+
+<div class="callout" id="takeaways">
+  <div class="callout-title">基金經理人重點摘要</div>
+  <ul>
+    <li><strong>私募信貸：</strong>BDC贖回潮暴露流動性錯配，Ares/Apollo均觸及季度贖回上限。避免新增非上市BDC配置，關注二級市場折價機會。</li>
+    <li><strong>銀行債：</strong>金融債利差年初至今擴闊4bps，富國銀行$710億私貸敞口為同業最高。減持富國次級債，偏好低私貸敞口的大行高級債。</li>
+    <li><strong>高收益債：</strong>技術面仍強但供給壓力將至——數據中心債務+大型LBO集中發行。暫緩加倉，等待利差擴闊後再進場。</li>
+    <li><strong>AI尾部風險：</strong>渾水Carson Block做空信用ETF，押注AI失業衝擊。買入HYG/LQD看跌期權作為低成本尾部對沖。</li>
+    <li><strong>關鍵觀察：</strong>私貸贖回→貸款回流公開市場→高收益供給增加→利差擴闊，這條傳導鏈正在形成，需密切監控。</li>
+  </ul>
+</div>
+
+<div class="nav-links">
+  <span><a href="newsletter_24_oil.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="footer">
+  彭博研究摘要 | 僅供教學與討論用途 | 2026年4月1日<br>
+  資料來源：Bloomberg Intelligence, Bloomberg Economics, Bloomberg News
+</div>
+
+</body>
+</html>
