@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>彭博研究摘要 #31 — 中東戰火下的中美經濟分化</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --accent: #58a6ff;
+          --green: #3fb950; --red: #f85149; --yellow: #d29922; --text: #c9d1d9; --muted: #8b949e;
+          --orange: #f0883e; --purple: #bc8cff; --cyan: #39d2c0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans TC', 'Microsoft JhengHei', Helvetica, Arial, sans-serif; line-height: 1.7; padding: 20px; max-width: 860px; margin: 0 auto; }
+  h1 { color: #fff; font-size: 1.7em; margin-bottom: 4px; }
+  .subtitle { color: var(--muted); font-size: 0.9em; margin-bottom: 8px; }
+  .issue-badge { display: inline-block; background: rgba(88,166,255,0.15); color: var(--accent); padding: 3px 10px; border-radius: 12px; font-size: 0.8em; font-weight: 600; margin-bottom: 20px; }
+  .tag { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 0.72em; font-weight: 600; margin-right: 4px; }
+  .tag-rates { background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-china { background: rgba(240,136,62,0.15); color: var(--orange); }
+  .tag-japan { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-geo   { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-oil   { background: rgba(210,153,34,0.15); color: var(--yellow); }
+  .tag-trade { background: rgba(210,153,34,0.15); color: var(--yellow); }
+  .tag-growth{ background: rgba(63,185,80,0.15); color: var(--green); }
+  .tag-metals{ background: rgba(188,140,255,0.15); color: var(--purple); }
+  .tag-infl  { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-policy{ background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-val   { background: rgba(63,185,80,0.15); color: var(--green); }
+  .tag-vol   { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-semi  { background: rgba(57,210,192,0.15); color: var(--cyan); }
+  .tag-credit{ background: rgba(188,140,255,0.15); color: var(--purple); }
+  .tag-space { background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-misc  { background: rgba(139,148,158,0.15); color: var(--muted); }
+  .section { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 16px; }
+  .section h2 { color: #fff; font-size: 1.15em; margin-bottom: 12px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+  .section h3 { color: var(--accent); font-size: 0.95em; margin: 14px 0 6px; }
+  .article { margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .article:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .article-title { color: #fff; font-weight: 700; font-size: 0.95em; margin-bottom: 4px; }
+  .article-title-cn { color: var(--muted); font-size: 0.85em; margin-bottom: 8px; }
+  .article p { font-size: 0.9em; margin: 6px 0; }
+  .data-point { background: rgba(255,255,255,0.03); padding: 8px 12px; border-radius: 6px; margin: 8px 0; font-size: 0.85em; }
+  .data-point .num { color: #fff; font-weight: 700; }
+  .implication { background: rgba(88,166,255,0.06); border-left: 3px solid var(--accent); padding: 10px 14px; margin: 10px 0; border-radius: 0 6px 6px 0; font-size: 0.88em; }
+  .implication .label { color: var(--accent); font-weight: 700; font-size: 0.8em; text-transform: uppercase; margin-bottom: 4px; }
+  .callout { background: rgba(210,153,34,0.08); border: 1px solid rgba(210,153,34,0.3); border-radius: 6px; padding: 16px; margin: 16px 0; }
+  .callout-title { color: var(--yellow); font-weight: 700; font-size: 0.95em; margin-bottom: 8px; }
+  .callout ul { padding-left: 18px; }
+  .callout li { margin: 4px 0; font-size: 0.88em; }
+  ul { padding-left: 18px; }
+  li { margin: 3px 0; font-size: 0.88em; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(255,255,255,0.03); padding: 12px; border-radius: 6px; text-align: center; }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: #fff; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
+  .toc { background: rgba(88,166,255,0.05); border: 1px solid rgba(88,166,255,0.2); border-radius: 8px; padding: 16px 20px; margin-bottom: 20px; }
+  .toc-title { color: var(--accent); font-weight: 700; font-size: 0.9em; margin-bottom: 8px; }
+  .toc a { color: var(--accent); text-decoration: none; font-size: 0.88em; }
+  .toc a:hover { text-decoration: underline; }
+  .toc ol { padding-left: 20px; }
+  .toc li { margin: 4px 0; }
+  .nav-links { display: flex; justify-content: space-between; margin: 20px 0; font-size: 0.85em; }
+  .nav-links a { color: var(--accent); text-decoration: none; }
+  .nav-links a:hover { text-decoration: underline; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(255,255,255,0.03); padding: 12px; border-radius: 6px; text-align: center; }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: #fff; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
+  .footer { text-align: center; color: var(--muted); font-size: 0.75em; margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--border); }
+</style>
+<script>if(window.self===window.top&&sessionStorage.getItem("student_auth")!=="1"){document.body.innerHTML="";window.location.replace("student.html");}</script>
+</head>
+<body>
+
+<h1>彭博研究摘要</h1>
+<p class="subtitle">第31期 | 中東戰火下的中美經濟分化</p>
+<span class="issue-badge">2026年四月上旬更新</span>
+
+<div class="nav-links">
+  <span><a href="newsletter_30_rates_japan.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="toc">
+  <div class="toc-title">目錄</div>
+  <ol>
+    <li><a href="#china-growth">中國 戰火衝擊，脆弱復甦受壓</a></li>
+    <li><a href="#us-consumer">美國消費 零售反彈撐場，但Q1放緩難免</a></li>
+    <li><a href="#investment-strategy">投資策略 美元跛腳，消費股成逆向首選</a></li>
+    <li><a href="#takeaways">基金經理人重點摘要</a></li>
+  </ol>
+</div>
+
+<div class="section" id="china-growth">
+  <h2><span class="tag tag-china">中國</span> 戰火衝擊，脆弱復甦受壓</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--red)">5.3%</div><div class="lbl">城鎮調查失業率
+（1-2月）</div></div>
+    <div class="stat"><div class="val">-10bp</div><div class="lbl">央行Q2降息預期
+（政策利率）</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">16.5%</div><div class="lbl">青年失業率
+（仍處危機水平）</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">中東衝突給中國經濟成長帶來壓力 — 出口引擎面臨熄火風險</div>
+    <p>中東戰爭令本已充滿挑戰的2026年雪上加霜。儘管年初兩月需求較去年底低點有所回升，但這一脆弱復甦正面臨動搖。對中國而言，最大衝擊並非油價本身，而是<span style="color:#fff;font-weight:700">全球成長放緩</span>拖累出口需求——恰恰是當前經濟最依賴的引擎。3月公佈的預算案規模與2025年基本持平，若衝突延續至下半年，北京將不得不<span style="color:#fff;font-weight:700">加碼刺激</span>。央行料繼續推進降息降準，全年預計政策利率下調<span style="color:#fff;font-weight:700">20bp</span>、存準率下調<span style="color:#fff;font-weight:700">50bp</span>。第一步可能是Q2降準<span style="color:#fff;font-weight:700">25bp</span>。</p>
+    <div class="data-point">2月CPI同比：<span style="color:#fff;font-weight:700">1.3%</span>（油價推升約0.2-0.8ppt） &nbsp;|&nbsp; 原油儲備：<span style="color:#fff;font-weight:700">~80天</span>消費量 &nbsp;|&nbsp; Q2預期：降準<span style="color:#fff;font-weight:700">25bp</span> &nbsp;|&nbsp; 全年預期：降息<span style="color:#fff;font-weight:700">20bp</span> + 降準<span style="color:#fff;font-weight:700">50bp</span></div>
+    <div class="implication"><div class="label">投資啟示</div>成長風險遠大於通膨風險，央行寬鬆方向不變。<span style="color:#fff;font-weight:700">做多中國國債</span>，關注Q2降準窗口。出口鏈企業（尤其石化、塑料）面臨雙重壓力——<span style="color:#fff;font-weight:700">減持出口導向型A股</span>。</div>
+  </div>
+  <div class="article">
+    <div class="article-title">低預期下年初數據略超預估 — 但成長依舊乏力</div>
+    <p>2026年首批經濟數據印證了一個嚴峻現實：經濟已跨過較低門檻，但仍困在<span style="color:#fff;font-weight:700">低成長均衡</span>之中。工業生產繼續撐住增長，但需求側更為複雜——投資未如預期萎縮、消費略超預期，但與歷史正常水平相比兩者皆顯疲弱。就業市場壓力未見緩解，全國失業率升至<span style="color:#fff;font-weight:700">5.3%</span>，青年失業率<span style="color:#fff;font-weight:700">16.5%</span>雖較高點回落但仍屬危機水平。AI加速應用可能引發大規模崗位流失，現行政策尚難應對。</p>
+    <div class="data-point">城鎮失業率：<span style="color:#fff;font-weight:700">5.3%</span>（12月5.1%） &nbsp;|&nbsp; 青年失業率：<span style="color:#fff;font-weight:700">16.5%</span>（高點18.9%） &nbsp;|&nbsp; Q1實際消費：仍弱於2024Q4政策轉向前</div>
+    <div class="implication"><div class="label">投資啟示</div>內需復甦乏力確認央行將維持寬鬆。<span style="color:#fff;font-weight:700">關注促消費政策加碼</span>，尤其穩就業相關財政措施。</div>
+  </div>
+  <div class="article">
+    <div class="article-title">科技取代地產 — AI釋放動能重塑中國經濟結構</div>
+    <p>十五五規劃（2026-2030）將科技自立自強列為核心目標，正引導成長引擎從房地產轉向創新。彭博經濟研究測算顯示，2026年<span style="color:#fff;font-weight:700">高技術和綠色產業GDP占比可能升至20%</span>，有望首次超越房地產相關行業。到2030年，該占比有望攀升至<span style="color:#fff;font-weight:700">25%</span>，而房地產將降至不足<span style="color:#fff;font-weight:700">15%</span>。十五五規劃同時將消費提升為戰略支點，並首次將「綜合整治內卷式競爭」寫入規劃。不過，勞動力減少、結構性內卷及去全球化仍是長期不利因素。</p>
+    <div class="data-point">高技術+綠色產業GDP占比：<span style="color:#fff;font-weight:700">~20%</span>（2026E）→ <span style="color:#fff;font-weight:700">25%</span>（2030E） &nbsp;|&nbsp; 房地產GDP占比：降至<span style="color:#fff;font-weight:700">&lt;15%</span>（2030E） &nbsp;|&nbsp; 燃料出口暫停影響：出口總額減少<span style="color:#fff;font-weight:700">~1.4%</span></div>
+    <div class="implication"><div class="label">投資啟示</div>結構性做多中國科技硬件與AI基建，<span style="color:#fff;font-weight:700">減持房地產鏈</span>。關注塑料行業石油衝擊溢出風險（出口占比達3.8%）。</div>
+  </div>
+</div>
+
+<div class="section" id="us-consumer">
+  <h2><span class="tag tag-misc">美國消費</span> 零售反彈撐場，但Q1放緩難免</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--green)">+0.6%</div><div class="lbl">2月零售銷售
+（環比）</div></div>
+    <div class="stat"><div class="val" style="color:var(--green)">+0.5%</div><div class="lbl">控制組銷售
+（超預期）</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">1.2%</div><div class="lbl">Q1實際消費支出
+（預估，前值2.0%）</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">零售銷售反彈有助於緩解Q1消費放緩態勢</div>
+    <p>汽車銷售和退稅額增加推動2月零售銷售環比反彈<span style="color:#fff;font-weight:700">+0.6%</span>，高於市場預期的0.5%。13個零售類別中有<span style="color:#fff;font-weight:700">10個實現成長</span>，較1月的7個明顯改善。作為服務消費風向標的餐飲服務銷售成長<span style="color:#fff;font-weight:700">0.4%</span>，扭轉了1月的-0.2%。核心控制組銷售成長<span style="color:#fff;font-weight:700">0.5%</span>，遠超預期的0.3%，顯示消費韌性尚存。然而，11月至1月期間實際消費支出月增僅<span style="color:#fff;font-weight:700">0.1%</span>，即便2月加速至0.2%，Q1整體實際支出增速仍將放緩至<span style="color:#fff;font-weight:700">1.2%</span>，顯著低於Q4的<span style="color:#fff;font-weight:700">2.0%</span>。</p>
+    <div class="data-point">汽車對零售貢獻：<span style="color:#fff;font-weight:700">+23bp</span> &nbsp;|&nbsp; 汽油貢獻：<span style="color:#fff;font-weight:700">+6bp</span> &nbsp;|&nbsp; 剔除汽車汽油：<span style="color:#fff;font-weight:700">+0.4%</span> &nbsp;|&nbsp; 名義消費支出估計：<span style="color:#fff;font-weight:700">+0.6%</span></div>
+    <div class="implication"><div class="label">投資啟示</div>Q1消費放緩趨勢已確立，但2月反彈避免了硬著陸敘事。<span style="color:#fff;font-weight:700">短期做多美國非必需消費ETF</span>（見BofA對等權重消費股的看多觀點）。</div>
+  </div>
+</div>
+
+<div class="section" id="investment-strategy">
+  <h2><span class="tag tag-misc">投資策略</span> 美元跛腳，消費股成逆向首選</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--red)">-5.4%</div><div class="lbl">美股YTD
+（表現墊底）</div></div>
+    <div class="stat"><div class="val" style="color:var(--green)">+63.4%</div><div class="lbl">原油YTD
+（表現最佳）</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">+1.6%</div><div class="lbl">美元YTD
+（結構性走弱）</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">BofA Hartnett: The Lame Buck — 美元熊市與消費逆向做多</div>
+    <p>Hartnett指出，總統信譽的熊市等於美元的熊市（歷史先例：Nixon、Carter、Bush II）。若Trump因伊朗戰事信譽受損，其喊話華爾街、吸引FDI的能力將下降，美元結構性走弱趨勢不改。年初至今資產表現分化劇烈：原油<span style="color:#fff;font-weight:700">+63.4%</span>領跑，美股<span style="color:#fff;font-weight:700">-5.4%</span>墊底，比特幣暴跌<span style="color:#fff;font-weight:700">-21.6%</span>。BofA牛熊指標賣出信號已結束（自12月17日以來SPX累跌4%，峰谷跌幅7%），但目前既無牛市投降信號、也無宏觀恐慌信號（GDP/EPS下修），反向操作者尚無明確入場點。最大亮點：<span style="color:#fff;font-weight:700">等權重非必需消費板塊</span>已跌至2008金融海嘯和2020疫情時的相對低點，成為Hartnett最看好的長期逆向做多標的。</p>
+    <div class="data-point">油價觸發線：<span style="color:#fff;font-weight:700">&gt;$100/bbl</span> &nbsp;|&nbsp; 30年美債收益率：<span style="color:#fff;font-weight:700">5%</span> &nbsp;|&nbsp; SPX關鍵位：<span style="color:#fff;font-weight:700">&lt;6600</span> → 政策恐慌啟動 &nbsp;|&nbsp; 消費相對強度：<span style="color:#fff;font-weight:700">GFC/COVID低點</span></div>
+    <div class="implication"><div class="label">投資啟示</div><span style="color:#fff;font-weight:700">結構性做空美元、做多黃金與國際股票</span>。消費股（尤其低收入消費）是最佳逆向長線交易——押注Trump戰後轉向可負擔性政策及「<span style="color:#fff;font-weight:700">AI=UBI=YCC</span>」範式轉換。</div>
+  </div>
+</div>
+
+<div class="callout" id="takeaways">
+  <div class="callout-title">基金經理人重點摘要</div>
+  <ul>
+    <li><strong>中國央行：</strong>成長風險壓倒通膨擔憂，Q2料降準25bp，全年降息20bp+降準50bp。做多中國國債。</li>
+    <li><strong>中國結構：</strong>高技術產業GDP占比2026年首超房地產（~20% vs <20%）。做多科技硬件，減持房地產鏈。</li>
+    <li><strong>美國消費：</strong>2月零售反彈+0.6%避免硬著陸敘事，但Q1實際支出仍將放緩至1.2%（前值2.0%）。</li>
+    <li><strong>美元策略：</strong>總統信譽熊市=美元熊市。結構性做空美元、做多黃金與國際股票。</li>
+    <li><strong>逆向交易：</strong>等權重消費股跌至GFC/COVID相對低點，BofA Hartnett首選長線做多——押注戰後政策轉向。</li>
+    <li><strong>風險監測：</strong>油價>$100、30Y yield @5%、SPX<6600為政策恐慌觸發線，但目前尚無宏觀投降信號。</li>
+  </ul>
+</div>
+
+<div class="nav-links">
+  <span><a href="newsletter_30_rates_japan.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="footer">
+  彭博研究摘要 | 僅供教學與討論用途 | 2026年4月2日<br>
+  資料來源：Bloomberg Intelligence, Bloomberg Economics, Bloomberg News
+</div>
+
+</body>
+</html>

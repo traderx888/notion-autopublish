@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>彭博研究摘要 #35 — 關稅周年回顧與亞洲能源衝擊</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --accent: #58a6ff;
+          --green: #3fb950; --red: #f85149; --yellow: #d29922; --text: #c9d1d9; --muted: #8b949e;
+          --orange: #f0883e; --purple: #bc8cff; --cyan: #39d2c0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans TC', 'Microsoft JhengHei', Helvetica, Arial, sans-serif; line-height: 1.7; padding: 20px; max-width: 860px; margin: 0 auto; }
+  h1 { color: #fff; font-size: 1.7em; margin-bottom: 4px; }
+  .subtitle { color: var(--muted); font-size: 0.9em; margin-bottom: 8px; }
+  .issue-badge { display: inline-block; background: rgba(88,166,255,0.15); color: var(--accent); padding: 3px 10px; border-radius: 12px; font-size: 0.8em; font-weight: 600; margin-bottom: 20px; }
+  .tag { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 0.72em; font-weight: 600; margin-right: 4px; }
+  .tag-rates { background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-china { background: rgba(240,136,62,0.15); color: var(--orange); }
+  .tag-japan { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-geo   { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-oil   { background: rgba(210,153,34,0.15); color: var(--yellow); }
+  .tag-trade { background: rgba(210,153,34,0.15); color: var(--yellow); }
+  .tag-growth{ background: rgba(63,185,80,0.15); color: var(--green); }
+  .tag-metals{ background: rgba(188,140,255,0.15); color: var(--purple); }
+  .tag-infl  { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-policy{ background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-val   { background: rgba(63,185,80,0.15); color: var(--green); }
+  .tag-vol   { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-semi  { background: rgba(57,210,192,0.15); color: var(--cyan); }
+  .tag-credit{ background: rgba(188,140,255,0.15); color: var(--purple); }
+  .tag-space { background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-misc  { background: rgba(139,148,158,0.15); color: var(--muted); }
+  .section { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 16px; }
+  .section h2 { color: #fff; font-size: 1.15em; margin-bottom: 12px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+  .section h3 { color: var(--accent); font-size: 0.95em; margin: 14px 0 6px; }
+  .article { margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .article:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .article-title { color: #fff; font-weight: 700; font-size: 0.95em; margin-bottom: 4px; }
+  .article-title-cn { color: var(--muted); font-size: 0.85em; margin-bottom: 8px; }
+  .article p { font-size: 0.9em; margin: 6px 0; }
+  .data-point { background: rgba(255,255,255,0.03); padding: 8px 12px; border-radius: 6px; margin: 8px 0; font-size: 0.85em; }
+  .data-point .num { color: #fff; font-weight: 700; }
+  .implication { background: rgba(88,166,255,0.06); border-left: 3px solid var(--accent); padding: 10px 14px; margin: 10px 0; border-radius: 0 6px 6px 0; font-size: 0.88em; }
+  .implication .label { color: var(--accent); font-weight: 700; font-size: 0.8em; text-transform: uppercase; margin-bottom: 4px; }
+  .callout { background: rgba(210,153,34,0.08); border: 1px solid rgba(210,153,34,0.3); border-radius: 6px; padding: 16px; margin: 16px 0; }
+  .callout-title { color: var(--yellow); font-weight: 700; font-size: 0.95em; margin-bottom: 8px; }
+  .callout ul { padding-left: 18px; }
+  .callout li { margin: 4px 0; font-size: 0.88em; }
+  ul { padding-left: 18px; }
+  li { margin: 3px 0; font-size: 0.88em; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(255,255,255,0.03); padding: 12px; border-radius: 6px; text-align: center; }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: #fff; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
+  .toc { background: rgba(88,166,255,0.05); border: 1px solid rgba(88,166,255,0.2); border-radius: 8px; padding: 16px 20px; margin-bottom: 20px; }
+  .toc-title { color: var(--accent); font-weight: 700; font-size: 0.9em; margin-bottom: 8px; }
+  .toc a { color: var(--accent); text-decoration: none; font-size: 0.88em; }
+  .toc a:hover { text-decoration: underline; }
+  .toc ol { padding-left: 20px; }
+  .toc li { margin: 4px 0; }
+  .nav-links { display: flex; justify-content: space-between; margin: 20px 0; font-size: 0.85em; }
+  .nav-links a { color: var(--accent); text-decoration: none; }
+  .nav-links a:hover { text-decoration: underline; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(255,255,255,0.03); padding: 12px; border-radius: 6px; text-align: center; }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: #fff; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
+  .footer { text-align: center; color: var(--muted); font-size: 0.75em; margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--border); }
+</style>
+<script>if(window.self===window.top&&sessionStorage.getItem("student_auth")!=="1"){document.body.innerHTML="";window.location.replace("student.html");}</script>
+</head>
+<body>
+
+<h1>彭博研究摘要</h1>
+<p class="subtitle">第35期 | 關稅周年回顧與亞洲能源衝擊</p>
+<span class="issue-badge">2026年四月上旬更新</span>
+
+<div class="nav-links">
+  <span><a href="newsletter_34_oil.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="toc">
+  <div class="toc-title">目錄</div>
+  <ol>
+    <li><a href="#tariff-spring-review">貿易 關稅之春一周年：雷聲大雨點小</a></li>
+    <li><a href="#china-fuel-crunch">能源 中國燃料自保，亞洲能源承壓</a></li>
+    <li><a href="#takeaways">基金經理人重點摘要</a></li>
+  </ol>
+</div>
+
+<div class="section" id="tariff-spring-review">
+  <h2><span class="tag tag-trade">貿易</span> 關稅之春一周年：雷聲大雨點小</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--orange)">13.5%</div><div class="lbl">最高法裁決前
+美國平均關稅</div></div>
+    <div class="stat"><div class="val">-1.7%</div><div class="lbl">美國進口同比
+（2025年4-12月）</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">~13%</div><div class="lbl">進口來源國
+發生轉移</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">川普「關稅之春」一周年 — 來路回顧與前路展望</div>
+    <p>去年4月2日川普在白宮玫瑰園宣布的「對等關稅」本應將美國平均關稅稅率推升約<span style="color:#fff;font-weight:700">12個百分點</span>至<span style="color:#fff;font-weight:700">20%</span>左右，引發標普500指數兩日內暴跌近<span style="color:#fff;font-weight:700">12%</span>。但一年後回顧，實際衝擊遠小於預期。推遲實施、中美休兵（維持對華對等關稅<span style="color:#fff;font-weight:700">10%</span>而非<span style="color:#fff;font-weight:700">34%</span>）、半導體及智慧手機等關鍵電子產品豁免，使得關稅增幅縮減過半。2025年4至12月美國進口僅同比下降<span style="color:#fff;font-weight:700">1.7%</span>，其中AI相關商品成為關鍵支撐 — 若剔除AI品類，進口跌幅達<span style="color:#fff;font-weight:700">7%</span>，為近十年最大。約<span style="color:#fff;font-weight:700">13%</span>的美國進口轉向了新的來源國，規模前所未見。2026年2月最高法院裁定IEEPA關稅違憲後，政府改徵<span style="color:#fff;font-weight:700">10%</span>統一稅率。</p>
+    <div class="data-point">最高法裁決前平均關稅：<span style="color:#fff;font-weight:700">13.5%</span> &nbsp;|&nbsp; 對華休兵降低影響：<span style="color:#fff;font-weight:700">2.4個百分點</span> &nbsp;|&nbsp; 全球貿易額增長（6個月至2025.11）：<span style="color:#fff;font-weight:700">7.3%</span> &nbsp;|&nbsp; 剔除AI後進口跌幅：<span style="color:#fff;font-weight:700">~7%</span></div>
+    <div class="implication"><div class="label">投資啟示</div>關稅對全球貿易的實質衝擊有限，AI供應鏈成為美國進口韌性的核心。預計Section 301長期關稅將恢復差異化稅率，但伊朗戰爭推高成本令川普在中選前趨於謹慎 — <span style="color:#fff;font-weight:700">貿易政策不確定性短期降溫，可適度增配出口導向型亞洲股票</span>。</div>
+  </div>
+  <div class="article">
+    <div class="article-title">Deals, Data Centers Saved Trade From Tariff Dive</div>
+    <p>從全球視角來看，各出口國展現了顯著的調適能力。中國借助人民幣走弱，大幅擴大對非美市場出口；東南亞經濟體則趁機搶占中國在美國市場（尤其電子產品）流失的份額，實現對美及全球出口雙增長。IMF月度數據顯示，截至2025年11月的六個月內全球商品貿易額同比增長<span style="color:#fff;font-weight:700">7.3%</span>，荷蘭經濟政策分析局指標的貿易量增長約<span style="color:#fff;font-weight:700">5%</span>。然而墨西哥與加拿大的表現分化 — 墨西哥受益於針對特定國家的關稅下調，加拿大則面臨更大壓力。美國通膨受關稅的直接影響迄今亦相當溫和。</p>
+    <div class="data-point">全球貿易量增長（至2026.1）：<span style="color:#fff;font-weight:700">~5%</span> &nbsp;|&nbsp; 美國進口AI品類貢獻：<span style="color:#fff;font-weight:700">前三大增長品類</span> &nbsp;|&nbsp; 東南亞搶占份額：<span style="color:#fff;font-weight:700">電子產品領域</span></div>
+    <div class="implication"><div class="label">投資啟示</div>全球貿易重新洗牌利好東南亞製造業龍頭及轉口貿易受益國。<span style="color:#fff;font-weight:700">增持越南、印度出口相關ETF</span>；關注Section 301落地節奏對個別行業的差異化衝擊。</div>
+  </div>
+</div>
+
+<div class="section" id="china-fuel-crunch">
+  <h2><span class="tag tag-misc">能源</span> 中國燃料自保，亞洲能源承壓</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val">$420億</div><div class="lbl">中國2024年
+燃料出口額</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">64%</div><div class="lbl">出口至亞洲
+佔比</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">1/3</div><div class="lbl">菲律賓燃料進口
+來自中國</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">石油自保加劇能源困境 — 中國限制燃料出口衝擊亞洲</div>
+    <p>在霍爾木茲海峽實際關閉的背景下，中國已開始限制成品油出口以保障國內供應。2024年中國燃料出口達<span style="color:#fff;font-weight:700">$420億</span>，占全球前20大出口國的<span style="color:#fff;font-weight:700">6.2%</span>，其中<span style="color:#fff;font-weight:700">64%</span>流向亞洲、<span style="color:#fff;font-weight:700">10%</span>至歐洲。菲律賓首當其衝 — 2024年自中國進口<span style="color:#fff;font-weight:700">480萬噸</span>燃料，占其燃料進口總量的<span style="color:#fff;font-weight:700">三分之一</span>。日本、馬來西亞、葡萄牙及丹麥同樣面臨顯著依賴風險。更令人擔憂的是潛在的供應鏈外溢效應：澳大利亞和印尼是關鍵礦產供應國，韓國和日本在全球電子產品（尤其晶片）供應鏈中不可或缺，燃料短缺一旦擾亂航運或工業生產，衝擊將沿供應鏈擴散至全球。</p>
+    <div class="data-point">亞洲佔中國燃料出口：<span style="color:#fff;font-weight:700">64%</span> &nbsp;|&nbsp; 菲律賓對華燃料依賴：<span style="color:#fff;font-weight:700">1/3進口量</span> &nbsp;|&nbsp; 受影響關鍵供應鏈：<span style="color:#fff;font-weight:700">晶片、礦產</span></div>
+    <div class="implication"><div class="label">投資啟示</div>亞洲煉油產能不足的經濟體面臨能源成本飆升風險。<span style="color:#fff;font-weight:700">減持菲律賓及高能源進口依賴型亞洲市場</span>；關注新加坡煉油商及替代能源供應商的受益機會。原油衝擊若持續，將壓制亞洲出口型製造業毛利。</div>
+  </div>
+</div>
+
+<div class="callout" id="takeaways">
+  <div class="callout-title">基金經理人重點摘要</div>
+  <ul>
+    <li><strong>關稅回顧：</strong>川普對等關稅實際衝擊遠小於預期，美國進口僅降1.7%，AI商品是核心支撐。最高法裁決後統一10%稅率，短期政策不確定性降溫。</li>
+    <li><strong>貿易轉移：</strong>約13%美國進口來源國發生轉移，東南亞搶占中國份額。**增持越南、印度出口型資產**。</li>
+    <li><strong>Section 301風險：</strong>預計美國將通過301條款恢復差異化關稅，但中選前大幅加稅概率低。持續監控立法進度。</li>
+    <li><strong>能源衝擊：</strong>中國限制燃料出口加劇亞洲供應緊張，菲律賓等高依賴經濟體首當其衝。**減持高能源進口依賴市場，關注煉油商受益標的**。</li>
+    <li><strong>供應鏈風險：</strong>燃料短缺若擾亂亞洲晶片及礦產供應鏈，全球科技硬件及工業金屬成本將進一步上行。</li>
+  </ul>
+</div>
+
+<div class="nav-links">
+  <span><a href="newsletter_34_oil.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="footer">
+  彭博研究摘要 | 僅供教學與討論用途 | 2026年4月2日<br>
+  資料來源：Bloomberg Intelligence, Bloomberg Economics, Bloomberg News
+</div>
+
+</body>
+</html>

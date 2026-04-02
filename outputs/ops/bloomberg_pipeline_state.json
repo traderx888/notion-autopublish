@@ -1,6 +1,6 @@
 {
-  "lastRunAt": "2026-04-01T19:12:09+08:00",
-  "lastNewsletterNumber": 30,
+  "lastRunAt": "2026-04-02T18:04:44+08:00",
+  "lastNewsletterNumber": 35,
   "processedFiles": {
     "2026 Outlook Global Aluminum Producers #metals.pdf": {
       "processedAt": "2026-03-26T15:52:49+08:00",
@@ -1653,7 +1653,164 @@
         "oil",
         "inflation"
       ],
+      "newsletterNumber": 32
+    },
+    "BE Asia Scrambles to Cope With Hormuz Closure Fallout #geopolitics.pdf": {
+      "processedAt": "2026-04-02T18:04:33+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\BE Asia Scrambles to Cope With Hormuz Closure Fallout.md",
+      "topics": [
+        "geopolitics"
+      ],
+      "newsletterNumber": 33
+    },
+    "BE China Fuel Export Curbs Deepen Asia Energy Crunch #china.pdf": {
+      "processedAt": "2026-04-02T18:04:33+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\BE China Fuel Export Curbs Deepen Asia Energy Crunch.md",
+      "topics": [
+        "china"
+      ],
+      "newsletterNumber": 35
+    },
+    "BE Middle East War Pressures China Growth #growth #geopolitics #china.pdf": {
+      "processedAt": "2026-04-02T18:04:35+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\BE Middle East War Pressures China Growth.md",
+      "topics": [
+        "growth",
+        "geopolitics",
+        "china"
+      ],
+      "newsletterNumber": 31
+    },
+    "BE Red Sea Escalation Could Push Oil to 140 #oil.pdf": {
+      "processedAt": "2026-04-02T18:04:36+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\BE Red Sea Escalation Could Push Oil to 140.md",
+      "topics": [
+        "oil"
+      ],
+      "newsletterNumber": 34
+    },
+    "BE Tokyo CPI Softens Calm Before Oil Storm for BOJ #rates #inflation #oil #japan.pdf": {
+      "processedAt": "2026-04-02T18:04:36+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\BE Tokyo CPI Softens Calm Before Oil Storm for BOJ.md",
+      "topics": [
+        "rates",
+        "inflation",
+        "oil",
+        "japan"
+      ],
       "newsletterNumber": null
+    },
+    "BI CN Gold ETF Zero Correlation Reminder #metals #geopolitics #oil.pdf": {
+      "processedAt": "2026-04-02T18:04:37+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\BI CN Gold ETF Zero Correlation Reminder.md",
+      "topics": [
+        "metals",
+        "geopolitics",
+        "oil"
+      ],
+      "newsletterNumber": null
+    },
+    "BI CN Iran War One Month Review and Outlook #geopolitics #oil.pdf": {
+      "processedAt": "2026-04-02T18:04:38+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\BI CN Iran War One Month Review and Outlook.md",
+      "topics": [
+        "geopolitics",
+        "oil"
+      ],
+      "newsletterNumber": 33
+    },
+    "BI CN NATO Airspace Ban Trumps Iran War Card #geopolitics.pdf": {
+      "processedAt": "2026-04-02T18:04:38+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\BI CN NATO Airspace Ban Trumps Iran War Card.md",
+      "topics": [
+        "geopolitics"
+      ],
+      "newsletterNumber": 33
+    },
+    "BI CN Oil Self-Preservation Deepens Energy Crunch #oil #china #trade.pdf": {
+      "processedAt": "2026-04-02T18:04:39+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\BI CN Oil Self-Preservation Deepens Energy Crunch.md",
+      "topics": [
+        "oil",
+        "china",
+        "trade"
+      ],
+      "newsletterNumber": 34
+    },
+    "BI CN Retail Rebound Salvages Q1 US Spending #growth.pdf": {
+      "processedAt": "2026-04-02T18:04:39+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\BI CN Retail Rebound Salvages Q1 US Spending.md",
+      "topics": [
+        "growth"
+      ],
+      "newsletterNumber": 31
+    },
+    "BI CN Trump Tariff Spring One Year Review #trade #policy #growth.pdf": {
+      "processedAt": "2026-04-02T18:04:41+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\BI CN Trump Tariff Spring One Year Review.md",
+      "topics": [
+        "trade",
+        "policy",
+        "growth"
+      ],
+      "newsletterNumber": 35
+    },
+    "BofA Hartnett Flow Show The Lame Buck #growth #oil #policy #valuations.pdf": {
+      "processedAt": "2026-04-02T18:04:43+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\BofA Hartnett Flow Show The Lame Buck.md",
+      "topics": [
+        "growth",
+        "oil",
+        "policy",
+        "valuations"
+      ],
+      "newsletterNumber": 31
+    },
+    "Fast Money Moves Fast Real Money Will Wait #volatility #geopolitics #oil.pdf": {
+      "processedAt": "2026-04-02T18:04:44+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\Fast Money Moves Fast Real Money Will Wait.md",
+      "topics": [
+        "volatility",
+        "geopolitics",
+        "oil"
+      ],
+      "newsletterNumber": 32
+    },
+    "GLOBAL INSIGHT Deals Data Centers Saved Trade From Tariff Dive #trade #policy.pdf": {
+      "processedAt": "2026-04-02T18:04:44+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\GLOBAL INSIGHT Deals Data Centers Saved Trade From Tariff Dive.md",
+      "topics": [
+        "trade",
+        "policy"
+      ],
+      "newsletterNumber": 35
+    },
+    "GLOBAL INSIGHT Oil Self-Preservation Deepens Energy Crunch #oil #china #geopolitics.pdf": {
+      "processedAt": "2026-04-02T18:04:44+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\GLOBAL INSIGHT Oil Self-Preservation Deepens Energy Crunch.md",
+      "topics": [
+        "oil",
+        "china",
+        "geopolitics"
+      ],
+      "newsletterNumber": 34
+    },
+    "Rare Dual Stock Signal Hints Bottom Is In #volatility #growth.pdf": {
+      "processedAt": "2026-04-02T18:04:44+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\Rare Dual Stock Signal Hints Bottom Is In.md",
+      "topics": [
+        "volatility",
+        "growth"
+      ],
+      "newsletterNumber": 32
+    },
+    "US REACT Retail Rebound Salvages Q1 Spending #growth.pdf": {
+      "processedAt": "2026-04-02T18:04:44+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\US REACT Retail Rebound Salvages Q1 Spending.md",
+      "topics": [
+        "growth"
+      ],
+      "newsletterNumber": 31
     }
   },
   "newsletters": {
@@ -1859,6 +2016,47 @@
       "topics": [
         "rates",
         "japan"
+      ]
+    },
+    "31": {
+      "filename": "newsletter_31_growth.html",
+      "generatedAt": "2026-04-02T18:06:15+08:00",
+      "articleCount": 4,
+      "topics": [
+        "growth"
+      ]
+    },
+    "32": {
+      "filename": "newsletter_32_volatility.html",
+      "generatedAt": "2026-04-02T18:07:17+08:00",
+      "articleCount": 3,
+      "topics": [
+        "volatility"
+      ]
+    },
+    "33": {
+      "filename": "newsletter_33_geopolitics.html",
+      "generatedAt": "2026-04-02T18:08:24+08:00",
+      "articleCount": 3,
+      "topics": [
+        "geopolitics"
+      ]
+    },
+    "34": {
+      "filename": "newsletter_34_oil.html",
+      "generatedAt": "2026-04-02T18:09:11+08:00",
+      "articleCount": 3,
+      "topics": [
+        "oil"
+      ]
+    },
+    "35": {
+      "filename": "newsletter_35_trade_china.html",
+      "generatedAt": "2026-04-02T18:10:11+08:00",
+      "articleCount": 3,
+      "topics": [
+        "trade",
+        "china"
       ]
     }
   },

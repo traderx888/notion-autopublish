@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>彭博研究摘要 #34 — 紅海戰雲密布與能源自保危機</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --accent: #58a6ff;
+          --green: #3fb950; --red: #f85149; --yellow: #d29922; --text: #c9d1d9; --muted: #8b949e;
+          --orange: #f0883e; --purple: #bc8cff; --cyan: #39d2c0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans TC', 'Microsoft JhengHei', Helvetica, Arial, sans-serif; line-height: 1.7; padding: 20px; max-width: 860px; margin: 0 auto; }
+  h1 { color: #fff; font-size: 1.7em; margin-bottom: 4px; }
+  .subtitle { color: var(--muted); font-size: 0.9em; margin-bottom: 8px; }
+  .issue-badge { display: inline-block; background: rgba(88,166,255,0.15); color: var(--accent); padding: 3px 10px; border-radius: 12px; font-size: 0.8em; font-weight: 600; margin-bottom: 20px; }
+  .tag { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 0.72em; font-weight: 600; margin-right: 4px; }
+  .tag-rates { background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-china { background: rgba(240,136,62,0.15); color: var(--orange); }
+  .tag-japan { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-geo   { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-oil   { background: rgba(210,153,34,0.15); color: var(--yellow); }
+  .tag-trade { background: rgba(210,153,34,0.15); color: var(--yellow); }
+  .tag-growth{ background: rgba(63,185,80,0.15); color: var(--green); }
+  .tag-metals{ background: rgba(188,140,255,0.15); color: var(--purple); }
+  .tag-infl  { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-policy{ background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-val   { background: rgba(63,185,80,0.15); color: var(--green); }
+  .tag-vol   { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-semi  { background: rgba(57,210,192,0.15); color: var(--cyan); }
+  .tag-credit{ background: rgba(188,140,255,0.15); color: var(--purple); }
+  .tag-space { background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-misc  { background: rgba(139,148,158,0.15); color: var(--muted); }
+  .section { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 16px; }
+  .section h2 { color: #fff; font-size: 1.15em; margin-bottom: 12px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+  .section h3 { color: var(--accent); font-size: 0.95em; margin: 14px 0 6px; }
+  .article { margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .article:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .article-title { color: #fff; font-weight: 700; font-size: 0.95em; margin-bottom: 4px; }
+  .article-title-cn { color: var(--muted); font-size: 0.85em; margin-bottom: 8px; }
+  .article p { font-size: 0.9em; margin: 6px 0; }
+  .data-point { background: rgba(255,255,255,0.03); padding: 8px 12px; border-radius: 6px; margin: 8px 0; font-size: 0.85em; }
+  .data-point .num { color: #fff; font-weight: 700; }
+  .implication { background: rgba(88,166,255,0.06); border-left: 3px solid var(--accent); padding: 10px 14px; margin: 10px 0; border-radius: 0 6px 6px 0; font-size: 0.88em; }
+  .implication .label { color: var(--accent); font-weight: 700; font-size: 0.8em; text-transform: uppercase; margin-bottom: 4px; }
+  .callout { background: rgba(210,153,34,0.08); border: 1px solid rgba(210,153,34,0.3); border-radius: 6px; padding: 16px; margin: 16px 0; }
+  .callout-title { color: var(--yellow); font-weight: 700; font-size: 0.95em; margin-bottom: 8px; }
+  .callout ul { padding-left: 18px; }
+  .callout li { margin: 4px 0; font-size: 0.88em; }
+  ul { padding-left: 18px; }
+  li { margin: 3px 0; font-size: 0.88em; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(255,255,255,0.03); padding: 12px; border-radius: 6px; text-align: center; }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: #fff; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
+  .toc { background: rgba(88,166,255,0.05); border: 1px solid rgba(88,166,255,0.2); border-radius: 8px; padding: 16px 20px; margin-bottom: 20px; }
+  .toc-title { color: var(--accent); font-weight: 700; font-size: 0.9em; margin-bottom: 8px; }
+  .toc a { color: var(--accent); text-decoration: none; font-size: 0.88em; }
+  .toc a:hover { text-decoration: underline; }
+  .toc ol { padding-left: 20px; }
+  .toc li { margin: 4px 0; }
+  .nav-links { display: flex; justify-content: space-between; margin: 20px 0; font-size: 0.85em; }
+  .nav-links a { color: var(--accent); text-decoration: none; }
+  .nav-links a:hover { text-decoration: underline; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(255,255,255,0.03); padding: 12px; border-radius: 6px; text-align: center; }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: #fff; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
+  .footer { text-align: center; color: var(--muted); font-size: 0.75em; margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--border); }
+</style>
+<script>if(window.self===window.top&&sessionStorage.getItem("student_auth")!=="1"){document.body.innerHTML="";window.location.replace("student.html");}</script>
+</head>
+<body>
+
+<h1>彭博研究摘要</h1>
+<p class="subtitle">第34期 | 紅海戰雲密布與能源自保危機</p>
+<span class="issue-badge">2026年四月上旬更新</span>
+
+<div class="nav-links">
+  <span><a href="newsletter_33_geopolitics.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="toc">
+  <div class="toc-title">目錄</div>
+  <ol>
+    <li><a href="#red-sea-oil-shock">地緣風險 紅海戰火一觸即發，油價劍指140</a></li>
+    <li><a href="#china-fuel-export-curb">中國能源 中國燃料自保，亞洲供應鏈雪上加霜</a></li>
+    <li><a href="#takeaways">基金經理人重點摘要</a></li>
+  </ol>
+</div>
+
+<div class="section" id="red-sea-oil-shock">
+  <h2><span class="tag tag-geo">地緣風險</span> 紅海戰火一觸即發，油價劍指140</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--red)">$140</div><div class="lbl">紅海衝突升級
+油價目標價</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">500萬桶/日</div><div class="lbl">沙烏地紅海
+石油出口量</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">~20%</div><div class="lbl">布倫特原油
+潛在漲幅</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">胡塞武裝重返戰場 — 紅海航運再臨威脅，油價或飆至140美元</div>
+    <p>伊朗戰爭進入第二個月，油價維持在每桶 <span style="color:#fff;font-weight:700">$110</span> 水平。胡塞武裝於 <span style="color:#fff;font-weight:700">3月28日</span> 向以色列發射彈道飛彈，正式加入衝突。隨著霍爾木茲海峽實際遭封鎖，沙烏地阿拉伯已將約 <span style="color:#fff;font-weight:700">500萬桶/日</span> 的原油出口改道紅海。彭博經濟研究指出，如果胡塞武裝針對紅海航運及沙烏地延布港發動襲擊，全球原油供應可能再減少 <span style="color:#fff;font-weight:700">5%</span>。根據歷史經驗法則 — 油價漲幅通常為供應中斷幅度的 <span style="color:#fff;font-weight:700">四倍</span> — 布倫特原油可能從約 <span style="color:#fff;font-weight:700">$115</span> 飆升至接近 <span style="color:#fff;font-weight:700">$140</span>。觸發條件包括美國地面入侵伊朗或轟炸伊朗基礎設施。胡塞武裝在加沙戰爭期間曾發動超過 <span style="color:#fff;font-weight:700">315次</span> 紅海襲擊，雖然命中率僅 <span style="color:#fff;font-weight:700">18%</span>，但已足以迫使商船改道。</p>
+    <div class="data-point">當前油價：<span style="color:#fff;font-weight:700">~$110/桶</span> &nbsp;|&nbsp; 紅海升級目標：<span style="color:#fff;font-weight:700">$140/桶（+20%）</span> &nbsp;|&nbsp; 全球供應額外損失：<span style="color:#fff;font-weight:700">~5%</span> &nbsp;|&nbsp; 主要經濟體通膨已上升：<span style="color:#fff;font-weight:700">+0.4個百分點</span></div>
+    <div class="implication"><div class="label">投資啟示</div>紅海升級是目前最大的尾部風險。<span style="color:#fff;font-weight:700">加碼原油多頭對沖</span>（布倫特 call spread $120-140）。避免做空VIX — 地緣溢價短期難消。關注胡塞武裝動向作為油價催化劑。</div>
+  </div>
+</div>
+
+<div class="section" id="china-fuel-export-curb">
+  <h2><span class="tag tag-misc">中國能源</span> 中國燃料自保，亞洲供應鏈雪上加霜</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val">$420億</div><div class="lbl">2024年中國
+燃料出口額</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">64%</div><div class="lbl">中國燃油出口
+流向亞洲</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">1/3</div><div class="lbl">菲律賓燃料進口
+依賴中國比例</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">石油自保加劇能源困境 — 中國限制燃料出口衝擊亞洲供應鏈</div>
+    <p>川普最新中東升級威脅進一步加劇全球能源供應風險。中國作為全球最大原油淨進口國，憑藉強大煉油能力同時也是主要燃料出口國，<span style="color:#fff;font-weight:700">2024年</span> 燃料出口達 <span style="color:#fff;font-weight:700">$420億</span>，佔全球前20大出口國的 <span style="color:#fff;font-weight:700">6.2%</span>。隨著霍爾木茲海峽實質封鎖，北京已開始限制燃料出口以保障國內供應。亞洲佔中國成品油出口的 <span style="color:#fff;font-weight:700">64%</span>，菲律賓首當其衝 — 該國 <span style="color:#fff;font-weight:700">2024年</span> 從中國進口 <span style="color:#fff;font-weight:700">480萬噸</span> 燃料，佔其燃料進口總量的 <span style="color:#fff;font-weight:700">三分之一</span>。日本、馬來西亞、澳大利亞同樣面臨顯著依賴風險。如果燃料短缺擾亂航運和工業生產，衝擊將沿供應鏈傳導，波及澳洲礦產、韓日電子產品及全球晶片生產。</p>
+    <div class="data-point">中國燃料出口：<span style="color:#fff;font-weight:700">$420億（2024）</span> &nbsp;|&nbsp; 亞洲佔比：<span style="color:#fff;font-weight:700">64%</span> &nbsp;|&nbsp; 菲律賓對華燃料依賴：<span style="color:#fff;font-weight:700">33%</span> &nbsp;|&nbsp; 歐洲佔比：<span style="color:#fff;font-weight:700">10%</span></div>
+    <div class="implication"><div class="label">投資啟示</div>中國燃料出口管制是油價之外的「二階衝擊」。<span style="color:#fff;font-weight:700">減持東南亞航空、航運股</span>（燃料成本壓力）。關注菲律賓披索及馬來西亞林吉特貶值壓力。<span style="color:#fff;font-weight:700">做多亞洲煉油商利潤率</span>（裂解價差擴大）。</div>
+  </div>
+</div>
+
+<div class="callout" id="takeaways">
+  <div class="callout-title">基金經理人重點摘要</div>
+  <ul>
+    <li><strong>油價：</strong>布倫特目前約$110，紅海升級情景下劍指$140。加碼布倫特call spread $120-140作為尾部對沖。</li>
+    <li><strong>胡塞觸發點：</strong>美國地面入侵伊朗或轟炸基礎設施將促使胡塞武裝全面介入紅海。密切關注作為油價催化劑。</li>
+    <li><strong>中國燃料自保：</strong>北京限制成品油出口保障國內供應，亞洲燃料裂解價差料將擴大。做多亞洲煉油利潤。</li>
+    <li><strong>東南亞風險：</strong>菲律賓三分之一燃料依賴中國進口，能源衝擊將衝擊匯率和航運成本。減持相關敞口。</li>
+    <li><strong>通膨傳導：</strong>主要經濟體通膨已因戰爭上升0.4個百分點，進一步升級將推高至更痛苦水平。利率下行空間受限。</li>
+  </ul>
+</div>
+
+<div class="nav-links">
+  <span><a href="newsletter_33_geopolitics.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="footer">
+  彭博研究摘要 | 僅供教學與討論用途 | 2026年4月2日<br>
+  資料來源：Bloomberg Intelligence, Bloomberg Economics, Bloomberg News
+</div>
+
+</body>
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>彭博研究摘要 #32 — 波動新常態與戰術底部訊號</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --accent: #58a6ff;
+          --green: #3fb950; --red: #f85149; --yellow: #d29922; --text: #c9d1d9; --muted: #8b949e;
+          --orange: #f0883e; --purple: #bc8cff; --cyan: #39d2c0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans TC', 'Microsoft JhengHei', Helvetica, Arial, sans-serif; line-height: 1.7; padding: 20px; max-width: 860px; margin: 0 auto; }
+  h1 { color: #fff; font-size: 1.7em; margin-bottom: 4px; }
+  .subtitle { color: var(--muted); font-size: 0.9em; margin-bottom: 8px; }
+  .issue-badge { display: inline-block; background: rgba(88,166,255,0.15); color: var(--accent); padding: 3px 10px; border-radius: 12px; font-size: 0.8em; font-weight: 600; margin-bottom: 20px; }
+  .tag { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 0.72em; font-weight: 600; margin-right: 4px; }
+  .tag-rates { background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-china { background: rgba(240,136,62,0.15); color: var(--orange); }
+  .tag-japan { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-geo   { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-oil   { background: rgba(210,153,34,0.15); color: var(--yellow); }
+  .tag-trade { background: rgba(210,153,34,0.15); color: var(--yellow); }
+  .tag-growth{ background: rgba(63,185,80,0.15); color: var(--green); }
+  .tag-metals{ background: rgba(188,140,255,0.15); color: var(--purple); }
+  .tag-infl  { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-policy{ background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-val   { background: rgba(63,185,80,0.15); color: var(--green); }
+  .tag-vol   { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-semi  { background: rgba(57,210,192,0.15); color: var(--cyan); }
+  .tag-credit{ background: rgba(188,140,255,0.15); color: var(--purple); }
+  .tag-space { background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-misc  { background: rgba(139,148,158,0.15); color: var(--muted); }
+  .section { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 16px; }
+  .section h2 { color: #fff; font-size: 1.15em; margin-bottom: 12px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+  .section h3 { color: var(--accent); font-size: 0.95em; margin: 14px 0 6px; }
+  .article { margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .article:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .article-title { color: #fff; font-weight: 700; font-size: 0.95em; margin-bottom: 4px; }
+  .article-title-cn { color: var(--muted); font-size: 0.85em; margin-bottom: 8px; }
+  .article p { font-size: 0.9em; margin: 6px 0; }
+  .data-point { background: rgba(255,255,255,0.03); padding: 8px 12px; border-radius: 6px; margin: 8px 0; font-size: 0.85em; }
+  .data-point .num { color: #fff; font-weight: 700; }
+  .implication { background: rgba(88,166,255,0.06); border-left: 3px solid var(--accent); padding: 10px 14px; margin: 10px 0; border-radius: 0 6px 6px 0; font-size: 0.88em; }
+  .implication .label { color: var(--accent); font-weight: 700; font-size: 0.8em; text-transform: uppercase; margin-bottom: 4px; }
+  .callout { background: rgba(210,153,34,0.08); border: 1px solid rgba(210,153,34,0.3); border-radius: 6px; padding: 16px; margin: 16px 0; }
+  .callout-title { color: var(--yellow); font-weight: 700; font-size: 0.95em; margin-bottom: 8px; }
+  .callout ul { padding-left: 18px; }
+  .callout li { margin: 4px 0; font-size: 0.88em; }
+  ul { padding-left: 18px; }
+  li { margin: 3px 0; font-size: 0.88em; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(255,255,255,0.03); padding: 12px; border-radius: 6px; text-align: center; }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: #fff; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
+  .toc { background: rgba(88,166,255,0.05); border: 1px solid rgba(88,166,255,0.2); border-radius: 8px; padding: 16px 20px; margin-bottom: 20px; }
+  .toc-title { color: var(--accent); font-weight: 700; font-size: 0.9em; margin-bottom: 8px; }
+  .toc a { color: var(--accent); text-decoration: none; font-size: 0.88em; }
+  .toc a:hover { text-decoration: underline; }
+  .toc ol { padding-left: 20px; }
+  .toc li { margin: 4px 0; }
+  .nav-links { display: flex; justify-content: space-between; margin: 20px 0; font-size: 0.85em; }
+  .nav-links a { color: var(--accent); text-decoration: none; }
+  .nav-links a:hover { text-decoration: underline; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(255,255,255,0.03); padding: 12px; border-radius: 6px; text-align: center; }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: #fff; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
+  .footer { text-align: center; color: var(--muted); font-size: 0.75em; margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--border); }
+</style>
+<script>if(window.self===window.top&&sessionStorage.getItem("student_auth")!=="1"){document.body.innerHTML="";window.location.replace("student.html");}</script>
+</head>
+<body>
+
+<h1>彭博研究摘要</h1>
+<p class="subtitle">第32期 | 波動新常態與戰術底部訊號</p>
+<span class="issue-badge">2026年四月上旬更新</span>
+
+<div class="nav-links">
+  <span><a href="newsletter_31_growth.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="toc">
+  <div class="toc-title">目錄</div>
+  <ol>
+    <li><a href="#vol-regime-shift">波動率 波動飆升，結構性轉變已成</a></li>
+    <li><a href="#oil-macro-tail">油價與宏觀 百元油價陰影，雙尾風險並存</a></li>
+    <li><a href="#takeaways">基金經理人重點摘要</a></li>
+  </ol>
+</div>
+
+<div class="section" id="vol-regime-shift">
+  <h2><span class="tag tag-vol">波動率</span> 波動飆升，結構性轉變已成</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--red)">30+</div><div class="lbl">歐美波動率指標
+穩居高位</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">$523億</div><div class="lbl">波動率控制策略
+一個月內減持美股</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">$336億</div><div class="lbl">其中最後一週
+拋售（歷史前5%）</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">波動率成唯一確定性 — 多年低波動時代終結</div>
+    <p>歐美波動率指標穩穩站上 <span style="color:#fff;font-weight:700">30</span> 以上，且沒有任何力量能有效壓制。野村策略師McElligott指出，多年來透過低波動環境累積的槓桿正在「機械式去化」，波動率控制策略過去一個月拋售了約 <span style="color:#fff;font-weight:700">$523億</span> 美股敞口，其中最後一週高達 <span style="color:#fff;font-weight:700">$336億</span>，位居歷史前 <span style="color:#fff;font-weight:700">第5百分位</span>。衍生品市場處於<span style="color:#fff;font-weight:700">負Gamma</span>環境，做市商被迫追漲殺跌，使市場從均值回歸轉向動量驅動。SpotGamma分析師警告：「這不僅是看空環境，而是一個反射性、不穩定的市場。」隱含與實現波動率之間的差距持續擴大至不可持續的水平，意味著更大幅度的價格擺動即將到來。</p>
+    <div class="data-point">波動率控制策略減持：<span style="color:#fff;font-weight:700">$523億</span>（一個月） &nbsp;|&nbsp; 最後一週：<span style="color:#fff;font-weight:700">$336億</span>（前5%百分位） &nbsp;|&nbsp; 市場機制：<span style="color:#fff;font-weight:700">負Gamma</span>（動量驅動） &nbsp;|&nbsp; 雙尾風險：<span style="color:#fff;font-weight:700">通膨衝擊 vs 需求毀滅</span></div>
+    <div class="implication"><div class="label">投資啟示</div>低波動時代已結束。負Gamma環境下方向性波動將放大 — <span style="color:#fff;font-weight:700">增持波動率多頭部位（VIX看漲價差）</span>，避免裸賣選擇權。</div>
+  </div>
+  <div class="article">
+    <div class="article-title">快錢搶跑，真金白銀仍在觀望</div>
+    <p>週二的股市大漲本質上是<span style="color:#fff;font-weight:700">大規模空頭回補</span>，而非真正的風險偏好回升。宏觀對沖基金和CTA此前已大幅做空歐洲股市，技術面極度超賣，為急速反彈埋下伏筆。高盛交易員Bartlett指出，淨敞口已大幅降低，但總敞口依然頑固地高企，ETF對沖交易量活躍 — 這「支撐戰術性反彈，但不足以形成持久底部」。成交量並不亮眼，波動率仍在 <span style="color:#fff;font-weight:700">25</span> 附近，信用市場CDS利差僅小幅收窄。石油衝擊對全球增長和企業盈利的威脅未消，霍爾木茲海峽實質上仍處於封鎖狀態。Lombard Odier宏觀研究主管Ielpo提醒：即使衝突在數週內結束，全球能源市場的中斷也不會同步解決，<span style="color:#fff;font-weight:700">久期溢價將持續存在</span>。</p>
+    <div class="data-point">空頭回補規模：歷史級別（<span style="color:#fff;font-weight:700">歷史前十大</span>養老金再平衡之一） &nbsp;|&nbsp; 波動率：仍在 <span style="color:#fff;font-weight:700">~25</span> &nbsp;|&nbsp; 油價風險：<span style="color:#fff;font-weight:700">$100/桶</span>影響未消 &nbsp;|&nbsp; 霍爾木茲海峽：<span style="color:#fff;font-weight:700">實質封鎖中</span></div>
+    <div class="implication"><div class="label">投資啟示</div>反彈由技術面驅動而非基本面。<span style="color:#fff;font-weight:700">逢高減持beta敞口</span>，等待油價回落至戰前水平才考慮加倉。</div>
+  </div>
+  <div class="article">
+    <div class="article-title">罕見雙重訊號暗示階段性底部已現</div>
+    <p>儘管戰爭仍在進行，一組罕見的技術訊號指向股市<span style="color:#fff;font-weight:700">階段性底部</span>可能已經形成。改良版<span style="color:#fff;font-weight:700">Zweig Thrust訊號</span>於3月25日觸發 — 當市場廣度從極弱迅速轉為極強時才會出現。回測數據（2004年至今）顯示觸發後一個月回報 <span style="color:#fff;font-weight:700">1.4%</span>（vs均值0.3%），三個月 <span style="color:#fff;font-weight:700">2.7%</span>（vs 2.4%），六個月 <span style="color:#fff;font-weight:700">7.2%</span>（vs 4.9%）。上一次觸發是2025年4月15日關稅恐慌低點後約一週，S&amp;P 500隨後全年上漲 <span style="color:#fff;font-weight:700">27%</span>，最大回撤僅 <span style="color:#fff;font-weight:700">5%</span>。更關鍵的是，G10超額流動性正在加速 — 實質貨幣增長超越經濟增長 — 為底部訊號提供了有力的基本面支撐。</p>
+    <div class="data-point">Zweig Thrust觸發：<span style="color:#fff;font-weight:700">3月25日</span> &nbsp;|&nbsp; 觸發後6個月回報：<span style="color:#fff;font-weight:700">7.2%</span>（vs均值4.9%） &nbsp;|&nbsp; 2025年同類觸發後漲幅：<span style="color:#fff;font-weight:700">27%</span> &nbsp;|&nbsp; G10超額流動性：<span style="color:#fff;font-weight:700">加速中</span></div>
+    <div class="implication"><div class="label">投資啟示</div>風險回報傾向上行。<span style="color:#fff;font-weight:700">戰術性增加多頭敞口</span>，但以期權結構（看漲價差）限制下行風險，而非裸多。</div>
+  </div>
+</div>
+
+<div class="section" id="oil-macro-tail">
+  <h2><span class="tag tag-misc">油價與宏觀</span> 百元油價陰影，雙尾風險並存</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--red)">$100</div><div class="lbl">油價衝擊
+通膨與增長風險</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">雙尾</div><div class="lbl">通膨緊縮 vs
+需求毀滅衰退</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">封鎖中</div><div class="lbl">霍爾木茲海峽
+全球貿易受阻</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">油價衝擊下的央行困局 — 鷹派尾部終將餵養鴿派結局</div>
+    <p>McElligott提出了一個深具洞察的框架：當前市場正同時定價兩種「經濟尾部」情景。一方面，油價衝擊推升通膨，可能迫使央行收緊貨幣政策；另一方面，高油價帶來的需求毀滅可能觸發衰退，最終需要深度降息。他指出這個「悖論式的終局」是：<span style="color:#fff;font-weight:700">在全球經濟已經脆弱的情況下，被迫在供給衝擊中收緊政策，意味著鷹派尾部最終將引導出鴿派尾部的結果</span>。霍爾木茲海峽的實質封鎖令全球貿易承壓，各國還需補充戰略儲備。即便衝突快速結束，能源市場中斷的影響也將持續數月，久期溢價料將維持高位。</p>
+    <div class="data-point">油價衝擊閾值：<span style="color:#fff;font-weight:700">$100/桶</span> &nbsp;|&nbsp; 鷹派尾部：<span style="color:#fff;font-weight:700">被迫加息進供給衝擊</span> &nbsp;|&nbsp; 鴿派尾部：<span style="color:#fff;font-weight:700">需求毀滅觸發深度降息</span> &nbsp;|&nbsp; 海峽狀態：<span style="color:#fff;font-weight:700">實質封鎖</span></div>
+    <div class="implication"><div class="label">投資啟示</div>雙尾風險意味著利率曲線將劇烈波動。<span style="color:#fff;font-weight:700">做多利率波動率（swaption straddles）</span>。短期避免方向性利率押注。</div>
+  </div>
+</div>
+
+<div class="callout" id="takeaways">
+  <div class="callout-title">基金經理人重點摘要</div>
+  <ul>
+    <li><strong>波動率機制：</strong>多年低波動時代終結，負Gamma驅動動量型市場。波動率控制策略一個月拋售$523億。**增持波動率多頭部位**。</li>
+    <li><strong>空頭回補反彈：</strong>週二大漲由CTA/宏觀基金空頭回補+養老金再平衡驅動，非真正risk-on。**逢高減持beta，等待基本面確認**。</li>
+    <li><strong>底部訊號：</strong>Zweig Thrust於3月25日觸發，歷史勝率高。G10超額流動性加速。**戰術性增加多頭敞口，但用期權結構控制風險**。</li>
+    <li><strong>油價雙尾：</strong>$100油價同時推升通膨與威脅增長。鷹派緊縮終將餵養鴿派衰退。**做多利率波動率，避免單邊利率方向押注**。</li>
+    <li><strong>霍爾木茲海峽：</strong>實質封鎖持續，即便停火能源中斷也需數月修復。**能源久期溢價將維持高位，相關倉位需預留緩衝**。</li>
+  </ul>
+</div>
+
+<div class="nav-links">
+  <span><a href="newsletter_31_growth.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="footer">
+  彭博研究摘要 | 僅供教學與討論用途 | 2026年4月2日<br>
+  資料來源：Bloomberg Intelligence, Bloomberg Economics, Bloomberg News
+</div>
+
+</body>
+</html>
