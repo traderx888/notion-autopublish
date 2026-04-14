@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>彭博研究摘要 #39 — 伊朗戰爭、石油自保與通膨拐點</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --accent: #58a6ff;
+          --green: #3fb950; --red: #f85149; --yellow: #d29922; --text: #c9d1d9; --muted: #8b949e;
+          --orange: #f0883e; --purple: #bc8cff; --cyan: #39d2c0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans TC', 'Microsoft JhengHei', Helvetica, Arial, sans-serif; line-height: 1.7; padding: 20px; max-width: 860px; margin: 0 auto; }
+  h1 { color: #fff; font-size: 1.7em; margin-bottom: 4px; }
+  .subtitle { color: var(--muted); font-size: 0.9em; margin-bottom: 8px; }
+  .issue-badge { display: inline-block; background: rgba(88,166,255,0.15); color: var(--accent); padding: 3px 10px; border-radius: 12px; font-size: 0.8em; font-weight: 600; margin-bottom: 20px; }
+  .tag { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 0.72em; font-weight: 600; margin-right: 4px; }
+  .tag-rates { background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-china { background: rgba(240,136,62,0.15); color: var(--orange); }
+  .tag-japan { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-geo   { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-oil   { background: rgba(210,153,34,0.15); color: var(--yellow); }
+  .tag-trade { background: rgba(210,153,34,0.15); color: var(--yellow); }
+  .tag-growth{ background: rgba(63,185,80,0.15); color: var(--green); }
+  .tag-metals{ background: rgba(188,140,255,0.15); color: var(--purple); }
+  .tag-infl  { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-policy{ background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-val   { background: rgba(63,185,80,0.15); color: var(--green); }
+  .tag-vol   { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-semi  { background: rgba(57,210,192,0.15); color: var(--cyan); }
+  .tag-credit{ background: rgba(188,140,255,0.15); color: var(--purple); }
+  .tag-space { background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-misc  { background: rgba(139,148,158,0.15); color: var(--muted); }
+  .section { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 16px; }
+  .section h2 { color: #fff; font-size: 1.15em; margin-bottom: 12px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+  .section h3 { color: var(--accent); font-size: 0.95em; margin: 14px 0 6px; }
+  .article { margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .article:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .article-title { color: #fff; font-weight: 700; font-size: 0.95em; margin-bottom: 4px; }
+  .article-title-cn { color: var(--muted); font-size: 0.85em; margin-bottom: 8px; }
+  .article p { font-size: 0.9em; margin: 6px 0; }
+  .data-point { background: rgba(255,255,255,0.03); padding: 8px 12px; border-radius: 6px; margin: 8px 0; font-size: 0.85em; }
+  .data-point .num { color: #fff; font-weight: 700; }
+  .implication { background: rgba(88,166,255,0.06); border-left: 3px solid var(--accent); padding: 10px 14px; margin: 10px 0; border-radius: 0 6px 6px 0; font-size: 0.88em; }
+  .implication .label { color: var(--accent); font-weight: 700; font-size: 0.8em; text-transform: uppercase; margin-bottom: 4px; }
+  .callout { background: rgba(210,153,34,0.08); border: 1px solid rgba(210,153,34,0.3); border-radius: 6px; padding: 16px; margin: 16px 0; }
+  .callout-title { color: var(--yellow); font-weight: 700; font-size: 0.95em; margin-bottom: 8px; }
+  .callout ul { padding-left: 18px; }
+  .callout li { margin: 4px 0; font-size: 0.88em; }
+  ul { padding-left: 18px; }
+  li { margin: 3px 0; font-size: 0.88em; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(255,255,255,0.03); padding: 12px; border-radius: 6px; text-align: center; }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: #fff; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
+  .toc { background: rgba(88,166,255,0.05); border: 1px solid rgba(88,166,255,0.2); border-radius: 8px; padding: 16px 20px; margin-bottom: 20px; }
+  .toc-title { color: var(--accent); font-weight: 700; font-size: 0.9em; margin-bottom: 8px; }
+  .toc a { color: var(--accent); text-decoration: none; font-size: 0.88em; }
+  .toc a:hover { text-decoration: underline; }
+  .toc ol { padding-left: 20px; }
+  .toc li { margin: 4px 0; }
+  .nav-links { display: flex; justify-content: space-between; margin: 20px 0; font-size: 0.85em; }
+  .nav-links a { color: var(--accent); text-decoration: none; }
+  .nav-links a:hover { text-decoration: underline; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(255,255,255,0.03); padding: 12px; border-radius: 6px; text-align: center; }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: #fff; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
+  .footer { text-align: center; color: var(--muted); font-size: 0.75em; margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--border); }
+</style>
+<script>if(window.self===window.top&&sessionStorage.getItem("student_auth")!=="1"){document.body.innerHTML="";window.location.replace("student.html");}</script>
+</head>
+<body>
+
+<h1>彭博研究摘要</h1>
+<p class="subtitle">第39期 | 伊朗戰爭、石油自保與通膨拐點</p>
+<span class="issue-badge">2026年四月中旬更新</span>
+
+<div class="nav-links">
+  <span><a href="newsletter_38_inflation.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="toc">
+  <div class="toc-title">目錄</div>
+  <ol>
+    <li><a href="#energy-crunch">能源供應 石油自保潮：亞洲燃料供應鏈告急</a></li>
+    <li><a href="#korea-petchem">石化產業 韓國石化業：產能僅剩三成五運轉</a></li>
+    <li><a href="#inflation-peak">通膨前景 油價衝擊推高通膨，但2027年急劇逆轉</a></li>
+    <li><a href="#takeaways">基金經理人重點摘要</a></li>
+  </ol>
+</div>
+
+<div class="section" id="energy-crunch">
+  <h2><span class="tag tag-misc">能源供應</span> 石油自保潮：亞洲燃料供應鏈告急</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val">$420億</div><div class="lbl">2024年中國燃料出口
+佔全球前20大的6.2%</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">64%</div><div class="lbl">中國成品油出口
+流向亞洲</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">1/3</div><div class="lbl">菲律賓燃料進口
+來自中國</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">石油自保加劇能源困境 — 中國限制燃料出口衝擊亞洲供應鏈</div>
+    <p>川普升級中東局勢的威脅令全球能源供應風險驟升。霍爾木茲海峽實際遭封鎖後，中國已率先行動，限制成品油出口以保障國內需求。中國雖是全球最大原油淨進口國，但憑藉強大煉油能力，2024年燃料出口達 <span style="color:#fff;font-weight:700">$420億</span>，佔全球前20大出口國總量的 <span style="color:#fff;font-weight:700">6.2%</span>。亞洲吸收了中國成品油出口的 <span style="color:#fff;font-weight:700">64%</span>，菲律賓尤為脆弱 — 其2024年從中國進口 <span style="color:#fff;font-weight:700">480萬噸</span> 燃料，佔該國燃料進口總量的 <span style="color:#fff;font-weight:700">三分之一</span>。日本、馬來西亞、澳洲亦面臨顯著依賴風險。若燃料短缺擾亂航運和工業生產，衝擊將沿供應鏈擴散至全球，尤其波及澳洲和印尼的礦產供應，以及韓國和日本的電子產品製造。</p>
+    <div class="data-point">中國2024年燃料出口：<span style="color:#fff;font-weight:700">$420億（佔全球前20的6.2%）</span> &nbsp;|&nbsp; 亞洲佔中國成品油出口：<span style="color:#fff;font-weight:700">64%</span> &nbsp;|&nbsp; 菲律賓對華燃料依賴：<span style="color:#fff;font-weight:700">480萬噸（佔進口1/3）</span></div>
+    <div class="implication"><div class="label">投資啟示</div>亞洲煉油毛利短期受益於供應收緊 — <span style="color:#fff;font-weight:700">做多新加坡裂解價差</span>。高度依賴中國燃料的經濟體（菲律賓、日本）面臨滯脹風險，<span style="color:#fff;font-weight:700">減持菲律賓披索及相關航空股</span>。</div>
+  </div>
+</div>
+
+<div class="section" id="korea-petchem">
+  <h2><span class="tag tag-misc">石化產業</span> 韓國石化業：產能僅剩三成五運轉</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--red)">35%</div><div class="lbl">韓國乙烯產能
+正常運行比例</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">600萬噸</div><div class="lbl">2026年可能
+額外關停產能</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">3,900萬噸</div><div class="lbl">來自中東的
+石腦油供應量</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">韓國石化與伊朗戰爭 — 結構性產能過剩遭遇供應斷裂</div>
+    <p>韓國石化業在伊朗戰爭前已深陷結構性困境：產能過剩疊加對華出口疲軟，2025年政府宣布削減最多 <span style="color:#fff;font-weight:700">370萬噸/年</span> 乙烯產能，佔全國 <span style="color:#fff;font-weight:700">1,300萬噸</span> 總產能的近四分之一。戰爭爆發後局面急劇惡化 — 中東原料和原油進口受阻，國內石腦油供應量從近 <span style="color:#fff;font-weight:700">6,000萬噸/年</span> 驟降至約 <span style="color:#fff;font-weight:700">2,100萬噸/年</span>，僅夠裂解裝置滿負荷運轉所需。目前韓國乙烯產能中僅 <span style="color:#fff;font-weight:700">35%</span> 正常運行。BNEF預計，若供應中斷持續，到6月還將有四套裂解裝置關閉，總產能降至 <span style="color:#fff;font-weight:700">700萬噸/年</span>。樂天化學、LG化學和韓華集團旗下麗水及大山基地資產風險最高。對二甲苯產量尤為脆弱，因其滿足中國聚酯纖維需求，較食品包裝用聚乙烯更難抵禦需求破壞。</p>
+    <div class="data-point">韓國乙烯正常運行產能：<span style="color:#fff;font-weight:700">僅35%</span> &nbsp;|&nbsp; 中東斷供後石腦油缺口：<span style="color:#fff;font-weight:700">從6,000萬噸降至2,100萬噸</span> &nbsp;|&nbsp; 預計額外關停：<span style="color:#fff;font-weight:700">600萬噸/年（到6月再關4套裂解裝置）</span></div>
+    <div class="implication"><div class="label">投資啟示</div>韓國石化股（樂天化學、LG化學、韓華）短期承壓，<span style="color:#fff;font-weight:700">避開韓國化工板塊</span>。供應收縮利好東南亞替代產能，<span style="color:#fff;font-weight:700">關注泰國和台灣石化股的相對價值</span>。聚酯纖維供應緊張或推升下游紡織品價格。</div>
+  </div>
+</div>
+
+<div class="section" id="inflation-peak">
+  <h2><span class="tag tag-infl">通膨前景</span> 油價衝擊推高通膨，但2027年急劇逆轉</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--red)">~4.0%</div><div class="lbl">CPI通膨預計峰值
+2026年5月</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">$130-140</div><div class="lbl">布倫特原油
+預計見頂價位</div></div>
+    <div class="stat"><div class="val" style="color:var(--green)">&lt;2%</div><div class="lbl">2027年4月
+所有通膨指標</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">伊朗衝擊如何推高美國通膨？沃什接棒鮑威爾時或近拐點</div>
+    <p>彭博經濟研究利用行業投入產出表和VAR模型，系統分析了伊朗戰爭油價衝擊向美國通膨的傳導路徑。研究發現，油價飆升不僅直接推高能源價格，更引發航空燃油（戰爭以來漲 <span style="color:#fff;font-weight:700">99%</span>）、塑料（聚丙烯漲 <span style="color:#fff;font-weight:700">61%</span>）、鋼鐵、鋁、天然氣及化肥等關鍵下游商品的二次效應。若布倫特原油在每桶 <span style="color:#fff;font-weight:700">$130-140</span> 見頂（較戰前漲 <span style="color:#fff;font-weight:700">88%</span>），CPI通膨將攀升至約 <span style="color:#fff;font-weight:700">4.0%</span>，核心CPI達 <span style="color:#fff;font-weight:700">3.2%</span>，整體PCE達 <span style="color:#fff;font-weight:700">3.8%</span>。但核心結論出人意料：假設戰爭時間較短、油價於Q2初見頂，所有通膨指標最遲7月前見頂，隨後在 <span style="color:#fff;font-weight:700">2027年初急劇回落至2%以下</span>，其中CPI可能觸及 <span style="color:#fff;font-weight:700">0.7%</span> 低點。PCE調整速度快於CPI，強化了聯儲會「忽略短期衝擊」的政策空間。沃什若按計劃接任鮑威爾，恰好在通膨快速下行階段上任。</p>
+    <div class="data-point">布倫特原油戰後漲幅：<span style="color:#fff;font-weight:700">50%至$109</span>（截至4/2） &nbsp;|&nbsp; 航空燃油漲幅：<span style="color:#fff;font-weight:700">99%</span> &nbsp;|&nbsp; CPI峰值預測：<span style="color:#fff;font-weight:700">~4.0%（5月）</span> &nbsp;|&nbsp; 2027年4月所有指標：<span style="color:#fff;font-weight:700">&lt;2%</span></div>
+    <div class="implication"><div class="label">投資啟示</div>通膨「先升後急降」意味著聯儲會過度鷹派風險極高。<span style="color:#fff;font-weight:700">做多2027年到期的前端利率期貨</span>，押注明年降息路徑。PCE比CPI回落更快，央行有理由按兵不動 — <span style="color:#fff;font-weight:700">短期避免做空美債長端</span>。沃什上任後可能迎來寬鬆窗口，<span style="color:#fff;font-weight:700">關注2027年H1降息交易</span>。</div>
+  </div>
+</div>
+
+<div class="callout" id="takeaways">
+  <div class="callout-title">基金經理人重點摘要</div>
+  <ul>
+    <li><strong>能源供應：</strong>中國限制燃料出口壓縮亞洲供應。菲律賓、日本依賴度最高。做多新加坡裂解價差，減持高依賴經濟體貨幣。</li>
+    <li><strong>韓國石化：</strong>僅35%乙烯產能運行，6月前或再關4套裂解裝置。避開樂天化學、LG化學、韓華等化工股。</li>
+    <li><strong>大宗商品二次效應：</strong>航空燃油漲99%、聚丙烯漲61%，衝擊幅度已超2022年俄烏戰爭初期。關注航空及包裝成本壓力。</li>
+    <li><strong>美國通膨：</strong>CPI料5月見頂於~4.0%，但2027年初急劇回落至<2%。做多前端利率期貨，押注2027年降息。</li>
+    <li><strong>聯儲會政策：</strong>PCE回落速度快於CPI，央行有「忽略短期衝擊」的空間。沃什接任鮑威爾時恰逢通膨下行，2027年H1或開啟寬鬆窗口。</li>
+  </ul>
+</div>
+
+<div class="nav-links">
+  <span><a href="newsletter_38_inflation.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="footer">
+  彭博研究摘要 | 僅供教學與討論用途 | 2026年4月14日<br>
+  資料來源：Bloomberg Intelligence, Bloomberg Economics, Bloomberg News
+</div>
+
+</body>
+</html>

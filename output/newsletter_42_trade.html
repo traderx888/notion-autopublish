@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>彭博研究摘要 #42 — 關稅博弈與霍爾木茲危機：貿易新變局</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --accent: #58a6ff;
+          --green: #3fb950; --red: #f85149; --yellow: #d29922; --text: #c9d1d9; --muted: #8b949e;
+          --orange: #f0883e; --purple: #bc8cff; --cyan: #39d2c0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans TC', 'Microsoft JhengHei', Helvetica, Arial, sans-serif; line-height: 1.7; padding: 20px; max-width: 860px; margin: 0 auto; }
+  h1 { color: #fff; font-size: 1.7em; margin-bottom: 4px; }
+  .subtitle { color: var(--muted); font-size: 0.9em; margin-bottom: 8px; }
+  .issue-badge { display: inline-block; background: rgba(88,166,255,0.15); color: var(--accent); padding: 3px 10px; border-radius: 12px; font-size: 0.8em; font-weight: 600; margin-bottom: 20px; }
+  .tag { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 0.72em; font-weight: 600; margin-right: 4px; }
+  .tag-rates { background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-china { background: rgba(240,136,62,0.15); color: var(--orange); }
+  .tag-japan { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-geo   { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-oil   { background: rgba(210,153,34,0.15); color: var(--yellow); }
+  .tag-trade { background: rgba(210,153,34,0.15); color: var(--yellow); }
+  .tag-growth{ background: rgba(63,185,80,0.15); color: var(--green); }
+  .tag-metals{ background: rgba(188,140,255,0.15); color: var(--purple); }
+  .tag-infl  { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-policy{ background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-val   { background: rgba(63,185,80,0.15); color: var(--green); }
+  .tag-vol   { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-semi  { background: rgba(57,210,192,0.15); color: var(--cyan); }
+  .tag-credit{ background: rgba(188,140,255,0.15); color: var(--purple); }
+  .tag-space { background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-misc  { background: rgba(139,148,158,0.15); color: var(--muted); }
+  .section { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 16px; }
+  .section h2 { color: #fff; font-size: 1.15em; margin-bottom: 12px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+  .section h3 { color: var(--accent); font-size: 0.95em; margin: 14px 0 6px; }
+  .article { margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .article:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .article-title { color: #fff; font-weight: 700; font-size: 0.95em; margin-bottom: 4px; }
+  .article-title-cn { color: var(--muted); font-size: 0.85em; margin-bottom: 8px; }
+  .article p { font-size: 0.9em; margin: 6px 0; }
+  .data-point { background: rgba(255,255,255,0.03); padding: 8px 12px; border-radius: 6px; margin: 8px 0; font-size: 0.85em; }
+  .data-point .num { color: #fff; font-weight: 700; }
+  .implication { background: rgba(88,166,255,0.06); border-left: 3px solid var(--accent); padding: 10px 14px; margin: 10px 0; border-radius: 0 6px 6px 0; font-size: 0.88em; }
+  .implication .label { color: var(--accent); font-weight: 700; font-size: 0.8em; text-transform: uppercase; margin-bottom: 4px; }
+  .callout { background: rgba(210,153,34,0.08); border: 1px solid rgba(210,153,34,0.3); border-radius: 6px; padding: 16px; margin: 16px 0; }
+  .callout-title { color: var(--yellow); font-weight: 700; font-size: 0.95em; margin-bottom: 8px; }
+  .callout ul { padding-left: 18px; }
+  .callout li { margin: 4px 0; font-size: 0.88em; }
+  ul { padding-left: 18px; }
+  li { margin: 3px 0; font-size: 0.88em; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(255,255,255,0.03); padding: 12px; border-radius: 6px; text-align: center; }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: #fff; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
+  .toc { background: rgba(88,166,255,0.05); border: 1px solid rgba(88,166,255,0.2); border-radius: 8px; padding: 16px 20px; margin-bottom: 20px; }
+  .toc-title { color: var(--accent); font-weight: 700; font-size: 0.9em; margin-bottom: 8px; }
+  .toc a { color: var(--accent); text-decoration: none; font-size: 0.88em; }
+  .toc a:hover { text-decoration: underline; }
+  .toc ol { padding-left: 20px; }
+  .toc li { margin: 4px 0; }
+  .nav-links { display: flex; justify-content: space-between; margin: 20px 0; font-size: 0.85em; }
+  .nav-links a { color: var(--accent); text-decoration: none; }
+  .nav-links a:hover { text-decoration: underline; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(255,255,255,0.03); padding: 12px; border-radius: 6px; text-align: center; }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: #fff; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
+  .footer { text-align: center; color: var(--muted); font-size: 0.75em; margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--border); }
+</style>
+<script>if(window.self===window.top&&sessionStorage.getItem("student_auth")!=="1"){document.body.innerHTML="";window.location.replace("student.html");}</script>
+</head>
+<body>
+
+<h1>彭博研究摘要</h1>
+<p class="subtitle">第42期 | 關稅博弈與霍爾木茲危機：貿易新變局</p>
+<span class="issue-badge">2026年四月中旬更新</span>
+
+<div class="nav-links">
+  <span><a href="newsletter_41_semiconductor.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="toc">
+  <div class="toc-title">目錄</div>
+  <ol>
+    <li><a href="#tariff-anniversary">關稅 關稅之春一周年：雷聲大雨點小</a></li>
+    <li><a href="#hormuz-blockade">地緣政治 霍爾木茲海峽：能源之外的隱性風險</a></li>
+    <li><a href="#secondary-tariff">政策風險 二級關稅威脅：有聲無彈</a></li>
+    <li><a href="#takeaways">基金經理人重點摘要</a></li>
+  </ol>
+</div>
+
+<div class="section" id="tariff-anniversary">
+  <h2><span class="tag tag-misc">關稅</span> 關稅之春一周年：雷聲大雨點小</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--green)">13.5%→10%</div><div class="lbl">美國平均有效關稅
+最高法裁決後降至統一稅率</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">-1.7%</div><div class="lbl">2025年4-12月
+美國進口同比變化</div></div>
+    <div class="stat"><div class="val">~13%</div><div class="lbl">進口來源國
+發生轉移的產品佔比</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">川普「關稅之春」一周年 — 來路回顧與前路展望</div>
+    <p>距離川普在白宮玫瑰園揮舞巨幅海報宣布「解放日」關稅已滿一年，市場曾擔憂的經濟重創並未兌現。最初宣布的對等關稅本應將美國平均關稅推升約 <span style="color:#fff;font-weight:700">12個百分點</span>，但經歷推遲實施、中美休兵（維持對華 <span style="color:#fff;font-weight:700">10%</span> 而非 <span style="color:#fff;font-weight:700">34%</span>）、產品豁免（半導體擴至手機與PC）以及最高法院裁定IEEPA關稅違法等一連串調整後，實際影響僅 <span style="color:#fff;font-weight:700">3.7個百分點</span>。全球貿易總量依然堅挺——IMF數據顯示2025年下半年全球商品貿易同比增長 <span style="color:#fff;font-weight:700">7.3%</span>。AI相關進口成為美國貿易的「定海神針」：剔除AI品類後，美國進口同比跌幅達 <span style="color:#fff;font-weight:700">~7%</span>，為近十年之最（排除新冠）。約 <span style="color:#fff;font-weight:700">13%</span> 的美國進口產品更換了來源國，貿易轉移規模前所未見。</p>
+    <div class="data-point">最高法裁決後統一稅率：<span style="color:#fff;font-weight:700">10%</span> &nbsp;|&nbsp; 中美休兵至：<span style="color:#fff;font-weight:700">2026年11月</span> &nbsp;|&nbsp; 剔除AI後進口跌幅：<span style="color:#fff;font-weight:700">~7%</span> &nbsp;|&nbsp; 全球貿易增速：<span style="color:#fff;font-weight:700">7.3%</span></div>
+    <div class="implication"><div class="label">投資啟示</div>關稅實際衝擊遠低於頭條數字。美國政府料將依301條款恢復差異化稅率，但中期選舉前加碼意願有限 — <span style="color:#fff;font-weight:700">東南亞製造業ETF仍為貿易轉移受益者</span>，AI硬件供應鏈韌性持續 — <span style="color:#fff;font-weight:700">維持超配半導體設備股</span>。</div>
+  </div>
+</div>
+
+<div class="section" id="hormuz-blockade">
+  <h2><span class="tag tag-geo">地緣政治</span> 霍爾木茲海峽：能源之外的隱性風險</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val">4.5%</div><div class="lbl">海峽佔全球
+年貿易量比例</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">2.4%</div><div class="lbl">受影響的
+非能源貿易佔比</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">4%–7%</div><div class="lbl">化肥/貴金屬/鋁/水泥
+全球出口面臨風險</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">除了能源，霍爾木茲海峽「梗阻」還影響哪些貿易領域</div>
+    <p>美伊戰爭導致霍爾木茲海峽通航量銳減，彭博研究量化了能源以外的貿易衝擊。全球約 <span style="color:#fff;font-weight:700">2.4%</span> 的非能源貿易經由波斯灣港口，一旦海峽封鎖，化肥（全球出口的 <span style="color:#fff;font-weight:700">~7%</span>）、貴金屬（<span style="color:#fff;font-weight:700">~6%</span>）、鋁（<span style="color:#fff;font-weight:700">5.3%</span>）及水泥（<span style="color:#fff;font-weight:700">4.4%</span>）首當其衝。巴林與阿聯酋逾 <span style="color:#fff;font-weight:700">一半</span> 貿易面臨阻斷；東非國家因依賴波斯灣中轉同樣脆弱。在G20中，印度約 <span style="color:#fff;font-weight:700">7.5%</span> 非能源出口受阻（黃金及鑽石佔三分之一），土耳其 <span style="color:#fff;font-weight:700">6%</span> 出口面臨風險。印度四分之一的水泥進口、五分之一的化肥進口源自波斯灣，澳大利亞和南非的化肥供應亦受威脅。胡塞武裝可能在紅海發動新一輪襲擊，航運擾動風險持續擴散。</p>
+    <div class="data-point">印度非能源出口風險敞口：<span style="color:#fff;font-weight:700">7.5%</span> &nbsp;|&nbsp; 印度水泥進口受影響：<span style="color:#fff;font-weight:700">~25%</span> &nbsp;|&nbsp; 化肥全球出口風險：<span style="color:#fff;font-weight:700">~7%</span> &nbsp;|&nbsp; 巴林/阿聯酋貿易受阻：<span style="color:#fff;font-weight:700">&gt;50%</span></div>
+    <div class="implication"><div class="label">投資啟示</div>衝突持續將推升鋁、化肥現貨溢價。<span style="color:#fff;font-weight:700">做多鋁期貨</span>短期有支撐；印度建材板塊面臨成本壓力 — <span style="color:#fff;font-weight:700">減持印度水泥股</span>。貴金屬運輸中斷疊加避險需求 — <span style="color:#fff;font-weight:700">黃金配置維持超配</span>。</div>
+  </div>
+</div>
+
+<div class="section" id="secondary-tariff">
+  <h2><span class="tag tag-misc">政策風險</span> 二級關稅威脅：有聲無彈</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--red)">50%</div><div class="lbl">川普威脅對
+供武國徵收關稅</div></div>
+    <div class="stat"><div class="val">$3,000億+</div><div class="lbl">2025年美國
+自中國進口額</div></div>
+    <div class="stat"><div class="val" style="color:var(--green)">0</div><div class="lbl">最高法裁決後
+可用的IEEPA關稅權限</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">川普用「二級關稅」威脅對伊供武國家 — 缺乏法律依據</div>
+    <p>美伊停火協議尚不穩固，川普便於4月8日威脅對向伊朗供武的國家徵收 <span style="color:#fff;font-weight:700">50%</span> 關稅。然而最高法院已明確裁定「<span style="color:#fff;font-weight:700">IEEPA並未授權總統徵收關稅</span>」，這使得此威脅失去了最直接的法律基礎。第232條款需經冗長調查程序且僅針對特定商品，第338條款則針對歧視性貿易行為而非國安威脅 — 均無法支持立即單邊行動。威脅指向的顯然是俄羅斯與中國，但俄對美貿易額極小，而中國仍是美國第三大貿易夥伴（2025年進口逾 <span style="color:#fff;font-weight:700">3,000億美元</span>）。川普5月訪京在即，中美休兵脆弱，加之中國手握稀土反制牌，彭博認為川普實際破壞中美關係的可能性 <span style="color:#fff;font-weight:700">很小</span>。</p>
+    <div class="data-point">威脅稅率：<span style="color:#fff;font-weight:700">50%</span> &nbsp;|&nbsp; IEEPA關稅授權：<span style="color:#fff;font-weight:700">已被最高法否決</span> &nbsp;|&nbsp; 川普訪京時間：<span style="color:#fff;font-weight:700">2026年5月</span> &nbsp;|&nbsp; 中國反制工具：<span style="color:#fff;font-weight:700">稀土出口限制</span></div>
+    <div class="implication"><div class="label">投資啟示</div>二級關稅短期難以落地，市場不應過度定價。但言論本身加劇不確定性 — <span style="color:#fff;font-weight:700">中概股波動率或上升</span>，可考慮<span style="color:#fff;font-weight:700">買入中概ETF看跌期權對沖尾部風險</span>。中美休兵延續是基線情景。</div>
+  </div>
+</div>
+
+<div class="callout" id="takeaways">
+  <div class="callout-title">基金經理人重點摘要</div>
+  <ul>
+    <li><strong>關稅回顧：</strong>一年後美國有效關稅僅10%統一稅率，遠低於「解放日」頭條數字。AI進口支撐貿易韌性，剔除後進口跌~7%。貿易轉移持續利好東南亞。</li>
+    <li><strong>霍爾木茲非能源風險：</strong>全球2.4%非能源貿易受阻，化肥/鋁/貴金屬供應鏈承壓。**做多鋁期貨**，**維持黃金超配**。</li>
+    <li><strong>印度敞口：</strong>7.5%非能源出口、25%水泥進口面臨風險。**減持印度建材板塊**。</li>
+    <li><strong>二級關稅：</strong>最高法堵死IEEPA路徑，50%威脅缺乏法律基礎，短期難以兌現。中美休兵為基線。</li>
+    <li><strong>中國定位：</strong>川普5月訪京，稀土反制牌限制美方施壓空間。中概波動率或升 — **期權對沖尾部風險**。</li>
+  </ul>
+</div>
+
+<div class="nav-links">
+  <span><a href="newsletter_41_semiconductor.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="footer">
+  彭博研究摘要 | 僅供教學與討論用途 | 2026年4月14日<br>
+  資料來源：Bloomberg Intelligence, Bloomberg Economics, Bloomberg News
+</div>
+
+</body>
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>彭博研究摘要 #37 — 中國經濟：供強需弱的失衡與戰爭陰影</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --accent: #58a6ff;
+          --green: #3fb950; --red: #f85149; --yellow: #d29922; --text: #c9d1d9; --muted: #8b949e;
+          --orange: #f0883e; --purple: #bc8cff; --cyan: #39d2c0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans TC', 'Microsoft JhengHei', Helvetica, Arial, sans-serif; line-height: 1.7; padding: 20px; max-width: 860px; margin: 0 auto; }
+  h1 { color: #fff; font-size: 1.7em; margin-bottom: 4px; }
+  .subtitle { color: var(--muted); font-size: 0.9em; margin-bottom: 8px; }
+  .issue-badge { display: inline-block; background: rgba(88,166,255,0.15); color: var(--accent); padding: 3px 10px; border-radius: 12px; font-size: 0.8em; font-weight: 600; margin-bottom: 20px; }
+  .tag { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 0.72em; font-weight: 600; margin-right: 4px; }
+  .tag-rates { background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-china { background: rgba(240,136,62,0.15); color: var(--orange); }
+  .tag-japan { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-geo   { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-oil   { background: rgba(210,153,34,0.15); color: var(--yellow); }
+  .tag-trade { background: rgba(210,153,34,0.15); color: var(--yellow); }
+  .tag-growth{ background: rgba(63,185,80,0.15); color: var(--green); }
+  .tag-metals{ background: rgba(188,140,255,0.15); color: var(--purple); }
+  .tag-infl  { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-policy{ background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-val   { background: rgba(63,185,80,0.15); color: var(--green); }
+  .tag-vol   { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-semi  { background: rgba(57,210,192,0.15); color: var(--cyan); }
+  .tag-credit{ background: rgba(188,140,255,0.15); color: var(--purple); }
+  .tag-space { background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-misc  { background: rgba(139,148,158,0.15); color: var(--muted); }
+  .section { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 16px; }
+  .section h2 { color: #fff; font-size: 1.15em; margin-bottom: 12px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+  .section h3 { color: var(--accent); font-size: 0.95em; margin: 14px 0 6px; }
+  .article { margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .article:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .article-title { color: #fff; font-weight: 700; font-size: 0.95em; margin-bottom: 4px; }
+  .article-title-cn { color: var(--muted); font-size: 0.85em; margin-bottom: 8px; }
+  .article p { font-size: 0.9em; margin: 6px 0; }
+  .data-point { background: rgba(255,255,255,0.03); padding: 8px 12px; border-radius: 6px; margin: 8px 0; font-size: 0.85em; }
+  .data-point .num { color: #fff; font-weight: 700; }
+  .implication { background: rgba(88,166,255,0.06); border-left: 3px solid var(--accent); padding: 10px 14px; margin: 10px 0; border-radius: 0 6px 6px 0; font-size: 0.88em; }
+  .implication .label { color: var(--accent); font-weight: 700; font-size: 0.8em; text-transform: uppercase; margin-bottom: 4px; }
+  .callout { background: rgba(210,153,34,0.08); border: 1px solid rgba(210,153,34,0.3); border-radius: 6px; padding: 16px; margin: 16px 0; }
+  .callout-title { color: var(--yellow); font-weight: 700; font-size: 0.95em; margin-bottom: 8px; }
+  .callout ul { padding-left: 18px; }
+  .callout li { margin: 4px 0; font-size: 0.88em; }
+  ul { padding-left: 18px; }
+  li { margin: 3px 0; font-size: 0.88em; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(255,255,255,0.03); padding: 12px; border-radius: 6px; text-align: center; }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: #fff; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
+  .toc { background: rgba(88,166,255,0.05); border: 1px solid rgba(88,166,255,0.2); border-radius: 8px; padding: 16px 20px; margin-bottom: 20px; }
+  .toc-title { color: var(--accent); font-weight: 700; font-size: 0.9em; margin-bottom: 8px; }
+  .toc a { color: var(--accent); text-decoration: none; font-size: 0.88em; }
+  .toc a:hover { text-decoration: underline; }
+  .toc ol { padding-left: 20px; }
+  .toc li { margin: 4px 0; }
+  .nav-links { display: flex; justify-content: space-between; margin: 20px 0; font-size: 0.85em; }
+  .nav-links a { color: var(--accent); text-decoration: none; }
+  .nav-links a:hover { text-decoration: underline; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(255,255,255,0.03); padding: 12px; border-radius: 6px; text-align: center; }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: #fff; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
+  .footer { text-align: center; color: var(--muted); font-size: 0.75em; margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--border); }
+</style>
+<script>if(window.self===window.top&&sessionStorage.getItem("student_auth")!=="1"){document.body.innerHTML="";window.location.replace("student.html");}</script>
+</head>
+<body>
+
+<h1>彭博研究摘要</h1>
+<p class="subtitle">第37期 | 中國經濟：供強需弱的失衡與戰爭陰影</p>
+<span class="issue-badge">2026年四月中旬更新</span>
+
+<div class="nav-links">
+  <span><a href="newsletter_36_geopolitics.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="toc">
+  <div class="toc-title">目錄</div>
+  <ol>
+    <li><a href="#gdp-growth">經濟增長 一季度破五，但結構失衡加劇</a></li>
+    <li><a href="#credit-housing">信貸與房市 信貸失速，房貸沉水暗湧</a></li>
+    <li><a href="#trade-war">貿易與地緣 出口驟降藏假象，真正衝擊在路上</a></li>
+    <li><a href="#ai-tech">科技與AI 蒸餾封鎖難阻中國AI追趕</a></li>
+    <li><a href="#takeaways">基金經理人重點摘要</a></li>
+  </ol>
+</div>
+
+<div class="section" id="gdp-growth">
+  <h2><span class="tag tag-misc">經濟增長</span> 一季度破五，但結構失衡加劇</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--green)">5.1%</div><div class="lbl">Q1 GDP預估
+（彭博經濟研究）</div></div>
+    <div class="stat"><div class="val" style="color:var(--green)">6.3%</div><div class="lbl">1-2月工業增加值
+同比增速</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">2.5%</div><div class="lbl">3月零售銷售預估
+（前值2.8%）</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">中國一季度GDP增速或超5% — 供強需弱格局突出</div>
+    <p>彭博經濟研究預計中國第一季度GDP同比增長<span style="color:#fff;font-weight:700">5.1%</span>，高於去年四季度的<span style="color:#fff;font-weight:700">4.5%</span>。增長主要由供給端驅動：1-2月工業增加值同比大增<span style="color:#fff;font-weight:700">6.3%</span>，3月製造業PMI重回擴張區間。然而需求端明顯疲軟，社會消費品零售總額增速預計從前兩月的<span style="color:#fff;font-weight:700">2.8%</span>放緩至<span style="color:#fff;font-weight:700">2.5%</span>，固定資產投資增速僅<span style="color:#fff;font-weight:700">1.9%</span>，遠低於GDP目標。建築業連續三個月處於收縮區間（3月PMI僅<span style="color:#fff;font-weight:700">49.3</span>），螺紋鋼庫存高於同期水平顯示住宅建設持續低迷。經濟對出口的依賴進一步加深，結構性失衡在數據中愈發凸顯。</p>
+    <div class="data-point">Q1 GDP預估：<span style="color:#fff;font-weight:700">5.1%</span>（vs Q4 4.5%） &nbsp;|&nbsp; 3月工業增加值預估：<span style="color:#fff;font-weight:700">5.9%</span> &nbsp;|&nbsp; 建築業PMI：<span style="color:#fff;font-weight:700">49.3</span>（仍收縮） &nbsp;|&nbsp; 固投增速：<span style="color:#fff;font-weight:700">1.9%</span></div>
+    <div class="implication"><div class="label">投資啟示</div>GDP數字亮眼但質量堪憂。消費和投資雙弱意味著<span style="color:#fff;font-weight:700">政策加碼空間仍大</span>。關注4月16日數據發布後的市場反應。</div>
+  </div>
+</div>
+
+<div class="section" id="credit-housing">
+  <h2><span class="tag tag-misc">信貸與房市</span> 信貸失速，房貸沉水暗湧</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--red)">7.9%</div><div class="lbl">3月社融存量增速
+（跌破8%）</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">5.8%</div><div class="lbl">人民幣貸款餘額增速
+（歷史新低）</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">232億</div><div class="lbl">潛在負資產損失
+（瑞銀估計，億元人民幣）</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">中國信貸增速不及預期 — 戰爭衝擊前政策支持有限</div>
+    <p>3月社會融資規模存量同比增速降至<span style="color:#fff;font-weight:700">7.9%</span>，為2024年11月以來首次跌破<span style="color:#fff;font-weight:700">8%</span>。一季度社融增量累計<span style="color:#fff;font-weight:700">14.8萬億元</span>，低於市場預期的<span style="color:#fff;font-weight:700">15.1萬億元</span>。放緩主要源於貸款和政府債券融資減速：人民幣貸款餘額增速降至<span style="color:#fff;font-weight:700">5.8%</span>的歷史新低，政府債券餘額增速從<span style="color:#fff;font-weight:700">16.6%</span>降至<span style="color:#fff;font-weight:700">15.9%</span>。企業債券增速雖連續第七個月加快至<span style="color:#fff;font-weight:700">7.9%</span>，但佔比太小難以扭轉大局。鑒於2026年GDP增速目標有所放寬，加上伊朗戰爭帶來的外部衝擊，決策層可能正在為下半年加大刺激力度預留空間。貸款需求的持續疲軟也表明，<span style="color:#fff;font-weight:700">財政政策而非貨幣政策</span>可能需要在提振增長方面發揮更大作用。</p>
+    <div class="data-point">Q1社融增量：<span style="color:#fff;font-weight:700">14.8萬億</span>（vs預期15.1萬億） &nbsp;|&nbsp; 社融存量增速：<span style="color:#fff;font-weight:700">7.9%</span>（前值8.2%） &nbsp;|&nbsp; 貸款增速：<span style="color:#fff;font-weight:700">5.8%</span>（新低） &nbsp;|&nbsp; 企業債增速：<span style="color:#fff;font-weight:700">7.9%</span>（連升7月）</div>
+    <div class="implication"><div class="label">投資啟示</div>信貸數據確認貨幣傳導不暢。<span style="color:#fff;font-weight:700">財政發力是關鍵看點</span>，關注特別國債發行節奏。長端利率下行空間仍在。</div>
+  </div>
+  <div class="article">
+    <div class="article-title">中國銀行出奇招應對負資產房貸潮</div>
+    <p>中國房市低迷已進入第五年，北京、上海等主要城市房價從峰值下跌超過<span style="color:#fff;font-weight:700">三分之一</span>，數百萬業主面臨「負資產」困境。瑞銀估計到2027年可能有<span style="color:#fff;font-weight:700">330萬套住房</span>陷入負資產，潛在損失高達<span style="color:#fff;font-weight:700">2,320億元人民幣</span>（337億美元）。為避免大規模止贖危機，國有銀行正「創造性」應對：向資金緊張的借款人提供最長<span style="color:#fff;font-weight:700">兩年的還款假期</span>，部分銀行主動為客戶尋找買家而非直接止贖。各地法院也在配合——放慢受理違約房貸訴訟的速度，甚至限制銀行可提交的訴訟數量。儘管大型銀行的官方不良房貸率一直維持在約<span style="color:#fff;font-weight:700">1%</span>，但這些非常規措施暗示真實壞帳規模可能遠超數據所示。</p>
+    <div class="data-point">主要城市房價跌幅：<span style="color:#fff;font-weight:700">&gt;33%</span>（從峰值） &nbsp;|&nbsp; 潛在負資產住房：<span style="color:#fff;font-weight:700">330萬套</span>（瑞銀2027年估計） &nbsp;|&nbsp; 還款假期：<span style="color:#fff;font-weight:700">最長2年</span> &nbsp;|&nbsp; 官方不良率：<span style="color:#fff;font-weight:700">~1%</span>（存疑）</div>
+    <div class="implication"><div class="label">投資啟示</div>銀行以時間換空間，短期避免系統性風險，但<span style="color:#fff;font-weight:700">隱性壞帳規模被低估</span>。內銀股估值需打折看待。避免增持中資銀行H股。</div>
+  </div>
+</div>
+
+<div class="section" id="trade-war">
+  <h2><span class="tag tag-misc">貿易與地緣</span> 出口驟降藏假象，真正衝擊在路上</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--red)">2.5%</div><div class="lbl">3月出口同比增速
+（前值21.8%）</div></div>
+    <div class="stat"><div class="val" style="color:var(--green)">14.7%</div><div class="lbl">Q1出口增速
+（2025年僅5.5%）</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">$110</div><div class="lbl">Q2油價基準預測
+（美元/桶）</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">中國出口大幅放緩源於長假擾動 — 戰爭衝擊尚待顯現</div>
+    <p>3月出口同比僅增<span style="color:#fff;font-weight:700">2.5%</span>，從1-2月的<span style="color:#fff;font-weight:700">21.8%</span>急劇回落，遠低於市場預期的<span style="color:#fff;font-weight:700">8.6%</span>。但這一放緩更多反映春節長假帶來的基數擾動，而非伊朗戰爭的直接衝擊。整個一季度出口仍增長<span style="color:#fff;font-weight:700">14.7%</span>，遠高於2025年的<span style="color:#fff;font-weight:700">5.5%</span>。真正的考驗在前方：彭博宏觀模型模擬顯示，若Q2油價均值在<span style="color:#fff;font-weight:700">110美元</span>左右，2026年GDP增速將被拖累約<span style="color:#fff;font-weight:700">0.2個百分點</span>；若衝突長期持續，拖累可能擴大至<span style="color:#fff;font-weight:700">0.6個百分點</span>。進口意外強勁，3月增長<span style="color:#fff;font-weight:700">27.8%</span>，大幅高於預期的<span style="color:#fff;font-weight:700">13.9%</span>。亮點在於電動汽車（Q1出口激增近<span style="color:#fff;font-weight:700">60%</span>）和高技術產品（佔比超<span style="color:#fff;font-weight:700">25%</span>，3月增速<span style="color:#fff;font-weight:700">31%</span>），全球AI投資熱潮可能部分對沖戰爭衝擊。</p>
+    <div class="data-point">Q1出口增速：<span style="color:#fff;font-weight:700">14.7%</span> &nbsp;|&nbsp; 3月進口增速：<span style="color:#fff;font-weight:700">27.8%</span>（大超預期） &nbsp;|&nbsp; EV出口Q1增速：<span style="color:#fff;font-weight:700">~60%</span> &nbsp;|&nbsp; 高技術產品出口佔比：<span style="color:#fff;font-weight:700">&gt;25%</span></div>
+    <div class="implication"><div class="label">投資啟示</div>出口「懸崖」是假象，但<span style="color:#fff;font-weight:700">Q2才是真正壓力測試</span>。油價飆升+全球需求放緩雙重打擊。<span style="color:#fff;font-weight:700">做多中國EV產業鏈</span>仍是結構性機會。</div>
+  </div>
+</div>
+
+<div class="section" id="ai-tech">
+  <h2><span class="tag tag-misc">科技與AI</span> 蒸餾封鎖難阻中國AI追趕</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val">74%</div><div class="lbl">美國佔全球
+高端AI算力</div></div>
+    <div class="stat"><div class="val">14%</div><div class="lbl">中國佔全球
+高端AI算力</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">3-6個月</div><div class="lbl">中國AI落後
+美國前沿模型</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">中國AI的發展不是只靠複製美國模型</div>
+    <p>美國AI公司通過「前沿模型論壇」聯手防範中國競爭對手的「蒸餾」攻擊——Anthropic揭露DeepSeek、月之暗面和MiniMax操作的<span style="color:#fff;font-weight:700">24,000個詐欺帳戶</span>與Claude進行了超過<span style="color:#fff;font-weight:700">1,600萬次互動</span>。但蒸餾只是中國模型進步的因素之一。儘管美國掌控全球約<span style="color:#fff;font-weight:700">74%</span>的高端AI算力，中國僅佔<span style="color:#fff;font-weight:700">14%</span>，但算法效率每年提升約<span style="color:#fff;font-weight:700">三倍</span>，大幅壓縮追趕時間。加州大學團隊僅用<span style="color:#fff;font-weight:700">19小時、不到450美元</span>就通過微調開源模型達到了OpenAI o1-preview水平；斯坦福團隊更在<span style="color:#fff;font-weight:700">26分鐘內以不到50美元</span>取得類似成果。更重要的是，DeepSeek在效率和推理領域產出了<span style="color:#fff;font-weight:700">原創性成果</span>，其推理訓練算法正成為開放模型生態的標準。前沿AI實驗室面臨結構性兩難：商業上需廣泛開放模型存取，戰略上卻需阻止競爭對手獲得同等能力——而技術本身的特性使兩者兼顧異常困難。</p>
+    <div class="data-point">蒸餾攻擊：<span style="color:#fff;font-weight:700">1,600萬次互動</span>（Anthropic遭遇） &nbsp;|&nbsp; 複製成本：<span style="color:#fff;font-weight:700">&lt;$450/19小時</span>（達o1-preview水平） &nbsp;|&nbsp; 算法效率年增：<span style="color:#fff;font-weight:700">~3倍</span> &nbsp;|&nbsp; 自適應攻擊繞過防禦：<span style="color:#fff;font-weight:700">&gt;90%</span></div>
+    <div class="implication"><div class="label">投資啟示</div>中國AI追趕勢頭不可逆。<span style="color:#fff;font-weight:700">出口管制效果遞減</span>，算法創新部分抵消硬件劣勢。長期看好中國AI應用層，但需關注地緣政策風險。</div>
+  </div>
+</div>
+
+<div class="callout" id="takeaways">
+  <div class="callout-title">基金經理人重點摘要</div>
+  <ul>
+    <li><strong>GDP：</strong>Q1增速料破5%，但供強需弱格局加劇。消費和投資雙弱意味著政策加碼空間大，關注4月16日數據。</li>
+    <li><strong>信貸：</strong>社融增速跌破8%，貸款增速創新低。貨幣傳導不暢，財政發力是關鍵——**關注特別國債發行節奏**。</li>
+    <li><strong>房市：</strong>銀行以還款假期和限制止贖「以時間換空間」，但隱性壞帳規模被低估。**內銀股估值需打折**，避免增持。</li>
+    <li><strong>貿易：</strong>3月出口驟降是假象，Q1仍增14.7%。真正壓力測試在Q2——油價$110基準下GDP拖累0.2ppt。**做多EV產業鏈**。</li>
+    <li><strong>AI：</strong>蒸餾封鎖難阻中國AI追趕，算法效率年增3倍部分抵消算力劣勢。DeepSeek產出原創成果，**長期看好中國AI應用層**。</li>
+  </ul>
+</div>
+
+<div class="nav-links">
+  <span><a href="newsletter_36_geopolitics.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="footer">
+  彭博研究摘要 | 僅供教學與討論用途 | 2026年4月14日<br>
+  資料來源：Bloomberg Intelligence, Bloomberg Economics, Bloomberg News
+</div>
+
+</body>
+</html>

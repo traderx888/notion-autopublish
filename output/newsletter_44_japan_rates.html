@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>彭博研究摘要 #44 — 日銀鷹派轉向與油價風暴</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --accent: #58a6ff;
+          --green: #3fb950; --red: #f85149; --yellow: #d29922; --text: #c9d1d9; --muted: #8b949e;
+          --orange: #f0883e; --purple: #bc8cff; --cyan: #39d2c0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans TC', 'Microsoft JhengHei', Helvetica, Arial, sans-serif; line-height: 1.7; padding: 20px; max-width: 860px; margin: 0 auto; }
+  h1 { color: #fff; font-size: 1.7em; margin-bottom: 4px; }
+  .subtitle { color: var(--muted); font-size: 0.9em; margin-bottom: 8px; }
+  .issue-badge { display: inline-block; background: rgba(88,166,255,0.15); color: var(--accent); padding: 3px 10px; border-radius: 12px; font-size: 0.8em; font-weight: 600; margin-bottom: 20px; }
+  .tag { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 0.72em; font-weight: 600; margin-right: 4px; }
+  .tag-rates { background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-china { background: rgba(240,136,62,0.15); color: var(--orange); }
+  .tag-japan { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-geo   { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-oil   { background: rgba(210,153,34,0.15); color: var(--yellow); }
+  .tag-trade { background: rgba(210,153,34,0.15); color: var(--yellow); }
+  .tag-growth{ background: rgba(63,185,80,0.15); color: var(--green); }
+  .tag-metals{ background: rgba(188,140,255,0.15); color: var(--purple); }
+  .tag-infl  { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-policy{ background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-val   { background: rgba(63,185,80,0.15); color: var(--green); }
+  .tag-vol   { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-semi  { background: rgba(57,210,192,0.15); color: var(--cyan); }
+  .tag-credit{ background: rgba(188,140,255,0.15); color: var(--purple); }
+  .tag-space { background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-misc  { background: rgba(139,148,158,0.15); color: var(--muted); }
+  .section { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 16px; }
+  .section h2 { color: #fff; font-size: 1.15em; margin-bottom: 12px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+  .section h3 { color: var(--accent); font-size: 0.95em; margin: 14px 0 6px; }
+  .article { margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .article:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .article-title { color: #fff; font-weight: 700; font-size: 0.95em; margin-bottom: 4px; }
+  .article-title-cn { color: var(--muted); font-size: 0.85em; margin-bottom: 8px; }
+  .article p { font-size: 0.9em; margin: 6px 0; }
+  .data-point { background: rgba(255,255,255,0.03); padding: 8px 12px; border-radius: 6px; margin: 8px 0; font-size: 0.85em; }
+  .data-point .num { color: #fff; font-weight: 700; }
+  .implication { background: rgba(88,166,255,0.06); border-left: 3px solid var(--accent); padding: 10px 14px; margin: 10px 0; border-radius: 0 6px 6px 0; font-size: 0.88em; }
+  .implication .label { color: var(--accent); font-weight: 700; font-size: 0.8em; text-transform: uppercase; margin-bottom: 4px; }
+  .callout { background: rgba(210,153,34,0.08); border: 1px solid rgba(210,153,34,0.3); border-radius: 6px; padding: 16px; margin: 16px 0; }
+  .callout-title { color: var(--yellow); font-weight: 700; font-size: 0.95em; margin-bottom: 8px; }
+  .callout ul { padding-left: 18px; }
+  .callout li { margin: 4px 0; font-size: 0.88em; }
+  ul { padding-left: 18px; }
+  li { margin: 3px 0; font-size: 0.88em; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(255,255,255,0.03); padding: 12px; border-radius: 6px; text-align: center; }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: #fff; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
+  .toc { background: rgba(88,166,255,0.05); border: 1px solid rgba(88,166,255,0.2); border-radius: 8px; padding: 16px 20px; margin-bottom: 20px; }
+  .toc-title { color: var(--accent); font-weight: 700; font-size: 0.9em; margin-bottom: 8px; }
+  .toc a { color: var(--accent); text-decoration: none; font-size: 0.88em; }
+  .toc a:hover { text-decoration: underline; }
+  .toc ol { padding-left: 20px; }
+  .toc li { margin: 4px 0; }
+  .nav-links { display: flex; justify-content: space-between; margin: 20px 0; font-size: 0.85em; }
+  .nav-links a { color: var(--accent); text-decoration: none; }
+  .nav-links a:hover { text-decoration: underline; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(255,255,255,0.03); padding: 12px; border-radius: 6px; text-align: center; }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: #fff; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
+  .footer { text-align: center; color: var(--muted); font-size: 0.75em; margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--border); }
+</style>
+<script>if(window.self===window.top&&sessionStorage.getItem("student_auth")!=="1"){document.body.innerHTML="";window.location.replace("student.html");}</script>
+</head>
+<body>
+
+<h1>彭博研究摘要</h1>
+<p class="subtitle">第44期 | 日銀鷹派轉向與油價風暴</p>
+<span class="issue-badge">2026年四月中旬更新</span>
+
+<div class="nav-links">
+  <span><a href="newsletter_43_volatility.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="toc">
+  <div class="toc-title">目錄</div>
+  <ol>
+    <li><a href="#boj-policy-board">日銀 鴿派換血，鷹派盯通膨</a></li>
+    <li><a href="#oil-shock-exporters">能源衝擊 油價衝擊出口商，但擋得住</a></li>
+    <li><a href="#tokyo-cpi">通膨 CPI短暫回落，暴風雨前的寧靜</a></li>
+    <li><a href="#takeaways">基金經理人重點摘要</a></li>
+  </ol>
+</div>
+
+<div class="section" id="boj-policy-board">
+  <h2><span class="tag tag-misc">日銀</span> 鴿派換血，鷹派盯通膨</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val">0.75%</div><div class="lbl">現行政策利率
+（2025年10月加息後）</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">2次×25bp</div><div class="lbl">2026年預期加息
+（4月+9月）</div></div>
+    <div class="stat"><div class="val">4月1日</div><div class="lbl">淺田統一郎
+接任委員</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">日銀政策委員會 —— 鴿派換新，鷹派對通膨關注加大</div>
+    <p>日本央行政策委員會出現微妙但重要的權力板塊位移。淺田統一郎於4月1日接替鴿派成員野口旭，市場將其定位為「再通膨派」，但就職記者會上他流露出明顯鴿派傾向——將油價推動的通膨定性為「成本推動型」，並暗示央行實際上同時以物價和就業為目標。更值得關注的是委員會中兩位最鷹派成員的立場轉變：<span style="color:#fff;font-weight:700">高田創</span>在2025年10月、2026年1月和3月連續三次會議上投下不同意見票，主張加息；<span style="color:#fff;font-weight:700">田村直樹</span>的分析重心也從QQE副作用轉向物價分析。整體而言，委員會中樞正朝著更關注通膨的方向偏移。</p>
+    <div class="data-point">新任委員：<span style="color:#fff;font-weight:700">淺田統一郎</span>（再通膨派/鴿派） &nbsp;|&nbsp; 高田創異議票：<span style="color:#fff;font-weight:700">3次</span>（10月、1月、3月） &nbsp;|&nbsp; 基準預測：<span style="color:#fff;font-weight:700">4月+9月各加息25bp</span></div>
+    <div class="implication"><div class="label">投資啟示</div>委員會鷹派傾向增強，4月加息幾成定局。<span style="color:#fff;font-weight:700">做空JGB期貨前端</span>，關注高田創是否再投不同意見票作為加息節奏風向球。</div>
+  </div>
+</div>
+
+<div class="section" id="oil-shock-exporters">
+  <h2><span class="tag tag-misc">能源衝擊</span> 油價衝擊出口商，但擋得住</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--orange)">4.7%</div><div class="lbl">出口部門
+進口能源佔比</div></div>
+    <div class="stat"><div class="val">159.2</div><div class="lbl">美元/日圓
+（撰稿時）</div></div>
+    <div class="stat"><div class="val" style="color:var(--green)">20%</div><div class="lbl">匯率安全墊
+（vs損益平衡132.2）</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">油價衝擊對日本出口商打擊最大，但他們承受得住</div>
+    <p>伊朗戰爭引發的供給側能源衝擊正衝擊日本經濟，而出口部門首當其衝——投入產出表顯示，出口部門的進口能源佔比高達<span style="color:#fff;font-weight:700">4.7%</span>，遠超國內消費（<span style="color:#fff;font-weight:700">2.6%</span>）和資本支出（<span style="color:#fff;font-weight:700">1.9%</span>）。但好消息是，安倍經濟學以來日圓持續偏弱，出口企業已累積了豐厚的留存收益和利潤率緩衝。第一季短觀調查中企業假設美元/日圓為<span style="color:#fff;font-weight:700">148.88</span>，而實際匯率<span style="color:#fff;font-weight:700">159.2</span>意味著日圓額外貶值<span style="color:#fff;font-weight:700">7%</span>；相對於出口商損益平衡匯率<span style="color:#fff;font-weight:700">132.2</span>，安全墊更達<span style="color:#fff;font-weight:700">20%</span>。國內需求方面，能源密集度持續下降，無形資產投資（R&amp;D及軟件）佔比上升進一步降低了能源依賴。</p>
+    <div class="data-point">出口能源佔比：<span style="color:#fff;font-weight:700">4.7%</span> vs 全經濟<span style="color:#fff;font-weight:700">2.5%</span> &nbsp;|&nbsp; 短觀匯率假設：<span style="color:#fff;font-weight:700">148.88</span> &nbsp;|&nbsp; 損益平衡匯率：<span style="color:#fff;font-weight:700">132.2</span>（安全墊20%） &nbsp;|&nbsp; 國內消費能源佔比：<span style="color:#fff;font-weight:700">2.6%</span></div>
+    <div class="implication"><div class="label">投資啟示</div>出口商利潤緩衝充足，油價衝擊不會迫使日銀推遲加息。<span style="color:#fff;font-weight:700">維持日圓結構性偏弱觀點</span>，出口商股票短期回調可逢低布局。</div>
+  </div>
+</div>
+
+<div class="section" id="tokyo-cpi">
+  <h2><span class="tag tag-infl">通膨</span> CPI短暫回落，暴風雨前的寧靜</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--green)">1.4%</div><div class="lbl">3月東京整體CPI
+（同比）</div></div>
+    <div class="stat"><div class="val">1.7%</div><div class="lbl">核心CPI
+（剔除生鮮食品）</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">2.3%</div><div class="lbl">核心核心CPI
+（剔除食品+能源）</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">東京CPI通膨走軟 —— 石油風暴前的平靜</div>
+    <p>3月東京CPI數據全面低於市場預期：整體CPI同比從2月的<span style="color:#fff;font-weight:700">1.5%</span>降至<span style="color:#fff;font-weight:700">1.4%</span>（預期<span style="color:#fff;font-weight:700">1.6%</span>），核心CPI從<span style="color:#fff;font-weight:700">1.8%</span>降至<span style="color:#fff;font-weight:700">1.7%</span>（預期<span style="color:#fff;font-weight:700">1.8%</span>），剔除食品和能源的核心核心CPI從<span style="color:#fff;font-weight:700">2.5%</span>回落至<span style="color:#fff;font-weight:700">2.3%</span>。回落主要源於基數效應，但這只是油價上漲推高消費價格前的短暫平靜。日銀的判斷是年初通膨會短暫放緩，數據正印證這一觀點。關鍵在於，央行致力於防範油價引發的通膨推升中長期通膨預期，而加息正是展現價格穩定承諾的手段——尤其在鮮有跡象表明先前加息已拖累經濟增長的背景下。東京CPI是4月24日全國CPI的風向球。</p>
+    <div class="data-point">整體CPI：<span style="color:#fff;font-weight:700">1.4%</span>（預期1.6%） &nbsp;|&nbsp; 核心CPI：<span style="color:#fff;font-weight:700">1.7%</span>（預期1.8%） &nbsp;|&nbsp; 核心核心CPI：<span style="color:#fff;font-weight:700">2.3%</span>（符合預期） &nbsp;|&nbsp; 全國CPI公佈：<span style="color:#fff;font-weight:700">4月24日</span></div>
+    <div class="implication"><div class="label">投資啟示</div>CPI暫時回落不改日銀加息路徑，反而為4月加息提供「低基數起跳」的窗口。<span style="color:#fff;font-weight:700">關注4月24日全國CPI確認趨勢</span>，油價傳導效應將在Q2顯現。</div>
+  </div>
+</div>
+
+<div class="callout" id="takeaways">
+  <div class="callout-title">基金經理人重點摘要</div>
+  <ul>
+    <li><strong>日銀加息：</strong>4月加息25bp至1.00%幾成定局，9月再加一次。委員會鷹派傾向增強，高田創連續三次投不同意見票。**做空JGB前端期貨**。</li>
+    <li><strong>油價傳導：</strong>伊朗戰爭推升能源成本，但日本出口商利潤率和留存收益充足，損益平衡匯率132.2 vs 實際159.2，安全墊20%。衝擊可控。</li>
+    <li><strong>通膨節奏：</strong>3月東京CPI因基數效應回落至1.4%，但Q2油價傳導將推升通膨。**4月24日全國CPI為關鍵確認點**。</li>
+    <li><strong>日圓：</strong>結構性偏弱格局未變，短觀匯率假設148.88遠低於現匯159.2。主要央行同步轉鷹下，日圓大幅升值概率低。**減持日圓套利的緊迫性不高**。</li>
+    <li><strong>日股出口板塊：</strong>能源衝擊下出口股短期承壓，但強勁資產負債表提供緩衝。**回調時可選擇性增持高利潤率出口龍頭**。</li>
+  </ul>
+</div>
+
+<div class="nav-links">
+  <span><a href="newsletter_43_volatility.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="footer">
+  彭博研究摘要 | 僅供教學與討論用途 | 2026年4月14日<br>
+  資料來源：Bloomberg Intelligence, Bloomberg Economics, Bloomberg News
+</div>
+
+</body>
+</html>

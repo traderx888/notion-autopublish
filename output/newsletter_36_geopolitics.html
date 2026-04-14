@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>彭博研究摘要 #36 — 伊朗封鎖升級與地緣新變局</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --accent: #58a6ff;
+          --green: #3fb950; --red: #f85149; --yellow: #d29922; --text: #c9d1d9; --muted: #8b949e;
+          --orange: #f0883e; --purple: #bc8cff; --cyan: #39d2c0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans TC', 'Microsoft JhengHei', Helvetica, Arial, sans-serif; line-height: 1.7; padding: 20px; max-width: 860px; margin: 0 auto; }
+  h1 { color: #fff; font-size: 1.7em; margin-bottom: 4px; }
+  .subtitle { color: var(--muted); font-size: 0.9em; margin-bottom: 8px; }
+  .issue-badge { display: inline-block; background: rgba(88,166,255,0.15); color: var(--accent); padding: 3px 10px; border-radius: 12px; font-size: 0.8em; font-weight: 600; margin-bottom: 20px; }
+  .tag { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 0.72em; font-weight: 600; margin-right: 4px; }
+  .tag-rates { background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-china { background: rgba(240,136,62,0.15); color: var(--orange); }
+  .tag-japan { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-geo   { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-oil   { background: rgba(210,153,34,0.15); color: var(--yellow); }
+  .tag-trade { background: rgba(210,153,34,0.15); color: var(--yellow); }
+  .tag-growth{ background: rgba(63,185,80,0.15); color: var(--green); }
+  .tag-metals{ background: rgba(188,140,255,0.15); color: var(--purple); }
+  .tag-infl  { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-policy{ background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-val   { background: rgba(63,185,80,0.15); color: var(--green); }
+  .tag-vol   { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-semi  { background: rgba(57,210,192,0.15); color: var(--cyan); }
+  .tag-credit{ background: rgba(188,140,255,0.15); color: var(--purple); }
+  .tag-space { background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-misc  { background: rgba(139,148,158,0.15); color: var(--muted); }
+  .section { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 16px; }
+  .section h2 { color: #fff; font-size: 1.15em; margin-bottom: 12px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+  .section h3 { color: var(--accent); font-size: 0.95em; margin: 14px 0 6px; }
+  .article { margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .article:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .article-title { color: #fff; font-weight: 700; font-size: 0.95em; margin-bottom: 4px; }
+  .article-title-cn { color: var(--muted); font-size: 0.85em; margin-bottom: 8px; }
+  .article p { font-size: 0.9em; margin: 6px 0; }
+  .data-point { background: rgba(255,255,255,0.03); padding: 8px 12px; border-radius: 6px; margin: 8px 0; font-size: 0.85em; }
+  .data-point .num { color: #fff; font-weight: 700; }
+  .implication { background: rgba(88,166,255,0.06); border-left: 3px solid var(--accent); padding: 10px 14px; margin: 10px 0; border-radius: 0 6px 6px 0; font-size: 0.88em; }
+  .implication .label { color: var(--accent); font-weight: 700; font-size: 0.8em; text-transform: uppercase; margin-bottom: 4px; }
+  .callout { background: rgba(210,153,34,0.08); border: 1px solid rgba(210,153,34,0.3); border-radius: 6px; padding: 16px; margin: 16px 0; }
+  .callout-title { color: var(--yellow); font-weight: 700; font-size: 0.95em; margin-bottom: 8px; }
+  .callout ul { padding-left: 18px; }
+  .callout li { margin: 4px 0; font-size: 0.88em; }
+  ul { padding-left: 18px; }
+  li { margin: 3px 0; font-size: 0.88em; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(255,255,255,0.03); padding: 12px; border-radius: 6px; text-align: center; }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: #fff; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
+  .toc { background: rgba(88,166,255,0.05); border: 1px solid rgba(88,166,255,0.2); border-radius: 8px; padding: 16px 20px; margin-bottom: 20px; }
+  .toc-title { color: var(--accent); font-weight: 700; font-size: 0.9em; margin-bottom: 8px; }
+  .toc a { color: var(--accent); text-decoration: none; font-size: 0.88em; }
+  .toc a:hover { text-decoration: underline; }
+  .toc ol { padding-left: 20px; }
+  .toc li { margin: 4px 0; }
+  .nav-links { display: flex; justify-content: space-between; margin: 20px 0; font-size: 0.85em; }
+  .nav-links a { color: var(--accent); text-decoration: none; }
+  .nav-links a:hover { text-decoration: underline; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(255,255,255,0.03); padding: 12px; border-radius: 6px; text-align: center; }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: #fff; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
+  .footer { text-align: center; color: var(--muted); font-size: 0.75em; margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--border); }
+</style>
+<script>if(window.self===window.top&&sessionStorage.getItem("student_auth")!=="1"){document.body.innerHTML="";window.location.replace("student.html");}</script>
+</head>
+<body>
+
+<h1>彭博研究摘要</h1>
+<p class="subtitle">第36期 | 伊朗封鎖升級與地緣新變局</p>
+<span class="issue-badge">2026年四月中旬更新</span>
+
+<div class="nav-links">
+  <span><a href="newsletter_35_trade_china.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="toc">
+  <div class="toc-title">目錄</div>
+  <ol>
+    <li><a href="#iran-blockade">美伊封鎖 海上封鎖生效，油價再添壓力</a></li>
+    <li><a href="#ceasefire-talks">停火與談判 停火一觸即潰，五大問題懸而未決</a></li>
+    <li><a href="#china-oil-impact">中國與油價 中國因素：稀土牌與通膨傳導</a></li>
+    <li><a href="#ukraine-infrastructure">烏克蘭與基建風險 基輔重啟接觸，中東基建傷痕累累</a></li>
+    <li><a href="#takeaways">基金經理人重點摘要</a></li>
+  </ol>
+</div>
+
+<div class="section" id="iran-blockade">
+  <h2><span class="tag tag-misc">美伊封鎖</span> 海上封鎖生效，油價再添壓力</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--red)">200萬桶/日</div><div class="lbl">封鎖涉及伊朗
+石油出口量</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">~8%</div><div class="lbl">封鎖若全面執行
+油價潛在漲幅</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">80%</div><div class="lbl">伊朗石油出口
+流向中國</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">美國對伊朗海上封鎖正式生效 — 接下來會發生什麼？</div>
+    <p>川普宣布對伊朗港口實施全面海上封鎖，目前已正式生效。執法行動將在霍爾木茲海峽以東的阿曼灣和阿拉伯海展開，由飛彈驅逐艦負責攔截。目前每日約 <span style="color:#fff;font-weight:700">200萬桶</span> 原油（佔全球供應 <span style="color:#fff;font-weight:700">2%</span>）經由海峽運出，彭博經濟研究估算若完全中斷，油價可能再漲約 <span style="color:#fff;font-weight:700">8%</span>。美軍可能需要登船扣押抗命船隻，這類高風險行動將由特種部隊或海軍陸戰隊執行。封鎖也可能迫使美軍從防空任務中調撥驅逐艦，令區域軍力進一步分散。伊朗則可能號召胡塞武裝襲擊紅海航線作為反制。</p>
+    <div class="data-point">封鎖範圍：<span style="color:#fff;font-weight:700">霍爾木茲海峽以東至阿拉伯海</span> &nbsp;|&nbsp; 涉及油量：<span style="color:#fff;font-weight:700">~200萬桶/日（全球2%）</span> &nbsp;|&nbsp; 油價影響：<span style="color:#fff;font-weight:700">潛在上漲~8%</span> &nbsp;|&nbsp; 執行力量：<span style="color:#fff;font-weight:700">飛彈驅逐艦 + 特種部隊</span></div>
+    <div class="implication"><div class="label">投資啟示</div>封鎖將進一步收緊全球原油供應。<span style="color:#fff;font-weight:700">做多布倫特原油期貨</span>，關注油輪運費指數（BDTI）飆升機會。</div>
+  </div>
+  <div class="article">
+    <div class="article-title">川普宣布全面封鎖霍爾木茲海峽 — 美伊談判破裂</div>
+    <p>美伊在巴基斯坦的直接談判破裂後，川普隨即宣布啟動全面海上封鎖。副總統Vance表示伊朗拒絕承諾不發展核武，雙方在「<span style="color:#fff;font-weight:700">兩三個關鍵議題</span>」上仍存分歧。川普在Truth Social發文稱，美國海軍將「封鎖所有試圖進出霍爾木茲海峽的船隻」，並威脅攔截所有曾向伊朗繳納通行費的船舶、清除海峽中的水雷。伊朗外交部發言人則稱「不應期望一次會談就達成協議」，強調「外交永不終結」。談判的核心分歧在於核問題，川普政府堅持伊朗必須放棄核武器追求。</p>
+    <div class="data-point">談判地點：<span style="color:#fff;font-weight:700">伊斯蘭堡</span> &nbsp;|&nbsp; 核心分歧：<span style="color:#fff;font-weight:700">核問題</span> &nbsp;|&nbsp; 封鎖範圍：<span style="color:#fff;font-weight:700">所有進出海峽船隻</span> &nbsp;|&nbsp; 美方立場：<span style="color:#fff;font-weight:700">最終報價已提出</span></div>
+    <div class="implication"><div class="label">投資啟示</div>談判破裂意味短期內衝突降級無望。<span style="color:#fff;font-weight:700">減持中東航空、旅遊相關敞口</span>，能源板塊維持超配。</div>
+  </div>
+</div>
+
+<div class="section" id="ceasefire-talks">
+  <h2><span class="tag tag-misc">停火與談判</span> 停火一觸即潰，五大問題懸而未決</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--red)">$65→$100+</div><div class="lbl">開戰以來
+油價走勢（美元/桶）</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">$170</div><div class="lbl">海峽封鎖三個月
+油價情景預測</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">5,600+次</div><div class="lbl">伊朗已發射
+飛彈與無人機</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">川普對伊再次「臨陣退縮」— 留下五大問題尚待回答</div>
+    <p>在最後期限前數小時，川普宣布達成為期兩週的「雙向停火」，但隨即暴露五大懸而未決的問題：伊朗是否會真正重新開放霍爾木茲海峽？停火何時開始（巴基斯坦稱即刻生效，但停火後襲擊仍在繼續）？以色列是否屬於協議一方？停火是否涵蓋所有敵對行動？以及伊朗提出的 <span style="color:#fff;font-weight:700">10項條件</span> 能否成為進一步談判的基礎？川普表示伊朗方案是「可行基礎」，但其中多項條款 — 包括控制霍爾木茲海峽及黎巴嫩問題 — 恐難被華盛頓和以色列接受。</p>
+    <div class="data-point">停火時長：<span style="color:#fff;font-weight:700">兩週</span> &nbsp;|&nbsp; 伊朗條件：<span style="color:#fff;font-weight:700">10項</span> &nbsp;|&nbsp; 海峽狀態：<span style="color:#fff;font-weight:700">伊朗稱「安全通過可能」</span> &nbsp;|&nbsp; 以色列立場：<span style="color:#fff;font-weight:700">戰爭尚未結束</span></div>
+    <div class="implication"><div class="label">投資啟示</div>停火脆弱且充滿不確定性，隨時可能重新升級。<span style="color:#fff;font-weight:700">買入原油看漲期權</span>作為尾部風險對沖。</div>
+  </div>
+  <div class="article">
+    <div class="article-title">停火？如何停？中東和平無暢途</div>
+    <p>美伊雖宣布停火，但休戰狀態一觸即潰 — 海灣地區、以色列和伊朗均遭受襲擊，霍爾木茲海峽仍處於關閉狀態。彭博經濟研究評估伊朗 <span style="color:#fff;font-weight:700">10項停戰條件</span>後認為，德黑蘭在核濃縮規模、美軍撤離程度及制裁賠償等議題上可能願意讓步，但在「不侵犯保證」及繼續控制霍爾木茲海峽方面態度堅定。川普面臨兩難：重新介入戰爭意味著油價進一步飆升；與伊朗達成協議則可能需要在以色列利益上妥協，且部分條款比 <span style="color:#fff;font-weight:700">2015年JCPOA伊核協議</span> 更為寬鬆。研究團隊傾向認為川普希望抽身，第二種情景概率更高。</p>
+    <div class="data-point">伊朗可讓步項目：<span style="color:#fff;font-weight:700">核濃縮規模、部分撤軍、制裁放寬</span> &nbsp;|&nbsp; 伊朗堅持項目：<span style="color:#fff;font-weight:700">不侵犯保證、控制海峽</span> &nbsp;|&nbsp; 比較基準：<span style="color:#fff;font-weight:700">條款較2015年JCPOA更寬鬆</span></div>
+    <div class="implication"><div class="label">投資啟示</div>若達成協議，油價壓力將獲一定緩解。但以色列變數仍大 — <span style="color:#fff;font-weight:700">避免對和平協議定價過於樂觀</span>。</div>
+  </div>
+  <div class="article">
+    <div class="article-title">伊朗戰爭爆發一個月後的戰局發展及後續方向</div>
+    <p>開戰五週，全球經濟代價不斷攀升。油價已從每桶 <span style="color:#fff;font-weight:700">$65飆升至$100以上</span>，若霍爾木茲海峽連續封鎖三個月，油價可能觸及 <span style="color:#fff;font-weight:700">$170/桶</span>。軍事方面，美國已打擊伊朗境內超過 <span style="color:#fff;font-weight:700">11,000個目標</span>，伊朗約 <span style="color:#fff;font-weight:700">三分之二</span> 的飛彈、無人機及海軍生產設施遭破壞，<span style="color:#fff;font-weight:700">92%</span> 海軍艦艇被擊沉。但伊朗仍在反擊 — 已發射超過 <span style="color:#fff;font-weight:700">5,600次</span> 飛彈和無人機攻擊，近期日均 <span style="color:#fff;font-weight:700">26枚</span>，且精準度持續提升。美國民調顯示多數民眾反對戰爭，汽油價格已突破每加侖 <span style="color:#fff;font-weight:700">$4</span>，中期選舉壓力與日俱增。彭博預計短期內局勢可能進一步升級，之後轉為低強度對抗。</p>
+    <div class="data-point">美軍打擊目標：<span style="color:#fff;font-weight:700">&gt;11,000個</span> &nbsp;|&nbsp; 伊朗海軍損失：<span style="color:#fff;font-weight:700">92%艦艇被擊沉</span> &nbsp;|&nbsp; 伊朗反擊：<span style="color:#fff;font-weight:700">日均26枚飛彈</span> &nbsp;|&nbsp; 美國汽油價格：<span style="color:#fff;font-weight:700">&gt;$4/加侖</span></div>
+    <div class="implication"><div class="label">投資啟示</div>低強度對抗情景下油價仍將居高不下。<span style="color:#fff;font-weight:700">超配能源股及防禦板塊</span>，留意美國中期選舉風向對政策轉向的影響。</div>
+  </div>
+</div>
+
+<div class="section" id="china-oil-impact">
+  <h2><span class="tag tag-misc">中國與油價</span> 中國因素：稀土牌與通膨傳導</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--orange)">13%</div><div class="lbl">伊朗石油佔中國
+海運原油進口</div></div>
+    <div class="stat"><div class="val" style="color:var(--green)">0.5%</div><div class="lbl">中國3月PPI同比
+結束41個月通縮</div></div>
+    <div class="stat"><div class="val">1.0%</div><div class="lbl">中國3月CPI同比
+低於預期</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">川普對伊朗港口實施封鎖時需要考慮的中國因素</div>
+    <p>封鎖伊朗港口不僅衝擊德黑蘭，也直接波及伊朗石油的最大買家中國。戰前伊朗約 <span style="color:#fff;font-weight:700">80%</span> 石油出口銷往中國，佔中國海運原油進口的 <span style="color:#fff;font-weight:700">13%</span>。北京目前公開立場較為克制，但手中握有強大籌碼：關鍵礦產及稀土供應鏈的主導地位。去年美國加徵關稅後，中國正是通過限制關鍵礦產出口迫使華盛頓重返談判桌。川普政府明顯希望在下月訪華前維持良好關係，白宮刻意避免激怒北京。此外，去年10月韓國達成的脆弱貿易休兵協議也不容打破 — 中期選舉臨近，生活成本仍是選民核心關切。川普威脅若中國向伊朗供武將加徵 <span style="color:#fff;font-weight:700">50%關稅</span>，但彭博認為此舉概率極低。</p>
+    <div class="data-point">伊朗石油→中國：<span style="color:#fff;font-weight:700">佔出口80%</span> &nbsp;|&nbsp; 中國籌碼：<span style="color:#fff;font-weight:700">稀土及關鍵礦產主導地位</span> &nbsp;|&nbsp; 川普訪華：<span style="color:#fff;font-weight:700">計劃5月</span> &nbsp;|&nbsp; 關稅威脅：<span style="color:#fff;font-weight:700">50%（概率極低）</span></div>
+    <div class="implication"><div class="label">投資啟示</div>中美因伊朗封鎖產生摩擦的風險上升。<span style="color:#fff;font-weight:700">關注稀土及關鍵礦產板塊</span>作為地緣對沖；若貿易休兵破裂，<span style="color:#fff;font-weight:700">減持對華出口敞口大的美國農業股</span>。</div>
+  </div>
+  <div class="article">
+    <div class="article-title">伊朗戰爭推動中國PPI重返通膨，CPI放緩</div>
+    <p>3月數據顯示戰爭對中國物價的影響正在分化：上游率先反應，下游傳導有限。CPI同比上漲 <span style="color:#fff;font-weight:700">1.0%</span>，低於2月的 <span style="color:#fff;font-weight:700">1.3%</span> 及市場預期的 <span style="color:#fff;font-weight:700">1.1%</span>；PPI同比則跳升至 <span style="color:#fff;font-weight:700">+0.5%</span>，結束了長達 <span style="color:#fff;font-weight:700">41個月</span> 的通縮週期，此前2月為 <span style="color:#fff;font-weight:700">-0.9%</span>。這一背離支持彭博的判斷：高油價對中國CPI的直接傳導仍然有限，主要衝擊集中在工業品端。中國龐大的石油儲備、國有煉化體系及燃油價格調控機制在一定程度上緩衝了衝擊。</p>
+    <div class="data-point">CPI：<span style="color:#fff;font-weight:700">1.0%同比（低於預期1.1%）</span> &nbsp;|&nbsp; PPI：<span style="color:#fff;font-weight:700">+0.5%同比（結束41個月通縮）</span> &nbsp;|&nbsp; 2月PPI：<span style="color:#fff;font-weight:700">-0.9%</span> &nbsp;|&nbsp; 傳導判斷：<span style="color:#fff;font-weight:700">油價→CPI傳導有限</span></div>
+    <div class="implication"><div class="label">投資啟示</div>中國PPI轉正利好上游工業品但CPI疲軟反映內需仍弱。<span style="color:#fff;font-weight:700">做多中國原材料/化工板塊</span>，但對消費復甦保持謹慎。</div>
+  </div>
+</div>
+
+<div class="section" id="ukraine-infrastructure">
+  <h2><span class="tag tag-misc">烏克蘭與基建風險</span> 基輔重啟接觸，中東基建傷痕累累</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--red)">25%</div><div class="lbl">烏克蘭民眾相信
+當前談判能帶來和平</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">-12%</div><div class="lbl">伊朗全境
+夜間燈光亮度下降</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">12,300+</div><div class="lbl">美國已打擊
+伊朗境內目標數</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">基輔會談釋放重新接觸信號，而非戰爭終結</div>
+    <p>美國特使Witkoff和Kushner計劃本月訪問基輔，這將是川普重返白宮以來首次赴烏。但彭博經濟研究認為，此行「政治信號大於外交突破」— 主要目的是展示美國在中東戰事干擾後重新關注俄烏衝突。核心障礙未變：莫斯科堅持要求烏克蘭割讓更多領土並接受戰略性讓步條件。烏克蘭民調顯示僅 <span style="color:#fff;font-weight:700">25%</span> 民眾相信當前談判能帶來和平，<span style="color:#fff;font-weight:700">71%</span> 持懷疑態度。軍事層面，俄羅斯可能在今春沿 <span style="color:#fff;font-weight:700">1,300公里</span> 前線發動新一輪攻勢，以強化談判籌碼。會談最多可能促成戰俘交換或暫停能源基礎設施打擊等狹窄成果。</p>
+    <div class="data-point">訪問性質：<span style="color:#fff;font-weight:700">川普任內首次赴烏</span> &nbsp;|&nbsp; 烏克蘭民意：<span style="color:#fff;font-weight:700">僅25%相信和談</span> &nbsp;|&nbsp; 俄軍前線：<span style="color:#fff;font-weight:700">1,300公里</span> &nbsp;|&nbsp; 潛在成果：<span style="color:#fff;font-weight:700">戰俘交換、能源設施停火</span></div>
+    <div class="implication"><div class="label">投資啟示</div>俄烏衝突短期無解，歐洲能源安全溢價持續。<span style="color:#fff;font-weight:700">維持歐洲天然氣相關敞口</span>，但勿對和談突破過度押注。</div>
+  </div>
+  <div class="article">
+    <div class="article-title">夜間燈光數據凸顯軍事打擊給伊朗造成的破壞</div>
+    <p>NASA夜間燈光衛星數據揭示了戰爭對伊朗民用基礎設施的廣泛破壞。2026年2月至3月間，伊朗全境夜間燈光亮度平均下降 <span style="color:#fff;font-weight:700">12%</span>，<span style="color:#fff;font-weight:700">73%</span> 的地表區域亮度出現下降，首都德黑蘭亮度下降 <span style="color:#fff;font-weight:700">8%</span>。美國已對伊朗境內超過 <span style="color:#fff;font-weight:700">12,300個</span> 目標發動打擊。五角大廈聲稱行動重點為軍事目標，但燈光數據顯示亮度下降不僅限於軍事區域，民用設施同樣受損嚴重 — 包括橋樑、住宅、醫療設施及學校。部分地區亮度略有上升，反映了民眾逃往避難區域。這些破壞將大幅推高戰後重建成本。</p>
+    <div class="data-point">全國燈光下降：<span style="color:#fff;font-weight:700">-12%</span> &nbsp;|&nbsp; 受影響地表：<span style="color:#fff;font-weight:700">73%</span> &nbsp;|&nbsp; 德黑蘭燈光下降：<span style="color:#fff;font-weight:700">-8%</span> &nbsp;|&nbsp; 打擊目標數：<span style="color:#fff;font-weight:700">&gt;12,300個</span></div>
+    <div class="implication"><div class="label">投資啟示</div>戰後重建需求巨大，但短期內投資機會有限。<span style="color:#fff;font-weight:700">關注中東基建ETF</span>作為長期佈局，但需待停火明確化。</div>
+  </div>
+  <div class="article">
+    <div class="article-title">戰爭暴露中東水資源風險</div>
+    <p>即便在停火期間，中東地區電力和海水淡化等關鍵基礎設施的風險依然高企。多年乾旱已令該地區水資源系統幾無容錯空間，而數據中心的快速擴張更加劇了水資源壓力。伊朗、科威特和巴林的海水淡化廠在軍事打擊中遭到損壞。伊朗境內超過 <span style="color:#fff;font-weight:700">150座</span> 運營中的發電廠，許多位於乾旱影響區域內，另有約 <span style="color:#fff;font-weight:700">70座</span> 計劃投產。目前尚無大規模打擊發電廠的報告，但風險持續存在。企業方面，Energy Recovery公司3月警告稱戰爭延長可能推遲整個地區的淡化項目。</p>
+    <div class="data-point">伊朗發電廠：<span style="color:#fff;font-weight:700">&gt;150座運營中</span> &nbsp;|&nbsp; 計劃新增：<span style="color:#fff;font-weight:700">~70座</span> &nbsp;|&nbsp; 受損淡化廠：<span style="color:#fff;font-weight:700">伊朗、科威特、巴林</span> &nbsp;|&nbsp; 水壓力加劇因素：<span style="color:#fff;font-weight:700">乾旱 + 數據中心擴張</span></div>
+    <div class="implication"><div class="label">投資啟示</div>水資源基建是中東長期結構性主題。<span style="color:#fff;font-weight:700">關注海水淡化技術龍頭</span>（如Energy Recovery），但短期受戰爭延遲風險壓制。</div>
+  </div>
+</div>
+
+<div class="callout" id="takeaways">
+  <div class="callout-title">基金經理人重點摘要</div>
+  <ul>
+    <li><strong>伊朗封鎖：</strong>美國海上封鎖正式生效，涉及約200萬桶/日原油。若全面執行油價可能再漲8%。**做多布倫特原油期貨及油輪運費指數。**</li>
+    <li><strong>停火風險：</strong>兩週停火一觸即潰，美伊巴基斯坦談判已破裂。油價從$65飆至$100+，極端情景可達$170/桶。**買入原油看漲期權對沖尾部風險。**</li>
+    <li><strong>中國因素：</strong>伊朗80%石油出口流向中國，封鎖恐觸發中美摩擦。北京握有稀土籌碼。**增配稀土及關鍵礦產板塊作為地緣對沖。**</li>
+    <li><strong>中國通膨：</strong>PPI結束41個月通縮回升至+0.5%，但CPI放緩至1.0%，油價傳導集中在上游。**做多中國原材料/化工，消費復甦仍需觀望。**</li>
+    <li><strong>俄烏衝突：</strong>美國特使計劃首訪基輔，但僅為政治信號，核心分歧未解。俄軍春季攻勢在即。**維持歐洲天然氣敞口。**</li>
+    <li><strong>基建損害：</strong>伊朗夜間燈光下降12%，淡化廠受損波及多國。戰後重建需求巨大。**長線關注中東基建及海水淡化技術，短期勿急於佈局。**</li>
+  </ul>
+</div>
+
+<div class="nav-links">
+  <span><a href="newsletter_35_trade_china.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="footer">
+  彭博研究摘要 | 僅供教學與討論用途 | 2026年4月14日<br>
+  資料來源：Bloomberg Intelligence, Bloomberg Economics, Bloomberg News
+</div>
+
+</body>
+</html>
