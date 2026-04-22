@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>彭博研究摘要 #46 — 中國經濟「獨臂難撐」：戰爭衝擊、樓市僵局與AI突圍</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --accent: #58a6ff;
+          --green: #3fb950; --red: #f85149; --yellow: #d29922; --text: #c9d1d9; --muted: #8b949e;
+          --orange: #f0883e; --purple: #bc8cff; --cyan: #39d2c0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans TC', 'Microsoft JhengHei', Helvetica, Arial, sans-serif; line-height: 1.7; padding: 20px; max-width: 860px; margin: 0 auto; }
+  h1 { color: #fff; font-size: 1.7em; margin-bottom: 4px; }
+  .subtitle { color: var(--muted); font-size: 0.9em; margin-bottom: 8px; }
+  .issue-badge { display: inline-block; background: rgba(88,166,255,0.15); color: var(--accent); padding: 3px 10px; border-radius: 12px; font-size: 0.8em; font-weight: 600; margin-bottom: 20px; }
+  .tag { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 0.72em; font-weight: 600; margin-right: 4px; }
+  .tag-rates { background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-china { background: rgba(240,136,62,0.15); color: var(--orange); }
+  .tag-japan { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-geo   { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-oil   { background: rgba(210,153,34,0.15); color: var(--yellow); }
+  .tag-trade { background: rgba(210,153,34,0.15); color: var(--yellow); }
+  .tag-growth{ background: rgba(63,185,80,0.15); color: var(--green); }
+  .tag-metals{ background: rgba(188,140,255,0.15); color: var(--purple); }
+  .tag-infl  { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-policy{ background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-val   { background: rgba(63,185,80,0.15); color: var(--green); }
+  .tag-vol   { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-semi  { background: rgba(57,210,192,0.15); color: var(--cyan); }
+  .tag-credit{ background: rgba(188,140,255,0.15); color: var(--purple); }
+  .tag-space { background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-misc  { background: rgba(139,148,158,0.15); color: var(--muted); }
+  .section { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 16px; }
+  .section h2 { color: #fff; font-size: 1.15em; margin-bottom: 12px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+  .section h3 { color: var(--accent); font-size: 0.95em; margin: 14px 0 6px; }
+  .article { margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .article:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .article-title { color: #fff; font-weight: 700; font-size: 0.95em; margin-bottom: 4px; }
+  .article-title-cn { color: var(--muted); font-size: 0.85em; margin-bottom: 8px; }
+  .article p { font-size: 0.9em; margin: 6px 0; }
+  .data-point { background: rgba(255,255,255,0.03); padding: 8px 12px; border-radius: 6px; margin: 8px 0; font-size: 0.85em; }
+  .data-point .num { color: #fff; font-weight: 700; }
+  .implication { background: rgba(88,166,255,0.06); border-left: 3px solid var(--accent); padding: 10px 14px; margin: 10px 0; border-radius: 0 6px 6px 0; font-size: 0.88em; }
+  .implication .label { color: var(--accent); font-weight: 700; font-size: 0.8em; text-transform: uppercase; margin-bottom: 4px; }
+  .callout { background: rgba(210,153,34,0.08); border: 1px solid rgba(210,153,34,0.3); border-radius: 6px; padding: 16px; margin: 16px 0; }
+  .callout-title { color: var(--yellow); font-weight: 700; font-size: 0.95em; margin-bottom: 8px; }
+  .callout ul { padding-left: 18px; }
+  .callout li { margin: 4px 0; font-size: 0.88em; }
+  ul { padding-left: 18px; }
+  li { margin: 3px 0; font-size: 0.88em; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(255,255,255,0.03); padding: 12px; border-radius: 6px; text-align: center; }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: #fff; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
+  .toc { background: rgba(88,166,255,0.05); border: 1px solid rgba(88,166,255,0.2); border-radius: 8px; padding: 16px 20px; margin-bottom: 20px; }
+  .toc-title { color: var(--accent); font-weight: 700; font-size: 0.9em; margin-bottom: 8px; }
+  .toc a { color: var(--accent); text-decoration: none; font-size: 0.88em; }
+  .toc a:hover { text-decoration: underline; }
+  .toc ol { padding-left: 20px; }
+  .toc li { margin: 4px 0; }
+  .nav-links { display: flex; justify-content: space-between; margin: 20px 0; font-size: 0.85em; }
+  .nav-links a { color: var(--accent); text-decoration: none; }
+  .nav-links a:hover { text-decoration: underline; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(255,255,255,0.03); padding: 12px; border-radius: 6px; text-align: center; }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: #fff; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
+  .footer { text-align: center; color: var(--muted); font-size: 0.75em; margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--border); }
+</style>
+<script>if(window.self===window.top&&sessionStorage.getItem("student_auth")!=="1"){document.body.innerHTML="";window.location.replace("student.html");}</script>
+</head>
+<body>
+
+<h1>彭博研究摘要</h1>
+<p class="subtitle">第46期 | 中國經濟「獨臂難撐」：戰爭衝擊、樓市僵局與AI突圍</p>
+<span class="issue-badge">2026年四月下旬更新</span>
+
+<div class="nav-links">
+  <span><a href="newsletter_44_japan_rates.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="toc">
+  <div class="toc-title">目錄</div>
+  <ol>
+    <li><a href="#growth-momentum">經濟動能 GDP亮眼難掩結構隱憂</a></li>
+    <li><a href="#monetary-policy">貨幣政策 LPR按兵不動，降息窗口在下半年</a></li>
+    <li><a href="#property">房地產 樓市回暖是幻覺，供應過剩仍是主旋律</a></li>
+    <li><a href="#ai-tech">科技與AI 中國AI不只是「抄作業」，結構性追趕正在發生</a></li>
+    <li><a href="#takeaways">基金經理人重點摘要</a></li>
+  </ol>
+</div>
+
+<div class="section" id="growth-momentum">
+  <h2><span class="tag tag-growth">經濟動能</span> GDP亮眼難掩結構隱憂</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--green)">5.0%</div><div class="lbl">Q1 GDP同比增速
+高於預期4.8%</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">-4.5</div><div class="lbl">4月經濟活動指數
+低於Q1均值-3.5</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">-13%</div><div class="lbl">汽車零售銷量
+同比（截至4/10）</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">中國Q1 GDP增長5%「獨臂難撐」 伊朗戰爭構成風險</div>
+    <p>中國第一季度GDP同比增長<span style="color:#fff;font-weight:700">5.0%</span>，高於2025年Q4的<span style="color:#fff;font-weight:700">4.5%</span>及市場預期的<span style="color:#fff;font-weight:700">4.8%</span>，開局強勁。然而增長基礎並不穩固——供給側是主要驅動力，工業增加值Q1增速達<span style="color:#fff;font-weight:700">6.1%</span>，但國內需求端表現疲軟：3月社會消費品零售總額增速僅<span style="color:#fff;font-weight:700">1.7%</span>，遠低於預期的<span style="color:#fff;font-weight:700">2.4%</span>；固定資產投資Q1增長<span style="color:#fff;font-weight:700">1.7%</span>，亦低於預期。消費疲軟部分反映汽車補貼退坡的影響，揭示內需對政策支持的依賴。展望而言，伊朗戰爭擾亂供應鏈並抑制全球需求，彭博基準情景預測油價Q2於<span style="color:#fff;font-weight:700">$110/桶</span>見頂，2026年全球增速將從<span style="color:#fff;font-weight:700">3.4%</span>放緩至<span style="color:#fff;font-weight:700">2.0%</span>。政策層面，預計人行本季度降準<span style="color:#fff;font-weight:700">25bp</span>，下半年加碼財政刺激。</p>
+    <div class="data-point">Q1工業增加值：<span style="color:#fff;font-weight:700">+6.1%</span>（Q4為5.0%） &nbsp;|&nbsp; 3月零售：<span style="color:#fff;font-weight:700">+1.7%</span>（預期2.4%） &nbsp;|&nbsp; 基準油價峰值：<span style="color:#fff;font-weight:700">$110/桶</span> &nbsp;|&nbsp; 全球GDP預測：<span style="color:#fff;font-weight:700">2.0%</span></div>
+    <div class="implication"><div class="label">投資啟示</div>中國增長靠出口「獨臂支撐」，伊朗戰爭衝擊下二季度動能恐進一步減弱。<span style="color:#fff;font-weight:700">超配內需防禦板塊</span>（公用事業、必選消費），<span style="color:#fff;font-weight:700">減持出口敞口</span>。</div>
+  </div>
+  <div class="article">
+    <div class="article-title">汽車銷售疲軟、戰爭衝擊浮現——中國經濟儀表板</div>
+    <p>4月前10天，彭博中國經濟活動指數降至<span style="color:#fff;font-weight:700">-4.5</span>，低於Q1周均值<span style="color:#fff;font-weight:700">-3.5</span>及一年前的<span style="color:#fff;font-weight:700">-0.9</span>，顯示動能進一步走弱。與前幾月不同，此次拖累主因並非房地產，而是汽車銷售——截至4月10日四周內，汽車零售同比下降約<span style="color:#fff;font-weight:700">13%</span>，較2025年Q4周均水平驟降<span style="color:#fff;font-weight:700">39%</span>，補貼退坡效應顯著。出口端同樣承壓，發運美國貨櫃吞吐量同比下降<span style="color:#fff;font-weight:700">5%</span>。生產端方面，煉油廠開工率連續第六周下滑至<span style="color:#fff;font-weight:700">73.7%</span>，較伊朗戰爭前下降<span style="color:#fff;font-weight:700">13個百分點</span>，戰爭衝擊清晰可見。螺紋鋼庫存同比高<span style="color:#fff;font-weight:700">10.2%</span>，建築業放緩信號加強。唯一亮點是新房銷售降幅略有收窄，50城新房同比降<span style="color:#fff;font-weight:700">11%</span>，拖累有所減輕。</p>
+    <div class="data-point">活動指數：<span style="color:#fff;font-weight:700">-4.5</span>（Q1均值-3.5） &nbsp;|&nbsp; 煉油開工率：<span style="color:#fff;font-weight:700">73.7%</span>（戰前-13ppt） &nbsp;|&nbsp; 螺紋鋼庫存同比：<span style="color:#fff;font-weight:700">+10.2%</span> &nbsp;|&nbsp; 對美貨櫃吞吐量：<span style="color:#fff;font-weight:700">-5%</span></div>
+    <div class="implication"><div class="label">投資啟示</div>高頻數據確認Q2開局動能惡化。煉油開工率暴跌反映油價衝擊傳導加速——<span style="color:#fff;font-weight:700">做空中國煉化股</span>，<span style="color:#fff;font-weight:700">關注成品油裂解價差收窄</span>。</div>
+  </div>
+</div>
+
+<div class="section" id="monetary-policy">
+  <h2><span class="tag tag-misc">貨幣政策</span> LPR按兵不動，降息窗口在下半年</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val">3.00%</div><div class="lbl">1年期LPR
+連續11個月不變</div></div>
+    <div class="stat"><div class="val">3.50%</div><div class="lbl">5年期LPR
+維持不變</div></div>
+    <div class="stat"><div class="val" style="color:var(--green)">-20bp</div><div class="lbl">2026全年降息預測
+（彭博經濟研究）</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">LPR繼續持穩，下半年可能迎來下調</div>
+    <p>中國商業銀行4月20日如期連續第11個月維持LPR不變——1年期<span style="color:#fff;font-weight:700">3.00%</span>、5年期<span style="color:#fff;font-weight:700">3.50%</span>，所有參與彭博調查的經濟學家均預期持穩。自2025年5月降息<span style="color:#fff;font-weight:700">10bp</span>以來，人行一直按兵不動，銀行淨息差已收窄至歷史低位，在央行未先行動之前缺乏單獨下調貸款利率的意願。展望而言，Q1穩健增長及聯儲會路徑不確定性支持短期耐心觀望。但伊朗戰爭對中國經濟增長的下行風險遠大於通膨上行風險，中期寬鬆立場不變。彭博經濟研究預計2026年全年將<span style="color:#fff;font-weight:700">降息20bp</span>並<span style="color:#fff;font-weight:700">降準50bp</span>（去年分別為10bp和50bp），降息窗口最可能在下半年開啟。</p>
+    <div class="data-point">LPR持穩：<span style="color:#fff;font-weight:700">1Y 3.00% / 5Y 3.50%</span> &nbsp;|&nbsp; 2026年降息預測：<span style="color:#fff;font-weight:700">-20bp</span> &nbsp;|&nbsp; 降準預測：<span style="color:#fff;font-weight:700">-50bp</span> &nbsp;|&nbsp; 上次降息：<span style="color:#fff;font-weight:700">2025年5月</span></div>
+    <div class="implication"><div class="label">投資啟示</div>短期利率下行空間有限，但下半年寬鬆確定性高。<span style="color:#fff;font-weight:700">做多中國國債久期</span>（5-10Y），靜待降息落地帶來的資本利得。</div>
+  </div>
+</div>
+
+<div class="section" id="property">
+  <h2><span class="tag tag-misc">房地產</span> 樓市回暖是幻覺，供應過剩仍是主旋律</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--red)">5.49年</div><div class="lbl">待售庫存去化周期
+連續6個月拉長</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">-10.4%</div><div class="lbl">Q1新房銷售面積
+同比降幅</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">~70%</div><div class="lbl">開發投資調整
+完成進度</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">數據回暖並不代表中國樓市的轉折點</div>
+    <p>Q1住宅成交量和房價跌幅收窄引發「觸底」疑問，但彭博經濟研究的答案是<span style="color:#fff;font-weight:700">否定的</span>。3月新房銷售面積同比降<span style="color:#fff;font-weight:700">7.5%</span>，好於1-2月的降<span style="color:#fff;font-weight:700">13.5%</span>，但回暖高度集中在一線城市——上海、北京受益於購房及房貸政策放寬，3月一線成交量已升至2024年9月政策轉向時的<span style="color:#fff;font-weight:700">兩倍</span>。然而非一線城市（佔全國成交<span style="color:#fff;font-weight:700">90%以上</span>）銷量仍在大幅下滑。庫存端壓力更為嚴峻：截至3月底，待售庫存（約<span style="color:#fff;font-weight:700">5,500萬套</span>）去化周期達<span style="color:#fff;font-weight:700">5.49年</span>，自2024年Q3的5.6年峰值短暫回落後已連續六個月拉長。房地產開發投資Q1同比降<span style="color:#fff;font-weight:700">11.1%</span>，較2025年Q4暴跌<span style="color:#fff;font-weight:700">29%</span>有所收窄。彭博測算，投資調整已完成約<span style="color:#fff;font-weight:700">70%</span>，剩餘<span style="color:#fff;font-weight:700">30%</span>可能還需一到兩年。</p>
+    <div class="data-point">一線城市房價：<span style="color:#fff;font-weight:700">自去年4月來首次上漲</span> &nbsp;|&nbsp; 待售庫存：<span style="color:#fff;font-weight:700">~5,500萬套</span> &nbsp;|&nbsp; 開發投資Q1：<span style="color:#fff;font-weight:700">-11.1%</span> &nbsp;|&nbsp; 非一線佔比：<span style="color:#fff;font-weight:700">&gt;90%</span></div>
+    <div class="implication"><div class="label">投資啟示</div>樓市「企穩」仍是結構性分化故事，非一線供應過剩遠未出清。<span style="color:#fff;font-weight:700">避免博弈中國地產反轉</span>，一線城市開發商可選擇性關注，但板塊整體<span style="color:#fff;font-weight:700">維持低配</span>。</div>
+  </div>
+</div>
+
+<div class="section" id="ai-tech">
+  <h2><span class="tag tag-misc">科技與AI</span> 中國AI不只是「抄作業」，結構性追趕正在發生</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val">74%</div><div class="lbl">美國佔全球
+高端AI算力</div></div>
+    <div class="stat"><div class="val">14%</div><div class="lbl">中國佔全球
+高端AI算力</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">3-6個月</div><div class="lbl">美國模型
+領先中國幅度</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">中國AI的發展不是只靠複製美國模型</div>
+    <p>美國AI公司透過「前沿模型論壇」聯手防範蒸餾攻擊，但彭博研究指出，蒸餾只是中國AI追趕的因素之一，封鎖未必能阻擋其步伐。硬件劣勢巨大——美國掌控全球約<span style="color:#fff;font-weight:700">74%</span>高端AI算力，中國僅<span style="color:#fff;font-weight:700">14%</span>——但在關鍵基準測試中，中國實驗室穩定落後美國僅<span style="color:#fff;font-weight:700">3-6個月</span>。Anthropic披露DeepSeek等操作的<span style="color:#fff;font-weight:700">24,000個詐欺帳戶</span>與Claude進行了超過<span style="color:#fff;font-weight:700">1,600萬次</span>互動以進行蒸餾。然而更深層的追趕動力來自：算法效率每年提升約<span style="color:#fff;font-weight:700">3倍</span>，大幅壓縮追趕時間；後發優勢讓中國企業基於前沿實驗室成果以更低成本達到類似性能。更重要的是，DeepSeek在效率和推理領域產出了<span style="color:#fff;font-weight:700">原創性成果</span>，其推理訓練算法正成為開放模型生態的標準。前沿AI實驗室面臨根本矛盾：商業上需要廣泛開放模型訪問，戰略上又要阻止競爭對手獲得同樣能力——而技術特性使兩者兼顧異常困難。</p>
+    <div class="data-point">蒸餾攻擊規模：DeepSeek <span style="color:#fff;font-weight:700">15萬次</span>、MiniMax <span style="color:#fff;font-weight:700">1,300萬次</span> &nbsp;|&nbsp; 低成本復現：NovaSky團隊<span style="color:#fff;font-weight:700">&lt;$450/19小時</span>達到o1-preview水平 &nbsp;|&nbsp; 自適應攻擊繞過率：<span style="color:#fff;font-weight:700">&gt;90%</span></div>
+    <div class="implication"><div class="label">投資啟示</div>中國AI追趕具結構性而非僅靠「抄襲」，出口管制效果可能低於預期。<span style="color:#fff;font-weight:700">關注中國AI概念股</span>（算法效率驅動），同時注意美國前沿模型公司的護城河或較預期為窄——<span style="color:#fff;font-weight:700">重新評估AI硬件vs軟件投資比例</span>。</div>
+  </div>
+</div>
+
+<div class="callout" id="takeaways">
+  <div class="callout-title">基金經理人重點摘要</div>
+  <ul>
+    <li><strong>中國GDP：</strong>Q1增長5.0%高於預期，但靠出口「獨臂支撐」。伊朗戰爭衝擊下Q2動能恐惡化，**超配內需防禦板塊**。</li>
+    <li><strong>高頻數據：</strong>4月活動指數降至-4.5，汽車銷售同比-13%、煉油開工率跌至73.7%。**做空煉化股，關注裂解價差**。</li>
+    <li><strong>人行政策：</strong>LPR連續11個月持穩，但下半年降息20bp+降準50bp確定性高。**做多中國國債久期**。</li>
+    <li><strong>房地產：</strong>一線回暖是政策驅動的幻覺，待售庫存去化周期5.49年仍在拉長。**維持低配地產板塊**。</li>
+    <li><strong>中國AI：</strong>硬件劣勢巨大但算法效率年增3倍、原創成果湧現，追趕具結構性。**關注中國AI概念股的算法效率故事**。</li>
+  </ul>
+</div>
+
+<div class="nav-links">
+  <span><a href="newsletter_44_japan_rates.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="footer">
+  彭博研究摘要 | 僅供教學與討論用途 | 2026年4月22日<br>
+  資料來源：Bloomberg Intelligence, Bloomberg Economics, Bloomberg News
+</div>
+
+</body>
+</html>

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>彭博研究摘要 #53 — 伊朗戰爭、停火博弈與碎片化世界的投資重構</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --accent: #58a6ff;
+          --green: #3fb950; --red: #f85149; --yellow: #d29922; --text: #c9d1d9; --muted: #8b949e;
+          --orange: #f0883e; --purple: #bc8cff; --cyan: #39d2c0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans TC', 'Microsoft JhengHei', Helvetica, Arial, sans-serif; line-height: 1.7; padding: 20px; max-width: 860px; margin: 0 auto; }
+  h1 { color: #fff; font-size: 1.7em; margin-bottom: 4px; }
+  .subtitle { color: var(--muted); font-size: 0.9em; margin-bottom: 8px; }
+  .issue-badge { display: inline-block; background: rgba(88,166,255,0.15); color: var(--accent); padding: 3px 10px; border-radius: 12px; font-size: 0.8em; font-weight: 600; margin-bottom: 20px; }
+  .tag { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 0.72em; font-weight: 600; margin-right: 4px; }
+  .tag-rates { background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-china { background: rgba(240,136,62,0.15); color: var(--orange); }
+  .tag-japan { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-geo   { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-oil   { background: rgba(210,153,34,0.15); color: var(--yellow); }
+  .tag-trade { background: rgba(210,153,34,0.15); color: var(--yellow); }
+  .tag-growth{ background: rgba(63,185,80,0.15); color: var(--green); }
+  .tag-metals{ background: rgba(188,140,255,0.15); color: var(--purple); }
+  .tag-infl  { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-policy{ background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-val   { background: rgba(63,185,80,0.15); color: var(--green); }
+  .tag-vol   { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-semi  { background: rgba(57,210,192,0.15); color: var(--cyan); }
+  .tag-credit{ background: rgba(188,140,255,0.15); color: var(--purple); }
+  .tag-space { background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-misc  { background: rgba(139,148,158,0.15); color: var(--muted); }
+  .section { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 16px; }
+  .section h2 { color: #fff; font-size: 1.15em; margin-bottom: 12px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+  .section h3 { color: var(--accent); font-size: 0.95em; margin: 14px 0 6px; }
+  .article { margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .article:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .article-title { color: #fff; font-weight: 700; font-size: 0.95em; margin-bottom: 4px; }
+  .article-title-cn { color: var(--muted); font-size: 0.85em; margin-bottom: 8px; }
+  .article p { font-size: 0.9em; margin: 6px 0; }
+  .data-point { background: rgba(255,255,255,0.03); padding: 8px 12px; border-radius: 6px; margin: 8px 0; font-size: 0.85em; }
+  .data-point .num { color: #fff; font-weight: 700; }
+  .implication { background: rgba(88,166,255,0.06); border-left: 3px solid var(--accent); padding: 10px 14px; margin: 10px 0; border-radius: 0 6px 6px 0; font-size: 0.88em; }
+  .implication .label { color: var(--accent); font-weight: 700; font-size: 0.8em; text-transform: uppercase; margin-bottom: 4px; }
+  .callout { background: rgba(210,153,34,0.08); border: 1px solid rgba(210,153,34,0.3); border-radius: 6px; padding: 16px; margin: 16px 0; }
+  .callout-title { color: var(--yellow); font-weight: 700; font-size: 0.95em; margin-bottom: 8px; }
+  .callout ul { padding-left: 18px; }
+  .callout li { margin: 4px 0; font-size: 0.88em; }
+  ul { padding-left: 18px; }
+  li { margin: 3px 0; font-size: 0.88em; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(255,255,255,0.03); padding: 12px; border-radius: 6px; text-align: center; }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: #fff; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
+  .toc { background: rgba(88,166,255,0.05); border: 1px solid rgba(88,166,255,0.2); border-radius: 8px; padding: 16px 20px; margin-bottom: 20px; }
+  .toc-title { color: var(--accent); font-weight: 700; font-size: 0.9em; margin-bottom: 8px; }
+  .toc a { color: var(--accent); text-decoration: none; font-size: 0.88em; }
+  .toc a:hover { text-decoration: underline; }
+  .toc ol { padding-left: 20px; }
+  .toc li { margin: 4px 0; }
+  .nav-links { display: flex; justify-content: space-between; margin: 20px 0; font-size: 0.85em; }
+  .nav-links a { color: var(--accent); text-decoration: none; }
+  .nav-links a:hover { text-decoration: underline; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(255,255,255,0.03); padding: 12px; border-radius: 6px; text-align: center; }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: #fff; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
+  .footer { text-align: center; color: var(--muted); font-size: 0.75em; margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--border); }
+</style>
+<script>if(window.self===window.top&&sessionStorage.getItem("student_auth")!=="1"){document.body.innerHTML="";window.location.replace("student.html");}</script>
+</head>
+<body>
+
+<h1>彭博研究摘要</h1>
+<p class="subtitle">第53期 | 伊朗戰爭、停火博弈與碎片化世界的投資重構</p>
+<span class="issue-badge">2026年四月下旬更新</span>
+
+<div class="nav-links">
+  <span><a href="newsletter_52_valuations.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="toc">
+  <div class="toc-title">目錄</div>
+  <ol>
+    <li><a href="#iran-ceasefire">中東 停火如履薄冰，和平遙不可及</a></li>
+    <li><a href="#china-asia-fx">中國/亞洲 出口韌性猶在，貨幣估值分化加劇</a></li>
+    <li><a href="#fragmented-world">投資策略 碎片化世界：國防、能源、供應鏈成新主線</a></li>
+    <li><a href="#europe-politics">歐洲政治 歐洲極右翼：失去美國光環，不失選民根基</a></li>
+    <li><a href="#takeaways">基金經理人重點摘要</a></li>
+  </ol>
+</div>
+
+<div class="section" id="iran-ceasefire">
+  <h2><span class="tag tag-misc">中東</span> 停火如履薄冰，和平遙不可及</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--red)">6</div><div class="lbl">美伊和談
+關鍵爭議點</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">10天</div><div class="lbl">以黎臨時停火
+期限</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">4/22</div><div class="lbl">美伊停火協議
+到期日</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">川普對伊再次「臨陣退縮」— 留下五大問題尚待回答</div>
+    <p>在美國威脅對伊朗發動「徹底摧毀」式打擊的最後期限前數小時，川普突然宣布達成為期兩周的「雙向停火」。市場暫時鬆一口氣，但核心問題依然懸而未決：伊朗是否真正開放霍爾木茲海峽？停火是否涵蓋以色列？巴基斯坦方面稱停火即刻生效，但停火宣布後伊朗對鄰國的襲擊仍在繼續。以色列雖被列為協議一方，但可能更看重擴大衝突帶來的戰略機遇而非和平紅利。川普表示伊朗提出的<span style="color:#fff;font-weight:700">10點方案</span>是「可行基礎」，但其中多項條件對華盛頓和以色列而言難以接受。</p>
+    <div class="data-point">停火類型：<span style="color:#fff;font-weight:700">雙向停火，為期兩周</span> &nbsp;|&nbsp; 核心條件：伊朗須<span style="color:#fff;font-weight:700">完全開放霍爾木茲海峽</span> &nbsp;|&nbsp; 油價隨川普發言劇烈波動</div>
+    <div class="implication"><div class="label">投資啟示</div>停火僅是暫緩而非解決。油價波動將持續受政治推文驅動 — <span style="color:#fff;font-weight:700">避免單邊押注油價方向，維持能源期權對沖</span>。</div>
+  </div>
+  <div class="article">
+    <div class="article-title">美伊和談六大關鍵點 — 霍爾木茲海峽與核問題成死結</div>
+    <p>副總統范斯預定4月20日赴巴基斯坦重啟與伊朗的談判，但截至報告撰寫時德黑蘭尚未確認是否出席。六大關注焦點浮出水面：霍爾木茲海峽控制權是最大死結 — 伊朗要求承認其管轄權，美國無法接受；核問題上美方要求<span style="color:#fff;font-weight:700">全面禁止</span>濃縮活動，伊朗底線是暫停<span style="color:#fff;font-weight:700">5年</span>；制裁方面川普暗示「不會有金錢交易」，但可能以解除制裁換取他國解凍伊朗海外資產。以色列作為衝突一方並未參與伊斯蘭堡談判，其立場可能成為最大變數。若談判破裂，川普最可能<span style="color:#fff;font-weight:700">恢復對伊空襲</span>。</p>
+    <div class="data-point">美方要求：核濃縮<span style="color:#fff;font-weight:700">全面禁止</span> &nbsp;|&nbsp; 伊方底線：暫停<span style="color:#fff;font-weight:700">5年</span> &nbsp;|&nbsp; 川普立場：拒絕伊朗<span style="color:#fff;font-weight:700">管控海峽</span> &nbsp;|&nbsp; 談判破裂後選項：<span style="color:#fff;font-weight:700">恢復空襲</span></div>
+    <div class="implication"><div class="label">投資啟示</div>達成持久和平概率極低。即便表面進展也會觸發市場樂觀反應 — <span style="color:#fff;font-weight:700">短期油價回調風險存在，但中期維持看多能源對沖</span>。</div>
+  </div>
+  <div class="article">
+    <div class="article-title">停火？如何停？— 中東和平無暢途</div>
+    <p>美伊宣布停火，但休戰狀態一觸即潰。海灣地區、以色列和伊朗都遭受了襲擊，霍爾木茲海峽仍處於關閉狀態。川普面臨兩個代價高昂的選擇：讓美軍重新介入（油價繼續飆升），或與伊朗達成協議（需在以色列利益上妥協，條款可能比<span style="color:#fff;font-weight:700">2015年JCPOA核協議</span>更寬鬆）。彭博經濟研究評估認為，川普更傾向第二條路 — 他希望抽身且準備付出代價，這意味著油價和全球經濟的壓力會獲得<span style="color:#fff;font-weight:700">一定程度的緩解</span>。伊朗10項條件中，部分華盛頓應願意至少部分滿足，但以色列可能成為最大障礙。</p>
+    <div class="data-point">伊朗條件：<span style="color:#fff;font-weight:700">10項</span> &nbsp;|&nbsp; 彭博基線判斷：川普傾向<span style="color:#fff;font-weight:700">妥協抽身</span> &nbsp;|&nbsp; JCPOA對比：新條款可能<span style="color:#fff;font-weight:700">更寬鬆</span> &nbsp;|&nbsp; 關鍵障礙：<span style="color:#fff;font-weight:700">以色列不接受黎巴嫩條款</span></div>
+    <div class="implication"><div class="label">投資啟示</div>基線情景偏向達成某種妥協，油價壓力將<span style="color:#fff;font-weight:700">部分緩解</span>。但以色列變數可能隨時打破預期 — <span style="color:#fff;font-weight:700">保持靈活對沖，勿過度做空原油</span>。</div>
+  </div>
+  <div class="article">
+    <div class="article-title">以色列與真主黨即便能暫時止戰，長久和平也依舊渺茫</div>
+    <p>川普宣布在黎巴嫩實施<span style="color:#fff;font-weight:700">10天停火</span>，但真主黨並未參加華盛頓的以黎談判，且該組織領導人此前明確表示不會接受未參與談判的停火協議。以色列在停火宣布前升級了對黎巴嫩的大規模空襲，波及貝魯特市中心，造成超過<span style="color:#fff;font-weight:700">350人喪生</span>、<span style="color:#fff;font-weight:700">逾100萬人流離失所</span>。以色列堅持要求真主黨解除武裝，而真主黨稱此為內部事務。各方都將停火視為「勝利」— 伊朗稱其為和談框架一部分，黎巴嫩無需保證解武即獲停火，川普則可宣稱外交成就。但臨時停火與持久和平之間仍有巨大鴻溝。</p>
+    <div class="data-point">停火期限：<span style="color:#fff;font-weight:700">10天</span> &nbsp;|&nbsp; 黎巴嫩傷亡：<span style="color:#fff;font-weight:700">&gt;350人喪生</span> &nbsp;|&nbsp; 流離失所：<span style="color:#fff;font-weight:700">&gt;100萬人</span> &nbsp;|&nbsp; 真主黨立場：解武是<span style="color:#fff;font-weight:700">內部事務</span></div>
+    <div class="implication"><div class="label">投資啟示</div>以黎衝突是伊朗和談的嵌套風險。停火極其脆弱 — <span style="color:#fff;font-weight:700">國防股與黃金仍有避險配置價值</span>。</div>
+  </div>
+</div>
+
+<div class="section" id="china-asia-fx">
+  <h2><span class="tag tag-misc">中國/亞洲</span> 出口韌性猶在，貨幣估值分化加劇</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--green)">14.7%</div><div class="lbl">中國Q1出口增速
+（遠超去年5.5%）</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">18.6%</div><div class="lbl">韓元兌美元
+被低估幅度</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">~0.2pp</div><div class="lbl">伊朗戰爭對
+中國GDP拖累</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">中國出口放緩反映假期效應 — 戰爭衝擊尚在路上</div>
+    <p>中國3月出口同比增長僅<span style="color:#fff;font-weight:700">2.5%</span>，較前兩月的<span style="color:#fff;font-weight:700">21.8%</span>大幅回落，遠低於市場共識的<span style="color:#fff;font-weight:700">8.6%</span>。但彭博經濟研究認為，放緩主要源於農曆新年假期扭曲，而非伊朗戰爭的即時衝擊。第一季度出口仍增長<span style="color:#fff;font-weight:700">14.7%</span>，遠快於2025年全年的<span style="color:#fff;font-weight:700">5.5%</span>，外需足以支撐GDP增速超過<span style="color:#fff;font-weight:700">5%</span>。真正的威脅在前方：彭博內部宏觀模型模擬顯示，若原油價格在二季度均值約<span style="color:#fff;font-weight:700">$110</span>，將拖累2026年GDP增速約<span style="color:#fff;font-weight:700">0.2個百分點</span>；若衝擊持續擴大，拖累可升至<span style="color:#fff;font-weight:700">0.6個百分點</span>。進口在3月加速至<span style="color:#fff;font-weight:700">27.8%</span>，一季度貿易順差<span style="color:#fff;font-weight:700">2650億美元</span>，略低於去年同期。</p>
+    <div class="data-point">3月出口：<span style="color:#fff;font-weight:700">+2.5%</span> vs 共識<span style="color:#fff;font-weight:700">+8.6%</span> &nbsp;|&nbsp; Q1出口：<span style="color:#fff;font-weight:700">+14.7%</span> &nbsp;|&nbsp; 油價$110情景GDP拖累：<span style="color:#fff;font-weight:700">-0.2pp</span> &nbsp;|&nbsp; 極端情景：<span style="color:#fff;font-weight:700">-0.6pp</span></div>
+    <div class="implication"><div class="label">投資啟示</div>短期出口數據不改基本面強勢。但戰爭持續將壓制下半年增速 — <span style="color:#fff;font-weight:700">關注北京追加刺激政策的時點，A股政策敏感板塊值得留意</span>。</div>
+  </div>
+  <div class="article">
+    <div class="article-title">川普封鎖伊朗港口時不可忽視的中國因素</div>
+    <p>美國對伊朗實施海上封鎖，但受衝擊的不僅是德黑蘭。戰前伊朗石油出口約<span style="color:#fff;font-weight:700">80%</span>銷往中國，佔中國海運原油進口的<span style="color:#fff;font-weight:700">13%</span>。中國擁有龐大戰略儲備、國有石油巨頭和燃油價格調控能力作為緩衝，但無法完全免疫。關鍵博弈在於：川普政府希望在下月訪華前維持對華友好關係，也不願打破去年10月達成的脆弱貿易休兵協議。中國手中握有<span style="color:#fff;font-weight:700">關鍵礦產供應鏈</span>這張王牌 — 去年正是稀土出口限制迫使華盛頓重返談判桌。川普雖威脅若北京向伊朗供武將加徵<span style="color:#fff;font-weight:700">50%關稅</span>，但彭博認為概率極低。</p>
+    <div class="data-point">伊朗石油→中國佔比：<span style="color:#fff;font-weight:700">~80%</span> &nbsp;|&nbsp; 佔中國海運原油進口：<span style="color:#fff;font-weight:700">~13%</span> &nbsp;|&nbsp; 川普關稅威脅：<span style="color:#fff;font-weight:700">50%</span> &nbsp;|&nbsp; 中國反制牌：<span style="color:#fff;font-weight:700">關鍵礦產/稀土</span></div>
+    <div class="implication"><div class="label">投資啟示</div>封鎖加劇中美博弈張力。稀土和關鍵礦產是中國最有力的反制工具 — <span style="color:#fff;font-weight:700">關注稀土相關標的（北方稀土、MP Materials）的期權隱含波動率</span>。</div>
+  </div>
+  <div class="article">
+    <div class="article-title">亞洲貨幣估值在伊朗戰爭中持續分化 — BI BEER模型</div>
+    <p>彭博行為均衡匯率（BI BEER）模型顯示，伊朗戰爭推動能源和食品價格高企，加劇了亞洲貨幣估值的兩極分化。避險貨幣如人民幣（高估<span style="color:#fff;font-weight:700">4.3%</span>）和新加坡元（高估<span style="color:#fff;font-weight:700">3.9%</span>）持續偏強，而石油淨進口國貨幣如韓元被嚴重低估<span style="color:#fff;font-weight:700">18.6%</span>，為亞洲最被低估貨幣。台幣接近公允價值（僅低估<span style="color:#fff;font-weight:700">0.4%</span>），馬來西亞令吉高估<span style="color:#fff;font-weight:700">5.4%</span>，泰銖高估幅度從<span style="color:#fff;font-weight:700">7.0%</span>收窄至<span style="color:#fff;font-weight:700">4.7%</span>。值得注意的是，貿易條件取代通膨差成為多數亞洲貨幣的主導驅動因子，利率差則成為人民幣和台幣的主要因素。韓元低估程度可能引起美國關注。</p>
+    <div class="data-point">人民幣高估：<span style="color:#fff;font-weight:700">4.3%</span> &nbsp;|&nbsp; 韓元低估：<span style="color:#fff;font-weight:700">18.6%</span> &nbsp;|&nbsp; 新加坡元高估：<span style="color:#fff;font-weight:700">3.9%</span> &nbsp;|&nbsp; 美元高估（BIS REER）：<span style="color:#fff;font-weight:700">~8%</span> &nbsp;|&nbsp; 台幣：接近公允價值（<span style="color:#fff;font-weight:700">-0.4%</span>）</div>
+    <div class="implication"><div class="label">投資啟示</div>韓元是亞洲最大均值回歸機會，但模型擬合度較弱需謹慎。新加坡元在金管局收緊政策後短期韌性強 — <span style="color:#fff;font-weight:700">做多韓元/做空新加坡元可考慮作為戰爭緩和的套利配對</span>。</div>
+  </div>
+</div>
+
+<div class="section" id="fragmented-world">
+  <h2><span class="tag tag-misc">投資策略</span> 碎片化世界：國防、能源、供應鏈成新主線</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--green)">~35%</div><div class="lbl">MSCI歐洲航太
+國防指數一年漲幅</div></div>
+    <div class="stat"><div class="val" style="color:var(--green)">~600%</div><div class="lbl">Exail Technologies
+自2025年初累漲</div></div>
+    <div class="stat"><div class="val">5000億€</div><div class="lbl">德國基礎設施
+投資計畫</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">碎片化的全球經濟下，投資思路也要變一變</div>
+    <p>全球化並未結束，但已不再輕而易舉。新冠疫情、俄烏衝突、美國貿易戰和伊朗衝突接連敲響警鐘，各國政府將安全置於突出位置，加速向國防、能源和技術領域的結構性轉變。截至2026年，能源、材料、公用事業和工業板塊是MSCI已開發市場指數表現最佳板塊。歐洲引領這一轉變 — MSCI歐洲航空航天與國防指數累計上漲約<span style="color:#fff;font-weight:700">35%</span>，涵蓋萊茵金屬、Leonardo、勞斯萊斯等巨頭。法國無人機製造商<span style="color:#fff;font-weight:700">Exail Technologies</span>自2025年初股價累漲約<span style="color:#fff;font-weight:700">600%</span>。德國推出高達<span style="color:#fff;font-weight:700">5000億歐元</span>基礎設施計畫應對俄羅斯威脅。美國方面，AI數據中心建設投資帶動<span style="color:#fff;font-weight:700">GE Vernova、Vertiv、Eaton</span>等工業股，Madison Air Solutions成為1999年以來美國最大工業類IPO。</p>
+    <div class="data-point">歐洲國防指數漲幅：<span style="color:#fff;font-weight:700">~35%</span>（一年） &nbsp;|&nbsp; Exail Technologies：<span style="color:#fff;font-weight:700">~600%</span>（自2025初） &nbsp;|&nbsp; 德國基建計畫：<span style="color:#fff;font-weight:700">€5000億</span> &nbsp;|&nbsp; 美國最大工業IPO：<span style="color:#fff;font-weight:700">Madison Air Solutions</span>（1999年以來）</div>
+    <div class="implication"><div class="label">投資啟示</div>全球資本正從科技巨頭輪動至「安全經濟」板塊。結構性趨勢而非短期交易 — <span style="color:#fff;font-weight:700">增配歐洲國防（BAE、Thales、Leonardo）、美國電力基建（GE Vernova、Eaton）及大宗商品</span>。</div>
+  </div>
+</div>
+
+<div class="section" id="europe-politics">
+  <h2><span class="tag tag-misc">歐洲政治</span> 歐洲極右翼：失去美國光環，不失選民根基</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--orange)">25-33%</div><div class="lbl">歐洲主要經濟體
+極右翼民調支持率</div></div>
+    <div class="stat"><div class="val">~40%</div><div class="lbl">歐爾班落選
+仍獲得票數</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">2027</div><div class="lbl">法國總統大選
+國民聯盟領先</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">美國民粹主義吸引力減弱不代表歐洲極右翼勢力式微</div>
+    <p>歐爾班在匈牙利長達16年的統治告終，但這並非歐洲民粹主義衰落的信號。儘管伊朗戰爭使川普在歐洲的吸引力進一步削弱 — 從義大利梅洛尼批評川普對教宗的言論，到法國巴德拉批評美國對格陵蘭的威脅 — 極右翼政黨在歐洲主要經濟體的民調支持率仍穩定在<span style="color:#fff;font-weight:700">25%至33%</span>。歐爾班落選仍獲近<span style="color:#fff;font-weight:700">40%</span>選票，真正擊敗他的是國內通膨、經濟乏力和腐敗，而非外交政策。MAGA與MEGA無法兼得：川普議程與歐洲利益的結構性衝突，使極右翼政黨正主動淡化與華盛頓的聯繫。法國國民聯盟在<span style="color:#fff;font-weight:700">2027年</span>大選中占據有利地位，義大利兄弟黨在<span style="color:#fff;font-weight:700">2027年</span>前民調持續領先，德國AfD需等待2029年大選機會。</p>
+    <div class="data-point">匈牙利歐爾班得票：<span style="color:#fff;font-weight:700">~40%</span>（落選） &nbsp;|&nbsp; 法國RN：民調<span style="color:#fff;font-weight:700">領先</span>（2027大選） &nbsp;|&nbsp; 義大利FdI：民調<span style="color:#fff;font-weight:700">持續領先</span> &nbsp;|&nbsp; 德國AfD：<span style="color:#fff;font-weight:700">2029年</span>大選前需物色聯盟夥伴</div>
+    <div class="implication"><div class="label">投資啟示</div>歐洲政治風險並未消退，極右翼執政概率中期內上升。通膨持續高企將加速選民懲罰現任政府 — <span style="color:#fff;font-weight:700">歐洲政策不確定性溢價將長期存在，注意歐元區主權利差擴大風險</span>。</div>
+  </div>
+</div>
+
+<div class="callout" id="takeaways">
+  <div class="callout-title">基金經理人重點摘要</div>
+  <ul>
+    <li><strong>伊朗和談：</strong>停火4/22到期，六大爭議點（霍爾木茲海峽、核問題、制裁、以色列）均無突破跡象。基線情景偏向川普妥協抽身，但持久和平概率極低。**維持能源期權對沖，勿單邊押注油價方向**。</li>
+    <li><strong>中國出口：</strong>Q1出口+14.7%韌性猶在，但伊朗戰爭拖累GDP -0.2至-0.6pp。封鎖觸發中美博弈，稀土是北京最有力反制工具。**關注北京刺激政策時點及稀土標的隱含波動率**。</li>
+    <li><strong>亞洲貨幣：</strong>人民幣高估4.3%（避險需求），韓元低估18.6%（亞洲之最）。貿易條件取代通膨差成主導因子。**戰爭緩和情景下可考慮做多韓元/做空新加坡元配對**。</li>
+    <li><strong>碎片化投資：</strong>安全經濟取代全球化效率，歐洲國防指數一年+35%，德國€5000億基建。結構性趨勢而非短期交易。**增配歐洲國防、美國電力基建及大宗商品**。</li>
+    <li><strong>歐洲政治：</strong>極右翼支持率穩在25-33%，法國RN 2027大選領先。通膨高企加速選民懲罰現任政府。**歐元區主權利差擴大風險長期存在**。</li>
+  </ul>
+</div>
+
+<div class="nav-links">
+  <span><a href="newsletter_52_valuations.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="footer">
+  彭博研究摘要 | 僅供教學與討論用途 | 2026年4月22日<br>
+  資料來源：Bloomberg Intelligence, Bloomberg Economics, Bloomberg News
+</div>
+
+</body>
+</html>

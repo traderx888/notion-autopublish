@@ -39,6 +39,7 @@ from tools.bloomberg_pdf_convert import (
 OUTPUT_DIR = REPO_ROOT / "output"
 STUDENT_HTML = OUTPUT_DIR / "student.html"
 MIN_ARTICLES = 3
+MAX_ARTICLES = 10  # split large topic groups to stay within Claude synthesis limits
 
 # ---------------------------------------------------------------------------
 # Topic metadata
@@ -642,7 +643,16 @@ def build(dry_run: bool = False) -> list[dict]:
         if last_num in state["newsletters"]:
             prev_newsletter = state["newsletters"][last_num]["filename"]
 
+    # Split large groups into chunks of MAX_ARTICLES
+    expanded: list[tuple[list[str], list[dict]]] = []
     for topics, articles in merged:
+        if len(articles) > MAX_ARTICLES:
+            for i in range(0, len(articles), MAX_ARTICLES):
+                expanded.append((topics, articles[i:i + MAX_ARTICLES]))
+        else:
+            expanded.append((topics, articles))
+
+    for topics, articles in expanded:
         if len(articles) < MIN_ARTICLES:
             print(f"  Skipping {topics}: only {len(articles)} articles")
             continue
