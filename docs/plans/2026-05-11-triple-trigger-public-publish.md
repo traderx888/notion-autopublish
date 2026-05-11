@@ -29,3 +29,11 @@
   - Command: `chrome.exe --headless=new --disable-gpu --hide-scrollbars --window-size=1280,1600 --screenshot=<temp screenshot> http://127.0.0.1:8123/20260511_triple_trigger_week_newsletter.html`
   - Result: passed. Screenshot written with 414,684 bytes and visually confirmed the article rendered with Chinese text, masthead, metric cards, and the first embedded table image.
 - Playwright note: `npx.cmd --yes playwright screenshot ...` could not run because Playwright's local Chromium browser payload is not installed. The installed Chrome headless check above covered the browser-render verification without downloading a new browser cache.
+- `git push origin HEAD:main`
+  - Result: passed. Pushed commit `ce7116e` to `origin/main`.
+- `gh run watch 25653670966 --exit-status`
+  - Result: passed. `Deploy to GitHub Pages` completed successfully in 14 seconds.
+  - Note: GitHub emitted a Node.js 20 deprecation annotation for the Pages actions; it did not block deployment.
+- Live URL check:
+  - Command: HTTP GET `https://traderx888.github.io/notion-autopublish/20260511_triple_trigger_week_newsletter.html?cb=20260511-1417`
+  - Result: passed with HTTP 200, 611,820 bytes, title `學海無涯 | 三重觸發週 ─ CPI Day + 習特訪華 + Cerebras IPO`, and four embedded image assets.
