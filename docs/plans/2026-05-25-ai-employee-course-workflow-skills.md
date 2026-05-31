@@ -1,35 +1,40 @@
-# AI Employee Course Workflow Skills Plan
+# AI 員工 — Course Workflow Skills Plan
 
-**Goal:** Stand up the full set of "AI employee" skills that implement the
-backup → knowledge → output/action workflow, so each persona (小備, 小脆,
-小文, 小流, 小課) has a concrete, repo-resident `SKILL.md` that Claude Code can
-discover and execute.
+**Goal:** 把「備份 → 知識萃取 → 輸出 / 行動」這條工作流，從個人 mental model
+變成 repo 裡可 discover / 可執行的 8 個 AI 員工 skills；centerpiece
+`course-backup` 同時把 scraper scaffolding（manifest + diff/sync 契約）一起
+立起來，讓 skill 不只是 playbook，是真的跑得起來的工作流。
 
 **Owner:** Claude Code
 
-**Scope:** Repo-local. New skill folders under `agents/skills/` plus this plan.
-No change to scraper code, publish code, or generated artifact schemas, so no
-`fundman-jarvis` impact. Skills describe how to drive *existing* tooling
-(`browser/` Playwright automation, the `notebooklm` integration, the Notion →
-Threads/LinkedIn/Patreon publish flow); where an implementation surface does not
-yet exist (e.g. a course scraper subclass), the skill names that surface
-explicitly instead of inventing a CLI command.
+**Scope:** Repo-local。新增 `agents/skills/<name>/` 8 個、
+`browser/scrapers/course.py` + `course_skool.py`、`browser/cli.py` 加一條
+`scrape course` route、`tests/test_course_backup.py`、本 plan。
+不動既有 scraper、publish.py、artifact schema → **沒有 fundman-jarvis 影響**。
 
-**Architecture:** Each skill follows the existing
-`telegram-schedule-audit-expert` shape — a `SKILL.md` with `name` +
-`description` frontmatter, a Workflow section, Scope Rules, and a Composes-With
-note that wires the personas into one pipeline. The centerpiece `course-backup`
-also gets a `references/backup-manifest.md` for the artifact layout, the weekly
-diff/sync contract, and the authorized-use boundary the source essay raises.
+`scraped_data/courses/<platform>/<course-slug>/` 是新的產物目錄，但 schema
+是新的、沒有下游消費者，所以是 additive。
 
-**Tech Stack:** Markdown skills only. Referenced runtime: Python 3,
-`browser/base.py` (`BrowserAutomation`, `SCRAPED_DIR`), the `notebooklm`
-package + `python -m notebooklm login`, `publish.py` + Notion Content Calendar,
-Fireflies GraphQL API.
+**Architecture:**
+- Skill 端：每個 skill 一份 `SKILL.md`，沿用既有 `telegram-schedule-audit-expert`
+  的 frontmatter + body 格式。Frontmatter `description` 留英文（skill discovery
+  靠它），body 寫使用者言氣（CN/EN 混）。Centerpiece `course-backup` 多一份
+  `references/backup-manifest.md`，把產物 layout、`manifest.json` schema、weekly
+  diff/sync 契約、授權邊界寫清楚。
+- 程式端：`browser/scrapers/course.py` 提供 `CourseScraper(BrowserAutomation)`
+  抽象 base — 包 manifest / diff / sync 的全部 orchestration（不靠 live
+  browser，可純測）。`browser/scrapers/course_skool.py` 是第一個 platform
+  subclass，DOM selectors 標明 best-effort，有 fallback 走 `wait_for_user`
+  的 manual walk，跑得起來但需使用者第一次跑時驗 selectors。
+- CLI: `python -m browser scrape course --platform skool --course-url <url> [--sync] [--course-slug <slug>]`。
+
+**Tech Stack:** Python 3 + `browser/base.py`（Playwright persistent session）
++ `requests`（resource 下載沿用 browser cookies）+ pytest（orchestration test）
++ Markdown skills。
 
 ---
 
-### Task 1: Backup family (小備 / content-archivist)
+### Task 1: 備份組 skills（小備 / content-archivist）
 
 **Files:**
 - Create: `agents/skills/course-backup/SKILL.md`
@@ -38,18 +43,7 @@ Fireflies GraphQL API.
 - Create: `agents/skills/youtube-channel-to-notebooklm/SKILL.md`
 - Create: `agents/skills/youtube-smart-transcript/SKILL.md`
 
-**Steps:**
-1. course-backup: drive a persistent browser session to enumerate and download
-   course video/text/resources into `scraped_data/courses/`, emit a manifest,
-   support weekly diff/sync, and enforce the personal/non-commercial boundary.
-2. fireflies-meeting-downloader: pull meeting recordings + transcripts via the
-   Fireflies GraphQL API into `scraped_data/meetings/`.
-3. youtube-channel-to-notebooklm: sync a whole channel into a NotebookLM
-   notebook using the repo's `notebooklm` integration.
-4. youtube-smart-transcript: capture and clean a single video transcript into a
-   structured extraction artifact.
-
-### Task 2: Output / Action team (小脆, 小文, 小流, 小課)
+### Task 2: 輸出 / 行動組 skills（小脆、小文、小流、小課）
 
 **Files:**
 - Create: `agents/skills/threads-writer/SKILL.md`
@@ -57,22 +51,36 @@ Fireflies GraphQL API.
 - Create: `agents/skills/chief-of-staff/SKILL.md`
 - Create: `agents/skills/course-designer/SKILL.md`
 
-**Steps:**
-1. threads-writer (小脆): rewrite extracted knowledge into Threads/social
-   short-form, staged as Notion Content Calendar drafts for the publish flow.
-2. copy-reviewer (小文): brand-voice review gate for all outward-facing copy.
-3. chief-of-staff (小流): chief-of-staff long-form synthesis (blogs,
-   retrospectives, decision memos).
-4. course-designer (小課): curriculum, teaching content, and sales-page copy
-   from backed-up/extracted knowledge.
+### Task 3: course-backup scraper scaffolding
 
-### Task 3: Verify and record results
+**Files:**
+- Create: `browser/scrapers/course.py`（`CourseScraper` base + manifest/diff/sync orchestration）
+- Create: `browser/scrapers/course_skool.py`（`SkoolCourseScraper` subclass，Playwright login + DOM 遍歷 + manual fallback）
+- Modify: `browser/cli.py`（加 `course` service + `--platform/--course-url/--course-slug/--sync` flags）
+
+### Task 4: Orchestration 測試（不需 live browser）
+
+**Files:**
+- Create: `tests/test_course_backup.py`
+
+**Cover:**
+- content hash 對 resource 順序不敏感、對 body 編輯敏感
+- stable slug 在 rename 後仍指向同一個 lesson
+- 首次跑 → 全部進 new
+- 第二次跑（無異動）→ idempotent，sync_history 第二筆 0/0/0/0
+- 改 body → changed，舊 `lesson.md` 自動保留為 `lesson.<timestamp>.md`
+- 線上消失 lesson → retired，檔案不刪
+- 純 rename（body 不變）→ unchanged 但 manifest title 跟著刷新
+- capture exception → status=failed，sync_history `failed` +1
+
+### Task 5: Verify
 
 **Commands:**
-- `python3 -c "import pathlib,yaml,sys; [yaml.safe_load(p.read_text().split('---')[1]) for p in pathlib.glob... ]"` — validate every `SKILL.md` frontmatter parses with `name` + `description`.
-- `find agents/skills -name SKILL.md | sort` — confirm all 8 skills exist.
+- `python3 -m pytest tests/test_course_backup.py -v`
+- `find agents/skills -name SKILL.md | sort`
+- frontmatter 驗證：每個 `SKILL.md` 都解析得到 `name` + `description`
 
-**Expected result:**
-- 8 new skill folders, each with a `SKILL.md` whose frontmatter parses and
-  carries a discovery-friendly `description`.
-- course-backup additionally has `references/backup-manifest.md`.
+**Expected:**
+- 14/14 test pass
+- 9 個 SKILL.md（既有 1 + 新增 8），全部 frontmatter 有效
+- `python -m browser scrape course --platform skool --course-url <url>` 在 CLI parser 解得開

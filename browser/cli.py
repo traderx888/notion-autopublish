@@ -8,6 +8,7 @@ Usage:
     python -m browser scrape seekingalpha
     python -m browser scrape luxalgo
     python -m browser scrape all
+    python -m browser scrape course --platform skool --course-url <url> [--sync]
     python -m browser publish patreon [--dry-run] [--newsletter 1]
 """
 
@@ -37,8 +38,25 @@ def build_parser() -> argparse.ArgumentParser:
     scrape_parser = subparsers.add_parser("scrape", help="Scrape content via browser")
     scrape_parser.add_argument(
         "service",
-        choices=["substack", "seekingalpha", "luxalgo", "macromicro", "institutional", "all"],
+        choices=["substack", "seekingalpha", "luxalgo", "macromicro", "institutional", "course", "all"],
         help="Which service to scrape",
+    )
+    scrape_parser.add_argument(
+        "--platform",
+        choices=["skool"],
+        help="Course platform (required for `scrape course`).",
+    )
+    scrape_parser.add_argument(
+        "--course-url",
+        help="Course URL (required for `scrape course`).",
+    )
+    scrape_parser.add_argument(
+        "--course-slug",
+        help="Override the local slug for the course archive directory.",
+    )
+    scrape_parser.add_argument(
+        "--sync", action="store_true",
+        help="Weekly diff/sync mode: only fetch new or changed lessons.",
     )
     scrape_parser.add_argument(
         "--limit", type=int, default=10,
@@ -144,6 +162,22 @@ def run_scraper(args):
             from browser.scrapers.institutional import InstitutionalInsightsScraper
             with InstitutionalInsightsScraper(headless=headless, use_chrome=use_chrome) as scraper:
                 scraper.run(site_keys=targets, limit=limit)
+        elif service == "course":
+            platform = getattr(args, "platform", None)
+            course_url = getattr(args, "course_url", None)
+            if not platform or not course_url:
+                sys.exit("scrape course requires --platform and --course-url")
+            if platform == "skool":
+                from browser.scrapers.course_skool import SkoolCourseScraper
+                with SkoolCourseScraper(
+                    headless=headless,
+                    use_chrome=use_chrome,
+                    course_url=course_url,
+                    course_slug=getattr(args, "course_slug", None),
+                ) as scraper:
+                    scraper.run(sync=getattr(args, "sync", False))
+            else:
+                sys.exit(f"Unsupported course platform: {platform}")
 
 
 def run_publisher(args):

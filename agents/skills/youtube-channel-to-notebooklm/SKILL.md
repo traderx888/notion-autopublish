@@ -3,60 +3,43 @@ name: youtube-channel-to-notebooklm
 description: Mirror an entire YouTube channel (or playlist) into a NotebookLM notebook so the whole body of work becomes queryable as one knowledge base. Use when a creator's channel is worth studying end-to-end, when turning a backlog of saved videos into an AI-queryable source, or when building a per-creator NotebookLM coach.
 ---
 
-# YouTube Channel → NotebookLM (小備 — 頻道級備份)
+# youtube-channel-to-notebooklm（小備 — 頻道級備份）
 
-The **content-archivist** persona for whole-channel video knowledge. Single
-saved videos pile up unwatched; this skill converts an entire channel into one
-NotebookLM notebook you can interrogate, rather than 200 bookmarks you never
-open.
+小備在「整個頻道」這條線的工作。
 
-This skill builds on the repo's existing NotebookLM integration (see the
-NotebookLM sections of `README.md` and `fundamental_research/notebooklm_research.py`).
-For one-off single-video work, use **youtube-smart-transcript** instead.
+>> YouTube 收藏一堆，永遠下次看 <<
 
-## Setup (one-time)
+單支影片改寫成貼文 → 走 `youtube-smart-transcript`。整個頻道想當一個知識庫慢慢查 → 走這個 skill。把頻道整個丟進一本 NotebookLM，從 200 個收藏變成 1 個可以對話的 source。
+
+接 repo 既有的 NotebookLM 整合（見 README 的 NotebookLM 段、`fundamental_research/notebooklm_research.py`）。
+
+## Setup（一次性）
 
 ```bash
 pip install "notebooklm-py[browser]"
-python -m notebooklm login          # opens a browser for Google sign-in
+python -m notebooklm login          # 開瀏覽器登 Google
 ```
 
-- Create one NotebookLM notebook per channel at notebooklm.google.com and copy
-  the ID from the URL (`.../notebook/<NOTEBOOK_ID>`).
-- Optionally set `NOTEBOOKLM_STORAGE_PATH` to control where the session cookie
-  is stored. Sessions expire in ~1–2h; re-run `python -m notebooklm login` on
-  auth errors.
+- 在 notebooklm.google.com 為這個頻道建一個 notebook，從 URL 拿 ID（`.../notebook/<NOTEBOOK_ID>`）
+- 可選：`NOTEBOOKLM_STORAGE_PATH` 控制 session cookie 路徑。Session 約 1-2 小時會過期，掉了就重跑 `python -m notebooklm login`
 
-## Workflow
+## 工作流
 
-1. **Resolve the channel/playlist** to its full list of video URLs (newest →
-   oldest). Capture `video_id`, `title`, `published_at` for each.
-2. **Load the sync ledger** at
-   `scraped_data/youtube/channels/<channel-slug>/synced.json` (video_id →
-   added_at) so re-runs only add videos not already in the notebook — mirror the
-   idempotent `canonicalize_source_url` / `find_source_by_url` pattern the repo
-   already uses for NotebookLM source de-duplication.
-3. **Add each new video as a NotebookLM source** via `NotebookLMClient`. Prefer
-   adding the YouTube URL directly; fall back to adding a captured transcript
-   (delegate to youtube-smart-transcript) when a URL source is rejected.
-4. **Update the ledger** and write a channel `manifest.json` (channel title,
-   notebook_id, counts, last_synced_at).
-5. **Report** videos added vs skipped, and the notebook URL the user can now
-   query.
+1. **解析 channel / playlist** → 完整影片清單（newest → oldest）。記 `video_id`、`title`、`published_at`
+2. **載入 sync ledger** `scraped_data/youtube/channels/<channel-slug>/synced.json`（video_id → added_at）— 同 repo NotebookLM 整合用的去重 pattern（`canonicalize_source_url` / `find_source_by_url`）
+3. **逐支 add 為 NotebookLM source**（`NotebookLMClient`）：
+   - 優先丟 YouTube URL
+   - URL 被拒（少見）→ fallback 用 `youtube-smart-transcript` 抓 transcript 丟上去
+4. **更新 ledger** + 寫 channel `manifest.json`（channel title、notebook_id、counts、last_synced_at）
+5. **回報** added / skipped，把 notebook URL 給使用者直接去查
 
-## Scope Rules
+## Scope
 
-- NotebookLM is **historical-context enrichment**, not the only copy — keep the
-  source list/ledger in `scraped_data/` so the archive survives independent of
-  the notebook.
-- Public videos only; do not attempt members-only or paywalled content here.
-- Default the channel notebook env var (e.g.
-  `YOUTUBE_CHANNEL_NOTEBOOKLM_NOTEBOOK_ID`) so the notebook ID need not be passed
-  every run, matching the repo's `*_NOTEBOOKLM_NOTEBOOK_ID` convention.
+- NotebookLM 是 **歷史脈絡的副本**，不是唯一備份：source list / ledger 留在 `scraped_data/`，notebook 掉了不會全沒
+- 只跑公開影片；會員制 / 付費影片不在這個 skill 的 scope
+- 預設 channel notebook env var（例：`YOUTUBE_CHANNEL_NOTEBOOKLM_NOTEBOOK_ID`），跟 repo 既有的 `*_NOTEBOOKLM_NOTEBOOK_ID` 慣例一致 — 不用每次 pass
 
-## Composes with
+## 串接
 
-- **youtube-smart-transcript** — fallback transcript capture and per-video
-  extraction.
-- **chief-of-staff / course-designer** — query the channel notebook to draft a
-  synthesis or a derived curriculum.
+- **youtube-smart-transcript** — 單支 transcript 抓取 + per-video extraction（也是這個 skill 的 fallback）
+- **chief-of-staff（小流）／ course-designer（小課）**— 對 channel notebook 提問，產出 synthesis / 教學素材
