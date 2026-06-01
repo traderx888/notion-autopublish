@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>彭博研究摘要 #69 — 央行困局與全球利率前景</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --accent: #58a6ff;
+          --green: #3fb950; --red: #f85149; --yellow: #d29922; --text: #c9d1d9; --muted: #8b949e;
+          --orange: #f0883e; --purple: #bc8cff; --cyan: #39d2c0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans TC', 'Microsoft JhengHei', Helvetica, Arial, sans-serif; line-height: 1.7; padding: 20px; max-width: 860px; margin: 0 auto; }
+  h1 { color: #fff; font-size: 1.7em; margin-bottom: 4px; }
+  .subtitle { color: var(--muted); font-size: 0.9em; margin-bottom: 8px; }
+  .issue-badge { display: inline-block; background: rgba(88,166,255,0.15); color: var(--accent); padding: 3px 10px; border-radius: 12px; font-size: 0.8em; font-weight: 600; margin-bottom: 20px; }
+  .tag { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 0.72em; font-weight: 600; margin-right: 4px; }
+  .tag-rates { background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-china { background: rgba(240,136,62,0.15); color: var(--orange); }
+  .tag-japan { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-geo   { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-oil   { background: rgba(210,153,34,0.15); color: var(--yellow); }
+  .tag-trade { background: rgba(210,153,34,0.15); color: var(--yellow); }
+  .tag-growth{ background: rgba(63,185,80,0.15); color: var(--green); }
+  .tag-metals{ background: rgba(188,140,255,0.15); color: var(--purple); }
+  .tag-infl  { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-policy{ background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-val   { background: rgba(63,185,80,0.15); color: var(--green); }
+  .tag-vol   { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-semi  { background: rgba(57,210,192,0.15); color: var(--cyan); }
+  .tag-credit{ background: rgba(188,140,255,0.15); color: var(--purple); }
+  .tag-space { background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-misc  { background: rgba(139,148,158,0.15); color: var(--muted); }
+  .section { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 16px; }
+  .section h2 { color: #fff; font-size: 1.15em; margin-bottom: 12px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+  .section h3 { color: var(--accent); font-size: 0.95em; margin: 14px 0 6px; }
+  .article { margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .article:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .article-title { color: #fff; font-weight: 700; font-size: 0.95em; margin-bottom: 4px; }
+  .article-title-cn { color: var(--muted); font-size: 0.85em; margin-bottom: 8px; }
+  .article p { font-size: 0.9em; margin: 6px 0; }
+  .data-point { background: rgba(255,255,255,0.03); padding: 8px 12px; border-radius: 6px; margin: 8px 0; font-size: 0.85em; }
+  .data-point .num { color: #fff; font-weight: 700; }
+  .implication { background: rgba(88,166,255,0.06); border-left: 3px solid var(--accent); padding: 10px 14px; margin: 10px 0; border-radius: 0 6px 6px 0; font-size: 0.88em; }
+  .implication .label { color: var(--accent); font-weight: 700; font-size: 0.8em; text-transform: uppercase; margin-bottom: 4px; }
+  .callout { background: rgba(210,153,34,0.08); border: 1px solid rgba(210,153,34,0.3); border-radius: 6px; padding: 16px; margin: 16px 0; }
+  .callout-title { color: var(--yellow); font-weight: 700; font-size: 0.95em; margin-bottom: 8px; }
+  .callout ul { padding-left: 18px; }
+  .callout li { margin: 4px 0; font-size: 0.88em; }
+  ul { padding-left: 18px; }
+  li { margin: 3px 0; font-size: 0.88em; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(255,255,255,0.03); padding: 12px; border-radius: 6px; text-align: center; }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: #fff; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
+  .toc { background: rgba(88,166,255,0.05); border: 1px solid rgba(88,166,255,0.2); border-radius: 8px; padding: 16px 20px; margin-bottom: 20px; }
+  .toc-title { color: var(--accent); font-weight: 700; font-size: 0.9em; margin-bottom: 8px; }
+  .toc a { color: var(--accent); text-decoration: none; font-size: 0.88em; }
+  .toc a:hover { text-decoration: underline; }
+  .toc ol { padding-left: 20px; }
+  .toc li { margin: 4px 0; }
+  .nav-links { display: flex; justify-content: space-between; margin: 20px 0; font-size: 0.85em; }
+  .nav-links a { color: var(--accent); text-decoration: none; }
+  .nav-links a:hover { text-decoration: underline; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(255,255,255,0.03); padding: 12px; border-radius: 6px; text-align: center; }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: #fff; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
+  .footer { text-align: center; color: var(--muted); font-size: 0.75em; margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--border); }
+</style>
+<script>if(window.self===window.top&&sessionStorage.getItem("student_auth")!=="1"){document.body.innerHTML="";window.location.replace("student.html");}</script>
+</head>
+<body>
+
+<h1>彭博研究摘要</h1>
+<p class="subtitle">第69期 | 央行困局與全球利率前景</p>
+<span class="issue-badge">2026年五月中旬更新</span>
+
+<div class="nav-links">
+  <span><a href="newsletter_68_geopolitics.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="toc">
+  <div class="toc-title">目錄</div>
+  <ol>
+    <li><a href="#fed-hold">聯準會 鷹鴿分裂，按兵不動</a></li>
+    <li><a href="#boj-hold">日銀 政治壓力壓倒鷹派，6月加息在望</a></li>
+    <li><a href="#china-lpr">中國央行 LPR按兵不動，下半年降息可期</a></li>
+    <li><a href="#takeaways">基金經理人重點摘要</a></li>
+  </ol>
+</div>
+
+<div class="section" id="fed-hold">
+  <h2><span class="tag tag-misc">聯準會</span> 鷹鴿分裂，按兵不動</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val">3.50-3.75%</div><div class="lbl">聯邦基金利率
+維持不變</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">4票</div><div class="lbl">4月會議異議票
+鮑威爾任內最多</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">0次</div><div class="lbl">年內預期降息
+（若重新點陣圖）</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">3月會議以來聯儲會官員講話表明FOMC立場更趨謹慎</div>
+    <p>自3月FOMC會議以來，多位聯儲會官員的發言顯示委員會維持利率不變的傾向進一步加大。紐約聯儲行長Williams和舊金山聯儲行長Daly均認為在高度不確定環境下不應給出堅定指引。理事Milan仍是最鴿派成員，預計未來一年降息<span style="color:#fff;font-weight:700">100個基點</span>；Bowman預期年底前降息三次。鮑威爾可能屬於一次降息陣營，稱政策「處在讓我們可以靜觀其變的良好水平」。彭博經濟研究預計上半年利率維持不變，但隨著勞動力市場走弱，<span style="color:#fff;font-weight:700">第四季度可能降息50個基點</span>。</p>
+    <div class="data-point">Milan預測：<span style="color:#fff;font-weight:700">未來一年降息100bp</span> &nbsp;|&nbsp; Bowman預測：<span style="color:#fff;font-weight:700">年底前降息三次</span> &nbsp;|&nbsp; 彭博預測：<span style="color:#fff;font-weight:700">Q4降息50bp</span> &nbsp;|&nbsp; 點陣圖中位數傾向：<span style="color:#fff;font-weight:700">0-1次降息</span></div>
+    <div class="implication"><div class="label">投資啟示</div>Fed上半年按兵不動概率極高，鷹鴿分歧加劇。短期內<span style="color:#fff;font-weight:700">避免做多長久期美債</span>，等待Q4降息窗口再佈局前端利率期貨。</div>
+  </div>
+  <div class="article">
+    <div class="article-title">FOMC 4月會議：三位鷹派異議蓋過鮑威爾最後一戰</div>
+    <p>4月28-29日FOMC會議維持利率不變，但四張異議票震動市場。三位地區聯儲行長（Hammack、Logan、Kashkari）主張刪除聲明中暗示下一步為降息的「additional」措辭，意在將政策立場轉為對稱；理事Milan則主張降息。聲明將通膨描述從「somewhat elevated」升級為<span style="color:#fff;font-weight:700">「elevated」</span>，能源價格被部分歸因。這是鮑威爾任內異議票最多的一次會議，也可能是他最後一次主持FOMC。若重新發布點陣圖，預計將顯示<span style="color:#fff;font-weight:700">年內零降息</span>——較3月版本的一次降息進一步收緊。</p>
+    <div class="data-point">異議票：<span style="color:#fff;font-weight:700">4票（鮑威爾任內最多）</span> &nbsp;|&nbsp; 通膨措辭升級：<span style="color:#fff;font-weight:700">elevated</span> &nbsp;|&nbsp; 隱含點陣圖：<span style="color:#fff;font-weight:700">年內0次降息</span> &nbsp;|&nbsp; 鷹派主張：<span style="color:#fff;font-weight:700">刪除easing bias</span></div>
+    <div class="implication"><div class="label">投資啟示</div>Warsh接任後面臨嚴重分裂委員會，短期降息幾無可能。<span style="color:#fff;font-weight:700">做空短期利率期貨</span>（如SOFR Jun26）或為可行策略。</div>
+  </div>
+  <div class="article">
+    <div class="article-title">滯脹恐懼：油價衝擊令聯儲會陷入政策困境</div>
+    <p>伊朗戰爭引發的油價衝擊正重燃「輕度滯脹」憂慮——通膨黏性上升的同時經濟增長和勞動力動能走軟，令聯儲會陷入兩難。當前美國通膨軌跡與<span style="color:#fff;font-weight:700">1970年代</span>中東衝突期間的模式驚人相似：初始通膨飆升、部分回落、隨後出現更持久的第二波上行。3月份股債金三殺的傳統相關性已經瓦解。汽油價格本周突破<span style="color:#fff;font-weight:700">每加侖4美元</span>，為2022年以來首次。若類比成立，一個持續數年的通膨體制可能正在形成。</p>
+    <div class="data-point">汽油價格：<span style="color:#fff;font-weight:700">突破$4/加侖（2022年來首次）</span> &nbsp;|&nbsp; Fed 3月通膨預測上調：<span style="color:#fff;font-weight:700">2.4%→2.7%</span> &nbsp;|&nbsp; 油價3月漲幅：<span style="color:#fff;font-weight:700">30%</span> &nbsp;|&nbsp; 歷史類比：<span style="color:#fff;font-weight:700">1967-1982滯脹期</span></div>
+    <div class="implication"><div class="label">投資啟示</div>滯脹環境下股債同跌風險高。<span style="color:#fff;font-weight:700">增配實物資產（黃金、大宗商品）</span>，減持長久期債券和高估值成長股。</div>
+  </div>
+  <div class="article">
+    <div class="article-title">沃什參議院聽證會：五大關注問題</div>
+    <p>川普提名的新任聯儲會主席凱文·沃什將於4月21日出席參議院確認聽證會。五大焦點包括：聯儲會獨立性底線、地區聯儲行長去留權、降息空間、FOMC溝通策略改革（沃什曾批評點陣圖和過多公開發言），以及聽證會能否如期舉行——共和黨參議員Tillis以鮑威爾大樓翻新調查為由威脅阻擋提名。年初市場曾預計<span style="color:#fff;font-weight:700">兩次降息</span>，伊朗戰爭後降息預期已煙消雲散，部分分析師甚至預測加息。4月16日停火消息後期貨利率略有回落，但仍不及年初樂觀。</p>
+    <div class="data-point">年初市場預期：<span style="color:#fff;font-weight:700">降息2次</span> &nbsp;|&nbsp; 戰後市場預期：<span style="color:#fff;font-weight:700">0次或加息</span> &nbsp;|&nbsp; 沃什立場：<span style="color:#fff;font-weight:700">反對點陣圖、限制Fed溝通</span> &nbsp;|&nbsp; 聽證風險：<span style="color:#fff;font-weight:700">Tillis可能阻擋</span></div>
+    <div class="implication"><div class="label">投資啟示</div>Warsh上任後可能取消點陣圖，降低Fed前瞻指引透明度。<span style="color:#fff;font-weight:700">利率波動率將結構性上升</span>——考慮買入MOVE指數相關產品。</div>
+  </div>
+</div>
+
+<div class="section" id="boj-hold">
+  <h2><span class="tag tag-misc">日銀</span> 政治壓力壓倒鷹派，6月加息在望</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val">0.75%</div><div class="lbl">政策利率
+維持不變</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">6:3</div><div class="lbl">4月投票結果
+三人主張加息</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">2.8%</div><div class="lbl">FY2026核心CPI
+預測（上修）</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">日本央行4月可能按兵不動——政治壓力或是主要原因</div>
+    <p>彭博經濟研究調整預測，認為日本央行4月會議將維持利率在<span style="color:#fff;font-weight:700">0.75%</span>不變，下次加息推遲至6月。表面原因是伊朗戰爭的不確定性，但真正原因是高市政府的親刺激政策立場施壓。自3月鷹派會議以來，不確定性並未實質性加劇，央行未能捍衛其獨立性才是關鍵。市場影響方面：日圓將面臨貶值壓力（但跌破<span style="color:#fff;font-weight:700">160</span>的風險較低，因財務大臣片山與美國貝森特可能聯手穩定匯率）；中長期JGB殖利率面臨上行壓力；央行將通膨預測上調至遠高於<span style="color:#fff;font-weight:700">2%</span>目標，卻按兵不動，將令市場質疑其價格穩定承諾。</p>
+    <div class="data-point">政策利率：<span style="color:#fff;font-weight:700">0.75%（遠低於中性）</span> &nbsp;|&nbsp; 加息概率（會前）：<span style="color:#fff;font-weight:700">~70%→實際按兵不動</span> &nbsp;|&nbsp; 日圓風險線：<span style="color:#fff;font-weight:700">160</span> &nbsp;|&nbsp; 下次加息預期：<span style="color:#fff;font-weight:700">6月</span></div>
+    <div class="implication"><div class="label">投資啟示</div>BOJ按兵不動加劇日圓貶值壓力。<span style="color:#fff;font-weight:700">減持日圓套利倉位風險</span>；關注超長期JGB波動——6月縮減購債審查前<span style="color:#fff;font-weight:700">做空30年JGB</span>或有機會。</div>
+  </div>
+  <div class="article">
+    <div class="article-title">BOJ 4月決議：三位委員異議，油價衝擊加劇鷹派壓力</div>
+    <p>日本央行4月28日以<span style="color:#fff;font-weight:700">6比3</span>票決維持利率不變，但異議人數從上次的1人增至3人（高田創、田村直樹、中川順子均主張加息至1%）。中川的轉向是鷹派意外。央行大幅上調通膨展望：FY2026核心CPI從1月的<span style="color:#fff;font-weight:700">1.9%</span>升至<span style="color:#fff;font-weight:700">2.8%</span>，FY2027從2.0%升至2.3%。經濟增長預測因能源成本壓力被下修，但仍維持在潛在增速<span style="color:#fff;font-weight:700">0.7%</span>附近。彭博經濟研究認為6月加息至<span style="color:#fff;font-weight:700">1%</span>仍是基準預測，但高市政府的施壓令前景不確定。</p>
+    <div class="data-point">異議票：<span style="color:#fff;font-weight:700">3/9（高田、田村、中川）</span> &nbsp;|&nbsp; FY2026 CPI預測上修：<span style="color:#fff;font-weight:700">1.9%→2.8%</span> &nbsp;|&nbsp; FY2027 CPI：<span style="color:#fff;font-weight:700">2.0%→2.3%</span> &nbsp;|&nbsp; 6月目標利率：<span style="color:#fff;font-weight:700">1.0%</span></div>
+    <div class="implication"><div class="label">投資啟示</div>三位異議委員顯示BOJ內部鷹派勢力壯大，6月加息概率高。<span style="color:#fff;font-weight:700">做多日圓（USD/JPY空頭）</span>以押注6月政策轉向。</div>
+  </div>
+  <div class="article">
+    <div class="article-title">植田並未轉向鴿派——日本央行仍有可能在4月加息</div>
+    <p>植田和男4月14日講話雖提及油價下行風險，但彭博經濟研究認為這並非鴿派轉向，而是重申既有立場。市場原本期待加息信號，未獲明確指引後預期從<span style="color:#fff;font-weight:700">60%</span>降至<span style="color:#fff;font-weight:700">30%</span>。彭博維持4月和9月各加息25bp的預測，年底政策利率升至<span style="color:#fff;font-weight:700">1.25%</span>。關鍵假設：伊朗戰爭Q2結束，油價從$110/桶回落至年底$85。通膨率在2027年初升至接近<span style="color:#fff;font-weight:700">5%</span>，2026年GDP增速放緩至<span style="color:#fff;font-weight:700">0.2%</span>。春季工資談判大幅加薪和短觀調查顯示的通膨壓力，增強了央行加息傾向。</p>
+    <div class="data-point">利率路徑預測：<span style="color:#fff;font-weight:700">4月+9月各加25bp→1.25%</span> &nbsp;|&nbsp; 油價假設：<span style="color:#fff;font-weight:700">Q2均$110→年底$85</span> &nbsp;|&nbsp; 2027年通膨峰值：<span style="color:#fff;font-weight:700">~5%</span> &nbsp;|&nbsp; 2026年GDP：<span style="color:#fff;font-weight:700">0.2%</span></div>
+    <div class="implication"><div class="label">投資啟示</div>日本滯脹風險升溫。<span style="color:#fff;font-weight:700">做多日本盈虧平衡通膨率</span>（BEI）；若BOJ如期加息，日圓短期反彈空間可觀。</div>
+  </div>
+</div>
+
+<div class="section" id="china-lpr">
+  <h2><span class="tag tag-misc">中國央行</span> LPR按兵不動，下半年降息可期</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val">3.00%</div><div class="lbl">1年期LPR
+連續11個月不變</div></div>
+    <div class="stat"><div class="val">3.50%</div><div class="lbl">5年期LPR
+維持不變</div></div>
+    <div class="stat"><div class="val" style="color:var(--green)">-20bp</div><div class="lbl">2026年預期
+政策利率降幅</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">中國LPR料維持不變——銀行靜待央行指引</div>
+    <p>中國商業銀行預計4月20日連續第<span style="color:#fff;font-weight:700">11個月</span>維持LPR不變：1年期<span style="color:#fff;font-weight:700">3.00%</span>、5年期<span style="color:#fff;font-weight:700">3.50%</span>。自2025年5月降息10bp以來，央行一直按兵不動。商業銀行淨息差已然收窄，在央行不降息的情況下缺乏下調貸款利率的動力。2026年下半年降息可能性更大——第一季度穩健增長和聯儲會政策路徑不確定性支持耐心觀望。對中國而言，伊朗戰爭對經濟增長的威脅大於對通膨的上行風險，中長期內央行將維持寬鬆取向。</p>
+    <div class="data-point">LPR不變月數：<span style="color:#fff;font-weight:700">連續11個月</span> &nbsp;|&nbsp; 上次降息：<span style="color:#fff;font-weight:700">2025年5月（-10bp）</span> &nbsp;|&nbsp; 下次降息窗口：<span style="color:#fff;font-weight:700">2026年H2</span> &nbsp;|&nbsp; 戰爭影響：<span style="color:#fff;font-weight:700">增長風險&gt;通膨風險</span></div>
+    <div class="implication"><div class="label">投資啟示</div>中國利率短期無下行空間，但H2寬鬆明確。<span style="color:#fff;font-weight:700">現階段持有中國國債（穩定carry）</span>，H2降息前加倉長久期中國利率債。</div>
+  </div>
+  <div class="article">
+    <div class="article-title">LPR持穩確認——下半年降息20bp、降準50bp可期</div>
+    <p>4月20日LPR如期維持不變，符合所有參與彭博調查經濟學家的預期。彭博經濟研究預計2026年全年央行將政策利率下調<span style="color:#fff;font-weight:700">20個基點</span>並降準<span style="color:#fff;font-weight:700">50個基點</span>，相比2025年降息10bp+降準50bp力度更大。伊朗戰爭給中國經濟增長帶來的下行風險大於通膨上行風險，支持中期寬鬆取向。但Q1穩健增長為央行提供了觀望空間，短期內不會急於行動。銀行淨息差承壓是LPR不動的核心原因——需要央行先動，銀行才會跟進。</p>
+    <div class="data-point">2026年預期降息：<span style="color:#fff;font-weight:700">-20bp（vs 2025年-10bp）</span> &nbsp;|&nbsp; 預期降準：<span style="color:#fff;font-weight:700">-50bp</span> &nbsp;|&nbsp; Q1 GDP：<span style="color:#fff;font-weight:700">穩健</span> &nbsp;|&nbsp; 銀行動力：<span style="color:#fff;font-weight:700">需央行先行</span></div>
+    <div class="implication"><div class="label">投資啟示</div>H2降息確定性高，<span style="color:#fff;font-weight:700">提前佈局中國5年期國債期貨多頭</span>。降準釋放流動性利好A股銀行板塊估值修復。</div>
+  </div>
+</div>
+
+<div class="callout" id="takeaways">
+  <div class="callout-title">基金經理人重點摘要</div>
+  <ul>
+    <li><strong>聯準會：</strong>4月FOMC四票異議創鮑威爾任內紀錄，通膨措辭升級至「elevated」。上半年零降息，Q4視勞動力市場或降50bp。**避免過早做多美債久期**。</li>
+    <li><strong>沃什接任：</strong>可能取消點陣圖、限制Fed溝通，利率波動率結構性上升。**考慮買入利率波動率（MOVE相關）**。</li>
+    <li><strong>日銀：</strong>4月按兵不動但三位委員異議，6月加息至1%概率高。通膨預測大幅上修至2.8%。**做多日圓、關注超長期JGB波動**。</li>
+    <li><strong>中國央行：</strong>LPR連續11個月不動，H2降息20bp+降準50bp。**提前佈局中國長久期利率債多頭**。</li>
+    <li><strong>滯脹風險：</strong>油價衝擊令全球通膨軌跡類比1970年代。汽油突破$4/加侖。**增配實物資產（黃金、商品），減持高估值成長股**。</li>
+  </ul>
+</div>
+
+<div class="nav-links">
+  <span><a href="newsletter_68_geopolitics.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="footer">
+  彭博研究摘要 | 僅供教學與討論用途 | 2026年5月17日<br>
+  資料來源：Bloomberg Intelligence, Bloomberg Economics, Bloomberg News
+</div>
+
+</body>
+</html>

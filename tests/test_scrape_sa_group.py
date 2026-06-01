@@ -35,8 +35,21 @@ def test_dedupe_content_blocks_normalizes_whitespace_and_preserves_order():
     )
 
     assert deduped == [
-        "First block with spaces",
+        "First block\n\nwith spaces",
         "Second block",
+    ]
+
+
+def test_dedupe_content_blocks_preserves_source_line_boundaries():
+    deduped = sa_group.dedupe_content_blocks(
+        [
+            "Robert P. Balan\nModerator\nLeader\nMay 7, 2026 10:58 PM\nPAM BUYS 240 CONTRACTS",
+            "Robert P. Balan Moderator Leader May 7, 2026 10:58 PM PAM BUYS 240 CONTRACTS",
+        ]
+    )
+
+    assert deduped == [
+        "Robert P. Balan\nModerator\nLeader\nMay 7, 2026 10:58 PM\nPAM BUYS 240 CONTRACTS",
     ]
 
 

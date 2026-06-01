@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>彭博研究摘要 #74 — 貿易新局：關稅退款、航運中斷與再生能源崛起</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --accent: #58a6ff;
+          --green: #3fb950; --red: #f85149; --yellow: #d29922; --text: #c9d1d9; --muted: #8b949e;
+          --orange: #f0883e; --purple: #bc8cff; --cyan: #39d2c0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans TC', 'Microsoft JhengHei', Helvetica, Arial, sans-serif; line-height: 1.7; padding: 20px; max-width: 860px; margin: 0 auto; }
+  h1 { color: #fff; font-size: 1.7em; margin-bottom: 4px; }
+  .subtitle { color: var(--muted); font-size: 0.9em; margin-bottom: 8px; }
+  .issue-badge { display: inline-block; background: rgba(88,166,255,0.15); color: var(--accent); padding: 3px 10px; border-radius: 12px; font-size: 0.8em; font-weight: 600; margin-bottom: 20px; }
+  .tag { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 0.72em; font-weight: 600; margin-right: 4px; }
+  .tag-rates { background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-china { background: rgba(240,136,62,0.15); color: var(--orange); }
+  .tag-japan { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-geo   { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-oil   { background: rgba(210,153,34,0.15); color: var(--yellow); }
+  .tag-trade { background: rgba(210,153,34,0.15); color: var(--yellow); }
+  .tag-growth{ background: rgba(63,185,80,0.15); color: var(--green); }
+  .tag-metals{ background: rgba(188,140,255,0.15); color: var(--purple); }
+  .tag-infl  { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-policy{ background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-val   { background: rgba(63,185,80,0.15); color: var(--green); }
+  .tag-vol   { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-semi  { background: rgba(57,210,192,0.15); color: var(--cyan); }
+  .tag-credit{ background: rgba(188,140,255,0.15); color: var(--purple); }
+  .tag-space { background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-misc  { background: rgba(139,148,158,0.15); color: var(--muted); }
+  .section { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 16px; }
+  .section h2 { color: #fff; font-size: 1.15em; margin-bottom: 12px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+  .section h3 { color: var(--accent); font-size: 0.95em; margin: 14px 0 6px; }
+  .article { margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .article:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .article-title { color: #fff; font-weight: 700; font-size: 0.95em; margin-bottom: 4px; }
+  .article-title-cn { color: var(--muted); font-size: 0.85em; margin-bottom: 8px; }
+  .article p { font-size: 0.9em; margin: 6px 0; }
+  .data-point { background: rgba(255,255,255,0.03); padding: 8px 12px; border-radius: 6px; margin: 8px 0; font-size: 0.85em; }
+  .data-point .num { color: #fff; font-weight: 700; }
+  .implication { background: rgba(88,166,255,0.06); border-left: 3px solid var(--accent); padding: 10px 14px; margin: 10px 0; border-radius: 0 6px 6px 0; font-size: 0.88em; }
+  .implication .label { color: var(--accent); font-weight: 700; font-size: 0.8em; text-transform: uppercase; margin-bottom: 4px; }
+  .callout { background: rgba(210,153,34,0.08); border: 1px solid rgba(210,153,34,0.3); border-radius: 6px; padding: 16px; margin: 16px 0; }
+  .callout-title { color: var(--yellow); font-weight: 700; font-size: 0.95em; margin-bottom: 8px; }
+  .callout ul { padding-left: 18px; }
+  .callout li { margin: 4px 0; font-size: 0.88em; }
+  ul { padding-left: 18px; }
+  li { margin: 3px 0; font-size: 0.88em; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(255,255,255,0.03); padding: 12px; border-radius: 6px; text-align: center; }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: #fff; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
+  .toc { background: rgba(88,166,255,0.05); border: 1px solid rgba(88,166,255,0.2); border-radius: 8px; padding: 16px 20px; margin-bottom: 20px; }
+  .toc-title { color: var(--accent); font-weight: 700; font-size: 0.9em; margin-bottom: 8px; }
+  .toc a { color: var(--accent); text-decoration: none; font-size: 0.88em; }
+  .toc a:hover { text-decoration: underline; }
+  .toc ol { padding-left: 20px; }
+  .toc li { margin: 4px 0; }
+  .nav-links { display: flex; justify-content: space-between; margin: 20px 0; font-size: 0.85em; }
+  .nav-links a { color: var(--accent); text-decoration: none; }
+  .nav-links a:hover { text-decoration: underline; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(255,255,255,0.03); padding: 12px; border-radius: 6px; text-align: center; }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: #fff; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
+  .footer { text-align: center; color: var(--muted); font-size: 0.75em; margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--border); }
+</style>
+<script>if(window.self===window.top&&sessionStorage.getItem("student_auth")!=="1"){document.body.innerHTML="";window.location.replace("student.html");}</script>
+</head>
+<body>
+
+<h1>彭博研究摘要</h1>
+<p class="subtitle">第74期 | 貿易新局：關稅退款、航運中斷與再生能源崛起</p>
+<span class="issue-badge">2026年五月中旬更新</span>
+
+<div class="nav-links">
+  <span><a href="newsletter_73_japan.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="toc">
+  <div class="toc-title">目錄</div>
+  <ol>
+    <li><a href="#tariff-refund">關稅 最高院裁定違法，關稅退款啟動</a></li>
+    <li><a href="#hormuz-blockade">地緣 霍爾木茲海峽梗阻，非能源貿易受創</a></li>
+    <li><a href="#renewables-ai">再生能源 AI算力需求推升歐洲再生能源行情</a></li>
+    <li><a href="#takeaways">基金經理人重點摘要</a></li>
+  </ol>
+</div>
+
+<div class="section" id="tariff-refund">
+  <h2><span class="tag tag-misc">關稅</span> 最高院裁定違法，關稅退款啟動</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val">~30萬</div><div class="lbl">符合退款資格
+的企業數</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">僅20%</div><div class="lbl">預計實際獲得
+退款的企業</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">70¢/$</div><div class="lbl">對沖基金收購
+退款權的價格</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">美國最高法院裁定緊急關稅違法 — 退款啟動但覆蓋率堪憂</div>
+    <p>美國最高法院裁定特朗普動用緊急權力加徵關稅屬違法行為，海關自4月20日起開始處理退款。然而政府文件顯示，約<span style="color:#fff;font-weight:700">30萬</span>家符合資格的企業中，僅約<span style="color:#fff;font-weight:700">20%</span>能實際獲得退款，原因是絕大多數進口商未註冊電子支付。資金壓力下，全球對沖基金已開始向現金短缺的進口商收購退款權，優質賣方的成交價高達面值的<span style="color:#fff;font-weight:700">70美分</span>。這一「關稅退款套利」正在成為另類投資的新戰場。</p>
+    <div class="data-point">符合退款企業：<span style="color:#fff;font-weight:700">~30萬家</span> &nbsp;|&nbsp; 預計獲退款比例：<span style="color:#fff;font-weight:700">僅20%</span> &nbsp;|&nbsp; 對沖基金收購價：<span style="color:#fff;font-weight:700">最高70¢/$</span> &nbsp;|&nbsp; 裁定依據：<span style="color:#fff;font-weight:700">緊急權力濫用</span></div>
+    <div class="implication"><div class="label">投資啟示</div>退款覆蓋率極低，進口商現金流壓力未解。<span style="color:#fff;font-weight:700">關注關稅退款套利基金機會</span>，同時留意進口依賴型企業的短期信用風險。</div>
+  </div>
+</div>
+
+<div class="section" id="hormuz-blockade">
+  <h2><span class="tag tag-geo">地緣</span> 霍爾木茲海峽梗阻，非能源貿易受創</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val">4.5%</div><div class="lbl">海峽佔全球
+年貿易量</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">2.4%</div><div class="lbl">非能源貿易
+受影響比例</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">7%</div><div class="lbl">全球化肥出口
+經波斯灣港口</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">霍爾木茲海峽封鎖衝擊蔓延 — 金屬、化肥、水泥供應鏈告急</div>
+    <p>美伊戰爭導致霍爾木茲海峽通航量銳減，特朗普政府的海上封鎖政策短期內不會改變。彭博經濟研究估算，除能源外，約<span style="color:#fff;font-weight:700">2.4%</span>的全球非能源貿易受到影響。波斯灣是全球近<span style="color:#fff;font-weight:700">7%</span>化肥、<span style="color:#fff;font-weight:700">6%</span>貴金屬、<span style="color:#fff;font-weight:700">5.3%</span>鋁製品及<span style="color:#fff;font-weight:700">4.4%</span>水泥的出口來源地。印度約四分之一的水泥進口及五分之一的化肥進口面臨風險；澳大利亞化肥、土耳其與南非貴金屬出口同樣受創。巴林和阿聯酋逾半數貿易可能受阻，東非國家因依賴波斯灣中轉也遭嚴重衝擊。</p>
+    <div class="data-point">全球非能源貿易風險敞口：<span style="color:#fff;font-weight:700">2.4%</span> &nbsp;|&nbsp; 印度非能源出口受阻：<span style="color:#fff;font-weight:700">~7.5%</span> &nbsp;|&nbsp; 土耳其出口風險：<span style="color:#fff;font-weight:700">6%</span> &nbsp;|&nbsp; 波斯灣化肥出口佔全球：<span style="color:#fff;font-weight:700">近7%</span></div>
+    <div class="implication"><div class="label">投資啟示</div>化肥與金屬供應鏈收緊利好相關商品價格。<span style="color:#fff;font-weight:700">做多鉀肥（NTR、MOS）及鋁期貨</span>；印度水泥與化肥股面臨成本壓力，<span style="color:#fff;font-weight:700">減持印度建材板塊</span>。</div>
+  </div>
+</div>
+
+<div class="section" id="renewables-ai">
+  <h2><span class="tag tag-misc">再生能源</span> AI算力需求推升歐洲再生能源行情</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--green)">+30%</div><div class="lbl">UBS再生能源
+股票籃子YTD</div></div>
+    <div class="stat"><div class="val" style="color:var(--green)">20x</div><div class="lbl">遠期P/E
+歷史低位</div></div>
+    <div class="stat"><div class="val" style="color:var(--green)">-25%</div><div class="lbl">相對成長股
+估值折價</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">AI交易回歸，歐洲再生能源成最佳受益標的</div>
+    <p>投資者正將歐洲再生能源視為AI與能源獨立的最佳交匯點。貝萊德國際首席投資官Helen Jewell指出，AI帶動的電力需求是「被低估的AI故事」，看好再生能源、電池儲能及電網基礎設施。UBS再生能源股票籃子今年已飆漲近<span style="color:#fff;font-weight:700">30%</span>，歐洲標的表現優於全球同業。關鍵在於估值仍具吸引力：遠期P/E約<span style="color:#fff;font-weight:700">20倍</span>，相對成長股折價達<span style="color:#fff;font-weight:700">25%</span>。本季財報印證趨勢——Siemens Energy上調全年展望，Nordex業績超預期。Solaria增資獲<span style="color:#fff;font-weight:700">6.7倍</span>超額認購，僅跌<span style="color:#fff;font-weight:700">3.7%</span>，顯示市場需求強勁。</p>
+    <div class="data-point">UBS籃子YTD漲幅：<span style="color:#fff;font-weight:700">近30%</span> &nbsp;|&nbsp; 遠期P/E：<span style="color:#fff;font-weight:700">~20x</span>（vs成長股折價25%） &nbsp;|&nbsp; Solaria增資超額認購：<span style="color:#fff;font-weight:700">6.7倍</span> &nbsp;|&nbsp; Siemens Energy：<span style="color:#fff;font-weight:700">上調全年展望</span></div>
+    <div class="implication"><div class="label">投資啟示</div>歐洲再生能源估值便宜且有政策+AI雙重催化。<span style="color:#fff;font-weight:700">增持歐洲電網與風電標的（Siemens Energy、Nordex）</span>，作為AI主題的非美國敞口配置。</div>
+  </div>
+</div>
+
+<div class="callout" id="takeaways">
+  <div class="callout-title">基金經理人重點摘要</div>
+  <ul>
+    <li><strong>關稅退款：</strong>最高院裁定違法但僅20%企業能實際獲款。關注對沖基金的退款套利機會（70¢/$成交價）。</li>
+    <li><strong>霍爾木茲海峽：</strong>非能源貿易2.4%受阻，化肥/鋁/貴金屬供應收緊。做多鉀肥及鋁期貨，減持印度建材。</li>
+    <li><strong>歐洲再生能源：</strong>UBS籃子YTD+30%，遠期P/E僅20x且折價成長股25%。增持Siemens Energy、Nordex等電網風電股。</li>
+    <li><strong>地緣風險定價：</strong>油價$100+可持續性存疑，但航運中斷對大宗商品的二階效應（化肥、金屬）仍被低估。</li>
+    <li><strong>美股財報週：</strong>GE受國防開支驅動（分析師目標價+69%）；Tesla銷量料反彈；SK Hynix反映AI記憶體需求。</li>
+  </ul>
+</div>
+
+<div class="nav-links">
+  <span><a href="newsletter_73_japan.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="footer">
+  彭博研究摘要 | 僅供教學與討論用途 | 2026年5月17日<br>
+  資料來源：Bloomberg Intelligence, Bloomberg Economics, Bloomberg News
+</div>
+
+</body>
+</html>

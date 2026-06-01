@@ -23,7 +23,7 @@ class TelegramScheduleAuditTests(unittest.TestCase):
                             "JARVIS-Reminder-schedule-audit": {
                                 "enabled": True,
                                 "owner_repo": "fundman-jarvis",
-                                "schedule": "Mon-Fri 06:15 HKT",
+                                "schedule": "Mon-Fri 06:05,15:40,22:35 HKT",
                                 "catchup_on_resume": True,
                                 "catchup_window_hours": 18,
                             }
@@ -42,7 +42,7 @@ class TelegramScheduleAuditTests(unittest.TestCase):
 
             self.assertTrue(decision["should_send"])
             self.assertEqual(decision["reason"], "missed_slot_unsent")
-            self.assertEqual(decision["slot_time_hkt"], "2026-03-26T06:15:00+08:00")
+            self.assertEqual(decision["slot_time_hkt"], "2026-03-26T06:05:00+08:00")
 
     def test_resolve_resume_catchup_decision_skips_when_slot_already_sent(self):
         with tempfile.TemporaryDirectory() as tmp:
@@ -57,7 +57,7 @@ class TelegramScheduleAuditTests(unittest.TestCase):
                             "JARVIS-Reminder-schedule-audit": {
                                 "enabled": True,
                                 "owner_repo": "fundman-jarvis",
-                                "schedule": "Mon-Fri 06:15 HKT",
+                                "schedule": "Mon-Fri 06:05,15:40,22:35 HKT",
                                 "catchup_on_resume": True,
                                 "catchup_window_hours": 18,
                             }
@@ -69,7 +69,7 @@ class TelegramScheduleAuditTests(unittest.TestCase):
             state_path.write_text(
                 json.dumps(
                     {
-                        "last_sent_slot_hkt": "2026-03-26T06:15:00+08:00",
+                        "last_sent_slot_hkt": "2026-03-26T06:05:00+08:00",
                         "last_sent_at": "2026-03-26T09:01:00+08:00",
                     }
                 ),
@@ -85,7 +85,170 @@ class TelegramScheduleAuditTests(unittest.TestCase):
 
             self.assertFalse(decision["should_send"])
             self.assertEqual(decision["reason"], "already_sent")
-            self.assertEqual(decision["slot_time_hkt"], "2026-03-26T06:15:00+08:00")
+            self.assertEqual(decision["slot_time_hkt"], "2026-03-26T06:05:00+08:00")
+
+    def test_resolve_resume_catchup_decision_uses_latest_due_slot_from_multi_time_schedule(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            (root / "All-in-one" / "workflow").mkdir(parents=True)
+            (root / "All-in-one" / "workflow" / "cross_repo_tasks.yaml").write_text(
+                json.dumps(
+                    {
+                        "version": 1,
+                        "tasks": {
+                            "JARVIS-Reminder-schedule-audit": {
+                                "enabled": True,
+                                "owner_repo": "fundman-jarvis",
+                                "schedule": "Mon-Fri 06:05,15:40,22:35 HKT",
+                                "catchup_on_resume": True,
+                                "catchup_window_hours": 18,
+                            }
+                        },
+                    }
+                ),
+                encoding="utf-8",
+            )
+
+            decision = audit.resolve_resume_catchup_decision(
+                root=root,
+                task_name="JARVIS-Reminder-schedule-audit",
+                now=datetime(2026, 3, 26, 15, 45, tzinfo=ZoneInfo("Asia/Hong_Kong")),
+                state_path=root / "state.json",
+            )
+
+            self.assertTrue(decision["should_send"])
+            self.assertEqual(decision["reason"], "missed_slot_unsent")
+            self.assertEqual(decision["slot_time_hkt"], "2026-03-26T15:40:00+08:00")
+
+    def test_resolve_resume_catchup_decision_skips_when_latest_multi_time_slot_already_sent(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            state_path = root / "state.json"
+            (root / "All-in-one" / "workflow").mkdir(parents=True)
+            (root / "All-in-one" / "workflow" / "cross_repo_tasks.yaml").write_text(
+                json.dumps(
+                    {
+                        "version": 1,
+                        "tasks": {
+                            "JARVIS-Reminder-schedule-audit": {
+                                "enabled": True,
+                                "owner_repo": "fundman-jarvis",
+                                "schedule": "Mon-Fri 06:05,15:40,22:35 HKT",
+                                "catchup_on_resume": True,
+                                "catchup_window_hours": 18,
+                            }
+                        },
+                    }
+                ),
+                encoding="utf-8",
+            )
+            state_path.write_text(
+                json.dumps(
+                    {
+                        "last_sent_slot_hkt": "2026-03-26T15:40:00+08:00",
+                        "last_sent_at": "2026-03-26T15:42:00+08:00",
+                    }
+                ),
+                encoding="utf-8",
+            )
+
+            decision = audit.resolve_resume_catchup_decision(
+                root=root,
+                task_name="JARVIS-Reminder-schedule-audit",
+                now=datetime(2026, 3, 26, 15, 45, tzinfo=ZoneInfo("Asia/Hong_Kong")),
+                state_path=state_path,
+            )
+
+            self.assertFalse(decision["should_send"])
+            self.assertEqual(decision["reason"], "already_sent")
+            self.assertEqual(decision["slot_time_hkt"], "2026-03-26T15:40:00+08:00")
+
+    def test_audit_schedule_state_does_not_mark_running_scheduler_result_as_failure(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            self._write_fixture_repos(root)
+            scheduler_text = "\n".join(
+                [
+                    "TaskName:                             \\JARVIS-Reminder-schedule-audit",
+                    "Status:                               Running",
+                    "Task To Run:                          C:\\Users\\User\\Documents\\GitHub\\fundman-jarvis\\run_schedule_audit.bat",
+                    "Start In:                             C:\\Users\\User\\Documents\\GitHub\\fundman-jarvis",
+                    "Schedule Type:                        Weekly",
+                    "Start Time:                           6:05:00 AM",
+                    "Days:                                 MON, TUE, WED, THU, FRI",
+                    "Last Run Time:                        5/16/2026 2:06:20 AM",
+                    "Last Result:                          267009",
+                ]
+            )
+
+            result = audit.audit_schedule_state(
+                root=root,
+                repos=["All-in-one", "fundman-jarvis", "notion-autopublish"],
+                scheduler_text=scheduler_text,
+            )
+            row = {item["task_key"]: item for item in result["records"]}["schedule_audit"]
+
+            self.assertNotIn("runtime_failure", row["issues"])
+
+    def test_audit_schedule_state_does_not_mark_never_run_scheduler_result_as_failure(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            self._write_fixture_repos(root)
+            scheduler_text = "\n".join(
+                [
+                    "TaskName:                             \\Jarvis Earnings Signal 1800",
+                    "Status:                               Ready",
+                    "Task To Run:                          cmd.exe /c \"C:\\Users\\User\\Documents\\GitHub\\fundman-jarvis\\run_earnings_signal.bat\"",
+                    "Start In:                             C:\\Users\\User\\Documents\\GitHub\\fundman-jarvis",
+                    "Schedule Type:                        Daily",
+                    "Start Time:                           6:00:00 PM",
+                    "Last Run Time:                        11/30/1999 12:00:00 AM",
+                    "Last Result:                          267011",
+                ]
+            )
+
+            result = audit.audit_schedule_state(
+                root=root,
+                repos=["All-in-one", "fundman-jarvis", "notion-autopublish"],
+                scheduler_text=scheduler_text,
+            )
+            row = {item["task_key"]: item for item in result["records"]}["earnings_signal_1800"]
+
+            self.assertNotIn("runtime_failure", row["issues"])
+
+    def test_resolve_resume_catchup_decision_skips_after_latest_send_cutoff(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            (root / "All-in-one" / "workflow").mkdir(parents=True)
+            (root / "All-in-one" / "workflow" / "cross_repo_tasks.yaml").write_text(
+                json.dumps(
+                    {
+                        "version": 1,
+                        "tasks": {
+                            "JARVIS-Reminder-schedule-audit": {
+                                "enabled": True,
+                                "owner_repo": "fundman-jarvis",
+                                "schedule": "Mon-Fri 06:05,15:40,22:35 HKT",
+                                "catchup_on_resume": True,
+                                "catchup_window_hours": 18,
+                                "latest_send_time_hkt": "22:30",
+                            }
+                        },
+                    }
+                ),
+                encoding="utf-8",
+            )
+
+            decision = audit.resolve_resume_catchup_decision(
+                root=root,
+                task_name="JARVIS-Reminder-schedule-audit",
+                now=datetime(2026, 3, 26, 23, 30, tzinfo=ZoneInfo("Asia/Hong_Kong")),
+                state_path=root / "state.json",
+            )
+
+            self.assertFalse(decision["should_send"])
+            self.assertEqual(decision["reason"], "after_latest_send_time")
+            self.assertEqual(decision["slot_time_hkt"], "2026-03-26T22:35:00+08:00")
 
     def test_extract_daily_reminder_config_reads_tasks_and_aliases(self):
         with tempfile.TemporaryDirectory() as tmp:
@@ -170,6 +333,86 @@ class TelegramScheduleAuditTests(unittest.TestCase):
         self.assertFalse(by_key["telegram_hub_hourly"]["enabled"])
         self.assertEqual(by_key["morning_digest"]["schedule_text"], "Mon-Fri 07:00 HKT")
 
+    def test_parse_scheduler_query_output_preserves_pm_times_and_last_result(self):
+        scheduler_text = "\n".join(
+            [
+                "TaskName:                             \\JARVIS-Reminder-deepvue-dashboard",
+                "Status:                               Ready",
+                "Task To Run:                          C:\\Users\\User\\Documents\\GitHub\\fundman-jarvis\\run_deepvue_dashboard.bat",
+                "Start In:                             C:\\Users\\User\\Documents\\GitHub\\fundman-jarvis",
+                "Schedule Type:                        Weekly",
+                "Start Time:                           3:30:00 PM",
+                "Days:                                 MON, TUE, WED, THU, FRI",
+                "Last Run Time:                        4/14/2026 3:30:00 PM",
+                "Last Result:                          1",
+            ]
+        )
+
+        rows = audit.parse_scheduler_query_output(scheduler_text)
+
+        self.assertEqual(len(rows), 1)
+        self.assertEqual(rows[0]["schedule_text"], "Mon-Fri 15:30 HKT")
+        self.assertEqual(rows[0]["last_result"], 1)
+        self.assertEqual(rows[0]["last_run_time"], "4/14/2026 3:30:00 PM")
+
+    def test_audit_schedule_state_merges_multi_trigger_scheduler_times(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            self._write_fixture_repos(root)
+            (root / "All-in-one" / "workflow").mkdir(parents=True)
+            (root / "All-in-one" / "workflow" / "cross_repo_tasks.yaml").write_text(
+                json.dumps(
+                    {
+                        "version": 1,
+                        "tasks": {
+                            "JARVIS-Reminder-schedule-audit": {
+                                "enabled": True,
+                                "owner_repo": "fundman-jarvis",
+                                "schedule": "Mon-Fri 06:05,15:40,22:35 HKT",
+                                "catchup_on_resume": True,
+                            }
+                        },
+                    }
+                ),
+                encoding="utf-8",
+            )
+            scheduler_text = "\n\n".join(
+                [
+                    "\n".join(
+                        [
+                            "TaskName:                             \\JARVIS-Reminder-schedule-audit",
+                            "Status:                               Ready",
+                            "Task To Run:                          C:\\Users\\User\\Documents\\GitHub\\fundman-jarvis\\run_schedule_audit.bat",
+                            "Schedule Type:                        Weekly",
+                            f"Start Time:                           {time_text}",
+                            "Days:                                 MON, TUE, WED, THU, FRI",
+                            "Last Result:                          0",
+                        ]
+                    )
+                    for time_text in ("6:05:00 AM", "3:40:00 PM", "10:35:00 PM")
+                ]
+            )
+
+            result = audit.audit_schedule_state(
+                root=root,
+                repos=["All-in-one", "fundman-jarvis", "notion-autopublish"],
+                scheduler_text=scheduler_text,
+            )
+            row = {item["task_key"]: item for item in result["records"]}["schedule_audit"]
+
+            self.assertEqual(row["schedule_text"], "Mon-Fri 06:05,15:40,22:35 HKT")
+            self.assertNotIn("schedule_mismatch", row["issues"])
+
+    def test_decode_scheduler_output_accepts_utf8_bytes(self):
+        decoded = audit._decode_scheduler_output(
+            "TaskName:                             \\TelegramHubHourly\r\nStart Time:                           3:30:00 PM\r\n".encode(
+                "utf-8"
+            )
+        )
+
+        self.assertIn("TelegramHubHourly", decoded)
+        self.assertIn("3:30:00 PM", decoded)
+
     def test_normalize_task_key_handles_named_scheduler_wrappers(self):
         self.assertEqual(audit.normalize_task_key("Fundman-Telegram-Ops-Listener"), "fundman_telegram_ops_listener")
         self.assertEqual(audit.normalize_task_key("Jarvis Excel Sync AM"), "jarvis_excel_sync_am")
@@ -211,7 +454,7 @@ class TelegramScheduleAuditTests(unittest.TestCase):
         self.assertEqual(
             audit.normalize_task_key(
                 "Cross Asset Momentum PM",
-                command='cmd.exe /c "C:\\Users\\User\\Documents\\GitHub\\fundman-jarvis\\run_cross_asset_momentum.bat 2100"',
+                command='"C:\\Users\\User\\AppData\\Local\\Programs\\Python\\Python311\\python.exe" "C:\\Users\\User\\Documents\\GitHub\\fundman-jarvis\\send_cross_asset_momentum.py" --slot 2100',
             ),
             "cross_asset_momentum_2100",
         )
@@ -269,6 +512,52 @@ class TelegramScheduleAuditTests(unittest.TestCase):
             self.assertIn("missing_in_control", by_key["morning_digest"]["issues"])
             self.assertIn("enabled_mismatch", by_key["telegram_hub_hourly"]["issues"])
 
+    def test_audit_schedule_state_marks_runtime_failure_without_false_schedule_mismatch(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            self._write_fixture_repos(root)
+            (root / "All-in-one" / "workflow").mkdir(parents=True)
+            (root / "All-in-one" / "workflow" / "cross_repo_tasks.yaml").write_text(
+                json.dumps(
+                    {
+                        "version": 1,
+                        "tasks": {
+                            "JARVIS-Reminder-deepvue-dashboard": {
+                                "enabled": True,
+                                "owner_repo": "fundman-jarvis",
+                                "schedule": "Mon-Fri 15:30 HKT",
+                                "purpose": "DeepVue dashboard 3-panel screenshots with summary",
+                            }
+                        },
+                    }
+                ),
+                encoding="utf-8",
+            )
+
+            scheduler_text = "\n".join(
+                [
+                    "TaskName:                             \\JARVIS-Reminder-deepvue-dashboard",
+                    "Status:                               Ready",
+                    "Task To Run:                          C:\\Users\\User\\Documents\\GitHub\\fundman-jarvis\\run_deepvue_dashboard.bat",
+                    "Start In:                             C:\\Users\\User\\Documents\\GitHub\\fundman-jarvis",
+                    "Schedule Type:                        Weekly",
+                    "Start Time:                           3:30:00 PM",
+                    "Days:                                 MON, TUE, WED, THU, FRI",
+                    "Last Run Time:                        4/14/2026 3:30:00 PM",
+                    "Last Result:                          1",
+                ]
+            )
+
+            result = audit.audit_schedule_state(
+                root=root,
+                repos=["All-in-one", "fundman-jarvis", "notion-autopublish"],
+                scheduler_text=scheduler_text,
+            )
+            row = {item["task_key"]: item for item in result["records"]}["deepvue_dashboard"]
+
+            self.assertIn("runtime_failure", row["issues"])
+            self.assertNotIn("schedule_mismatch", row["issues"])
+
     def test_audit_schedule_state_marks_publish_workflow_informational(self):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
@@ -322,10 +611,26 @@ class TelegramScheduleAuditTests(unittest.TestCase):
             self.assertEqual(by_key["commodity_live_overlay_2145"]["schedule_text"], "Mon-Fri 21:45 HKT")
             self.assertEqual(by_key["gdrive_breadth_regime_2045"]["command"], "run_gdrive_breadth_regime_snapshot.bat")
             self.assertEqual(by_key["gdrive_breadth_regime_2045"]["schedule_text"], "Mon-Fri 20:45 HKT")
-            self.assertEqual(by_key["cross_asset_momentum_0905"]["command"], "run_cross_asset_momentum.bat 0905")
+            self.assertEqual(by_key["cross_asset_momentum_0905"]["command"], "send_cross_asset_momentum.py --slot 0905")
             self.assertEqual(by_key["cross_asset_momentum_0905"]["schedule_text"], "Mon-Fri 09:05 HKT")
-            self.assertEqual(by_key["cross_asset_momentum_2100"]["command"], "run_cross_asset_momentum.bat 2100")
+            self.assertEqual(by_key["cross_asset_momentum_2100"]["command"], "send_cross_asset_momentum.py --slot 2100")
             self.assertEqual(by_key["cross_asset_momentum_2100"]["schedule_text"], "Mon-Fri 21:00 HKT")
+            self.assertEqual(by_key["sentiment_scan_0133"]["command"], "send_sentiment_scan.py --slot 0133")
+            self.assertEqual(by_key["sentiment_scan_0133"]["schedule_text"], "Daily 01:33 HKT")
+            self.assertEqual(by_key["sentiment_scan_1000"]["command"], "send_sentiment_scan.py --slot 1000")
+            self.assertEqual(by_key["sentiment_scan_1000"]["schedule_text"], "Daily 10:00 HKT")
+            self.assertEqual(by_key["sentiment_scan_1146"]["command"], "send_sentiment_scan.py --slot 1146")
+            self.assertEqual(by_key["sentiment_scan_1146"]["schedule_text"], "Daily 11:46 HKT")
+            self.assertEqual(by_key["sentiment_scan_1515"]["command"], "send_sentiment_scan.py --slot 1515")
+            self.assertEqual(by_key["sentiment_scan_1515"]["schedule_text"], "Daily 15:15 HKT")
+            self.assertEqual(by_key["sentiment_scan_2310"]["command"], "send_sentiment_scan.py --slot 2310")
+            self.assertEqual(by_key["sentiment_scan_2310"]["schedule_text"], "Daily 23:10 HKT")
+            self.assertEqual(by_key["earnings_signal_1800"]["command"], "send_earnings_signal.py --slot 1800")
+            self.assertEqual(by_key["earnings_signal_1800"]["schedule_text"], "Daily 18:00 HKT")
+            self.assertEqual(by_key["pre_catalyst_alerts"]["command"], "run_pre_catalyst_alerts.bat")
+            self.assertEqual(by_key["pre_catalyst_alerts"]["schedule_text"], "Daily 09:08,21:03 HKT")
+            self.assertEqual(by_key["pre_catalyst_alert"]["command"], "run_pre_catalyst_alert.bat")
+            self.assertEqual(by_key["pre_catalyst_alert"]["schedule_text"], "Daily 18:29 HKT")
             self.assertEqual(by_key["southbound_1230"]["command"], "python daily_reminders.py --task southbound_1230")
             self.assertEqual(by_key["southbound_1230"]["schedule_text"], "Daily 12:30 HKT")
             self.assertEqual(by_key["newsletter"]["command"], "python daily_reminders.py --task newsletter")
@@ -413,6 +718,8 @@ class TelegramScheduleAuditTests(unittest.TestCase):
             self.assertIn("orphaned_wrapper", by_key["options_earnings_2100"]["issues"])
             self.assertEqual(by_key["options_earnings_2330"]["time_slots"], ["23:30 HKT"])
             self.assertIn("orphaned_wrapper", by_key["portfolio_digest"]["issues"])
+            self.assertEqual(by_key["cross_asset_momentum_0905"]["runtime_entry"], "send_cross_asset_momentum.py --slot 0905")
+            self.assertEqual(by_key["cross_asset_momentum_2100"]["runtime_entry"], "send_cross_asset_momentum.py --slot 2100")
             self.assertEqual(by_key["telegram_hub_hourly"]["lane"], "disabled")
 
     def test_build_report_contains_sections_and_checklist(self):
@@ -450,6 +757,65 @@ class TelegramScheduleAuditTests(unittest.TestCase):
         self.assertIn("<b>Informational</b>", report)
         self.assertIn("<b>Checklist</b>", report)
         self.assertIn("Add or update control entry for <code>morning_digest</code>", report)
+
+    def test_resolve_audit_telegram_delivery_uses_single_html_link_message(self):
+        generated_at = datetime(2026, 4, 15, 6, 20, tzinfo=ZoneInfo("Asia/Hong_Kong"))
+        decision = audit.resolve_audit_telegram_delivery(
+            records=[
+                {
+                    "task_key": "deepvue_dashboard",
+                    "display_name": "DeepVue Dashboard",
+                    "issues": ["runtime_failure"],
+                }
+            ],
+            report_path=Path(r"C:\reports\telegram_schedule_audit_latest.html"),
+            report_url="file:///C:/reports/telegram_schedule_audit_latest.html",
+            generated_at=generated_at,
+            state={},
+            max_summary_items=10,
+            alert_scope="critical_only",
+        )
+
+        self.assertTrue(decision["should_send"])
+        self.assertIn('href="file:///C:/reports/telegram_schedule_audit_latest.html"', decision["message"])
+        self.assertIn("telegram_schedule_audit_latest.html", decision["message"])
+        self.assertEqual(decision["critical_issue_keys"], ["runtime_failure:deepvue_dashboard"])
+        self.assertNotIn("Add or update control entry", decision["message"])
+
+    def test_resolve_audit_telegram_delivery_skips_when_fingerprint_is_unchanged(self):
+        generated_at = datetime(2026, 4, 15, 6, 20, tzinfo=ZoneInfo("Asia/Hong_Kong"))
+        records = [
+            {
+                "task_key": "deepvue_dashboard",
+                "display_name": "DeepVue Dashboard",
+                "issues": ["runtime_failure"],
+            }
+        ]
+        first = audit.resolve_audit_telegram_delivery(
+            records=records,
+            report_path=Path(r"C:\reports\telegram_schedule_audit_latest.html"),
+            report_url="file:///C:/reports/telegram_schedule_audit_latest.html",
+            generated_at=generated_at,
+            state={},
+            max_summary_items=10,
+            alert_scope="critical_only",
+        )
+
+        second = audit.resolve_audit_telegram_delivery(
+            records=records,
+            report_path=Path(r"C:\reports\telegram_schedule_audit_latest.html"),
+            report_url="file:///C:/reports/telegram_schedule_audit_latest.html",
+            generated_at=generated_at,
+            state={
+                "last_sent_fingerprint": first["critical_fingerprint"],
+                "last_sent_issue_keys": first["critical_issue_keys"],
+            },
+            max_summary_items=10,
+            alert_scope="critical_only",
+        )
+
+        self.assertFalse(second["should_send"])
+        self.assertEqual(second["reason"], "critical_fingerprint_unchanged")
 
     def test_render_flow_markdown_contains_live_and_repo_only_rows(self):
         records = [
@@ -584,8 +950,24 @@ class TelegramScheduleAuditTests(unittest.TestCase):
             "@echo off\npython send_gdrive_breadth_regime_snapshot.py\n",
             encoding="utf-8",
         )
-        (fundman / "run_cross_asset_momentum.bat").write_text(
-            "@echo off\npython send_cross_asset_momentum.py --slot %1\n",
+        (fundman / "send_cross_asset_momentum.py").write_text(
+            "print('cross asset sender stub')\n",
+            encoding="utf-8",
+        )
+        (fundman / "send_sentiment_scan.py").write_text(
+            "print('sentiment sender stub')\n",
+            encoding="utf-8",
+        )
+        (fundman / "send_earnings_signal.py").write_text(
+            "print('earnings sender stub')\n",
+            encoding="utf-8",
+        )
+        (fundman / "run_pre_catalyst_alerts.bat").write_text(
+            "@echo off\npython send_pre_catalyst_alerts.py\n",
+            encoding="utf-8",
+        )
+        (fundman / "run_pre_catalyst_alert.bat").write_text(
+            "@echo off\npython send_pre_catalyst_alert.py\n",
             encoding="utf-8",
         )
         (fundman / "run_friday_volume.bat").write_text(

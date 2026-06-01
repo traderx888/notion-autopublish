@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>彭博研究摘要 #62 — 地緣棋局與AI隱患：伊朗談判、中美峰會與模型風險</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --accent: #58a6ff;
+          --green: #3fb950; --red: #f85149; --yellow: #d29922; --text: #c9d1d9; --muted: #8b949e;
+          --orange: #f0883e; --purple: #bc8cff; --cyan: #39d2c0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans TC', 'Microsoft JhengHei', Helvetica, Arial, sans-serif; line-height: 1.7; padding: 20px; max-width: 860px; margin: 0 auto; }
+  h1 { color: #fff; font-size: 1.7em; margin-bottom: 4px; }
+  .subtitle { color: var(--muted); font-size: 0.9em; margin-bottom: 8px; }
+  .issue-badge { display: inline-block; background: rgba(88,166,255,0.15); color: var(--accent); padding: 3px 10px; border-radius: 12px; font-size: 0.8em; font-weight: 600; margin-bottom: 20px; }
+  .tag { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 0.72em; font-weight: 600; margin-right: 4px; }
+  .tag-rates { background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-china { background: rgba(240,136,62,0.15); color: var(--orange); }
+  .tag-japan { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-geo   { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-oil   { background: rgba(210,153,34,0.15); color: var(--yellow); }
+  .tag-trade { background: rgba(210,153,34,0.15); color: var(--yellow); }
+  .tag-growth{ background: rgba(63,185,80,0.15); color: var(--green); }
+  .tag-metals{ background: rgba(188,140,255,0.15); color: var(--purple); }
+  .tag-infl  { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-policy{ background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-val   { background: rgba(63,185,80,0.15); color: var(--green); }
+  .tag-vol   { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-semi  { background: rgba(57,210,192,0.15); color: var(--cyan); }
+  .tag-credit{ background: rgba(188,140,255,0.15); color: var(--purple); }
+  .tag-space { background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-misc  { background: rgba(139,148,158,0.15); color: var(--muted); }
+  .section { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 16px; }
+  .section h2 { color: #fff; font-size: 1.15em; margin-bottom: 12px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+  .section h3 { color: var(--accent); font-size: 0.95em; margin: 14px 0 6px; }
+  .article { margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .article:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .article-title { color: #fff; font-weight: 700; font-size: 0.95em; margin-bottom: 4px; }
+  .article-title-cn { color: var(--muted); font-size: 0.85em; margin-bottom: 8px; }
+  .article p { font-size: 0.9em; margin: 6px 0; }
+  .data-point { background: rgba(255,255,255,0.03); padding: 8px 12px; border-radius: 6px; margin: 8px 0; font-size: 0.85em; }
+  .data-point .num { color: #fff; font-weight: 700; }
+  .implication { background: rgba(88,166,255,0.06); border-left: 3px solid var(--accent); padding: 10px 14px; margin: 10px 0; border-radius: 0 6px 6px 0; font-size: 0.88em; }
+  .implication .label { color: var(--accent); font-weight: 700; font-size: 0.8em; text-transform: uppercase; margin-bottom: 4px; }
+  .callout { background: rgba(210,153,34,0.08); border: 1px solid rgba(210,153,34,0.3); border-radius: 6px; padding: 16px; margin: 16px 0; }
+  .callout-title { color: var(--yellow); font-weight: 700; font-size: 0.95em; margin-bottom: 8px; }
+  .callout ul { padding-left: 18px; }
+  .callout li { margin: 4px 0; font-size: 0.88em; }
+  ul { padding-left: 18px; }
+  li { margin: 3px 0; font-size: 0.88em; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(255,255,255,0.03); padding: 12px; border-radius: 6px; text-align: center; }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: #fff; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
+  .toc { background: rgba(88,166,255,0.05); border: 1px solid rgba(88,166,255,0.2); border-radius: 8px; padding: 16px 20px; margin-bottom: 20px; }
+  .toc-title { color: var(--accent); font-weight: 700; font-size: 0.9em; margin-bottom: 8px; }
+  .toc a { color: var(--accent); text-decoration: none; font-size: 0.88em; }
+  .toc a:hover { text-decoration: underline; }
+  .toc ol { padding-left: 20px; }
+  .toc li { margin: 4px 0; }
+  .nav-links { display: flex; justify-content: space-between; margin: 20px 0; font-size: 0.85em; }
+  .nav-links a { color: var(--accent); text-decoration: none; }
+  .nav-links a:hover { text-decoration: underline; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(255,255,255,0.03); padding: 12px; border-radius: 6px; text-align: center; }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: #fff; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
+  .footer { text-align: center; color: var(--muted); font-size: 0.75em; margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--border); }
+</style>
+<script>if(window.self===window.top&&sessionStorage.getItem("student_auth")!=="1"){document.body.innerHTML="";window.location.replace("student.html");}</script>
+</head>
+<body>
+
+<h1>彭博研究摘要</h1>
+<p class="subtitle">第62期 | 地緣棋局與AI隱患：伊朗談判、中美峰會與模型風險</p>
+<span class="issue-badge">2026年五月中旬更新</span>
+
+<div class="nav-links">
+  <span><a href="newsletter_61_uncategorized.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="toc">
+  <div class="toc-title">目錄</div>
+  <ol>
+    <li><a href="#iran-oil">伊朗/油價 霍爾木茲暫息鼓，油價急挫</a></li>
+    <li><a href="#us-china">中美關係 峰會倒計時：稀土籌碼與關稅暗戰</a></li>
+    <li><a href="#japan-yen">日圓 日本僅餘兩次干預窗口</a></li>
+    <li><a href="#ai-risk">AI風險 哥布林危機：前沿模型的隱性尾部風險</a></li>
+    <li><a href="#takeaways">基金經理人重點摘要</a></li>
+  </ol>
+</div>
+
+<div class="section" id="iran-oil">
+  <h2><span class="tag tag-misc">伊朗/油價</span> 霍爾木茲暫息鼓，油價急挫</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--green)">$108</div><div class="lbl">布倫特原油
+（跌4%）</div></div>
+    <div class="stat"><div class="val">5.4萬億¥</div><div class="lbl">日本上周
+疑似干預規模</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">1,550+</div><div class="lbl">被困波斯灣
+商船數量</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">川普暫停「自由計畫」— 尋求與伊朗敲定協議</div>
+    <p>川普宣布暫停由美軍主導、協助受困船隻通過霍爾木茲海峽的「自由計畫」，稱在與伊朗談判中取得「重大進展」。該行動啟動僅一天即被擱置，期間美軍曾擊退伊朗無人機及快艇襲擊。布倫特原油應聲跌至<span style="color:#fff;font-weight:700">$108/桶</span>，單日跌幅<span style="color:#fff;font-weight:700">4%</span>。美國對伊朗港口的封鎖仍然「全面有效」，波斯灣目前有逾<span style="color:#fff;font-weight:700">1,550艘商船</span>、約<span style="color:#fff;font-weight:700">2.2萬名船員</span>被困。聯合國安理會正推動制裁決議草案，但需中俄支持。</p>
+    <div class="data-point">油價：布倫特<span style="color:#fff;font-weight:700">$108</span>（-4%） &nbsp;|&nbsp; 被困商船：<span style="color:#fff;font-weight:700">1,550+艘</span> &nbsp;|&nbsp; 美軍部署：<span style="color:#fff;font-weight:700">100+架飛機、1.5萬人</span> &nbsp;|&nbsp; 巴基斯坦居中斡旋</div>
+    <div class="implication"><div class="label">投資啟示</div>油價短期受壓但結構性風險未消 — 協議脆弱且伊朗內部分歧大。<span style="color:#fff;font-weight:700">減持原油多頭短線倉位，但保留尾部風險對沖</span>（如遠月看漲期權）。</div>
+  </div>
+  <div class="article">
+    <div class="article-title">伊朗外長訪京 — 中國仍選擇置身局外</div>
+    <p>伊朗外長阿拉格齊訪問北京，恰在川普訪華前一周。中國雖希望霍爾木茲恢復通航（其<span style="color:#fff;font-weight:700">40%以上</span>石油進口經該海峽），但不太可能充當決定性調解方。中國與海灣國家貿易額達<span style="color:#fff;font-weight:700">$2,880億</span>，幾乎是中伊貿易<span style="color:#fff;font-weight:700">$600億</span>的五倍，限制了北京公開支持伊朗立場的空間。德黑蘭希望中國協助構建「戰後地區框架」，但北京更關注維護中美關係與貿易休戰。</p>
+    <div class="data-point">中國石油進口經霍爾木茲：<span style="color:#fff;font-weight:700">&gt;40%</span> &nbsp;|&nbsp; 中國-海灣貿易：<span style="color:#fff;font-weight:700">$2,880億</span> vs 中伊<span style="color:#fff;font-weight:700">$600億</span> &nbsp;|&nbsp; 伊朗石油90%+售予中國</div>
+    <div class="implication"><div class="label">投資啟示</div>中國不會為伊朗犧牲中美關係。<span style="color:#fff;font-weight:700">能源板塊波動將持續，關注LNG替代受益標的</span>。</div>
+  </div>
+</div>
+
+<div class="section" id="us-china">
+  <h2><span class="tag tag-misc">中美關係</span> 峰會倒計時：稀土籌碼與關稅暗戰</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val">5月14-15日</div><div class="lbl">川習北京峰會
+預定日期</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">83%</div><div class="lbl">中國佔全球
+稀土開採</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">~3.4pp</div><div class="lbl">第122條關稅
+對有效稅率貢獻</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">中美元首峰會日期漸近 — 難以如期舉行的風險上升</div>
+    <p>川普與習近平預定<span style="color:#fff;font-weight:700">5月14-15日</span>在北京會面，但伊朗衝突為雙邊關係增添壓力。美國以參與伊朗石油交易為由制裁五家中國石化企業，北京首次引用《阻斷辦法》反制。中國超過<span style="color:#fff;font-weight:700">40%</span>石油進口經霍爾木茲海峽，封鎖令北京日益不滿。然而雙方仍有動力維持會晤：川普需要外交勝利，習近平則認為美國因伊朗問題氣勢受挫，可在談判中爭取更多籌碼。</p>
+    <div class="data-point">峰會日期：<span style="color:#fff;font-weight:700">5/14-15</span> &nbsp;|&nbsp; 中國石油進口經霍爾木茲：<span style="color:#fff;font-weight:700">&gt;40%</span> &nbsp;|&nbsp; 天然氣進口經霍爾木茲：<span style="color:#fff;font-weight:700">30%</span> &nbsp;|&nbsp; 美國上次訪華：<span style="color:#fff;font-weight:700">2017年</span></div>
+    <div class="implication"><div class="label">投資啟示</div>峰會若如期舉行將利好風險資產。<span style="color:#fff;font-weight:700">做多A股/港股短期看漲期權博弈峰會利好</span>，但需設止損防取消風險。</div>
+  </div>
+  <div class="article">
+    <div class="article-title">中國稀土主導地位短期難以撼動</div>
+    <p>中國控制全球<span style="color:#fff;font-weight:700">83%</span>稀土開採、<span style="color:#fff;font-weight:700">91%</span>氧化物分離產能、<span style="color:#fff;font-weight:700">94%</span>磁體生產。在重稀土領域更控制近<span style="color:#fff;font-weight:700">99%</span>的分離產能。美國約<span style="color:#fff;font-weight:700">4% GDP</span>（<span style="color:#fff;font-weight:700">$1.2萬億</span>增值產出）依賴稀土，其中三分之一幾乎無替代方案。2025年「解放日」關稅後中國即刻管制七類稀土物項，導致福特停產、美中迅速緩和。稀土已成北京最強地緣政治籌碼之一。</p>
+    <div class="data-point">中國稀土開採份額：<span style="color:#fff;font-weight:700">83%</span> &nbsp;|&nbsp; 氧化物分離：<span style="color:#fff;font-weight:700">91%</span> &nbsp;|&nbsp; 磁體：<span style="color:#fff;font-weight:700">94%</span> &nbsp;|&nbsp; 美國GDP依賴稀土：<span style="color:#fff;font-weight:700">4%（$1.2T）</span></div>
+    <div class="implication"><div class="label">投資啟示</div>稀土供應風險是結構性的。<span style="color:#fff;font-weight:700">長線增持非中國稀土礦商（MP Materials、Lynas）及回收概念股</span>。</div>
+  </div>
+  <div class="article">
+    <div class="article-title">美國法院裁定第122條關稅無效 — 不改大局</div>
+    <p>美國國際貿易法院裁定川普依第122條徵收的<span style="color:#fff;font-weight:700">10%</span>普遍關稅無效，但僅適用於三名原告。該關稅原定<span style="color:#fff;font-weight:700">7月24日</span>到期，屆時將由第301條款永久性關稅取代。第122條關稅使有效稅率提高約<span style="color:#fff;font-weight:700">3.4個百分點</span>。若裁決最終生效，政府可能需退還額外關稅款，加上2月最高法院裁決的近<span style="color:#fff;font-weight:700">$1,700億</span>退款。</p>
+    <div class="data-point">第122條到期：<span style="color:#fff;font-weight:700">2026/7/24</span> &nbsp;|&nbsp; 有效稅率貢獻：<span style="color:#fff;font-weight:700">~3.4pp</span> &nbsp;|&nbsp; 潛在退款：<span style="color:#fff;font-weight:700">$1,700億+</span> &nbsp;|&nbsp; 裁決僅涉三原告</div>
+    <div class="implication"><div class="label">投資啟示</div>關稅結構不變，301條款將接棒。<span style="color:#fff;font-weight:700">短期不改變貿易戰定價，維持現有對沖倉位</span>。</div>
+  </div>
+</div>
+
+<div class="section" id="japan-yen">
+  <h2><span class="tag tag-misc">日圓</span> 日本僅餘兩次干預窗口</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val">¥157.24</div><div class="lbl">美元/日圓
+（周二報價）</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">2次</div><div class="lbl">IMF規則下
+剩餘干預窗口</div></div>
+    <div class="stat"><div class="val">$343億</div><div class="lbl">上周疑似
+干預金額</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">IMF規則下日本尚有兩次干預日圓的「窗口期」</div>
+    <p>根據IMF指南，日本若要維持「自由浮動匯率」地位，11月底前最多只能再進行<span style="color:#fff;font-weight:700">兩輪</span>（每輪三天）外匯干預。上周日圓跌破<span style="color:#fff;font-weight:700">¥160</span>後，日本疑似投入約<span style="color:#fff;font-weight:700">5.4萬億日圓（$343億）</span>干預。然而市場普遍認為干預效果有限 — 伊朗戰爭推高能源成本、美日利差仍大，日圓貶值基本面未改。RBC策略師指出：短期能壓制匯率，但長期走弱因素依舊。</p>
+    <div class="data-point">IMF剩餘窗口：<span style="color:#fff;font-weight:700">2次</span>（至11月底） &nbsp;|&nbsp; 上周干預規模：<span style="color:#fff;font-weight:700">¥5.4萬億（$343億）</span> &nbsp;|&nbsp; 關鍵水平：<span style="color:#fff;font-weight:700">¥160</span> &nbsp;|&nbsp; 現價：<span style="color:#fff;font-weight:700">¥157.24</span></div>
+    <div class="implication"><div class="label">投資啟示</div>干預彈藥有限且效果遞減。<span style="color:#fff;font-weight:700">日圓反彈是賣出機會，維持做空日圓/做多美日利差交易</span>。</div>
+  </div>
+</div>
+
+<div class="section" id="ai-risk">
+  <h2><span class="tag tag-misc">AI風險</span> 哥布林危機：前沿模型的隱性尾部風險</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--red)">&gt;200%</div><div class="lbl">「哥布林」怪癖
+單代增長率</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">76.2%</div><div class="lbl">獎勵函數
+偏差數據集佔比</div></div>
+    <div class="stat"><div class="val">~$1T</div><div class="lbl">AI公司
+合計估值</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">從OpenAI「哥布林」事件看AI訓練錯誤如何累積</div>
+    <p>OpenAI已棄用的「書呆子」人格中，獎勵函數在<span style="color:#fff;font-weight:700">76.2%</span>數據集對生物隱喻給予更高評分，形成反饋循環。「哥布林」引用在單代模型中增長超<span style="color:#fff;font-weight:700">200%</span>，經五代迭代污染基礎模型。GPT-5.5在根因查明前已基於受污染數據訓練。牛津與劍橋研究證實此類遞歸訓練導致「不可逆退化」。OpenAI擁有超<span style="color:#fff;font-weight:700">100萬</span>企業客戶，但服務協議僅涵蓋可用性，不保證行為一致性。</p>
+    <div class="data-point">單代增長：<span style="color:#fff;font-weight:700">&gt;200%</span> &nbsp;|&nbsp; 污染數據集：<span style="color:#fff;font-weight:700">76.2%</span> &nbsp;|&nbsp; 企業客戶：<span style="color:#fff;font-weight:700">&gt;100萬</span> &nbsp;|&nbsp; 企業收入佔比：<span style="color:#fff;font-weight:700">&gt;40%</span></div>
+    <div class="implication"><div class="label">投資啟示</div>AI估值未充分計入訓練產物累積風險。<span style="color:#fff;font-weight:700">對AI概念股維持中性，關注有嚴格安全測試披露的公司</span>。</div>
+  </div>
+  <div class="article">
+    <div class="article-title">網絡風險促使川普政府重新考慮AI模型審查</div>
+    <p>Anthropic的Mythos模型在關鍵基礎設施中識別出數千個零日漏洞，觸發白宮討論在模型發布前引入政府審查。英國AI安全研究所評估發現GPT-5.5也能完成此前僅Mythos破解的<span style="color:#fff;font-weight:700">32步</span>企業網絡攻擊模擬。這意味著進攻性網絡能力已成為前沿模型的通用特徵。川普政府擬將審查定位為國安職能（而非監管），由情報機構負責，以維持「去監管化」立場同時建立功能性監督。</p>
+    <div class="data-point">Mythos發現零日漏洞：<span style="color:#fff;font-weight:700">數千個</span> &nbsp;|&nbsp; GPT-5.5攻擊模擬：<span style="color:#fff;font-weight:700">32步完成</span> &nbsp;|&nbsp; 拜登EO撤銷後：<span style="color:#fff;font-weight:700">川普擬重建審查</span> &nbsp;|&nbsp; 負責機構：<span style="color:#fff;font-weight:700">NSA/ODNI</span></div>
+    <div class="implication"><div class="label">投資啟示</div>AI監管預期升溫。<span style="color:#fff;font-weight:700">短期利空小型AI公司（合規成本），利好大型有資源應對審查的平台</span>。</div>
+  </div>
+</div>
+
+<div class="callout" id="takeaways">
+  <div class="callout-title">基金經理人重點摘要</div>
+  <ul>
+    <li><strong>伊朗/油價：</strong>「自由計畫」暫停令油價短跌至$108，但協議極度脆弱。減持原油短線多頭，保留遠月尾部對沖。</li>
+    <li><strong>中美峰會：</strong>5/14-15北京會面仍有變數，但雙方動力充足。短期可博弈峰會利好做多港股看漲期權。</li>
+    <li><strong>稀土：</strong>中國控制83%開採、91%加工、94%磁體，美國$1.2T GDP依賴。長線增持非中國稀土礦商。</li>
+    <li><strong>日圓：</strong>IMF規則僅餘2次干預窗口，基本面仍利空日圓。反彈即賣出，維持做空日圓交易。</li>
+    <li><strong>AI風險：</strong>訓練產物累積速度超過發現速度，前沿模型均具進攻性網絡能力。AI概念股需重新審視尾部風險定價。</li>
+    <li><strong>關稅：</strong>法院裁定第122條無效影響有限，301條款7月接棒。貿易戰定價不變。</li>
+  </ul>
+</div>
+
+<div class="nav-links">
+  <span><a href="newsletter_61_uncategorized.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="footer">
+  彭博研究摘要 | 僅供教學與討論用途 | 2026年5月17日<br>
+  資料來源：Bloomberg Intelligence, Bloomberg Economics, Bloomberg News
+</div>
+
+</body>
+</html>

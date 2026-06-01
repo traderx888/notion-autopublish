@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-26T17:00:09.751508+08:00",
+  "generated_at": "2026-06-01T09:23:27.151838+08:00",
   "root": "C:\\Users\\User\\Documents\\GitHub",
   "repos": [
     "All-in-one",
@@ -14,12 +14,15 @@
       "source_type": "scheduler",
       "command": "cmd.exe /c \"\"C:\\Users\\User\\Documents\\GitHub\\notion-autopublish-blp-title-pipeline\\run_blp_title_pipeline.bat\" --folder \"C:\\blp\\data\" --retag-all\"",
       "schedule_text": "Daily 22:15 HKT",
+      "last_result": -2147024629,
+      "last_run_time": "5/31/2026 10:15:01 PM",
       "enabled": true,
       "telegram_related": true,
       "observed_in": [
         "scheduler"
       ],
       "issues": [
+        "runtime_failure",
         "missing_in_control",
         "missing_in_repo"
       ],
@@ -39,13 +42,16 @@
       "owner_repo": "notion-autopublish",
       "source_type": "scheduler",
       "command": "cmd.exe /c \"C:\\Users\\User\\Documents\\GitHub\\notion-autopublish\\run_ciovacco_weekly.bat\"",
-      "schedule_text": "Sun 14:00 HKT",
+      "schedule_text": "14:00 HKT",
+      "last_result": 1,
+      "last_run_time": "5/31/2026 2:00:00 PM",
       "enabled": true,
       "telegram_related": true,
       "observed_in": [
         "scheduler"
       ],
       "issues": [
+        "runtime_failure",
         "missing_in_control",
         "missing_in_repo"
       ],
@@ -66,14 +72,17 @@
       "source_type": "scheduler",
       "command": "C:\\Users\\User\\AppData\\Local\\Programs\\Python\\Python311\\python.exe C:\\Users\\User\\Documents\\GitHub\\fundman-jarvis\\send_commodity_live_overlay_report.py --slot 0945",
       "schedule_text": "Mon-Fri 09:45 HKT",
+      "last_result": 0,
+      "last_run_time": "5/29/2026 9:45:00 AM",
       "enabled": true,
       "telegram_related": true,
       "observed_in": [
         "control",
-        "repo",
         "scheduler"
       ],
-      "issues": [],
+      "issues": [
+        "missing_in_repo"
+      ],
       "display_name": "Commodity Model - Live Overlay Report",
       "lane": "live_scheduler",
       "source_group": "Commodity live overlay",
@@ -91,14 +100,17 @@
       "source_type": "scheduler",
       "command": "C:\\Users\\User\\AppData\\Local\\Programs\\Python\\Python311\\python.exe C:\\Users\\User\\Documents\\GitHub\\fundman-jarvis\\send_commodity_live_overlay_report.py --slot 2145",
       "schedule_text": "Mon-Fri 21:45 HKT",
+      "last_result": 0,
+      "last_run_time": "5/29/2026 9:45:00 PM",
       "enabled": true,
       "telegram_related": true,
       "observed_in": [
         "control",
-        "repo",
         "scheduler"
       ],
-      "issues": [],
+      "issues": [
+        "missing_in_repo"
+      ],
       "display_name": "Commodity Model - Live Overlay Report",
       "lane": "live_scheduler",
       "source_group": "Commodity live overlay",
@@ -115,7 +127,9 @@
       "owner_repo": "fundman-jarvis",
       "source_type": "scheduler",
       "command": "C:\\Users\\User\\AppData\\Local\\Programs\\Python\\Python311\\python.exe C:\\Users\\User\\Documents\\GitHub\\fundman-jarvis\\send_cross_asset_momentum.py --slot 0905",
-      "schedule_text": "Mon-Fri 09:05 HKT",
+      "schedule_text": "Mon-Fri 01:00,09:05 HKT",
+      "last_result": 267009,
+      "last_run_time": "6/1/2026 9:23:22 AM",
       "enabled": true,
       "telegram_related": true,
       "observed_in": [
@@ -123,15 +137,18 @@
         "repo",
         "scheduler"
       ],
-      "issues": [],
+      "issues": [
+        "schedule_mismatch"
+      ],
       "display_name": "Cross-Asset Momentum (1D)",
       "lane": "live_scheduler",
       "source_group": "Cross-asset dashboard",
       "source_detail": "One-day momentum snapshot across equity, dollar, gold, crypto, and vol proxies",
       "time_slots": [
+        "01:00 HKT",
         "09:05 HKT"
       ],
-      "runtime_entry": "run_cross_asset_momentum.bat 0905",
+      "runtime_entry": "send_cross_asset_momentum.py --slot 0905",
       "state_reason": "active scheduler job"
     },
     {
@@ -141,6 +158,8 @@
       "source_type": "scheduler",
       "command": "C:\\Users\\User\\AppData\\Local\\Programs\\Python\\Python311\\python.exe C:\\Users\\User\\Documents\\GitHub\\fundman-jarvis\\send_cross_asset_momentum.py --slot 1145",
       "schedule_text": "Mon-Fri 11:45 HKT",
+      "last_result": 0,
+      "last_run_time": "5/29/2026 11:45:00 AM",
       "enabled": true,
       "telegram_related": true,
       "observed_in": [
@@ -156,7 +175,7 @@
       "time_slots": [
         "11:45 HKT"
       ],
-      "runtime_entry": "run_cross_asset_momentum.bat 1145",
+      "runtime_entry": "send_cross_asset_momentum.py --slot 1145",
       "state_reason": "active scheduler job"
     },
     {
@@ -166,6 +185,8 @@
       "source_type": "scheduler",
       "command": "C:\\Users\\User\\AppData\\Local\\Programs\\Python\\Python311\\python.exe C:\\Users\\User\\Documents\\GitHub\\fundman-jarvis\\send_cross_asset_momentum.py --slot 1545",
       "schedule_text": "Mon-Fri 15:45 HKT",
+      "last_result": 0,
+      "last_run_time": "5/29/2026 3:45:00 PM",
       "enabled": true,
       "telegram_related": true,
       "observed_in": [
@@ -181,7 +202,7 @@
       "time_slots": [
         "15:45 HKT"
       ],
-      "runtime_entry": "run_cross_asset_momentum.bat 1545",
+      "runtime_entry": "send_cross_asset_momentum.py --slot 1545",
       "state_reason": "active scheduler job"
     },
     {
@@ -191,6 +212,8 @@
       "source_type": "scheduler",
       "command": "C:\\Users\\User\\AppData\\Local\\Programs\\Python\\Python311\\python.exe C:\\Users\\User\\Documents\\GitHub\\fundman-jarvis\\send_cross_asset_momentum.py --slot 2100",
       "schedule_text": "Mon-Fri 21:00 HKT",
+      "last_result": 0,
+      "last_run_time": "5/29/2026 9:00:00 PM",
       "enabled": true,
       "telegram_related": true,
       "observed_in": [
@@ -206,7 +229,7 @@
       "time_slots": [
         "21:00 HKT"
       ],
-      "runtime_entry": "run_cross_asset_momentum.bat 2100",
+      "runtime_entry": "send_cross_asset_momentum.py --slot 2100",
       "state_reason": "active scheduler job"
     },
     {
@@ -216,6 +239,8 @@
       "source_type": "scheduler",
       "command": "cmd.exe /c \"\"C:\\Users\\User\\Documents\\GitHub\\fundman-jarvis\\run_crypto_etf_flows.bat\" morning\"",
       "schedule_text": "Daily 09:00 HKT",
+      "last_result": 267009,
+      "last_run_time": "6/1/2026 9:23:22 AM",
       "enabled": true,
       "telegram_related": true,
       "observed_in": [
@@ -241,6 +266,8 @@
       "source_type": "scheduler",
       "command": "cmd.exe /c \"\"C:\\Users\\User\\Documents\\GitHub\\fundman-jarvis\\run_crypto_etf_flows.bat\" midday\"",
       "schedule_text": "Daily 11:50 HKT",
+      "last_result": 0,
+      "last_run_time": "5/31/2026 11:50:01 AM",
       "enabled": true,
       "telegram_related": true,
       "observed_in": [
@@ -266,6 +293,8 @@
       "source_type": "scheduler",
       "command": "C:\\Users\\User\\AppData\\Local\\Programs\\Python\\Python311\\python.exe C:\\Users\\User\\Documents\\GitHub\\fundman-jarvis\\send_crypto_news.py --slot 1000",
       "schedule_text": "Daily 10:00 HKT",
+      "last_result": 0,
+      "last_run_time": "5/31/2026 10:46:20 AM",
       "enabled": true,
       "telegram_related": true,
       "observed_in": [
@@ -291,6 +320,8 @@
       "source_type": "scheduler",
       "command": "C:\\Users\\User\\AppData\\Local\\Programs\\Python\\Python311\\python.exe C:\\Users\\User\\Documents\\GitHub\\fundman-jarvis\\send_crypto_news.py --slot 1140",
       "schedule_text": "Daily 11:40 HKT",
+      "last_result": 1,
+      "last_run_time": "5/31/2026 11:40:01 AM",
       "enabled": true,
       "telegram_related": true,
       "observed_in": [
@@ -298,7 +329,9 @@
         "repo",
         "scheduler"
       ],
-      "issues": [],
+      "issues": [
+        "runtime_failure"
+      ],
       "display_name": "Crypto Daily News",
       "lane": "live_scheduler",
       "source_group": "Crypto news",
@@ -316,6 +349,8 @@
       "source_type": "scheduler",
       "command": "cmd.exe /c \"C:\\Users\\User\\Documents\\GitHub\\fundman-jarvis\\run_crypto_news.bat\"",
       "schedule_text": "Daily 11:00 HKT",
+      "last_result": 1,
+      "last_run_time": "5/31/2026 11:00:01 AM",
       "enabled": true,
       "telegram_related": true,
       "observed_in": [
@@ -323,7 +358,9 @@
         "repo",
         "scheduler"
       ],
-      "issues": [],
+      "issues": [
+        "runtime_failure"
+      ],
       "display_name": "Crypto Daily News",
       "lane": "live_scheduler",
       "source_group": "Crypto news",
@@ -341,6 +378,8 @@
       "source_type": "scheduler",
       "command": "C:\\Users\\User\\AppData\\Local\\Programs\\Python\\Python311\\python.exe C:\\Users\\User\\Documents\\GitHub\\fundman-jarvis\\daily_reminders.py --task daily_synthesis",
       "schedule_text": "Mon-Fri 19:00 HKT",
+      "last_result": 0,
+      "last_run_time": "5/29/2026 7:00:00 PM",
       "enabled": true,
       "telegram_related": true,
       "observed_in": [
@@ -365,8 +404,10 @@
       "scheduler_name": "JARVIS-Reminder-deepvue-dashboard",
       "owner_repo": "fundman-jarvis",
       "source_type": "scheduler",
-      "command": "C:\\Users\\User\\Documents\\GitHub\\fundman-jarvis\\run_deepvue_dashboard.bat",
+      "command": "C:\\Users\\User\\Documents\\GitHub\\fundman-jarvis\\run_deepvue_dashboard_alert.bat",
       "schedule_text": "Mon-Fri 15:30 HKT",
+      "last_result": 1,
+      "last_run_time": "5/29/2026 3:30:00 PM",
       "enabled": true,
       "telegram_related": true,
       "observed_in": [
@@ -374,7 +415,9 @@
         "repo",
         "scheduler"
       ],
-      "issues": [],
+      "issues": [
+        "runtime_failure"
+      ],
       "display_name": "DeepVue Dashboard",
       "lane": "live_scheduler",
       "source_group": "DeepVue + screen brief",
@@ -382,7 +425,61 @@
       "time_slots": [
         "15:30 HKT"
       ],
+      "runtime_entry": "run_deepvue_dashboard_alert.bat",
+      "state_reason": "active scheduler job"
+    },
+    {
+      "task_key": "deepvue_dashboard_streamlit",
+      "scheduler_name": "",
+      "owner_repo": "fundman-jarvis",
+      "source_type": "repo",
+      "command": "run_deepvue_dashboard.bat",
+      "schedule_text": "",
+      "last_result": null,
+      "last_run_time": "",
+      "enabled": true,
+      "telegram_related": false,
+      "observed_in": [
+        "repo"
+      ],
+      "issues": [
+        "orphaned_wrapper"
+      ],
+      "display_name": "Deepvue Dashboard Streamlit",
+      "lane": "repo_only",
+      "source_group": "Other Telegram task",
+      "source_detail": "run_deepvue_dashboard.bat",
+      "time_slots": [],
       "runtime_entry": "run_deepvue_dashboard.bat",
+      "state_reason": "repo sender with no scheduler match"
+    },
+    {
+      "task_key": "earnings_signal_1800",
+      "scheduler_name": "Jarvis Earnings Signal 1800",
+      "owner_repo": "fundman-jarvis",
+      "source_type": "scheduler",
+      "command": "cmd.exe /c \"C:\\Users\\User\\Documents\\GitHub\\fundman-jarvis\\run_earnings_signal.bat\"",
+      "schedule_text": "Daily 18:00 HKT",
+      "last_result": 1,
+      "last_run_time": "5/31/2026 6:00:01 PM",
+      "enabled": true,
+      "telegram_related": true,
+      "observed_in": [
+        "control",
+        "repo",
+        "scheduler"
+      ],
+      "issues": [
+        "runtime_failure"
+      ],
+      "display_name": "Pre-Earnings Composite Signal",
+      "lane": "live_scheduler",
+      "source_group": "Earnings signal engine",
+      "source_detail": "Pre-earnings PCR, analyst, sentiment, and momentum composite",
+      "time_slots": [
+        "18:00 HKT"
+      ],
+      "runtime_entry": "send_earnings_signal.py --slot 1800",
       "state_reason": "active scheduler job"
     },
     {
@@ -392,6 +489,8 @@
       "source_type": "scheduler",
       "command": "C:\\Users\\User\\AppData\\Local\\Programs\\Python\\Python311\\python.exe daily_reminders.py --task evening_digest",
       "schedule_text": "Mon-Fri 21:00 HKT",
+      "last_result": 0,
+      "last_run_time": "5/29/2026 9:00:00 PM",
       "enabled": true,
       "telegram_related": true,
       "observed_in": [
@@ -412,12 +511,66 @@
       "state_reason": "active scheduler job"
     },
     {
+      "task_key": "excel",
+      "scheduler_name": "",
+      "owner_repo": "fundman-jarvis",
+      "source_type": "repo",
+      "command": "python daily_reminders.py --task excel",
+      "schedule_text": "Daily 10:00 HKT",
+      "last_result": null,
+      "last_run_time": "",
+      "enabled": true,
+      "telegram_related": true,
+      "observed_in": [
+        "repo"
+      ],
+      "issues": [],
+      "display_name": "Excel Reminder",
+      "lane": "repo_only",
+      "source_group": "Manual reminder",
+      "source_detail": "Manual Excel and data reminder",
+      "time_slots": [
+        "10:00 HKT"
+      ],
+      "runtime_entry": "daily_reminders.py --task excel",
+      "state_reason": "repo sender with no scheduler match"
+    },
+    {
+      "task_key": "fintwit_signal_monitor",
+      "scheduler_name": "FinTwit Signal Monitor",
+      "owner_repo": "notion-autopublish",
+      "source_type": "scheduler",
+      "command": "C:\\Users\\User\\Documents\\GitHub\\notion-autopublish\\run_fintwit_monitor.bat",
+      "schedule_text": "Hourly",
+      "last_result": -2147020576,
+      "last_run_time": "6/1/2026 9:23:22 AM",
+      "enabled": true,
+      "telegram_related": true,
+      "observed_in": [
+        "scheduler"
+      ],
+      "issues": [
+        "runtime_failure",
+        "missing_in_control",
+        "missing_in_repo"
+      ],
+      "display_name": "FinTwit Signal Monitor",
+      "lane": "live_scheduler",
+      "source_group": "Other Telegram task",
+      "source_detail": "run_fintwit_monitor.bat",
+      "time_slots": [],
+      "runtime_entry": "run_fintwit_monitor.bat",
+      "state_reason": "active scheduler job"
+    },
+    {
       "task_key": "friday_options",
       "scheduler_name": "JARVIS-Reminder-friday-options",
       "owner_repo": "fundman-jarvis",
       "source_type": "scheduler",
       "command": "cmd.exe /c \"C:\\Users\\User\\Documents\\GitHub\\fundman-jarvis\\run_friday_options.bat\"",
       "schedule_text": "Mon-Fri 17:00 HKT",
+      "last_result": 0,
+      "last_run_time": "5/29/2026 5:00:00 PM",
       "enabled": true,
       "telegram_related": true,
       "observed_in": [
@@ -443,6 +596,8 @@
       "source_type": "scheduler",
       "command": "cmd.exe /c \"C:\\Users\\User\\Documents\\GitHub\\fundman-jarvis\\run_friday_volume.bat\"",
       "schedule_text": "Mon-Fri 09:30 HKT",
+      "last_result": 0,
+      "last_run_time": "5/29/2026 9:37:01 AM",
       "enabled": true,
       "telegram_related": true,
       "observed_in": [
@@ -468,6 +623,8 @@
       "source_type": "scheduler",
       "command": "C:\\Users\\User\\Documents\\GitHub\\fundman-jarvis\\start_ops_listener.bat",
       "schedule_text": "Daily 00:01 HKT",
+      "last_result": 0,
+      "last_run_time": "6/1/2026 2:01:02 AM",
       "enabled": true,
       "telegram_related": true,
       "observed_in": [
@@ -494,6 +651,8 @@
       "source_type": "scheduler",
       "command": "cmd.exe /c \"C:\\Users\\User\\Documents\\GitHub\\fundman-jarvis\\run_futu_signals.bat\"",
       "schedule_text": "Mon-Fri 09:45 HKT",
+      "last_result": 0,
+      "last_run_time": "5/29/2026 9:45:00 AM",
       "enabled": true,
       "telegram_related": true,
       "observed_in": [
@@ -519,14 +678,18 @@
       "source_type": "scheduler",
       "command": "C:\\Users\\User\\AppData\\Local\\Programs\\Python\\Python311\\python.exe C:\\Users\\User\\Documents\\GitHub\\fundman-jarvis\\send_gdrive_breadth_regime_snapshot.py",
       "schedule_text": "Mon-Fri 20:45 HKT",
+      "last_result": 1,
+      "last_run_time": "5/29/2026 8:45:00 PM",
       "enabled": true,
       "telegram_related": true,
       "observed_in": [
         "control",
-        "repo",
         "scheduler"
       ],
-      "issues": [],
+      "issues": [
+        "runtime_failure",
+        "missing_in_repo"
+      ],
       "display_name": "GDrive Breadth & Regime Snapshot",
       "lane": "live_scheduler",
       "source_group": "GDrive research recap",
@@ -544,6 +707,8 @@
       "source_type": "scheduler",
       "command": "C:\\Users\\User\\AppData\\Local\\Programs\\Python\\Python311\\python.exe daily_reminders.py --task georisk",
       "schedule_text": "Mon-Fri 20:00 HKT",
+      "last_result": 0,
+      "last_run_time": "5/29/2026 8:00:00 PM",
       "enabled": true,
       "telegram_related": true,
       "observed_in": [
@@ -570,6 +735,8 @@
       "source_type": "scheduler",
       "command": "\"C:\\Users\\User\\AppData\\Local\\Programs\\Python\\Python311\\python.exe\" \"C:\\Users\\User\\Documents\\GitHub\\fundman-jarvis\\send_cbbc_tracker.py\"",
       "schedule_text": "Daily 09:00 HKT",
+      "last_result": 267009,
+      "last_run_time": "6/1/2026 9:23:22 AM",
       "enabled": true,
       "telegram_related": true,
       "observed_in": [
@@ -594,8 +761,40 @@
       "scheduler_name": "JARVIS-COT-refresh",
       "owner_repo": "fundman-jarvis",
       "source_type": "scheduler",
-      "command": "cmd.exe /c \"c:\\Users\\User\\Documents\\GitHub\\fundman-jarvis\\run_cot_refresh.bat\"",
-      "schedule_text": "Sat 08:00 HKT",
+      "command": "cmd.exe /c \"C:\\Users\\User\\Documents\\GitHub\\fundman-jarvis\\run_cot_refresh.bat\"",
+      "schedule_text": "22:00,08:00 HKT",
+      "last_result": 1,
+      "last_run_time": "5/31/2026 10:46:20 AM",
+      "enabled": true,
+      "telegram_related": true,
+      "observed_in": [
+        "scheduler"
+      ],
+      "issues": [
+        "runtime_failure",
+        "missing_in_control",
+        "missing_in_repo"
+      ],
+      "display_name": "JARVIS-COT-refresh",
+      "lane": "live_scheduler",
+      "source_group": "Other Telegram task",
+      "source_detail": "run_cot_refresh.bat",
+      "time_slots": [
+        "22:00 HKT",
+        "08:00 HKT"
+      ],
+      "runtime_entry": "run_cot_refresh.bat",
+      "state_reason": "active scheduler job"
+    },
+    {
+      "task_key": "jarvis_daily_market_report_1230",
+      "scheduler_name": "Jarvis Daily Market Report 1230",
+      "owner_repo": "fundman-jarvis",
+      "source_type": "scheduler",
+      "command": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe -NoProfile -ExecutionPolicy Bypass -File \"C:\\Users\\User\\Documents\\GitHub\\fundman-jarvis\\scripts\\run_daily_market_report.ps1\" -SendTelegram",
+      "schedule_text": "Daily 12:30 HKT",
+      "last_result": 0,
+      "last_run_time": "5/31/2026 12:30:03 PM",
       "enabled": true,
       "telegram_related": true,
       "observed_in": [
@@ -605,14 +804,40 @@
         "missing_in_control",
         "missing_in_repo"
       ],
-      "display_name": "JARVIS-COT-refresh",
+      "display_name": "Jarvis Daily Market Report 1230",
       "lane": "live_scheduler",
       "source_group": "Other Telegram task",
-      "source_detail": "run_cot_refresh.bat",
+      "source_detail": "run_daily_market_report.ps1 -SendTelegram",
       "time_slots": [
-        "08:00 HKT"
+        "12:30 HKT"
       ],
-      "runtime_entry": "run_cot_refresh.bat",
+      "runtime_entry": "run_daily_market_report.ps1 -SendTelegram",
+      "state_reason": "active scheduler job"
+    },
+    {
+      "task_key": "jarvis_eodhd_stream",
+      "scheduler_name": "Jarvis EODHD Stream",
+      "owner_repo": "fundman-jarvis",
+      "source_type": "scheduler",
+      "command": "cmd.exe /c \"C:\\Users\\User\\Documents\\GitHub\\fundman-jarvis\\run_eodhd_stream.bat\"",
+      "schedule_text": "At logon time N/A HKT",
+      "last_result": 0,
+      "last_run_time": "6/1/2026 9:19:29 AM",
+      "enabled": true,
+      "telegram_related": true,
+      "observed_in": [
+        "scheduler"
+      ],
+      "issues": [
+        "missing_in_control",
+        "missing_in_repo"
+      ],
+      "display_name": "Jarvis EODHD Stream",
+      "lane": "live_scheduler",
+      "source_group": "Other Telegram task",
+      "source_detail": "run_eodhd_stream.bat",
+      "time_slots": [],
+      "runtime_entry": "run_eodhd_stream.bat",
       "state_reason": "active scheduler job"
     },
     {
@@ -621,7 +846,9 @@
       "owner_repo": "fundman-jarvis",
       "source_type": "scheduler",
       "command": "C:\\Users\\User\\Documents\\GitHub\\fundman-jarvis\\run_excel_sync.bat",
-      "schedule_text": "Daily 10:30 HKT",
+      "schedule_text": "Daily 12:10 HKT",
+      "last_result": 0,
+      "last_run_time": "5/31/2026 12:10:01 PM",
       "enabled": true,
       "telegram_related": true,
       "observed_in": [
@@ -636,6 +863,7 @@
       "source_group": "Excel sync",
       "source_detail": "Excel sync workflow",
       "time_slots": [
+        "12:10 HKT",
         "10:30 HKT"
       ],
       "runtime_entry": "run_excel_sync.bat",
@@ -648,6 +876,8 @@
       "source_type": "scheduler",
       "command": "C:\\Users\\User\\Documents\\GitHub\\fundman-jarvis\\run_excel_sync.bat",
       "schedule_text": "Daily 23:50 HKT",
+      "last_result": 0,
+      "last_run_time": "5/31/2026 11:50:01 PM",
       "enabled": true,
       "telegram_related": true,
       "observed_in": [
@@ -674,7 +904,9 @@
       "source_type": "scheduler",
       "command": "C:\\Users\\User\\Documents\\GitHub\\fundman-jarvis\\run_excel_sync.bat",
       "schedule_text": "Daily 21:00 HKT",
-      "enabled": true,
+      "last_result": 0,
+      "last_run_time": "5/10/2026 10:19:12 PM",
+      "enabled": false,
       "telegram_related": true,
       "observed_in": [
         "repo",
@@ -684,14 +916,14 @@
         "missing_in_control"
       ],
       "display_name": "Jarvis Excel Sync PM",
-      "lane": "live_scheduler",
+      "lane": "disabled",
       "source_group": "Excel sync",
       "source_detail": "Excel sync workflow",
       "time_slots": [
         "21:00 HKT"
       ],
       "runtime_entry": "run_excel_sync.bat",
-      "state_reason": "active scheduler job"
+      "state_reason": "disabled task"
     },
     {
       "task_key": "jarvis_full",
@@ -699,7 +931,9 @@
       "owner_repo": "fundman-jarvis",
       "source_type": "scheduler",
       "command": "C:\\Users\\User\\Documents\\GitHub\\fundman-jarvis\\run_full.bat",
-      "schedule_text": "Daily 05:00 HKT",
+      "schedule_text": "Mon-Fri 05:00 HKT",
+      "last_result": -2147020576,
+      "last_run_time": "6/1/2026 9:23:22 AM",
       "enabled": true,
       "telegram_related": true,
       "observed_in": [
@@ -707,6 +941,7 @@
         "scheduler"
       ],
       "issues": [
+        "runtime_failure",
         "missing_in_control"
       ],
       "display_name": "JARVIS Full",
@@ -720,12 +955,409 @@
       "state_reason": "active scheduler job"
     },
     {
+      "task_key": "jarvis_futu_option_exercise_alert_0918",
+      "scheduler_name": "Jarvis Futu Option Exercise Alert 0918",
+      "owner_repo": "fundman-jarvis",
+      "source_type": "scheduler",
+      "command": "C:\\Users\\User\\Documents\\GitHub\\fundman-jarvis-option-exercise-alert\\run_futu_option_exercise_alert.bat",
+      "schedule_text": "Mon-Fri 09:18 HKT",
+      "last_result": -2147020576,
+      "last_run_time": "6/1/2026 9:23:22 AM",
+      "enabled": true,
+      "telegram_related": true,
+      "observed_in": [
+        "scheduler"
+      ],
+      "issues": [
+        "runtime_failure",
+        "missing_in_control",
+        "missing_in_repo"
+      ],
+      "display_name": "Jarvis Futu Option Exercise Alert 0918",
+      "lane": "live_scheduler",
+      "source_group": "Other Telegram task",
+      "source_detail": "run_futu_option_exercise_alert.bat",
+      "time_slots": [
+        "09:18 HKT"
+      ],
+      "runtime_entry": "run_futu_option_exercise_alert.bat",
+      "state_reason": "active scheduler job"
+    },
+    {
+      "task_key": "jarvis_futu_option_exercise_alert_1518",
+      "scheduler_name": "Jarvis Futu Option Exercise Alert 1518",
+      "owner_repo": "fundman-jarvis",
+      "source_type": "scheduler",
+      "command": "C:\\Users\\User\\Documents\\GitHub\\fundman-jarvis-option-exercise-alert\\run_futu_option_exercise_alert.bat",
+      "schedule_text": "Mon-Fri 15:18 HKT",
+      "last_result": 0,
+      "last_run_time": "5/29/2026 3:18:00 PM",
+      "enabled": true,
+      "telegram_related": true,
+      "observed_in": [
+        "scheduler"
+      ],
+      "issues": [
+        "missing_in_control",
+        "missing_in_repo"
+      ],
+      "display_name": "Jarvis Futu Option Exercise Alert 1518",
+      "lane": "live_scheduler",
+      "source_group": "Other Telegram task",
+      "source_detail": "run_futu_option_exercise_alert.bat",
+      "time_slots": [
+        "15:18 HKT"
+      ],
+      "runtime_entry": "run_futu_option_exercise_alert.bat",
+      "state_reason": "active scheduler job"
+    },
+    {
+      "task_key": "jarvis_futu_option_exercise_alert_2318",
+      "scheduler_name": "Jarvis Futu Option Exercise Alert 2318",
+      "owner_repo": "fundman-jarvis",
+      "source_type": "scheduler",
+      "command": "C:\\Users\\User\\Documents\\GitHub\\fundman-jarvis-option-exercise-alert\\run_futu_option_exercise_alert.bat",
+      "schedule_text": "Mon-Fri 23:18 HKT",
+      "last_result": 0,
+      "last_run_time": "5/29/2026 11:18:00 PM",
+      "enabled": true,
+      "telegram_related": true,
+      "observed_in": [
+        "scheduler"
+      ],
+      "issues": [
+        "missing_in_control",
+        "missing_in_repo"
+      ],
+      "display_name": "Jarvis Futu Option Exercise Alert 2318",
+      "lane": "live_scheduler",
+      "source_group": "Other Telegram task",
+      "source_detail": "run_futu_option_exercise_alert.bat",
+      "time_slots": [
+        "23:18 HKT"
+      ],
+      "runtime_entry": "run_futu_option_exercise_alert.bat",
+      "state_reason": "active scheduler job"
+    },
+    {
+      "task_key": "jarvis_hotipo_open",
+      "scheduler_name": "JARVIS-HotIPO-Open",
+      "owner_repo": "fundman-jarvis",
+      "source_type": "scheduler",
+      "command": "C:\\Users\\User\\Documents\\GitHub\\fundman-jarvis\\run_hotipo_scanner.bat open",
+      "schedule_text": "Mon-Fri 22:00 HKT",
+      "last_result": 1,
+      "last_run_time": "5/29/2026 10:00:00 PM",
+      "enabled": true,
+      "telegram_related": true,
+      "observed_in": [
+        "control",
+        "scheduler"
+      ],
+      "issues": [
+        "runtime_failure",
+        "missing_in_repo"
+      ],
+      "display_name": "JARVIS-HotIPO-Open",
+      "lane": "live_scheduler",
+      "source_group": "Other Telegram task",
+      "source_detail": "run_hotipo_scanner.bat open",
+      "time_slots": [
+        "22:00 HKT"
+      ],
+      "runtime_entry": "run_hotipo_scanner.bat open",
+      "state_reason": "active scheduler job"
+    },
+    {
+      "task_key": "jarvis_hotipo_premarket",
+      "scheduler_name": "JARVIS-HotIPO-Premarket",
+      "owner_repo": "fundman-jarvis",
+      "source_type": "scheduler",
+      "command": "C:\\Users\\User\\Documents\\GitHub\\fundman-jarvis\\run_hotipo_scanner.bat premarket",
+      "schedule_text": "Mon-Fri 21:00 HKT",
+      "last_result": 0,
+      "last_run_time": "5/31/2026 9:00:01 PM",
+      "enabled": true,
+      "telegram_related": true,
+      "observed_in": [
+        "control",
+        "scheduler"
+      ],
+      "issues": [
+        "missing_in_repo"
+      ],
+      "display_name": "JARVIS-HotIPO-Premarket",
+      "lane": "live_scheduler",
+      "source_group": "Other Telegram task",
+      "source_detail": "run_hotipo_scanner.bat premarket",
+      "time_slots": [
+        "21:00 HKT"
+      ],
+      "runtime_entry": "run_hotipo_scanner.bat premarket",
+      "state_reason": "active scheduler job"
+    },
+    {
+      "task_key": "jarvis_infohub_0830",
+      "scheduler_name": "Jarvis-InfoHub-0830",
+      "owner_repo": "fundman-jarvis",
+      "source_type": "scheduler",
+      "command": "c:\\Users\\User\\Documents\\GitHub\\fundman-jarvis\\run_infohub_bridge.bat",
+      "schedule_text": "Mon-Fri 08:30 HKT",
+      "last_result": 267009,
+      "last_run_time": "6/1/2026 9:23:22 AM",
+      "enabled": true,
+      "telegram_related": true,
+      "observed_in": [
+        "scheduler"
+      ],
+      "issues": [
+        "missing_in_control",
+        "missing_in_repo"
+      ],
+      "display_name": "Jarvis-InfoHub-0830",
+      "lane": "live_scheduler",
+      "source_group": "Other Telegram task",
+      "source_detail": "run_infohub_bridge.bat",
+      "time_slots": [
+        "08:30 HKT"
+      ],
+      "runtime_entry": "run_infohub_bridge.bat",
+      "state_reason": "active scheduler job"
+    },
+    {
+      "task_key": "jarvis_infohub_0915",
+      "scheduler_name": "Jarvis-InfoHub-0915",
+      "owner_repo": "fundman-jarvis",
+      "source_type": "scheduler",
+      "command": "c:\\Users\\User\\Documents\\GitHub\\fundman-jarvis\\run_infohub_bridge.bat",
+      "schedule_text": "Mon-Fri 09:15 HKT",
+      "last_result": 267009,
+      "last_run_time": "6/1/2026 9:23:22 AM",
+      "enabled": true,
+      "telegram_related": true,
+      "observed_in": [
+        "scheduler"
+      ],
+      "issues": [
+        "missing_in_control",
+        "missing_in_repo"
+      ],
+      "display_name": "Jarvis-InfoHub-0915",
+      "lane": "live_scheduler",
+      "source_group": "Other Telegram task",
+      "source_detail": "run_infohub_bridge.bat",
+      "time_slots": [
+        "09:15 HKT"
+      ],
+      "runtime_entry": "run_infohub_bridge.bat",
+      "state_reason": "active scheduler job"
+    },
+    {
+      "task_key": "jarvis_infohub_1130",
+      "scheduler_name": "Jarvis-InfoHub-1130",
+      "owner_repo": "fundman-jarvis",
+      "source_type": "scheduler",
+      "command": "c:\\Users\\User\\Documents\\GitHub\\fundman-jarvis\\run_infohub_bridge.bat",
+      "schedule_text": "Mon-Fri 11:30 HKT",
+      "last_result": 0,
+      "last_run_time": "5/29/2026 11:30:00 AM",
+      "enabled": true,
+      "telegram_related": true,
+      "observed_in": [
+        "scheduler"
+      ],
+      "issues": [
+        "missing_in_control",
+        "missing_in_repo"
+      ],
+      "display_name": "Jarvis-InfoHub-1130",
+      "lane": "live_scheduler",
+      "source_group": "Other Telegram task",
+      "source_detail": "run_infohub_bridge.bat",
+      "time_slots": [
+        "11:30 HKT"
+      ],
+      "runtime_entry": "run_infohub_bridge.bat",
+      "state_reason": "active scheduler job"
+    },
+    {
+      "task_key": "jarvis_infohub_1520",
+      "scheduler_name": "Jarvis-InfoHub-1520",
+      "owner_repo": "fundman-jarvis",
+      "source_type": "scheduler",
+      "command": "c:\\Users\\User\\Documents\\GitHub\\fundman-jarvis\\run_infohub_bridge.bat",
+      "schedule_text": "Mon-Fri 15:20 HKT",
+      "last_result": 0,
+      "last_run_time": "5/29/2026 3:20:00 PM",
+      "enabled": true,
+      "telegram_related": true,
+      "observed_in": [
+        "scheduler"
+      ],
+      "issues": [
+        "missing_in_control",
+        "missing_in_repo"
+      ],
+      "display_name": "Jarvis-InfoHub-1520",
+      "lane": "live_scheduler",
+      "source_group": "Other Telegram task",
+      "source_detail": "run_infohub_bridge.bat",
+      "time_slots": [
+        "15:20 HKT"
+      ],
+      "runtime_entry": "run_infohub_bridge.bat",
+      "state_reason": "active scheduler job"
+    },
+    {
+      "task_key": "jarvis_infohub_2055",
+      "scheduler_name": "Jarvis-InfoHub-2055",
+      "owner_repo": "fundman-jarvis",
+      "source_type": "scheduler",
+      "command": "c:\\Users\\User\\Documents\\GitHub\\fundman-jarvis\\run_infohub_bridge.bat",
+      "schedule_text": "Mon-Fri 20:55 HKT",
+      "last_result": 0,
+      "last_run_time": "5/29/2026 8:55:00 PM",
+      "enabled": true,
+      "telegram_related": true,
+      "observed_in": [
+        "scheduler"
+      ],
+      "issues": [
+        "missing_in_control",
+        "missing_in_repo"
+      ],
+      "display_name": "Jarvis-InfoHub-2055",
+      "lane": "live_scheduler",
+      "source_group": "Other Telegram task",
+      "source_detail": "run_infohub_bridge.bat",
+      "time_slots": [
+        "20:55 HKT"
+      ],
+      "runtime_entry": "run_infohub_bridge.bat",
+      "state_reason": "active scheduler job"
+    },
+    {
+      "task_key": "jarvis_infohub_crawl_0115",
+      "scheduler_name": "Jarvis InfoHub Crawl 0115",
+      "owner_repo": "fundman-jarvis",
+      "source_type": "scheduler",
+      "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -WindowStyle Hidden -File \"C:\\Users\\User\\Documents\\GitHub\\fundman-jarvis\\scripts\\run_infohub_crawl_scheduled.ps1\"",
+      "schedule_text": "Daily 01:15 HKT",
+      "last_result": 0,
+      "last_run_time": "6/1/2026 1:15:01 AM",
+      "enabled": true,
+      "telegram_related": true,
+      "observed_in": [
+        "scheduler"
+      ],
+      "issues": [
+        "missing_in_control",
+        "missing_in_repo"
+      ],
+      "display_name": "Jarvis InfoHub Crawl 0115",
+      "lane": "live_scheduler",
+      "source_group": "Other Telegram task",
+      "source_detail": "run_infohub_crawl_scheduled.ps1",
+      "time_slots": [
+        "01:15 HKT"
+      ],
+      "runtime_entry": "run_infohub_crawl_scheduled.ps1",
+      "state_reason": "active scheduler job"
+    },
+    {
+      "task_key": "jarvis_infohub_crawl_0945",
+      "scheduler_name": "Jarvis InfoHub Crawl 0945",
+      "owner_repo": "fundman-jarvis",
+      "source_type": "scheduler",
+      "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -WindowStyle Hidden -File \"C:\\Users\\User\\Documents\\GitHub\\fundman-jarvis\\scripts\\run_infohub_crawl_scheduled.ps1\"",
+      "schedule_text": "Daily 09:45 HKT",
+      "last_result": -1,
+      "last_run_time": "5/31/2026 10:46:20 AM",
+      "enabled": true,
+      "telegram_related": true,
+      "observed_in": [
+        "scheduler"
+      ],
+      "issues": [
+        "runtime_failure",
+        "missing_in_control",
+        "missing_in_repo"
+      ],
+      "display_name": "Jarvis InfoHub Crawl 0945",
+      "lane": "live_scheduler",
+      "source_group": "Other Telegram task",
+      "source_detail": "run_infohub_crawl_scheduled.ps1",
+      "time_slots": [
+        "09:45 HKT"
+      ],
+      "runtime_entry": "run_infohub_crawl_scheduled.ps1",
+      "state_reason": "active scheduler job"
+    },
+    {
+      "task_key": "jarvis_infohub_crawl_1500",
+      "scheduler_name": "Jarvis InfoHub Crawl 1500",
+      "owner_repo": "fundman-jarvis",
+      "source_type": "scheduler",
+      "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -WindowStyle Hidden -File \"C:\\Users\\User\\Documents\\GitHub\\fundman-jarvis\\scripts\\run_infohub_crawl_scheduled.ps1\"",
+      "schedule_text": "Daily 15:00 HKT",
+      "last_result": 0,
+      "last_run_time": "5/31/2026 3:00:01 PM",
+      "enabled": true,
+      "telegram_related": true,
+      "observed_in": [
+        "scheduler"
+      ],
+      "issues": [
+        "missing_in_control",
+        "missing_in_repo"
+      ],
+      "display_name": "Jarvis InfoHub Crawl 1500",
+      "lane": "live_scheduler",
+      "source_group": "Other Telegram task",
+      "source_detail": "run_infohub_crawl_scheduled.ps1",
+      "time_slots": [
+        "15:00 HKT"
+      ],
+      "runtime_entry": "run_infohub_crawl_scheduled.ps1",
+      "state_reason": "active scheduler job"
+    },
+    {
+      "task_key": "jarvis_infohub_crawl_2300",
+      "scheduler_name": "Jarvis InfoHub Crawl 2300",
+      "owner_repo": "fundman-jarvis",
+      "source_type": "scheduler",
+      "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -WindowStyle Hidden -File \"C:\\Users\\User\\Documents\\GitHub\\fundman-jarvis\\scripts\\run_infohub_crawl_scheduled.ps1\"",
+      "schedule_text": "Daily 23:00 HKT",
+      "last_result": 0,
+      "last_run_time": "5/31/2026 11:00:01 PM",
+      "enabled": true,
+      "telegram_related": true,
+      "observed_in": [
+        "scheduler"
+      ],
+      "issues": [
+        "missing_in_control",
+        "missing_in_repo"
+      ],
+      "display_name": "Jarvis InfoHub Crawl 2300",
+      "lane": "live_scheduler",
+      "source_group": "Other Telegram task",
+      "source_detail": "run_infohub_crawl_scheduled.ps1",
+      "time_slots": [
+        "23:00 HKT"
+      ],
+      "runtime_entry": "run_infohub_crawl_scheduled.ps1",
+      "state_reason": "active scheduler job"
+    },
+    {
       "task_key": "jarvis_light",
       "scheduler_name": "",
       "owner_repo": "fundman-jarvis",
       "source_type": "repo",
       "command": "run_light.bat",
       "schedule_text": "",
+      "last_result": null,
+      "last_run_time": "",
       "enabled": true,
       "telegram_related": true,
       "observed_in": [
@@ -749,12 +1381,15 @@
       "source_type": "scheduler",
       "command": "C:\\Users\\User\\Documents\\GitHub\\fundman-jarvis\\run_light.bat",
       "schedule_text": "Daily 09:50 HKT",
+      "last_result": -1,
+      "last_run_time": "5/31/2026 10:46:20 AM",
       "enabled": true,
       "telegram_related": true,
       "observed_in": [
         "scheduler"
       ],
       "issues": [
+        "runtime_failure",
         "missing_in_control",
         "missing_in_repo"
       ],
@@ -775,6 +1410,8 @@
       "source_type": "scheduler",
       "command": "C:\\Users\\User\\Documents\\GitHub\\fundman-jarvis\\run_light.bat",
       "schedule_text": "Daily 21:00 HKT",
+      "last_result": 0,
+      "last_run_time": "5/31/2026 9:00:01 PM",
       "enabled": true,
       "telegram_related": true,
       "observed_in": [
@@ -801,6 +1438,8 @@
       "source_type": "scheduler",
       "command": "C:\\Users\\User\\Documents\\GitHub\\fundman-jarvis\\run_light.bat",
       "schedule_text": "Daily 22:30 HKT",
+      "last_result": 0,
+      "last_run_time": "5/31/2026 10:30:01 PM",
       "enabled": true,
       "telegram_related": true,
       "observed_in": [
@@ -827,6 +1466,8 @@
       "source_type": "scheduler",
       "command": "C:\\Users\\User\\Documents\\GitHub\\fundman-jarvis\\run_polymarket_monitor.bat",
       "schedule_text": "Hourly",
+      "last_result": 267009,
+      "last_run_time": "6/1/2026 9:23:22 AM",
       "enabled": true,
       "telegram_related": true,
       "observed_in": [
@@ -845,12 +1486,42 @@
       "state_reason": "active scheduler job"
     },
     {
+      "task_key": "jarvis_polymarketmonitordaily",
+      "scheduler_name": "Jarvis-PolymarketMonitorDaily",
+      "owner_repo": "fundman-jarvis",
+      "source_type": "scheduler",
+      "command": "C:\\Users\\User\\Documents\\GitHub\\fundman-jarvis\\run_polymarket_monitor_daily.bat",
+      "schedule_text": "Daily 20:00 HKT",
+      "last_result": 0,
+      "last_run_time": "5/31/2026 8:00:01 PM",
+      "enabled": true,
+      "telegram_related": true,
+      "observed_in": [
+        "scheduler"
+      ],
+      "issues": [
+        "missing_in_control",
+        "missing_in_repo"
+      ],
+      "display_name": "Jarvis-PolymarketMonitorDaily",
+      "lane": "live_scheduler",
+      "source_group": "Other Telegram task",
+      "source_detail": "run_polymarket_monitor_daily.bat",
+      "time_slots": [
+        "20:00 HKT"
+      ],
+      "runtime_entry": "run_polymarket_monitor_daily.bat",
+      "state_reason": "active scheduler job"
+    },
+    {
       "task_key": "jarvis_portfolio_am",
       "scheduler_name": "JARVIS_Portfolio_AM",
       "owner_repo": "fundman-jarvis",
       "source_type": "scheduler",
       "command": "C:\\Users\\User\\Documents\\GitHub\\fundman-jarvis\\run_portfolio_commentary.bat",
       "schedule_text": "Daily 09:00 HKT",
+      "last_result": 267009,
+      "last_run_time": "6/1/2026 9:23:22 AM",
       "enabled": true,
       "telegram_related": true,
       "observed_in": [
@@ -877,6 +1548,8 @@
       "source_type": "scheduler",
       "command": "C:\\Users\\User\\Documents\\GitHub\\fundman-jarvis\\run_portfolio_commentary.bat",
       "schedule_text": "Daily 20:30 HKT",
+      "last_result": 0,
+      "last_run_time": "5/31/2026 8:30:01 PM",
       "enabled": true,
       "telegram_related": true,
       "observed_in": [
@@ -897,12 +1570,295 @@
       "state_reason": "active scheduler job"
     },
     {
+      "task_key": "jarvis_sector_momentum_0905",
+      "scheduler_name": "Jarvis Sector Momentum 0905",
+      "owner_repo": "fundman-jarvis",
+      "source_type": "scheduler",
+      "command": "C:\\Users\\User\\AppData\\Local\\Programs\\Python\\Python311\\python.exe C:\\Users\\User\\Documents\\GitHub\\fundman-jarvis\\send_sector_momentum.py",
+      "schedule_text": "Daily 09:05 HKT",
+      "last_result": 267009,
+      "last_run_time": "6/1/2026 9:23:22 AM",
+      "enabled": true,
+      "telegram_related": true,
+      "observed_in": [
+        "scheduler"
+      ],
+      "issues": [
+        "missing_in_control",
+        "missing_in_repo"
+      ],
+      "display_name": "Jarvis Sector Momentum 0905",
+      "lane": "live_scheduler",
+      "source_group": "Other Telegram task",
+      "source_detail": "send_sector_momentum.py",
+      "time_slots": [
+        "09:05 HKT"
+      ],
+      "runtime_entry": "send_sector_momentum.py",
+      "state_reason": "active scheduler job"
+    },
+    {
+      "task_key": "jarvis_sector_momentum_1145",
+      "scheduler_name": "Jarvis Sector Momentum 1145",
+      "owner_repo": "fundman-jarvis",
+      "source_type": "scheduler",
+      "command": "C:\\Users\\User\\AppData\\Local\\Programs\\Python\\Python311\\python.exe C:\\Users\\User\\Documents\\GitHub\\fundman-jarvis\\send_sector_momentum.py",
+      "schedule_text": "Daily 11:45 HKT",
+      "last_result": 0,
+      "last_run_time": "5/31/2026 11:45:01 AM",
+      "enabled": true,
+      "telegram_related": true,
+      "observed_in": [
+        "scheduler"
+      ],
+      "issues": [
+        "missing_in_control",
+        "missing_in_repo"
+      ],
+      "display_name": "Jarvis Sector Momentum 1145",
+      "lane": "live_scheduler",
+      "source_group": "Other Telegram task",
+      "source_detail": "send_sector_momentum.py",
+      "time_slots": [
+        "11:45 HKT"
+      ],
+      "runtime_entry": "send_sector_momentum.py",
+      "state_reason": "active scheduler job"
+    },
+    {
+      "task_key": "jarvis_sector_momentum_1545",
+      "scheduler_name": "Jarvis Sector Momentum 1545",
+      "owner_repo": "fundman-jarvis",
+      "source_type": "scheduler",
+      "command": "C:\\Users\\User\\AppData\\Local\\Programs\\Python\\Python311\\python.exe C:\\Users\\User\\Documents\\GitHub\\fundman-jarvis\\send_sector_momentum.py",
+      "schedule_text": "Daily 15:45 HKT",
+      "last_result": 0,
+      "last_run_time": "5/31/2026 3:45:01 PM",
+      "enabled": true,
+      "telegram_related": true,
+      "observed_in": [
+        "scheduler"
+      ],
+      "issues": [
+        "missing_in_control",
+        "missing_in_repo"
+      ],
+      "display_name": "Jarvis Sector Momentum 1545",
+      "lane": "live_scheduler",
+      "source_group": "Other Telegram task",
+      "source_detail": "send_sector_momentum.py",
+      "time_slots": [
+        "15:45 HKT"
+      ],
+      "runtime_entry": "send_sector_momentum.py",
+      "state_reason": "active scheduler job"
+    },
+    {
+      "task_key": "jarvis_sector_momentum_2100",
+      "scheduler_name": "Jarvis Sector Momentum 2100",
+      "owner_repo": "fundman-jarvis",
+      "source_type": "scheduler",
+      "command": "C:\\Users\\User\\AppData\\Local\\Programs\\Python\\Python311\\python.exe C:\\Users\\User\\Documents\\GitHub\\fundman-jarvis\\send_sector_momentum.py",
+      "schedule_text": "Daily 21:00 HKT",
+      "last_result": 0,
+      "last_run_time": "5/31/2026 9:00:01 PM",
+      "enabled": true,
+      "telegram_related": true,
+      "observed_in": [
+        "scheduler"
+      ],
+      "issues": [
+        "missing_in_control",
+        "missing_in_repo"
+      ],
+      "display_name": "Jarvis Sector Momentum 2100",
+      "lane": "live_scheduler",
+      "source_group": "Other Telegram task",
+      "source_detail": "send_sector_momentum.py",
+      "time_slots": [
+        "21:00 HKT"
+      ],
+      "runtime_entry": "send_sector_momentum.py",
+      "state_reason": "active scheduler job"
+    },
+    {
+      "task_key": "jarvis_sector_stock_momentum_0915",
+      "scheduler_name": "Jarvis Sector Stock Momentum 0915",
+      "owner_repo": "fundman-jarvis",
+      "source_type": "scheduler",
+      "command": "C:\\Users\\User\\AppData\\Local\\Programs\\Python\\Python311\\python.exe C:\\Users\\User\\Documents\\GitHub\\fundman-jarvis\\send_sector_stock_momentum.py",
+      "schedule_text": "Mon-Fri 09:15 HKT",
+      "last_result": -2147020576,
+      "last_run_time": "6/1/2026 9:23:22 AM",
+      "enabled": true,
+      "telegram_related": true,
+      "observed_in": [
+        "scheduler"
+      ],
+      "issues": [
+        "runtime_failure",
+        "missing_in_control",
+        "missing_in_repo"
+      ],
+      "display_name": "Jarvis Sector Stock Momentum 0915",
+      "lane": "live_scheduler",
+      "source_group": "Other Telegram task",
+      "source_detail": "send_sector_stock_momentum.py",
+      "time_slots": [
+        "09:15 HKT"
+      ],
+      "runtime_entry": "send_sector_stock_momentum.py",
+      "state_reason": "active scheduler job"
+    },
+    {
+      "task_key": "jarvis_sector_stock_momentum_1155",
+      "scheduler_name": "Jarvis Sector Stock Momentum 1155",
+      "owner_repo": "fundman-jarvis",
+      "source_type": "scheduler",
+      "command": "C:\\Users\\User\\AppData\\Local\\Programs\\Python\\Python311\\python.exe C:\\Users\\User\\Documents\\GitHub\\fundman-jarvis\\send_sector_stock_momentum.py",
+      "schedule_text": "Mon-Fri 11:55 HKT",
+      "last_result": 0,
+      "last_run_time": "5/29/2026 11:55:00 AM",
+      "enabled": true,
+      "telegram_related": true,
+      "observed_in": [
+        "scheduler"
+      ],
+      "issues": [
+        "missing_in_control",
+        "missing_in_repo"
+      ],
+      "display_name": "Jarvis Sector Stock Momentum 1155",
+      "lane": "live_scheduler",
+      "source_group": "Other Telegram task",
+      "source_detail": "send_sector_stock_momentum.py",
+      "time_slots": [
+        "11:55 HKT"
+      ],
+      "runtime_entry": "send_sector_stock_momentum.py",
+      "state_reason": "active scheduler job"
+    },
+    {
+      "task_key": "jarvis_sector_stock_momentum_1555",
+      "scheduler_name": "Jarvis Sector Stock Momentum 1555",
+      "owner_repo": "fundman-jarvis",
+      "source_type": "scheduler",
+      "command": "C:\\Users\\User\\AppData\\Local\\Programs\\Python\\Python311\\python.exe C:\\Users\\User\\Documents\\GitHub\\fundman-jarvis\\send_sector_stock_momentum.py",
+      "schedule_text": "Mon-Fri 15:55 HKT",
+      "last_result": 0,
+      "last_run_time": "5/29/2026 3:55:00 PM",
+      "enabled": true,
+      "telegram_related": true,
+      "observed_in": [
+        "scheduler"
+      ],
+      "issues": [
+        "missing_in_control",
+        "missing_in_repo"
+      ],
+      "display_name": "Jarvis Sector Stock Momentum 1555",
+      "lane": "live_scheduler",
+      "source_group": "Other Telegram task",
+      "source_detail": "send_sector_stock_momentum.py",
+      "time_slots": [
+        "15:55 HKT"
+      ],
+      "runtime_entry": "send_sector_stock_momentum.py",
+      "state_reason": "active scheduler job"
+    },
+    {
+      "task_key": "jarvis_sector_universe_expand",
+      "scheduler_name": "Jarvis Sector Universe Expand",
+      "owner_repo": "fundman-jarvis",
+      "source_type": "scheduler",
+      "command": "C:\\Users\\User\\AppData\\Local\\Programs\\Python\\Python311\\python.exe C:\\Users\\User\\Documents\\GitHub\\fundman-jarvis\\tools\\expand_sector_universe.py --daily",
+      "schedule_text": "Daily 08:00 HKT",
+      "last_result": 267009,
+      "last_run_time": "6/1/2026 9:23:22 AM",
+      "enabled": true,
+      "telegram_related": true,
+      "observed_in": [
+        "scheduler"
+      ],
+      "issues": [
+        "missing_in_control",
+        "missing_in_repo"
+      ],
+      "display_name": "Jarvis Sector Universe Expand",
+      "lane": "live_scheduler",
+      "source_group": "Other Telegram task",
+      "source_detail": "expand_sector_universe.py --daily",
+      "time_slots": [
+        "08:00 HKT"
+      ],
+      "runtime_entry": "expand_sector_universe.py --daily",
+      "state_reason": "active scheduler job"
+    },
+    {
+      "task_key": "jarvis_shadow_sleeve_monday",
+      "scheduler_name": "Jarvis Shadow Sleeve Monday",
+      "owner_repo": "fundman-jarvis",
+      "source_type": "scheduler",
+      "command": "C:\\Users\\User\\Documents\\GitHub\\fundman-jarvis\\run_shadow_sleeve_check.bat",
+      "schedule_text": "Mon 09:00 HKT",
+      "last_result": 267009,
+      "last_run_time": "6/1/2026 9:23:22 AM",
+      "enabled": true,
+      "telegram_related": true,
+      "observed_in": [
+        "scheduler"
+      ],
+      "issues": [
+        "missing_in_control",
+        "missing_in_repo"
+      ],
+      "display_name": "Jarvis Shadow Sleeve Monday",
+      "lane": "live_scheduler",
+      "source_group": "Other Telegram task",
+      "source_detail": "run_shadow_sleeve_check.bat",
+      "time_slots": [
+        "09:00 HKT"
+      ],
+      "runtime_entry": "run_shadow_sleeve_check.bat",
+      "state_reason": "active scheduler job"
+    },
+    {
+      "task_key": "jarvis_shadow_sleeve_wednesday",
+      "scheduler_name": "Jarvis Shadow Sleeve Wednesday",
+      "owner_repo": "fundman-jarvis",
+      "source_type": "scheduler",
+      "command": "C:\\Users\\User\\Documents\\GitHub\\fundman-jarvis\\run_shadow_sleeve_check.bat",
+      "schedule_text": "Wed 09:00 HKT",
+      "last_result": 0,
+      "last_run_time": "5/27/2026 9:18:05 AM",
+      "enabled": true,
+      "telegram_related": true,
+      "observed_in": [
+        "scheduler"
+      ],
+      "issues": [
+        "missing_in_control",
+        "missing_in_repo"
+      ],
+      "display_name": "Jarvis Shadow Sleeve Wednesday",
+      "lane": "live_scheduler",
+      "source_group": "Other Telegram task",
+      "source_detail": "run_shadow_sleeve_check.bat",
+      "time_slots": [
+        "09:00 HKT"
+      ],
+      "runtime_entry": "run_shadow_sleeve_check.bat",
+      "state_reason": "active scheduler job"
+    },
+    {
       "task_key": "morning_digest",
       "scheduler_name": "JARVIS-Reminder-morning_digest",
       "owner_repo": "fundman-jarvis",
       "source_type": "scheduler",
       "command": "C:\\Users\\User\\AppData\\Local\\Programs\\Python\\Python311\\python.exe daily_reminders.py --task morning_digest",
       "schedule_text": "Mon-Fri 07:00 HKT",
+      "last_result": 267009,
+      "last_run_time": "6/1/2026 9:23:22 AM",
       "enabled": true,
       "telegram_related": true,
       "observed_in": [
@@ -929,6 +1885,8 @@
       "source_type": "scheduler",
       "command": "C:\\Users\\User\\AppData\\Local\\Programs\\Python\\Python311\\python.exe C:\\Users\\User\\Documents\\GitHub\\fundman-jarvis\\daily_reminders.py --task newsletter",
       "schedule_text": "Mon-Fri 11:00 HKT",
+      "last_result": 1,
+      "last_run_time": "5/29/2026 11:00:00 AM",
       "enabled": true,
       "telegram_related": true,
       "observed_in": [
@@ -936,7 +1894,9 @@
         "repo",
         "scheduler"
       ],
-      "issues": [],
+      "issues": [
+        "runtime_failure"
+      ],
       "display_name": "Newsletter",
       "lane": "live_scheduler",
       "source_group": "Newsletter deploy",
@@ -954,6 +1914,8 @@
       "source_type": "scheduler",
       "command": "C:\\Users\\User\\AppData\\Local\\Programs\\Python\\Python311\\python.exe daily_reminders.py --task night_digest",
       "schedule_text": "Mon-Fri 23:30 HKT",
+      "last_result": 0,
+      "last_run_time": "5/29/2026 11:30:00 PM",
       "enabled": true,
       "telegram_related": true,
       "observed_in": [
@@ -980,6 +1942,8 @@
       "source_type": "repo",
       "command": "python daily_reminders.py --task northbound",
       "schedule_text": "Daily 15:30 HKT",
+      "last_result": null,
+      "last_run_time": "",
       "enabled": true,
       "telegram_related": true,
       "observed_in": [
@@ -1003,6 +1967,8 @@
       "source_type": "workflow",
       "command": ".github/workflows/publish.yml",
       "schedule_text": "Daily 09:00 HKT",
+      "last_result": null,
+      "last_run_time": "",
       "enabled": true,
       "telegram_related": false,
       "observed_in": [
@@ -1027,7 +1993,9 @@
       "owner_repo": "fundman-jarvis",
       "source_type": "scheduler",
       "command": "cmd.exe /c \"C:\\Users\\User\\Documents\\GitHub\\fundman-jarvis\\run_options_expiry.bat\"",
-      "schedule_text": "Daily 21:00 HKT",
+      "schedule_text": "Mon-Fri 21:00 HKT",
+      "last_result": 0,
+      "last_run_time": "5/29/2026 9:00:00 PM",
       "enabled": true,
       "telegram_related": true,
       "observed_in": [
@@ -1035,7 +2003,9 @@
         "repo",
         "scheduler"
       ],
-      "issues": [],
+      "issues": [
+        "schedule_mismatch"
+      ],
       "display_name": "Options & Earnings Alert (21:00)",
       "lane": "live_scheduler",
       "source_group": "Options + earnings reminders",
@@ -1052,7 +2022,9 @@
       "owner_repo": "fundman-jarvis",
       "source_type": "scheduler",
       "command": "cmd.exe /c \"C:\\Users\\User\\Documents\\GitHub\\fundman-jarvis\\run_options_expiry.bat\"",
-      "schedule_text": "Daily 23:30 HKT",
+      "schedule_text": "Mon-Fri 23:30 HKT",
+      "last_result": 0,
+      "last_run_time": "5/29/2026 11:30:00 PM",
       "enabled": true,
       "telegram_related": true,
       "observed_in": [
@@ -1060,7 +2032,9 @@
         "repo",
         "scheduler"
       ],
-      "issues": [],
+      "issues": [
+        "schedule_mismatch"
+      ],
       "display_name": "Options & Earnings Alert (23:30)",
       "lane": "live_scheduler",
       "source_group": "Options + earnings reminders",
@@ -1078,15 +2052,16 @@
       "source_type": "scheduler",
       "command": "C:\\Users\\User\\AppData\\Local\\Programs\\Python\\Python311\\python.exe daily_reminders.py --task pam_check",
       "schedule_text": "Mon-Fri 05:00 HKT",
+      "last_result": 267009,
+      "last_run_time": "6/1/2026 9:23:22 AM",
       "enabled": true,
       "telegram_related": true,
       "observed_in": [
+        "control",
         "repo",
         "scheduler"
       ],
-      "issues": [
-        "missing_in_control"
-      ],
+      "issues": [],
       "display_name": "P-model Check",
       "lane": "live_scheduler",
       "source_group": "P-model scraper + parser",
@@ -1104,6 +2079,8 @@
       "source_type": "scheduler",
       "command": "C:\\Users\\User\\Documents\\GitHub\\fundman-jarvis\\run_daily_reminder.bat polymarket",
       "schedule_text": "Daily 20:05 HKT",
+      "last_result": 0,
+      "last_run_time": "5/31/2026 8:05:01 PM",
       "enabled": true,
       "telegram_related": true,
       "observed_in": [
@@ -1130,6 +2107,8 @@
       "source_type": "repo",
       "command": "run_portfolio_digest.bat",
       "schedule_text": "",
+      "last_result": null,
+      "last_run_time": "",
       "enabled": true,
       "telegram_related": true,
       "observed_in": [
@@ -1147,12 +2126,69 @@
       "state_reason": "repo sender with no scheduler match"
     },
     {
+      "task_key": "pre_catalyst_alert",
+      "scheduler_name": "JARVIS-Pre-Catalyst-Alert",
+      "owner_repo": "fundman-jarvis",
+      "source_type": "scheduler",
+      "command": "cmd.exe /c \"C:\\Users\\User\\Documents\\GitHub\\fundman-jarvis\\run_pre_catalyst_alert.bat\"",
+      "schedule_text": "Daily 18:29 HKT",
+      "last_result": 0,
+      "last_run_time": "5/31/2026 6:29:01 PM",
+      "enabled": true,
+      "telegram_related": true,
+      "observed_in": [
+        "control",
+        "repo",
+        "scheduler"
+      ],
+      "issues": [],
+      "display_name": "Pre-Catalyst Alert",
+      "lane": "live_scheduler",
+      "source_group": "Earnings catalyst monitor",
+      "source_detail": "Single pre-catalyst earnings alert wrapper",
+      "time_slots": [
+        "18:29 HKT"
+      ],
+      "runtime_entry": "run_pre_catalyst_alert.bat",
+      "state_reason": "active scheduler job"
+    },
+    {
+      "task_key": "pre_catalyst_alerts",
+      "scheduler_name": "JARVIS-PreCatalyst-Alerts",
+      "owner_repo": "fundman-jarvis",
+      "source_type": "scheduler",
+      "command": "cmd.exe /c \"C:\\Users\\User\\Documents\\GitHub\\fundman-jarvis\\run_pre_catalyst_alerts.bat\"",
+      "schedule_text": "Daily 09:08,21:03 HKT",
+      "last_result": 267009,
+      "last_run_time": "6/1/2026 9:23:22 AM",
+      "enabled": true,
+      "telegram_related": true,
+      "observed_in": [
+        "control",
+        "repo",
+        "scheduler"
+      ],
+      "issues": [],
+      "display_name": "Pre-Catalyst Earnings Alerts",
+      "lane": "live_scheduler",
+      "source_group": "Earnings catalyst monitor",
+      "source_detail": "T-4 to T-10 earnings entry window and Fed tone shift checks",
+      "time_slots": [
+        "09:08 HKT",
+        "21:03 HKT"
+      ],
+      "runtime_entry": "run_pre_catalyst_alerts.bat",
+      "state_reason": "active scheduler job"
+    },
+    {
       "task_key": "schedule_audit",
       "scheduler_name": "JARVIS-Reminder-schedule-audit",
       "owner_repo": "fundman-jarvis",
       "source_type": "scheduler",
       "command": "cmd.exe /c \"C:\\Users\\User\\Documents\\GitHub\\fundman-jarvis\\run_schedule_audit.bat\"",
-      "schedule_text": "Mon-Fri 06:15 HKT",
+      "schedule_text": "Mon-Fri 06:05,15:40,22:35 HKT",
+      "last_result": 267009,
+      "last_run_time": "6/1/2026 9:23:22 AM",
       "enabled": true,
       "telegram_related": true,
       "observed_in": [
@@ -1166,7 +2202,9 @@
       "source_group": "Ops support",
       "source_detail": "Cross-repo Telegram schedule drift audit",
       "time_slots": [
-        "06:15 HKT"
+        "06:05 HKT",
+        "15:40 HKT",
+        "22:35 HKT"
       ],
       "runtime_entry": "run_schedule_audit.bat",
       "state_reason": "active scheduler job"
@@ -1178,6 +2216,8 @@
       "source_type": "repo",
       "command": "python daily_reminders.py --task scrape_all",
       "schedule_text": "Daily 22:00 HKT",
+      "last_result": null,
+      "last_run_time": "",
       "enabled": true,
       "telegram_related": true,
       "observed_in": [
@@ -1201,6 +2241,8 @@
       "source_type": "repo",
       "command": "python daily_reminders.py --task scrape_cw",
       "schedule_text": "Daily 10:00 HKT",
+      "last_result": null,
+      "last_run_time": "",
       "enabled": true,
       "telegram_related": true,
       "observed_in": [
@@ -1224,6 +2266,8 @@
       "source_type": "repo",
       "command": "python daily_reminders.py --task scrape_p_model",
       "schedule_text": "Daily 20:00 HKT",
+      "last_result": null,
+      "last_run_time": "",
       "enabled": true,
       "telegram_related": true,
       "observed_in": [
@@ -1247,6 +2291,8 @@
       "source_type": "repo",
       "command": "alias:scrape_pam->scrape_p_model",
       "schedule_text": "",
+      "last_result": null,
+      "last_run_time": "",
       "enabled": true,
       "telegram_related": true,
       "observed_in": [
@@ -1268,6 +2314,8 @@
       "source_type": "scheduler",
       "command": "C:\\Users\\User\\Documents\\GitHub\\fundman-jarvis\\run_sector_screenshots.bat",
       "schedule_text": "Mon-Fri 15:30 HKT",
+      "last_result": 1,
+      "last_run_time": "5/29/2026 3:30:00 PM",
       "enabled": true,
       "telegram_related": true,
       "observed_in": [
@@ -1275,7 +2323,9 @@
         "repo",
         "scheduler"
       ],
-      "issues": [],
+      "issues": [
+        "runtime_failure"
+      ],
       "display_name": "Sector Heatmap",
       "lane": "live_scheduler",
       "source_group": "CitiWarrants screenshots",
@@ -1287,12 +2337,151 @@
       "state_reason": "active scheduler job"
     },
     {
+      "task_key": "sentiment_scan_0133",
+      "scheduler_name": "Jarvis Sentiment Scan 0133",
+      "owner_repo": "fundman-jarvis",
+      "source_type": "scheduler",
+      "command": "C:\\Users\\User\\AppData\\Local\\Programs\\Python\\Python311\\pythonw.exe C:\\Users\\User\\Documents\\GitHub\\fundman-jarvis\\send_sentiment_scan.py",
+      "schedule_text": "Daily 01:33 HKT",
+      "last_result": 0,
+      "last_run_time": "6/1/2026 1:33:01 AM",
+      "enabled": true,
+      "telegram_related": true,
+      "observed_in": [
+        "control",
+        "repo",
+        "scheduler"
+      ],
+      "issues": [],
+      "display_name": "Sentiment Scan (01:33)",
+      "lane": "live_scheduler",
+      "source_group": "Multi-source sentiment scanner",
+      "source_detail": "Futu/OpenD watchlist sentiment scan",
+      "time_slots": [
+        "01:33 HKT"
+      ],
+      "runtime_entry": "send_sentiment_scan.py",
+      "state_reason": "active scheduler job"
+    },
+    {
+      "task_key": "sentiment_scan_1000",
+      "scheduler_name": "Jarvis Sentiment Scan 1000",
+      "owner_repo": "fundman-jarvis",
+      "source_type": "scheduler",
+      "command": "C:\\Users\\User\\AppData\\Local\\Programs\\Python\\Python311\\pythonw.exe C:\\Users\\User\\Documents\\GitHub\\fundman-jarvis\\send_sentiment_scan.py",
+      "schedule_text": "Daily 10:00 HKT",
+      "last_result": 267014,
+      "last_run_time": "5/31/2026 10:46:20 AM",
+      "enabled": true,
+      "telegram_related": true,
+      "observed_in": [
+        "control",
+        "repo",
+        "scheduler"
+      ],
+      "issues": [
+        "runtime_failure"
+      ],
+      "display_name": "Sentiment Scan (10:00)",
+      "lane": "live_scheduler",
+      "source_group": "Multi-source sentiment scanner",
+      "source_detail": "Futu/OpenD watchlist sentiment scan",
+      "time_slots": [
+        "10:00 HKT"
+      ],
+      "runtime_entry": "send_sentiment_scan.py",
+      "state_reason": "active scheduler job"
+    },
+    {
+      "task_key": "sentiment_scan_1146",
+      "scheduler_name": "Jarvis Sentiment Scan 1146",
+      "owner_repo": "fundman-jarvis",
+      "source_type": "scheduler",
+      "command": "C:\\Users\\User\\AppData\\Local\\Programs\\Python\\Python311\\pythonw.exe C:\\Users\\User\\Documents\\GitHub\\fundman-jarvis\\send_sentiment_scan.py",
+      "schedule_text": "Daily 11:46 HKT",
+      "last_result": 0,
+      "last_run_time": "5/31/2026 11:46:01 AM",
+      "enabled": true,
+      "telegram_related": true,
+      "observed_in": [
+        "control",
+        "repo",
+        "scheduler"
+      ],
+      "issues": [],
+      "display_name": "Sentiment Scan (11:46)",
+      "lane": "live_scheduler",
+      "source_group": "Multi-source sentiment scanner",
+      "source_detail": "Futu/OpenD watchlist sentiment scan",
+      "time_slots": [
+        "11:46 HKT"
+      ],
+      "runtime_entry": "send_sentiment_scan.py",
+      "state_reason": "active scheduler job"
+    },
+    {
+      "task_key": "sentiment_scan_1515",
+      "scheduler_name": "Jarvis Sentiment Scan 1515",
+      "owner_repo": "fundman-jarvis",
+      "source_type": "scheduler",
+      "command": "C:\\Users\\User\\AppData\\Local\\Programs\\Python\\Python311\\pythonw.exe C:\\Users\\User\\Documents\\GitHub\\fundman-jarvis\\send_sentiment_scan.py",
+      "schedule_text": "Daily 15:15 HKT",
+      "last_result": 0,
+      "last_run_time": "5/31/2026 3:15:01 PM",
+      "enabled": true,
+      "telegram_related": true,
+      "observed_in": [
+        "control",
+        "repo",
+        "scheduler"
+      ],
+      "issues": [],
+      "display_name": "Sentiment Scan (15:15)",
+      "lane": "live_scheduler",
+      "source_group": "Multi-source sentiment scanner",
+      "source_detail": "Futu/OpenD watchlist sentiment scan",
+      "time_slots": [
+        "15:15 HKT"
+      ],
+      "runtime_entry": "send_sentiment_scan.py",
+      "state_reason": "active scheduler job"
+    },
+    {
+      "task_key": "sentiment_scan_2310",
+      "scheduler_name": "Jarvis Sentiment Scan 2310",
+      "owner_repo": "fundman-jarvis",
+      "source_type": "scheduler",
+      "command": "C:\\Users\\User\\AppData\\Local\\Programs\\Python\\Python311\\pythonw.exe C:\\Users\\User\\Documents\\GitHub\\fundman-jarvis\\send_sentiment_scan.py",
+      "schedule_text": "Daily 23:10 HKT",
+      "last_result": 0,
+      "last_run_time": "5/31/2026 11:10:01 PM",
+      "enabled": true,
+      "telegram_related": true,
+      "observed_in": [
+        "control",
+        "repo",
+        "scheduler"
+      ],
+      "issues": [],
+      "display_name": "Sentiment Scan (23:10)",
+      "lane": "live_scheduler",
+      "source_group": "Multi-source sentiment scanner",
+      "source_detail": "Futu/OpenD watchlist sentiment scan",
+      "time_slots": [
+        "23:10 HKT"
+      ],
+      "runtime_entry": "send_sentiment_scan.py",
+      "state_reason": "active scheduler job"
+    },
+    {
       "task_key": "southbound",
       "scheduler_name": "JARVIS-Reminder-southbound",
       "owner_repo": "fundman-jarvis",
       "source_type": "scheduler",
       "command": "C:\\Users\\User\\AppData\\Local\\Programs\\Python\\Python311\\python.exe daily_reminders.py --task southbound",
       "schedule_text": "Mon-Fri 15:30 HKT",
+      "last_result": 0,
+      "last_run_time": "5/29/2026 3:30:00 PM",
       "enabled": true,
       "telegram_related": true,
       "observed_in": [
@@ -1318,14 +2507,18 @@
       "source_type": "scheduler",
       "command": "C:\\Users\\User\\AppData\\Local\\Programs\\Python\\Python311\\python.exe C:\\Users\\User\\Documents\\GitHub\\fundman-jarvis\\daily_reminders.py --task southbound_1230",
       "schedule_text": "Mon-Fri 12:30 HKT",
+      "last_result": 1,
+      "last_run_time": "5/29/2026 12:30:00 PM",
       "enabled": true,
       "telegram_related": true,
       "observed_in": [
         "control",
-        "repo",
         "scheduler"
       ],
-      "issues": [],
+      "issues": [
+        "runtime_failure",
+        "missing_in_repo"
+      ],
       "display_name": "Southbound Flow",
       "lane": "live_scheduler",
       "source_group": "Eastmoney + screen brief",
@@ -1343,6 +2536,8 @@
       "source_type": "scheduler",
       "command": "cmd /c \"C:\\Users\\User\\Documents\\GitHub\\fundman-jarvis\\run_daily_reminder.bat story_1030\"",
       "schedule_text": "Daily 10:30 HKT",
+      "last_result": -2147020576,
+      "last_run_time": "5/31/2026 10:46:20 AM",
       "enabled": true,
       "telegram_related": true,
       "observed_in": [
@@ -1350,6 +2545,7 @@
         "scheduler"
       ],
       "issues": [
+        "runtime_failure",
         "missing_in_control"
       ],
       "display_name": "Market Storyteller",
@@ -1369,6 +2565,8 @@
       "source_type": "scheduler",
       "command": "C:\\Users\\User\\Documents\\GitHub\\notion-autopublish\\tools\\run_telegram_hub.bat",
       "schedule_text": "Hourly",
+      "last_result": 0,
+      "last_run_time": "3/6/2026 10:26:00 PM",
       "enabled": false,
       "telegram_related": true,
       "observed_in": [
@@ -1394,6 +2592,8 @@
       "source_type": "scheduler",
       "command": "C:\\Users\\User\\AppData\\Local\\Programs\\Python\\Python311\\python.exe daily_reminders.py --task usdata",
       "schedule_text": "Mon-Fri 18:30 HKT",
+      "last_result": 0,
+      "last_run_time": "5/29/2026 6:30:00 PM",
       "enabled": true,
       "telegram_related": true,
       "observed_in": [
@@ -1415,13 +2615,17 @@
     }
   ],
   "summary": {
-    "total_records": 56,
-    "records_with_issues": 27,
+    "total_records": 94,
+    "records_with_issues": 69,
     "issues_by_kind": {
       "info_only_schedule": 1,
-      "missing_in_control": 24,
-      "missing_in_repo": 8,
-      "orphaned_wrapper": 2
+      "missing_in_control": 49,
+      "missing_in_repo": 40,
+      "orphaned_wrapper": 3,
+      "runtime_failure": 20,
+      "schedule_mismatch": 3
     }
-  }
+  },
+  "html_report_path": "C:\\Users\\User\\Documents\\GitHub\\notion-autopublish\\outputs\\ops\\telegram_schedule_audit_latest.html",
+  "html_report_url": "file:///C:/Users/User/Documents/GitHub/notion-autopublish/outputs/ops/telegram_schedule_audit_latest.html"
 }

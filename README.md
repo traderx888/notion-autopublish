@@ -13,6 +13,47 @@ Notion (Status=Ready + Publish Date=今天)
 
 ---
 
+## 學海無涯 Review / Backtest Toolkit
+
+This repo also carries the local automation toolkit for newsletter thesis review, quantitative backtesting, and Notion write-back.
+
+```
+Local operator machine
+├── Codex CLI or compatible coding agent
+│   └── Notion MCP for evidence review and approval workflows
+├── Python environment
+│   ├── yfinance price downloads
+│   ├── pandas result tables and CSV exports
+│   └── notion-client API write-back
+└── notion-autopublish
+    ├── review/30day_review_prompt.md
+    ├── backtest/run_backtest.py
+    └── docs/ARCHITECTURE.md
+```
+
+Core workflows:
+
+- **30-day review:** use `review/30day_review_prompt.md` as the copy/paste Codex prompt for finding Pending theses older than 30 days, gathering evidence, drafting Hit / Partial Hit / Miss recommendations, and writing approved updates back to Notion.
+- **Backtest:** run `backtest/run_backtest.py` to fetch Pending theses, extract tickers from verdict text, download yfinance prices, compare strategy return against a benchmark, export CSV, and optionally write verification fields back to Notion.
+
+Install and run:
+
+```bash
+pip install -r requirements.txt
+
+set NOTION_TOKEN=secret_xxxx
+set NOTION_DATABASE_ID=95034222f2c9447eabda963715eee382
+
+python backtest/run_backtest.py --quarter 2026Q1 --benchmark SPY --output outputs/backtest_2026Q1.csv
+python backtest/run_backtest.py --start 2026-04-28 --end 2026-05-22 --benchmark SPY --write-back
+python tools/build_review_backtest_dashboard.py
+```
+
+The backtest script defaults to dry-run mode. It only updates Notion when `--write-back` is passed.
+Open `output/review_backtest_dashboard.html` locally to monitor generated backtest CSVs and saved review reports.
+
+---
+
 ## Quick Start
 
 ```bash
@@ -248,15 +289,18 @@ python tools/telegram_hub.py --root C:\Users\User\Documents\GitHub --hours 8 --s
 This repo now includes a separate H-model liquidity tracker. It is a tracking sidecar, not a Notion publishing flow and not a trading engine.
 
 What it does:
-- captures the latest Michael Howell / Capital Wars liquidity update
+- captures the latest Michael Howell / Capital Wars liquidity update, preferring the saved Notion page when configured
 - parses a structured H-model regime from article text
 - reads your local daily Excel plus screenshot inputs for a fast internal checker
 - writes a composite liquidity snapshot and history
 
 Setup:
 1. Fill the new liquidity values in `.env`
-2. Copy `config/liquidity_checker.example.json` to `config/liquidity_checker.local.json`
-3. Update the local config so the sheet name, columns, OCR patterns, and env-mapped paths match your current daily files
+2. For the Notion source, set `H_MODEL_SOURCE=notion` and `H_MODEL_NOTION_PARENT_PAGE_ID=15d3caa8a48780bf84ffcc796104a627`
+3. Provide `NOTION_TOKEN` either in this repo's `.env`, via `H_MODEL_NOTION_TOKEN`, or in the sibling `fundman-jarvis/.env`
+4. Share the `Michael Howell- Capital War` Notion page with the Notion integration behind `NOTION_TOKEN`
+5. Copy `config/liquidity_checker.example.json` to `config/liquidity_checker.local.json`
+6. Update the local config so the sheet name, columns, OCR patterns, and env-mapped paths match your current daily files
 
 Run commands:
 ```bash
@@ -273,6 +317,8 @@ Scheduler:
 ```
 
 Generated files:
+- `scraped_data/notion/michael_howell_capital_war_latest.txt`
+- `scraped_data/notion/michael_howell_capital_war_latest.json`
 - `scraped_data/liquidity/h_model_latest_raw.json`
 - `scraped_data/liquidity/h_model_latest_screenshot.png`
 - `outputs/liquidity/h_model_latest.json`

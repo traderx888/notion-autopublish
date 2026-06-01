@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>彭博研究摘要 #71 — 中國經濟獨臂難撐 伊朗戰爭衝擊全球增長</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --accent: #58a6ff;
+          --green: #3fb950; --red: #f85149; --yellow: #d29922; --text: #c9d1d9; --muted: #8b949e;
+          --orange: #f0883e; --purple: #bc8cff; --cyan: #39d2c0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans TC', 'Microsoft JhengHei', Helvetica, Arial, sans-serif; line-height: 1.7; padding: 20px; max-width: 860px; margin: 0 auto; }
+  h1 { color: #fff; font-size: 1.7em; margin-bottom: 4px; }
+  .subtitle { color: var(--muted); font-size: 0.9em; margin-bottom: 8px; }
+  .issue-badge { display: inline-block; background: rgba(88,166,255,0.15); color: var(--accent); padding: 3px 10px; border-radius: 12px; font-size: 0.8em; font-weight: 600; margin-bottom: 20px; }
+  .tag { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 0.72em; font-weight: 600; margin-right: 4px; }
+  .tag-rates { background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-china { background: rgba(240,136,62,0.15); color: var(--orange); }
+  .tag-japan { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-geo   { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-oil   { background: rgba(210,153,34,0.15); color: var(--yellow); }
+  .tag-trade { background: rgba(210,153,34,0.15); color: var(--yellow); }
+  .tag-growth{ background: rgba(63,185,80,0.15); color: var(--green); }
+  .tag-metals{ background: rgba(188,140,255,0.15); color: var(--purple); }
+  .tag-infl  { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-policy{ background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-val   { background: rgba(63,185,80,0.15); color: var(--green); }
+  .tag-vol   { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-semi  { background: rgba(57,210,192,0.15); color: var(--cyan); }
+  .tag-credit{ background: rgba(188,140,255,0.15); color: var(--purple); }
+  .tag-space { background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-misc  { background: rgba(139,148,158,0.15); color: var(--muted); }
+  .section { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 16px; }
+  .section h2 { color: #fff; font-size: 1.15em; margin-bottom: 12px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+  .section h3 { color: var(--accent); font-size: 0.95em; margin: 14px 0 6px; }
+  .article { margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .article:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .article-title { color: #fff; font-weight: 700; font-size: 0.95em; margin-bottom: 4px; }
+  .article-title-cn { color: var(--muted); font-size: 0.85em; margin-bottom: 8px; }
+  .article p { font-size: 0.9em; margin: 6px 0; }
+  .data-point { background: rgba(255,255,255,0.03); padding: 8px 12px; border-radius: 6px; margin: 8px 0; font-size: 0.85em; }
+  .data-point .num { color: #fff; font-weight: 700; }
+  .implication { background: rgba(88,166,255,0.06); border-left: 3px solid var(--accent); padding: 10px 14px; margin: 10px 0; border-radius: 0 6px 6px 0; font-size: 0.88em; }
+  .implication .label { color: var(--accent); font-weight: 700; font-size: 0.8em; text-transform: uppercase; margin-bottom: 4px; }
+  .callout { background: rgba(210,153,34,0.08); border: 1px solid rgba(210,153,34,0.3); border-radius: 6px; padding: 16px; margin: 16px 0; }
+  .callout-title { color: var(--yellow); font-weight: 700; font-size: 0.95em; margin-bottom: 8px; }
+  .callout ul { padding-left: 18px; }
+  .callout li { margin: 4px 0; font-size: 0.88em; }
+  ul { padding-left: 18px; }
+  li { margin: 3px 0; font-size: 0.88em; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(255,255,255,0.03); padding: 12px; border-radius: 6px; text-align: center; }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: #fff; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
+  .toc { background: rgba(88,166,255,0.05); border: 1px solid rgba(88,166,255,0.2); border-radius: 8px; padding: 16px 20px; margin-bottom: 20px; }
+  .toc-title { color: var(--accent); font-weight: 700; font-size: 0.9em; margin-bottom: 8px; }
+  .toc a { color: var(--accent); text-decoration: none; font-size: 0.88em; }
+  .toc a:hover { text-decoration: underline; }
+  .toc ol { padding-left: 20px; }
+  .toc li { margin: 4px 0; }
+  .nav-links { display: flex; justify-content: space-between; margin: 20px 0; font-size: 0.85em; }
+  .nav-links a { color: var(--accent); text-decoration: none; }
+  .nav-links a:hover { text-decoration: underline; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(255,255,255,0.03); padding: 12px; border-radius: 6px; text-align: center; }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: #fff; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
+  .footer { text-align: center; color: var(--muted); font-size: 0.75em; margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--border); }
+</style>
+<script>if(window.self===window.top&&sessionStorage.getItem("student_auth")!=="1"){document.body.innerHTML="";window.location.replace("student.html");}</script>
+</head>
+<body>
+
+<h1>彭博研究摘要</h1>
+<p class="subtitle">第71期 | 中國經濟獨臂難撐 伊朗戰爭衝擊全球增長</p>
+<span class="issue-badge">2026年五月中旬更新</span>
+
+<div class="nav-links">
+  <span><a href="newsletter_70_rates.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="toc">
+  <div class="toc-title">目錄</div>
+  <ol>
+    <li><a href="#china-activity">中國經濟 GDP亮眼難掩結構隱憂</a></li>
+    <li><a href="#iran-blockade">伊朗封鎖 海上封鎖代價幾何</a></li>
+    <li><a href="#us-consumer">美國消費 零售數字亮眼 實質消費走弱</a></li>
+    <li><a href="#takeaways">基金經理人重點摘要</a></li>
+  </ol>
+</div>
+
+<div class="section" id="china-activity">
+  <h2><span class="tag tag-misc">中國經濟</span> GDP亮眼難掩結構隱憂</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--green)">5.0%</div><div class="lbl">Q1 GDP同比增速
+高於預期4.8%</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">-4.5</div><div class="lbl">4月經濟活動指數
+低於Q1均值-3.5</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">-13%</div><div class="lbl">4月汽車零售
+同比跌幅</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">中國Q1 GDP成長5%「獨臂難撐」 伊朗戰爭構成風險</div>
+    <p>中國第一季度GDP同比成長<span style="color:#fff;font-weight:700">5.0%</span>，較2025年Q4的<span style="color:#fff;font-weight:700">4.5%</span>大幅提速，高於市場預期的<span style="color:#fff;font-weight:700">4.8%</span>。但成長基礎並不穩固——主要依賴供給側驅動，工業增加值Q1增速達<span style="color:#fff;font-weight:700">6.1%</span>。需求端則明顯疲軟：3月社零增速放緩至<span style="color:#fff;font-weight:700">1.7%</span>，固投僅增<span style="color:#fff;font-weight:700">1.7%</span>，均低於預期。消費疲軟部分反映汽車補貼退坡，顯示缺乏政策支持下內需難以自發復甦。伊朗戰爭衝擊出口，霍爾木茲海峽尚未恢復正常通航。彭博預測基準情景下油價Q2於每桶<span style="color:#fff;font-weight:700">110美元</span>見頂，2026年全球增速將從<span style="color:#fff;font-weight:700">3.4%</span>放緩至<span style="color:#fff;font-weight:700">2.0%</span>。</p>
+    <div class="data-point">Q1工業增加值：<span style="color:#fff;font-weight:700">+6.1%</span>（vs Q4 +5.0%） &nbsp;|&nbsp; 3月社零：<span style="color:#fff;font-weight:700">+1.7%</span>（vs 預期+2.4%） &nbsp;|&nbsp; 預計降準：<span style="color:#fff;font-weight:700">Q2下調25bp</span> &nbsp;|&nbsp; 全球增速預測：<span style="color:#fff;font-weight:700">2.0%</span></div>
+    <div class="implication"><div class="label">投資啟示</div>中國央行本季度將降準25bp，下半年加碼財政刺激。出口依賴型復甦脆弱——<span style="color:#fff;font-weight:700">減持出口導向型中國股票，增配內需政策受益板塊</span>。</div>
+  </div>
+  <div class="article">
+    <div class="article-title">中國經濟儀表板：汽車銷售疲軟 戰爭衝擊生產端</div>
+    <p>4月前10天中國經濟活動指數跌至<span style="color:#fff;font-weight:700">-4.5</span>，低於Q1周均<span style="color:#fff;font-weight:700">-3.5</span>，更遠低於一年前的<span style="color:#fff;font-weight:700">-0.9</span>。本輪拖累主因從房地產切換為汽車銷售——4月汽車零售同比下滑約<span style="color:#fff;font-weight:700">13%</span>，較2025年Q4周均水平暴跌<span style="color:#fff;font-weight:700">39%</span>，反映政府補貼退坡後銷售對政策的高度依賴。生產端同樣承壓：煉油廠開工率連續六周下滑至<span style="color:#fff;font-weight:700">73.7%</span>，較伊朗戰爭爆發前下降<span style="color:#fff;font-weight:700">13個百分點</span>；螺紋鋼庫存同比高出<span style="color:#fff;font-weight:700">10.2%</span>，建築業持續放緩。唯一亮點是新房銷售降幅收窄，50城新房同比跌<span style="color:#fff;font-weight:700">11%</span>，較前月改善。</p>
+    <div class="data-point">煉油廠開工率：<span style="color:#fff;font-weight:700">73.7%</span>（戰前-13ppt） &nbsp;|&nbsp; 螺紋鋼庫存YoY：<span style="color:#fff;font-weight:700">+10.2%</span> &nbsp;|&nbsp; 新房銷售YoY：<span style="color:#fff;font-weight:700">-11%</span>（降幅收窄） &nbsp;|&nbsp; 對美貨櫃吞吐量：<span style="color:#fff;font-weight:700">-5%</span></div>
+    <div class="implication"><div class="label">投資啟示</div>汽車補貼退坡+戰爭供應鏈衝擊形成雙重壓力。<span style="color:#fff;font-weight:700">做多中國政策寬鬆預期（國債期貨）</span>，短期迴避汽車產業鏈。</div>
+  </div>
+</div>
+
+<div class="section" id="iran-blockade">
+  <h2><span class="tag tag-misc">伊朗封鎖</span> 海上封鎖代價幾何</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--red)">1.6億美元/日</div><div class="lbl">伊朗石油出口
+每日潛在損失</div></div>
+    <div class="stat"><div class="val">140億美元</div><div class="lbl">伊朗海上原油
+存量價值</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">$140/桶</div><div class="lbl">紅海衝突重燃
+油價風險情景</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">特朗普海上封鎖對伊朗經濟的代價</div>
+    <p>美伊談判破裂後，美國宣布對伊朗實施海上封鎖。封鎖首72小時內<span style="color:#fff;font-weight:700">14艘船隻</span>被勸返，但伊朗港口海上交通並未完全中斷。按伊朗日均出口<span style="color:#fff;font-weight:700">160萬桶</span>、油價<span style="color:#fff;font-weight:700">100美元/桶</span>計算，全面封鎖下德黑蘭每日損失達<span style="color:#fff;font-weight:700">1.6億美元</span>。然而油價較戰前上漲約<span style="color:#fff;font-weight:700">50%</span>，反而增加了伊朗已出口部分的收入；此外特朗普取消海上石油制裁釋放了價值<span style="color:#fff;font-weight:700">140億美元</span>的在途原油。伊朗仍握有反制籌碼：伊斯蘭革命衛隊威脅封鎖霍爾木茲海峽，並可能切斷紅海替代航線。彭博估算若紅海衝突重燃，油價或飆升至<span style="color:#fff;font-weight:700">每桶140美元</span>。</p>
+    <div class="data-point">伊朗日出口：<span style="color:#fff;font-weight:700">160萬桶</span> &nbsp;|&nbsp; 封鎖首72hr攔截：<span style="color:#fff;font-weight:700">14艘</span> &nbsp;|&nbsp; Jask替代港口容量：<span style="color:#fff;font-weight:700">30-50萬桶/日</span> &nbsp;|&nbsp; 紅海衝突油價情景：<span style="color:#fff;font-weight:700">$140/桶</span></div>
+    <div class="implication"><div class="label">投資啟示</div>封鎖實際執行力度弱於宣稱，但尾部風險極高。<span style="color:#fff;font-weight:700">維持能源多頭對沖，關注布倫特$89-$140區間波動</span>。</div>
+  </div>
+</div>
+
+<div class="section" id="us-consumer">
+  <h2><span class="tag tag-misc">美國消費</span> 零售數字亮眼 實質消費走弱</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--green)">+1.2%</div><div class="lbl">3月整體零售
+預估月增</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">+21.2%</div><div class="lbl">季調汽油價格
+月增（創紀錄）</div></div>
+    <div class="stat"><div class="val">48.5</div><div class="lbl">密大消費者信心
+4月終值預估</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">美國數據前瞻：零售成長或掩蓋消費走弱</div>
+    <p>彭博預計3月美國整體零售銷售月增<span style="color:#fff;font-weight:700">1.2%</span>，但成長幾乎全部來自汽油價格飆升（季調漲幅<span style="color:#fff;font-weight:700">21.2%</span>創紀錄）和汽車銷量。剔除汽車、汽油、餐飲和建材的控制組零售僅增<span style="color:#fff;font-weight:700">0.2%</span>，經通脹調整後實為負增長。能源支出擠占非必需消費，部分家庭預算吃緊。庫存方面，2月商業庫存預計反彈<span style="color:#fff;font-weight:700">0.5%</span>，但伊朗戰爭的不確定性可能削弱後續補庫意願。積極信號是川普暗示美伊協議「很快」達成，4月17日伊朗宣布停火期間開放霍爾木茲海峽，布倫特一度跌至<span style="color:#fff;font-weight:700">$89/桶</span>（跌逾10%），消費者信心有望小幅回升至<span style="color:#fff;font-weight:700">48.5</span>。勞動力市場保持穩定，初領失業金預計<span style="color:#fff;font-weight:700">21.4萬</span>。</p>
+    <div class="data-point">控制組零售MoM：<span style="color:#fff;font-weight:700">+0.2%</span>（vs 前值+0.5%） &nbsp;|&nbsp; 商業庫存：<span style="color:#fff;font-weight:700">+0.5%</span> &nbsp;|&nbsp; 初領失業金：<span style="color:#fff;font-weight:700">21.4萬</span> &nbsp;|&nbsp; 堪薩斯城製造業：<span style="color:#fff;font-weight:700">11</span></div>
+    <div class="implication"><div class="label">投資啟示</div>實質消費走弱但尚未衰退。油價若因美伊協議回落，消費壓力將迅速緩解——<span style="color:#fff;font-weight:700">短期做多非必需消費ETF（XLY），對沖能源通脹風險</span>。</div>
+  </div>
+</div>
+
+<div class="callout" id="takeaways">
+  <div class="callout-title">基金經理人重點摘要</div>
+  <ul>
+    <li><strong>中國GDP：</strong>Q1增長5.0%但全靠供給側撐場，內需疲軟。預計Q2降準25bp，下半年加碼財政。減持出口導向股。</li>
+    <li><strong>中國高頻數據：</strong>汽車銷售暴跌39%（補貼退坡）、煉油廠開工率跌至73.7%（戰爭衝擊）。政策刺激預期升溫，做多國債期貨。</li>
+    <li><strong>伊朗封鎖：</strong>每日潛在損失1.6億美元，但執行力度存疑。尾部風險為紅海衝突推油至$140/桶。維持能源多頭對沖。</li>
+    <li><strong>美國消費：</strong>3月零售+1.2%為汽油假象，實質核心消費負增長。若美伊協議落地油價回落，做多非必需消費。</li>
+    <li><strong>全球增長：</strong>彭博基準情景2026年全球GDP僅+2.0%（vs 2025年+3.4%）。配置防禦性資產，關注停火談判進展。</li>
+  </ul>
+</div>
+
+<div class="nav-links">
+  <span><a href="newsletter_70_rates.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="footer">
+  彭博研究摘要 | 僅供教學與討論用途 | 2026年5月17日<br>
+  資料來源：Bloomberg Intelligence, Bloomberg Economics, Bloomberg News
+</div>
+
+</body>
+</html>

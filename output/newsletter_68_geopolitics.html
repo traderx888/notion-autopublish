@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>彭博研究摘要 #68 — 伊朗戰爭升級與全球外溢效應</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --accent: #58a6ff;
+          --green: #3fb950; --red: #f85149; --yellow: #d29922; --text: #c9d1d9; --muted: #8b949e;
+          --orange: #f0883e; --purple: #bc8cff; --cyan: #39d2c0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans TC', 'Microsoft JhengHei', Helvetica, Arial, sans-serif; line-height: 1.7; padding: 20px; max-width: 860px; margin: 0 auto; }
+  h1 { color: #fff; font-size: 1.7em; margin-bottom: 4px; }
+  .subtitle { color: var(--muted); font-size: 0.9em; margin-bottom: 8px; }
+  .issue-badge { display: inline-block; background: rgba(88,166,255,0.15); color: var(--accent); padding: 3px 10px; border-radius: 12px; font-size: 0.8em; font-weight: 600; margin-bottom: 20px; }
+  .tag { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 0.72em; font-weight: 600; margin-right: 4px; }
+  .tag-rates { background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-china { background: rgba(240,136,62,0.15); color: var(--orange); }
+  .tag-japan { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-geo   { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-oil   { background: rgba(210,153,34,0.15); color: var(--yellow); }
+  .tag-trade { background: rgba(210,153,34,0.15); color: var(--yellow); }
+  .tag-growth{ background: rgba(63,185,80,0.15); color: var(--green); }
+  .tag-metals{ background: rgba(188,140,255,0.15); color: var(--purple); }
+  .tag-infl  { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-policy{ background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-val   { background: rgba(63,185,80,0.15); color: var(--green); }
+  .tag-vol   { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-semi  { background: rgba(57,210,192,0.15); color: var(--cyan); }
+  .tag-credit{ background: rgba(188,140,255,0.15); color: var(--purple); }
+  .tag-space { background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-misc  { background: rgba(139,148,158,0.15); color: var(--muted); }
+  .section { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 16px; }
+  .section h2 { color: #fff; font-size: 1.15em; margin-bottom: 12px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+  .section h3 { color: var(--accent); font-size: 0.95em; margin: 14px 0 6px; }
+  .article { margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .article:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .article-title { color: #fff; font-weight: 700; font-size: 0.95em; margin-bottom: 4px; }
+  .article-title-cn { color: var(--muted); font-size: 0.85em; margin-bottom: 8px; }
+  .article p { font-size: 0.9em; margin: 6px 0; }
+  .data-point { background: rgba(255,255,255,0.03); padding: 8px 12px; border-radius: 6px; margin: 8px 0; font-size: 0.85em; }
+  .data-point .num { color: #fff; font-weight: 700; }
+  .implication { background: rgba(88,166,255,0.06); border-left: 3px solid var(--accent); padding: 10px 14px; margin: 10px 0; border-radius: 0 6px 6px 0; font-size: 0.88em; }
+  .implication .label { color: var(--accent); font-weight: 700; font-size: 0.8em; text-transform: uppercase; margin-bottom: 4px; }
+  .callout { background: rgba(210,153,34,0.08); border: 1px solid rgba(210,153,34,0.3); border-radius: 6px; padding: 16px; margin: 16px 0; }
+  .callout-title { color: var(--yellow); font-weight: 700; font-size: 0.95em; margin-bottom: 8px; }
+  .callout ul { padding-left: 18px; }
+  .callout li { margin: 4px 0; font-size: 0.88em; }
+  ul { padding-left: 18px; }
+  li { margin: 3px 0; font-size: 0.88em; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(255,255,255,0.03); padding: 12px; border-radius: 6px; text-align: center; }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: #fff; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
+  .toc { background: rgba(88,166,255,0.05); border: 1px solid rgba(88,166,255,0.2); border-radius: 8px; padding: 16px 20px; margin-bottom: 20px; }
+  .toc-title { color: var(--accent); font-weight: 700; font-size: 0.9em; margin-bottom: 8px; }
+  .toc a { color: var(--accent); text-decoration: none; font-size: 0.88em; }
+  .toc a:hover { text-decoration: underline; }
+  .toc ol { padding-left: 20px; }
+  .toc li { margin: 4px 0; }
+  .nav-links { display: flex; justify-content: space-between; margin: 20px 0; font-size: 0.85em; }
+  .nav-links a { color: var(--accent); text-decoration: none; }
+  .nav-links a:hover { text-decoration: underline; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(255,255,255,0.03); padding: 12px; border-radius: 6px; text-align: center; }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: #fff; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
+  .footer { text-align: center; color: var(--muted); font-size: 0.75em; margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--border); }
+</style>
+<script>if(window.self===window.top&&sessionStorage.getItem("student_auth")!=="1"){document.body.innerHTML="";window.location.replace("student.html");}</script>
+</head>
+<body>
+
+<h1>彭博研究摘要</h1>
+<p class="subtitle">第68期 | 伊朗戰爭升級與全球外溢效應</p>
+<span class="issue-badge">2026年五月中旬更新</span>
+
+<div class="nav-links">
+  <span><a href="newsletter_67_geopolitics.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="toc">
+  <div class="toc-title">目錄</div>
+  <ol>
+    <li><a href="#war-escalation">中東戰局 和談破裂，霍爾木茲封鎖升級</a></li>
+    <li><a href="#energy-credit">能源信用 油服債券承壓，基建風險浮現</a></li>
+    <li><a href="#em-macro-spillover">新興市場外溢 巴基斯坦通膨飆升，亞幣分化加劇</a></li>
+    <li><a href="#takeaways">基金經理人重點摘要</a></li>
+  </ol>
+</div>
+
+<div class="section" id="war-escalation">
+  <h2><span class="tag tag-misc">中東戰局</span> 和談破裂，霍爾木茲封鎖升級</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--red)">20%</div><div class="lbl">全球石油與LNG
+經霍爾木茲海峽</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">$105/bbl</div><div class="lbl">彭博經濟研究
+2Q油價假設</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">$170/bbl</div><div class="lbl">海峽持續封閉
+極端情境油價</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">美伊和談破裂 — 川普宣布全面封鎖霍爾木茲海峽</div>
+    <p>美國與伊朗在巴基斯坦伊斯蘭堡的直接談判宣告破裂，核心分歧在於伊朗拒絕承諾放棄核武。川普隨即在Truth Social宣布美國海軍將「立即」對霍爾木茲海峽實施全面封鎖，攔截任何向伊朗繳納通行費的船隻，並清除水雷。副總統Vance表示美方已提出「最終最佳方案」，伊方選擇不接受。此舉將全球能源供應的不確定性推至新高——戰前約<span style="color:#fff;font-weight:700">五分之一</span>的全球石油與LNG經此水道運輸。停火協議命懸一線，外交窗口正在關閉。</p>
+    <div class="data-point">核心分歧：<span style="color:#fff;font-weight:700">核武承諾</span> &nbsp;|&nbsp; 停火狀態：<span style="color:#fff;font-weight:700">兩周臨時停火，未續約</span> &nbsp;|&nbsp; 封鎖參與國：<span style="color:#fff;font-weight:700">美國+未具名盟友</span> &nbsp;|&nbsp; 伊朗立場：<span style="color:#fff;font-weight:700">「外交永不結束」</span></div>
+    <div class="implication"><div class="label">投資啟示</div>油價上行風險極大。<span style="color:#fff;font-weight:700">加碼能源多頭對沖</span>（USO/XLE call spreads）；航運股短期受壓但封鎖結束後有修復空間。</div>
+  </div>
+  <div class="article">
+    <div class="article-title">轟炸、石油和大空話 — 圖解伊朗戰爭的虛虛實實</div>
+    <p>彭博經濟研究指出，川普關於「戰爭即將結束」的言論旨在安撫市場並爭取談判籌碼，但空襲與飛彈攻擊仍在持續。核心矛盾在於：伊朗已發現以相對低成本擾亂全球石油市場的能力，遭受的打擊越多，重施故技的動機越強。隨著飛彈襲擊時間拉長，市場對川普「快速退出」言論的信任度持續下降，油價波動性將維持高位。</p>
+    <div class="data-point">市場信任度：<span style="color:#fff;font-weight:700">隨轟炸延長而下降</span> &nbsp;|&nbsp; 伊朗策略：<span style="color:#fff;font-weight:700">低成本擾亂石油供應</span> &nbsp;|&nbsp; 美方意圖：<span style="color:#fff;font-weight:700">迫伊回談判桌</span></div>
+    <div class="implication"><div class="label">投資啟示</div>川普言論對油價的邊際影響正在遞減。<span style="color:#fff;font-weight:700">波動率策略優於方向性押注</span>——買入原油straddles。</div>
+  </div>
+</div>
+
+<div class="section" id="energy-credit">
+  <h2><span class="tag tag-misc">能源信用</span> 油服債券承壓，基建風險浮現</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--red)">-240bps</div><div class="lbl">Weatherford債券
+價差擴大</div></div>
+    <div class="stat"><div class="val" style="color:var(--green)">$730M</div><div class="lbl">Nabors流動性
+（無到期至2029）</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">150+</div><div class="lbl">伊朗營運中電廠
+位於乾旱區</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">油服債券遭伊朗戰爭重創 — 但復甦路徑存在</div>
+    <p>自中東戰爭爆發以來，Nabors 2031/2032年到期債券較高收益能源指數跑輸<span style="color:#fff;font-weight:700">55-92bps</span>，Weatherford因中東及北非佔營收<span style="color:#fff;font-weight:700">43%</span>而更受衝擊，債券跑輸高達<span style="color:#fff;font-weight:700">240bps</span>。然而兩家公司均具備充裕流動性：Nabors擁有<span style="color:#fff;font-weight:700">$7.3億</span>流動性且最近債務到期日在2029年，即使扣除SANAD合資企業仍維持正自由現金流；Weatherford則有<span style="color:#fff;font-weight:700">$15億</span>流動性緩衝。北美陸上鑽井槓桿持續改善——Precision Drilling從6.2x降至約<span style="color:#fff;font-weight:700">1.5x</span>，Patterson-UTI從4.7x降至<span style="color:#fff;font-weight:700">1.6x</span>。</p>
+    <div class="data-point">Nabors槓桿：<span style="color:#fff;font-weight:700">~2.4x</span>（含還債） &nbsp;|&nbsp; Transocean槓桿：<span style="color:#fff;font-weight:700">~3.6x</span>（合併Valaris後） &nbsp;|&nbsp; 彭博HY能源指數：<span style="color:#fff;font-weight:700">-38bps</span> &nbsp;|&nbsp; SANAD佔Nabors營收：<span style="color:#fff;font-weight:700">30%</span></div>
+    <div class="implication"><div class="label">投資啟示</div>油服高收益債提供錯殺機會。<span style="color:#fff;font-weight:700">逢低佈局Nabors 2031s</span>——流動性充裕、無近期到期壓力，停戰後修復空間大。</div>
+  </div>
+  <div class="article">
+    <div class="article-title">戰爭暴露中東水資源基建脆弱性</div>
+    <p>停火雖暫緩軍事行動，但戰爭已暴露中東水資源系統的結構性脆弱。多年乾旱加上數據中心快速擴張，使海水淡化產能幾乎沒有容錯空間。伊朗、科威特、巴林的淡化設施已遭損壞。伊朗境內超過<span style="color:#fff;font-weight:700">150座</span>營運中電廠位於或鄰近乾旱區域，另有約<span style="color:#fff;font-weight:700">70座</span>預計上線。Energy Recovery等企業警告，長期衝突可能延遲整個區域的淡化項目。「desalination」在研究報告中的提及頻率急升。</p>
+    <div class="data-point">受損國家：<span style="color:#fff;font-weight:700">伊朗、科威特、巴林</span> &nbsp;|&nbsp; 伊朗待建電廠：<span style="color:#fff;font-weight:700">~70座</span> &nbsp;|&nbsp; 風險驅動因素：<span style="color:#fff;font-weight:700">乾旱+數據中心擴張</span></div>
+    <div class="implication"><div class="label">投資啟示</div>水務/淡化基建股（Energy Recovery, IDE Technologies）具中長期主題價值。<span style="color:#fff;font-weight:700">短期避開中東基建曝險大的公用事業</span>。</div>
+  </div>
+</div>
+
+<div class="section" id="em-macro-spillover">
+  <h2><span class="tag tag-misc">新興市場外溢</span> 巴基斯坦通膨飆升，亞幣分化加劇</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--red)">10.6%</div><div class="lbl">巴基斯坦4Q FY26
+通膨預測</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">3.3%</div><div class="lbl">巴基斯坦FY26
+GDP增長預測</div></div>
+    <div class="stat"><div class="val" style="color:var(--green)">SGD/HKD</div><div class="lbl">亞洲避險貨幣
+相對韌性</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">伊朗戰爭威脅巴基斯坦經濟復甦</div>
+    <p>巴基斯坦在IMF支持下曾顯現穩定跡象——經常賬赤字受控、通膨回落至目標區間、活動指標回升（4Q25活動追蹤器+<span style="color:#fff;font-weight:700">2.1%</span>環比）。但伊朗戰爭從多個渠道威脅復甦：油價與運費上升擴大進口賬單、中東匯款脆弱、能源價格推高通膨。彭博經濟研究預計FY26 GDP增長<span style="color:#fff;font-weight:700">3.3%</span>，但若衝突升級，通膨可能從目標<span style="color:#fff;font-weight:700">6%</span>飆至4Q的<span style="color:#fff;font-weight:700">10.6%</span>——甚至在海峽持續關閉情境下觸及<span style="color:#fff;font-weight:700">13%</span>。阿富汗戰爭同步推高國防開支，財政與外部平衡雙雙惡化，IMF貸款條件面臨違約風險。</p>
+    <div class="data-point">油價極端情境：<span style="color:#fff;font-weight:700">$170/bbl → 通膨13%</span> &nbsp;|&nbsp; IMF目標通膨：<span style="color:#fff;font-weight:700">6%</span> &nbsp;|&nbsp; 汽油價格：<span style="color:#fff;font-weight:700">已大幅調漲</span> &nbsp;|&nbsp; 央行利率方向：<span style="color:#fff;font-weight:700">暫停降息</span></div>
+    <div class="implication"><div class="label">投資啟示</div>巴基斯坦主權債承壓。<span style="color:#fff;font-weight:700">減持PKR曝險</span>，IMF貸款條件違約概率上升。</div>
+  </div>
+  <div class="article">
+    <div class="article-title">亞洲貨幣2Q展望 — 避險分化，食品通膨成下一驅動</div>
+    <p>彭博策略團隊認為，無論中東衝突持續多久，美元在2Q對亞洲貨幣均可保持強勢——受益於避險地位與脆弱情緒。食品通膨將成為下一個關鍵FX驅動因素，亞洲央行因供給衝擊通膨風險維持鷹派立場。然而去美元化主題可能促使交易員以美元中性組合表達亞洲空頭。具備避險與儲備資產特徵的貨幣——人民幣、港元、<span style="color:#fff;font-weight:700">新加坡元</span>——將更具韌性；面臨更高能源與食品通膨的經濟體貨幣將落後。美國實質收益率仍偏高，美元崩盤需收益率快速歸零。</p>
+    <div class="data-point">強勢貨幣：<span style="color:#fff;font-weight:700">CNY、HKD、SGD</span> &nbsp;|&nbsp; 弱勢因素：<span style="color:#fff;font-weight:700">能源+食品通膨</span> &nbsp;|&nbsp; 美元驅動：<span style="color:#fff;font-weight:700">避險+利差</span> &nbsp;|&nbsp; 策略：<span style="color:#fff;font-weight:700">美元中性亞洲RV</span></div>
+    <div class="implication"><div class="label">投資啟示</div><span style="color:#fff;font-weight:700">做多SGD/做空高通膨亞幣</span>（如PKR、PHP）的相對價值交易。避免單純做空美元。</div>
+  </div>
+</div>
+
+<div class="callout" id="takeaways">
+  <div class="callout-title">基金經理人重點摘要</div>
+  <ul>
+    <li><strong>霍爾木茲封鎖：</strong>和談破裂後美國宣布全面封鎖，油價上行風險極大。加碼能源多頭對沖（USO call spreads）。</li>
+    <li><strong>油服信用：</strong>Nabors/Weatherford遭錯殺但流動性充裕，無近期到期壓力。逢低佈局Nabors 2031s。</li>
+    <li><strong>波動率：</strong>川普言論對油價邊際影響遞減，市場學會不信。買入原油straddles優於方向性押注。</li>
+    <li><strong>巴基斯坦：</strong>通膨或飆至10.6-13%，IMF貸款條件面臨違約。減持PKR主權債。</li>
+    <li><strong>亞洲FX：</strong>SGD、HKD、CNY具避險韌性；高能源進口依賴幣種落後。做多SGD/做空PHP的RV交易。</li>
+    <li><strong>基建主題：</strong>中東水務/淡化設施遭戰損，長期重建需求確定。關注Energy Recovery等標的。</li>
+  </ul>
+</div>
+
+<div class="nav-links">
+  <span><a href="newsletter_67_geopolitics.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="footer">
+  彭博研究摘要 | 僅供教學與討論用途 | 2026年5月17日<br>
+  資料來源：Bloomberg Intelligence, Bloomberg Economics, Bloomberg News
+</div>
+
+</body>
+</html>

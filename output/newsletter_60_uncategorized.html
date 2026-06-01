@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>彭博研究摘要 #60 — AI軍備競賽、霍爾木茲危機與半導體狂潮</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --accent: #58a6ff;
+          --green: #3fb950; --red: #f85149; --yellow: #d29922; --text: #c9d1d9; --muted: #8b949e;
+          --orange: #f0883e; --purple: #bc8cff; --cyan: #39d2c0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans TC', 'Microsoft JhengHei', Helvetica, Arial, sans-serif; line-height: 1.7; padding: 20px; max-width: 860px; margin: 0 auto; }
+  h1 { color: #fff; font-size: 1.7em; margin-bottom: 4px; }
+  .subtitle { color: var(--muted); font-size: 0.9em; margin-bottom: 8px; }
+  .issue-badge { display: inline-block; background: rgba(88,166,255,0.15); color: var(--accent); padding: 3px 10px; border-radius: 12px; font-size: 0.8em; font-weight: 600; margin-bottom: 20px; }
+  .tag { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 0.72em; font-weight: 600; margin-right: 4px; }
+  .tag-rates { background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-china { background: rgba(240,136,62,0.15); color: var(--orange); }
+  .tag-japan { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-geo   { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-oil   { background: rgba(210,153,34,0.15); color: var(--yellow); }
+  .tag-trade { background: rgba(210,153,34,0.15); color: var(--yellow); }
+  .tag-growth{ background: rgba(63,185,80,0.15); color: var(--green); }
+  .tag-metals{ background: rgba(188,140,255,0.15); color: var(--purple); }
+  .tag-infl  { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-policy{ background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-val   { background: rgba(63,185,80,0.15); color: var(--green); }
+  .tag-vol   { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-semi  { background: rgba(57,210,192,0.15); color: var(--cyan); }
+  .tag-credit{ background: rgba(188,140,255,0.15); color: var(--purple); }
+  .tag-space { background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-misc  { background: rgba(139,148,158,0.15); color: var(--muted); }
+  .section { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 16px; }
+  .section h2 { color: #fff; font-size: 1.15em; margin-bottom: 12px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+  .section h3 { color: var(--accent); font-size: 0.95em; margin: 14px 0 6px; }
+  .article { margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .article:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .article-title { color: #fff; font-weight: 700; font-size: 0.95em; margin-bottom: 4px; }
+  .article-title-cn { color: var(--muted); font-size: 0.85em; margin-bottom: 8px; }
+  .article p { font-size: 0.9em; margin: 6px 0; }
+  .data-point { background: rgba(255,255,255,0.03); padding: 8px 12px; border-radius: 6px; margin: 8px 0; font-size: 0.85em; }
+  .data-point .num { color: #fff; font-weight: 700; }
+  .implication { background: rgba(88,166,255,0.06); border-left: 3px solid var(--accent); padding: 10px 14px; margin: 10px 0; border-radius: 0 6px 6px 0; font-size: 0.88em; }
+  .implication .label { color: var(--accent); font-weight: 700; font-size: 0.8em; text-transform: uppercase; margin-bottom: 4px; }
+  .callout { background: rgba(210,153,34,0.08); border: 1px solid rgba(210,153,34,0.3); border-radius: 6px; padding: 16px; margin: 16px 0; }
+  .callout-title { color: var(--yellow); font-weight: 700; font-size: 0.95em; margin-bottom: 8px; }
+  .callout ul { padding-left: 18px; }
+  .callout li { margin: 4px 0; font-size: 0.88em; }
+  ul { padding-left: 18px; }
+  li { margin: 3px 0; font-size: 0.88em; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(255,255,255,0.03); padding: 12px; border-radius: 6px; text-align: center; }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: #fff; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
+  .toc { background: rgba(88,166,255,0.05); border: 1px solid rgba(88,166,255,0.2); border-radius: 8px; padding: 16px 20px; margin-bottom: 20px; }
+  .toc-title { color: var(--accent); font-weight: 700; font-size: 0.9em; margin-bottom: 8px; }
+  .toc a { color: var(--accent); text-decoration: none; font-size: 0.88em; }
+  .toc a:hover { text-decoration: underline; }
+  .toc ol { padding-left: 20px; }
+  .toc li { margin: 4px 0; }
+  .nav-links { display: flex; justify-content: space-between; margin: 20px 0; font-size: 0.85em; }
+  .nav-links a { color: var(--accent); text-decoration: none; }
+  .nav-links a:hover { text-decoration: underline; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(255,255,255,0.03); padding: 12px; border-radius: 6px; text-align: center; }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: #fff; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
+  .footer { text-align: center; color: var(--muted); font-size: 0.75em; margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--border); }
+</style>
+<script>if(window.self===window.top&&sessionStorage.getItem("student_auth")!=="1"){document.body.innerHTML="";window.location.replace("student.html");}</script>
+</head>
+<body>
+
+<h1>彭博研究摘要</h1>
+<p class="subtitle">第60期 | AI軍備競賽、霍爾木茲危機與半導體狂潮</p>
+<span class="issue-badge">2026年五月中旬更新</span>
+
+<div class="nav-links">
+  <span><a href="newsletter_59_uncategorized.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="toc">
+  <div class="toc-title">目錄</div>
+  <ol>
+    <li><a href="#ai-infrastructure">AI基建 超級雲端商砸錢無上限</a></li>
+    <li><a href="#hormuz-oil">能源危機 霍爾木茲海峽僵局油價破百</a></li>
+    <li><a href="#semiconductors">半導體 記憶體暴漲 大空頭示警</a></li>
+    <li><a href="#credit-crypto">信貸與加密 Dimon敲警鐘 Coinbase熬寒冬</a></li>
+    <li><a href="#takeaways">基金經理人重點摘要</a></li>
+  </ol>
+</div>
+
+<div class="section" id="ai-infrastructure">
+  <h2><span class="tag tag-misc">AI基建</span> 超級雲端商砸錢無上限</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val">$180-190B</div><div class="lbl">Alphabet 2026年
+資本開支指引</div></div>
+    <div class="stat"><div class="val">$190B</div><div class="lbl">Microsoft 2026年
+AI基建支出</div></div>
+    <div class="stat"><div class="val" style="color:var(--green)">63%</div><div class="lbl">Google Cloud
+1Q營收增長</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">Alphabet信用展望：AI支出想花多少就花多少</div>
+    <p>Alphabet正以前所未有的速度擴張AI基建，1Q Google Cloud營收飆升<span style="color:#fff;font-weight:700">63%</span>至<span style="color:#fff;font-weight:700">$200億</span>，積壓訂單突破<span style="color:#fff;font-weight:700">$4,600億</span>。管理層預期2027年資本開支將「顯著高於」2026年的<span style="color:#fff;font-weight:700">$1,800-1,900億</span>指引。儘管大舉舉債融資，<span style="color:#fff;font-weight:700">$1,270億</span>現金儲備與超過<span style="color:#fff;font-weight:700">$2,000億</span>的年度營運現金流，足以支撐Aa2/AA+評級不受影響。股票市值三年漲<span style="color:#fff;font-weight:700">250%</span>突破<span style="color:#fff;font-weight:700">$4.5萬億</span>，資本配置重心已從股東回報轉向數據中心。1Q未回購任何股票，但仍有近<span style="color:#fff;font-weight:700">$700億</span>回購額度待用。</p>
+    <div class="data-point">Cloud積壓訂單：<span style="color:#fff;font-weight:700">&gt;$4,600億</span> &nbsp;|&nbsp; 年營運現金流：<span style="color:#fff;font-weight:700">&gt;$2,000億</span> &nbsp;|&nbsp; 現金餘額：<span style="color:#fff;font-weight:700">$1,270億</span> &nbsp;|&nbsp; 股息增幅：<span style="color:#fff;font-weight:700">+5%</span></div>
+    <div class="implication"><div class="label">投資啟示</div>Alphabet信用利差已緊貼最高質量同業，相對價值偏弱。但基本面無虞 — <span style="color:#fff;font-weight:700">維持持有，勿追加信用倉位</span>。</div>
+  </div>
+  <div class="article">
+    <div class="article-title">Microsoft：AAA資產負債表撐起$1,900億AI豪賭</div>
+    <p>Microsoft計劃2026年在AI與雲端基建投入近<span style="color:#fff;font-weight:700">$1,900億</span>，為超級雲端商中最高之一，但資產負債表仍為業界最保守。Aaa/AAA評級<span style="color:#fff;font-weight:700">高於美國政府</span>，加權平均債務成本接近零。過去12個月營收<span style="color:#fff;font-weight:700">$3,180億</span>、EBITDA <span style="color:#fff;font-weight:700">$1,990億</span>、稅前自由現金流近<span style="color:#fff;font-weight:700">$400億</span>。Azure增速未如預期加速導致股價自10月下跌約<span style="color:#fff;font-weight:700">25%</span>，但信用利差幾乎未受影響。管理層堅持長期AI增長承諾，未來可能發行數百億美元債券填補股東回報後的負自由現金流。</p>
+    <div class="data-point">2026資本開支指引：<span style="color:#fff;font-weight:700">$1,900億</span> &nbsp;|&nbsp; 股價自高位跌幅：<span style="color:#fff;font-weight:700">~25%</span> &nbsp;|&nbsp; 評級：<span style="color:#fff;font-weight:700">Aaa/AAA</span> &nbsp;|&nbsp; 年EBITDA：<span style="color:#fff;font-weight:700">$1,990億</span></div>
+    <div class="implication"><div class="label">投資啟示</div>信用利差上行空間有限，但韌性優於同業。若新債發行 — <span style="color:#fff;font-weight:700">短期小幅走闊後可逢低買入MSFT信用</span>。</div>
+  </div>
+  <div class="article">
+    <div class="article-title">Morgan Stanley：FC-BGA從GPU週期邁向系統級AI升級</div>
+    <p>FC-BGA（倒裝晶片球柵陣列）需求正從GPU主導轉向系統級擴張。AI平台架構已演進為機架級部署，GPU、CPU、DPU、NIC、交換晶片同步運作，每系統高性能邏輯晶片數量大增。在Agentic AI時代，CPU角色急劇上升 — 負責多Agent調度與執行控制，每單位數據中心功耗所需CPU核心數可能<span style="color:#fff;font-weight:700">倍增</span>。獨立CPU機架（如Vera CPU）的出現意味CPU從配角升格為獨立計算層，為FC-BGA帶來增量需求。供應緊張與複雜度提升支撐ASP結構性上行，<span style="color:#fff;font-weight:700">韓國基板廠商</span>處於有利位置。</p>
+    <div class="data-point">AI與雲端訂單（Nokia Q1）：<span style="color:#fff;font-weight:700">€10億</span> &nbsp;|&nbsp; CPU核心需求增幅：<span style="color:#fff;font-weight:700">數倍</span> &nbsp;|&nbsp; 行業觀點：<span style="color:#fff;font-weight:700">Attractive</span></div>
+    <div class="implication"><div class="label">投資啟示</div>FC-BGA供應持續緊張，ASP向上。<span style="color:#fff;font-weight:700">增持韓國基板股（Samsung Electro-Mechanics、Unimicron）</span>。</div>
+  </div>
+</div>
+
+<div class="section" id="hormuz-oil">
+  <h2><span class="tag tag-misc">能源危機</span> 霍爾木茲海峽僵局油價破百</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--red)">$105.54</div><div class="lbl">Brent原油高位
+（5/11盤中）</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">&gt;$99</div><div class="lbl">WTI突破
+心理關口</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">2H26</div><div class="lbl">華爾街預期
+航運受阻延續至</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">Trump拒絕伊朗方案 油價跳漲4%</div>
+    <p>Trump在社交媒體稱伊朗最新回應「完全不可接受」，和平協議希望破滅，Brent原油單日飆升<span style="color:#fff;font-weight:700">4.2%</span>至<span style="color:#fff;font-weight:700">$105.54</span>。自2月底開戰以來，霍爾木茲海峽近乎封閉，IEA稱此為<span style="color:#fff;font-weight:700">歷史上最大供應衝擊</span>。沙特Aramco CEO表示若海峽封鎖持續數週，市場要到<span style="color:#fff;font-weight:700">2027年</span>才能正常化。Goldman Sachs調查顯示多數受訪者預期航運中斷將延續至<span style="color:#fff;font-weight:700">6月之後</span>。阿聯酋與沙特偶有油輪突破封鎖，卡塔爾也成功運出一船LNG，但總流量仍僅為戰前的一小部分。</p>
+    <div class="data-point">Brent漲幅：<span style="color:#fff;font-weight:700">+4.2%</span> &nbsp;|&nbsp; IEA定性：<span style="color:#fff;font-weight:700">史上最大供應衝擊</span> &nbsp;|&nbsp; Aramco正常化時間：<span style="color:#fff;font-weight:700">2027年</span> &nbsp;|&nbsp; GS調查：<span style="color:#fff;font-weight:700">多數預期6月後仍受阻</span></div>
+    <div class="implication"><div class="label">投資啟示</div>能源衝擊尚未充分反映。<span style="color:#fff;font-weight:700">做多Brent遠期、增持中東以外油企（BP優於Shell）</span>。</div>
+  </div>
+  <div class="article">
+    <div class="article-title">John Authers：市場押注終會達成協議</div>
+    <p>美股與油價的反向關係已不復存在 — S&amp;P 500持續創新高，Brent仍在<span style="color:#fff;font-weight:700">$100以上</span>。市場通膨預期顯示信心認為能源衝擊將消退，但Surrey大學Eric Golson警告伊朗有動機繼續施壓。Hirtle Callaghan的Brad Conger指出，市場不在乎伊朗是否擁核，只在乎海峽通行；這意味即使是「對美國不利的協議」市場也會歡迎。若突破性協議達成，受益者將是<span style="color:#fff;font-weight:700">化肥、塑料、中間體</span>等短缺行業。股市已提前定價科技投資強勁支撐的「看穿」邏輯。</p>
+    <div class="data-point">S&amp;P 500：<span style="color:#fff;font-weight:700">創歷史新高</span> &nbsp;|&nbsp; 市場焦點：<span style="color:#fff;font-weight:700">海峽通行 &gt; 去核化</span> &nbsp;|&nbsp; 受益行業：<span style="color:#fff;font-weight:700">化肥、塑料、中間體</span></div>
+    <div class="implication"><div class="label">投資啟示</div>股市已price-in協議預期，油價仍有尾部風險。<span style="color:#fff;font-weight:700">以油企多頭對沖科技持倉的尾部情境</span>。</div>
+  </div>
+</div>
+
+<div class="section" id="semiconductors">
+  <h2><span class="tag tag-semi">半導體</span> 記憶體暴漲 大空頭示警</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--green)">180%</div><div class="lbl">Micron (MU)
+2026年漲幅</div></div>
+    <div class="stat"><div class="val" style="color:var(--green)">$101</div><div class="lbl">MU 2027E
+調整後EPS</div></div>
+    <div class="stat"><div class="val" style="color:var(--green)">130%</div><div class="lbl">Nokia (NOK)
+2026年漲幅</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">Micron狂飆180%：Burry泡沫警告 vs AI需求現實</div>
+    <p>Michael Burry押注做空半導體，但Micron的盈利爆發令空頭承壓。MU 2026年股價飆升<span style="color:#fff;font-weight:700">180%</span>，遠超費城半導體指數的<span style="color:#fff;font-weight:700">70%</span>。2027年調整後EPS預估達<span style="color:#fff;font-weight:700">$101</span>，對比2025年僅<span style="color:#fff;font-weight:700">$8</span>、2023年甚至虧損。12個月遠期PE僅<span style="color:#fff;font-weight:700">13.6倍</span>，同業平均<span style="color:#fff;font-weight:700">38倍</span>；ROE <span style="color:#fff;font-weight:700">40%</span>為同業最高，營業利潤率<span style="color:#fff;font-weight:700">49%</span>僅次於SK Hynix。關鍵是行業資本開支相對營收仍保持紀律，暗示AI需求下供應持續短缺。回報分解顯示漲幅主要由盈利上修驅動，而非估值擴張。</p>
+    <div class="data-point">12M Fwd PE：<span style="color:#fff;font-weight:700">13.6x</span> vs 同業 <span style="color:#fff;font-weight:700">38x</span> &nbsp;|&nbsp; ROE：<span style="color:#fff;font-weight:700">40%</span>（同業最高） &nbsp;|&nbsp; 營業利潤率：<span style="color:#fff;font-weight:700">49%</span> &nbsp;|&nbsp; 2025→2027 EPS：<span style="color:#fff;font-weight:700">$8→$101</span></div>
+    <div class="implication"><div class="label">投資啟示</div>估值仍便宜但技術面超買。<span style="color:#fff;font-weight:700">逢回調加倉MU，設$85止損</span>。注意Burry做空帶來的短期波動風險。</div>
+  </div>
+  <div class="article">
+    <div class="article-title">Nokia：從手機遺產到AI基建黑馬</div>
+    <p>Nokia美股自2025年8月以來漲超<span style="color:#fff;font-weight:700">270%</span>（2026年內漲<span style="color:#fff;font-weight:700">130%</span>），源於與Nvidia的<span style="color:#fff;font-weight:700">$10億</span>戰略投資合作。Q1 AI與雲端訂單達<span style="color:#fff;font-weight:700">€10億</span>，AI部門營收同比增長<span style="color:#fff;font-weight:700">49%</span>，但AI客戶佔總營收不到<span style="color:#fff;font-weight:700">10%</span>，滲透空間巨大。期權市場看漲信號明確：Call買盤爆增，隱含波動率隨現貨同步上升（牛市conviction而非對沖），未平倉合約分布顯示上行定位延伸至<span style="color:#fff;font-weight:700">$20</span>（+36%）。Bloomberg Intelligence分析師指出Nokia的AI敘事有實質支撐。</p>
+    <div class="data-point">Nvidia投資：<span style="color:#fff;font-weight:700">$10億</span> &nbsp;|&nbsp; AI營收增長：<span style="color:#fff;font-weight:700">+49% YoY</span> &nbsp;|&nbsp; AI客戶佔比：<span style="color:#fff;font-weight:700">&lt;10%</span> &nbsp;|&nbsp; 期權上行目標：<span style="color:#fff;font-weight:700">$20（+36%）</span></div>
+    <div class="implication"><div class="label">投資啟示</div>動量強勁但已進入擁擠交易。<span style="color:#fff;font-weight:700">小倉位跟隨趨勢，用價外Put保護</span>。</div>
+  </div>
+</div>
+
+<div class="section" id="credit-crypto">
+  <h2><span class="tag tag-misc">信貸與加密</span> Dimon敲警鐘 Coinbase熬寒冬</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--orange)">$1.8T</div><div class="lbl">私人信貸市場
+規模</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">-$1.49</div><div class="lbl">Coinbase 1Q26
+GAAP EPS</div></div>
+    <div class="stat"><div class="val">$283</div><div class="lbl">JPM目標價
+（自$290下調）</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">Dimon再度警告：私人信貸衰退將比預期更嚴重</div>
+    <p>JPMorgan CEO Jamie Dimon在Norges Bank會議上再次敲響警鐘：<span style="color:#fff;font-weight:700">1,000+家</span>私人信貸公司中不可能全部優秀，「信貸衰退太久沒來，來的時候會比人們想像的更糟」。他強調這不會構成系統性風險，但部分機構的承銷標準堪憂。同時Dimon指出伊朗戰爭、全球再軍備化、基建需求與財政赤字等多重通膨壓力。諷刺的是，JPMorgan自身正在募集數十億美元的私人信貸策略基金，由商業銀行團隊提供項目來源。</p>
+    <div class="data-point">私人信貸公司數：<span style="color:#fff;font-weight:700">&gt;1,000家</span> &nbsp;|&nbsp; 市場規模：<span style="color:#fff;font-weight:700">$1.8萬億</span> &nbsp;|&nbsp; 系統性風險：<span style="color:#fff;font-weight:700">「可能不構成」</span> &nbsp;|&nbsp; 通膨因素：<span style="color:#fff;font-weight:700">伊朗戰爭、再軍備、赤字</span></div>
+    <div class="implication"><div class="label">投資啟示</div>信貸週期轉折信號累積。<span style="color:#fff;font-weight:700">減少低評級私人信貸配置，增持流動性較高的投資級債券</span>。</div>
+  </div>
+  <div class="article">
+    <div class="article-title">Coinbase 1Q26：弱環境下的艱難季度</div>
+    <p>Coinbase 1Q26 GAAP EPS虧損<span style="color:#fff;font-weight:700">-$1.49</span>（vs共識-$0.09），調整後EPS <span style="color:#fff;font-weight:700">-$0.17</span>，差異主要來自加密市場<span style="color:#fff;font-weight:700">~20%</span>回撤帶來的未實現損失。調整後EBITDA <span style="color:#fff;font-weight:700">$3.03億</span> vs 共識<span style="color:#fff;font-weight:700">$4.08億</span>。現貨交易量<span style="color:#fff;font-weight:700">$2,020億</span>低於預期，但零售費率升至<span style="color:#fff;font-weight:700">157bps</span>（2Q24以來最高），受益於預測市場等新收入流。展望2Q，交易量繼續承壓。JPMorgan維持Overweight但將目標價從<span style="color:#fff;font-weight:700">$290降至$283</span>。若美國加密立法年內簽署，2H26-2027展望有望改善。E*Trade（50bps費率）與Schwab入場帶來競爭壓力。</p>
+    <div class="data-point">調整後EBITDA：<span style="color:#fff;font-weight:700">$3.03億</span> vs 共識 $4.08億| 現貨交易量：<span style="color:#fff;font-weight:700">$2,020億</span> &nbsp;|&nbsp; 零售費率：<span style="color:#fff;font-weight:700">157bps</span> &nbsp;|&nbsp; 2026E調整後EPS：<span style="color:#fff;font-weight:700">$1.18</span>（下調39%）</div>
+    <div class="implication"><div class="label">投資啟示</div>短期基本面疲弱，但立法催化劑值得關注。<span style="color:#fff;font-weight:700">觀望為主，$160以下可建立小倉位博弈立法通過</span>。</div>
+  </div>
+</div>
+
+<div class="callout" id="takeaways">
+  <div class="callout-title">基金經理人重點摘要</div>
+  <ul>
+    <li><strong>AI基建：</strong>Alphabet與Microsoft合計2026年資本開支逼近$3,800億，Google Cloud增63%。信用利差極窄，相對價值有限 — 勿追。</li>
+    <li><strong>霍爾木茲：</strong>海峽僵局延續，Brent穩守$100上方。華爾街多數預期中斷至6月後。**做多Brent遠期、增持BP**。</li>
+    <li><strong>半導體：</strong>Micron 2027E EPS $101，PE僅13.6x，盈利驅動而非泡沫。**逢回調加倉MU**。Nokia AI轉型動量強但擁擠。</li>
+    <li><strong>FC-BGA：</strong>需求從GPU擴散至系統級（CPU、NIC、DPU），供應緊張支撐ASP。**增持韓國基板股**。</li>
+    <li><strong>私人信貸：</strong>Dimon警告1,000+機構品質參差，衰退來時超預期。**減配低評級私人信貸**。</li>
+    <li><strong>加密貨幣：</strong>Coinbase短期承壓，等待美國立法催化。競爭加劇（E*Trade、Schwab）。**觀望為主**。</li>
+  </ul>
+</div>
+
+<div class="nav-links">
+  <span><a href="newsletter_59_uncategorized.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="footer">
+  彭博研究摘要 | 僅供教學與討論用途 | 2026年5月17日<br>
+  資料來源：Bloomberg Intelligence, Bloomberg Economics, Bloomberg News
+</div>
+
+</body>
+</html>

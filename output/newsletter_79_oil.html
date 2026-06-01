@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>彭博研究摘要 #79 — 油價飆升與伊朗危機</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --accent: #58a6ff;
+          --green: #3fb950; --red: #f85149; --yellow: #d29922; --text: #c9d1d9; --muted: #8b949e;
+          --orange: #f0883e; --purple: #bc8cff; --cyan: #39d2c0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans TC', 'Microsoft JhengHei', Helvetica, Arial, sans-serif; line-height: 1.7; padding: 20px; max-width: 860px; margin: 0 auto; }
+  h1 { color: #fff; font-size: 1.7em; margin-bottom: 4px; }
+  .subtitle { color: var(--muted); font-size: 0.9em; margin-bottom: 8px; }
+  .issue-badge { display: inline-block; background: rgba(88,166,255,0.15); color: var(--accent); padding: 3px 10px; border-radius: 12px; font-size: 0.8em; font-weight: 600; margin-bottom: 20px; }
+  .tag { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 0.72em; font-weight: 600; margin-right: 4px; }
+  .tag-rates { background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-china { background: rgba(240,136,62,0.15); color: var(--orange); }
+  .tag-japan { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-geo   { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-oil   { background: rgba(210,153,34,0.15); color: var(--yellow); }
+  .tag-trade { background: rgba(210,153,34,0.15); color: var(--yellow); }
+  .tag-growth{ background: rgba(63,185,80,0.15); color: var(--green); }
+  .tag-metals{ background: rgba(188,140,255,0.15); color: var(--purple); }
+  .tag-infl  { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-policy{ background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-val   { background: rgba(63,185,80,0.15); color: var(--green); }
+  .tag-vol   { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-semi  { background: rgba(57,210,192,0.15); color: var(--cyan); }
+  .tag-credit{ background: rgba(188,140,255,0.15); color: var(--purple); }
+  .tag-space { background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-misc  { background: rgba(139,148,158,0.15); color: var(--muted); }
+  .section { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 16px; }
+  .section h2 { color: #fff; font-size: 1.15em; margin-bottom: 12px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+  .section h3 { color: var(--accent); font-size: 0.95em; margin: 14px 0 6px; }
+  .article { margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .article:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .article-title { color: #fff; font-weight: 700; font-size: 0.95em; margin-bottom: 4px; }
+  .article-title-cn { color: var(--muted); font-size: 0.85em; margin-bottom: 8px; }
+  .article p { font-size: 0.9em; margin: 6px 0; }
+  .data-point { background: rgba(255,255,255,0.03); padding: 8px 12px; border-radius: 6px; margin: 8px 0; font-size: 0.85em; }
+  .data-point .num { color: #fff; font-weight: 700; }
+  .implication { background: rgba(88,166,255,0.06); border-left: 3px solid var(--accent); padding: 10px 14px; margin: 10px 0; border-radius: 0 6px 6px 0; font-size: 0.88em; }
+  .implication .label { color: var(--accent); font-weight: 700; font-size: 0.8em; text-transform: uppercase; margin-bottom: 4px; }
+  .callout { background: rgba(210,153,34,0.08); border: 1px solid rgba(210,153,34,0.3); border-radius: 6px; padding: 16px; margin: 16px 0; }
+  .callout-title { color: var(--yellow); font-weight: 700; font-size: 0.95em; margin-bottom: 8px; }
+  .callout ul { padding-left: 18px; }
+  .callout li { margin: 4px 0; font-size: 0.88em; }
+  ul { padding-left: 18px; }
+  li { margin: 3px 0; font-size: 0.88em; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(255,255,255,0.03); padding: 12px; border-radius: 6px; text-align: center; }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: #fff; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
+  .toc { background: rgba(88,166,255,0.05); border: 1px solid rgba(88,166,255,0.2); border-radius: 8px; padding: 16px 20px; margin-bottom: 20px; }
+  .toc-title { color: var(--accent); font-weight: 700; font-size: 0.9em; margin-bottom: 8px; }
+  .toc a { color: var(--accent); text-decoration: none; font-size: 0.88em; }
+  .toc a:hover { text-decoration: underline; }
+  .toc ol { padding-left: 20px; }
+  .toc li { margin: 4px 0; }
+  .nav-links { display: flex; justify-content: space-between; margin: 20px 0; font-size: 0.85em; }
+  .nav-links a { color: var(--accent); text-decoration: none; }
+  .nav-links a:hover { text-decoration: underline; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(255,255,255,0.03); padding: 12px; border-radius: 6px; text-align: center; }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: #fff; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
+  .footer { text-align: center; color: var(--muted); font-size: 0.75em; margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--border); }
+</style>
+<script>if(window.self===window.top&&sessionStorage.getItem("student_auth")!=="1"){document.body.innerHTML="";window.location.replace("student.html");}</script>
+</head>
+<body>
+
+<h1>彭博研究摘要</h1>
+<p class="subtitle">第79期 | 油價飆升與伊朗危機</p>
+<span class="issue-badge">2026年五月中旬更新</span>
+
+<div class="nav-links">
+  <span><a href="newsletter_78_inflation.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="toc">
+  <div class="toc-title">目錄</div>
+  <ol>
+    <li><a href="#kharg-supply-shock">地緣風險 霍爾木茲海峽危機升溫，油價逼近150</a></li>
+    <li><a href="#pce-inflation">通膨 油價推升PCE，核心通膨仍頑固</a></li>
+    <li><a href="#retail-sales">消費 零售數據亮眼但通膨侵蝕實質購買力</a></li>
+    <li><a href="#takeaways">基金經理人重點摘要</a></li>
+  </ol>
+</div>
+
+<div class="section" id="kharg-supply-shock">
+  <h2><span class="tag tag-geo">地緣風險</span> 霍爾木茲海峽危機升溫，油價逼近150</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--red)">$150</div><div class="lbl">油價目標
+（供應衝擊情境）</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">1,000萬桶/日</div><div class="lbl">已受限產能
+（霍爾木茲關閉）</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">170萬桶/日</div><div class="lbl">哈爾克島出口量
+（佔伊朗90%）</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">哈爾克島成油價引爆點 — 波斯灣供應衝擊風險急升</div>
+    <p>伊朗戰事進入第四週，哈爾克島正成為油市下一個關鍵引爆點。該終端處理伊朗 <span style="color:#fff;font-weight:700">90%</span> 出口量（約 <span style="color:#fff;font-weight:700">170萬桶/日</span>），是美國反制德黑蘭控制霍爾木茲海峽的潛在壓力點。伊朗的談判條件對川普政府而言不可接受，軍事部署持續增加，地面入侵猜測升溫。若哈爾克遭襲，伊朗最可能的反應是擴大攻擊波斯灣能源基建 — 包括沙特、阿聯酋及伊拉克資產，類似 <span style="color:#fff;font-weight:700">2019年Abqaiq襲擊</span>（瞬間移除逾500萬桶/日產能）。即使未全面升級，僅 <span style="color:#fff;font-weight:700">0.5-1.0百萬桶/日</span> 的部分中斷已足以嚴重收緊市場，因中國高度依賴伊朗折價原油，替代來源（俄羅斯/大西洋盆地）成本更高、運輸更久。</p>
+    <div class="data-point">哈爾克島出口：<span style="color:#fff;font-weight:700">170萬桶/日</span>（伊朗90%） &nbsp;|&nbsp; 已受限產能：<span style="color:#fff;font-weight:700">&gt;1,000萬桶/日</span> &nbsp;|&nbsp; 油價走勢：<span style="color:#fff;font-weight:700">逼近$150/桶</span> &nbsp;|&nbsp; 2019 Abqaiq先例：<span style="color:#fff;font-weight:700">瞬間移除500萬桶/日</span></div>
+    <div class="implication"><div class="label">投資啟示</div>波斯灣全面升級為尾部風險定價核心。<span style="color:#fff;font-weight:700">做多原油看漲期權</span>（尤其Brent $150 call）；<span style="color:#fff;font-weight:700">增持油運/保險敏感標的</span>；減持亞洲煉化股（伊朗原油替代成本上升）。</div>
+  </div>
+</div>
+
+<div class="section" id="pce-inflation">
+  <h2><span class="tag tag-infl">通膨</span> 油價推升PCE，核心通膨仍頑固</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--red)">3.5%</div><div class="lbl">3月headline PCE
+（年增，預測）</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">3.2%</div><div class="lbl">3月core PCE
+（年增，預測）</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">4.1%</div><div class="lbl">Q1 core PCE
+（季環比年化）</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">汽油飆漲推升3月PCE通膨 — 消費暫獲稅務退款支撐</div>
+    <p>伊朗戰爭導致3月汽油價格暴漲 <span style="color:#fff;font-weight:700">20.9%</span>，預計將headline PCE月增推高至 <span style="color:#fff;font-weight:700">0.68%</span>（前值0.38%），年增率升至 <span style="color:#fff;font-weight:700">3.5%</span>（前值2.8%）。核心PCE月增預計放緩至 <span style="color:#fff;font-weight:700">0.30%</span>，但年增率仍上升至 <span style="color:#fff;font-weight:700">3.2%</span>。第一季整體核心PCE季環比年化率料達 <span style="color:#fff;font-weight:700">4.1%</span>（前季2.7%），顯示通膨壓力明顯回升。Fed主席Powell此前強調需透過核心商品降價來推進通膨進展，但記憶體晶片短缺等因素仍支撐部分品類價格。消費者目前靠稅務退款和高淨值家庭韌性支撐開支，但若高油價持續至夏季，這些緩衝將逐步消退。</p>
+    <div class="data-point">汽油價格月增：<span style="color:#fff;font-weight:700">+20.9%</span> &nbsp;|&nbsp; 儲蓄率：<span style="color:#fff;font-weight:700">&lt;4.0%</span>（消費超越收入） &nbsp;|&nbsp; 名義消費支出月增：<span style="color:#fff;font-weight:700">+0.9%</span> &nbsp;|&nbsp; 實質消費支出月增：<span style="color:#fff;font-weight:700">+0.2%</span></div>
+    <div class="implication"><div class="label">投資啟示</div>Fed上半年降息大門進一步關閉。<span style="color:#fff;font-weight:700">做空前端利率期貨</span>（2年期）；通膨交易延續 — <span style="color:#fff;font-weight:700">做多TIPS breakevens</span>。若油價Q2維持高位，下半年衰退風險上升。</div>
+  </div>
+</div>
+
+<div class="section" id="retail-sales">
+  <h2><span class="tag tag-misc">消費</span> 零售數據亮眼但通膨侵蝕實質購買力</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--green)">+1.7%</div><div class="lbl">3月零售銷售
+（月增，headline）</div></div>
+    <div class="stat"><div class="val">+0.7%</div><div class="lbl">控制組銷售
+（月增）</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">~1.0%</div><div class="lbl">Q1實質消費
+（季環比年化估算）</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">高油價與退稅雙重驅動3月零售銷售超預期</div>
+    <p>3月零售銷售月增 <span style="color:#fff;font-weight:700">1.7%</span>（共識1.4%），13個品類中有 <span style="color:#fff;font-weight:700">12個</span> 錄得增長。剔除汽車與汽油後仍增 <span style="color:#fff;font-weight:700">0.6%</span>，家具（<span style="color:#fff;font-weight:700">+2.2%</span>）、線上消費（<span style="color:#fff;font-weight:700">+1.0%</span>）及電子產品（<span style="color:#fff;font-weight:700">+0.9%</span>）表現突出。控制組（剔除汽車/汽油/餐飲/建材）增 <span style="color:#fff;font-weight:700">0.7%</span>，優於預期。然而經通膨調整後，控制組銷售接近持平，暗示第一季實質消費增速或放緩至約 <span style="color:#fff;font-weight:700">1.0%</span>（前季1.9%）。餐飲服務僅增 <span style="color:#fff;font-weight:700">0.1%</span>（前值0.5%），顯示服務支出動能轉弱。高收入家庭韌性與稅務退款是短期支撐，但夏季前恐難以持續。</p>
+    <div class="data-point">品類增長覆蓋：<span style="color:#fff;font-weight:700">12/13</span> &nbsp;|&nbsp; 剔除車油銷售：<span style="color:#fff;font-weight:700">+0.6%</span> &nbsp;|&nbsp; 餐飲服務：<span style="color:#fff;font-weight:700">+0.1%</span>（前值+0.5%） &nbsp;|&nbsp; Q1實質消費估算：<span style="color:#fff;font-weight:700">~1.0%</span>（前季1.9%）</div>
+    <div class="implication"><div class="label">投資啟示</div>名義數據強但實質購買力受侵蝕。<span style="color:#fff;font-weight:700">減持可選消費股</span>（尤其中低收入客群）；油價若持續，Q2消費面臨下行風險 — <span style="color:#fff;font-weight:700">關注夏季衰退交易窗口</span>。</div>
+  </div>
+</div>
+
+<div class="callout" id="takeaways">
+  <div class="callout-title">基金經理人重點摘要</div>
+  <ul>
+    <li><strong>原油：</strong>哈爾克島為油價核心風險節點，波斯灣升級可再移除數百萬桶/日。油價$150非極端情境 — **做多Brent看漲期權尾部保護**。</li>
+    <li><strong>通膨：</strong>3月headline PCE料升至3.5%，核心3.2%。Q1核心PCE年化4.1%，Fed降息窗口進一步延後 — **做多TIPS breakevens**。</li>
+    <li><strong>Fed：</strong>高油價+頑固核心通膨=上半年按兵不動。短端利率維持高位，**避免過早做多久期**。</li>
+    <li><strong>消費：</strong>名義零售亮眼但實質持平。稅務退款效應將消退，夏季消費承壓 — **減持可選消費，關注衰退交易時點**。</li>
+    <li><strong>亞洲煉化：</strong>中國高度依賴伊朗折價原油，替代來源成本更高。**減持亞洲下游煉化股**，增持油運/保險受益標的。</li>
+  </ul>
+</div>
+
+<div class="nav-links">
+  <span><a href="newsletter_78_inflation.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="footer">
+  彭博研究摘要 | 僅供教學與討論用途 | 2026年5月17日<br>
+  資料來源：Bloomberg Intelligence, Bloomberg Economics, Bloomberg News
+</div>
+
+</body>
+</html>

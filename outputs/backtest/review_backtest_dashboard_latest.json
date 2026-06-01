@@ -1,0 +1,24 @@
+{
+  "generatedAt": "2026-05-26T10:58:45+08:00",
+  "backtests": {
+    "csvFiles": [],
+    "totalRows": 0,
+    "statusCounts": {
+      "Hit": 0,
+      "Partial Hit": 0,
+      "Miss": 0,
+      "Pending": 0
+    },
+    "gradedHitRatePct": null,
+    "avgAlphaPct": null,
+    "latestRows": []
+  },
+  "reviews": {
+    "totalReports": 0,
+    "latestReports": []
+  },
+  "artifacts": {
+    "outputsDir": "C:\\Users\\User\\Documents\\GitHub\\notion-autopublish\\outputs",
+    "reviewDir": "C:\\Users\\User\\Documents\\GitHub\\notion-autopublish\\review"
+  }
+}

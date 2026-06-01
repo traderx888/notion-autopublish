@@ -1,8 +1,10 @@
 """
 LuxAlgo trading alerts/signals scraper.
 
-Logs in to LuxAlgo premium dashboard and extracts
-trading alerts and signals data.
+Logs in to LuxAlgo premium features and extracts
+trading alerts and signals data from the quant dashboard.
+
+Target page: https://www.luxalgo.com/features/quant/
 """
 
 import json
@@ -10,6 +12,8 @@ import os
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
 from browser.base import BrowserAutomation, SCRAPED_DIR
+
+LUXALGO_QUANT_URL = "https://www.luxalgo.com/features/quant/"
 
 
 class LuxAlgoScraper(BrowserAutomation):
@@ -21,12 +25,29 @@ class LuxAlgoScraper(BrowserAutomation):
         self.output_dir.mkdir(parents=True, exist_ok=True)
 
     def is_logged_in(self) -> bool:
-        self.page.goto("https://www.luxalgo.com/account/", wait_until="networkidle")
+        """Navigate to quant page and check if premium content is accessible."""
+        try:
+            self.page.goto(LUXALGO_QUANT_URL,
+                           wait_until="domcontentloaded", timeout=60000)
+        except Exception:
+            return False
         self.page.wait_for_timeout(3000)
-        return "account" in self.page.url and "login" not in self.page.url
+        url = self.page.url.lower()
+        # If redirected to login/register, not logged in
+        if "login" in url or "register" in url or "sign-in" in url:
+            return False
+        # If still on quant page (or features), likely logged in
+        if "features" in url or "quant" in url:
+            return True
+        return False
 
     def login(self):
-        self.page.goto("https://www.luxalgo.com/account/", wait_until="networkidle")
+        """Navigate to quant page and wait for manual login if needed."""
+        try:
+            self.page.goto(LUXALGO_QUANT_URL,
+                           wait_until="domcontentloaded", timeout=60000)
+        except Exception:
+            pass  # page may be slow; browser is still open for manual nav
         self.page.wait_for_timeout(2000)
 
         email = os.getenv("LUXALGO_EMAIL", "")
@@ -53,37 +74,24 @@ class LuxAlgoScraper(BrowserAutomation):
         else:
             self.wait_for_user(
                 "Log in to LuxAlgo in the browser.\n"
+                "  Target: https://www.luxalgo.com/features/quant/\n"
                 "  Tip: Set LUXALGO_EMAIL and LUXALGO_PASSWORD in .env."
             )
 
     def scrape_alerts(self) -> list[dict]:
         """
-        Scrape trading alerts/signals from the dashboard.
-        Tries multiple page patterns and extraction strategies.
+        Scrape trading alerts/signals from the quant dashboard.
+        Tries multiple extraction strategies.
         """
-        # Try known dashboard/signals pages
-        candidate_urls = [
-            "https://www.luxalgo.com/account/",
-            "https://www.luxalgo.com/dashboard/",
-            "https://www.luxalgo.com/signals/",
-            "https://www.luxalgo.com/alerts/",
-        ]
+        # Make sure we're on the quant page
+        if "quant" not in self.page.url.lower():
+            try:
+                self.page.goto(LUXALGO_QUANT_URL,
+                               wait_until="domcontentloaded", timeout=60000)
+                self.page.wait_for_timeout(3000)
+            except Exception:
+                pass
 
-        dashboard_found = False
-        for url in candidate_urls:
-            self.page.goto(url, wait_until="networkidle")
-            self.page.wait_for_timeout(2000)
-            # Check if the page exists (not 404)
-            if "404" not in self.page.title().lower() and self.page.url == url:
-                dashboard_found = True
-                break
-
-        if not dashboard_found:
-            self.wait_for_user(
-                "Navigate to the LuxAlgo alerts/signals page in the browser."
-            )
-
-        self.page.wait_for_timeout(2000)
         alerts = []
 
         # Strategy 1: Table rows

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>彭博研究摘要 #55 — AI軍備競賽與通膨修正</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --accent: #58a6ff;
+          --green: #3fb950; --red: #f85149; --yellow: #d29922; --text: #c9d1d9; --muted: #8b949e;
+          --orange: #f0883e; --purple: #bc8cff; --cyan: #39d2c0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans TC', 'Microsoft JhengHei', Helvetica, Arial, sans-serif; line-height: 1.7; padding: 20px; max-width: 860px; margin: 0 auto; }
+  h1 { color: #fff; font-size: 1.7em; margin-bottom: 4px; }
+  .subtitle { color: var(--muted); font-size: 0.9em; margin-bottom: 8px; }
+  .issue-badge { display: inline-block; background: rgba(88,166,255,0.15); color: var(--accent); padding: 3px 10px; border-radius: 12px; font-size: 0.8em; font-weight: 600; margin-bottom: 20px; }
+  .tag { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 0.72em; font-weight: 600; margin-right: 4px; }
+  .tag-rates { background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-china { background: rgba(240,136,62,0.15); color: var(--orange); }
+  .tag-japan { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-geo   { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-oil   { background: rgba(210,153,34,0.15); color: var(--yellow); }
+  .tag-trade { background: rgba(210,153,34,0.15); color: var(--yellow); }
+  .tag-growth{ background: rgba(63,185,80,0.15); color: var(--green); }
+  .tag-metals{ background: rgba(188,140,255,0.15); color: var(--purple); }
+  .tag-infl  { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-policy{ background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-val   { background: rgba(63,185,80,0.15); color: var(--green); }
+  .tag-vol   { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-semi  { background: rgba(57,210,192,0.15); color: var(--cyan); }
+  .tag-credit{ background: rgba(188,140,255,0.15); color: var(--purple); }
+  .tag-space { background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-misc  { background: rgba(139,148,158,0.15); color: var(--muted); }
+  .section { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 16px; }
+  .section h2 { color: #fff; font-size: 1.15em; margin-bottom: 12px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+  .section h3 { color: var(--accent); font-size: 0.95em; margin: 14px 0 6px; }
+  .article { margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .article:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .article-title { color: #fff; font-weight: 700; font-size: 0.95em; margin-bottom: 4px; }
+  .article-title-cn { color: var(--muted); font-size: 0.85em; margin-bottom: 8px; }
+  .article p { font-size: 0.9em; margin: 6px 0; }
+  .data-point { background: rgba(255,255,255,0.03); padding: 8px 12px; border-radius: 6px; margin: 8px 0; font-size: 0.85em; }
+  .data-point .num { color: #fff; font-weight: 700; }
+  .implication { background: rgba(88,166,255,0.06); border-left: 3px solid var(--accent); padding: 10px 14px; margin: 10px 0; border-radius: 0 6px 6px 0; font-size: 0.88em; }
+  .implication .label { color: var(--accent); font-weight: 700; font-size: 0.8em; text-transform: uppercase; margin-bottom: 4px; }
+  .callout { background: rgba(210,153,34,0.08); border: 1px solid rgba(210,153,34,0.3); border-radius: 6px; padding: 16px; margin: 16px 0; }
+  .callout-title { color: var(--yellow); font-weight: 700; font-size: 0.95em; margin-bottom: 8px; }
+  .callout ul { padding-left: 18px; }
+  .callout li { margin: 4px 0; font-size: 0.88em; }
+  ul { padding-left: 18px; }
+  li { margin: 3px 0; font-size: 0.88em; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(255,255,255,0.03); padding: 12px; border-radius: 6px; text-align: center; }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: #fff; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
+  .toc { background: rgba(88,166,255,0.05); border: 1px solid rgba(88,166,255,0.2); border-radius: 8px; padding: 16px 20px; margin-bottom: 20px; }
+  .toc-title { color: var(--accent); font-weight: 700; font-size: 0.9em; margin-bottom: 8px; }
+  .toc a { color: var(--accent); text-decoration: none; font-size: 0.88em; }
+  .toc a:hover { text-decoration: underline; }
+  .toc ol { padding-left: 20px; }
+  .toc li { margin: 4px 0; }
+  .nav-links { display: flex; justify-content: space-between; margin: 20px 0; font-size: 0.85em; }
+  .nav-links a { color: var(--accent); text-decoration: none; }
+  .nav-links a:hover { text-decoration: underline; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(255,255,255,0.03); padding: 12px; border-radius: 6px; text-align: center; }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: #fff; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
+  .footer { text-align: center; color: var(--muted); font-size: 0.75em; margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--border); }
+</style>
+<script>if(window.self===window.top&&sessionStorage.getItem("student_auth")!=="1"){document.body.innerHTML="";window.location.replace("student.html");}</script>
+</head>
+<body>
+
+<h1>彭博研究摘要</h1>
+<p class="subtitle">第55期 | AI軍備競賽與通膨修正</p>
+<span class="issue-badge">2026年五月中旬更新</span>
+
+<div class="nav-links">
+  <span><a href="newsletter_54_geopolitics.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="toc">
+  <div class="toc-title">目錄</div>
+  <ol>
+    <li><a href="#us-inflation-fed">通膨 戰後通膨衝擊漸退，CPI重回正軌</a></li>
+    <li><a href="#ai-capex-credit">AI信用 $152B債券洪水，投資者開始疲憊</a></li>
+    <li><a href="#equity-strategy">策略 AI股便宜得離譜，因子疊加創3,500%回報</a></li>
+    <li><a href="#south-africa">新興市場 南非：油價衝擊暫緩但復甦路漫漫</a></li>
+    <li><a href="#takeaways">基金經理人重點摘要</a></li>
+  </ol>
+</div>
+
+<div class="section" id="us-inflation-fed">
+  <h2><span class="tag tag-infl">通膨</span> 戰後通膨衝擊漸退，CPI重回正軌</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--red)">1.0%</div><div class="lbl">3月PPI環比預估
+（能源推動）</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">4.5%</div><div class="lbl">整體PPI同比
+（創兩年新高）</div></div>
+    <div class="stat"><div class="val">36%</div><div class="lbl">CPI住房分項權重
+（4月前仍偏低）</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">美國CPI正擺脫政府停擺數據扭曲</div>
+    <p>去年10月政府停擺導致CPI首次出現數據斷檔，勞工統計局以「價格持平」假設填補缺口。彭博經濟研究確認，剔除食品、能源和住房後的CPI已在2026年初<span style="color:#fff;font-weight:700">回歸2025年1-9月趨勢水平</span>。唯一尚未修正的是佔指數<span style="color:#fff;font-weight:700">36%</span>的住房分項，預計<span style="color:#fff;font-weight:700">4月數據（5月12日公佈）</span>將完成修正。整體而言，CPI完整性並未遭到破壞，通膨水平依然過高——這一結論可信。</p>
+    <div class="data-point">非住房CPI：<span style="color:#fff;font-weight:700">2026年1月已回歸趨勢</span> &nbsp;|&nbsp; 住房分項修正時間：<span style="color:#fff;font-weight:700">4月</span> &nbsp;|&nbsp; 住房權重：<span style="color:#fff;font-weight:700">36%</span></div>
+    <div class="implication"><div class="label">投資啟示</div>CPI數據雜訊消退後，市場將更信任通膨讀數。<span style="color:#fff;font-weight:700">住房通膨放緩趨勢確認後可加碼TIPS短端</span>。</div>
+  </div>
+  <div class="article">
+    <div class="article-title">戰爭推動PPI飆升，停火或緩解Fed困境</div>
+    <p>伊朗戰爭推高油價，3月整體PPI環比料漲<span style="color:#fff;font-weight:700">1.0%</span>，同比達<span style="color:#fff;font-weight:700">4.5%</span>，為2022年來最大月度漲幅之一。進口價格預計漲<span style="color:#fff;font-weight:700">1.8%</span>，同樣受油價驅動。然而4月7日宣布的停火令油價回落、股市反彈，短期內降低了Fed雙重使命面臨的極端風險。FOMC紀要顯示政策立場趨鷹——多數官員傾向在就業疲軟時降息，但也擔心通膨長期居高。彭博預計Fed將<span style="color:#fff;font-weight:700">維持利率不變至Q4</span>，隨後降息<span style="color:#fff;font-weight:700">50bp</span>。</p>
+    <div class="data-point">3月PPI環比：<span style="color:#fff;font-weight:700">1.0%</span> &nbsp;|&nbsp; 進口價格環比：<span style="color:#fff;font-weight:700">1.8%</span> &nbsp;|&nbsp; Fed降息預期：<span style="color:#fff;font-weight:700">Q4降50bp</span> &nbsp;|&nbsp; 30年房貸利率：<span style="color:#fff;font-weight:700">6.57%</span></div>
+    <div class="implication"><div class="label">投資啟示</div>停火後油價回落為Fed爭取時間。<span style="color:#fff;font-weight:700">上半年利率按兵不動，Q4降息窗口開啟——做多前端利率期貨</span>。</div>
+  </div>
+</div>
+
+<div class="section" id="ai-capex-credit">
+  <h2><span class="tag tag-misc">AI信用</span> $152B債券洪水，投資者開始疲憊</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--red)">$152B</div><div class="lbl">2026年AI超大規模
+企業發債總額</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">$125-145B</div><div class="lbl">Meta 2026年
+資本開支預算</div></div>
+    <div class="stat"><div class="val" style="color:var(--green)">~3%</div><div class="lbl">Apple資本開支
+佔營收比例</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">Meta發行$250億債券——為何不更多？</div>
+    <p>Meta以Aa3/AA-評級發行六檔共<span style="color:#fff;font-weight:700">$250億</span>低息長債，利用評級優勢而非動用<span style="color:#fff;font-weight:700">$810億</span>現金儲備。2026年資本開支已上調至<span style="color:#fff;font-weight:700">$1,250-1,450億</span>，股票回購降至零，AI成為唯一優先。儘管槓桿上升，淨負債短期內仍接近零甚至為負。30年期初始定價約<span style="color:#fff;font-weight:700">162.5bp</span>，相比高品質科技同業仍有<span style="color:#fff;font-weight:700">25bp以上</span>收窄空間。共識預期2026年營收超<span style="color:#fff;font-weight:700">$2,500億</span>（同比+25%），EBITDA近<span style="color:#fff;font-weight:700">$1,250億</span>。</p>
+    <div class="data-point">發行規模：<span style="color:#fff;font-weight:700">$25B六檔</span> &nbsp;|&nbsp; 現金儲備：<span style="color:#fff;font-weight:700">$81B</span> &nbsp;|&nbsp; 30年期利差：<span style="color:#fff;font-weight:700">~162.5bp</span> &nbsp;|&nbsp; 2026營收預期：<span style="color:#fff;font-weight:700">$250B+</span></div>
+    <div class="implication"><div class="label">投資啟示</div>Meta信用基本面穩健但利差仍寬於同業。<span style="color:#fff;font-weight:700">逢寬買入Meta長端債券，目標收窄25bp</span>。</div>
+  </div>
+  <div class="article">
+    <div class="article-title">AI超大規模企業債券供應疲勞浮現</div>
+    <p>2026年至今，五大AI超大規模企業（AMZN、GOOGL、MSFT、META、ORCL）已發行<span style="color:#fff;font-weight:700">$1,520億</span>債券，超越2025年全年<span style="color:#fff;font-weight:700">$1,080億</span>紀錄。Oracle長債利差三個月內走闊<span style="color:#fff;font-weight:700">25bp</span>，Meta長端走闊<span style="color:#fff;font-weight:700">20bp</span>。Invesco表示投資者正要求更高溢價和更強保護條款。彭博預估2026-2030年AI資本開支合計近<span style="color:#fff;font-weight:700">$5萬億</span>，自由現金流2026年走弱後2028年顯著回升。</p>
+    <div class="data-point">2026年發債：<span style="color:#fff;font-weight:700">$152B</span>（超2025全年$108B） &nbsp;|&nbsp; Oracle長端走闊：<span style="color:#fff;font-weight:700">25bp</span> &nbsp;|&nbsp; 2026-30 AI capex：<span style="color:#fff;font-weight:700">~$5T</span> &nbsp;|&nbsp; FCF拐點：<span style="color:#fff;font-weight:700">2028年</span></div>
+    <div class="implication"><div class="label">投資啟示</div>供應疲勞推高新發溢價。<span style="color:#fff;font-weight:700">短期避免追買科技長端新債，等待二級市場利差走闊後再進場</span>。</div>
+  </div>
+  <div class="article">
+    <div class="article-title">Apple低資本開支成為差異化優勢</div>
+    <p>Apple資本開支僅佔營收約<span style="color:#fff;font-weight:700">3%</span>，在科技巨頭AI軍備競賽中獨樹一幟。2Q毛利率達<span style="color:#fff;font-weight:700">49.3%</span>（同比+220bp），未受記憶體漲價影響。中國和iPhone銷售強勁反彈暗示Apple正搶佔市場份額。Google合作有望大幅升級Siri，未來2-3年折疊手機等新形態可刺激銷售。風險方面，記憶體漲價或令每季成本增加<span style="color:#fff;font-weight:700">$20-30億</span>，可能推動下半年選擇性提價。</p>
+    <div class="data-point">Capex/營收：<span style="color:#fff;font-weight:700">~3%</span> &nbsp;|&nbsp; 2Q毛利率：<span style="color:#fff;font-weight:700">49.3%</span>（+220bp YoY） &nbsp;|&nbsp; 記憶體成本衝擊：<span style="color:#fff;font-weight:700">$2-3B/季</span> &nbsp;|&nbsp; FY26營收增長：<span style="color:#fff;font-weight:700">7-9%</span></div>
+    <div class="implication"><div class="label">投資啟示</div>低capex模式在AI投資爭議期享估值溢價。<span style="color:#fff;font-weight:700">Apple相對科技同業的估值優勢將擴大——維持超配</span>。</div>
+  </div>
+</div>
+
+<div class="section" id="equity-strategy">
+  <h2><span class="tag tag-misc">策略</span> AI股便宜得離譜，因子疊加創3,500%回報</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--green)">8%</div><div class="lbl">AI股vs大盤
+相對估值溢價</div></div>
+    <div class="stat"><div class="val" style="color:var(--green)">3,471%</div><div class="lbl">價值+動量+EPS修正
+2000年以來累計回報</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">$35B</div><div class="lbl">單一股票ETF
+資產規模（高峰$41B）</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">AI交易仍然便宜——且動能未竭</div>
+    <p>即使從3月低點反彈<span style="color:#fff;font-weight:700">37.7%</span>，AI股相對大盤估值溢價僅<span style="color:#fff;font-weight:700">8%</span>——2021年AI熱潮以來最低。年初至今AI籃子漲<span style="color:#fff;font-weight:700">32.5%</span>，跑贏非AI股近<span style="color:#fff;font-weight:700">29個百分點</span>。領漲板塊集中在物理基建：半導體（+78.7%）、硬體（+62.8%）。YTD個股冠軍包括Intel（+226%）、Seagate（+196.8%）、Western Digital（+186.8%）。應用軟體（-34.8%）因替代風險大幅落後，面臨AI顛覆壓力。</p>
+    <div class="data-point">AI vs 非AI YTD超額：<span style="color:#fff;font-weight:700">+29ppt</span> &nbsp;|&nbsp; 半導體類別YTD：<span style="color:#fff;font-weight:700">+78.7%</span> &nbsp;|&nbsp; Intel YTD：<span style="color:#fff;font-weight:700">+226%</span> &nbsp;|&nbsp; 應用軟體：<span style="color:#fff;font-weight:700">-34.8%</span></div>
+    <div class="implication"><div class="label">投資啟示</div>AI硬體建設仍是主線，估值支撐充足。<span style="color:#fff;font-weight:700">增持半導體與基建硬體，減持面臨AI替代風險的應用軟體</span>。</div>
+  </div>
+  <div class="article">
+    <div class="article-title">價值+動量+EPS修正：年化14.6%的三因子疊加</div>
+    <p>華爾街最古老的選股技巧仍然有效——但前提是盈利支撐。BI策略先篩選Russell 1000中價值與動量排名前<span style="color:#fff;font-weight:700">20%</span>的股票，再取EPS修正排名前半，自2000年以來累計回報<span style="color:#fff;font-weight:700">3,471%</span>（年化<span style="color:#fff;font-weight:700">14.59%</span>，波動率17.4%，Sharpe <span style="color:#fff;font-weight:700">0.84</span>），大幅超越純價值+動量的2,170%和等權基準的1,297%。當前入選個股包括APA（EPS修正+297%）、Arrow Electronics、Marathon Petroleum和Huntsman。關鍵洞察：動量在盈利上修期最有效，一旦預期下調，即便明星股也會變成價值陷阱。</p>
+    <div class="data-point">累計回報：<span style="color:#fff;font-weight:700">3,471%</span> &nbsp;|&nbsp; 年化：<span style="color:#fff;font-weight:700">14.59%</span> &nbsp;|&nbsp; Sharpe：<span style="color:#fff;font-weight:700">0.84</span> &nbsp;|&nbsp; APA EPS修正：<span style="color:#fff;font-weight:700">+297%</span></div>
+    <div class="implication"><div class="label">投資啟示</div>純動量策略易踩雷，必須疊加盈利修正過濾。<span style="color:#fff;font-weight:700">在選股模型中加入EPS修正因子作為動量確認信號</span>。</div>
+  </div>
+  <div class="article">
+    <div class="article-title">400隻ETF追逐15隻股票：單一股票ETF泡沫</div>
+    <p>單一股票ETF資產在2025年10月見頂<span style="color:#fff;font-weight:700">$410億</span>後回落至約<span style="color:#fff;font-weight:700">$350-380億</span>——儘管大盤續創新高。供應持續膨脹：超過<span style="color:#fff;font-weight:700">400隻</span>ETF追蹤逾200隻個股，但<span style="color:#fff;font-weight:700">75%資產</span>集中在前15隻標的（Nvidia、Tesla、MicroStrategy領銜）。剩餘數百隻產品僅分享約$90億資產。前10大ETF佔總資產近半、交易量逾30%。市場看似廣泛，實則高度集中在少數高波動標的。</p>
+    <div class="data-point">資產峰值：<span style="color:#fff;font-weight:700">$41B</span>（2025年10月） &nbsp;|&nbsp; 當前：<span style="color:#fff;font-weight:700">~$35-38B</span> &nbsp;|&nbsp; 前15標的佔比：<span style="color:#fff;font-weight:700">75%</span> &nbsp;|&nbsp; ETF數量：<span style="color:#fff;font-weight:700">400+</span></div>
+    <div class="implication"><div class="label">投資啟示</div>單一股票ETF市場已飽和，尾部產品流動性風險高。<span style="color:#fff;font-weight:700">避免投資長尾單一股票ETF，流動性集中風險顯著</span>。</div>
+  </div>
+</div>
+
+<div class="section" id="south-africa">
+  <h2><span class="tag tag-misc">新興市場</span> 南非：油價衝擊暫緩但復甦路漫漫</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--orange)">31.4%</div><div class="lbl">南非失業率
+（疫情後最低）</div></div>
+    <div class="stat"><div class="val" style="color:var(--green)">1.1%</div><div class="lbl">2025年GDP增速
+（前年0.5%翻倍）</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">6.57%</div><div class="lbl">南非面臨的
+全球利率壓力</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">油價衝擊放緩南非復甦步伐</div>
+    <p>南非作為淨石油進口國，伊朗戰爭推高的油價正侵蝕實質收入、擴大經常賬赤字並施壓蘭特。彭博基準情景下，2026年增長僅持平而非加速，2027年溫和回升。2025年GDP增長<span style="color:#fff;font-weight:700">1.1%</span>（2024年僅0.5%），受惠於電力供應改善和物流瓶頸緩解。4Q25失業率降至<span style="color:#fff;font-weight:700">31.4%</span>（疫情後最低），但仍極高。通膨可能在1Q26觸底後因油價反彈。若通膨超標，加息將重回議程——但央行目前處於限制性立場，緩衝空間優於2022年。停火後油價回落提供喘息空間。</p>
+    <div class="data-point">2025 GDP：<span style="color:#fff;font-weight:700">1.1%</span>（vs 2024 0.5%） &nbsp;|&nbsp; 失業率：<span style="color:#fff;font-weight:700">31.4%</span> &nbsp;|&nbsp; 通膨底部：<span style="color:#fff;font-weight:700">1Q26</span> &nbsp;|&nbsp; 政策立場：<span style="color:#fff;font-weight:700">限制性</span></div>
+    <div class="implication"><div class="label">投資啟示</div>停火降低極端尾部風險但結構性挑戰未解。<span style="color:#fff;font-weight:700">南非資產短期受益於油價回落，但中期增配需等待加息風險明確消退</span>。</div>
+  </div>
+</div>
+
+<div class="callout" id="takeaways">
+  <div class="callout-title">基金經理人重點摘要</div>
+  <ul>
+    <li><strong>Fed利率：</strong>上半年按兵不動，Q4降息50bp窗口開啟。CPI住房分項5月修正後數據更乾淨——關注核心PCE趨勢。</li>
+    <li><strong>AI信用：</strong>$152B供應壓垮科技長端利差，Oracle/Meta走闊20-25bp。等待二級市場折讓再進場，Meta 30年期目標收窄25bp。</li>
+    <li><strong>AI股票：</strong>相對估值溢價僅8%為AI熱潮以來最低。半導體與硬體基建領漲，應用軟體面臨替代風險——**增持硬體減持軟體**。</li>
+    <li><strong>Apple：</strong>3% capex/營收在AI軍備競賽中獨樹一幟，毛利率49.3%抗住記憶體漲價。維持超配。</li>
+    <li><strong>選股因子：</strong>價值+動量+EPS修正三因子疊加年化14.6%（Sharpe 0.84）。純動量無盈利確認易踩雷——模型必須加入修正過濾。</li>
+    <li><strong>南非/EM：</strong>停火緩解油價尾部風險，但央行仍偏鷹。短期受益但中期需觀望通膨路徑。</li>
+  </ul>
+</div>
+
+<div class="nav-links">
+  <span><a href="newsletter_54_geopolitics.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="footer">
+  彭博研究摘要 | 僅供教學與討論用途 | 2026年5月17日<br>
+  資料來源：Bloomberg Intelligence, Bloomberg Economics, Bloomberg News
+</div>
+
+</body>
+</html>

@@ -75,18 +75,35 @@ def _normalize_text(text: str) -> str:
     return collapsed
 
 
+def _clean_content_block(text: str) -> str:
+    normalized_newlines = str(text or "").replace("\r\n", "\n").replace("\r", "\n")
+    cleaned_lines: List[str] = []
+    previous_blank = False
+    for line in normalized_newlines.split("\n"):
+        cleaned = re.sub(r"[ \t]+", " ", line).strip()
+        if not cleaned:
+            if cleaned_lines and not previous_blank:
+                cleaned_lines.append("")
+            previous_blank = True
+            continue
+        cleaned_lines.append(cleaned)
+        previous_blank = False
+    return "\n".join(cleaned_lines).strip()
+
+
 def dedupe_content_blocks(blocks: Iterable[str]) -> List[str]:
     deduped: List[str] = []
     seen_hashes = set()
     for block in blocks:
-        normalized = _normalize_text(block)
+        cleaned = _clean_content_block(block)
+        normalized = _normalize_text(cleaned)
         if not normalized:
             continue
         digest = hashlib.sha1(normalized.encode("utf-8")).hexdigest()
         if digest in seen_hashes:
             continue
         seen_hashes.add(digest)
-        deduped.append(normalized)
+        deduped.append(cleaned)
     return deduped
 
 

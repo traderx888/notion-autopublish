@@ -41,7 +41,7 @@
       "x": 24,
       "y": 118.0,
       "width": 980,
-      "height": 4830.0,
+      "height": 8226.0,
       "backgroundColor": "#e7f5ff",
       "strokeColor": "#74c0fc",
       "strokeStyle": "solid",
@@ -119,7 +119,7 @@
         ],
         [
           638.0,
-          2767.0
+          4561.0
         ]
       ],
       "syncedAt": "2026-03-12T13:30:00.000Z",
@@ -168,7 +168,7 @@
         ],
         [
           638.0,
-          2662.0
+          4456.0
         ]
       ],
       "syncedAt": "2026-03-12T13:30:00.000Z",
@@ -217,7 +217,7 @@
         ],
         [
           638.0,
-          2548.0
+          4342.0
         ]
       ],
       "syncedAt": "2026-03-12T13:30:00.000Z",
@@ -234,7 +234,7 @@
       "strokeColor": "#1c7ed6",
       "strokeStyle": "solid",
       "label": {
-        "text": "Cross-Asset Momentum (1D)\n09:05 HKT\nOne-day momentum snapshot across equity,\ndollar, gold, crypto, and vol proxies"
+        "text": "Cross-Asset Momentum (1D)\n01:00 HKT, 09:05 HKT\nOne-day momentum snapshot across equity,\ndollar, gold, crypto, and vol proxies"
       },
       "roundness": {
         "type": 3
@@ -266,7 +266,7 @@
         ],
         [
           638.0,
-          2434.0
+          4228.0
         ]
       ],
       "syncedAt": "2026-03-12T13:30:00.000Z",
@@ -315,7 +315,7 @@
         ],
         [
           638.0,
-          2320.0
+          4114.0
         ]
       ],
       "syncedAt": "2026-03-12T13:30:00.000Z",
@@ -364,7 +364,7 @@
         ],
         [
           638.0,
-          2206.0
+          4000.0
         ]
       ],
       "syncedAt": "2026-03-12T13:30:00.000Z",
@@ -413,7 +413,7 @@
         ],
         [
           638.0,
-          2092.0
+          3886.0
         ]
       ],
       "syncedAt": "2026-03-12T13:30:00.000Z",
@@ -462,7 +462,7 @@
         ],
         [
           638.0,
-          1987.0
+          3781.0
         ]
       ],
       "syncedAt": "2026-03-12T13:30:00.000Z",
@@ -511,7 +511,7 @@
         ],
         [
           638.0,
-          1891.0
+          3685.0
         ]
       ],
       "syncedAt": "2026-03-12T13:30:00.000Z",
@@ -560,7 +560,7 @@
         ],
         [
           638.0,
-          1795.0
+          3589.0
         ]
       ],
       "syncedAt": "2026-03-12T13:30:00.000Z",
@@ -609,7 +609,7 @@
         ],
         [
           638.0,
-          1699.0
+          3493.0
         ]
       ],
       "syncedAt": "2026-03-12T13:30:00.000Z",
@@ -658,7 +658,7 @@
         ],
         [
           638.0,
-          1603.0
+          3397.0
         ]
       ],
       "syncedAt": "2026-03-12T13:30:00.000Z",
@@ -707,7 +707,7 @@
         ],
         [
           638.0,
-          1507.0
+          3301.0
         ]
       ],
       "syncedAt": "2026-03-12T13:30:00.000Z",
@@ -756,7 +756,7 @@
         ],
         [
           638.0,
-          1411.0
+          3205.0
         ]
       ],
       "syncedAt": "2026-03-12T13:30:00.000Z",
@@ -805,7 +805,7 @@
         ],
         [
           638.0,
-          1315.0
+          3109.0
         ]
       ],
       "syncedAt": "2026-03-12T13:30:00.000Z",
@@ -854,7 +854,7 @@
         ],
         [
           638.0,
-          1219.0
+          3013.0
         ]
       ],
       "syncedAt": "2026-03-12T13:30:00.000Z",
@@ -903,7 +903,154 @@
         ],
         [
           638.0,
-          1123.0
+          2917.0
+        ]
+      ],
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "card-pre_catalyst_alerts",
+      "type": "rectangle",
+      "x": 42.0,
+      "y": 1886.0,
+      "width": 430.0,
+      "height": 96.0,
+      "backgroundColor": "#d0ebff",
+      "strokeColor": "#1c7ed6",
+      "strokeStyle": "solid",
+      "label": {
+        "text": "Pre-Catalyst Earnings Alerts\n09:08 HKT, 21:03 HKT\nT-4 to T-10 earnings entry window and Fed\ntone shift checks"
+      },
+      "roundness": {
+        "type": 3
+      },
+      "fillStyle": "solid",
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "arrow-pre_catalyst_alerts",
+      "type": "arrow",
+      "x": 472.0,
+      "y": 1934.0,
+      "strokeColor": "#495057",
+      "strokeStyle": "solid",
+      "label": {
+        "text": ""
+      },
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          638.0,
+          2812.0
+        ]
+      ],
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "card-pre_catalyst_alert",
+      "type": "rectangle",
+      "x": 42.0,
+      "y": 2000.0,
+      "width": 430.0,
+      "height": 78.0,
+      "backgroundColor": "#d0ebff",
+      "strokeColor": "#1c7ed6",
+      "strokeStyle": "solid",
+      "label": {
+        "text": "Pre-Catalyst Alert\n18:29 HKT\nSingle pre-catalyst earnings alert wrapper"
+      },
+      "roundness": {
+        "type": 3
+      },
+      "fillStyle": "solid",
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "arrow-pre_catalyst_alert",
+      "type": "arrow",
+      "x": 472.0,
+      "y": 2039.0,
+      "strokeColor": "#495057",
+      "strokeStyle": "solid",
+      "label": {
+        "text": ""
+      },
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          638.0,
+          2707.0
+        ]
+      ],
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "card-earnings_signal_1800",
+      "type": "rectangle",
+      "x": 42.0,
+      "y": 2096.0,
+      "width": 430.0,
+      "height": 96.0,
+      "backgroundColor": "#d0ebff",
+      "strokeColor": "#1c7ed6",
+      "strokeStyle": "solid",
+      "label": {
+        "text": "Pre-Earnings Composite Signal\n18:00 HKT\nPre-earnings PCR, analyst, sentiment, and\nmomentum composite"
+      },
+      "roundness": {
+        "type": 3
+      },
+      "fillStyle": "solid",
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "arrow-earnings_signal_1800",
+      "type": "arrow",
+      "x": 472.0,
+      "y": 2144.0,
+      "strokeColor": "#495057",
+      "strokeStyle": "solid",
+      "label": {
+        "text": ""
+      },
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          638.0,
+          2602.0
         ]
       ],
       "syncedAt": "2026-03-12T13:30:00.000Z",
@@ -913,7 +1060,7 @@
       "id": "card-southbound_1230",
       "type": "rectangle",
       "x": 42.0,
-      "y": 1886.0,
+      "y": 2210.0,
       "width": 430.0,
       "height": 96.0,
       "backgroundColor": "#d0ebff",
@@ -936,7 +1083,7 @@
       "id": "arrow-southbound_1230",
       "type": "arrow",
       "x": 472.0,
-      "y": 1934.0,
+      "y": 2258.0,
       "strokeColor": "#495057",
       "strokeStyle": "solid",
       "label": {
@@ -952,7 +1099,7 @@
         ],
         [
           638.0,
-          1018.0
+          2488.0
         ]
       ],
       "syncedAt": "2026-03-12T13:30:00.000Z",
@@ -962,7 +1109,7 @@
       "id": "card-southbound",
       "type": "rectangle",
       "x": 42.0,
-      "y": 2000.0,
+      "y": 2324.0,
       "width": 430.0,
       "height": 78.0,
       "backgroundColor": "#d0ebff",
@@ -985,7 +1132,7 @@
       "id": "arrow-southbound",
       "type": "arrow",
       "x": 472.0,
-      "y": 2039.0,
+      "y": 2363.0,
       "strokeColor": "#495057",
       "strokeStyle": "solid",
       "label": {
@@ -1001,7 +1148,7 @@
         ],
         [
           638.0,
-          913.0
+          2383.0
         ]
       ],
       "syncedAt": "2026-03-12T13:30:00.000Z",
@@ -1011,14 +1158,14 @@
       "id": "card-jarvis_excel_sync_am",
       "type": "rectangle",
       "x": 42.0,
-      "y": 2096.0,
+      "y": 2420.0,
       "width": 430.0,
       "height": 78.0,
       "backgroundColor": "#d0ebff",
       "strokeColor": "#1c7ed6",
       "strokeStyle": "solid",
       "label": {
-        "text": "Jarvis Excel Sync AM\n10:30 HKT\nExcel sync workflow"
+        "text": "Jarvis Excel Sync AM\n12:10 HKT, 10:30 HKT\nExcel sync workflow"
       },
       "roundness": {
         "type": 3
@@ -1034,7 +1181,7 @@
       "id": "arrow-jarvis_excel_sync_am",
       "type": "arrow",
       "x": 472.0,
-      "y": 2135.0,
+      "y": 2459.0,
       "strokeColor": "#495057",
       "strokeStyle": "solid",
       "label": {
@@ -1050,56 +1197,7 @@
         ],
         [
           638.0,
-          817.0
-        ]
-      ],
-      "syncedAt": "2026-03-12T13:30:00.000Z",
-      "source": "codex"
-    },
-    {
-      "id": "card-jarvis_excel_sync_pm",
-      "type": "rectangle",
-      "x": 42.0,
-      "y": 2192.0,
-      "width": 430.0,
-      "height": 78.0,
-      "backgroundColor": "#d0ebff",
-      "strokeColor": "#1c7ed6",
-      "strokeStyle": "solid",
-      "label": {
-        "text": "Jarvis Excel Sync PM\n21:00 HKT\nExcel sync workflow"
-      },
-      "roundness": {
-        "type": 3
-      },
-      "fillStyle": "solid",
-      "createdAt": "2026-03-12T13:30:00.000Z",
-      "updatedAt": "2026-03-12T13:30:00.000Z",
-      "version": 1,
-      "syncedAt": "2026-03-12T13:30:00.000Z",
-      "source": "codex"
-    },
-    {
-      "id": "arrow-jarvis_excel_sync_pm",
-      "type": "arrow",
-      "x": 472.0,
-      "y": 2231.0,
-      "strokeColor": "#495057",
-      "strokeStyle": "solid",
-      "label": {
-        "text": ""
-      },
-      "createdAt": "2026-03-12T13:30:00.000Z",
-      "updatedAt": "2026-03-12T13:30:00.000Z",
-      "version": 1,
-      "points": [
-        [
-          0,
-          0
-        ],
-        [
-          638.0,
-          721.0
+          2287.0
         ]
       ],
       "syncedAt": "2026-03-12T13:30:00.000Z",
@@ -1109,7 +1207,7 @@
       "id": "card-jarvis_excel_sync_late",
       "type": "rectangle",
       "x": 42.0,
-      "y": 2288.0,
+      "y": 2516.0,
       "width": 430.0,
       "height": 78.0,
       "backgroundColor": "#d0ebff",
@@ -1132,7 +1230,7 @@
       "id": "arrow-jarvis_excel_sync_late",
       "type": "arrow",
       "x": 472.0,
-      "y": 2327.0,
+      "y": 2555.0,
       "strokeColor": "#495057",
       "strokeStyle": "solid",
       "label": {
@@ -1148,7 +1246,7 @@
         ],
         [
           638.0,
-          625.0
+          2191.0
         ]
       ],
       "syncedAt": "2026-03-12T13:30:00.000Z",
@@ -1158,7 +1256,7 @@
       "id": "card-futu_signals",
       "type": "rectangle",
       "x": 42.0,
-      "y": 2384.0,
+      "y": 2612.0,
       "width": 430.0,
       "height": 96.0,
       "backgroundColor": "#d0ebff",
@@ -1181,7 +1279,7 @@
       "id": "arrow-futu_signals",
       "type": "arrow",
       "x": 472.0,
-      "y": 2432.0,
+      "y": 2660.0,
       "strokeColor": "#495057",
       "strokeStyle": "solid",
       "label": {
@@ -1197,7 +1295,7 @@
         ],
         [
           638.0,
-          520.0
+          2086.0
         ]
       ],
       "syncedAt": "2026-03-12T13:30:00.000Z",
@@ -1207,7 +1305,7 @@
       "id": "card-gdrive_breadth_regime_2045",
       "type": "rectangle",
       "x": 42.0,
-      "y": 2498.0,
+      "y": 2726.0,
       "width": 430.0,
       "height": 96.0,
       "backgroundColor": "#d0ebff",
@@ -1230,7 +1328,7 @@
       "id": "arrow-gdrive_breadth_regime_2045",
       "type": "arrow",
       "x": 472.0,
-      "y": 2546.0,
+      "y": 2774.0,
       "strokeColor": "#495057",
       "strokeStyle": "solid",
       "label": {
@@ -1246,7 +1344,7 @@
         ],
         [
           638.0,
-          406.0
+          1972.0
         ]
       ],
       "syncedAt": "2026-03-12T13:30:00.000Z",
@@ -1256,7 +1354,7 @@
       "id": "card-georisk",
       "type": "rectangle",
       "x": 42.0,
-      "y": 2612.0,
+      "y": 2840.0,
       "width": 430.0,
       "height": 78.0,
       "backgroundColor": "#d0ebff",
@@ -1279,7 +1377,7 @@
       "id": "arrow-georisk",
       "type": "arrow",
       "x": 472.0,
-      "y": 2651.0,
+      "y": 2879.0,
       "strokeColor": "#495057",
       "strokeStyle": "solid",
       "label": {
@@ -1295,7 +1393,7 @@
         ],
         [
           638.0,
-          301.0
+          1867.0
         ]
       ],
       "syncedAt": "2026-03-12T13:30:00.000Z",
@@ -1305,7 +1403,7 @@
       "id": "card-jarvis_cbbc_tracker_am",
       "type": "rectangle",
       "x": 42.0,
-      "y": 2708.0,
+      "y": 2936.0,
       "width": 430.0,
       "height": 78.0,
       "backgroundColor": "#d0ebff",
@@ -1328,7 +1426,7 @@
       "id": "arrow-jarvis_cbbc_tracker_am",
       "type": "arrow",
       "x": 472.0,
-      "y": 2747.0,
+      "y": 2975.0,
       "strokeColor": "#495057",
       "strokeStyle": "solid",
       "label": {
@@ -1344,7 +1442,7 @@
         ],
         [
           638.0,
-          205.0
+          1771.0
         ]
       ],
       "syncedAt": "2026-03-12T13:30:00.000Z",
@@ -1354,7 +1452,7 @@
       "id": "card-friday_options",
       "type": "rectangle",
       "x": 42.0,
-      "y": 2804.0,
+      "y": 3032.0,
       "width": 430.0,
       "height": 96.0,
       "backgroundColor": "#d0ebff",
@@ -1377,7 +1475,7 @@
       "id": "arrow-friday_options",
       "type": "arrow",
       "x": 472.0,
-      "y": 2852.0,
+      "y": 3080.0,
       "strokeColor": "#495057",
       "strokeStyle": "solid",
       "label": {
@@ -1393,7 +1491,7 @@
         ],
         [
           638.0,
-          100.0
+          1666.0
         ]
       ],
       "syncedAt": "2026-03-12T13:30:00.000Z",
@@ -1403,7 +1501,7 @@
       "id": "card-friday_volume",
       "type": "rectangle",
       "x": 42.0,
-      "y": 2918.0,
+      "y": 3146.0,
       "width": 430.0,
       "height": 96.0,
       "backgroundColor": "#d0ebff",
@@ -1426,7 +1524,7 @@
       "id": "arrow-friday_volume",
       "type": "arrow",
       "x": 472.0,
-      "y": 2966.0,
+      "y": 3194.0,
       "strokeColor": "#495057",
       "strokeStyle": "solid",
       "label": {
@@ -1442,7 +1540,7 @@
         ],
         [
           638.0,
-          -14.0
+          1552.0
         ]
       ],
       "syncedAt": "2026-03-12T13:30:00.000Z",
@@ -1452,7 +1550,7 @@
       "id": "card-usdata",
       "type": "rectangle",
       "x": 42.0,
-      "y": 3032.0,
+      "y": 3260.0,
       "width": 430.0,
       "height": 78.0,
       "backgroundColor": "#d0ebff",
@@ -1475,7 +1573,7 @@
       "id": "arrow-usdata",
       "type": "arrow",
       "x": 472.0,
-      "y": 3071.0,
+      "y": 3299.0,
       "strokeColor": "#495057",
       "strokeStyle": "solid",
       "label": {
@@ -1491,7 +1589,7 @@
         ],
         [
           638.0,
-          -119.0
+          1447.0
         ]
       ],
       "syncedAt": "2026-03-12T13:30:00.000Z",
@@ -1501,7 +1599,7 @@
       "id": "card-jarvis_full",
       "type": "rectangle",
       "x": 42.0,
-      "y": 3128.0,
+      "y": 3356.0,
       "width": 430.0,
       "height": 78.0,
       "backgroundColor": "#d0ebff",
@@ -1524,7 +1622,7 @@
       "id": "arrow-jarvis_full",
       "type": "arrow",
       "x": 472.0,
-      "y": 3167.0,
+      "y": 3395.0,
       "strokeColor": "#495057",
       "strokeStyle": "solid",
       "label": {
@@ -1540,7 +1638,7 @@
         ],
         [
           638.0,
-          -215.0
+          1351.0
         ]
       ],
       "syncedAt": "2026-03-12T13:30:00.000Z",
@@ -1550,7 +1648,7 @@
       "id": "card-jarvis_light_0950",
       "type": "rectangle",
       "x": 42.0,
-      "y": 3224.0,
+      "y": 3452.0,
       "width": 430.0,
       "height": 78.0,
       "backgroundColor": "#d0ebff",
@@ -1573,7 +1671,7 @@
       "id": "arrow-jarvis_light_0950",
       "type": "arrow",
       "x": 472.0,
-      "y": 3263.0,
+      "y": 3491.0,
       "strokeColor": "#495057",
       "strokeStyle": "solid",
       "label": {
@@ -1589,7 +1687,7 @@
         ],
         [
           638.0,
-          -311.0
+          1255.0
         ]
       ],
       "syncedAt": "2026-03-12T13:30:00.000Z",
@@ -1599,7 +1697,7 @@
       "id": "card-jarvis_light_2100",
       "type": "rectangle",
       "x": 42.0,
-      "y": 3320.0,
+      "y": 3548.0,
       "width": 430.0,
       "height": 78.0,
       "backgroundColor": "#d0ebff",
@@ -1622,7 +1720,7 @@
       "id": "arrow-jarvis_light_2100",
       "type": "arrow",
       "x": 472.0,
-      "y": 3359.0,
+      "y": 3587.0,
       "strokeColor": "#495057",
       "strokeStyle": "solid",
       "label": {
@@ -1638,7 +1736,7 @@
         ],
         [
           638.0,
-          -407.0
+          1159.0
         ]
       ],
       "syncedAt": "2026-03-12T13:30:00.000Z",
@@ -1648,7 +1746,7 @@
       "id": "card-jarvis_light_2230",
       "type": "rectangle",
       "x": 42.0,
-      "y": 3416.0,
+      "y": 3644.0,
       "width": 430.0,
       "height": 78.0,
       "backgroundColor": "#d0ebff",
@@ -1671,7 +1769,7 @@
       "id": "arrow-jarvis_light_2230",
       "type": "arrow",
       "x": 472.0,
-      "y": 3455.0,
+      "y": 3683.0,
       "strokeColor": "#495057",
       "strokeStyle": "solid",
       "label": {
@@ -1687,7 +1785,7 @@
         ],
         [
           638.0,
-          -503.0
+          1063.0
         ]
       ],
       "syncedAt": "2026-03-12T13:30:00.000Z",
@@ -1697,7 +1795,7 @@
       "id": "card-story_1030",
       "type": "rectangle",
       "x": 42.0,
-      "y": 3512.0,
+      "y": 3740.0,
       "width": 430.0,
       "height": 96.0,
       "backgroundColor": "#d0ebff",
@@ -1720,7 +1818,7 @@
       "id": "arrow-story_1030",
       "type": "arrow",
       "x": 472.0,
-      "y": 3560.0,
+      "y": 3788.0,
       "strokeColor": "#495057",
       "strokeStyle": "solid",
       "label": {
@@ -1736,7 +1834,252 @@
         ],
         [
           638.0,
-          -608.0
+          958.0
+        ]
+      ],
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "card-sentiment_scan_0133",
+      "type": "rectangle",
+      "x": 42.0,
+      "y": 3854.0,
+      "width": 430.0,
+      "height": 78.0,
+      "backgroundColor": "#d0ebff",
+      "strokeColor": "#1c7ed6",
+      "strokeStyle": "solid",
+      "label": {
+        "text": "Sentiment Scan (01:33)\n01:33 HKT\nFutu/OpenD watchlist sentiment scan"
+      },
+      "roundness": {
+        "type": 3
+      },
+      "fillStyle": "solid",
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "arrow-sentiment_scan_0133",
+      "type": "arrow",
+      "x": 472.0,
+      "y": 3893.0,
+      "strokeColor": "#495057",
+      "strokeStyle": "solid",
+      "label": {
+        "text": ""
+      },
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          638.0,
+          853.0
+        ]
+      ],
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "card-sentiment_scan_1000",
+      "type": "rectangle",
+      "x": 42.0,
+      "y": 3950.0,
+      "width": 430.0,
+      "height": 78.0,
+      "backgroundColor": "#d0ebff",
+      "strokeColor": "#1c7ed6",
+      "strokeStyle": "solid",
+      "label": {
+        "text": "Sentiment Scan (10:00)\n10:00 HKT\nFutu/OpenD watchlist sentiment scan"
+      },
+      "roundness": {
+        "type": 3
+      },
+      "fillStyle": "solid",
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "arrow-sentiment_scan_1000",
+      "type": "arrow",
+      "x": 472.0,
+      "y": 3989.0,
+      "strokeColor": "#495057",
+      "strokeStyle": "solid",
+      "label": {
+        "text": ""
+      },
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          638.0,
+          757.0
+        ]
+      ],
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "card-sentiment_scan_1146",
+      "type": "rectangle",
+      "x": 42.0,
+      "y": 4046.0,
+      "width": 430.0,
+      "height": 78.0,
+      "backgroundColor": "#d0ebff",
+      "strokeColor": "#1c7ed6",
+      "strokeStyle": "solid",
+      "label": {
+        "text": "Sentiment Scan (11:46)\n11:46 HKT\nFutu/OpenD watchlist sentiment scan"
+      },
+      "roundness": {
+        "type": 3
+      },
+      "fillStyle": "solid",
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "arrow-sentiment_scan_1146",
+      "type": "arrow",
+      "x": 472.0,
+      "y": 4085.0,
+      "strokeColor": "#495057",
+      "strokeStyle": "solid",
+      "label": {
+        "text": ""
+      },
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          638.0,
+          661.0
+        ]
+      ],
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "card-sentiment_scan_1515",
+      "type": "rectangle",
+      "x": 42.0,
+      "y": 4142.0,
+      "width": 430.0,
+      "height": 78.0,
+      "backgroundColor": "#d0ebff",
+      "strokeColor": "#1c7ed6",
+      "strokeStyle": "solid",
+      "label": {
+        "text": "Sentiment Scan (15:15)\n15:15 HKT\nFutu/OpenD watchlist sentiment scan"
+      },
+      "roundness": {
+        "type": 3
+      },
+      "fillStyle": "solid",
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "arrow-sentiment_scan_1515",
+      "type": "arrow",
+      "x": 472.0,
+      "y": 4181.0,
+      "strokeColor": "#495057",
+      "strokeStyle": "solid",
+      "label": {
+        "text": ""
+      },
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          638.0,
+          565.0
+        ]
+      ],
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "card-sentiment_scan_2310",
+      "type": "rectangle",
+      "x": 42.0,
+      "y": 4238.0,
+      "width": 430.0,
+      "height": 78.0,
+      "backgroundColor": "#d0ebff",
+      "strokeColor": "#1c7ed6",
+      "strokeStyle": "solid",
+      "label": {
+        "text": "Sentiment Scan (23:10)\n23:10 HKT\nFutu/OpenD watchlist sentiment scan"
+      },
+      "roundness": {
+        "type": 3
+      },
+      "fillStyle": "solid",
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "arrow-sentiment_scan_2310",
+      "type": "arrow",
+      "x": 472.0,
+      "y": 4277.0,
+      "strokeColor": "#495057",
+      "strokeStyle": "solid",
+      "label": {
+        "text": ""
+      },
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          638.0,
+          469.0
         ]
       ],
       "syncedAt": "2026-03-12T13:30:00.000Z",
@@ -1746,7 +2089,7 @@
       "id": "card-newsletter",
       "type": "rectangle",
       "x": 42.0,
-      "y": 3626.0,
+      "y": 4334.0,
       "width": 430.0,
       "height": 96.0,
       "backgroundColor": "#d0ebff",
@@ -1769,7 +2112,7 @@
       "id": "arrow-newsletter",
       "type": "arrow",
       "x": 472.0,
-      "y": 3674.0,
+      "y": 4382.0,
       "strokeColor": "#495057",
       "strokeStyle": "solid",
       "label": {
@@ -1785,7 +2128,7 @@
         ],
         [
           638.0,
-          -722.0
+          364.0
         ]
       ],
       "syncedAt": "2026-03-12T13:30:00.000Z",
@@ -1795,7 +2138,7 @@
       "id": "card-fundman_telegram_ops_listener",
       "type": "rectangle",
       "x": 42.0,
-      "y": 3740.0,
+      "y": 4448.0,
       "width": 430.0,
       "height": 78.0,
       "backgroundColor": "#d0ebff",
@@ -1818,7 +2161,7 @@
       "id": "arrow-fundman_telegram_ops_listener",
       "type": "arrow",
       "x": 472.0,
-      "y": 3779.0,
+      "y": 4487.0,
       "strokeColor": "#495057",
       "strokeStyle": "solid",
       "label": {
@@ -1834,7 +2177,7 @@
         ],
         [
           638.0,
-          -827.0
+          259.0
         ]
       ],
       "syncedAt": "2026-03-12T13:30:00.000Z",
@@ -1844,14 +2187,14 @@
       "id": "card-schedule_audit",
       "type": "rectangle",
       "x": 42.0,
-      "y": 3836.0,
+      "y": 4544.0,
       "width": 430.0,
       "height": 78.0,
       "backgroundColor": "#d0ebff",
       "strokeColor": "#1c7ed6",
       "strokeStyle": "solid",
       "label": {
-        "text": "Telegram Schedule Audit\n06:15 HKT\nCross-repo Telegram schedule drift audit"
+        "text": "Telegram Schedule Audit\n06:05 HKT, 15:40 HKT, 22:35 HKT\nCross-repo Telegram schedule drift audit"
       },
       "roundness": {
         "type": 3
@@ -1867,7 +2210,7 @@
       "id": "arrow-schedule_audit",
       "type": "arrow",
       "x": 472.0,
-      "y": 3875.0,
+      "y": 4583.0,
       "strokeColor": "#495057",
       "strokeStyle": "solid",
       "label": {
@@ -1883,7 +2226,7 @@
         ],
         [
           638.0,
-          -923.0
+          163.0
         ]
       ],
       "syncedAt": "2026-03-12T13:30:00.000Z",
@@ -1893,7 +2236,7 @@
       "id": "card-options_earnings_2100",
       "type": "rectangle",
       "x": 42.0,
-      "y": 3932.0,
+      "y": 4640.0,
       "width": 430.0,
       "height": 96.0,
       "backgroundColor": "#d0ebff",
@@ -1916,7 +2259,7 @@
       "id": "arrow-options_earnings_2100",
       "type": "arrow",
       "x": 472.0,
-      "y": 3980.0,
+      "y": 4688.0,
       "strokeColor": "#495057",
       "strokeStyle": "solid",
       "label": {
@@ -1932,7 +2275,7 @@
         ],
         [
           638.0,
-          -1028.0
+          58.0
         ]
       ],
       "syncedAt": "2026-03-12T13:30:00.000Z",
@@ -1942,7 +2285,7 @@
       "id": "card-options_earnings_2330",
       "type": "rectangle",
       "x": 42.0,
-      "y": 4046.0,
+      "y": 4754.0,
       "width": 430.0,
       "height": 96.0,
       "backgroundColor": "#d0ebff",
@@ -1965,7 +2308,7 @@
       "id": "arrow-options_earnings_2330",
       "type": "arrow",
       "x": 472.0,
-      "y": 4094.0,
+      "y": 4802.0,
       "strokeColor": "#495057",
       "strokeStyle": "solid",
       "label": {
@@ -1981,24 +2324,24 @@
         ],
         [
           638.0,
-          -1142.0
+          -56.0
         ]
       ],
       "syncedAt": "2026-03-12T13:30:00.000Z",
       "source": "codex"
     },
     {
-      "id": "card-jarvis_cot_refresh",
+      "id": "card-jarvis_infohub_crawl_0115",
       "type": "rectangle",
       "x": 42.0,
-      "y": 4160.0,
+      "y": 4868.0,
       "width": 430.0,
       "height": 78.0,
       "backgroundColor": "#d0ebff",
       "strokeColor": "#1c7ed6",
       "strokeStyle": "solid",
       "label": {
-        "text": "JARVIS-COT-refresh\n08:00 HKT\nrun_cot_refresh.bat"
+        "text": "Jarvis InfoHub Crawl 0115\n01:15 HKT\nrun_infohub_crawl_scheduled.ps1"
       },
       "roundness": {
         "type": 3
@@ -2011,10 +2354,10 @@
       "source": "codex"
     },
     {
-      "id": "arrow-jarvis_cot_refresh",
+      "id": "arrow-jarvis_infohub_crawl_0115",
       "type": "arrow",
       "x": 472.0,
-      "y": 4199.0,
+      "y": 4907.0,
       "strokeColor": "#495057",
       "strokeStyle": "solid",
       "label": {
@@ -2030,7 +2373,644 @@
         ],
         [
           638.0,
-          -1247.0
+          -161.0
+        ]
+      ],
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "card-jarvis_sector_universe_expand",
+      "type": "rectangle",
+      "x": 42.0,
+      "y": 4964.0,
+      "width": 430.0,
+      "height": 78.0,
+      "backgroundColor": "#d0ebff",
+      "strokeColor": "#1c7ed6",
+      "strokeStyle": "solid",
+      "label": {
+        "text": "Jarvis Sector Universe Expand\n08:00 HKT\nexpand_sector_universe.py --daily"
+      },
+      "roundness": {
+        "type": 3
+      },
+      "fillStyle": "solid",
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "arrow-jarvis_sector_universe_expand",
+      "type": "arrow",
+      "x": 472.0,
+      "y": 5003.0,
+      "strokeColor": "#495057",
+      "strokeStyle": "solid",
+      "label": {
+        "text": ""
+      },
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          638.0,
+          -257.0
+        ]
+      ],
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "card-jarvis_infohub_0830",
+      "type": "rectangle",
+      "x": 42.0,
+      "y": 5060.0,
+      "width": 430.0,
+      "height": 78.0,
+      "backgroundColor": "#d0ebff",
+      "strokeColor": "#1c7ed6",
+      "strokeStyle": "solid",
+      "label": {
+        "text": "Jarvis-InfoHub-0830\n08:30 HKT\nrun_infohub_bridge.bat"
+      },
+      "roundness": {
+        "type": 3
+      },
+      "fillStyle": "solid",
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "arrow-jarvis_infohub_0830",
+      "type": "arrow",
+      "x": 472.0,
+      "y": 5099.0,
+      "strokeColor": "#495057",
+      "strokeStyle": "solid",
+      "label": {
+        "text": ""
+      },
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          638.0,
+          -353.0
+        ]
+      ],
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "card-jarvis_shadow_sleeve_monday",
+      "type": "rectangle",
+      "x": 42.0,
+      "y": 5156.0,
+      "width": 430.0,
+      "height": 78.0,
+      "backgroundColor": "#d0ebff",
+      "strokeColor": "#1c7ed6",
+      "strokeStyle": "solid",
+      "label": {
+        "text": "Jarvis Shadow Sleeve Monday\n09:00 HKT\nrun_shadow_sleeve_check.bat"
+      },
+      "roundness": {
+        "type": 3
+      },
+      "fillStyle": "solid",
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "arrow-jarvis_shadow_sleeve_monday",
+      "type": "arrow",
+      "x": 472.0,
+      "y": 5195.0,
+      "strokeColor": "#495057",
+      "strokeStyle": "solid",
+      "label": {
+        "text": ""
+      },
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          638.0,
+          -449.0
+        ]
+      ],
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "card-jarvis_shadow_sleeve_wednesday",
+      "type": "rectangle",
+      "x": 42.0,
+      "y": 5252.0,
+      "width": 430.0,
+      "height": 78.0,
+      "backgroundColor": "#d0ebff",
+      "strokeColor": "#1c7ed6",
+      "strokeStyle": "solid",
+      "label": {
+        "text": "Jarvis Shadow Sleeve Wednesday\n09:00 HKT\nrun_shadow_sleeve_check.bat"
+      },
+      "roundness": {
+        "type": 3
+      },
+      "fillStyle": "solid",
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "arrow-jarvis_shadow_sleeve_wednesday",
+      "type": "arrow",
+      "x": 472.0,
+      "y": 5291.0,
+      "strokeColor": "#495057",
+      "strokeStyle": "solid",
+      "label": {
+        "text": ""
+      },
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          638.0,
+          -545.0
+        ]
+      ],
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "card-jarvis_sector_momentum_0905",
+      "type": "rectangle",
+      "x": 42.0,
+      "y": 5348.0,
+      "width": 430.0,
+      "height": 78.0,
+      "backgroundColor": "#d0ebff",
+      "strokeColor": "#1c7ed6",
+      "strokeStyle": "solid",
+      "label": {
+        "text": "Jarvis Sector Momentum 0905\n09:05 HKT\nsend_sector_momentum.py"
+      },
+      "roundness": {
+        "type": 3
+      },
+      "fillStyle": "solid",
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "arrow-jarvis_sector_momentum_0905",
+      "type": "arrow",
+      "x": 472.0,
+      "y": 5387.0,
+      "strokeColor": "#495057",
+      "strokeStyle": "solid",
+      "label": {
+        "text": ""
+      },
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          638.0,
+          -641.0
+        ]
+      ],
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "card-jarvis_sector_stock_momentum_0915",
+      "type": "rectangle",
+      "x": 42.0,
+      "y": 5444.0,
+      "width": 430.0,
+      "height": 78.0,
+      "backgroundColor": "#d0ebff",
+      "strokeColor": "#1c7ed6",
+      "strokeStyle": "solid",
+      "label": {
+        "text": "Jarvis Sector Stock Momentum 0915\n09:15 HKT\nsend_sector_stock_momentum.py"
+      },
+      "roundness": {
+        "type": 3
+      },
+      "fillStyle": "solid",
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "arrow-jarvis_sector_stock_momentum_0915",
+      "type": "arrow",
+      "x": 472.0,
+      "y": 5483.0,
+      "strokeColor": "#495057",
+      "strokeStyle": "solid",
+      "label": {
+        "text": ""
+      },
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          638.0,
+          -737.0
+        ]
+      ],
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "card-jarvis_infohub_0915",
+      "type": "rectangle",
+      "x": 42.0,
+      "y": 5540.0,
+      "width": 430.0,
+      "height": 78.0,
+      "backgroundColor": "#d0ebff",
+      "strokeColor": "#1c7ed6",
+      "strokeStyle": "solid",
+      "label": {
+        "text": "Jarvis-InfoHub-0915\n09:15 HKT\nrun_infohub_bridge.bat"
+      },
+      "roundness": {
+        "type": 3
+      },
+      "fillStyle": "solid",
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "arrow-jarvis_infohub_0915",
+      "type": "arrow",
+      "x": 472.0,
+      "y": 5579.0,
+      "strokeColor": "#495057",
+      "strokeStyle": "solid",
+      "label": {
+        "text": ""
+      },
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          638.0,
+          -833.0
+        ]
+      ],
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "card-jarvis_futu_option_exercise_alert_0918",
+      "type": "rectangle",
+      "x": 42.0,
+      "y": 5636.0,
+      "width": 430.0,
+      "height": 78.0,
+      "backgroundColor": "#d0ebff",
+      "strokeColor": "#1c7ed6",
+      "strokeStyle": "solid",
+      "label": {
+        "text": "Jarvis Futu Option Exercise Alert 0918\n09:18 HKT\nrun_futu_option_exercise_alert.bat"
+      },
+      "roundness": {
+        "type": 3
+      },
+      "fillStyle": "solid",
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "arrow-jarvis_futu_option_exercise_alert_0918",
+      "type": "arrow",
+      "x": 472.0,
+      "y": 5675.0,
+      "strokeColor": "#495057",
+      "strokeStyle": "solid",
+      "label": {
+        "text": ""
+      },
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          638.0,
+          -929.0
+        ]
+      ],
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "card-jarvis_infohub_crawl_0945",
+      "type": "rectangle",
+      "x": 42.0,
+      "y": 5732.0,
+      "width": 430.0,
+      "height": 78.0,
+      "backgroundColor": "#d0ebff",
+      "strokeColor": "#1c7ed6",
+      "strokeStyle": "solid",
+      "label": {
+        "text": "Jarvis InfoHub Crawl 0945\n09:45 HKT\nrun_infohub_crawl_scheduled.ps1"
+      },
+      "roundness": {
+        "type": 3
+      },
+      "fillStyle": "solid",
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "arrow-jarvis_infohub_crawl_0945",
+      "type": "arrow",
+      "x": 472.0,
+      "y": 5771.0,
+      "strokeColor": "#495057",
+      "strokeStyle": "solid",
+      "label": {
+        "text": ""
+      },
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          638.0,
+          -1025.0
+        ]
+      ],
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "card-jarvis_infohub_1130",
+      "type": "rectangle",
+      "x": 42.0,
+      "y": 5828.0,
+      "width": 430.0,
+      "height": 78.0,
+      "backgroundColor": "#d0ebff",
+      "strokeColor": "#1c7ed6",
+      "strokeStyle": "solid",
+      "label": {
+        "text": "Jarvis-InfoHub-1130\n11:30 HKT\nrun_infohub_bridge.bat"
+      },
+      "roundness": {
+        "type": 3
+      },
+      "fillStyle": "solid",
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "arrow-jarvis_infohub_1130",
+      "type": "arrow",
+      "x": 472.0,
+      "y": 5867.0,
+      "strokeColor": "#495057",
+      "strokeStyle": "solid",
+      "label": {
+        "text": ""
+      },
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          638.0,
+          -1121.0
+        ]
+      ],
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "card-jarvis_sector_momentum_1145",
+      "type": "rectangle",
+      "x": 42.0,
+      "y": 5924.0,
+      "width": 430.0,
+      "height": 78.0,
+      "backgroundColor": "#d0ebff",
+      "strokeColor": "#1c7ed6",
+      "strokeStyle": "solid",
+      "label": {
+        "text": "Jarvis Sector Momentum 1145\n11:45 HKT\nsend_sector_momentum.py"
+      },
+      "roundness": {
+        "type": 3
+      },
+      "fillStyle": "solid",
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "arrow-jarvis_sector_momentum_1145",
+      "type": "arrow",
+      "x": 472.0,
+      "y": 5963.0,
+      "strokeColor": "#495057",
+      "strokeStyle": "solid",
+      "label": {
+        "text": ""
+      },
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          638.0,
+          -1217.0
+        ]
+      ],
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "card-jarvis_sector_stock_momentum_1155",
+      "type": "rectangle",
+      "x": 42.0,
+      "y": 6020.0,
+      "width": 430.0,
+      "height": 78.0,
+      "backgroundColor": "#d0ebff",
+      "strokeColor": "#1c7ed6",
+      "strokeStyle": "solid",
+      "label": {
+        "text": "Jarvis Sector Stock Momentum 1155\n11:55 HKT\nsend_sector_stock_momentum.py"
+      },
+      "roundness": {
+        "type": 3
+      },
+      "fillStyle": "solid",
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "arrow-jarvis_sector_stock_momentum_1155",
+      "type": "arrow",
+      "x": 472.0,
+      "y": 6059.0,
+      "strokeColor": "#495057",
+      "strokeStyle": "solid",
+      "label": {
+        "text": ""
+      },
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          638.0,
+          -1313.0
+        ]
+      ],
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "card-jarvis_daily_market_report_1230",
+      "type": "rectangle",
+      "x": 42.0,
+      "y": 6116.0,
+      "width": 430.0,
+      "height": 78.0,
+      "backgroundColor": "#d0ebff",
+      "strokeColor": "#1c7ed6",
+      "strokeStyle": "solid",
+      "label": {
+        "text": "Jarvis Daily Market Report 1230\n12:30 HKT\nrun_daily_market_report.ps1 -SendTelegram"
+      },
+      "roundness": {
+        "type": 3
+      },
+      "fillStyle": "solid",
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "arrow-jarvis_daily_market_report_1230",
+      "type": "arrow",
+      "x": 472.0,
+      "y": 6155.0,
+      "strokeColor": "#495057",
+      "strokeStyle": "solid",
+      "label": {
+        "text": ""
+      },
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          638.0,
+          -1409.0
         ]
       ],
       "syncedAt": "2026-03-12T13:30:00.000Z",
@@ -2040,7 +3020,7 @@
       "id": "card-ciovacco_weekly_feed",
       "type": "rectangle",
       "x": 42.0,
-      "y": 4256.0,
+      "y": 6212.0,
       "width": 430.0,
       "height": 78.0,
       "backgroundColor": "#d0ebff",
@@ -2063,7 +3043,7 @@
       "id": "arrow-ciovacco_weekly_feed",
       "type": "arrow",
       "x": 472.0,
-      "y": 4295.0,
+      "y": 6251.0,
       "strokeColor": "#495057",
       "strokeStyle": "solid",
       "label": {
@@ -2079,7 +3059,301 @@
         ],
         [
           638.0,
-          -1343.0
+          -1505.0
+        ]
+      ],
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "card-jarvis_infohub_crawl_1500",
+      "type": "rectangle",
+      "x": 42.0,
+      "y": 6308.0,
+      "width": 430.0,
+      "height": 78.0,
+      "backgroundColor": "#d0ebff",
+      "strokeColor": "#1c7ed6",
+      "strokeStyle": "solid",
+      "label": {
+        "text": "Jarvis InfoHub Crawl 1500\n15:00 HKT\nrun_infohub_crawl_scheduled.ps1"
+      },
+      "roundness": {
+        "type": 3
+      },
+      "fillStyle": "solid",
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "arrow-jarvis_infohub_crawl_1500",
+      "type": "arrow",
+      "x": 472.0,
+      "y": 6347.0,
+      "strokeColor": "#495057",
+      "strokeStyle": "solid",
+      "label": {
+        "text": ""
+      },
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          638.0,
+          -1601.0
+        ]
+      ],
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "card-jarvis_futu_option_exercise_alert_1518",
+      "type": "rectangle",
+      "x": 42.0,
+      "y": 6404.0,
+      "width": 430.0,
+      "height": 78.0,
+      "backgroundColor": "#d0ebff",
+      "strokeColor": "#1c7ed6",
+      "strokeStyle": "solid",
+      "label": {
+        "text": "Jarvis Futu Option Exercise Alert 1518\n15:18 HKT\nrun_futu_option_exercise_alert.bat"
+      },
+      "roundness": {
+        "type": 3
+      },
+      "fillStyle": "solid",
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "arrow-jarvis_futu_option_exercise_alert_1518",
+      "type": "arrow",
+      "x": 472.0,
+      "y": 6443.0,
+      "strokeColor": "#495057",
+      "strokeStyle": "solid",
+      "label": {
+        "text": ""
+      },
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          638.0,
+          -1697.0
+        ]
+      ],
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "card-jarvis_infohub_1520",
+      "type": "rectangle",
+      "x": 42.0,
+      "y": 6500.0,
+      "width": 430.0,
+      "height": 78.0,
+      "backgroundColor": "#d0ebff",
+      "strokeColor": "#1c7ed6",
+      "strokeStyle": "solid",
+      "label": {
+        "text": "Jarvis-InfoHub-1520\n15:20 HKT\nrun_infohub_bridge.bat"
+      },
+      "roundness": {
+        "type": 3
+      },
+      "fillStyle": "solid",
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "arrow-jarvis_infohub_1520",
+      "type": "arrow",
+      "x": 472.0,
+      "y": 6539.0,
+      "strokeColor": "#495057",
+      "strokeStyle": "solid",
+      "label": {
+        "text": ""
+      },
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          638.0,
+          -1793.0
+        ]
+      ],
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "card-jarvis_sector_momentum_1545",
+      "type": "rectangle",
+      "x": 42.0,
+      "y": 6596.0,
+      "width": 430.0,
+      "height": 78.0,
+      "backgroundColor": "#d0ebff",
+      "strokeColor": "#1c7ed6",
+      "strokeStyle": "solid",
+      "label": {
+        "text": "Jarvis Sector Momentum 1545\n15:45 HKT\nsend_sector_momentum.py"
+      },
+      "roundness": {
+        "type": 3
+      },
+      "fillStyle": "solid",
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "arrow-jarvis_sector_momentum_1545",
+      "type": "arrow",
+      "x": 472.0,
+      "y": 6635.0,
+      "strokeColor": "#495057",
+      "strokeStyle": "solid",
+      "label": {
+        "text": ""
+      },
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          638.0,
+          -1889.0
+        ]
+      ],
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "card-jarvis_sector_stock_momentum_1555",
+      "type": "rectangle",
+      "x": 42.0,
+      "y": 6692.0,
+      "width": 430.0,
+      "height": 78.0,
+      "backgroundColor": "#d0ebff",
+      "strokeColor": "#1c7ed6",
+      "strokeStyle": "solid",
+      "label": {
+        "text": "Jarvis Sector Stock Momentum 1555\n15:55 HKT\nsend_sector_stock_momentum.py"
+      },
+      "roundness": {
+        "type": 3
+      },
+      "fillStyle": "solid",
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "arrow-jarvis_sector_stock_momentum_1555",
+      "type": "arrow",
+      "x": 472.0,
+      "y": 6731.0,
+      "strokeColor": "#495057",
+      "strokeStyle": "solid",
+      "label": {
+        "text": ""
+      },
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          638.0,
+          -1985.0
+        ]
+      ],
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "card-jarvis_polymarketmonitordaily",
+      "type": "rectangle",
+      "x": 42.0,
+      "y": 6788.0,
+      "width": 430.0,
+      "height": 78.0,
+      "backgroundColor": "#d0ebff",
+      "strokeColor": "#1c7ed6",
+      "strokeStyle": "solid",
+      "label": {
+        "text": "Jarvis-PolymarketMonitorDaily\n20:00 HKT\nrun_polymarket_monitor_daily.bat"
+      },
+      "roundness": {
+        "type": 3
+      },
+      "fillStyle": "solid",
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "arrow-jarvis_polymarketmonitordaily",
+      "type": "arrow",
+      "x": 472.0,
+      "y": 6827.0,
+      "strokeColor": "#495057",
+      "strokeStyle": "solid",
+      "label": {
+        "text": ""
+      },
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          638.0,
+          -2081.0
         ]
       ],
       "syncedAt": "2026-03-12T13:30:00.000Z",
@@ -2089,7 +3363,7 @@
       "id": "card-polymarket",
       "type": "rectangle",
       "x": 42.0,
-      "y": 4352.0,
+      "y": 6884.0,
       "width": 430.0,
       "height": 78.0,
       "backgroundColor": "#d0ebff",
@@ -2112,7 +3386,7 @@
       "id": "arrow-polymarket",
       "type": "arrow",
       "x": 472.0,
-      "y": 4391.0,
+      "y": 6923.0,
       "strokeColor": "#495057",
       "strokeStyle": "solid",
       "label": {
@@ -2128,7 +3402,252 @@
         ],
         [
           638.0,
-          -1439.0
+          -2177.0
+        ]
+      ],
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "card-jarvis_infohub_2055",
+      "type": "rectangle",
+      "x": 42.0,
+      "y": 6980.0,
+      "width": 430.0,
+      "height": 78.0,
+      "backgroundColor": "#d0ebff",
+      "strokeColor": "#1c7ed6",
+      "strokeStyle": "solid",
+      "label": {
+        "text": "Jarvis-InfoHub-2055\n20:55 HKT\nrun_infohub_bridge.bat"
+      },
+      "roundness": {
+        "type": 3
+      },
+      "fillStyle": "solid",
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "arrow-jarvis_infohub_2055",
+      "type": "arrow",
+      "x": 472.0,
+      "y": 7019.0,
+      "strokeColor": "#495057",
+      "strokeStyle": "solid",
+      "label": {
+        "text": ""
+      },
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          638.0,
+          -2273.0
+        ]
+      ],
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "card-jarvis_hotipo_premarket",
+      "type": "rectangle",
+      "x": 42.0,
+      "y": 7076.0,
+      "width": 430.0,
+      "height": 78.0,
+      "backgroundColor": "#d0ebff",
+      "strokeColor": "#1c7ed6",
+      "strokeStyle": "solid",
+      "label": {
+        "text": "JARVIS-HotIPO-Premarket\n21:00 HKT\nrun_hotipo_scanner.bat premarket"
+      },
+      "roundness": {
+        "type": 3
+      },
+      "fillStyle": "solid",
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "arrow-jarvis_hotipo_premarket",
+      "type": "arrow",
+      "x": 472.0,
+      "y": 7115.0,
+      "strokeColor": "#495057",
+      "strokeStyle": "solid",
+      "label": {
+        "text": ""
+      },
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          638.0,
+          -2369.0
+        ]
+      ],
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "card-jarvis_sector_momentum_2100",
+      "type": "rectangle",
+      "x": 42.0,
+      "y": 7172.0,
+      "width": 430.0,
+      "height": 78.0,
+      "backgroundColor": "#d0ebff",
+      "strokeColor": "#1c7ed6",
+      "strokeStyle": "solid",
+      "label": {
+        "text": "Jarvis Sector Momentum 2100\n21:00 HKT\nsend_sector_momentum.py"
+      },
+      "roundness": {
+        "type": 3
+      },
+      "fillStyle": "solid",
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "arrow-jarvis_sector_momentum_2100",
+      "type": "arrow",
+      "x": 472.0,
+      "y": 7211.0,
+      "strokeColor": "#495057",
+      "strokeStyle": "solid",
+      "label": {
+        "text": ""
+      },
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          638.0,
+          -2465.0
+        ]
+      ],
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "card-jarvis_cot_refresh",
+      "type": "rectangle",
+      "x": 42.0,
+      "y": 7268.0,
+      "width": 430.0,
+      "height": 78.0,
+      "backgroundColor": "#d0ebff",
+      "strokeColor": "#1c7ed6",
+      "strokeStyle": "solid",
+      "label": {
+        "text": "JARVIS-COT-refresh\n22:00 HKT, 08:00 HKT\nrun_cot_refresh.bat"
+      },
+      "roundness": {
+        "type": 3
+      },
+      "fillStyle": "solid",
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "arrow-jarvis_cot_refresh",
+      "type": "arrow",
+      "x": 472.0,
+      "y": 7307.0,
+      "strokeColor": "#495057",
+      "strokeStyle": "solid",
+      "label": {
+        "text": ""
+      },
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          638.0,
+          -2561.0
+        ]
+      ],
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "card-jarvis_hotipo_open",
+      "type": "rectangle",
+      "x": 42.0,
+      "y": 7364.0,
+      "width": 430.0,
+      "height": 78.0,
+      "backgroundColor": "#d0ebff",
+      "strokeColor": "#1c7ed6",
+      "strokeStyle": "solid",
+      "label": {
+        "text": "JARVIS-HotIPO-Open\n22:00 HKT\nrun_hotipo_scanner.bat open"
+      },
+      "roundness": {
+        "type": 3
+      },
+      "fillStyle": "solid",
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "arrow-jarvis_hotipo_open",
+      "type": "arrow",
+      "x": 472.0,
+      "y": 7403.0,
+      "strokeColor": "#495057",
+      "strokeStyle": "solid",
+      "label": {
+        "text": ""
+      },
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          638.0,
+          -2657.0
         ]
       ],
       "syncedAt": "2026-03-12T13:30:00.000Z",
@@ -2138,7 +3657,7 @@
       "id": "card-blp_pdf_title_pipeline",
       "type": "rectangle",
       "x": 42.0,
-      "y": 4448.0,
+      "y": 7460.0,
       "width": 430.0,
       "height": 96.0,
       "backgroundColor": "#d0ebff",
@@ -2161,7 +3680,7 @@
       "id": "arrow-blp_pdf_title_pipeline",
       "type": "arrow",
       "x": 472.0,
-      "y": 4496.0,
+      "y": 7508.0,
       "strokeColor": "#495057",
       "strokeStyle": "solid",
       "label": {
@@ -2177,7 +3696,203 @@
         ],
         [
           638.0,
-          -1544.0
+          -2762.0
+        ]
+      ],
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "card-jarvis_infohub_crawl_2300",
+      "type": "rectangle",
+      "x": 42.0,
+      "y": 7574.0,
+      "width": 430.0,
+      "height": 78.0,
+      "backgroundColor": "#d0ebff",
+      "strokeColor": "#1c7ed6",
+      "strokeStyle": "solid",
+      "label": {
+        "text": "Jarvis InfoHub Crawl 2300\n23:00 HKT\nrun_infohub_crawl_scheduled.ps1"
+      },
+      "roundness": {
+        "type": 3
+      },
+      "fillStyle": "solid",
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "arrow-jarvis_infohub_crawl_2300",
+      "type": "arrow",
+      "x": 472.0,
+      "y": 7613.0,
+      "strokeColor": "#495057",
+      "strokeStyle": "solid",
+      "label": {
+        "text": ""
+      },
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          638.0,
+          -2867.0
+        ]
+      ],
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "card-jarvis_futu_option_exercise_alert_2318",
+      "type": "rectangle",
+      "x": 42.0,
+      "y": 7670.0,
+      "width": 430.0,
+      "height": 78.0,
+      "backgroundColor": "#d0ebff",
+      "strokeColor": "#1c7ed6",
+      "strokeStyle": "solid",
+      "label": {
+        "text": "Jarvis Futu Option Exercise Alert 2318\n23:18 HKT\nrun_futu_option_exercise_alert.bat"
+      },
+      "roundness": {
+        "type": 3
+      },
+      "fillStyle": "solid",
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "arrow-jarvis_futu_option_exercise_alert_2318",
+      "type": "arrow",
+      "x": 472.0,
+      "y": 7709.0,
+      "strokeColor": "#495057",
+      "strokeStyle": "solid",
+      "label": {
+        "text": ""
+      },
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          638.0,
+          -2963.0
+        ]
+      ],
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "card-fintwit_signal_monitor",
+      "type": "rectangle",
+      "x": 42.0,
+      "y": 7766.0,
+      "width": 430.0,
+      "height": 78.0,
+      "backgroundColor": "#d0ebff",
+      "strokeColor": "#1c7ed6",
+      "strokeStyle": "solid",
+      "label": {
+        "text": "FinTwit Signal Monitor\nn/a\nrun_fintwit_monitor.bat"
+      },
+      "roundness": {
+        "type": 3
+      },
+      "fillStyle": "solid",
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "arrow-fintwit_signal_monitor",
+      "type": "arrow",
+      "x": 472.0,
+      "y": 7805.0,
+      "strokeColor": "#495057",
+      "strokeStyle": "solid",
+      "label": {
+        "text": ""
+      },
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          638.0,
+          -3059.0
+        ]
+      ],
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "card-jarvis_eodhd_stream",
+      "type": "rectangle",
+      "x": 42.0,
+      "y": 7862.0,
+      "width": 430.0,
+      "height": 78.0,
+      "backgroundColor": "#d0ebff",
+      "strokeColor": "#1c7ed6",
+      "strokeStyle": "solid",
+      "label": {
+        "text": "Jarvis EODHD Stream\nn/a\nrun_eodhd_stream.bat"
+      },
+      "roundness": {
+        "type": 3
+      },
+      "fillStyle": "solid",
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "arrow-jarvis_eodhd_stream",
+      "type": "arrow",
+      "x": 472.0,
+      "y": 7901.0,
+      "strokeColor": "#495057",
+      "strokeStyle": "solid",
+      "label": {
+        "text": ""
+      },
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          638.0,
+          -3155.0
         ]
       ],
       "syncedAt": "2026-03-12T13:30:00.000Z",
@@ -2187,7 +3902,7 @@
       "id": "card-jarvis_polymarketmonitor",
       "type": "rectangle",
       "x": 42.0,
-      "y": 4562.0,
+      "y": 7958.0,
       "width": 430.0,
       "height": 78.0,
       "backgroundColor": "#d0ebff",
@@ -2210,7 +3925,7 @@
       "id": "arrow-jarvis_polymarketmonitor",
       "type": "arrow",
       "x": 472.0,
-      "y": 4601.0,
+      "y": 7997.0,
       "strokeColor": "#495057",
       "strokeStyle": "solid",
       "label": {
@@ -2226,7 +3941,7 @@
         ],
         [
           638.0,
-          -1649.0
+          -3251.0
         ]
       ],
       "syncedAt": "2026-03-12T13:30:00.000Z",
@@ -2236,7 +3951,7 @@
       "id": "card-p_model_check",
       "type": "rectangle",
       "x": 42.0,
-      "y": 4658.0,
+      "y": 8054.0,
       "width": 430.0,
       "height": 78.0,
       "backgroundColor": "#d0ebff",
@@ -2259,7 +3974,7 @@
       "id": "arrow-p_model_check",
       "type": "arrow",
       "x": 472.0,
-      "y": 4697.0,
+      "y": 8093.0,
       "strokeColor": "#495057",
       "strokeStyle": "solid",
       "label": {
@@ -2275,7 +3990,7 @@
         ],
         [
           638.0,
-          -1745.0
+          -3347.0
         ]
       ],
       "syncedAt": "2026-03-12T13:30:00.000Z",
@@ -2285,7 +4000,7 @@
       "id": "card-jarvis_portfolio_am",
       "type": "rectangle",
       "x": 42.0,
-      "y": 4754.0,
+      "y": 8150.0,
       "width": 430.0,
       "height": 78.0,
       "backgroundColor": "#d0ebff",
@@ -2308,7 +4023,7 @@
       "id": "arrow-jarvis_portfolio_am",
       "type": "arrow",
       "x": 472.0,
-      "y": 4793.0,
+      "y": 8189.0,
       "strokeColor": "#495057",
       "strokeStyle": "solid",
       "label": {
@@ -2324,7 +4039,7 @@
         ],
         [
           638.0,
-          -1841.0
+          -3443.0
         ]
       ],
       "syncedAt": "2026-03-12T13:30:00.000Z",
@@ -2334,7 +4049,7 @@
       "id": "card-jarvis_portfolio_pm",
       "type": "rectangle",
       "x": 42.0,
-      "y": 4850.0,
+      "y": 8246.0,
       "width": 430.0,
       "height": 78.0,
       "backgroundColor": "#d0ebff",
@@ -2357,7 +4072,7 @@
       "id": "arrow-jarvis_portfolio_pm",
       "type": "arrow",
       "x": 472.0,
-      "y": 4889.0,
+      "y": 8285.0,
       "strokeColor": "#495057",
       "strokeStyle": "solid",
       "label": {
@@ -2373,7 +4088,7 @@
         ],
         [
           638.0,
-          -1937.0
+          -3539.0
         ]
       ],
       "syncedAt": "2026-03-12T13:30:00.000Z",
@@ -2383,9 +4098,9 @@
       "id": "lane-repo_only",
       "type": "rectangle",
       "x": 24,
-      "y": 4964.0,
+      "y": 8360.0,
       "width": 980,
-      "height": 702.0,
+      "height": 798.0,
       "backgroundColor": "#fff9db",
       "strokeColor": "#fcc419",
       "strokeStyle": "solid",
@@ -2407,7 +4122,7 @@
       "id": "lane-title-repo_only",
       "type": "text",
       "x": 40,
-      "y": 4970.0,
+      "y": 8366.0,
       "width": 420,
       "height": 24,
       "strokeColor": "#1e1e1e",
@@ -2424,7 +4139,7 @@
       "id": "card-jarvis_light",
       "type": "rectangle",
       "x": 42.0,
-      "y": 4992.0,
+      "y": 8388.0,
       "width": 430.0,
       "height": 78.0,
       "backgroundColor": "#fff3bf",
@@ -2447,7 +4162,7 @@
       "id": "arrow-jarvis_light",
       "type": "arrow",
       "x": 472.0,
-      "y": 5031.0,
+      "y": 8427.0,
       "strokeColor": "#495057",
       "strokeStyle": "solid",
       "label": {
@@ -2463,7 +4178,56 @@
         ],
         [
           638.0,
-          -2079.0
+          -3681.0
+        ]
+      ],
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "card-excel",
+      "type": "rectangle",
+      "x": 42.0,
+      "y": 8484.0,
+      "width": 430.0,
+      "height": 78.0,
+      "backgroundColor": "#fff3bf",
+      "strokeColor": "#f08c00",
+      "strokeStyle": "solid",
+      "label": {
+        "text": "Excel Reminder\n10:00 HKT\nManual Excel and data reminder"
+      },
+      "roundness": {
+        "type": 3
+      },
+      "fillStyle": "solid",
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "arrow-excel",
+      "type": "arrow",
+      "x": 472.0,
+      "y": 8523.0,
+      "strokeColor": "#495057",
+      "strokeStyle": "solid",
+      "label": {
+        "text": ""
+      },
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          638.0,
+          -3777.0
         ]
       ],
       "syncedAt": "2026-03-12T13:30:00.000Z",
@@ -2473,7 +4237,7 @@
       "id": "card-scrape_cw",
       "type": "rectangle",
       "x": 42.0,
-      "y": 5088.0,
+      "y": 8580.0,
       "width": 430.0,
       "height": 78.0,
       "backgroundColor": "#fff3bf",
@@ -2496,7 +4260,7 @@
       "id": "arrow-scrape_cw",
       "type": "arrow",
       "x": 472.0,
-      "y": 5127.0,
+      "y": 8619.0,
       "strokeColor": "#495057",
       "strokeStyle": "solid",
       "label": {
@@ -2512,7 +4276,7 @@
         ],
         [
           638.0,
-          -2175.0
+          -3873.0
         ]
       ],
       "syncedAt": "2026-03-12T13:30:00.000Z",
@@ -2522,7 +4286,7 @@
       "id": "card-northbound",
       "type": "rectangle",
       "x": 42.0,
-      "y": 5184.0,
+      "y": 8676.0,
       "width": 430.0,
       "height": 78.0,
       "backgroundColor": "#fff3bf",
@@ -2545,7 +4309,7 @@
       "id": "arrow-northbound",
       "type": "arrow",
       "x": 472.0,
-      "y": 5223.0,
+      "y": 8715.0,
       "strokeColor": "#495057",
       "strokeStyle": "solid",
       "label": {
@@ -2561,7 +4325,7 @@
         ],
         [
           638.0,
-          -2271.0
+          -3969.0
         ]
       ],
       "syncedAt": "2026-03-12T13:30:00.000Z",
@@ -2571,7 +4335,7 @@
       "id": "card-scrape_p_model",
       "type": "rectangle",
       "x": 42.0,
-      "y": 5280.0,
+      "y": 8772.0,
       "width": 430.0,
       "height": 78.0,
       "backgroundColor": "#fff3bf",
@@ -2594,7 +4358,7 @@
       "id": "arrow-scrape_p_model",
       "type": "arrow",
       "x": 472.0,
-      "y": 5319.0,
+      "y": 8811.0,
       "strokeColor": "#495057",
       "strokeStyle": "solid",
       "label": {
@@ -2610,7 +4374,7 @@
         ],
         [
           638.0,
-          -2367.0
+          -4065.0
         ]
       ],
       "syncedAt": "2026-03-12T13:30:00.000Z",
@@ -2620,7 +4384,7 @@
       "id": "card-scrape_all",
       "type": "rectangle",
       "x": 42.0,
-      "y": 5376.0,
+      "y": 8868.0,
       "width": 430.0,
       "height": 78.0,
       "backgroundColor": "#fff3bf",
@@ -2643,7 +4407,7 @@
       "id": "arrow-scrape_all",
       "type": "arrow",
       "x": 472.0,
-      "y": 5415.0,
+      "y": 8907.0,
       "strokeColor": "#495057",
       "strokeStyle": "solid",
       "label": {
@@ -2659,7 +4423,7 @@
         ],
         [
           638.0,
-          -2463.0
+          -4161.0
         ]
       ],
       "syncedAt": "2026-03-12T13:30:00.000Z",
@@ -2669,7 +4433,7 @@
       "id": "card-scrape_pam",
       "type": "rectangle",
       "x": 42.0,
-      "y": 5472.0,
+      "y": 8964.0,
       "width": 430.0,
       "height": 78.0,
       "backgroundColor": "#fff3bf",
@@ -2692,7 +4456,7 @@
       "id": "arrow-scrape_pam",
       "type": "arrow",
       "x": 472.0,
-      "y": 5511.0,
+      "y": 9003.0,
       "strokeColor": "#495057",
       "strokeStyle": "solid",
       "label": {
@@ -2708,7 +4472,7 @@
         ],
         [
           638.0,
-          -2559.0
+          -4257.0
         ]
       ],
       "syncedAt": "2026-03-12T13:30:00.000Z",
@@ -2718,7 +4482,7 @@
       "id": "card-portfolio_digest",
       "type": "rectangle",
       "x": 42.0,
-      "y": 5568.0,
+      "y": 9060.0,
       "width": 430.0,
       "height": 78.0,
       "backgroundColor": "#fff3bf",
@@ -2741,7 +4505,7 @@
       "id": "arrow-portfolio_digest",
       "type": "arrow",
       "x": 472.0,
-      "y": 5607.0,
+      "y": 9099.0,
       "strokeColor": "#495057",
       "strokeStyle": "solid",
       "label": {
@@ -2757,7 +4521,7 @@
         ],
         [
           638.0,
-          -2655.0
+          -4353.0
         ]
       ],
       "syncedAt": "2026-03-12T13:30:00.000Z",
@@ -2767,9 +4531,9 @@
       "id": "lane-disabled",
       "type": "rectangle",
       "x": 24,
-      "y": 5682.0,
+      "y": 9174.0,
       "width": 980,
-      "height": 126.0,
+      "height": 222.0,
       "backgroundColor": "#f1f3f5",
       "strokeColor": "#adb5bd",
       "strokeStyle": "dashed",
@@ -2791,7 +4555,7 @@
       "id": "lane-title-disabled",
       "type": "text",
       "x": 40,
-      "y": 5688.0,
+      "y": 9180.0,
       "width": 420,
       "height": 24,
       "strokeColor": "#1e1e1e",
@@ -2808,7 +4572,7 @@
       "id": "card-telegram_hub_hourly",
       "type": "rectangle",
       "x": 42.0,
-      "y": 5710.0,
+      "y": 9202.0,
       "width": 430.0,
       "height": 78.0,
       "backgroundColor": "#f1f3f5",
@@ -2831,7 +4595,7 @@
       "id": "arrow-telegram_hub_hourly",
       "type": "arrow",
       "x": 472.0,
-      "y": 5749.0,
+      "y": 9241.0,
       "strokeColor": "#495057",
       "strokeStyle": "dashed",
       "label": {
@@ -2847,7 +4611,56 @@
         ],
         [
           638.0,
-          -2797.0
+          -4495.0
+        ]
+      ],
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "card-jarvis_excel_sync_pm",
+      "type": "rectangle",
+      "x": 42.0,
+      "y": 9298.0,
+      "width": 430.0,
+      "height": 78.0,
+      "backgroundColor": "#f1f3f5",
+      "strokeColor": "#868e96",
+      "strokeStyle": "dashed",
+      "label": {
+        "text": "Jarvis Excel Sync PM\n21:00 HKT\nExcel sync workflow"
+      },
+      "roundness": {
+        "type": 3
+      },
+      "fillStyle": "solid",
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "syncedAt": "2026-03-12T13:30:00.000Z",
+      "source": "codex"
+    },
+    {
+      "id": "arrow-jarvis_excel_sync_pm",
+      "type": "arrow",
+      "x": 472.0,
+      "y": 9337.0,
+      "strokeColor": "#495057",
+      "strokeStyle": "dashed",
+      "label": {
+        "text": ""
+      },
+      "createdAt": "2026-03-12T13:30:00.000Z",
+      "updatedAt": "2026-03-12T13:30:00.000Z",
+      "version": 1,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          638.0,
+          -4591.0
         ]
       ],
       "syncedAt": "2026-03-12T13:30:00.000Z",
@@ -2857,7 +4670,7 @@
       "id": "tg-box",
       "type": "rectangle",
       "x": 1110,
-      "y": 2872.0,
+      "y": 4666.0,
       "width": 280,
       "height": 160,
       "backgroundColor": "#fff4e6",
@@ -2876,5 +4689,5 @@
       "source": "codex"
     }
   ],
-  "count": 119
+  "count": 193
 }

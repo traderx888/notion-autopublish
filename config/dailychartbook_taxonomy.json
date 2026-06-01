@@ -1,0 +1,272 @@
+{
+  "importance_weights": {
+    "low": 1,
+    "medium": 2,
+    "high": 3,
+    "critical": 4
+  },
+  "families": {
+    "macro_growth": {
+      "ticker": "DCB_MACRO_GROWTH",
+      "match_keywords": [
+        "growth",
+        "labor",
+        "demand",
+        "retail sales",
+        "manufacturing",
+        "activity",
+        "recession"
+      ],
+      "bull_keywords": [
+        "growth up",
+        "demand improving",
+        "demand resilient",
+        "labor resilient",
+        "soft landing",
+        "activity improving"
+      ],
+      "bear_keywords": [
+        "growth down",
+        "demand weakening",
+        "recession risk up",
+        "labor weakening",
+        "growth scare",
+        "slowdown"
+      ]
+    },
+    "policy_rates": {
+      "ticker": "DCB_POLICY_RATES",
+      "match_keywords": [
+        "policy",
+        "fed",
+        "fed funds",
+        "funds futures",
+        "central bank",
+        "rates",
+        "yield curve",
+        "hawkish",
+        "dovish"
+      ],
+      "bull_keywords": [
+        "dovish",
+        "rate cut",
+        "easing",
+        "policy support",
+        "lower yields"
+      ],
+      "bear_keywords": [
+        "hawkish",
+        "rate hike",
+        "tightening",
+        "higher yields",
+        "policy headwind"
+      ]
+    },
+    "liquidity": {
+      "ticker": "DCB_LIQUIDITY",
+      "match_keywords": [
+        "liquidity",
+        "financial conditions",
+        "funding",
+        "credit",
+        "qt",
+        "qe",
+        "flow-driven"
+      ],
+      "bull_keywords": [
+        "liquidity improving",
+        "financial conditions easing",
+        "credit easing",
+        "qe",
+        "flow-driven"
+      ],
+      "bear_keywords": [
+        "liquidity tightening",
+        "funding stress",
+        "financial conditions tightening",
+        "credit stress",
+        "qt",
+        "drain"
+      ]
+    },
+    "risk_sentiment": {
+      "ticker": "DCB_RISK_SENTIMENT",
+      "match_keywords": [
+        "risk sentiment",
+        "risk-on",
+        "risk-off",
+        "cross-asset stress",
+        "volatility",
+        "fear",
+        "greed"
+      ],
+      "bull_keywords": [
+        "risk-on",
+        "volatility falling",
+        "sentiment improving",
+        "calm markets"
+      ],
+      "bear_keywords": [
+        "risk-off",
+        "volatility rising",
+        "stress rising",
+        "panic"
+      ]
+    },
+    "positioning": {
+      "ticker": "DCB_POSITIONING",
+      "match_keywords": [
+        "positioning",
+        "positioning setup",
+        "sell side indicator",
+        "crowding",
+        "squeeze",
+        "flows"
+      ],
+      "bull_keywords": [
+        "underowned",
+        "positioning squeeze",
+        "short squeeze",
+        "re-risking",
+        "buyback support"
+      ],
+      "bear_keywords": [
+        "crowded long",
+        "de-risking",
+        "unwind",
+        "long liquidation",
+        "overbought positioning"
+      ]
+    },
+    "breadth": {
+      "ticker": "DCB_BREADTH",
+      "match_keywords": [
+        "market internals",
+        "breadth",
+        "advance-decline",
+        "participation",
+        "new highs",
+        "200-day"
+      ],
+      "bull_keywords": [
+        "breadth improving",
+        "participation broadening",
+        "new highs expanding"
+      ],
+      "bear_keywords": [
+        "breadth weakening",
+        "participation narrowing",
+        "deterioration"
+      ]
+    },
+    "sector_rotation": {
+      "ticker": "DCB_SECTOR_ROTATION",
+      "match_keywords": [
+        "sector rotation",
+        "sector positioning",
+        "cyclical leadership",
+        "defensive leadership"
+      ],
+      "bull_keywords": [
+        "cyclical leadership",
+        "rotation into cyclicals",
+        "offense leading"
+      ],
+      "bear_keywords": [
+        "defensive leadership",
+        "rotation into defensives",
+        "cyclical lag"
+      ]
+    },
+    "special_technical": {
+      "ticker": "DCB_SPECIAL_TECHNICAL",
+      "match_keywords": [
+        "special technical",
+        "technical",
+        "drawdown",
+        "seasonality",
+        "support",
+        "resistance",
+        "intermarket cheatsheet"
+      ],
+      "bull_keywords": [
+        "breakout",
+        "oversold",
+        "support holding",
+        "uptrend"
+      ],
+      "bear_keywords": [
+        "breakdown",
+        "drawdown risk",
+        "trend deterioration",
+        "resistance failure"
+      ]
+    },
+    "valuation": {
+      "ticker": "DCB_VALUATION",
+      "match_keywords": [
+        "valuation",
+        "pe ratio",
+        "multiple",
+        "buffett indicator",
+        "equity risk premium"
+      ],
+      "bull_keywords": [
+        "cheap",
+        "undervalued",
+        "valuation support",
+        "derating complete"
+      ],
+      "bear_keywords": [
+        "expensive",
+        "overvalued",
+        "multiple compression",
+        "valuation headwind"
+      ]
+    },
+    "earnings_revisions": {
+      "ticker": "DCB_EARNINGS_REVISIONS",
+      "match_keywords": [
+        "earnings",
+        "revisions",
+        "estimate",
+        "guidance",
+        "margin"
+      ],
+      "bull_keywords": [
+        "earnings up",
+        "revisions up",
+        "guidance improving"
+      ],
+      "bear_keywords": [
+        "earnings down",
+        "revisions down",
+        "guidance cut",
+        "margin pressure"
+      ]
+    },
+    "commodity_pressure": {
+      "ticker": "DCB_COMMODITY_PRESSURE",
+      "match_keywords": [
+        "commodities",
+        "commodity",
+        "energy",
+        "oil",
+        "metals",
+        "supply shock",
+        "inflation hedge"
+      ],
+      "bull_keywords": [
+        "commodity easing",
+        "energy relief",
+        "disinflation"
+      ],
+      "bear_keywords": [
+        "energy shock",
+        "commodity spike",
+        "supply shock",
+        "inflation pressure"
+      ]
+    }
+  }
+}

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>彭博研究摘要 #65 — 利率5%攻防戰、就業韌性與中東僵局</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --accent: #58a6ff;
+          --green: #3fb950; --red: #f85149; --yellow: #d29922; --text: #c9d1d9; --muted: #8b949e;
+          --orange: #f0883e; --purple: #bc8cff; --cyan: #39d2c0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans TC', 'Microsoft JhengHei', Helvetica, Arial, sans-serif; line-height: 1.7; padding: 20px; max-width: 860px; margin: 0 auto; }
+  h1 { color: #fff; font-size: 1.7em; margin-bottom: 4px; }
+  .subtitle { color: var(--muted); font-size: 0.9em; margin-bottom: 8px; }
+  .issue-badge { display: inline-block; background: rgba(88,166,255,0.15); color: var(--accent); padding: 3px 10px; border-radius: 12px; font-size: 0.8em; font-weight: 600; margin-bottom: 20px; }
+  .tag { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 0.72em; font-weight: 600; margin-right: 4px; }
+  .tag-rates { background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-china { background: rgba(240,136,62,0.15); color: var(--orange); }
+  .tag-japan { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-geo   { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-oil   { background: rgba(210,153,34,0.15); color: var(--yellow); }
+  .tag-trade { background: rgba(210,153,34,0.15); color: var(--yellow); }
+  .tag-growth{ background: rgba(63,185,80,0.15); color: var(--green); }
+  .tag-metals{ background: rgba(188,140,255,0.15); color: var(--purple); }
+  .tag-infl  { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-policy{ background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-val   { background: rgba(63,185,80,0.15); color: var(--green); }
+  .tag-vol   { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-semi  { background: rgba(57,210,192,0.15); color: var(--cyan); }
+  .tag-credit{ background: rgba(188,140,255,0.15); color: var(--purple); }
+  .tag-space { background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-misc  { background: rgba(139,148,158,0.15); color: var(--muted); }
+  .section { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 16px; }
+  .section h2 { color: #fff; font-size: 1.15em; margin-bottom: 12px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+  .section h3 { color: var(--accent); font-size: 0.95em; margin: 14px 0 6px; }
+  .article { margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .article:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .article-title { color: #fff; font-weight: 700; font-size: 0.95em; margin-bottom: 4px; }
+  .article-title-cn { color: var(--muted); font-size: 0.85em; margin-bottom: 8px; }
+  .article p { font-size: 0.9em; margin: 6px 0; }
+  .data-point { background: rgba(255,255,255,0.03); padding: 8px 12px; border-radius: 6px; margin: 8px 0; font-size: 0.85em; }
+  .data-point .num { color: #fff; font-weight: 700; }
+  .implication { background: rgba(88,166,255,0.06); border-left: 3px solid var(--accent); padding: 10px 14px; margin: 10px 0; border-radius: 0 6px 6px 0; font-size: 0.88em; }
+  .implication .label { color: var(--accent); font-weight: 700; font-size: 0.8em; text-transform: uppercase; margin-bottom: 4px; }
+  .callout { background: rgba(210,153,34,0.08); border: 1px solid rgba(210,153,34,0.3); border-radius: 6px; padding: 16px; margin: 16px 0; }
+  .callout-title { color: var(--yellow); font-weight: 700; font-size: 0.95em; margin-bottom: 8px; }
+  .callout ul { padding-left: 18px; }
+  .callout li { margin: 4px 0; font-size: 0.88em; }
+  ul { padding-left: 18px; }
+  li { margin: 3px 0; font-size: 0.88em; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(255,255,255,0.03); padding: 12px; border-radius: 6px; text-align: center; }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: #fff; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
+  .toc { background: rgba(88,166,255,0.05); border: 1px solid rgba(88,166,255,0.2); border-radius: 8px; padding: 16px 20px; margin-bottom: 20px; }
+  .toc-title { color: var(--accent); font-weight: 700; font-size: 0.9em; margin-bottom: 8px; }
+  .toc a { color: var(--accent); text-decoration: none; font-size: 0.88em; }
+  .toc a:hover { text-decoration: underline; }
+  .toc ol { padding-left: 20px; }
+  .toc li { margin: 4px 0; }
+  .nav-links { display: flex; justify-content: space-between; margin: 20px 0; font-size: 0.85em; }
+  .nav-links a { color: var(--accent); text-decoration: none; }
+  .nav-links a:hover { text-decoration: underline; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(255,255,255,0.03); padding: 12px; border-radius: 6px; text-align: center; }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: #fff; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
+  .footer { text-align: center; color: var(--muted); font-size: 0.75em; margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--border); }
+</style>
+<script>if(window.self===window.top&&sessionStorage.getItem("student_auth")!=="1"){document.body.innerHTML="";window.location.replace("student.html");}</script>
+</head>
+<body>
+
+<h1>彭博研究摘要</h1>
+<p class="subtitle">第65期 | 利率5%攻防戰、就業韌性與中東僵局</p>
+<span class="issue-badge">2026年五月中旬更新</span>
+
+<div class="nav-links">
+  <span><a href="newsletter_64_uncategorized.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="toc">
+  <div class="toc-title">目錄</div>
+  <ol>
+    <li><a href="#us-rates-bonds">美債 30年期破5%：債市拉響警報</a></li>
+    <li><a href="#us-labor-economy">美國就業 就業穩健但失業率爬升：矛盾訊號</a></li>
+    <li><a href="#us-equities-positioning">美股倉位 六連漲新高：AI記憶體領軍，資管追漲</a></li>
+    <li><a href="#iran-geopolitics">中東地緣 不戰不和：油價100美元成新常態</a></li>
+    <li><a href="#takeaways">基金經理人重點摘要</a></li>
+  </ol>
+</div>
+
+<div class="section" id="us-rates-bonds">
+  <h2><span class="tag tag-misc">美債</span> 30年期破5%：債市拉響警報</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--red)">5.0%</div><div class="lbl">30年期美債殖利率
+逼近兩年新高</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">+100bp</div><div class="lbl">Fed降息以來
+長端利率反升幅度</div></div>
+    <div class="stat"><div class="val">4Q</div><div class="lbl">Bloomberg預測
+Fed首次降息時點</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">30年期殖利率5%：貪婪與恐懼的拔河</div>
+    <p>30年期美債殖利率本週短暫突破 <span style="color:#fff;font-weight:700">5%</span>，創2023年底以來新高。推動力來自多重因素：伊朗戰爭引發的油價衝擊推升通膨預期、美國經濟韌性超預期、財政赤字導致國債供給洪流不斷，以及市場押注Fed下一步可能是加息而非降息。TD Securities策略師Goldberg指出，5%是「觸發債券義警回歸的心理門檻」。BofA Hartnett團隊稱5%為「馬其諾防線」——若失守，「末日之門將開啟」。Wellington基金經理Khurana表示，長端對通膨與增長雙重定價，黏性極強。</p>
+    <div class="data-point">30年期殖利率：<span style="color:#fff;font-weight:700">~5%</span>（兩年新高） &nbsp;|&nbsp; Fed降息以來長端反升：<span style="color:#fff;font-weight:700">~100bp</span>（1980年代以來最大） &nbsp;|&nbsp; 市場定價Fed按兵不動：<span style="color:#fff;font-weight:700">一整年</span></div>
+    <div class="implication"><div class="label">投資啟示</div>長端殖利率若持續站穩5%以上，將壓制估值並觸發波動率跳升。<span style="color:#fff;font-weight:700">減持長久期債券</span>，轉向短端利率期貨做多（押注4Q降息）。</div>
+  </div>
+  <div class="article">
+    <div class="article-title">殖利率正在對股市發出明確警告</div>
+    <p>歐洲股市在歷史高位徘徊，但債市信號日益矛盾。Goldman Sachs合夥人Privorotsky坦言「模型已無法校準當前環境」——30年期殖利率突破、TLT出現 <span style="color:#fff;font-weight:700">-3標準差</span> 衝擊、債券波動率抬頭、房建ETF XHB相對S&amp;P走弱，傳統領先指標均發出警示。但他指出，DRAM價格飆升與AI投資對GDP的支撐可能改寫了經濟週期動態。結論並非做空股票，而是「<span style="color:#fff;font-weight:700">同時持有股票和石油</span>」——利率才是股票估值的真正速限，而非油價本身。</p>
+    <div class="data-point">TLT衝擊：<span style="color:#fff;font-weight:700">-3σ</span> &nbsp;|&nbsp; 歐央行加息定價：<span style="color:#fff;font-weight:700">3次</span>（未來一年） &nbsp;|&nbsp; 美歐經濟意外指數：<span style="color:#fff;font-weight:700">開始分化</span></div>
+    <div class="implication"><div class="label">投資啟示</div>債券波動率抬頭是股市調整的先行指標。<span style="color:#fff;font-weight:700">增配原油多頭</span>作為通膨對沖，同時對長久期資產設定止損。</div>
+  </div>
+</div>
+
+<div class="section" id="us-labor-economy">
+  <h2><span class="tag tag-misc">美國就業</span> 就業穩健但失業率爬升：矛盾訊號</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--green)">+115K</div><div class="lbl">4月非農新增
+（高於預期57K）</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">4.34%</div><div class="lbl">失業率
+（前值4.26%）</div></div>
+    <div class="stat"><div class="val">50K</div><div class="lbl">Bloomberg估算
+失業率穩態就業增速</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">4月就業超預期：貨運業引領工業復甦</div>
+    <p>4月非農新增 <span style="color:#fff;font-weight:700">115K</span>（遠超共識65K及Bloomberg預測57K），其中私營部門貢獻 <span style="color:#fff;font-weight:700">123K</span>，政府部門減少8K。最亮眼的細節來自貨運業——貿易、運輸及公用事業板塊單月增 <span style="color:#fff;font-weight:700">60K</span>，取代教育醫療成為頭號就業引擎，印證PMI和地區聯儲調查所暗示的工業復甦。但失業率同步升至 <span style="color:#fff;font-weight:700">4.34%</span>，反映「穩態就業門檻」遠高於Fed估計的5K——Bloomberg測算為 <span style="color:#fff;font-weight:700">~50K</span>。三個月移動平均僅48K，恰處臨界值。整體不改變Fed全年路線：維持利率至4Q，屆時預計降息 <span style="color:#fff;font-weight:700">50bp</span>。</p>
+    <div class="data-point">私營就業：<span style="color:#fff;font-weight:700">+123K</span> &nbsp;|&nbsp; 貨運板塊：<span style="color:#fff;font-weight:700">+60K</span>（超半數貢獻） &nbsp;|&nbsp; 三月均值：<span style="color:#fff;font-weight:700">48K</span>（臨近穩態門檻） &nbsp;|&nbsp; 出生/死亡模型貢獻：<span style="color:#fff;font-weight:700">391K</span>（非季調）</div>
+    <div class="implication"><div class="label">投資啟示</div>就業數據暫不構成Fed提前降息理由。<span style="color:#fff;font-weight:700">維持前端利率期貨多頭</span>（押注4Q降息50bp），關注失業率突破4.5%作為加速降息觸發。</div>
+  </div>
+  <div class="article">
+    <div class="article-title">2月零售反彈：消費放緩但未崩塌</div>
+    <p>2月零售銷售月增 <span style="color:#fff;font-weight:700">0.6%</span>，結束1月負增長。汽車銷售貢獻23bp，退稅效應提振消費。控制組（剔除車、油、餐飲、建材）增 <span style="color:#fff;font-weight:700">0.5%</span>，超預期。Bloomberg估算實質消費支出2月月增約 <span style="color:#fff;font-weight:700">0.2%</span>，據此推算1Q實質消費增速約 <span style="color:#fff;font-weight:700">1.2%</span>，較4Q的2.0%明顯放緩但未失速。13個零售品類中10個錄得增長，顯示底部擴散。餐飲及飲酒場所（服務消費代理）增 <span style="color:#fff;font-weight:700">0.4%</span>，扭轉前月下滑。</p>
+    <div class="data-point">控制組零售：<span style="color:#fff;font-weight:700">+0.5%</span> MoM &nbsp;|&nbsp; 1Q實質消費估算：<span style="color:#fff;font-weight:700">1.2%</span>（vs 4Q 2.0%） &nbsp;|&nbsp; 餐飲服務：<span style="color:#fff;font-weight:700">+0.4%</span></div>
+    <div class="implication"><div class="label">投資啟示</div>消費放緩但非衰退。<span style="color:#fff;font-weight:700">維持美股消費板塊中性配置</span>，等待2Q數據確認趨勢。</div>
+  </div>
+</div>
+
+<div class="section" id="us-equities-positioning">
+  <h2><span class="tag tag-misc">美股倉位</span> 六連漲新高：AI記憶體領軍，資管追漲</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--green)">+2.3%</div><div class="lbl">S&P 500週漲幅
+（連六週上漲）</div></div>
+    <div class="stat"><div class="val">6/11</div><div class="lbl">板塊淨買入數
+（公用/通訊/可選領先）</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">~10bp</div><div class="lbl">ES期貨資金利差
+週內上升（追漲信號）</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">Goldman Prime：資管投降式買入，對沖基金獲利了結</div>
+    <p>S&amp;P 500連續第六週上漲 <span style="color:#fff;font-weight:700">+2.3%</span> 再創歷史新高。Goldman Sachs Prime Brokerage報告顯示，美股四週來首次錄得淨買入，多頭建倉小幅超過空頭。<span style="color:#fff;font-weight:700">記憶體、比特幣敏感股、Agentic AI</span> 主題跑贏大市；石油、國防、電力基建主題落後。資產管理人出現「投降式追漲」——尤其在AI基建交易中，以非AI持倉作為資金來源。對沖基金則淨賣出，財報後雙向交易活躍，尤其軟體板塊爭議大。期貨端，ES合約數倉位低於2025年底，但持倉量（OI）增加疊加資金利差上升 <span style="color:#fff;font-weight:700">~10bp</span> 暗示有新多頭進場追漲。系統性策略並非OI增長主力。</p>
+    <div class="data-point">資管：<span style="color:#fff;font-weight:700">淨大額買入</span>（投降式追漲） &nbsp;|&nbsp; 對沖基金：<span style="color:#fff;font-weight:700">淨賣出</span> &nbsp;|&nbsp; 領漲主題：<span style="color:#fff;font-weight:700">Memory / Agentic AI / BTC</span> &nbsp;|&nbsp; 能源、工業：<span style="color:#fff;font-weight:700">最大淨賣出</span></div>
+    <div class="implication"><div class="label">投資啟示</div>倉位已非極度偏空，追漲動能存在但非系統性驅動。<span style="color:#fff;font-weight:700">警惕短期動量翻轉</span>，尤其若30年期殖利率持續&gt;5%。AI記憶體（Micron等）短期仍有慣性，但需設止損。</div>
+  </div>
+</div>
+
+<div class="section" id="iran-geopolitics">
+  <h2><span class="tag tag-misc">中東地緣</span> 不戰不和：油價100美元成新常態</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--orange)">~$100/bbl</div><div class="lbl">原油價格
+（停火後仍未回落）</div></div>
+    <div class="stat"><div class="val">~100萬桶/日</div><div class="lbl">伊朗石油
+「漏網」出口量</div></div>
+    <div class="stat"><div class="val">5GW</div><div class="lbl">阿布達比Stargate
+AI超算園區規模</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">非進非退、不戰不和——美伊關係新常態</div>
+    <p>川普宣布將對伊停火「無限期延長」，但既無正式協議，也無持久和平。戰爭進入以霍爾木茲海峽為中心的僵持階段：美國維持封鎖，伊朗挾持海峽作為人質。油價停火後不降反升——市場定價的是「衝突隨時可能重燃」的長期風險溢價。Bloomberg測算約 <span style="color:#fff;font-weight:700">900萬桶</span> 伊朗原油已「漏網」（日均~100萬桶），封鎖遠非密不透風。油價維持在 <span style="color:#fff;font-weight:700">~$100</span> 以下，低於4月8日停火前的$110，但遠高於常態。打破僵局的路徑：伊朗政權垮台（極低概率）或供應再度中斷推油至 <span style="color:#fff;font-weight:700">$120</span>。</p>
+    <div class="data-point">停火前油價：<span style="color:#fff;font-weight:700">$110/bbl</span> &nbsp;|&nbsp; 當前：<span style="color:#fff;font-weight:700">&lt;$100</span> &nbsp;|&nbsp; 伊朗漏網出口：<span style="color:#fff;font-weight:700">~100萬桶/日</span> &nbsp;|&nbsp; 美國第三航母打擊群：<span style="color:#fff;font-weight:700">已抵達</span></div>
+    <div class="implication"><div class="label">投資啟示</div>油價$90-100區間可能持續數月。<span style="color:#fff;font-weight:700">維持能源股超配</span>，做多布倫特原油遠期曲線backwardation。若談判破裂油價衝$120，觸發全面風險偏好逆轉。</div>
+  </div>
+  <div class="article">
+    <div class="article-title">伊朗將海灣AI數據中心列為打擊目標</div>
+    <p>伊朗正式將海灣地區AI數據中心納入報復清單，與能源和淡水設施並列。塔斯尼姆通訊社公佈了涵蓋 <span style="color:#fff;font-weight:700">AWS、Google、Microsoft、Palantir</span> 在海灣及以色列的 <span style="color:#fff;font-weight:700">29處設施</span> 清單。AWS已建議客戶將業務遷出中東。印度（孟買海底光纜延遲最低）和新加坡成為承接方。海灣AI雄心的核心——川普2025年促成的超 <span style="color:#fff;font-weight:700">$2萬億</span> 投資承諾（含阿布達比 <span style="color:#fff;font-weight:700">5GW</span> Stargate園區）——正面臨物理安全風險的根本性挑戰。AWS與Anthropic/Palantir為美軍提供Claude模型用於情報評估，使商用/軍用界線模糊化。</p>
+    <div class="data-point">伊朗公佈打擊清單：<span style="color:#fff;font-weight:700">29處美國科技設施</span> &nbsp;|&nbsp; Stargate阿布達比園區：<span style="color:#fff;font-weight:700">5GW</span> &nbsp;|&nbsp; 印度數據中心容量：<span style="color:#fff;font-weight:700">1.4GW</span>（另1.4GW在建） &nbsp;|&nbsp; 海灣投資承諾：<span style="color:#fff;font-weight:700">&gt;$2萬億</span></div>
+    <div class="implication"><div class="label">投資啟示</div>海灣雲/AI概念股面臨地緣折價風險。<span style="color:#fff;font-weight:700">增配印度數據中心相關標的</span>（如Adani/Reliance數據中心業務）。美國本土AI基建（如Vertiv、EQIX）相對受益。</div>
+  </div>
+  <div class="article">
+    <div class="article-title">美伊第二輪談判：六大關鍵分歧</div>
+    <p>美伊談判面臨六大障礙：霍爾木茲海峽控制權、核濃縮年限（美方要求全面禁止 vs 伊朗僅接受暫停5年）、制裁解除範圍、以色列角色、黎巴嫩停火、以及談判破裂後的升級路徑。川普要求協議「比2015年JCPOA更嚴格」，而伊朗革命衛隊的崛起令德黑蘭立場更加強硬。Bloomberg判斷雙方可能進入「升級—談判」的循環模式，即曠日持久的低烈度衝突。美國第三航母打擊群及海軍陸戰隊第二先遣隊已就位，若談判破裂最可能選項為空襲，但不排除打擊哈爾克島（伊朗石油出口樞紐）。</p>
+    <div class="data-point">核濃縮分歧：美方<span style="color:#fff;font-weight:700">全面禁止</span> vs 伊方<span style="color:#fff;font-weight:700">暫停5年</span> &nbsp;|&nbsp; 美軍兵力：<span style="color:#fff;font-weight:700">3個航母打擊群</span> &nbsp;|&nbsp; 霍爾木茲封鎖漏洞：<span style="color:#fff;font-weight:700">~100萬桶/日</span> &nbsp;|&nbsp; 以色列：<span style="color:#fff;font-weight:700">未參與談判</span></div>
+    <div class="implication"><div class="label">投資啟示</div>協議短期達成概率極低，油價風險溢價將持續。<span style="color:#fff;font-weight:700">買入原油看漲期權</span>作為尾部風險對沖（$120觸發情境）。</div>
+  </div>
+</div>
+
+<div class="callout" id="takeaways">
+  <div class="callout-title">基金經理人重點摘要</div>
+  <ul>
+    <li><strong>美債：</strong>30年期殖利率5%為關鍵馬其諾防線。若持續突破將觸發股市波動率跳升。<strong>減持長久期債券，做多前端利率期貨</strong>（押注4Q降息50bp）。</li>
+    <li><strong>美股：</strong>S&P六連漲新高，資管投降式追漲AI基建。但債券波動率抬頭+殖利率破5%=短期回調風險上升。<strong>AI記憶體保持多頭但設止損</strong>。</li>
+    <li><strong>就業：</strong>4月非農+115K超預期，貨運業引領工業復甦。失業率升至4.34%但未崩。Fed按兵不動至4Q。</li>
+    <li><strong>中東：</strong>美伊進入不戰不和僵局，油價$90-100成新常態。<strong>維持能源股超配</strong>，買入布倫特看漲期權對沖$120尾部風險。</li>
+    <li><strong>AI地緣：</strong>伊朗將海灣29處美國科技設施列為打擊目標，工作量遷移印度/新加坡。<strong>增配印度數據中心、美國本土AI基建</strong>（Vertiv/EQIX）。</li>
+  </ul>
+</div>
+
+<div class="nav-links">
+  <span><a href="newsletter_64_uncategorized.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="footer">
+  彭博研究摘要 | 僅供教學與討論用途 | 2026年5月17日<br>
+  資料來源：Bloomberg Intelligence, Bloomberg Economics, Bloomberg News
+</div>
+
+</body>
+</html>

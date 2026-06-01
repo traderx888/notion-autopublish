@@ -1,0 +1,48 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - heading "Review / Backtest Monitor" [level=1] [ref=e3]
+    - generic [ref=e4]: Local thesis review and quantitative backtest status · generated 2026-05-26T10:57:25+08:00
+  - main [ref=e5]:
+    - generic [ref=e6]:
+      - generic [ref=e7]:
+        - generic [ref=e8]: Backtest Rows
+        - generic [ref=e9]: "0"
+      - generic [ref=e10]:
+        - generic [ref=e11]: Hit Rate
+        - generic [ref=e12]: N/A
+      - generic [ref=e13]:
+        - generic [ref=e14]: Avg Alpha
+        - generic [ref=e15]: N/A
+      - generic [ref=e16]:
+        - generic [ref=e17]: Review Reports
+        - generic [ref=e18]: "0"
+    - generic [ref=e19]:
+      - generic [ref=e20]:
+        - generic [ref=e21]: Hit
+        - generic [ref=e22]: "0"
+      - generic [ref=e23]:
+        - generic [ref=e24]: Partial
+        - generic [ref=e25]: "0"
+      - generic [ref=e26]:
+        - generic [ref=e27]: Miss
+        - generic [ref=e28]: "0"
+      - generic [ref=e29]:
+        - generic [ref=e30]: Pending
+        - generic [ref=e31]: "0"
+    - generic [ref=e32]:
+      - generic [ref=e33]:
+        - heading "Latest Backtest Rows" [level=2] [ref=e34]
+        - generic [ref=e35]: No backtest CSVs found. Run the backtest command below to create one.
+      - generic [ref=e36]:
+        - heading "Review Reports" [level=2] [ref=e37]
+        - generic [ref=e38]:
+          - text: No review reports found. Save Codex review output as
+          - code [ref=e39]: review/review_YYYY-MM-DD.md
+          - text: .
+        - generic [ref=e40]:
+          - heading "Tracked Backtest Files" [level=2] [ref=e41]
+          - list [ref=e42]:
+            - listitem [ref=e43]: No local CSV files yet
+        - generic [ref=e44]:
+          - heading "Runbook" [level=2] [ref=e45]
+          - generic [ref=e46]: python backtest/run_backtest.py --quarter 2026Q1 --benchmark SPY --output outputs/backtest_2026Q1.csv python tools/build_review_backtest_dashboard.py

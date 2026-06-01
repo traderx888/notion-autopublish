@@ -2,8 +2,10 @@ from __future__ import annotations
 
 import argparse
 import ast
+import hashlib
 import html
 import json
+import os
 import re
 import subprocess
 import sys
@@ -24,14 +26,21 @@ DEFAULT_ROOT = Path(r"C:\Users\User\Documents\GitHub")
 DEFAULT_REPOS = ("All-in-one", "fundman-jarvis", "notion-autopublish")
 DEFAULT_OUTPUT_REL = Path("outputs") / "ops" / "telegram_schedule_audit_latest.json"
 DEFAULT_DELIVERY_STATE_REL = Path("outputs") / "ops" / "telegram_schedule_audit_delivery_state.json"
+DEFAULT_AUDIT_TELEGRAM_ROUTE = "ops_only"
+DEFAULT_AUDIT_ALERT_SCOPE = "critical_only"
+DEFAULT_AUDIT_ALERT_MODE = "delta_summary"
+DEFAULT_AUDIT_MAX_SUMMARY_ITEMS = 10
+DEFAULT_AUDIT_REPORT_BASE_URL_ENV = "TELEGRAM_AUDIT_REPORT_BASE_URL"
 FLOW_DOC_REL = Path("docs") / "telegram_schedule_audit_flow.md"
 FLOW_SVG_REL = Path("docs") / "telegram_schedule_audit_flow.svg"
 FLOW_EXCALIDRAW_REL = Path("docs") / "telegram_schedule_audit_flow.excalidraw"
 HK_TZ = ZoneInfo("Asia/Hong_Kong")
 CONTROL_FILE_REL = Path("workflow") / "cross_repo_tasks.yaml"
 DEFAULT_AUDIT_TASK_NAME = "JARVIS-Reminder-schedule-audit"
-DEFAULT_AUDIT_SCHEDULE = "Mon-Fri 06:15 HKT"
+DEFAULT_AUDIT_SCHEDULE = "Mon-Fri 06:05,15:40,22:35 HKT"
 DEFAULT_AUDIT_CATCHUP_WINDOW_HOURS = 18
+TASK_SCHEDULER_RUNNING_RESULT = 267009
+TASK_SCHEDULER_NOT_YET_RUN_RESULT = 267011
 KNOWN_SCHEDULER_FIELDS = (
     "Repeat: Until: Time:",
     "Repeat: Every:",
@@ -44,14 +53,22 @@ KNOWN_SCHEDULER_FIELDS = (
     "Comment:",
     "Status:",
     "Days:",
+    "Last Run Time:",
+    "Last Result:",
     "Months:",
 )
 WRAPPER_TASKS = {
     "run_deepvue_dashboard.bat": {
+        "task_key": "deepvue_dashboard_streamlit",
+        "schedule_text": "",
+        "telegram_related": False,
+        "command": "run_deepvue_dashboard.bat",
+    },
+    "run_deepvue_dashboard_alert.bat": {
         "task_key": "deepvue_dashboard",
         "schedule_text": "Mon-Fri 15:30 HKT",
         "telegram_related": True,
-        "command": "run_deepvue_dashboard.bat",
+        "command": "run_deepvue_dashboard_alert.bat",
     },
     "run_friday_volume.bat": {
         "task_key": "friday_volume",
@@ -97,7 +114,7 @@ WRAPPER_TASKS = {
     },
     "run_schedule_audit.bat": {
         "task_key": "schedule_audit",
-        "schedule_text": "Mon-Fri 06:15 HKT",
+        "schedule_text": "Mon-Fri 06:05,15:40,22:35 HKT",
         "telegram_related": True,
         "command": "run_schedule_audit.bat",
     },
@@ -118,6 +135,18 @@ WRAPPER_TASKS = {
         "schedule_text": "Mon-Fri 20:45 HKT",
         "telegram_related": True,
         "command": "run_gdrive_breadth_regime_snapshot.bat",
+    },
+    "run_pre_catalyst_alerts.bat": {
+        "task_key": "pre_catalyst_alerts",
+        "schedule_text": "Daily 09:08,21:03 HKT",
+        "telegram_related": True,
+        "command": "run_pre_catalyst_alerts.bat",
+    },
+    "run_pre_catalyst_alert.bat": {
+        "task_key": "pre_catalyst_alert",
+        "schedule_text": "Daily 18:29 HKT",
+        "telegram_related": True,
+        "command": "run_pre_catalyst_alert.bat",
     },
 }
 SHARED_WRAPPER_INSTANCES = (
@@ -209,35 +238,78 @@ ARGUMENT_WRAPPER_INSTANCES = (
         "command": "run_commodity_live_overlay_report.bat 2145",
     },
     {
-        "file_name": "run_cross_asset_momentum.bat",
+        "file_name": "send_cross_asset_momentum.py",
         "task_key": "cross_asset_momentum_0905",
         "schedule_text": "Mon-Fri 09:05 HKT",
         "telegram_related": True,
-        "command": "run_cross_asset_momentum.bat 0905",
+        "command": "send_cross_asset_momentum.py --slot 0905",
     },
     {
-        "file_name": "run_cross_asset_momentum.bat",
+        "file_name": "send_cross_asset_momentum.py",
         "task_key": "cross_asset_momentum_1145",
         "schedule_text": "Mon-Fri 11:45 HKT",
         "telegram_related": True,
-        "command": "run_cross_asset_momentum.bat 1145",
+        "command": "send_cross_asset_momentum.py --slot 1145",
     },
     {
-        "file_name": "run_cross_asset_momentum.bat",
+        "file_name": "send_cross_asset_momentum.py",
         "task_key": "cross_asset_momentum_1545",
         "schedule_text": "Mon-Fri 15:45 HKT",
         "telegram_related": True,
-        "command": "run_cross_asset_momentum.bat 1545",
+        "command": "send_cross_asset_momentum.py --slot 1545",
     },
     {
-        "file_name": "run_cross_asset_momentum.bat",
+        "file_name": "send_cross_asset_momentum.py",
         "task_key": "cross_asset_momentum_2100",
         "schedule_text": "Mon-Fri 21:00 HKT",
         "telegram_related": True,
-        "command": "run_cross_asset_momentum.bat 2100",
+        "command": "send_cross_asset_momentum.py --slot 2100",
+    },
+    {
+        "file_name": "send_sentiment_scan.py",
+        "task_key": "sentiment_scan_0133",
+        "schedule_text": "Daily 01:33 HKT",
+        "telegram_related": True,
+        "command": "send_sentiment_scan.py --slot 0133",
+    },
+    {
+        "file_name": "send_sentiment_scan.py",
+        "task_key": "sentiment_scan_1000",
+        "schedule_text": "Daily 10:00 HKT",
+        "telegram_related": True,
+        "command": "send_sentiment_scan.py --slot 1000",
+    },
+    {
+        "file_name": "send_sentiment_scan.py",
+        "task_key": "sentiment_scan_1146",
+        "schedule_text": "Daily 11:46 HKT",
+        "telegram_related": True,
+        "command": "send_sentiment_scan.py --slot 1146",
+    },
+    {
+        "file_name": "send_sentiment_scan.py",
+        "task_key": "sentiment_scan_1515",
+        "schedule_text": "Daily 15:15 HKT",
+        "telegram_related": True,
+        "command": "send_sentiment_scan.py --slot 1515",
+    },
+    {
+        "file_name": "send_sentiment_scan.py",
+        "task_key": "sentiment_scan_2310",
+        "schedule_text": "Daily 23:10 HKT",
+        "telegram_related": True,
+        "command": "send_sentiment_scan.py --slot 2310",
+    },
+    {
+        "file_name": "send_earnings_signal.py",
+        "task_key": "earnings_signal_1800",
+        "schedule_text": "Daily 18:00 HKT",
+        "telegram_related": True,
+        "command": "send_earnings_signal.py --slot 1800",
     },
 )
 ISSUE_ORDER = (
+    "runtime_failure",
     "missing_in_control",
     "missing_in_scheduler",
     "missing_in_repo",
@@ -246,6 +318,7 @@ ISSUE_ORDER = (
     "orphaned_wrapper",
     "info_only_schedule",
 )
+CRITICAL_ALERT_ISSUES = ("runtime_failure", "enabled_mismatch", "missing_in_scheduler")
 LANE_ORDER = ("live_scheduler", "repo_only", "disabled")
 LANE_TITLES = {
     "live_scheduler": "Live Scheduler Tasks",
@@ -300,7 +373,7 @@ CHART_METADATA = {
         "source_group": "DeepVue + screen brief",
         "source_detail": "DeepVue market overview and screen brief",
         "default_time": "15:30 HKT",
-        "runtime_entry": "run_deepvue_dashboard.bat",
+        "runtime_entry": "run_deepvue_dashboard_alert.bat",
     },
     "sector_heatmap": {
         "display_name": "Sector Heatmap",
@@ -447,28 +520,28 @@ CHART_METADATA = {
         "source_group": "Cross-asset dashboard",
         "source_detail": "One-day momentum snapshot across equity, dollar, gold, crypto, and vol proxies",
         "default_time": "09:05 HKT",
-        "runtime_entry": "run_cross_asset_momentum.bat 0905",
+        "runtime_entry": "send_cross_asset_momentum.py --slot 0905",
     },
     "cross_asset_momentum_1145": {
         "display_name": "Cross-Asset Momentum (1D)",
         "source_group": "Cross-asset dashboard",
         "source_detail": "One-day momentum snapshot across equity, dollar, gold, crypto, and vol proxies",
         "default_time": "11:45 HKT",
-        "runtime_entry": "run_cross_asset_momentum.bat 1145",
+        "runtime_entry": "send_cross_asset_momentum.py --slot 1145",
     },
     "cross_asset_momentum_1545": {
         "display_name": "Cross-Asset Momentum (1D)",
         "source_group": "Cross-asset dashboard",
         "source_detail": "One-day momentum snapshot across equity, dollar, gold, crypto, and vol proxies",
         "default_time": "15:45 HKT",
-        "runtime_entry": "run_cross_asset_momentum.bat 1545",
+        "runtime_entry": "send_cross_asset_momentum.py --slot 1545",
     },
     "cross_asset_momentum_2100": {
         "display_name": "Cross-Asset Momentum (1D)",
         "source_group": "Cross-asset dashboard",
         "source_detail": "One-day momentum snapshot across equity, dollar, gold, crypto, and vol proxies",
         "default_time": "21:00 HKT",
-        "runtime_entry": "run_cross_asset_momentum.bat 2100",
+        "runtime_entry": "send_cross_asset_momentum.py --slot 2100",
     },
     "jarvis_portfolio_am": {
         "display_name": "JARVIS Portfolio Commentary (AM)",
@@ -537,7 +610,7 @@ CHART_METADATA = {
         "display_name": "Telegram Schedule Audit",
         "source_group": "Ops support",
         "source_detail": "Cross-repo Telegram schedule drift audit",
-        "default_time": "06:15 HKT",
+        "default_time": "06:05,15:40,22:35 HKT",
         "runtime_entry": "run_schedule_audit.bat",
     },
 }
@@ -564,6 +637,62 @@ CHART_METADATA.update(
             "source_detail": "Expiring options contracts and Dash earnings reminder",
             "default_time": "23:30 HKT",
             "runtime_entry": "run_options_expiry.bat",
+        },
+        "sentiment_scan_0133": {
+            "display_name": "Sentiment Scan (01:33)",
+            "source_group": "Multi-source sentiment scanner",
+            "source_detail": "Futu/OpenD watchlist sentiment scan",
+            "default_time": "01:33 HKT",
+            "runtime_entry": "send_sentiment_scan.py",
+        },
+        "sentiment_scan_1000": {
+            "display_name": "Sentiment Scan (10:00)",
+            "source_group": "Multi-source sentiment scanner",
+            "source_detail": "Futu/OpenD watchlist sentiment scan",
+            "default_time": "10:00 HKT",
+            "runtime_entry": "send_sentiment_scan.py",
+        },
+        "sentiment_scan_1146": {
+            "display_name": "Sentiment Scan (11:46)",
+            "source_group": "Multi-source sentiment scanner",
+            "source_detail": "Futu/OpenD watchlist sentiment scan",
+            "default_time": "11:46 HKT",
+            "runtime_entry": "send_sentiment_scan.py",
+        },
+        "sentiment_scan_1515": {
+            "display_name": "Sentiment Scan (15:15)",
+            "source_group": "Multi-source sentiment scanner",
+            "source_detail": "Futu/OpenD watchlist sentiment scan",
+            "default_time": "15:15 HKT",
+            "runtime_entry": "send_sentiment_scan.py",
+        },
+        "sentiment_scan_2310": {
+            "display_name": "Sentiment Scan (23:10)",
+            "source_group": "Multi-source sentiment scanner",
+            "source_detail": "Futu/OpenD watchlist sentiment scan",
+            "default_time": "23:10 HKT",
+            "runtime_entry": "send_sentiment_scan.py",
+        },
+        "earnings_signal_1800": {
+            "display_name": "Pre-Earnings Composite Signal",
+            "source_group": "Earnings signal engine",
+            "source_detail": "Pre-earnings PCR, analyst, sentiment, and momentum composite",
+            "default_time": "18:00 HKT",
+            "runtime_entry": "send_earnings_signal.py --slot 1800",
+        },
+        "pre_catalyst_alerts": {
+            "display_name": "Pre-Catalyst Earnings Alerts",
+            "source_group": "Earnings catalyst monitor",
+            "source_detail": "T-4 to T-10 earnings entry window and Fed tone shift checks",
+            "default_time": "09:08,21:03 HKT",
+            "runtime_entry": "run_pre_catalyst_alerts.bat",
+        },
+        "pre_catalyst_alert": {
+            "display_name": "Pre-Catalyst Alert",
+            "source_group": "Earnings catalyst monitor",
+            "source_detail": "Single pre-catalyst earnings alert wrapper",
+            "default_time": "18:29 HKT",
+            "runtime_entry": "run_pre_catalyst_alert.bat",
         },
     }
 )
@@ -634,6 +763,8 @@ def build_report(*, records: Sequence[dict[str, Any]], only_issues: bool = False
             )
         )
     lines.append("")
+    lines.extend(_render_issue_section("Critical Runtime Failures", visible, lambda row: "runtime_failure" in row["issues"]))
+    lines.append("")
     lines.extend(_render_issue_section("Missing In Control", visible, lambda row: "missing_in_control" in row["issues"]))
     lines.append("")
     lines.extend(_render_issue_section("Missing In Scheduler", visible, lambda row: "missing_in_scheduler" in row["issues"]))
@@ -670,7 +801,9 @@ def build_checklist(records: Sequence[dict[str, Any]]) -> list[str]:
     for row in sorted(records, key=lambda item: item["task_key"]):
         task = html.escape(row["task_key"])
         for issue in row["issues"]:
-            if issue == "missing_in_control":
+            if issue == "runtime_failure":
+                items.append(f"Investigate scheduler runtime failure for <code>{task}</code> and inspect its task logs/exit code.")
+            elif issue == "missing_in_control":
                 items.append(
                     f"Add or update control entry for <code>{task}</code> in <code>All-in-one/workflow/cross_repo_tasks.yaml</code>."
                 )
@@ -705,6 +838,256 @@ def build_summary(records: Sequence[dict[str, Any]]) -> dict[str, Any]:
         "records_with_issues": with_issues,
         "issues_by_kind": dict(sorted(issues.items())),
     }
+
+
+def build_html_report(
+    *,
+    records: Sequence[dict[str, Any]],
+    generated_at: datetime,
+    only_issues: bool = False,
+) -> str:
+    visible = [row for row in records if row["issues"] or not only_issues]
+    summary = build_summary(visible)
+    sections = [
+        ("Critical Runtime Failures", [row for row in visible if "runtime_failure" in row["issues"]]),
+        ("Missing In Control", [row for row in visible if "missing_in_control" in row["issues"]]),
+        ("Missing In Scheduler", [row for row in visible if "missing_in_scheduler" in row["issues"]]),
+        (
+            "Missing In Repo",
+            [row for row in visible if "missing_in_repo" in row["issues"] or "orphaned_wrapper" in row["issues"]],
+        ),
+        (
+            "Schedule Mismatches",
+            [row for row in visible if "schedule_mismatch" in row["issues"] or "enabled_mismatch" in row["issues"]],
+        ),
+        ("Informational", [row for row in visible if "info_only_schedule" in row["issues"]]),
+    ]
+    generated_label = generated_at.astimezone(HK_TZ).strftime("%Y-%m-%d %H:%M HKT")
+    checklist = build_checklist(visible)
+    counts = ", ".join(
+        f"{html.escape(kind)}={count}" for kind, count in sorted(summary["issues_by_kind"].items())
+    ) or "none"
+    lines = [
+        "<!doctype html>",
+        "<html lang=\"en\">",
+        "<head>",
+        "<meta charset=\"utf-8\">",
+        "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">",
+        "<title>Telegram Schedule Audit</title>",
+        "<style>",
+        "body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; background: #f6f7fb; color: #18212f; }",
+        "main { max-width: 1100px; margin: 0 auto; padding: 32px 24px 56px; }",
+        "h1 { margin-bottom: 8px; }",
+        "p.meta { color: #4d5a70; margin-top: 0; }",
+        "section, .summary { background: #fff; border: 1px solid #d8dfeb; border-radius: 14px; padding: 18px 20px; margin-top: 18px; }",
+        ".summary-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; }",
+        ".summary-card { background: #f8faff; border: 1px solid #dbe4f2; border-radius: 10px; padding: 12px 14px; }",
+        ".summary-card .label { color: #5b677b; font-size: 12px; text-transform: uppercase; letter-spacing: 0.04em; }",
+        ".summary-card .value { font-size: 28px; font-weight: 700; margin-top: 6px; }",
+        "ul { margin: 0; padding-left: 20px; }",
+        "li { margin: 8px 0; line-height: 1.45; }",
+        "code { background: #eef3fb; border-radius: 6px; padding: 2px 6px; }",
+        ".empty { color: #66758c; margin: 0; }",
+        ".counts { color: #425066; }",
+        "</style>",
+        "</head>",
+        "<body>",
+        "<main>",
+        "<h1>Telegram Schedule Audit</h1>",
+        f"<p class=\"meta\">Generated at {html.escape(generated_label)}</p>",
+        "<section class=\"summary\">",
+        "<div class=\"summary-grid\">",
+        "<div class=\"summary-card\"><div class=\"label\">Tasks tracked</div>"
+        f"<div class=\"value\">{summary['total_records']}</div></div>",
+        "<div class=\"summary-card\"><div class=\"label\">Tasks with issues</div>"
+        f"<div class=\"value\">{summary['records_with_issues']}</div></div>",
+        "</div>",
+        f"<p class=\"counts\"><strong>Issue counts:</strong> {counts}</p>",
+        "</section>",
+    ]
+    for title, rows in sections:
+        lines.append(_render_html_issue_section(title=title, rows=rows))
+    lines.append("<section><h2>Checklist</h2>")
+    if checklist:
+        lines.append("<ul>")
+        lines.extend(f"<li>{item}</li>" for item in checklist)
+        lines.append("</ul>")
+    else:
+        lines.append("<p class=\"empty\">No action items.</p>")
+    lines.append("</section>")
+    lines.extend(["</main>", "</body>", "</html>"])
+    return "\n".join(lines)
+
+
+def resolve_audit_telegram_delivery(
+    *,
+    records: Sequence[dict[str, Any]],
+    report_path: Path,
+    report_url: str,
+    generated_at: datetime,
+    state: dict[str, Any],
+    max_summary_items: int = DEFAULT_AUDIT_MAX_SUMMARY_ITEMS,
+    alert_scope: str = DEFAULT_AUDIT_ALERT_SCOPE,
+) -> dict[str, Any]:
+    critical_issue_keys = _select_delivery_issue_keys(records=records, alert_scope=alert_scope)
+    previous_issue_keys = sorted({str(item) for item in state.get("last_sent_issue_keys", []) if str(item).strip()})
+    critical_fingerprint = _issue_fingerprint(critical_issue_keys)
+    previous_fingerprint = str(state.get("last_sent_fingerprint", "")).strip()
+    added_issue_keys = [item for item in critical_issue_keys if item not in previous_issue_keys]
+    resolved_issue_keys = [item for item in previous_issue_keys if item not in critical_issue_keys]
+    critical_counts = dict(Counter(item.split(":", 1)[0] for item in critical_issue_keys))
+
+    if not critical_issue_keys and not previous_issue_keys:
+        return {
+            "should_send": False,
+            "reason": "no_critical_issues",
+            "message": "",
+            "critical_fingerprint": critical_fingerprint,
+            "critical_issue_keys": critical_issue_keys,
+            "critical_counts": critical_counts,
+            "added_issue_keys": added_issue_keys,
+            "resolved_issue_keys": resolved_issue_keys,
+        }
+    if critical_fingerprint == previous_fingerprint and critical_issue_keys == previous_issue_keys:
+        return {
+            "should_send": False,
+            "reason": "critical_fingerprint_unchanged",
+            "message": "",
+            "critical_fingerprint": critical_fingerprint,
+            "critical_issue_keys": critical_issue_keys,
+            "critical_counts": critical_counts,
+            "added_issue_keys": added_issue_keys,
+            "resolved_issue_keys": resolved_issue_keys,
+        }
+    return {
+        "should_send": True,
+        "reason": "critical_state_changed",
+        "message": _build_audit_delivery_message(
+            records=records,
+            report_path=report_path,
+            report_url=report_url,
+            generated_at=generated_at,
+            critical_issue_keys=critical_issue_keys,
+            critical_counts=critical_counts,
+            added_issue_keys=added_issue_keys,
+            resolved_issue_keys=resolved_issue_keys,
+            max_summary_items=max_summary_items,
+        ),
+        "critical_fingerprint": critical_fingerprint,
+        "critical_issue_keys": critical_issue_keys,
+        "critical_counts": critical_counts,
+        "added_issue_keys": added_issue_keys,
+        "resolved_issue_keys": resolved_issue_keys,
+    }
+
+
+def _render_html_issue_section(*, title: str, rows: Sequence[dict[str, Any]]) -> str:
+    if not rows:
+        return f"<section><h2>{html.escape(title)}</h2><p class=\"empty\">None.</p></section>"
+    items = []
+    for row in rows:
+        task_key = html.escape(str(row.get("task_key", "")))
+        display_name = html.escape(str(row.get("display_name") or row.get("scheduler_name") or row.get("task_key", "")))
+        owner_repo = html.escape(str(row.get("owner_repo") or "unknown"))
+        schedule = html.escape(str(row.get("schedule_text") or "n/a"))
+        issues = html.escape(", ".join(row.get("issues", [])))
+        extras: list[str] = []
+        if row.get("last_result") not in {None, ""}:
+            extras.append(f"last_result={html.escape(str(row['last_result']))}")
+        if row.get("last_run_time"):
+            extras.append(f"last_run={html.escape(str(row['last_run_time']))}")
+        extra_text = f" | {' | '.join(extras)}" if extras else ""
+        items.append(
+            f"<li><strong>{display_name}</strong> <code>{task_key}</code> | repo={owner_repo} | "
+            f"schedule={schedule} | issues={issues}{extra_text}</li>"
+        )
+    return f"<section><h2>{html.escape(title)}</h2><ul>{''.join(items)}</ul></section>"
+
+
+def _build_audit_delivery_message(
+    *,
+    records: Sequence[dict[str, Any]],
+    report_path: Path,
+    report_url: str,
+    generated_at: datetime,
+    critical_issue_keys: Sequence[str],
+    critical_counts: dict[str, int],
+    added_issue_keys: Sequence[str],
+    resolved_issue_keys: Sequence[str],
+    max_summary_items: int,
+) -> str:
+    generated_label = generated_at.astimezone(HK_TZ).strftime("%Y-%m-%d %H:%M HKT")
+    lines = [
+        "<b>Telegram Schedule Audit</b>",
+        f"Updated: {html.escape(generated_label)}",
+        f"Current critical issues: {len(critical_issue_keys)}",
+    ]
+    if critical_counts:
+        lines.append(
+            "Counts: "
+            + ", ".join(
+                f"{html.escape(_issue_label(kind))}={count}" for kind, count in sorted(critical_counts.items())
+            )
+        )
+    if added_issue_keys:
+        lines.append("Added: " + html.escape(_summarize_issue_keys(records=records, issue_keys=added_issue_keys, limit=max_summary_items)))
+    if resolved_issue_keys:
+        lines.append(
+            "Resolved: "
+            + html.escape(_summarize_issue_keys(records=records, issue_keys=resolved_issue_keys, limit=max_summary_items))
+        )
+    lines.append(
+        f'Report: <a href="{html.escape(report_url, quote=True)}">{html.escape(report_path.name)}</a>'
+    )
+    lines.append(f"Artifact: <code>{html.escape(str(report_path))}</code>")
+    return "\n".join(lines)
+
+
+def _select_delivery_issue_keys(*, records: Sequence[dict[str, Any]], alert_scope: str) -> list[str]:
+    allowed_issues = CRITICAL_ALERT_ISSUES if alert_scope == "critical_only" else None
+    issue_keys = {
+        f"{issue}:{row['task_key']}"
+        for row in records
+        for issue in row.get("issues", [])
+        if allowed_issues is None or issue in allowed_issues
+    }
+    return sorted(issue_keys)
+
+
+def _issue_fingerprint(issue_keys: Sequence[str]) -> str:
+    if not issue_keys:
+        return ""
+    digest = hashlib.sha256()
+    digest.update("\n".join(issue_keys).encode("utf-8"))
+    return digest.hexdigest()
+
+
+def _issue_label(issue_kind: str) -> str:
+    return {
+        "runtime_failure": "runtime failure",
+        "enabled_mismatch": "enabled mismatch",
+        "missing_in_scheduler": "missing in scheduler",
+        "missing_in_control": "missing in control",
+        "missing_in_repo": "missing in repo",
+        "schedule_mismatch": "schedule mismatch",
+        "orphaned_wrapper": "orphaned wrapper",
+        "info_only_schedule": "informational",
+    }.get(issue_kind, issue_kind.replace("_", " "))
+
+
+def _summarize_issue_keys(*, records: Sequence[dict[str, Any]], issue_keys: Sequence[str], limit: int) -> str:
+    display_by_task = {
+        str(row.get("task_key", "")): str(row.get("display_name") or row.get("scheduler_name") or row.get("task_key", ""))
+        for row in records
+    }
+    summary_items = []
+    for item in issue_keys[:limit]:
+        issue_kind, task_key = item.split(":", 1)
+        display_name = display_by_task.get(task_key, task_key)
+        summary_items.append(f"{_issue_label(issue_kind)} / {display_name}")
+    if len(issue_keys) > limit:
+        summary_items.append(f"+{len(issue_keys) - limit} more")
+    return ", ".join(summary_items) if summary_items else "none"
 
 
 def discover_control_sources(*, root: Path) -> list[dict[str, Any]]:
@@ -761,6 +1144,8 @@ def merge_task_rows(rows: Iterable[dict[str, Any]]) -> list[dict[str, Any]]:
                 "source_type": row["source_type"],
                 "command": "",
                 "schedule_text": "",
+                "last_result": None,
+                "last_run_time": "",
                 "enabled": bool(row.get("enabled", True)),
                 "telegram_related": False,
                 "observed_in": [],
@@ -770,6 +1155,14 @@ def merge_task_rows(rows: Iterable[dict[str, Any]]) -> list[dict[str, Any]]:
             },
         )
         source_type = row["source_type"]
+        if source_type == "scheduler" and source_type in current["_source_map"]:
+            row = {
+                **row,
+                "schedule_text": _merge_schedule_texts(
+                    current["_source_map"][source_type].get("schedule_text", ""),
+                    row.get("schedule_text", ""),
+                ),
+            }
         current["_source_map"][source_type] = row
         if row.get("source_kind") == "wrapper":
             current["_source_map"][f"{source_type}:wrapper"] = row
@@ -785,6 +1178,9 @@ def merge_task_rows(rows: Iterable[dict[str, Any]]) -> list[dict[str, Any]]:
             if row.get(field) and priority >= current["_source_priorities"].get(field, -1):
                 current[field] = row[field]
                 current["_source_priorities"][field] = priority
+        if source_type == "scheduler":
+            current["last_result"] = row.get("last_result")
+            current["last_run_time"] = row.get("last_run_time", "")
         if "control" in current["_source_map"]:
             current["enabled"] = bool(current["_source_map"]["control"].get("enabled", True))
         elif "scheduler" in current["_source_map"]:
@@ -801,6 +1197,25 @@ def merge_task_rows(rows: Iterable[dict[str, Any]]) -> list[dict[str, Any]]:
     for row in result:
         row.pop("_source_map", None)
     return result
+
+
+def _merge_schedule_texts(first: str, second: str) -> str:
+    first = str(first or "").strip()
+    second = str(second or "").strip()
+    slots: list[str] = []
+    for slot in [*_extract_time_slots(first), *_extract_time_slots(second)]:
+        value = slot.replace(" HKT", "")
+        if value not in slots:
+            slots.append(value)
+    if not slots:
+        return second or first
+    combined = f"{','.join(slots)} HKT"
+    lower = f"{first} {second}".lower()
+    if "mon-fri" in lower:
+        return f"Mon-Fri {combined}"
+    if "daily" in lower:
+        return f"Daily {combined}"
+    return combined
 
 
 def parse_args() -> argparse.Namespace:
@@ -829,11 +1244,22 @@ def main() -> int:
     args = parse_args()
     root = args.root.resolve()
     result = audit_schedule_state(root=root, repos=args.repos)
+    generated_at = datetime.fromisoformat(result["generated_at"])
     report = build_report(records=result["records"], only_issues=args.only_issues)
     json_out = _resolve_json_output(root=root, explicit=args.json_out)
+    html_out = _resolve_html_output_path(json_out=json_out)
+    delivery_policy = _load_audit_delivery_policy(root=root, task_name=args.task_name)
+    report_url = _resolve_audit_report_url(root=root, html_out=html_out, policy=delivery_policy)
+    result["html_report_path"] = str(html_out)
+    result["html_report_url"] = report_url
     write_json_payload(json_out, result)
+    write_html_payload(
+        html_out,
+        build_html_report(records=result["records"], generated_at=generated_at, only_issues=args.only_issues),
+    )
     write_flowchart_artifacts(root=root, records=result["records"])
     print(f"JSON report written to {json_out}")
+    print(f"HTML report written to {html_out}")
     print("=" * 56)
     for chunk in split_message(report, max_length=3900):
         print(chunk)
@@ -851,37 +1277,78 @@ def main() -> int:
             if not send_decision["should_send"]:
                 print(f"Telegram delivery: skipped ({send_decision['reason']})")
                 return 0
-        token, chat_id = load_telegram_credentials()
+        existing_state = _load_structured_config(state_path)
+        delivery = resolve_audit_telegram_delivery(
+            records=result["records"],
+            report_path=html_out,
+            report_url=report_url,
+            generated_at=generated_at,
+            state=existing_state,
+            max_summary_items=delivery_policy["max_summary_items"],
+            alert_scope=delivery_policy["alert_scope"],
+        )
+        attempt_payload = {
+            "task_name": args.task_name,
+            "schedule_text": send_decision["schedule_text"] if send_decision is not None else "",
+            "last_attempted_at": datetime.now(HK_TZ).isoformat(),
+            "last_attempted_slot_hkt": send_decision["slot_time_hkt"] if send_decision is not None else "",
+            "last_attempt_reason": delivery["reason"],
+            "last_critical_fingerprint": delivery["critical_fingerprint"],
+            "last_critical_count": len(delivery["critical_issue_keys"]),
+            "last_critical_issue_keys": delivery["critical_issue_keys"],
+            "last_error": "",
+        }
+        if not delivery["should_send"]:
+            _update_delivery_state(state_path, **attempt_payload)
+            print(f"Telegram delivery: skipped ({delivery['reason']})")
+            return 0
+        # Route schedule_audit to ops bot (Jarvisdd168), not primary (Claude-try).
+        # This is an ops diagnostic — not a trading alert.
+        try:
+            if delivery_policy["telegram_route"] == "ops_only":
+                token, chat_id = _load_named_telegram_credentials(
+                    token_key="TELEGRAM_BOT_TOKEN_OPS",
+                    chat_key="TELEGRAM_CHAT_ID_OPS",
+                )
+            else:
+                token, chat_id = load_telegram_credentials()
+        except Exception:
+            _update_delivery_state(
+                state_path,
+                **{
+                    **attempt_payload,
+                    "last_attempt_reason": "ops_credentials_missing",
+                },
+            )
+            print("Telegram delivery: skipped (ops_credentials_missing)")
+            return 0
         try:
             send_messages(
                 bot_token=token,
                 chat_id=chat_id,
-                messages=split_message(report, max_length=3900),
+                messages=[delivery["message"]],
             )
         except Exception as exc:
-            if send_decision is not None:
-                _update_delivery_state(
-                    state_path,
-                    task_name=args.task_name,
-                    schedule_text=send_decision["schedule_text"],
-                    last_attempted_at=datetime.now(HK_TZ).isoformat(),
-                    last_attempted_slot_hkt=send_decision["slot_time_hkt"],
-                    last_attempt_reason=send_decision["reason"],
-                    last_error=str(exc),
-                )
-            raise
-        if send_decision is not None:
             _update_delivery_state(
                 state_path,
-                task_name=args.task_name,
-                schedule_text=send_decision["schedule_text"],
-                last_attempted_at=datetime.now(HK_TZ).isoformat(),
-                last_attempted_slot_hkt=send_decision["slot_time_hkt"],
-                last_attempt_reason=send_decision["reason"],
-                last_sent_at=datetime.now(HK_TZ).isoformat(),
-                last_sent_slot_hkt=send_decision["slot_time_hkt"],
-                last_error="",
+                **{
+                    **attempt_payload,
+                    "last_error": str(exc),
+                },
             )
+            raise
+        _update_delivery_state(
+            state_path,
+            **{
+                **attempt_payload,
+                "last_sent_at": datetime.now(HK_TZ).isoformat(),
+                "last_sent_slot_hkt": send_decision["slot_time_hkt"] if send_decision is not None else "",
+                "last_sent_fingerprint": delivery["critical_fingerprint"],
+                "last_sent_critical_count": len(delivery["critical_issue_keys"]),
+                "last_sent_issue_keys": delivery["critical_issue_keys"],
+                "last_error": "",
+            },
+        )
         print("Telegram delivery: sent")
     else:
         print("Telegram delivery: skipped (--send not set)")
@@ -891,6 +1358,11 @@ def main() -> int:
 def write_json_payload(path: Path, payload: dict[str, Any]) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(payload, indent=2, ensure_ascii=False), encoding="utf-8")
+
+
+def write_html_payload(path: Path, html_text: str) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(html_text, encoding="utf-8")
 
 
 def _discover_fundman_sources(repo_root: Path) -> list[dict[str, Any]]:
@@ -1091,6 +1563,8 @@ def _normalize_scheduler_block(block: dict[str, str]) -> dict[str, Any] | None:
         "source_type": "scheduler",
         "command": command,
         "schedule_text": _summarize_schedule(block),
+        "last_result": _parse_last_result(block.get("Last Result", "")),
+        "last_run_time": block.get("Last Run Time", "").strip(),
         "enabled": block.get("Status", "").strip().lower() != "disabled",
         "telegram_related": task_key != "notion_publish_daily",
         "observed_in": ["scheduler"],
@@ -1101,6 +1575,14 @@ def _normalize_scheduler_block(block: dict[str, str]) -> dict[str, Any] | None:
 def _classify_row(row: dict[str, Any]) -> list[str]:
     source_map: dict[str, Any] = row.get("_source_map", {})
     issues: list[str] = []
+    scheduler_row = source_map.get("scheduler")
+    if scheduler_row and scheduler_row.get("enabled", True) and scheduler_row.get("last_result") not in (
+        None,
+        0,
+        TASK_SCHEDULER_RUNNING_RESULT,
+        TASK_SCHEDULER_NOT_YET_RUN_RESULT,
+    ):
+        issues.append("runtime_failure")
     if "scheduler" in source_map and "control" not in source_map and row["telegram_related"]:
         issues.append("missing_in_control")
     if (
@@ -1718,6 +2200,20 @@ def normalize_task_key(task_name: str, command: str = "") -> str:
             if slot in lower or slot in command_lower or f"--slot {slot}" in command_lower:
                 return f"cross_asset_momentum_{slot}"
         return "cross_asset_momentum_0905"
+    if "send_sentiment_scan.py" in command_lower or "run_sentiment_scan.bat" in command_lower:
+        for slot in ("0133", "1000", "1146", "1515", "2310"):
+            if slot in lower or slot in command_lower or f"--slot {slot}" in command_lower:
+                return f"sentiment_scan_{slot}"
+        return "sentiment_scan_1000"
+    if "send_earnings_signal.py" in command_lower or "run_earnings_signal.bat" in command_lower:
+        for slot in ("1800",):
+            if slot in lower or slot in command_lower or f"--slot {slot}" in command_lower:
+                return f"earnings_signal_{slot}"
+        return "earnings_signal_1800"
+    if "run_pre_catalyst_alerts.bat" in command_lower or "send_pre_catalyst_alerts.py" in command_lower:
+        return "pre_catalyst_alerts"
+    if "run_pre_catalyst_alert.bat" in command_lower or "send_pre_catalyst_alert.py" in command_lower:
+        return "pre_catalyst_alert"
     if "run_cbbc_tracker.bat" in command_lower or "send_cbbc_tracker.py" in command_lower:
         return "jarvis_cbbc_tracker_am"
     if "run_friday_volume.bat" in command_lower or "send_friday_volume_check.py" in command_lower:
@@ -1732,8 +2228,10 @@ def normalize_task_key(task_name: str, command: str = "") -> str:
         return "options_earnings_2100"
     if "run_portfolio_digest.bat" in command_lower or "send_portfolio_digest.py" in command_lower:
         return "portfolio_digest"
-    if "run_deepvue_dashboard.bat" in command_lower:
+    if "run_deepvue_dashboard_alert.bat" in command_lower:
         return "deepvue_dashboard"
+    if "run_deepvue_dashboard.bat" in command_lower:
+        return "deepvue_dashboard_streamlit"
     if "run_sector_screenshots.bat" in command_lower or "send_sector_screenshots.py" in command_lower:
         return "sector_heatmap"
     if "run_light.bat" in command_lower:
@@ -1777,10 +2275,33 @@ def _run_scheduler_query() -> str:
     result = subprocess.run(
         ["schtasks", "/query", "/fo", "LIST", "/v"],
         capture_output=True,
-        text=True,
         check=True,
     )
-    return result.stdout
+    return _decode_scheduler_output(result.stdout)
+
+
+def _decode_scheduler_output(raw: bytes) -> str:
+    if not raw:
+        return ""
+    candidates = [
+        "utf-8",
+        "utf-8-sig",
+        "cp950",
+        "mbcs",
+        sys.getdefaultencoding(),
+        sys.getfilesystemencoding(),
+        "cp1252",
+    ]
+    seen: set[str] = set()
+    for encoding in candidates:
+        if not encoding or encoding in seen:
+            continue
+        seen.add(encoding)
+        try:
+            return raw.decode(encoding)
+        except (LookupError, UnicodeDecodeError):
+            continue
+    return raw.decode("utf-8", errors="replace")
 
 
 def _owner_repo_from_text(value: str) -> str:
@@ -1845,10 +2366,28 @@ def _format_days(value: str) -> str:
 
 
 def _format_time(value: str) -> str:
-    parts = value.split(":")
+    cleaned = value.strip()
+    for fmt in ("%I:%M:%S %p", "%I:%M %p", "%H:%M:%S", "%H:%M"):
+        try:
+            parsed = datetime.strptime(cleaned, fmt)
+            return parsed.strftime("%H:%M")
+        except ValueError:
+            continue
+    parts = cleaned.split(":")
     if len(parts) >= 2 and parts[0].isdigit() and parts[1].isdigit():
         return f"{int(parts[0]):02d}:{int(parts[1]):02d}"
-    return value.strip()
+    return cleaned
+
+
+def _parse_last_result(value: str) -> int | None:
+    cleaned = value.strip()
+    if not cleaned:
+        return None
+    token = cleaned.split()[0]
+    try:
+        return int(token, 0)
+    except ValueError:
+        return None
 
 
 def _load_structured_config(path: Path) -> dict[str, Any]:
@@ -1872,6 +2411,22 @@ def _load_structured_config(path: Path) -> dict[str, Any]:
     except Exception:
         pass
     return {}
+
+
+def _read_env_file(path: Path) -> dict[str, str]:
+    if not path.exists() or not path.is_file():
+        return {}
+    values: dict[str, str] = {}
+    try:
+        for line in path.read_text(encoding="utf-8").splitlines():
+            stripped = line.strip()
+            if not stripped or stripped.startswith("#") or "=" not in stripped:
+                continue
+            key, raw_value = stripped.split("=", 1)
+            values[key.strip()] = raw_value.strip().strip('"').strip("'")
+    except OSError:
+        return {}
+    return values
 
 
 def _load_control_task_config(*, root: Path, task_name: str) -> dict[str, Any]:
@@ -1904,24 +2459,99 @@ def _config_positive_int(value: Any, default: int) -> int:
     return parsed if parsed > 0 else default
 
 
+def _load_audit_delivery_policy(*, root: Path, task_name: str) -> dict[str, Any]:
+    config = _load_control_task_config(root=root, task_name=task_name)
+    return {
+        "telegram_route": str(config.get("telegram_route", DEFAULT_AUDIT_TELEGRAM_ROUTE)).strip()
+        or DEFAULT_AUDIT_TELEGRAM_ROUTE,
+        "alert_scope": str(config.get("alert_scope", DEFAULT_AUDIT_ALERT_SCOPE)).strip()
+        or DEFAULT_AUDIT_ALERT_SCOPE,
+        "alert_mode": str(config.get("alert_mode", DEFAULT_AUDIT_ALERT_MODE)).strip()
+        or DEFAULT_AUDIT_ALERT_MODE,
+        "max_summary_items": _config_positive_int(config.get("max_summary_items"), DEFAULT_AUDIT_MAX_SUMMARY_ITEMS),
+        "report_base_url": str(config.get("report_base_url") or os.environ.get(DEFAULT_AUDIT_REPORT_BASE_URL_ENV, "")).strip(),
+    }
+
+
 def _resolve_delivery_state_path(*, root: Path, explicit: Path | None) -> Path:
     if explicit is not None:
         return explicit.resolve() if explicit.is_absolute() else (Path.cwd() / explicit).resolve()
     return (root / "notion-autopublish" / DEFAULT_DELIVERY_STATE_REL).resolve()
 
 
+def _resolve_html_output_path(*, json_out: Path) -> Path:
+    return json_out.with_suffix(".html")
+
+
+def _resolve_audit_report_url(*, root: Path, html_out: Path, policy: dict[str, Any]) -> str:
+    base_url = str(policy.get("report_base_url", "")).strip()
+    if not base_url:
+        return html_out.resolve().as_uri()
+    resolved_root = root.resolve()
+    resolved_html = html_out.resolve()
+    rel_path = resolved_html.name
+    if resolved_html.is_relative_to(resolved_root):
+        rel_path = resolved_html.relative_to(resolved_root).as_posix()
+    return f"{base_url.rstrip('/')}/{rel_path}"
+
+
+def _load_named_telegram_credentials(*, token_key: str, chat_key: str) -> tuple[str, str]:
+    env_map = dict(os.environ)
+    token = env_map.get(token_key, "").strip()
+    chat_id = env_map.get(chat_key, "").strip()
+    if token and chat_id:
+        return token, chat_id
+    candidates: list[Path] = []
+    shared = env_map.get("TELEGRAM_SHARED_ENV_FILE", "").strip()
+    if shared:
+        candidates.append(Path(shared))
+    candidates.extend(
+        [
+            DEFAULT_ROOT / ".telegram.env",
+            DEFAULT_ROOT / "fundman-jarvis" / ".env",
+            Path.cwd() / ".env",
+        ]
+    )
+    seen: set[Path] = set()
+    for candidate in candidates:
+        path = candidate.resolve() if candidate.exists() else candidate
+        if path in seen:
+            continue
+        seen.add(path)
+        values = _read_env_file(candidate)
+        if not token:
+            token = values.get(token_key, "").strip()
+        if not chat_id:
+            chat_id = values.get(chat_key, "").strip()
+        if token and chat_id:
+            return token, chat_id
+    raise ValueError(f"Missing {token_key} or {chat_key}")
+
+
 def _resolve_due_slot_hkt(*, schedule_text: str, now: datetime) -> datetime | None:
     normalized = normalize_schedule_text(schedule_text)
-    match = re.search(r"\b(\d{2}):(\d{2})\b", normalized)
-    if not match:
+    matches = re.findall(r"\b(\d{2}):(\d{2})\b", normalized)
+    if not matches:
         return None
     now_hkt = now.astimezone(HK_TZ)
     if normalized.lower().startswith("mon-fri") and now_hkt.weekday() > 4:
         return None
-    slot_time = now_hkt.replace(hour=int(match.group(1)), minute=int(match.group(2)), second=0, microsecond=0)
-    if now_hkt < slot_time:
+    # Pick the latest slot that has already passed (supports comma-separated times).
+    best: datetime | None = None
+    for hh, mm in matches:
+        candidate = now_hkt.replace(hour=int(hh), minute=int(mm), second=0, microsecond=0)
+        if now_hkt >= candidate and (best is None or candidate > best):
+            best = candidate
+    return best
+
+
+def _resolve_hkt_time_for_today(*, value: str, now: datetime) -> datetime | None:
+    normalized = normalize_schedule_text(value)
+    match = re.search(r"\b(\d{2}):(\d{2})\b", normalized)
+    if not match:
         return None
-    return slot_time
+    now_hkt = now.astimezone(HK_TZ)
+    return now_hkt.replace(hour=int(match.group(1)), minute=int(match.group(2)), second=0, microsecond=0)
 
 
 def resolve_resume_catchup_decision(
@@ -1937,15 +2567,21 @@ def resolve_resume_catchup_decision(
     catchup_enabled = _config_bool(config.get("catchup_on_resume"), False)
     window_hours = _config_positive_int(config.get("catchup_window_hours"), DEFAULT_AUDIT_CATCHUP_WINDOW_HOURS)
     slot_time = _resolve_due_slot_hkt(schedule_text=schedule_text, now=current_time)
+    latest_send_time = str(config.get("latest_send_time_hkt", "")).strip()
+    latest_send_cutoff = _resolve_hkt_time_for_today(value=latest_send_time, now=current_time) if latest_send_time else None
     decision = {
         "should_send": False,
         "reason": "catchup_disabled" if not catchup_enabled else "no_due_slot",
         "slot_time_hkt": slot_time.isoformat() if slot_time else "",
         "schedule_text": schedule_text,
         "window_hours": window_hours,
+        "latest_send_cutoff_hkt": latest_send_cutoff.isoformat() if latest_send_cutoff else "",
         "task_name": task_name,
     }
     if not catchup_enabled or slot_time is None:
+        return decision
+    if latest_send_cutoff is not None and current_time > latest_send_cutoff:
+        decision["reason"] = "after_latest_send_time"
         return decision
     if current_time - slot_time > timedelta(hours=window_hours):
         decision["reason"] = "slot_expired"

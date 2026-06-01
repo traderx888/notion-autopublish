@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>彭博研究摘要 #61 — 地緣衝突再燃與全球資金大挪移</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --accent: #58a6ff;
+          --green: #3fb950; --red: #f85149; --yellow: #d29922; --text: #c9d1d9; --muted: #8b949e;
+          --orange: #f0883e; --purple: #bc8cff; --cyan: #39d2c0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans TC', 'Microsoft JhengHei', Helvetica, Arial, sans-serif; line-height: 1.7; padding: 20px; max-width: 860px; margin: 0 auto; }
+  h1 { color: #fff; font-size: 1.7em; margin-bottom: 4px; }
+  .subtitle { color: var(--muted); font-size: 0.9em; margin-bottom: 8px; }
+  .issue-badge { display: inline-block; background: rgba(88,166,255,0.15); color: var(--accent); padding: 3px 10px; border-radius: 12px; font-size: 0.8em; font-weight: 600; margin-bottom: 20px; }
+  .tag { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 0.72em; font-weight: 600; margin-right: 4px; }
+  .tag-rates { background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-china { background: rgba(240,136,62,0.15); color: var(--orange); }
+  .tag-japan { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-geo   { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-oil   { background: rgba(210,153,34,0.15); color: var(--yellow); }
+  .tag-trade { background: rgba(210,153,34,0.15); color: var(--yellow); }
+  .tag-growth{ background: rgba(63,185,80,0.15); color: var(--green); }
+  .tag-metals{ background: rgba(188,140,255,0.15); color: var(--purple); }
+  .tag-infl  { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-policy{ background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-val   { background: rgba(63,185,80,0.15); color: var(--green); }
+  .tag-vol   { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-semi  { background: rgba(57,210,192,0.15); color: var(--cyan); }
+  .tag-credit{ background: rgba(188,140,255,0.15); color: var(--purple); }
+  .tag-space { background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-misc  { background: rgba(139,148,158,0.15); color: var(--muted); }
+  .section { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 16px; }
+  .section h2 { color: #fff; font-size: 1.15em; margin-bottom: 12px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+  .section h3 { color: var(--accent); font-size: 0.95em; margin: 14px 0 6px; }
+  .article { margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .article:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .article-title { color: #fff; font-weight: 700; font-size: 0.95em; margin-bottom: 4px; }
+  .article-title-cn { color: var(--muted); font-size: 0.85em; margin-bottom: 8px; }
+  .article p { font-size: 0.9em; margin: 6px 0; }
+  .data-point { background: rgba(255,255,255,0.03); padding: 8px 12px; border-radius: 6px; margin: 8px 0; font-size: 0.85em; }
+  .data-point .num { color: #fff; font-weight: 700; }
+  .implication { background: rgba(88,166,255,0.06); border-left: 3px solid var(--accent); padding: 10px 14px; margin: 10px 0; border-radius: 0 6px 6px 0; font-size: 0.88em; }
+  .implication .label { color: var(--accent); font-weight: 700; font-size: 0.8em; text-transform: uppercase; margin-bottom: 4px; }
+  .callout { background: rgba(210,153,34,0.08); border: 1px solid rgba(210,153,34,0.3); border-radius: 6px; padding: 16px; margin: 16px 0; }
+  .callout-title { color: var(--yellow); font-weight: 700; font-size: 0.95em; margin-bottom: 8px; }
+  .callout ul { padding-left: 18px; }
+  .callout li { margin: 4px 0; font-size: 0.88em; }
+  ul { padding-left: 18px; }
+  li { margin: 3px 0; font-size: 0.88em; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(255,255,255,0.03); padding: 12px; border-radius: 6px; text-align: center; }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: #fff; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
+  .toc { background: rgba(88,166,255,0.05); border: 1px solid rgba(88,166,255,0.2); border-radius: 8px; padding: 16px 20px; margin-bottom: 20px; }
+  .toc-title { color: var(--accent); font-weight: 700; font-size: 0.9em; margin-bottom: 8px; }
+  .toc a { color: var(--accent); text-decoration: none; font-size: 0.88em; }
+  .toc a:hover { text-decoration: underline; }
+  .toc ol { padding-left: 20px; }
+  .toc li { margin: 4px 0; }
+  .nav-links { display: flex; justify-content: space-between; margin: 20px 0; font-size: 0.85em; }
+  .nav-links a { color: var(--accent); text-decoration: none; }
+  .nav-links a:hover { text-decoration: underline; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(255,255,255,0.03); padding: 12px; border-radius: 6px; text-align: center; }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: #fff; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
+  .footer { text-align: center; color: var(--muted); font-size: 0.75em; margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--border); }
+</style>
+<script>if(window.self===window.top&&sessionStorage.getItem("student_auth")!=="1"){document.body.innerHTML="";window.location.replace("student.html");}</script>
+</head>
+<body>
+
+<h1>彭博研究摘要</h1>
+<p class="subtitle">第61期 | 地緣衝突再燃與全球資金大挪移</p>
+<span class="issue-badge">2026年五月中旬更新</span>
+
+<div class="nav-links">
+  <span><a href="newsletter_60_uncategorized.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="toc">
+  <div class="toc-title">目錄</div>
+  <ol>
+    <li><a href="#geopolitics-oil">地緣政治 「自由計畫」引爆新一輪交火</a></li>
+    <li><a href="#us-bottom-signal">美股技術面 罕見雙重訊號暗示底部已現</a></li>
+    <li><a href="#prime-flows">對沖基金倉位 亞洲配置創歷史新高</a></li>
+    <li><a href="#hk-stocks">港股焦點 Pop Mart遭降級，商湯維持買入</a></li>
+    <li><a href="#takeaways">基金經理人重點摘要</a></li>
+  </ol>
+</div>
+
+<div class="section" id="geopolitics-oil">
+  <h2><span class="tag tag-geo">地緣政治</span> 「自由計畫」引爆新一輪交火</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--red)">+35%</div><div class="lbl">布倫特原油
+較戰前水平</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">623</div><div class="lbl">Stoxx 600年底目標
+僅+1%上行空間</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">$100+</div><div class="lbl">原油仍高於
+每桶100美元</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">戰火再燃 —— 「自由計畫」動搖停火協議</div>
+    <p>美國啟動旨在重開霍爾木茲海峽的「自由計畫」(Project Freedom)後數小時，美軍再次與伊朗交火。阿聯酋攔截數枚伊朗飛彈，一架無人機引燃其港口。美國試圖在不全面開戰下迫使伊朗開放海峽，但行動非但未確保安全，反而點燃新衝突。美中央司令部稱伊朗向美艦及商船開火，川普表示已擊毀<span style="color:#fff;font-weight:700">7艘</span>伊朗快艇。分析認為最可能結果為<span style="color:#fff;font-weight:700">衝突長期化</span>，零星交火將使油價維持高位。</p>
+    <div class="data-point">美軍護航方式：<span style="color:#fff;font-weight:700">空中監控引導，非全程護航</span> &nbsp;|&nbsp; 局勢判斷：<span style="color:#fff;font-weight:700">可持續和平遙遠，全面戰爭可能性低</span> &nbsp;|&nbsp; 行動窗口：<span style="color:#fff;font-weight:700">未來兩周為美軍最佳打擊時機</span></div>
+    <div class="implication"><div class="label">投資啟示</div>霍爾木茲僵局短期難解，油價結構性偏高。<span style="color:#fff;font-weight:700">維持能源多頭</span>，關注保險戰爭溢價對航運成本的傳導。</div>
+  </div>
+  <div class="article">
+    <div class="article-title">反彈撞上現實 — 空頭回補推動的漲勢難以持續</div>
+    <p>上周美股強力反彈更多是空頭回補所驅動，而非基本面改善。Goldman Sachs Prime Desk指出L/S比率雖升<span style="color:#fff;font-weight:700">1.5%</span>至1.61，但仍處於五年<span style="color:#fff;font-weight:700">第1百分位</span>的極低水平。CTA過去一個月拋售<span style="color:#fff;font-weight:700">$1,150億</span>全球股票，預計未來一個月將回補全部並額外買入。然而油價仍結構性高於危機前水平，美伊談判失敗凸顯事件風險依然高企。Nomura的McElligott指出能源供應鏈物理瓶頸無法迅速修復，保險戰爭溢價持續。</p>
+    <div class="data-point">CTA未來一月預計買入：<span style="color:#fff;font-weight:700">$1,195億</span> &nbsp;|&nbsp; L/S比率：<span style="color:#fff;font-weight:700">1.61（五年第1百分位）</span> &nbsp;|&nbsp; 零售投資者：<span style="color:#fff;font-weight:700">轉為逢高賣出</span></div>
+    <div class="implication"><div class="label">投資啟示</div>反彈由技術性回補驅動，缺乏長線資金支撐。<span style="color:#fff;font-weight:700">逢高減磅歐洲週期股</span>，等待油價回落確認再加倉。</div>
+  </div>
+  <div class="article">
+    <div class="article-title">策略師：歐洲股市今年無上行空間</div>
+    <p>Bloomberg調查<span style="color:#fff;font-weight:700">17位</span>策略師，Stoxx 600年底目標均值為<span style="color:#fff;font-weight:700">623點</span>，僅較當前高約1%。UBS的Fowler將目標從650下調至<span style="color:#fff;font-weight:700">630</span>，指出只要霍爾木茲海峽封閉，下行風險主導。高油價正滲透至通膨數據，債市已定價ECB年底前加息<span style="color:#fff;font-weight:700">50bp</span>。Citi團隊轉為偏好美股及英股而非歐元區，擔憂高油價將迫使政府重新分配財政資源，偏離投資支出。BofA基金經理調查顯示歐洲持續被減持。</p>
+    <div class="data-point">Stoxx 600目標均值：<span style="color:#fff;font-weight:700">623（+1%）</span> &nbsp;|&nbsp; ECB加息定價：<span style="color:#fff;font-weight:700">年底前+50bp</span> &nbsp;|&nbsp; 布倫特較戰前：<span style="color:#fff;font-weight:700">+35%</span></div>
+    <div class="implication"><div class="label">投資啟示</div>歐洲風險回報不對稱偏向下行。<span style="color:#fff;font-weight:700">減持歐洲，轉向美股及英股</span>。若油價回落至$80s方可重新審視。</div>
+  </div>
+</div>
+
+<div class="section" id="us-bottom-signal">
+  <h2><span class="tag tag-misc">美股技術面</span> 罕見雙重訊號暗示底部已現</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--green)">+7.2%</div><div class="lbl">Zweig觸發後
+6個月平均回報</div></div>
+    <div class="stat"><div class="val" style="color:var(--green)">穩定</div><div class="lbl">SLOOS銀行
+信貸標準</div></div>
+    <div class="stat"><div class="val" style="color:var(--green)">加速</div><div class="lbl">G10超額流動性
+方向</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">罕見Zweig Thrust + 流動性加速 — 觸底雙訊號</div>
+    <p>Bloomberg的Simon White指出，改良版Zweig Breadth Thrust於<span style="color:#fff;font-weight:700">3月25日</span>觸發，顯示市場廣度從極弱迅速轉為極強。歷史數據（2004年以來）顯示觸發後1/3/6個月回報分別為<span style="color:#fff;font-weight:700">+1.4%/+2.7%/+7.2%</span>，均顯著優於平均。去年4月15日同一訊號觸發後，S&amp;P 500全年再漲<span style="color:#fff;font-weight:700">27%</span>，最大回撤僅<span style="color:#fff;font-weight:700">5%</span>。更重要的是，G10超額流動性（實質貨幣增長vs經濟增長）正在加速，歷史上這組合帶來高於平均的底部反彈幅度。</p>
+    <div class="data-point">觸發日期：<span style="color:#fff;font-weight:700">2026年3月25日</span> &nbsp;|&nbsp; 1個月回報vs平均：<span style="color:#fff;font-weight:700">1.4% vs 0.3%</span> &nbsp;|&nbsp; 去年同訊號後漲幅：<span style="color:#fff;font-weight:700">+27%，回撤僅5%</span></div>
+    <div class="implication"><div class="label">投資啟示</div>風險回報偏向多頭。即使存在再創新低可能，<span style="color:#fff;font-weight:700">增加淨多頭曝險</span>，尤其美股指數產品。</div>
+  </div>
+  <div class="article">
+    <div class="article-title">美國信貸環境穩定 — 支撐未來經濟擴張</div>
+    <p>美聯儲最新SLOOS調查顯示，銀行對商業及工業貸款僅呈<span style="color:#fff;font-weight:700">輕微收緊</span>，消費信貸標準基本穩定。商業地產方面，銀行反而放寬條件，包括提高貸款額度、縮小利差及延長只付息期。住宅房地產標準穩定，房屋淨值信貸額度需求有所增強。唯一隱憂是信用卡、汽車及其他消費貸款<span style="color:#fff;font-weight:700">需求減弱</span>，但供給側並無收緊，整體有利於經濟持續擴張。</p>
+    <div class="data-point">商工貸款標準：<span style="color:#fff;font-weight:700">輕微收緊</span> &nbsp;|&nbsp; 商業地產：<span style="color:#fff;font-weight:700">放寬或持平</span> &nbsp;|&nbsp; 消費貸款需求：<span style="color:#fff;font-weight:700">減弱</span></div>
+    <div class="implication"><div class="label">投資啟示</div>信貸未出現系統性收緊，美國衰退風險可控。<span style="color:#fff;font-weight:700">維持美股核心配置</span>，信用利差無需恐慌。</div>
+  </div>
+</div>
+
+<div class="section" id="prime-flows">
+  <h2><span class="tag tag-misc">對沖基金倉位</span> 亞洲配置創歷史新高</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--orange)">312.7%</div><div class="lbl">總槓桿率
+（一年第98百分位）</div></div>
+    <div class="stat"><div class="val">78.0%</div><div class="lbl">淨槓桿率
+（一年第51百分位）</div></div>
+    <div class="stat"><div class="val" style="color:var(--green)">亞洲</div><div class="lbl">單月淨買入
+創紀錄地區</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">GS Prime：全球股票淨買入，亞洲配置破紀錄</div>
+    <p>Goldman Sachs Prime Services周報顯示，5/1-5/7期間全球股票呈淨買入（+1.1個標準差），多頭買入與空頭賣出比為<span style="color:#fff;font-weight:700">1.9:1</span>。基本面L/S策略表現出色，周回報<span style="color:#fff;font-weight:700">+2.48%</span>（alpha +1.27%）。所有主要地區均為淨買入，以<span style="color:#fff;font-weight:700">亞洲</span>（DM+EM）金額最大，且其Gross和Net配置佔比均創有記錄以來最高。金融板塊九周來首次被淨買入。總槓桿升至<span style="color:#fff;font-weight:700">312.7%</span>（一年第98百分位），但淨槓桿僅<span style="color:#fff;font-weight:700">78.0%</span>（第51百分位），顯示對沖基金在增加雙邊交易而非方向性押注。</p>
+    <div class="data-point">基本面L/S Alpha：<span style="color:#fff;font-weight:700">+1.27%（一周）</span> &nbsp;|&nbsp; 亞洲配置：<span style="color:#fff;font-weight:700">Gross &amp; Net歷史新高</span> &nbsp;|&nbsp; 11個板塊中9個淨買入 &nbsp;|&nbsp; 淨賣出：<span style="color:#fff;font-weight:700">能源、醫療</span></div>
+    <div class="implication"><div class="label">投資啟示</div>全球對沖基金正大幅增配亞洲。<span style="color:#fff;font-weight:700">跟隨Smart Money加倉亞洲DM+EM</span>，尤其科技及金融；減持能源及醫療。</div>
+  </div>
+</div>
+
+<div class="section" id="hk-stocks">
+  <h2><span class="tag tag-misc">港股焦點</span> Pop Mart遭降級，商湯維持買入</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--red)">SELL</div><div class="lbl">Pop Mart 9992 HK
+招商證券評級</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">11x</div><div class="lbl">Pop Mart新目標
+P/E倍數（-1sd）</div></div>
+    <div class="stat"><div class="val" style="color:var(--green)">HK$2.5</div><div class="lbl">商湯目標價
+13x EV/Sales</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">Pop Mart結構性重置 — 降級至賣出</div>
+    <p>招商證券將Pop Mart從買入降至<span style="color:#fff;font-weight:700">賣出</span>，原因是2H25盈利低於高預期，FY25淨利潤<span style="color:#fff;font-weight:700">RMB 130億</span>未達市場上端預測，淨利率<span style="color:#fff;font-weight:700">34.4%</span>亦遜於Street的35%。更關鍵的是，管理層FY26指引僅「不低於20%」收入增長，較FY25的<span style="color:#fff;font-weight:700">185%</span>急劇放緩，遠低於市場預期的30%-50%。分析師認為這不是短期盈利波動，而是<span style="color:#fff;font-weight:700">結構性重置</span>——市場必須重新審視Labubu IP的可持續性及單一IP集中風險。目標P/E從21x下調至<span style="color:#fff;font-weight:700">11x</span>（-1sd below均值）。</p>
+    <div class="data-point">FY25淨利：<span style="color:#fff;font-weight:700">RMB 130億</span> &nbsp;|&nbsp; FY26指引：<span style="color:#fff;font-weight:700">≥20%增長（vs FY25 +185%）</span> &nbsp;|&nbsp; 26/27E淨利下調：<span style="color:#fff;font-weight:700">-32%/-43%</span> &nbsp;|&nbsp; 新目標倍數：<span style="color:#fff;font-weight:700">11x end-26E P/E</span></div>
+    <div class="implication"><div class="label">投資啟示</div>Labubu增長懸崖已至，單一IP風險兌現。<span style="color:#fff;font-weight:700">回避Pop Mart</span>直至新IP複製能力獲驗證。</div>
+  </div>
+  <div class="article">
+    <div class="article-title">商湯集團 — GenAI規模化，維持買入</div>
+    <p>DBS維持商湯<span style="color:#fff;font-weight:700">買入</span>評級，目標價<span style="color:#fff;font-weight:700">HK$2.5</span>（13x FY26F EV/Sales）。商湯在中國大模型平台市場以<span style="color:#fff;font-weight:700">12%</span>份額排名第三，多模態GenAI能力（文本+圖像+音頻+視頻）為其應用開發提供優勢。預測FY25-28F收入CAGR <span style="color:#fff;font-weight:700">29%</span>，FY26F調整後EBITDA有望<span style="color:#fff;font-weight:700">轉正</span>。「1+X」策略下早期業務由獨立CEO運營，外部融資後可能去合併化，改善底線。自FY21以來裁員近<span style="color:#fff;font-weight:700">一半</span>，信用成本因現金回收改善而下降。</p>
+    <div class="data-point">FY26F收入預測：<span style="color:#fff;font-weight:700">CNY 64.9億（+29% CAGR）</span> &nbsp;|&nbsp; FY26F EBITDA：<span style="color:#fff;font-weight:700">CNY 7,120萬（首次轉正）</span> &nbsp;|&nbsp; 市佔率：<span style="color:#fff;font-weight:700">12%（中國大模型第三）</span> &nbsp;|&nbsp; 目標倍數：<span style="color:#fff;font-weight:700">13x EV/Sales（+1sd）</span></div>
+    <div class="implication"><div class="label">投資啟示</div>純AI概念股中罕見的EBITDA轉正拐點。<span style="color:#fff;font-weight:700">可作為中國AI主題配置</span>，但需監控企業AI支出放緩風險。</div>
+  </div>
+</div>
+
+<div class="callout" id="takeaways">
+  <div class="callout-title">基金經理人重點摘要</div>
+  <ul>
+    <li><strong>地緣政治：</strong>「自由計畫」引發新交火，霍爾木茲僵局長期化。油價結構性高於$100，維持能源多頭。</li>
+    <li><strong>歐洲：</strong>策略師共識僅+1%上行空間，ECB定價加息50bp。減持歐洲週期股，轉向美股及英股。</li>
+    <li><strong>美股觸底：</strong>Zweig Thrust 3月25日觸發，歷史6個月回報+7.2%。信貸環境穩定，增加淨多頭曝險。</li>
+    <li><strong>對沖基金：</strong>亞洲Gross & Net配置創歷史新高，跟隨Smart Money加倉亞洲科技及金融。</li>
+    <li><strong>Pop Mart：</strong>Labubu增長懸崖，FY26指引僅+20%。結構性重置非短期波動，回避至新IP獲驗證。</li>
+    <li><strong>商湯：</strong>FY26F EBITDA首次轉正，中國大模型第三。可作AI主題配置，目標HK$2.5。</li>
+  </ul>
+</div>
+
+<div class="nav-links">
+  <span><a href="newsletter_60_uncategorized.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="footer">
+  彭博研究摘要 | 僅供教學與討論用途 | 2026年5月17日<br>
+  資料來源：Bloomberg Intelligence, Bloomberg Economics, Bloomberg News
+</div>
+
+</body>
+</html>

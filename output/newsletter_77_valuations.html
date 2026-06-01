@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>彭博研究摘要 #77 — 估值分化：亞洲外匯、軟銀折價與SpaceX天價IPO</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --accent: #58a6ff;
+          --green: #3fb950; --red: #f85149; --yellow: #d29922; --text: #c9d1d9; --muted: #8b949e;
+          --orange: #f0883e; --purple: #bc8cff; --cyan: #39d2c0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans TC', 'Microsoft JhengHei', Helvetica, Arial, sans-serif; line-height: 1.7; padding: 20px; max-width: 860px; margin: 0 auto; }
+  h1 { color: #fff; font-size: 1.7em; margin-bottom: 4px; }
+  .subtitle { color: var(--muted); font-size: 0.9em; margin-bottom: 8px; }
+  .issue-badge { display: inline-block; background: rgba(88,166,255,0.15); color: var(--accent); padding: 3px 10px; border-radius: 12px; font-size: 0.8em; font-weight: 600; margin-bottom: 20px; }
+  .tag { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 0.72em; font-weight: 600; margin-right: 4px; }
+  .tag-rates { background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-china { background: rgba(240,136,62,0.15); color: var(--orange); }
+  .tag-japan { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-geo   { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-oil   { background: rgba(210,153,34,0.15); color: var(--yellow); }
+  .tag-trade { background: rgba(210,153,34,0.15); color: var(--yellow); }
+  .tag-growth{ background: rgba(63,185,80,0.15); color: var(--green); }
+  .tag-metals{ background: rgba(188,140,255,0.15); color: var(--purple); }
+  .tag-infl  { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-policy{ background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-val   { background: rgba(63,185,80,0.15); color: var(--green); }
+  .tag-vol   { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-semi  { background: rgba(57,210,192,0.15); color: var(--cyan); }
+  .tag-credit{ background: rgba(188,140,255,0.15); color: var(--purple); }
+  .tag-space { background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-misc  { background: rgba(139,148,158,0.15); color: var(--muted); }
+  .section { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 16px; }
+  .section h2 { color: #fff; font-size: 1.15em; margin-bottom: 12px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+  .section h3 { color: var(--accent); font-size: 0.95em; margin: 14px 0 6px; }
+  .article { margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .article:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .article-title { color: #fff; font-weight: 700; font-size: 0.95em; margin-bottom: 4px; }
+  .article-title-cn { color: var(--muted); font-size: 0.85em; margin-bottom: 8px; }
+  .article p { font-size: 0.9em; margin: 6px 0; }
+  .data-point { background: rgba(255,255,255,0.03); padding: 8px 12px; border-radius: 6px; margin: 8px 0; font-size: 0.85em; }
+  .data-point .num { color: #fff; font-weight: 700; }
+  .implication { background: rgba(88,166,255,0.06); border-left: 3px solid var(--accent); padding: 10px 14px; margin: 10px 0; border-radius: 0 6px 6px 0; font-size: 0.88em; }
+  .implication .label { color: var(--accent); font-weight: 700; font-size: 0.8em; text-transform: uppercase; margin-bottom: 4px; }
+  .callout { background: rgba(210,153,34,0.08); border: 1px solid rgba(210,153,34,0.3); border-radius: 6px; padding: 16px; margin: 16px 0; }
+  .callout-title { color: var(--yellow); font-weight: 700; font-size: 0.95em; margin-bottom: 8px; }
+  .callout ul { padding-left: 18px; }
+  .callout li { margin: 4px 0; font-size: 0.88em; }
+  ul { padding-left: 18px; }
+  li { margin: 3px 0; font-size: 0.88em; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(255,255,255,0.03); padding: 12px; border-radius: 6px; text-align: center; }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: #fff; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
+  .toc { background: rgba(88,166,255,0.05); border: 1px solid rgba(88,166,255,0.2); border-radius: 8px; padding: 16px 20px; margin-bottom: 20px; }
+  .toc-title { color: var(--accent); font-weight: 700; font-size: 0.9em; margin-bottom: 8px; }
+  .toc a { color: var(--accent); text-decoration: none; font-size: 0.88em; }
+  .toc a:hover { text-decoration: underline; }
+  .toc ol { padding-left: 20px; }
+  .toc li { margin: 4px 0; }
+  .nav-links { display: flex; justify-content: space-between; margin: 20px 0; font-size: 0.85em; }
+  .nav-links a { color: var(--accent); text-decoration: none; }
+  .nav-links a:hover { text-decoration: underline; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(255,255,255,0.03); padding: 12px; border-radius: 6px; text-align: center; }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: #fff; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
+  .footer { text-align: center; color: var(--muted); font-size: 0.75em; margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--border); }
+</style>
+<script>if(window.self===window.top&&sessionStorage.getItem("student_auth")!=="1"){document.body.innerHTML="";window.location.replace("student.html");}</script>
+</head>
+<body>
+
+<h1>彭博研究摘要</h1>
+<p class="subtitle">第77期 | 估值分化：亞洲外匯、軟銀折價與SpaceX天價IPO</p>
+<span class="issue-badge">2026年五月中旬更新</span>
+
+<div class="nav-links">
+  <span><a href="newsletter_76_credit.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="toc">
+  <div class="toc-title">目錄</div>
+  <ol>
+    <li><a href="#asia-fx-valuation">亞洲外匯 伊朗戰爭加劇亞幣估值分化</a></li>
+    <li><a href="#softbank-nav">科技估值 軟銀NAV折價擴至43%，OpenAI成勝負手</a></li>
+    <li><a href="#spacex-ipo">IPO SpaceX瞄準$2萬億IPO，市銷率破百倍</a></li>
+    <li><a href="#takeaways">基金經理人重點摘要</a></li>
+  </ol>
+</div>
+
+<div class="section" id="asia-fx-valuation">
+  <h2><span class="tag tag-misc">亞洲外匯</span> 伊朗戰爭加劇亞幣估值分化</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--red)">-18.6%</div><div class="lbl">韓元低估幅度
+亞洲最被低估貨幣</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">+4.3%</div><div class="lbl">人民幣高估幅度
+避險需求推動</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">+8%</div><div class="lbl">美元高估幅度
+(BIS REER)</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">BI BEER模型：伊朗戰爭下亞洲貨幣估值持續分化</div>
+    <p>彭博行業研究的行為均衡匯率(BI BEER)模型顯示，伊朗衝突期間美元整體走強，亞洲貨幣兌美元的估值分化態勢延續。<span style="color:#fff;font-weight:700">人民幣高估4.3%</span>、<span style="color:#fff;font-weight:700">新加坡元高估3.9%</span>，兩者均受避險需求支撐；反觀<span style="color:#fff;font-weight:700">韓元低估18.6%</span>，為亞洲最被低估貨幣，引發美國關注。模型亦揭示驅動因子已出現結構性輪換：相對貿易條件重要性上升，取代通膨差成為多數亞幣主導因素；利率差則成為人民幣和台幣的核心驅動力。台幣接近公允價值（僅低估<span style="color:#fff;font-weight:700">0.4%</span>），馬來西亞令吉高估<span style="color:#fff;font-weight:700">5.4%</span>，泰銖高估幅度從7.0%收窄至<span style="color:#fff;font-weight:700">4.7%</span>，反映能源衝擊對石油進口國的壓力。</p>
+    <div class="data-point">韓元低估：<span style="color:#fff;font-weight:700">18.6%</span>（10年均值亦低估16.8%） &nbsp;|&nbsp; 人民幣高估：<span style="color:#fff;font-weight:700">4.3%</span> &nbsp;|&nbsp; 新加坡元高估：<span style="color:#fff;font-weight:700">3.9%</span>（MAS 4/14收緊前） &nbsp;|&nbsp; 台幣低估：<span style="color:#fff;font-weight:700">0.4%</span>（接近公允價值）</div>
+    <div class="implication"><div class="label">投資啟示</div>韓元低估嚴重但模型解釋力弱，回歸概率低——<span style="color:#fff;font-weight:700">暫不追多韓元</span>。人民幣避險溢價若戰事緩和將收斂——<span style="color:#fff;font-weight:700">留意做空CNH的時機</span>。新加坡元在MAS收緊+避險雙重支撐下短期偏強——<span style="color:#fff;font-weight:700">維持新加坡元多頭</span>。</div>
+  </div>
+</div>
+
+<div class="section" id="softbank-nav">
+  <h2><span class="tag tag-misc">科技估值</span> 軟銀NAV折價擴至43%，OpenAI成勝負手</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--red)">-43%</div><div class="lbl">NAV折價幅度
+（年初至今擴大22.4ppt）</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">¥3,578</div><div class="lbl">軟銀股價
+（年初至今-18.7%）</div></div>
+    <div class="stat"><div class="val">$7,300億</div><div class="lbl">OpenAI估值假設
+（每$1000億波動=NAV 4.7%）</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">摩根士丹利：軟銀NAV折價擴大至-43%，OpenAI佔比攀升</div>
+    <p>摩根士丹利追蹤顯示，軟銀集團NAV折價從年初的<span style="color:#fff;font-weight:700">-18.1%</span>急劇擴大至<span style="color:#fff;font-weight:700">-43.4%</span>，回到2022-2024年的深度折價區間。股價年初至今下跌<span style="color:#fff;font-weight:700">18.7%</span>至¥3,578，而NAV反升<span style="color:#fff;font-weight:700">13.5%</span>至¥6,300。NAV結構劇變：<span style="color:#fff;font-weight:700">OpenAI佔比從年初28%升至35%</span>，成為最大單一資產；ARM佔比從41%降至25%，反映ARM股價年初至今僅漲3%而OpenAI估值飆升。摩根士丹利給予Equal-weight評級，目標價¥6,000。關鍵敏感度：OpenAI估值每波動<span style="color:#fff;font-weight:700">$1,000億</span>，軟銀NAV變動<span style="color:#fff;font-weight:700">4.7%</span>（每股¥299）。淨負債佔比-22%，槓桿壓力可控。</p>
+    <div class="data-point">NAV折價：<span style="color:#fff;font-weight:700">-43%</span>（YTD擴大22.4ppt） &nbsp;|&nbsp; OpenAI佔NAV：<span style="color:#fff;font-weight:700">35%</span>（年初28%） &nbsp;|&nbsp; ARM佔NAV：<span style="color:#fff;font-weight:700">25%</span>（年初41%） &nbsp;|&nbsp; 目標價：<span style="color:#fff;font-weight:700">¥6,000</span>（vs現價¥3,578）</div>
+    <div class="implication"><div class="label">投資啟示</div>NAV折價已回到歷史極端水平，但OpenAI集中度風險極高。若看好AI估值持續擴張——<span style="color:#fff;font-weight:700">逢低佈局9984.T，目標折價收窄至-30%</span>；若擔憂AI泡沫——<span style="color:#fff;font-weight:700">避開或對沖ARM下行風險</span>。</div>
+  </div>
+</div>
+
+<div class="section" id="spacex-ipo">
+  <h2><span class="tag tag-misc">IPO</span> SpaceX瞄準$2萬億IPO，市銷率破百倍</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--orange)">$2萬億+</div><div class="lbl">目標估值
+（兩周前為$1.75萬億）</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">&gt;100x</div><div class="lbl">市銷率(P/S)
+（超越Palantir 79x）</div></div>
+    <div class="stat"><div class="val">~$200億</div><div class="lbl">2026年預估營收
+（火箭+星鏈）</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">SpaceX啟動IPO項目推介，$2萬億估值面臨壓力測試</div>
+    <p>知情人士透露，SpaceX與xAI合併後兩個月，投行團隊即將啟動一系列會議，對<span style="color:#fff;font-weight:700">超過$2萬億</span>的目標估值進行壓力測試——較兩周前的<span style="color:#fff;font-weight:700">$1.75萬億</span>預期再度上調。若成功上市，SpaceX市值將僅次於輝達、蘋果、Alphabet、微軟和亞馬遜，超越Meta及特斯拉。彭博行業研究估計2026年火箭發射+星鏈收入接近<span style="color:#fff;font-weight:700">$200億</span>，xAI收入不足<span style="color:#fff;font-weight:700">$10億</span>，意味著市銷率超過<span style="color:#fff;font-weight:700">100倍</span>——遠超Palantir的79倍。巴克萊前高管直言「用數學解釋不了這個估值」。公司計畫6月上市前再進行兩次火箭試飛，PitchBook分析師警告任一次失敗都可能令IPO擱淺。馬斯克本人在X平台對$2萬億目標表示質疑。</p>
+    <div class="data-point">目標估值：<span style="color:#fff;font-weight:700">&gt;$2萬億</span>（兩周內上調14%） &nbsp;|&nbsp; 2026E營收：<span style="color:#fff;font-weight:700">~$200億</span>（火箭+星鏈） &nbsp;|&nbsp; xAI營收：<span style="color:#fff;font-weight:700">&lt;$10億</span> &nbsp;|&nbsp; IPO募資規模：<span style="color:#fff;font-weight:700">$750億</span>（全球最高紀錄）</div>
+    <div class="implication"><div class="label">投資啟示</div>估值純粹建立在敘事而非基本面之上，P/S 100x+為極端水平。<span style="color:#fff;font-weight:700">不建議打新追高</span>——等上市後鎖定期屆滿再評估。關注兩次試飛結果作為催化劑/風險事件。</div>
+  </div>
+</div>
+
+<div class="callout" id="takeaways">
+  <div class="callout-title">基金經理人重點摘要</div>
+  <ul>
+    <li><strong>亞洲外匯：</strong>韓元低估18.6%但回歸動力弱，人民幣避險溢價4.3%。貿易條件取代通膨差成主導因子——**關注戰後因子輪換**。</li>
+    <li><strong>新加坡元：</strong>MAS收緊+避險雙重支撐，高估3.9%但短期仍偏強——**維持多頭至風險情緒改善**。</li>
+    <li><strong>軟銀：</strong>NAV折價-43%回到極端區間，OpenAI佔比升至35%成最大風險/機遇。**逢低佈局需確信AI估值不崩**。</li>
+    <li><strong>SpaceX IPO：</strong>$2萬億估值對應P/S >100x，純靠敘事驅動。**不追新股，等鎖定期後再議**。</li>
+    <li><strong>風險事件：</strong>伊朗戰爭走向（亞幣分化收斂）、SpaceX試飛成敗（6月IPO存廢）、OpenAI下一輪估值（軟銀NAV核心變量）。</li>
+  </ul>
+</div>
+
+<div class="nav-links">
+  <span><a href="newsletter_76_credit.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="footer">
+  彭博研究摘要 | 僅供教學與討論用途 | 2026年5月17日<br>
+  資料來源：Bloomberg Intelligence, Bloomberg Economics, Bloomberg News
+</div>
+
+</body>
+</html>

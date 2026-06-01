@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>彭博研究摘要 #64 — 油價、通膨與獨角獸——多重風暴下的市場定位</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --accent: #58a6ff;
+          --green: #3fb950; --red: #f85149; --yellow: #d29922; --text: #c9d1d9; --muted: #8b949e;
+          --orange: #f0883e; --purple: #bc8cff; --cyan: #39d2c0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans TC', 'Microsoft JhengHei', Helvetica, Arial, sans-serif; line-height: 1.7; padding: 20px; max-width: 860px; margin: 0 auto; }
+  h1 { color: #fff; font-size: 1.7em; margin-bottom: 4px; }
+  .subtitle { color: var(--muted); font-size: 0.9em; margin-bottom: 8px; }
+  .issue-badge { display: inline-block; background: rgba(88,166,255,0.15); color: var(--accent); padding: 3px 10px; border-radius: 12px; font-size: 0.8em; font-weight: 600; margin-bottom: 20px; }
+  .tag { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 0.72em; font-weight: 600; margin-right: 4px; }
+  .tag-rates { background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-china { background: rgba(240,136,62,0.15); color: var(--orange); }
+  .tag-japan { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-geo   { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-oil   { background: rgba(210,153,34,0.15); color: var(--yellow); }
+  .tag-trade { background: rgba(210,153,34,0.15); color: var(--yellow); }
+  .tag-growth{ background: rgba(63,185,80,0.15); color: var(--green); }
+  .tag-metals{ background: rgba(188,140,255,0.15); color: var(--purple); }
+  .tag-infl  { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-policy{ background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-val   { background: rgba(63,185,80,0.15); color: var(--green); }
+  .tag-vol   { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-semi  { background: rgba(57,210,192,0.15); color: var(--cyan); }
+  .tag-credit{ background: rgba(188,140,255,0.15); color: var(--purple); }
+  .tag-space { background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-misc  { background: rgba(139,148,158,0.15); color: var(--muted); }
+  .section { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 16px; }
+  .section h2 { color: #fff; font-size: 1.15em; margin-bottom: 12px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+  .section h3 { color: var(--accent); font-size: 0.95em; margin: 14px 0 6px; }
+  .article { margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .article:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .article-title { color: #fff; font-weight: 700; font-size: 0.95em; margin-bottom: 4px; }
+  .article-title-cn { color: var(--muted); font-size: 0.85em; margin-bottom: 8px; }
+  .article p { font-size: 0.9em; margin: 6px 0; }
+  .data-point { background: rgba(255,255,255,0.03); padding: 8px 12px; border-radius: 6px; margin: 8px 0; font-size: 0.85em; }
+  .data-point .num { color: #fff; font-weight: 700; }
+  .implication { background: rgba(88,166,255,0.06); border-left: 3px solid var(--accent); padding: 10px 14px; margin: 10px 0; border-radius: 0 6px 6px 0; font-size: 0.88em; }
+  .implication .label { color: var(--accent); font-weight: 700; font-size: 0.8em; text-transform: uppercase; margin-bottom: 4px; }
+  .callout { background: rgba(210,153,34,0.08); border: 1px solid rgba(210,153,34,0.3); border-radius: 6px; padding: 16px; margin: 16px 0; }
+  .callout-title { color: var(--yellow); font-weight: 700; font-size: 0.95em; margin-bottom: 8px; }
+  .callout ul { padding-left: 18px; }
+  .callout li { margin: 4px 0; font-size: 0.88em; }
+  ul { padding-left: 18px; }
+  li { margin: 3px 0; font-size: 0.88em; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(255,255,255,0.03); padding: 12px; border-radius: 6px; text-align: center; }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: #fff; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
+  .toc { background: rgba(88,166,255,0.05); border: 1px solid rgba(88,166,255,0.2); border-radius: 8px; padding: 16px 20px; margin-bottom: 20px; }
+  .toc-title { color: var(--accent); font-weight: 700; font-size: 0.9em; margin-bottom: 8px; }
+  .toc a { color: var(--accent); text-decoration: none; font-size: 0.88em; }
+  .toc a:hover { text-decoration: underline; }
+  .toc ol { padding-left: 20px; }
+  .toc li { margin: 4px 0; }
+  .nav-links { display: flex; justify-content: space-between; margin: 20px 0; font-size: 0.85em; }
+  .nav-links a { color: var(--accent); text-decoration: none; }
+  .nav-links a:hover { text-decoration: underline; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(255,255,255,0.03); padding: 12px; border-radius: 6px; text-align: center; }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: #fff; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
+  .footer { text-align: center; color: var(--muted); font-size: 0.75em; margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--border); }
+</style>
+<script>if(window.self===window.top&&sessionStorage.getItem("student_auth")!=="1"){document.body.innerHTML="";window.location.replace("student.html");}</script>
+</head>
+<body>
+
+<h1>彭博研究摘要</h1>
+<p class="subtitle">第64期 | 油價、通膨與獨角獸——多重風暴下的市場定位</p>
+<span class="issue-badge">2026年五月中旬更新</span>
+
+<div class="nav-links">
+  <span><a href="newsletter_63_uncategorized.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="toc">
+  <div class="toc-title">目錄</div>
+  <ol>
+    <li><a href="#iran-oil">地緣政治 伊朗停火未定，油價承壓但未破頂</a></li>
+    <li><a href="#us-inflation">美國通膨 CPI表面火熱，核心實則降溫</a></li>
+    <li><a href="#ipo-unicorns">IPO市場 獨角獸狂奔，指數基金小心踩踏</a></li>
+    <li><a href="#ubs-banks">歐洲銀行 UBS太賺錢的煩惱：資本戰爭升溫</a></li>
+    <li><a href="#us-labor">美國就業 就業放緩但未惡化，Fed兩難持續</a></li>
+    <li><a href="#takeaways">基金經理人重點摘要</a></li>
+  </ol>
+</div>
+
+<div class="section" id="iran-oil">
+  <h2><span class="tag tag-geo">地緣政治</span> 伊朗停火未定，油價承壓但未破頂</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--orange)">$108</div><div class="lbl">布蘭特原油
+（暫停護航後回落）</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">10%+</div><div class="lbl">全球石油供應
+受霍爾木茲海峽中斷</div></div>
+    <div class="stat"><div class="val">11-12.5M桶/日</div><div class="lbl">市場吸震能力
+（庫存+需求毀滅）</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">特朗普暫停霍爾木茲護航計劃 試圖達成伊朗協議</div>
+    <p>特朗普宣布暫停「自由計畫」（Project Freedom）護航行動，聲稱與伊朗代表取得「重大進展」。巴基斯坦等國斡旋下，美方試圖降溫局勢。然而伊朗堅持其紅線——不拆除核計畫、釋放凍結資產、保證不再遭受攻擊。國務卿魯比奧表示攻擊行動已結束，但同日仍有貨船遭襲。布蘭特原油在消息後跌向 <span style="color:#fff;font-weight:700">$108</span>，WTI接近 <span style="color:#fff;font-weight:700">$100</span>。共和黨擔憂油價高企影響中期選舉，推動白宮尋求外交出路，但通往重開海峽的路徑仍然遙遠。</p>
+    <div class="data-point">布蘭特原油：<span style="color:#fff;font-weight:700">$108/桶</span> &nbsp;|&nbsp; WTI：<span style="color:#fff;font-weight:700">~$100/桶</span> &nbsp;|&nbsp; 海峽狀態：<span style="color:#fff;font-weight:700">自2月底戰爭以來大致關閉</span> &nbsp;|&nbsp; 美方立場：攻勢結束，轉向護航</div>
+    <div class="implication"><div class="label">投資啟示</div>油價短期回落但庫存緩衝最早9月見底。<span style="color:#fff;font-weight:700">做多遠期原油期貨（Q4合約）</span>，短期可減持近月多頭。</div>
+  </div>
+  <div class="article">
+    <div class="article-title">特朗普擔心$200油價 — 為何仍不太可能</div>
+    <p>儘管霍爾木茲海峽中斷至少 <span style="color:#fff;font-weight:700">10%</span> 全球石油供應，Bloomberg Economics認為油價不會觸及$200。三大「吸震器」正在發揮作用：原先預計的全球過剩已被抹平、庫存持續下降、需求毀滅（轉用替代能源或減少消費），合計吸收 <span style="color:#fff;font-weight:700">11-12.5百萬桶/日</span> 的供應缺口。但庫存是薄弱環節——部分估計最早 <span style="color:#fff;font-weight:700">9月</span> 觸底。一旦庫存耗盡，市場將被迫面對更深度的需求毀滅或其他產區增產。法國與英國海軍已駛向紅海，但預計僅在停火後才會進入海峽。</p>
+    <div class="data-point">供應中斷：<span style="color:#fff;font-weight:700">≥10%全球產量</span> &nbsp;|&nbsp; 吸震能力：<span style="color:#fff;font-weight:700">11-12.5M桶/日</span> &nbsp;|&nbsp; 庫存觸底風險：<span style="color:#fff;font-weight:700">最早9月</span> &nbsp;|&nbsp; 第四管道（增產）：<span style="color:#fff;font-weight:700">尚未啟動</span></div>
+    <div class="implication"><div class="label">投資啟示</div>Q3前油價受控，但庫存耗盡後風險急升。<span style="color:#fff;font-weight:700">增持能源股對沖尾部風險</span>，關注OPEC+增產信號。</div>
+  </div>
+</div>
+
+<div class="section" id="us-inflation">
+  <h2><span class="tag tag-misc">美國通膨</span> CPI表面火熱，核心實則降溫</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--orange)">3.7%</div><div class="lbl">4月CPI年率
+（預測值）</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">0.36%</div><div class="lbl">核心CPI月率
+（含BLS租金修正）</div></div>
+    <div class="stat"><div class="val" style="color:var(--green)">-50bp</div><div class="lbl">Fed年底降息預期
+（Bloomberg Economics）</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">BLS技術調整將掩蓋核心CPI的實際降溫</div>
+    <p>Bloomberg Economics預測4月CPI整體月率 <span style="color:#fff;font-weight:700">+0.58%</span>，核心月率 <span style="color:#fff;font-weight:700">+0.36%</span>，年率分別升至 <span style="color:#fff;font-weight:700">3.7%</span> 和 <span style="color:#fff;font-weight:700">2.7%</span>。表面火熱的主因是伊朗戰爭推高汽油（+7%）和機票價格，加上BLS修正去年10月政府停擺造成的租金失真——主要租金預計跳升 <span style="color:#fff;font-weight:700">0.45%</span>（前值0.19%），OER達 <span style="color:#fff;font-weight:700">0.57%</span>。但剔除租金修正後，核心實際偏冷：關稅敏感商品正在通縮，酒店、租車等可選服務亦在降價。這與2025年4月加關稅後的格局相似——可選服務通縮抵消了商品漲價。BE因此認為Fed仍可在年底 <span style="color:#fff;font-weight:700">降息50bp</span>。</p>
+    <div class="data-point">汽油月漲：<span style="color:#fff;font-weight:700">+7%</span> &nbsp;|&nbsp; 主要租金月率：<span style="color:#fff;font-weight:700">+0.45%</span>（vs 前值0.19%） &nbsp;|&nbsp; 電腦及配件：<span style="color:#fff;font-weight:700">持續漲價（芯片瓶頸）</span> &nbsp;|&nbsp; 可選服務：<span style="color:#fff;font-weight:700">通縮中</span></div>
+    <div class="implication"><div class="label">投資啟示</div>CPI數據噪音大，市場可能誤讀為鷹派。<span style="color:#fff;font-weight:700">逢高做多2年期美債</span>，押注Fed下半年降息窗口。</div>
+  </div>
+  <div class="article">
+    <div class="article-title">核心零售銷售料放緩 汽油支撐整體數據</div>
+    <p>4月零售銷售整體預計增長 <span style="color:#fff;font-weight:700">0.3%</span>（前值1.7%），主因復活節提前至3月拉動需求前置。汽油站消費仍有提振（季調後油價月漲5.4%），但遠低於3月的21%飆升。控制組銷售（剔除汽車、汽油、餐飲、建材）預計僅增 <span style="color:#fff;font-weight:700">0.2%</span>（前值0.7%）。Bloomberg Second Measure數據顯示4月消費全面回落，反映節日錯位效應多於油價擠出。服裝、鞋類、糖果等品類需求已在3月提前釋放。</p>
+    <div class="data-point">整體零售月率：<span style="color:#fff;font-weight:700">+0.3%</span>（vs 3月+1.7%） &nbsp;|&nbsp; 控制組：<span style="color:#fff;font-weight:700">+0.2%</span> &nbsp;|&nbsp; 汽油季調月漲：<span style="color:#fff;font-weight:700">+5.4%</span> &nbsp;|&nbsp; 汽車年化銷量：<span style="color:#fff;font-weight:700">15.92M</span>（低於共識16.0M）</div>
+    <div class="implication"><div class="label">投資啟示</div>消費動能放緩但未崩塌，支持「軟著陸但增長減速」敘事。<span style="color:#fff;font-weight:700">減持可選消費股</span>，等待Q2數據確認趨勢。</div>
+  </div>
+</div>
+
+<div class="section" id="ipo-unicorns">
+  <h2><span class="tag tag-misc">IPO市場</span> 獨角獸狂奔，指數基金小心踩踏</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val">1,727</div><div class="lbl">全球獨角獸數量
+（2026年Q1）</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">3-5%</div><div class="lbl">IPO後首年
+學術研究跑輸大盤</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">SpaceX+OpenAI</div><div class="lbl">今年計畫上市
+超級獨角獸</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">獨角獸踩踏——IPO潮可能抽乾指數資金</div>
+    <p>John Authers警告：全球獨角獸已達 <span style="color:#fff;font-weight:700">1,727家</span>（Q1新增70家），SpaceX、OpenAI等巨頭計畫今年IPO。歷史教訓沉重——2011年Glencore IPO精準標記大宗商品頂部，2007年Blackstone IPO後兩年內跌逾 <span style="color:#fff;font-weight:700">80%</span>，均為內部人「知道何時賣」的經典案例。學術研究顯示IPO後公司平均跑輸大盤 <span style="color:#fff;font-weight:700">3%-5%</span>。更深層問題：這些巨型IPO將即刻進入市值加權指數，被動資金被迫買入高估值新股，同時大量現金從市場被抽走。私募市場自疫情以來大幅跑贏公開市場的超額回報，將永遠屬於現有私募投資人而非指數基金持有者。</p>
+    <div class="data-point">全球獨角獸：<span style="color:#fff;font-weight:700">1,727家</span> &nbsp;|&nbsp; Q1新增：<span style="color:#fff;font-weight:700">70家</span> &nbsp;|&nbsp; IPO後跑輸：<span style="color:#fff;font-weight:700">3-5%/年</span> &nbsp;|&nbsp; Blackstone 2007 IPO後跌幅：<span style="color:#fff;font-weight:700">&gt;80%</span></div>
+    <div class="implication"><div class="label">投資啟示</div>超級IPO將稀釋指數回報並抽走流動性。<span style="color:#fff;font-weight:700">減持被動指數ETF權重</span>，考慮在IPO密集期轉向主動選股或防禦配置。</div>
+  </div>
+</div>
+
+<div class="section" id="ubs-banks">
+  <h2><span class="tag tag-misc">歐洲銀行</span> UBS太賺錢的煩惱：資本戰爭升溫</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--green)">$30億</div><div class="lbl">UBS預計下半年
+新一輪回購</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">$220億</div><div class="lbl">瑞士擬加碼
+資本要求</div></div>
+    <div class="stat"><div class="val" style="color:var(--green)">+29%</div><div class="lbl">UBS股票交易收入
+Q1同比增長</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">UBS的煩惱：太賺錢反成政治把柄</div>
+    <p>UBS Q1業績亮眼——全球股票交易收入同比增 <span style="color:#fff;font-weight:700">29%</span>（vs 高盛27%），亞洲對沖基金業務守住陣地。分析師確信下半年將啟動 <span style="color:#fff;font-weight:700">$30億</span> 新回購計畫。但強勁業績恰好成為瑞士政府加碼監管的彈藥：財政部長Keller-Sutter威脅若國會對資本改革「手軟」將撤回已有讓步，甚至指控部分議員因擔心失去UBS政治獻金而不敢發聲。改革方案可能帶來約 <span style="color:#fff;font-weight:700">$220億</span> 額外資本要求，UBS稱之為「極端且不成比例」。CEO Ermotti暗示若法案通過，貸款可能縮減、裁員難免。伊朗戰爭帶來的波動性反而助推了投行和財富管理收入。</p>
+    <div class="data-point">Q1股票交易：<span style="color:#fff;font-weight:700">+29% YoY</span> &nbsp;|&nbsp; 預計回購：<span style="color:#fff;font-weight:700">$30億（H2 2026）</span> &nbsp;|&nbsp; 資本加碼風險：<span style="color:#fff;font-weight:700">~$220億</span> &nbsp;|&nbsp; 亞洲股票業務：<span style="color:#fff;font-weight:700">未失守高盛攻勢</span></div>
+    <div class="implication"><div class="label">投資啟示</div>UBS短期盈利強勁但監管不確定性壓估值。<span style="color:#fff;font-weight:700">觀望瑞士國會投票結果</span>，若資本要求低於$150億則為買入信號。</div>
+  </div>
+</div>
+
+<div class="section" id="us-labor">
+  <h2><span class="tag tag-misc">美國就業</span> 就業放緩但未惡化，Fed兩難持續</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--orange)">+57K</div><div class="lbl">4月非農預測
+（BE估計）</div></div>
+    <div class="stat"><div class="val">4.24%</div><div class="lbl">失業率預測
+（微降）</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">15.92M</div><div class="lbl">4月汽車年化銷量
+（低於去年均值）</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">非農料放緩至57K 失業率微降</div>
+    <p>Bloomberg Economics預測4月非農僅增 <span style="color:#fff;font-weight:700">57K</span>（前值178K），低於共識的60K。專業及商業服務、數據中心建設和物流業仍在招聘，但休閒及酒店業大幅拖累。失業率預計微降至 <span style="color:#fff;font-weight:700">4.24%</span>（前值4.26%），仍高於穩定就業所需的增長速度。JOLTS數據方面，職位空缺料持平，辭職率維持在 <span style="color:#fff;font-weight:700">1.9%</span> 的低位，反映勞動者對就業市場信心下降。整體圖景：就業市場降溫但未惡化，Fed在通膨與增長之間的平衡鋼索更加難走。</p>
+    <div class="data-point">BE非農預測：<span style="color:#fff;font-weight:700">+57K</span>（vs 共識60K） &nbsp;|&nbsp; 失業率：<span style="color:#fff;font-weight:700">4.24%</span> &nbsp;|&nbsp; 辭職率：<span style="color:#fff;font-weight:700">1.9%</span> &nbsp;|&nbsp; 休閒酒店：<span style="color:#fff;font-weight:700">拖累主因</span></div>
+    <div class="implication"><div class="label">投資啟示</div>就業數據支持Fed按兵不動但保留年底降息選項。<span style="color:#fff;font-weight:700">維持中性久期</span>，等待5月CPI確認通膨路徑。</div>
+  </div>
+</div>
+
+<div class="callout" id="takeaways">
+  <div class="callout-title">基金經理人重點摘要</div>
+  <ul>
+    <li><strong>油價：</strong>霍爾木茲海峽仍關閉但護航暫停顯示外交窗口。庫存緩衝最早9月耗盡——**做多Q4遠期原油合約**對沖尾部風險。</li>
+    <li><strong>通膨：</strong>4月CPI表面火熱（3.7%）但核心剔除BLS租金修正後偏冷。Fed年底降息50bp仍在桌上——**逢高做多2年期美債**。</li>
+    <li><strong>消費：</strong>零售控制組僅+0.2%，復活節錯位+油價擠出效應。**減持可選消費**，等Q2確認。</li>
+    <li><strong>IPO風險：</strong>SpaceX、OpenAI等超級獨角獸IPO將抽走指數流動性。歷史顯示IPO後跑輸3-5%——**降低被動指數權重**。</li>
+    <li><strong>UBS：</strong>Q1股票交易+29%，但瑞士$220億資本加碼懸而未決。**觀望國會投票**再定多空。</li>
+    <li><strong>就業：</strong>非農料僅+57K，就業放緩但未崩。Fed兩難持續——**維持中性久期配置**。</li>
+  </ul>
+</div>
+
+<div class="nav-links">
+  <span><a href="newsletter_63_uncategorized.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="footer">
+  彭博研究摘要 | 僅供教學與討論用途 | 2026年5月17日<br>
+  資料來源：Bloomberg Intelligence, Bloomberg Economics, Bloomberg News
+</div>
+
+</body>
+</html>

@@ -1,0 +1,4 @@
+{
+  "_comment": "DEPRECATED: This file is no longer the source of truth. The authoritative alert routing config lives in jarvis-alerts repo: jarvis-alerts/src/jarvis_alerting/data/alert_routing.json. Set JARVIS_ALERTING_ROUTING_OVERRIDE_PATH to point to a local override file if needed.",
+  "_authoritative_source": "../jarvis-alerts/src/jarvis_alerting/data/alert_routing.json"
+}

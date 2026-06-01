@@ -1,0 +1,139 @@
+{
+  "polling_interval_minutes": 120,
+  "score_threshold": 60,
+  "max_alerts_per_day": 10,
+  "tweets_per_account": 10,
+  "telegram_bot_token_env": "TELEGRAM_BOT_TOKEN_OPS",
+  "telegram_chat_id_env": "TELEGRAM_CHAT_ID_OPS",
+  "state_file": "scraped_data/twitter/fintwit_state.json",
+  "log_file": "outputs/ops/fintwit_monitor.log",
+
+  "scoring_weights": {
+    "account": 0.30,
+    "content": 0.40,
+    "engagement": 0.20,
+    "recency": 0.10
+  },
+
+  "accounts": [
+    {"handle": "michaeljburry",  "name": "Michael Burry",          "tier": 1, "tags": ["macro", "value", "short"]},
+    {"handle": "BillAckman",     "name": "Bill Ackman",            "tier": 1, "tags": ["activist", "macro"]},
+    {"handle": "Carl_C_Icahn",   "name": "Carl Icahn",             "tier": 1, "tags": ["activist"]},
+    {"handle": "chamath",        "name": "Chamath Palihapitiya",   "tier": 1, "tags": ["tech", "macro"]},
+
+    {"handle": "dampedspring",   "name": "Andy Constan",           "tier": 2, "tags": ["macro", "vol"]},
+    {"handle": "BobEUnlimited",  "name": "Bob Elliott",            "tier": 2, "tags": ["macro"]},
+    {"handle": "LukeGromen",     "name": "Luke Gromen",            "tier": 2, "tags": ["fiscal", "gold"]},
+    {"handle": "SantiagoAuFund", "name": "Santiago Capital",       "tier": 2, "tags": ["gold", "macro"]},
+    {"handle": "jam_croissant",  "name": "Cem Karsan",             "tier": 2, "tags": ["vol", "gamma", "options"]},
+    {"handle": "KevinLMak",      "name": "Kevin Mak",              "tier": 2, "tags": ["stocks", "picker"]},
+    {"handle": "Speculator_io",  "name": "Speculator",             "tier": 2, "tags": ["stocks", "picker"]},
+
+    {"handle": "Peter_Atwater",  "name": "Peter Atwater",          "tier": 3, "tags": ["sentiment"]},
+    {"handle": "markbspiegel",   "name": "Mark Spiegel",           "tier": 3, "tags": ["short"]},
+    {"handle": "AlderLaneeggs",  "name": "Nate Anderson",          "tier": 3, "tags": ["short", "forensic"]},
+    {"handle": "muddywatersre",  "name": "Muddy Waters Research",  "tier": 3, "tags": ["short"]},
+    {"handle": "jessefelder",    "name": "Jesse Felder",           "tier": 3, "tags": ["valuation"]},
+    {"handle": "josephwang",     "name": "Joseph Wang",            "tier": 3, "tags": ["rates", "fed"]},
+
+    {"handle": "Fxhedgers",      "name": "FXHedge",                "tier": 4, "tags": ["breaking"]},
+    {"handle": "WallStreetSilv", "name": "WallStreetSilver",       "tier": 4, "tags": ["metals", "macro"]},
+    {"handle": "MacroAlf",       "name": "Alfonso Peccatiello",    "tier": 4, "tags": ["macro", "rates"]},
+    {"handle": "GameofTrades_",  "name": "Game of Trades",         "tier": 4, "tags": ["technical", "macro"]},
+    {"handle": "unusual_whales", "name": "Unusual Whales",         "tier": 4, "tags": ["options", "flow"]},
+    {"handle": "DeItaone",       "name": "Walter Bloomberg",       "tier": 4, "tags": ["breaking"]},
+    {"handle": "elerianm",       "name": "Mohamed El-Erian",       "tier": 4, "tags": ["macro"]},
+    {"handle": "Hedgeye",        "name": "Hedgeye",                "tier": 4, "tags": ["risk", "quad"]},
+    {"handle": "PeterSchiff",    "name": "Peter Schiff",           "tier": 4, "tags": ["gold", "bearish"]},
+
+    {"handle": "KingKong9888",   "name": "KingKong",               "tier": 3, "tags": ["commodities"]},
+    {"handle": "JavierBlas",     "name": "Javier Blas",            "tier": 3, "tags": ["commodities", "energy"]},
+    {"handle": "PTM_Ltd",        "name": "PTM",                    "tier": 3, "tags": ["metals"]},
+    {"handle": "profitsplusid",  "name": "ProfitsPlus",            "tier": 3, "tags": ["commodities"]}
+  ],
+
+  "min_content_score": 15,
+
+  "tier_scores": {
+    "1": 100,
+    "2": 85,
+    "3": 75,
+    "4": 60
+  },
+
+  "content_signals": {
+    "high_conviction": {
+      "patterns": ["extremely", "absurdly", "10x", "100x", "asymmetric", "mispriced", "generational", "once in a lifetime", "biggest opportunity", "no-brainer"],
+      "weight": 15
+    },
+    "direction": {
+      "patterns": [
+        "(?:go|going|went|been|am|i'm|we're|we are|still|remain|stay|get)\\s+long\\b",
+        "\\blong\\s+(?:\\$[a-z]|gold|silver|crude|oil|bonds?|treasur|equit|stock|call|put|futures?|position|exposure)",
+        "(?:go|going|went|been|am|i'm|we're|we are|still|remain|stay|get)\\s+short\\b",
+        "\\bshort\\s+(?:\\$[a-z]|gold|silver|crude|oil|bonds?|treasur|equit|stock|call|put|futures?|position|squeeze)",
+        "\\bshort(?:ing|ed)\\b",
+        "\\bbuy\\b", "\\bsell\\b", "undervalued", "overvalued",
+        "bullish", "bearish", "oversold", "overbought",
+        "headed to", "going to \\$", "inevitable", "rally", "crash", "moon", "dump"
+      ],
+      "weight": 20
+    },
+    "position_disclosure": {
+      "patterns": ["we bought", "we sold", "added to", "our position", "our largest", "increased exposure", "trimmed", "exited"],
+      "weight": 10
+    },
+    "price_target": {
+      "patterns": ["fair value", "target \\$", "worth \\$", "price target", "intrinsic value"],
+      "weight": 15
+    },
+    "crisis_language": {
+      "patterns": ["collapse", "squeeze", "black swan", "systemic", "contagion", "margin call", "liquidation", "bankrupt"],
+      "weight": 10
+    },
+    "noise_penalty": {
+      "patterns": ["subscribe", "newsletter", "podcast episode", "new video", "check out my", "RT if you", "giveaway"],
+      "weight": -20
+    },
+    "social_noise_penalty": {
+      "patterns": [
+        "had the pleasure", "great meeting", "great to meet", "pleasure to meet",
+        "catching up with", "dinner with", "lunch with", "coffee with", "drinks with",
+        "speaking at", "panel at", "event at", "keynote at",
+        "marriott|hilton|hyatt|ritz|four seasons|shangri.la|peninsula|mandarin oriental",
+        "thank you for having me", "enjoyed the conversation",
+        "honored to speak", "honour to speak",
+        "excited to announce.*(?:joined|joining|new role|partner)"
+      ],
+      "weight": -25
+    }
+  },
+
+  "ticker_patterns": {
+    "cashtag_regex": "\\$([A-Z]{1,5})\\b",
+    "known_tickers": ["NVDA", "AAPL", "TSLA", "MSFT", "AMZN", "GOOG", "META", "NFLX", "AMD", "INTC",
+                       "SPY", "QQQ", "IWM", "DIA", "XLF", "XLE", "XLK",
+                       "FNMA", "FMCC", "GME", "AMC",
+                       "GLD", "SLV", "USO", "UNG", "COPX",
+                       "TLT", "TMV", "TBT", "TMF",
+                       "VIX", "UVXY", "VXX", "SVXY",
+                       "BTC", "ETH", "SOL", "XRP"],
+    "company_map": {
+      "fannie mae": "FNMA", "freddie mac": "FMCC",
+      "tesla": "TSLA", "nvidia": "NVDA", "apple": "AAPL",
+      "microsoft": "MSFT", "amazon": "AMZN", "google": "GOOG",
+      "meta": "META", "netflix": "NFLX",
+      "bitcoin": "BTC", "ethereum": "ETH", "solana": "SOL",
+      "gold": "GLD", "silver": "SLV", "crude": "USO", "oil": "USO",
+      "natural gas": "UNG", "copper": "COPX"
+    },
+    "asset_classes": {
+      "us_equity": ["NVDA", "AAPL", "TSLA", "MSFT", "AMZN", "GOOG", "META", "NFLX", "AMD", "INTC", "FNMA", "FMCC", "GME", "AMC"],
+      "etf": ["SPY", "QQQ", "IWM", "DIA", "XLF", "XLE", "XLK"],
+      "commodity": ["GLD", "SLV", "USO", "UNG", "COPX"],
+      "rates": ["TLT", "TMV", "TBT", "TMF"],
+      "volatility": ["VIX", "UVXY", "VXX", "SVXY"],
+      "crypto": ["BTC", "ETH", "SOL", "XRP"]
+    }
+  }
+}

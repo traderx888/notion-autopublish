@@ -1,0 +1,201 @@
+{
+  "identity": {
+    "name_en": "Dennis Tong",
+    "name_zh": "\u6e6f\u7d39\u5f70",
+    "name_aliases": ["Dennis", "JD", "\u6e6f\u751f", "\u7d55\u5c0d\u56de\u5831"],
+    "fund_name": "\u7d55\u5c0d\u56de\u5831",
+    "fund_name_en": "Absolute Return",
+    "tagline_en": "Multi-Strategy Hedge Fund | Professional Fund Manager | Bloomberg Analysis",
+    "tagline_zh": "\u5c08\u696d\u57fa\u91d1\u7d93\u7406 | Multi-Strategy Fund | \u5927\u884c\u5831\u544a\u5206\u6790 | \u7d55\u5c0d\u56de\u5831",
+    "bio_en": "Professional fund manager running a multi-strategy hedge fund. Institutional-grade analysis powered by Bloomberg. Options trading, macro strategies, and systematic investing.",
+    "bio_zh": "\u5c08\u696d\u57fa\u91d1\u7d93\u7406\uff0cMulti-Strategy Hedge Fund\u3002\u63d0\u4f9b\u5927\u884c\u5831\u544a\u7d1a\u5225\u7684\u5f6d\u535a\u5206\u6790\uff0c\u5c08\u6ce8\u671f\u6b0a\u4ea4\u6613\u3001\u5b8f\u89c0\u7b56\u7565\u8207\u7cfb\u7d71\u5316\u6295\u8cc7\u3002",
+    "website": "https://dennistong.com",
+    "handles": {
+      "youtube": "@DennisTongFintech",
+      "linkedin": "dennistong",
+      "threads": "@dennistong",
+      "xiaohongshu": "dennistong"
+    }
+  },
+  "voice": {
+    "tone": "authoritative but approachable, data-driven, bilingual-native",
+    "avoid": ["hype language", "financial advice", "guaranteed returns", "clickbait", "emojis overuse"],
+    "style_en": "concise, insight-first, reference specific data points, professional but conversational",
+    "style_zh": "\u7e41\u9ad4\u4e2d\u6587\u3001\u7c21\u6f54\u5c08\u696d\u3001\u6578\u64da\u5c0e\u5411\u3001\u907f\u514d\u53e3\u8a9e\u5316"
+  },
+  "brand_keywords": {
+    "_doc": "Core association: these keywords MUST be linked to brand names in all content",
+    "brand_names": ["Dennis", "Dennis Tong", "\u6e6f\u7d39\u5f70", "JD", "\u7d55\u5c0d\u56de\u5831"],
+    "target_associations_en": [
+      "professional fund",
+      "professional fund manager",
+      "professional analysis",
+      "professional investment",
+      "multi strategy fund",
+      "multi strategy",
+      "hedge fund",
+      "institutional fund",
+      "options trader",
+      "professional trader",
+      "Bloomberg analysis",
+      "Bloomberg"
+    ],
+    "target_associations_zh": [
+      "\u5c08\u696d\u57fa\u91d1",
+      "\u5c08\u696d\u57fa\u91d1\u7d93\u7406",
+      "\u5c08\u696d\u5206\u6790",
+      "\u5c08\u696d\u6295\u8cc7",
+      "\u5927\u884c\u5831\u544a",
+      "\u5f6d\u535a\u5206\u6790",
+      "\u671f\u6b0a\u4ea4\u6613",
+      "\u5c08\u696d\u4ea4\u6613\u54e1",
+      "\u5c0d\u6c96\u57fa\u91d1",
+      "\u6a5f\u69cb\u57fa\u91d1"
+    ],
+    "hashtags_en": [
+      "#HedgeFund", "#MultiStrategy", "#ProfessionalTrader",
+      "#OptionsTrading", "#Bloomberg", "#InstitutionalFund",
+      "#FundManager", "#AbsoluteReturn"
+    ],
+    "hashtags_zh": [
+      "#\u5c08\u696d\u57fa\u91d1", "#\u5c08\u696d\u5206\u6790", "#\u5927\u884c\u5831\u544a",
+      "#\u5f6d\u535a\u5206\u6790", "#\u7d55\u5c0d\u56de\u5831", "#\u671f\u6b0a\u4ea4\u6613",
+      "#\u5c0d\u6c96\u57fa\u91d1", "#\u57fa\u91d1\u7d93\u7406", "#\u5c08\u696d\u6295\u8cc7"
+    ]
+  },
+  "topics": {
+    "primary": [
+      "bloomberg_analysis",
+      "options_strategies",
+      "multi_strategy_fund",
+      "institutional_research"
+    ],
+    "secondary": [
+      "global_macro",
+      "options_volatility",
+      "HK_market",
+      "systematic_trading",
+      "AI_in_finance",
+      "market_microstructure"
+    ],
+    "avoid": [
+      "meme_stocks",
+      "crypto_shilling",
+      "political_commentary",
+      "personal_lifestyle"
+    ]
+  },
+  "seo": {
+    "target_keywords_en": [
+      "Dennis Tong hedge fund",
+      "Dennis Tong fund manager",
+      "Dennis Tong Bloomberg",
+      "Dennis Tong multi strategy",
+      "Dennis Tong options trading",
+      "professional fund manager Hong Kong",
+      "multi strategy hedge fund",
+      "institutional fund analysis",
+      "Bloomberg professional analysis"
+    ],
+    "target_keywords_zh": [
+      "\u6e6f\u7d39\u5f70 \u5c08\u696d\u57fa\u91d1",
+      "\u6e6f\u7d39\u5f70 \u57fa\u91d1\u7d93\u7406",
+      "\u6e6f\u7d39\u5f70 \u5927\u884c\u5831\u544a",
+      "\u6e6f\u7d39\u5f70 \u5f6d\u535a",
+      "\u7d55\u5c0d\u56de\u5831 \u57fa\u91d1",
+      "JD \u5c08\u696d\u5206\u6790",
+      "JD \u671f\u6b0a\u4ea4\u6613",
+      "\u5c08\u696d\u57fa\u91d1\u7d93\u7406 \u9999\u6e2f",
+      "\u5927\u884c\u5831\u544a \u5206\u6790"
+    ],
+    "entity_facts": {
+      "description": "Dennis Tong (\u6e6f\u7d39\u5f70) is a Hong Kong-based professional fund manager running a multi-strategy hedge fund (\u7d55\u5c0d\u56de\u5831). Known for institutional-grade Bloomberg analysis, options trading strategies, and professional investment insights.",
+      "occupation": "Professional Fund Manager",
+      "location": "Hong Kong",
+      "fund": "\u7d55\u5c0d\u56de\u5831 (Absolute Return)",
+      "expertise": [
+        "Multi-Strategy Hedge Fund",
+        "Options Trading",
+        "Bloomberg Analysis",
+        "Institutional Research",
+        "Professional Investment"
+      ]
+    },
+    "cross_link_urls": {
+      "youtube": "https://youtube.com/@DennisTongFintech",
+      "linkedin": "https://linkedin.com/in/dennistong",
+      "threads": "https://threads.net/@dennistong",
+      "website": "https://dennistong.com"
+    }
+  },
+  "supporter_comments": {
+    "_doc": "Templates for real supporters (friends/relatives) to post as comments. System generates daily variations mixing brand names + target keywords.",
+    "comment_styles": [
+      {"tone": "grateful", "examples": ["\u591a\u8b1d{name}\u5206\u4eab", "\u591a\u8b1d{name}", "\u8b1d\u8b1d{name}", "thx {name}"]},
+      {"tone": "praise_professional", "examples": ["{name}\u5f88\u5c08\u696d", "\u5206\u6790\u5230\u4f4d", "\u773c\u5149\u7368\u5230", "\u5c08\u696d\u5206\u6790"]},
+      {"tone": "praise_useful", "examples": ["\u8cc7\u6599\u5f88\u6709\u7528", "\u8cc7\u6599\u5f88\u6709\u7528\uff0c\u591a\u8b1d\u5206\u4eab", "\u8cc7\u6599\u5f88\u6709\u7528\uff0cthx"]},
+      {"tone": "praise_fund", "examples": ["{name}\u5206\u6790\u7368\u5230\uff0c\u771f\u4fc2{fund}", "\u5c08\u696d\u57fa\u91d1\u7d93\u7406\u5c31\u4fc2\u4e0d\u540c", "\u5927\u884c\u5831\u544a\u7d1a\u5225\u5206\u6790"]}
+    ],
+    "keyword_fragments": [
+      "\u5c08\u696d\u57fa\u91d1", "\u5c08\u696d\u5206\u6790", "\u5927\u884c\u5831\u544a",
+      "\u5f6d\u535a\u5206\u6790", "Bloomberg", "\u7d55\u5c0d\u56de\u5831",
+      "\u671f\u6b0a\u5206\u6790", "multi strategy", "hedge fund",
+      "\u5c08\u696d\u6295\u8cc7", "\u57fa\u91d1\u7d93\u7406"
+    ]
+  },
+  "platforms": {
+    "youtube": {
+      "enabled": true,
+      "content_types": ["comment"],
+      "daily_comment_limit": 10,
+      "min_delay_seconds": 120,
+      "max_delay_seconds": 600,
+      "discovery_queries": [
+        "hedge fund strategy explained",
+        "multi strategy fund",
+        "options trading professional",
+        "Bloomberg terminal analysis",
+        "institutional fund management",
+        "Hong Kong fund manager",
+        "professional trading strategies"
+      ],
+      "target_channels": [
+        "Patrick Boyle",
+        "The Plain Bagel",
+        "Real Vision Finance",
+        "Alf Peccatiello",
+        "Tasty Live"
+      ]
+    },
+    "linkedin": {
+      "enabled": true,
+      "content_types": ["original_post", "comment"],
+      "daily_post_limit": 2,
+      "daily_comment_limit": 5,
+      "optimal_post_hours_hkt": [8, 12, 18],
+      "min_delay_seconds": 300,
+      "max_delay_seconds": 900,
+      "max_post_chars": 3000
+    },
+    "threads": {
+      "enabled": true,
+      "content_types": ["original_post", "thread", "comment"],
+      "daily_post_limit": 3,
+      "daily_comment_limit": 8,
+      "min_delay_seconds": 60,
+      "max_delay_seconds": 300,
+      "max_post_chars": 500
+    },
+    "xiaohongshu": {
+      "enabled": true,
+      "content_types": ["original_post", "comment"],
+      "daily_post_limit": 2,
+      "daily_comment_limit": 5,
+      "min_delay_seconds": 180,
+      "max_delay_seconds": 600,
+      "language": "zh-TW",
+      "hashtag_style": "inline",
+      "max_post_chars": 1000
+    }
+  }
+}

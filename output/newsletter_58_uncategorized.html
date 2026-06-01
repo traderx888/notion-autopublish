@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>彭博研究摘要 #58 — 集中度風險、半導體盈利狂潮與碎片化世界的投資新邏輯</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --accent: #58a6ff;
+          --green: #3fb950; --red: #f85149; --yellow: #d29922; --text: #c9d1d9; --muted: #8b949e;
+          --orange: #f0883e; --purple: #bc8cff; --cyan: #39d2c0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans TC', 'Microsoft JhengHei', Helvetica, Arial, sans-serif; line-height: 1.7; padding: 20px; max-width: 860px; margin: 0 auto; }
+  h1 { color: #fff; font-size: 1.7em; margin-bottom: 4px; }
+  .subtitle { color: var(--muted); font-size: 0.9em; margin-bottom: 8px; }
+  .issue-badge { display: inline-block; background: rgba(88,166,255,0.15); color: var(--accent); padding: 3px 10px; border-radius: 12px; font-size: 0.8em; font-weight: 600; margin-bottom: 20px; }
+  .tag { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 0.72em; font-weight: 600; margin-right: 4px; }
+  .tag-rates { background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-china { background: rgba(240,136,62,0.15); color: var(--orange); }
+  .tag-japan { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-geo   { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-oil   { background: rgba(210,153,34,0.15); color: var(--yellow); }
+  .tag-trade { background: rgba(210,153,34,0.15); color: var(--yellow); }
+  .tag-growth{ background: rgba(63,185,80,0.15); color: var(--green); }
+  .tag-metals{ background: rgba(188,140,255,0.15); color: var(--purple); }
+  .tag-infl  { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-policy{ background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-val   { background: rgba(63,185,80,0.15); color: var(--green); }
+  .tag-vol   { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-semi  { background: rgba(57,210,192,0.15); color: var(--cyan); }
+  .tag-credit{ background: rgba(188,140,255,0.15); color: var(--purple); }
+  .tag-space { background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-misc  { background: rgba(139,148,158,0.15); color: var(--muted); }
+  .section { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 16px; }
+  .section h2 { color: #fff; font-size: 1.15em; margin-bottom: 12px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+  .section h3 { color: var(--accent); font-size: 0.95em; margin: 14px 0 6px; }
+  .article { margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .article:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .article-title { color: #fff; font-weight: 700; font-size: 0.95em; margin-bottom: 4px; }
+  .article-title-cn { color: var(--muted); font-size: 0.85em; margin-bottom: 8px; }
+  .article p { font-size: 0.9em; margin: 6px 0; }
+  .data-point { background: rgba(255,255,255,0.03); padding: 8px 12px; border-radius: 6px; margin: 8px 0; font-size: 0.85em; }
+  .data-point .num { color: #fff; font-weight: 700; }
+  .implication { background: rgba(88,166,255,0.06); border-left: 3px solid var(--accent); padding: 10px 14px; margin: 10px 0; border-radius: 0 6px 6px 0; font-size: 0.88em; }
+  .implication .label { color: var(--accent); font-weight: 700; font-size: 0.8em; text-transform: uppercase; margin-bottom: 4px; }
+  .callout { background: rgba(210,153,34,0.08); border: 1px solid rgba(210,153,34,0.3); border-radius: 6px; padding: 16px; margin: 16px 0; }
+  .callout-title { color: var(--yellow); font-weight: 700; font-size: 0.95em; margin-bottom: 8px; }
+  .callout ul { padding-left: 18px; }
+  .callout li { margin: 4px 0; font-size: 0.88em; }
+  ul { padding-left: 18px; }
+  li { margin: 3px 0; font-size: 0.88em; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(255,255,255,0.03); padding: 12px; border-radius: 6px; text-align: center; }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: #fff; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
+  .toc { background: rgba(88,166,255,0.05); border: 1px solid rgba(88,166,255,0.2); border-radius: 8px; padding: 16px 20px; margin-bottom: 20px; }
+  .toc-title { color: var(--accent); font-weight: 700; font-size: 0.9em; margin-bottom: 8px; }
+  .toc a { color: var(--accent); text-decoration: none; font-size: 0.88em; }
+  .toc a:hover { text-decoration: underline; }
+  .toc ol { padding-left: 20px; }
+  .toc li { margin: 4px 0; }
+  .nav-links { display: flex; justify-content: space-between; margin: 20px 0; font-size: 0.85em; }
+  .nav-links a { color: var(--accent); text-decoration: none; }
+  .nav-links a:hover { text-decoration: underline; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(255,255,255,0.03); padding: 12px; border-radius: 6px; text-align: center; }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: #fff; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
+  .footer { text-align: center; color: var(--muted); font-size: 0.75em; margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--border); }
+</style>
+<script>if(window.self===window.top&&sessionStorage.getItem("student_auth")!=="1"){document.body.innerHTML="";window.location.replace("student.html");}</script>
+</head>
+<body>
+
+<h1>彭博研究摘要</h1>
+<p class="subtitle">第58期 | 集中度風險、半導體盈利狂潮與碎片化世界的投資新邏輯</p>
+<span class="issue-badge">2026年五月中旬更新</span>
+
+<div class="nav-links">
+  <span><a href="newsletter_57_uncategorized.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="toc">
+  <div class="toc-title">目錄</div>
+  <ol>
+    <li><a href="#semiconductor-concentration">半導體 晶片霸權，集中度創新高</a></li>
+    <li><a href="#energy-earnings">能源 能源暴漲後的盈利空窗期</a></li>
+    <li><a href="#china-property">中國 一條腿走路：供給強、需求弱</a></li>
+    <li><a href="#fragmentation-defense">地緣重構 碎片化世界：國防、能源、AI三箭齊發</a></li>
+    <li><a href="#etf-flows">資金流向 資金追逐股票與比特幣，債券守中段</a></li>
+    <li><a href="#takeaways">基金經理人重點摘要</a></li>
+  </ol>
+</div>
+
+<div class="section" id="semiconductor-concentration">
+  <h2><span class="tag tag-semi">半導體</span> 晶片霸權，集中度創新高</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--green)">~2x</div><div class="lbl">SOX指數明年盈利
+預期較去年翻倍</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">80%</div><div class="lbl">S&P 500回報
+僅由7隻股票驅動</div></div>
+    <div class="stat"><div class="val">50/50</div><div class="lbl">半導體+能源
+新版60/40組合</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">半導體獨立盈利季：AI需求推動史無前例的獲利爆發</div>
+    <p>半導體產業正經歷前所未有的盈利狂潮。S&amp;P 500整體盈利超預期幅度創歷史新高，而這幾乎完全歸功於晶片板塊。AI基礎建設的龐大需求加上霍爾木茲海峽封鎖導致的供應受限，令SOX半導體指數明年盈利預期接近去年的<span style="color:#fff;font-weight:700">兩倍</span>。更值得注意的是，過去六個月SOX已跑贏Magnificent Seven，顛覆了市場此前認為平台公司最受益於AI的共識。然而，市值加權指數持續跑贏等權指數，集中度在AI時代不斷加劇。</p>
+    <div class="data-point">SOX vs Mag7：<span style="color:#fff;font-weight:700">ChatGPT以來SOX已跑贏</span> &nbsp;|&nbsp; S&amp;P 500盈利超預期：<span style="color:#fff;font-weight:700">歷史最高</span> &nbsp;|&nbsp; 市場寬度：<span style="color:#fff;font-weight:700">點陣泡沫以來最窄</span></div>
+    <div class="implication"><div class="label">投資啟示</div>半導體盈利動能仍強，但集中度風險極端。<span style="color:#fff;font-weight:700">維持SOX超配但加設VIX call wing對沖尾部風險</span>。</div>
+  </div>
+  <div class="article">
+    <div class="article-title">集中度成為投資者核心風險：動量策略主導反彈</div>
+    <p>美國和歐洲市場回報高度集中於極少數股票。美國方面，<span style="color:#fff;font-weight:700">7隻股票貢獻了S&amp;P 500約80%的回報</span>；歐洲方面，6家公司佔Stoxx 600漲幅近<span style="color:#fff;font-weight:700">90%</span>。Nomura的McElligott指出，市場實際上在做空「新版60/40組合」——即半導體與能源的<span style="color:#fff;font-weight:700">50/50槓鈴配置</span>。共同基金因法規限制無法足夠超配科技與能源，被迫跑輸指數。Goldman Sachs數據顯示，美股市場寬度已收窄至點陣泡沫以來最極端水平，動量因子一旦反轉將引發劇烈波動。</p>
+    <div class="data-point">歐洲集中度：<span style="color:#fff;font-weight:700">6隻股佔90%回報</span> &nbsp;|&nbsp; 能源佔歐洲回報：<span style="color:#fff;font-weight:700">47%</span> &nbsp;|&nbsp; 動量風險：<span style="color:#fff;font-weight:700">泡沫期以來最高</span></div>
+    <div class="implication"><div class="label">投資啟示</div>集中度極端意味著反轉風險加大。<span style="color:#fff;font-weight:700">用VIX call wing + S&amp;P put wing對沖半導體/能源槓鈴的尾部風險</span>。</div>
+  </div>
+</div>
+
+<div class="section" id="energy-earnings">
+  <h2><span class="tag tag-misc">能源</span> 能源暴漲後的盈利空窗期</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--red)">-8.6%</div><div class="lbl">美國能源Q1盈利
+預期同比下跌</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">-40%+</div><div class="lbl">Exxon/Chevron
+Q1盈利跌幅預估</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">94%</div><div class="lbl">Brent原油
+戰爭高峰漲幅</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">能源股狂漲面臨盈利考驗：戰爭擾亂Q1業績</div>
+    <p>儘管能源仍是S&amp;P 500今年漲幅最大的板塊，但Q1盈利即將進入「空窗期」。伊朗戰爭雖將Brent原油推高最多<span style="color:#fff;font-weight:700">94%</span>，但對生產端的破壞更為直接——Exxon和Chevron預計Q1產量因衝突下降<span style="color:#fff;font-weight:700">6%</span>，盈利同比暴跌逾<span style="color:#fff;font-weight:700">40%</span>。同時，因油價漲幅超出預期，大宗商品衍生品對沖出現虧損。Halliburton受中東業務中斷影響每股盈利減少<span style="color:#fff;font-weight:700">2-3美分</span>，SLB預警高達<span style="color:#fff;font-weight:700">9美分</span>的每股衝擊。部分無中東敞口的公司如EQT則因北美天然氣需求增加而受益。</p>
+    <div class="data-point">能源設備服務Q1盈利：<span style="color:#fff;font-weight:700">-16%</span> &nbsp;|&nbsp; EQT：<span style="color:#fff;font-weight:700">無中東敞口，受益於北美需求</span> &nbsp;|&nbsp; SLB每股衝擊：<span style="color:#fff;font-weight:700">-9美分</span></div>
+    <div class="implication"><div class="label">投資啟示</div>能源股價已反映樂觀預期，Q1盈利空窗將測試估值。<span style="color:#fff;font-weight:700">短期獲利了結能源多頭，關注無中東敞口的北美天然氣股</span>。</div>
+  </div>
+  <div class="article">
+    <div class="article-title">歐洲盈利超預期但後續更難：能源以外前景暗淡</div>
+    <p>歐洲Q1盈利增長<span style="color:#fff;font-weight:700">5.6%</span>，大幅超出市場預期的<span style="color:#fff;font-weight:700">2.6%</span>。然而，Goldman Sachs警告大部分上修集中在能源、礦業和半導體——剔除這三者後，盈利修正實為負值。市場共識預期2026全年盈利增長<span style="color:#fff;font-weight:700">11%</span>，意味著未來三季需承擔絕大部分增長——若油價持續高企拖累經濟，這一預期顯得過於樂觀。消費相關板塊（旅遊、汽車、奢侈品）已在掙扎。Goldman將2026年EPS增長預測從5%上調至<span style="color:#fff;font-weight:700">10%</span>，但2027年從7%下調至<span style="color:#fff;font-weight:700">5%</span>。</p>
+    <div class="data-point">歐洲Q1盈利增長：<span style="color:#fff;font-weight:700">5.6% vs 預期2.6%</span> &nbsp;|&nbsp; 能源盈利上修幅度：<span style="color:#fff;font-weight:700">+50%自戰爭以來</span> &nbsp;|&nbsp; 消費板塊：<span style="color:#fff;font-weight:700">旅遊/汽車/奢侈品承壓</span></div>
+    <div class="implication"><div class="label">投資啟示</div>歐洲盈利超預期由能源驅動，非能源板塊實則惡化。<span style="color:#fff;font-weight:700">減持歐洲消費股，維持能源超配但設定止盈紀律</span>。</div>
+  </div>
+</div>
+
+<div class="section" id="china-property">
+  <h2><span class="tag tag-china">中國</span> 一條腿走路：供給強、需求弱</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--green)">5%</div><div class="lbl">Q1 GDP增速
+（目標區間上限）</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">70%</div><div class="lbl">房地產供應過剩
+調整完成度</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">5.49年</div><div class="lbl">住房庫存
+去化週期</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">中國經濟四月總結：戰爭衝擊溫和，K型復甦加劇</div>
+    <p>中國Q1 GDP增速達<span style="color:#fff;font-weight:700">5%</span>——今年目標區間上限，但結構嚴重失衡。工業生產維持強勁擴張，但消費和投資均低於預期。4月PMI顯示外需（出口訂單飆升）與內需（製造業訂單疲軟、服務業和建築降溫）的分化進一步加劇。中東衝突推動PPI結束<span style="color:#fff;font-weight:700">41個月通縮</span>轉正，但彭博經濟研究模型顯示油價對CPI影響有限——需求疲弱下，全年CPI僅從0.5%微升至<span style="color:#fff;font-weight:700">0.8%</span>。貨幣寬鬆偏向不變，下半年進一步降準降息可期。</p>
+    <div class="data-point">PPI通縮結束：<span style="color:#fff;font-weight:700">41個月後轉正</span> &nbsp;|&nbsp; 基準情景Brent：<span style="color:#fff;font-weight:700">$110→$85</span> &nbsp;|&nbsp; 全年PPI預測：<span style="color:#fff;font-weight:700">1.8%（戰前0.8%）</span></div>
+    <div class="implication"><div class="label">投資啟示</div>中國內需復甦乏力，寬鬆預期不變。<span style="color:#fff;font-weight:700">做多中國國債（利率下行）；A股偏好出口導向型工業股而非消費股</span>。</div>
+  </div>
+  <div class="article">
+    <div class="article-title">數據回暖不代表樓市轉折：供應過剩仍需1-2年消化</div>
+    <p>Q1住宅成交量和房價跌幅收窄引發市場樂觀，但彭博經濟研究明確否定「轉折點」說法。改善高度集中在一線城市——上海、北京因進一步放寬購房限制帶動交易量升至政策轉向初期的<span style="color:#fff;font-weight:700">兩倍</span>，但佔全國成交<span style="color:#fff;font-weight:700">90%以上</span>的非一線城市仍在大幅下滑。截至3月底，消化現有<span style="color:#fff;font-weight:700">5,500萬套</span>待售公寓需要<span style="color:#fff;font-weight:700">5.49年</span>，去化週期已連續六個月拉長。房地產開發投資Q1同比下降<span style="color:#fff;font-weight:700">11.1%</span>，供應過剩調整僅完成約<span style="color:#fff;font-weight:700">70%</span>，剩餘30%可能還需一到兩年。</p>
+    <div class="data-point">一線城市成交：<span style="color:#fff;font-weight:700">升至政策轉向初期2倍</span> &nbsp;|&nbsp; 非一線佔比：<span style="color:#fff;font-weight:700">&gt;90%全國成交</span> &nbsp;|&nbsp; 開發投資Q1：<span style="color:#fff;font-weight:700">-11.1% YoY</span></div>
+    <div class="implication"><div class="label">投資啟示</div>樓市企穩仍遠，結構性風險未解。<span style="color:#fff;font-weight:700">迴避中國房地產開發商債券；一線城市REITs可選擇性配置</span>。</div>
+  </div>
+</div>
+
+<div class="section" id="fragmentation-defense">
+  <h2><span class="tag tag-geo">地緣重構</span> 碎片化世界：國防、能源、AI三箭齊發</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--green)">35%</div><div class="lbl">歐洲航空航天
+國防指數年漲幅</div></div>
+    <div class="stat"><div class="val" style="color:var(--green)">€5000億</div><div class="lbl">德國基礎設施
+投資計劃</div></div>
+    <div class="stat"><div class="val" style="color:var(--green)">600%</div><div class="lbl">Exail Technologies
+自2025年初漲幅</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">碎片化全球經濟下的投資新思路：國防、能源與AI主導</div>
+    <p>全球正經歷結構性重置——各國將安全置於首位，加速投資國防、能源獨立和AI基礎設施。伊朗衝突加速了新冠和俄烏戰爭開啟的去全球化趨勢。歐洲引領變革：MSCI歐洲航空航天國防指數年漲約<span style="color:#fff;font-weight:700">35%</span>，法國海上無人機製造商Exail Technologies自2025年初暴漲<span style="color:#fff;font-weight:700">600%</span>。德國<span style="color:#fff;font-weight:700">5,000億歐元</span>基礎設施計劃彰顯軍費決心。美國方面，數據中心建設利好GE Vernova、Vertiv、Eaton，Madison Air Solutions完成1999年以來最大工業IPO。S&amp;P 500領頭羊已從科技轉向能源、材料和工業。Wells Fargo建議投資者「充分配置大宗商品」以應對資源爭奪。</p>
+    <div class="data-point">S&amp;P 500板塊領先：<span style="color:#fff;font-weight:700">能源、材料、工業</span> &nbsp;|&nbsp; BAE/Thales：<span style="color:#fff;font-weight:700">電子戰+防空合同受益</span> &nbsp;|&nbsp; Madison Air IPO：<span style="color:#fff;font-weight:700">1999年以來最大工業IPO</span></div>
+    <div class="implication"><div class="label">投資啟示</div>結構性再軍備和供應鏈重構是多年期主題。<span style="color:#fff;font-weight:700">超配歐洲國防（BAE、Rheinmetall、Leonardo）及美國電力基建（GE Vernova、Eaton）</span>。</div>
+  </div>
+</div>
+
+<div class="section" id="etf-flows">
+  <h2><span class="tag tag-misc">資金流向</span> 資金追逐股票與比特幣，債券守中段</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--green)">$21.4B</div><div class="lbl">ETF單週
+總流入</div></div>
+    <div class="stat"><div class="val" style="color:var(--green)">$6.3B</div><div class="lbl">VOO單週流入
+（領跑全市場）</div></div>
+    <div class="stat"><div class="val" style="color:var(--green)">$834M</div><div class="lbl">比特幣ETF
+連續四週淨流入</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">ETF資金持續湧入股票與比特幣：債券投資者鎖定曲線中段</div>
+    <p>儘管霍爾木茲海峽局勢持續緊張，上週ETF總流入達<span style="color:#fff;font-weight:700">$214億</span>。股票ETF吸金<span style="color:#fff;font-weight:700">$163億</span>（環比降62%），VOO以<span style="color:#fff;font-weight:700">$63億</span>領跑，ARKK因SpaceX IPO預期吸入<span style="color:#fff;font-weight:700">$32億</span>（AUM暴增45%）。債券方面，投資者偏好中段久期——中期債券ETF吸入<span style="color:#fff;font-weight:700">$28億</span>，反映在持久對峙風險與FOMC會議預期間的均衡配置。投資級債（$24億）吸引力是高收益債（$12億）的兩倍。比特幣ETF連續四週淨流入，上週<span style="color:#fff;font-weight:700">$8.34億</span>，IBIT領跑（$7.32億），2026年累計現貨比特幣ETF流入已在Q2轉正並達<span style="color:#fff;font-weight:700">$20億</span>高峰。</p>
+    <div class="data-point">ARKK流入：<span style="color:#fff;font-weight:700">$32億（AUM+45%）</span> &nbsp;|&nbsp; 投資級vs高收益：<span style="color:#fff;font-weight:700">2:1</span> &nbsp;|&nbsp; BTC Q2漲幅：<span style="color:#fff;font-weight:700">+14%</span></div>
+    <div class="implication"><div class="label">投資啟示</div>資金仍在追逐風險資產但速度放緩。<span style="color:#fff;font-weight:700">債券配置偏中段久期合理；比特幣ETF動能持續但注意獲利回吐</span>。</div>
+  </div>
+</div>
+
+<div class="callout" id="takeaways">
+  <div class="callout-title">基金經理人重點摘要</div>
+  <ul>
+    <li><strong>集中度風險：</strong>S&P 500回報80%由7隻股票驅動，市場寬度為點陣泡沫以來最窄。用VIX call wing對沖尾部風險。</li>
+    <li><strong>半導體：</strong>SOX盈利明年料翻倍，已跑贏Mag7。維持超配但紀律管理倉位規模。</li>
+    <li><strong>能源：</strong>板塊今年漲幅最大但Q1盈利預計跌8.6%。短期獲利了結，偏好無中東敞口的北美天然氣。</li>
+    <li><strong>中國：</strong>K型復甦加劇，樓市供應過剩仍需1-2年消化。做多中國國債，迴避開發商。</li>
+    <li><strong>地緣重構：</strong>國防+能源獨立+AI基建為多年期結構性主題。超配歐洲國防及美國電力基建。</li>
+    <li><strong>資金流向：</strong>ETF資金追逐股票與BTC，債券偏中段久期。ARKK因SpaceX IPO預期暴增45%值得關注。</li>
+  </ul>
+</div>
+
+<div class="nav-links">
+  <span><a href="newsletter_57_uncategorized.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="footer">
+  彭博研究摘要 | 僅供教學與討論用途 | 2026年5月17日<br>
+  資料來源：Bloomberg Intelligence, Bloomberg Economics, Bloomberg News
+</div>
+
+</body>
+</html>

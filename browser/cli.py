@@ -9,6 +9,8 @@ Usage:
     python -m browser scrape luxalgo
     python -m browser scrape all
     python -m browser publish patreon [--dry-run] [--newsletter 1]
+    python -m browser brand status
+    python -m browser brand supporter-comments [--count 15] [--save]
 """
 
 import argparse
@@ -84,6 +86,22 @@ def build_parser() -> argparse.ArgumentParser:
         "--draft", action="store_true",
         help="Save posts as drafts instead of publishing",
     )
+    # brand command
+    brand_parser = subparsers.add_parser("brand", help="Brand automation tools")
+    brand_parser.add_argument(
+        "action",
+        choices=["status", "supporter-comments"],
+        help="Brand action to perform",
+    )
+    brand_parser.add_argument(
+        "--count", type=int, default=10,
+        help="Comments per platform (default: 10)",
+    )
+    brand_parser.add_argument(
+        "--save", action="store_true",
+        help="Save output to JSON file",
+    )
+
     return parser
 
 
@@ -98,6 +116,8 @@ def main(argv=None):
         run_scraper(args)
     elif args.command == "publish":
         run_publisher(args)
+    elif args.command == "brand":
+        run_brand(args)
     else:
         parser.print_help()
         sys.exit(1)
@@ -157,6 +177,27 @@ def run_publisher(args):
         draft = getattr(args, "draft", False)
         with PatreonPublisher(dry_run=dry_run, newsletters=newsletters, headless=headless, draft=draft) as pub:
             pub.run()
+
+
+def run_brand(args):
+    import json
+    import sys as _sys
+    from pathlib import Path
+    if _sys.platform == "win32":
+        _sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+    config_path = Path(__file__).resolve().parent.parent / "config" / "brand_identity.json"
+    with open(config_path, encoding="utf-8") as f:
+        config = json.load(f)
+
+    if args.action == "status":
+        from tools.brand_scheduler import print_status
+        print_status(config)
+    elif args.action == "supporter-comments":
+        from brand.supporter_comments import print_daily_comments, save_daily_batch
+        print_daily_comments(config, per_platform=args.count)
+        if args.save:
+            path = save_daily_batch(config, per_platform=args.count)
+            print(f"  Saved to: {path}")
 
 
 if __name__ == "__main__":

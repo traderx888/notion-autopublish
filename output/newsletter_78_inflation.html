@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>彭博研究摘要 #78 — 油價衝擊下的全球通膨分化</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --accent: #58a6ff;
+          --green: #3fb950; --red: #f85149; --yellow: #d29922; --text: #c9d1d9; --muted: #8b949e;
+          --orange: #f0883e; --purple: #bc8cff; --cyan: #39d2c0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans TC', 'Microsoft JhengHei', Helvetica, Arial, sans-serif; line-height: 1.7; padding: 20px; max-width: 860px; margin: 0 auto; }
+  h1 { color: #fff; font-size: 1.7em; margin-bottom: 4px; }
+  .subtitle { color: var(--muted); font-size: 0.9em; margin-bottom: 8px; }
+  .issue-badge { display: inline-block; background: rgba(88,166,255,0.15); color: var(--accent); padding: 3px 10px; border-radius: 12px; font-size: 0.8em; font-weight: 600; margin-bottom: 20px; }
+  .tag { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 0.72em; font-weight: 600; margin-right: 4px; }
+  .tag-rates { background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-china { background: rgba(240,136,62,0.15); color: var(--orange); }
+  .tag-japan { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-geo   { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-oil   { background: rgba(210,153,34,0.15); color: var(--yellow); }
+  .tag-trade { background: rgba(210,153,34,0.15); color: var(--yellow); }
+  .tag-growth{ background: rgba(63,185,80,0.15); color: var(--green); }
+  .tag-metals{ background: rgba(188,140,255,0.15); color: var(--purple); }
+  .tag-infl  { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-policy{ background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-val   { background: rgba(63,185,80,0.15); color: var(--green); }
+  .tag-vol   { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-semi  { background: rgba(57,210,192,0.15); color: var(--cyan); }
+  .tag-credit{ background: rgba(188,140,255,0.15); color: var(--purple); }
+  .tag-space { background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-misc  { background: rgba(139,148,158,0.15); color: var(--muted); }
+  .section { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 16px; }
+  .section h2 { color: #fff; font-size: 1.15em; margin-bottom: 12px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+  .section h3 { color: var(--accent); font-size: 0.95em; margin: 14px 0 6px; }
+  .article { margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .article:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .article-title { color: #fff; font-weight: 700; font-size: 0.95em; margin-bottom: 4px; }
+  .article-title-cn { color: var(--muted); font-size: 0.85em; margin-bottom: 8px; }
+  .article p { font-size: 0.9em; margin: 6px 0; }
+  .data-point { background: rgba(255,255,255,0.03); padding: 8px 12px; border-radius: 6px; margin: 8px 0; font-size: 0.85em; }
+  .data-point .num { color: #fff; font-weight: 700; }
+  .implication { background: rgba(88,166,255,0.06); border-left: 3px solid var(--accent); padding: 10px 14px; margin: 10px 0; border-radius: 0 6px 6px 0; font-size: 0.88em; }
+  .implication .label { color: var(--accent); font-weight: 700; font-size: 0.8em; text-transform: uppercase; margin-bottom: 4px; }
+  .callout { background: rgba(210,153,34,0.08); border: 1px solid rgba(210,153,34,0.3); border-radius: 6px; padding: 16px; margin: 16px 0; }
+  .callout-title { color: var(--yellow); font-weight: 700; font-size: 0.95em; margin-bottom: 8px; }
+  .callout ul { padding-left: 18px; }
+  .callout li { margin: 4px 0; font-size: 0.88em; }
+  ul { padding-left: 18px; }
+  li { margin: 3px 0; font-size: 0.88em; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(255,255,255,0.03); padding: 12px; border-radius: 6px; text-align: center; }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: #fff; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
+  .toc { background: rgba(88,166,255,0.05); border: 1px solid rgba(88,166,255,0.2); border-radius: 8px; padding: 16px 20px; margin-bottom: 20px; }
+  .toc-title { color: var(--accent); font-weight: 700; font-size: 0.9em; margin-bottom: 8px; }
+  .toc a { color: var(--accent); text-decoration: none; font-size: 0.88em; }
+  .toc a:hover { text-decoration: underline; }
+  .toc ol { padding-left: 20px; }
+  .toc li { margin: 4px 0; }
+  .nav-links { display: flex; justify-content: space-between; margin: 20px 0; font-size: 0.85em; }
+  .nav-links a { color: var(--accent); text-decoration: none; }
+  .nav-links a:hover { text-decoration: underline; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(255,255,255,0.03); padding: 12px; border-radius: 6px; text-align: center; }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: #fff; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
+  .footer { text-align: center; color: var(--muted); font-size: 0.75em; margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--border); }
+</style>
+<script>if(window.self===window.top&&sessionStorage.getItem("student_auth")!=="1"){document.body.innerHTML="";window.location.replace("student.html");}</script>
+</head>
+<body>
+
+<h1>彭博研究摘要</h1>
+<p class="subtitle">第78期 | 油價衝擊下的全球通膨分化</p>
+<span class="issue-badge">2026年五月中旬更新</span>
+
+<div class="nav-links">
+  <span><a href="newsletter_77_valuations.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="toc">
+  <div class="toc-title">目錄</div>
+  <ol>
+    <li><a href="#japan-supply-crunch">日本 隱性供給危機，加息箭在弦上</a></li>
+    <li><a href="#us-sentiment">美國消費者 信心崩塌，通膨預期急升</a></li>
+    <li><a href="#france-inflation">歐洲 能源推升表面通膨，核心仍弱</a></li>
+    <li><a href="#takeaways">基金經理人重點摘要</a></li>
+  </ol>
+</div>
+
+<div class="section" id="japan-supply-crunch">
+  <h2><span class="tag tag-japan">日本</span> 隱性供給危機，加息箭在弦上</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--red)">35.9%</div><div class="lbl">勞動力短缺破產
+年增幅(2025)</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">4月</div><div class="lbl">日銀預計
+下次加息時點</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">30年</div><div class="lbl">庫存背離
+創歷史紀錄</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">日本隱性供應緊張可能加劇石油供應引發的通膨</div>
+    <p>日本經濟正面臨至少自90年代初以來最嚴峻的供應緊張。GDP庫存數據分解顯示，在製品庫存迅速上升，而躉售和零售庫存總體持平——這種<span style="color:#fff;font-weight:700">30年來前所未見</span>的背離表明生產過程存在重大瓶頸。2025年因勞動力短缺導致的企業破產數量成長了<span style="color:#fff;font-weight:700">35.9%</span>，比十年前高出6.5倍。中東石油供應中斷將通過石化產品短缺進一步加劇供應緊張。日銀行長植田和男已暗示鷹派立場，彭博經濟研究預計<span style="color:#fff;font-weight:700">4月再次加息</span>。</p>
+    <div class="data-point">在製品庫存：<span style="color:#fff;font-weight:700">迅速上升突破趨勢</span> &nbsp;|&nbsp; 勞動力短缺破產：<span style="color:#fff;font-weight:700">年增35.9%</span> &nbsp;|&nbsp; 庫存差距與CPI：<span style="color:#fff;font-weight:700">高度吻合</span> &nbsp;|&nbsp; 預計加息：<span style="color:#fff;font-weight:700">4月</span></div>
+    <div class="implication"><div class="label">投資啟示</div>日銀加息預期升溫，供給面通膨疊加油價衝擊將推升日本實際通膨超標。<span style="color:#fff;font-weight:700">減持日圓套利頭寸</span>，關注JGB短端利率上行風險。</div>
+  </div>
+</div>
+
+<div class="section" id="us-sentiment">
+  <h2><span class="tag tag-misc">美國消費者</span> 信心崩塌，通膨預期急升</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--red)">53.3</div><div class="lbl">密大消費者信心
+(3月終值)</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">3.8%</div><div class="lbl">一年期通膨預期
+(前值3.4%)</div></div>
+    <div class="stat"><div class="val">28%</div><div class="lbl">預期利率下降
+(前值35%)</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">通膨恐懼正在侵蝕消費者信心</div>
+    <p>密歇根大學3月消費者信心終值降至<span style="color:#fff;font-weight:700">53.3</span>，低於初值55.5及市場預期54.0。短期通膨預期急升至<span style="color:#fff;font-weight:700">3.8%</span>（前值3.4%），但長期預期維持在<span style="color:#fff;font-weight:700">3.2%</span>，顯示消費者視當前價格衝擊為暫時性。約三分之二受訪在伊朗戰爭爆發後進行，黨派分化達到歷史極端——共和黨信心持平，民主黨接近歷史低點。僅<span style="color:#fff;font-weight:700">28%</span>消費者預期未來一年利率下降，較一個月前的35%大幅回落，暗示市場對Fed降息預期正在修正。</p>
+    <div class="data-point">信心指數：<span style="color:#fff;font-weight:700">53.3</span>（預期54.0） &nbsp;|&nbsp; 一年期通膨預期：<span style="color:#fff;font-weight:700">3.8%</span> &nbsp;|&nbsp; 長期通膨預期：<span style="color:#fff;font-weight:700">3.2%（持平）</span> &nbsp;|&nbsp; 預期利率下降比例：<span style="color:#fff;font-weight:700">28%</span></div>
+    <div class="implication"><div class="label">投資啟示</div>消費者視油價衝擊為暫時性，支出仍取決於就業基本面。<span style="color:#fff;font-weight:700">短期內美債前端承壓有限</span>，但若勞動市場惡化，消費斷崖風險上升。</div>
+  </div>
+</div>
+
+<div class="section" id="france-inflation">
+  <h2><span class="tag tag-misc">歐洲</span> 能源推升表面通膨，核心仍弱</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--orange)">2.5%</div><div class="lbl">法國4月CPI年率
+(前值2.0%)</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">&gt;3%</div><div class="lbl">通膨預計峰值
+(4Q26)</div></div>
+    <div class="stat"><div class="val">0.7%</div><div class="lbl">2026年GDP
+增長預測</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">燃料再推法國通膨跳升，核心通膨仍然溫和</div>
+    <p>法國4月年通膨從3月的<span style="color:#fff;font-weight:700">2.0%</span>跳升至<span style="color:#fff;font-weight:700">2.5%</span>，主因油價繼續上漲。但向其他能源分項的傳導仍然有限，政府料僅採取針對性支援措施。能源以外的基礎物價壓力依然疲軟，預計在經濟放緩背景下持續溫和。彭博經濟研究預計通膨將在<span style="color:#fff;font-weight:700">4Q26峰值突破3%</span>，隨後於2027年回落至2%以下。同時，法國1Q26 GDP意外停滯，消費與投資雙雙拖累，失業率升至<span style="color:#fff;font-weight:700">7.9%</span>。全年增長預測僅<span style="color:#fff;font-weight:700">0.7%</span>，風險偏向下行。</p>
+    <div class="data-point">4月CPI：<span style="color:#fff;font-weight:700">2.5%</span>（前值2.0%） &nbsp;|&nbsp; 通膨峰值預測：<span style="color:#fff;font-weight:700">&gt;3%（4Q26）</span> &nbsp;|&nbsp; 1Q26 GDP：<span style="color:#fff;font-weight:700">0%（停滯）</span> &nbsp;|&nbsp; 失業率：<span style="color:#fff;font-weight:700">7.9%</span></div>
+    <div class="implication"><div class="label">投資啟示</div>法國呈現「滯膨lite」格局——增長停滯但通膨因能源外推升。ECB降息空間受限，<span style="color:#fff;font-weight:700">歐元區前端利率維持高位時間更長</span>，短期內不宜追多歐債。</div>
+  </div>
+</div>
+
+<div class="callout" id="takeaways">
+  <div class="callout-title">基金經理人重點摘要</div>
+  <ul>
+    <li><strong>日本：</strong>30年來最嚴峻供應緊張疊加油價衝擊，日銀4月加息概率極高。**減持日圓套利**，關注JGB 2Y利率上行。</li>
+    <li><strong>美國消費者：</strong>短期通膨預期升至3.8%但長期錨定3.2%，消費韌性取決於就業。**Fed上半年按兵不動格局不變**。</li>
+    <li><strong>歐洲：</strong>法國CPI跳升至2.5%但核心溫和，1Q26 GDP停滯。ECB降息空間收窄，**歐債短端承壓**。</li>
+    <li><strong>油價傳導：</strong>三大經濟體均受伊朗戰爭油價衝擊影響，但傳導路徑各異——日本最脆弱（供給瓶頸），歐洲次之（能源依賴），美國暫時性預期錨定。**做多能源通膨受益資產（商品、TIPS）**。</li>
+  </ul>
+</div>
+
+<div class="nav-links">
+  <span><a href="newsletter_77_valuations.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="footer">
+  彭博研究摘要 | 僅供教學與討論用途 | 2026年5月17日<br>
+  資料來源：Bloomberg Intelligence, Bloomberg Economics, Bloomberg News
+</div>
+
+</body>
+</html>
