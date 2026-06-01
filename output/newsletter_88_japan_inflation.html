@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>彭博研究摘要 #88 — 通膨回潮：日債創1996年新高與AI擁擠交易警訊</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --accent: #58a6ff;
+          --green: #3fb950; --red: #f85149; --yellow: #d29922; --text: #c9d1d9; --muted: #8b949e;
+          --orange: #f0883e; --purple: #bc8cff; --cyan: #39d2c0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans TC', 'Microsoft JhengHei', Helvetica, Arial, sans-serif; line-height: 1.7; padding: 20px; max-width: 860px; margin: 0 auto; }
+  h1 { color: #fff; font-size: 1.7em; margin-bottom: 4px; }
+  .subtitle { color: var(--muted); font-size: 0.9em; margin-bottom: 8px; }
+  .issue-badge { display: inline-block; background: rgba(88,166,255,0.15); color: var(--accent); padding: 3px 10px; border-radius: 12px; font-size: 0.8em; font-weight: 600; margin-bottom: 20px; }
+  .tag { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 0.72em; font-weight: 600; margin-right: 4px; }
+  .tag-rates { background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-china { background: rgba(240,136,62,0.15); color: var(--orange); }
+  .tag-japan { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-geo   { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-oil   { background: rgba(210,153,34,0.15); color: var(--yellow); }
+  .tag-trade { background: rgba(210,153,34,0.15); color: var(--yellow); }
+  .tag-growth{ background: rgba(63,185,80,0.15); color: var(--green); }
+  .tag-metals{ background: rgba(188,140,255,0.15); color: var(--purple); }
+  .tag-infl  { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-policy{ background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-val   { background: rgba(63,185,80,0.15); color: var(--green); }
+  .tag-vol   { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-semi  { background: rgba(57,210,192,0.15); color: var(--cyan); }
+  .tag-credit{ background: rgba(188,140,255,0.15); color: var(--purple); }
+  .tag-space { background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-misc  { background: rgba(139,148,158,0.15); color: var(--muted); }
+  .section { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 16px; }
+  .section h2 { color: #fff; font-size: 1.15em; margin-bottom: 12px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+  .section h3 { color: var(--accent); font-size: 0.95em; margin: 14px 0 6px; }
+  .article { margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .article:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .article-title { color: #fff; font-weight: 700; font-size: 0.95em; margin-bottom: 4px; }
+  .article-title-cn { color: var(--muted); font-size: 0.85em; margin-bottom: 8px; }
+  .article p { font-size: 0.9em; margin: 6px 0; }
+  .data-point { background: rgba(255,255,255,0.03); padding: 8px 12px; border-radius: 6px; margin: 8px 0; font-size: 0.85em; }
+  .data-point .num { color: #fff; font-weight: 700; }
+  .implication { background: rgba(88,166,255,0.06); border-left: 3px solid var(--accent); padding: 10px 14px; margin: 10px 0; border-radius: 0 6px 6px 0; font-size: 0.88em; }
+  .implication .label { color: var(--accent); font-weight: 700; font-size: 0.8em; text-transform: uppercase; margin-bottom: 4px; }
+  .callout { background: rgba(210,153,34,0.08); border: 1px solid rgba(210,153,34,0.3); border-radius: 6px; padding: 16px; margin: 16px 0; }
+  .callout-title { color: var(--yellow); font-weight: 700; font-size: 0.95em; margin-bottom: 8px; }
+  .callout ul { padding-left: 18px; }
+  .callout li { margin: 4px 0; font-size: 0.88em; }
+  ul { padding-left: 18px; }
+  li { margin: 3px 0; font-size: 0.88em; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(255,255,255,0.03); padding: 12px; border-radius: 6px; text-align: center; }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: #fff; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
+  .toc { background: rgba(88,166,255,0.05); border: 1px solid rgba(88,166,255,0.2); border-radius: 8px; padding: 16px 20px; margin-bottom: 20px; }
+  .toc-title { color: var(--accent); font-weight: 700; font-size: 0.9em; margin-bottom: 8px; }
+  .toc a { color: var(--accent); text-decoration: none; font-size: 0.88em; }
+  .toc a:hover { text-decoration: underline; }
+  .toc ol { padding-left: 20px; }
+  .toc li { margin: 4px 0; }
+  .nav-links { display: flex; justify-content: space-between; margin: 20px 0; font-size: 0.85em; }
+  .nav-links a { color: var(--accent); text-decoration: none; }
+  .nav-links a:hover { text-decoration: underline; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(255,255,255,0.03); padding: 12px; border-radius: 6px; text-align: center; }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: #fff; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
+  .footer { text-align: center; color: var(--muted); font-size: 0.75em; margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--border); }
+</style>
+<script>if(window.self===window.top&&sessionStorage.getItem("student_auth")!=="1"){document.body.innerHTML="";window.location.replace("student.html");}</script>
+</head>
+<body>
+
+<h1>彭博研究摘要</h1>
+<p class="subtitle">第88期 | 通膨回潮：日債創1996年新高與AI擁擠交易警訊</p>
+<span class="issue-badge">2026年六月上旬更新</span>
+
+<div class="nav-links">
+  <span><a href="newsletter_87_rates.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="toc">
+  <div class="toc-title">目錄</div>
+  <ol>
+    <li><a href="#japan-jgb">日本央行 日債警訊，通膨風險溢價飆升</a></li>
+    <li><a href="#liquidity-ai-trade">流動性 超額流動性轉降，半導體最受傷</a></li>
+    <li><a href="#takeaways">基金經理人重點摘要</a></li>
+  </ol>
+</div>
+
+<div class="section" id="japan-jgb">
+  <h2><span class="tag tag-misc">日本央行</span> 日債警訊，通膨風險溢價飆升</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--red)">2.8%</div><div class="lbl">10年期JGB殖利率
+創1996年來新高</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">&gt;4%</div><div class="lbl">BE預估1Q27通膨
+（共識僅2.6%）</div></div>
+    <div class="stat"><div class="val">0.9pp</div><div class="lbl">通膨風險溢價
+2020年壓低長債幅度</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">日債殖利率飆升 — 通膨風險溢價而非實質利率</div>
+    <p>彭博經濟研究將日本長債殖利率飆升解讀為<span style="color:#fff;font-weight:700">通膨風險溢價</span>上升的訊號，而非實質利率走高。周一亞洲盤中，日本<span style="color:#fff;font-weight:700">10年期國債殖利率一度觸及2.8%</span>，創<span style="color:#fff;font-weight:700">1996年以來新高</span>，超長天期殖利率同步攀升。分解分析顯示，漲幅主要來自損益兩平通膨率走升。推升因素包括油價上漲、首相高市早苗為應對商品價格而提出的<span style="color:#fff;font-weight:700">追加預算</span>，以及市場對<span style="color:#fff;font-weight:700">日銀獨立性</span>的疑慮。日銀4月放棄市場原本已定價的<span style="color:#fff;font-weight:700">25個基點</span>升息，使長期通膨前景更難錨定。BOJ估算，2020年通縮環境下通膨風險溢價曾壓低長債殖利率約<span style="color:#fff;font-weight:700">0.9個百分點</span>，如今這股拖累正快速消退。經濟學家共識預期CPI於1Q27見頂於2.6%，但彭博經濟研究預期同季通膨將升破4%。</p>
+    <div class="data-point">10年期JGB：<span style="color:#fff;font-weight:700">2.8%（1996來新高）</span> &nbsp;|&nbsp; BE通膨預測：<span style="color:#fff;font-weight:700">1Q27 &gt;4%</span>（共識2.6%） &nbsp;|&nbsp; 4月放棄升息：<span style="color:#fff;font-weight:700">25bp</span> &nbsp;|&nbsp; 通膨風險溢價歷史拖累：<span style="color:#fff;font-weight:700">0.9pp</span></div>
+    <div class="implication"><div class="label">投資啟示</div>日本通膨預期面臨脫錨風險，疊加薪資增速強勁與油價推升，長債仍有上行壓力。<span style="color:#fff;font-weight:700">做空JGB／日本長債（押注殖利率續升）</span>，並緊盯6月日銀會議：若在高市政府政治壓力下再度按兵不動，市場恐認定央行無力遏制通膨，殖利率將再度衝高。</div>
+  </div>
+</div>
+
+<div class="section" id="liquidity-ai-trade">
+  <h2><span class="tag tag-misc">流動性</span> 超額流動性轉降，半導體最受傷</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--red)">#1</div><div class="lbl">半導體Hype Score
+史上最擁擠</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">轉降</div><div class="lbl">超額流動性
+再度下滑</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">雙雙走弱</div><div class="lbl">半導體與科技硬體
+開始跑輸大盤</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">通膨正衝擊過度擁擠的AI交易</div>
+    <p>彭博的Simon White警告，隨著通膨加速，<span style="color:#fff;font-weight:700">超額流動性已開始下滑</span>，而高度擁擠的<span style="color:#fff;font-weight:700">半導體板塊</span>最為脆弱。市場看似刀槍不入，但警訊不少：股市超買、獲利預期上修速度不可持續、個股相關性處於極低水位、離散度逼近高點，加上荷姆茲海峽局勢持續扼住全球商品咽喉。White以遠期獲利、分析師評級與機構持股建構各GICS II級行業的<span style="color:#fff;font-weight:700">Hype Score</span>，分數越高代表炒作越盛、由狂熱轉為恐懼的風險越大。<span style="color:#fff;font-weight:700">半導體板塊Hype Score高居首位</span>，科技硬體緊追在後，兩者已開始跑輸；醫療設備與耐久消費品則最不擁擠；軟體炒作則因AI編碼代理進步而降溫。他強調，股票報酬的真正約束不是殖利率，而是<span style="color:#fff;font-weight:700">流動性</span> — 超額流動性（貨幣增速減去經濟增長與通膨）與股市具穩定且領先的關係。該指標在伊朗戰後低點反彈後再度下滑，雖未轉負，已預示未來數月股市環境趨於嚴峻。</p>
+    <div class="data-point">半導體Hype Score：<span style="color:#fff;font-weight:700">全行業最高（史上最擁擠）</span> &nbsp;|&nbsp; 超額流動性：<span style="color:#fff;font-weight:700">再度轉降</span>（領先指標） &nbsp;|&nbsp; 軟體炒作：<span style="color:#fff;font-weight:700">因AI編碼代理而降溫</span> &nbsp;|&nbsp; 最不擁擠：<span style="color:#fff;font-weight:700">醫療設備、耐久消費品</span></div>
+    <div class="implication"><div class="label">投資啟示</div>通膨回溫正侵蝕推升AI行情的流動性根基。<span style="color:#fff;font-weight:700">減持半導體與科技硬體等擁擠交易</span>，向最不擁擠的醫療設備、耐久消費品輪動；並以<span style="color:#fff;font-weight:700">超額流動性而非殖利率</span>作為判斷股市方向的領先指標。</div>
+  </div>
+</div>
+
+<div class="callout" id="takeaways">
+  <div class="callout-title">基金經理人重點摘要</div>
+  <ul>
+    <li><strong>日本央行：</strong>10年期JGB殖利率觸及2.8%、創1996年新高，反映通膨風險溢價而非實質利率。BE預期1Q27通膨破4%（共識僅2.6%）。做空日本長債。</li>
+    <li><strong>日銀政策：</strong>4月已放棄市場定價的25bp升息；緊盯6月會議，若屈服於高市政府政治壓力再度按兵不動，殖利率將進一步衝高。</li>
+    <li><strong>流動性：</strong>超額流動性再度轉降，是股市未來數月最關鍵的領先逆風。以流動性而非殖利率判斷股市方向。</li>
+    <li><strong>AI擁擠交易：</strong>半導體Hype Score全行業最高、史上最擁擠，與科技硬體已開始跑輸 — 減持並向醫療設備、耐久消費品輪動。</li>
+    <li><strong>商品風險：</strong>荷姆茲海峽緊張與油價上漲同時推升日本通膨與全球商品，是貫穿日債與股市的共同風險源。</li>
+  </ul>
+</div>
+
+<div class="nav-links">
+  <span><a href="newsletter_87_rates.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="footer">
+  彭博研究摘要 | 僅供教學與討論用途 | 2026年6月1日<br>
+  資料來源：Bloomberg Intelligence, Bloomberg Economics, Bloomberg News
+</div>
+
+</body>
+</html>

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>彭博研究摘要 #81 — 地緣斷層線：中俄失衡、伊朗困局與歐洲動盪</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --accent: #58a6ff;
+          --green: #3fb950; --red: #f85149; --yellow: #d29922; --text: #c9d1d9; --muted: #8b949e;
+          --orange: #f0883e; --purple: #bc8cff; --cyan: #39d2c0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans TC', 'Microsoft JhengHei', Helvetica, Arial, sans-serif; line-height: 1.7; padding: 20px; max-width: 860px; margin: 0 auto; }
+  h1 { color: #fff; font-size: 1.7em; margin-bottom: 4px; }
+  .subtitle { color: var(--muted); font-size: 0.9em; margin-bottom: 8px; }
+  .issue-badge { display: inline-block; background: rgba(88,166,255,0.15); color: var(--accent); padding: 3px 10px; border-radius: 12px; font-size: 0.8em; font-weight: 600; margin-bottom: 20px; }
+  .tag { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 0.72em; font-weight: 600; margin-right: 4px; }
+  .tag-rates { background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-china { background: rgba(240,136,62,0.15); color: var(--orange); }
+  .tag-japan { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-geo   { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-oil   { background: rgba(210,153,34,0.15); color: var(--yellow); }
+  .tag-trade { background: rgba(210,153,34,0.15); color: var(--yellow); }
+  .tag-growth{ background: rgba(63,185,80,0.15); color: var(--green); }
+  .tag-metals{ background: rgba(188,140,255,0.15); color: var(--purple); }
+  .tag-infl  { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-policy{ background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-val   { background: rgba(63,185,80,0.15); color: var(--green); }
+  .tag-vol   { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-semi  { background: rgba(57,210,192,0.15); color: var(--cyan); }
+  .tag-credit{ background: rgba(188,140,255,0.15); color: var(--purple); }
+  .tag-space { background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-misc  { background: rgba(139,148,158,0.15); color: var(--muted); }
+  .section { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 16px; }
+  .section h2 { color: #fff; font-size: 1.15em; margin-bottom: 12px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+  .section h3 { color: var(--accent); font-size: 0.95em; margin: 14px 0 6px; }
+  .article { margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .article:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .article-title { color: #fff; font-weight: 700; font-size: 0.95em; margin-bottom: 4px; }
+  .article-title-cn { color: var(--muted); font-size: 0.85em; margin-bottom: 8px; }
+  .article p { font-size: 0.9em; margin: 6px 0; }
+  .data-point { background: rgba(255,255,255,0.03); padding: 8px 12px; border-radius: 6px; margin: 8px 0; font-size: 0.85em; }
+  .data-point .num { color: #fff; font-weight: 700; }
+  .implication { background: rgba(88,166,255,0.06); border-left: 3px solid var(--accent); padding: 10px 14px; margin: 10px 0; border-radius: 0 6px 6px 0; font-size: 0.88em; }
+  .implication .label { color: var(--accent); font-weight: 700; font-size: 0.8em; text-transform: uppercase; margin-bottom: 4px; }
+  .callout { background: rgba(210,153,34,0.08); border: 1px solid rgba(210,153,34,0.3); border-radius: 6px; padding: 16px; margin: 16px 0; }
+  .callout-title { color: var(--yellow); font-weight: 700; font-size: 0.95em; margin-bottom: 8px; }
+  .callout ul { padding-left: 18px; }
+  .callout li { margin: 4px 0; font-size: 0.88em; }
+  ul { padding-left: 18px; }
+  li { margin: 3px 0; font-size: 0.88em; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(255,255,255,0.03); padding: 12px; border-radius: 6px; text-align: center; }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: #fff; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
+  .toc { background: rgba(88,166,255,0.05); border: 1px solid rgba(88,166,255,0.2); border-radius: 8px; padding: 16px 20px; margin-bottom: 20px; }
+  .toc-title { color: var(--accent); font-weight: 700; font-size: 0.9em; margin-bottom: 8px; }
+  .toc a { color: var(--accent); text-decoration: none; font-size: 0.88em; }
+  .toc a:hover { text-decoration: underline; }
+  .toc ol { padding-left: 20px; }
+  .toc li { margin: 4px 0; }
+  .nav-links { display: flex; justify-content: space-between; margin: 20px 0; font-size: 0.85em; }
+  .nav-links a { color: var(--accent); text-decoration: none; }
+  .nav-links a:hover { text-decoration: underline; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(255,255,255,0.03); padding: 12px; border-radius: 6px; text-align: center; }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: #fff; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
+  .footer { text-align: center; color: var(--muted); font-size: 0.75em; margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--border); }
+</style>
+<script>if(window.self===window.top&&sessionStorage.getItem("student_auth")!=="1"){document.body.innerHTML="";window.location.replace("student.html");}</script>
+</head>
+<body>
+
+<h1>彭博研究摘要</h1>
+<p class="subtitle">第81期 | 地緣斷層線：中俄失衡、伊朗困局與歐洲動盪</p>
+<span class="issue-badge">2026年六月上旬更新</span>
+
+<div class="nav-links">
+  <span><a href="newsletter_80_semiconductor.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="toc">
+  <div class="toc-title">目錄</div>
+  <ol>
+    <li><a href="#china-russia-summit">中俄關係 象徵大於實質，失衡的夥伴</a></li>
+    <li><a href="#iran-hormuz-war">伊朗戰爭 川普自設困局，伊朗握有籌碼</a></li>
+    <li><a href="#gulf-abraham-accords">海灣國家 對美失望，加速安全多元化</a></li>
+    <li><a href="#france-political-risk">歐洲政治 預算搖擺，社會動盪不止</a></li>
+    <li><a href="#takeaways">基金經理人重點摘要</a></li>
+  </ol>
+</div>
+
+<div class="section" id="china-russia-summit">
+  <h2><span class="tag tag-misc">中俄關係</span> 象徵大於實質，失衡的夥伴</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--red)">2,352億美元</div><div class="lbl">2025中俄貿易額
+五年來首次下滑</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">36% vs 3.7%</div><div class="lbl">中國佔俄外貿
+vs 俄佔中外貿</div></div>
+    <div class="stat"><div class="val" style="color:var(--green)">+31%</div><div class="lbl">Q1對華原油供應
+（3,180萬噸）</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">普丁北京之行 — 象徵意義多於實質成果</div>
+    <p>普丁 <span style="color:#fff;font-weight:700">5月19-20日</span> 訪華，雙方簽署 <span style="color:#fff;font-weight:700">40多份</span> 合作文件並重申「多極化世界」宣言，但核心的「西伯利亞力量2號」管道僅就路線與建設方案達成「共識」，<span style="color:#fff;font-weight:700">定價、條款及實施時間表仍懸而未決</span>。這條長 <span style="color:#fff;font-weight:700">4,000公里</span> 的管道計畫經蒙古每年向中國輸送多達 <span style="color:#fff;font-weight:700">500億立方公尺</span> 天然氣。中國坐擁多元供應來源與國內增產，握有議價籌碼，無意倉促。為數不多的具體成果是中國將俄公民免簽期限延長至 <span style="color:#fff;font-weight:700">2027年底</span>，以及升級跨境鐵路口岸（俄中邊境僅4個口岸）。整體強化了夥伴關係的戰略表象，卻凸顯了雙邊關係的不平衡。</p>
+    <div class="data-point">合作文件：<span style="color:#fff;font-weight:700">40+份</span> &nbsp;|&nbsp; 管道輸氣量：<span style="color:#fff;font-weight:700">500億立方公尺/年</span> &nbsp;|&nbsp; 管道長度：<span style="color:#fff;font-weight:700">4,000公里</span> &nbsp;|&nbsp; 免簽延至：<span style="color:#fff;font-weight:700">2027年底</span></div>
+    <div class="implication"><div class="label">投資啟示</div>管道無突破意味俄羅斯能源仍以折扣賣出。<span style="color:#fff;font-weight:700">買入受惠於廉價俄氣的中國下游能源股</span>，對俄油氣項目的長線資本開支預期維持中性。</div>
+  </div>
+  <div class="article">
+    <div class="article-title">不對稱的依賴 — 俄羅斯淪為次要夥伴</div>
+    <p>西方制裁後，俄羅斯對華依賴日益加深：中國佔俄外貿總額 <span style="color:#fff;font-weight:700">36%</span>，而俄僅佔中國外貿 <span style="color:#fff;font-weight:700">3.7%</span>。雙邊貿易額曾於2024年創 <span style="color:#fff;font-weight:700">2,526億美元</span> 紀錄，但2025年降至 <span style="color:#fff;font-weight:700">2,352億美元</span>，為五年來首次下滑，反映汽車需求減弱、進口關稅提高與石油收入下降。能源是支柱：2025年Gazprom對歐管道氣出口暴跌 <span style="color:#fff;font-weight:700">44%</span>（70年代中以來最低），對華銷售卻增長近 <span style="color:#fff;font-weight:700">25%</span>。中國藉此實現陸路能源多元化、規避海上咽喉，俄羅斯雖獲大買家卻喪失議價權。中國供應俄 <span style="color:#fff;font-weight:700">90%</span> 受制裁技術進口，但避免直接轉讓武器以防二級制裁。</p>
+    <div class="data-point">2024峰值貿易：<span style="color:#fff;font-weight:700">2,526億美元</span> &nbsp;|&nbsp; 對歐管道氣：<span style="color:#fff;font-weight:700">-44%</span> &nbsp;|&nbsp; 對華天然氣：<span style="color:#fff;font-weight:700">+25%</span> &nbsp;|&nbsp; 受制裁技術進口：<span style="color:#fff;font-weight:700">中國供應90%</span></div>
+    <div class="implication"><div class="label">投資啟示</div>俄需求遠大於中需求，雙邊不會成為正式聯盟。<span style="color:#fff;font-weight:700">對中俄「無上限」敘事保持折價</span>，地緣風險溢價應聚焦於台海與兩用物項出口管制升級。</div>
+  </div>
+</div>
+
+<div class="section" id="iran-hormuz-war">
+  <h2><span class="tag tag-misc">伊朗戰爭</span> 川普自設困局，伊朗握有籌碼</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--orange)">60天</div><div class="lbl">諒解備忘錄
+停火緩衝期</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">400公斤</div><div class="lbl">伊朗高濃縮鈾
+存量未受削減</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">7月前</div><div class="lbl">全球緊急油儲
+或耗盡</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">川普深陷自己一手製造的JCPOA困局</div>
+    <p>華盛頓與德黑蘭接近達成 <span style="color:#fff;font-weight:700">60天</span> 諒解備忘錄，以延長停火、重開霍爾木茲海峽並暫解海上封鎖。但條款關注點極窄 —— 僅限海峽重啟，將核問題推遲至後續談判，並完全回避飛彈計畫與地區代理人。川普長期抨擊2015年JCPOA（2018年退出），如今難以做出實質改進，共和黨強硬派的批評更迫使他進入「危機公關」模式，轉而要求海灣國家簽署《亞伯拉罕協議》以轉移話題。備忘錄把解凍伊朗資金推遲到海峽重開之後，暫減政治代價。但JCPOA當年談判耗時 <span style="color:#fff;font-weight:700">20個月</span>，兩個月內達成最終協議幾無可能，且需聯合國與歐盟參與。</p>
+    <div class="data-point">停火期限：<span style="color:#fff;font-weight:700">60天</span> &nbsp;|&nbsp; 原JCPOA談判耗時：<span style="color:#fff;font-weight:700">20個月</span> &nbsp;|&nbsp; 退出JCPOA：<span style="color:#fff;font-weight:700">2018年</span> &nbsp;|&nbsp; 焦點：<span style="color:#fff;font-weight:700">僅海峽重開，核問題後置</span></div>
+    <div class="implication"><div class="label">投資啟示</div>和談脆弱、隨時可能破裂。<span style="color:#fff;font-weight:700">維持原油與能源板塊的尾部風險對沖</span>（買入虛值看漲/油價波動率），勿因備忘錄消息過早平倉地緣溢價。</div>
+  </div>
+  <div class="article">
+    <div class="article-title">川普未達戰爭目標，伊朗反獲槓桿</div>
+    <p>開戰近三個月，彭博經濟研究評估川普五大目標皆未達成：伊朗核計畫未進一步倒退、仍持有 <span style="color:#fff;font-weight:700">400公斤</span> 高濃縮鈾；軍力雖受損但未被擊潰，且保留大量飛彈庫存與機動發射架，足以威脅封鎖海峽；代理人（真主黨、胡塞）仍構成威脅。最高領袖哈梅內伊被擊殺，由強硬派之子接班，革命衛隊崛起反使立場更趨強硬 —— 連續性最終勝出，政權藉戰爭鞏固權力。伊朗展現的最強威懾，是「將全球經濟挾為人質」的能力。基準情境因此轉為 <span style="color:#fff;font-weight:700">持久戰</span>，全球緊急石油儲備正快速下降，若海峽出口遲遲無法恢復，緩衝可能在 <span style="color:#fff;font-weight:700">7月前</span> 耗盡。</p>
+    <div class="data-point">戰爭目標達成：<span style="color:#fff;font-weight:700">0/5</span> &nbsp;|&nbsp; 高濃縮鈾：<span style="color:#fff;font-weight:700">400公斤</span> &nbsp;|&nbsp; 基準情境：<span style="color:#fff;font-weight:700">持久戰</span> &nbsp;|&nbsp; 油儲緩衝：<span style="color:#fff;font-weight:700">或7月耗盡</span></div>
+    <div class="implication"><div class="label">投資啟示</div>持久戰意味結構性供應風險未解。<span style="color:#fff;font-weight:700">戰術性增持能源與油服</span>，並對航運/保險成本上升敏感的物流股保持謹慎。</div>
+  </div>
+</div>
+
+<div class="section" id="gulf-abraham-accords">
+  <h2><span class="tag tag-misc">海灣國家</span> 對美失望，加速安全多元化</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--red)">~3,000枚</div><div class="lbl">伊朗對阿聯酋
+發射飛彈/無人機</div></div>
+    <div class="stat"><div class="val" style="color:var(--green)">145/148</div><div class="lbl">阿聯酋民亂風險
+全球排名（極低）</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">拒絕</div><div class="lbl">沙烏地拒與
+以色列正常化</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">亞伯拉罕協議與海灣國家的沉默</div>
+    <p>川普試圖迫使海灣國家加入《亞伯拉罕協議》，甚至暗示與結束伊朗戰爭掛鉤。但海灣國家曾竭力游說反戰、警示風險，戰爭期間反成伊朗襲擊主要對象，如今被要求「欠川普人情」，深感不滿。沙烏地重申只有在巴勒斯坦建國有可信路徑時才會簽署；卡達低調拒絕；阿聯酋雖恪守協議，代價卻持續上升。自2010年「阿拉伯之春」以來，海灣國家對美國這一安全保障國日益失望，正加速謀求安全與國防的多元化與自主。短期內無國能替代美國防務角色 —— 各國將補充消耗的軍備並可能加購美國軍火 —— 但長期轉向已埋下伏筆。</p>
+    <div class="data-point">沙烏地立場：<span style="color:#fff;font-weight:700">需巴勒斯坦建國路徑</span> &nbsp;|&nbsp; 阿聯酋：<span style="color:#fff;font-weight:700">創始成員、代價上升</span> &nbsp;|&nbsp; 趨勢：<span style="color:#fff;font-weight:700">安全夥伴多元化</span></div>
+    <div class="implication"><div class="label">投資啟示</div>美國對海灣影響力結構性鬆動。<span style="color:#fff;font-weight:700">關注區域國防採購與多元化受惠方</span>，中長期利好非美軍工與防務科技供應鏈。</div>
+  </div>
+  <div class="article">
+    <div class="article-title">本土平靜、鄰邦喧囂 — 阿聯酋風險報告</div>
+    <p>阿聯酋各項指標相對穩定：政權不穩、民亂、恐怖主義與內部武裝衝突風險均極低，反映治理穩固與高效安全機構。民亂風險全球排 <span style="color:#fff;font-weight:700">145/148</span>（與新加坡、沙烏地相似），政權不穩排 <span style="color:#fff;font-weight:700">106/155</span>。但2026年2月爆發的美伊戰爭顯著惡化了未來12-24個月展望：阿聯酋面臨最壞噩夢 —— 成為伊朗報復的直接目標，約 <span style="color:#fff;font-weight:700">3,000枚</span> 飛彈與無人機襲擊其港口、機場、能源設施與旅遊住宅區，並受霍爾木茲海峽封鎖衝擊。當局拆除了數個伊朗關聯恐怖小組，並向美國尋求金融支持以提振信心（而非美元短缺）。</p>
+    <div class="data-point">民亂風險：<span style="color:#fff;font-weight:700">全球145/148（極低）</span> &nbsp;|&nbsp; 政權不穩：<span style="color:#fff;font-weight:700">106/155</span> &nbsp;|&nbsp; 遭襲：<span style="color:#fff;font-weight:700">約3,000枚飛彈/無人機</span> &nbsp;|&nbsp; 展望：<span style="color:#fff;font-weight:700">因美伊戰爭轉差</span></div>
+    <div class="implication"><div class="label">投資啟示</div>本土穩定但區域外溢風險高。<span style="color:#fff;font-weight:700">海灣資產（主權債、地產）短期信用穩健，但需對海峽封鎖情境計入能源運輸中斷風險</span>。</div>
+  </div>
+</div>
+
+<div class="section" id="france-political-risk">
+  <h2><span class="tag tag-misc">歐洲政治</span> 預算搖擺，社會動盪不止</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--red)">4位</div><div class="lbl">兩年內更換
+法國總理人數</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">17.5萬</div><div class="lbl">「全面封鎖」
+反緊縮示威人數</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">23/148</div><div class="lbl">法國民亂風險
+全球排名（高）</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">搖擺的預算、廣泛的動盪 — 法國風險報告</div>
+    <p>兩年內 <span style="color:#fff;font-weight:700">4位</span> 總理、議會碎片化、抗議頻發 —— 法國風險集中於政治不確定與經濟挫折。曾推翻歷屆政府的分歧，預料將在秋季議會辯論 <span style="color:#fff;font-weight:700">2027年預算</span> 時重燃，而 <span style="color:#fff;font-weight:700">2027年春</span> 的總統大選恐成極右翼的突破時刻。政權不穩風險本身極低（全球排148/155，制度穩固、軍隊影響有限），但民亂風險高企（全球排 <span style="color:#fff;font-weight:700">23/148</span>，先進經濟體中第4）。2025年9月約 <span style="color:#fff;font-weight:700">17.5萬人</span> 參與「全面封鎖」反預算削減示威並導致數百人被捕；農民因撲殺與EU-Mercosur協議封路抗議。針對農民的快速立法將辯論至 <span style="color:#fff;font-weight:700">2026年7月</span>，恐再引發農業抗爭。</p>
+    <div class="data-point">兩年總理：<span style="color:#fff;font-weight:700">4位</span> &nbsp;|&nbsp; 2027預算辯論：<span style="color:#fff;font-weight:700">秋季</span> &nbsp;|&nbsp; 民亂排名：<span style="color:#fff;font-weight:700">先進國第4</span> &nbsp;|&nbsp; 農業立法辯論至：<span style="color:#fff;font-weight:700">2026年7月</span></div>
+    <div class="implication"><div class="label">投資啟示</div>政治癱瘓與預算僵局壓制法國資產。<span style="color:#fff;font-weight:700">對OAT-Bund利差走闊保持警惕、低配法國銀行與內需股</span>，並在2027大選臨近時計入極右尾部風險溢價。</div>
+  </div>
+</div>
+
+<div class="callout" id="takeaways">
+  <div class="callout-title">基金經理人重點摘要</div>
+  <ul>
+    <li><strong>中俄：</strong>關係失衡、無實質突破，2025貿易五年首降至2,352億美元。對「無上限」敘事折價，買入受惠廉價俄氣的中國下游能源。</li>
+    <li><strong>伊朗/霍爾木茲：</strong>60天備忘錄脆弱、基準情境為持久戰，油儲或7月前耗盡。維持能源板塊尾部對沖，勿過早平倉地緣溢價。</li>
+    <li><strong>伊朗戰局：</strong>川普五大目標皆未達成，伊朗保留飛彈與400公斤高濃縮鈾、握有挾持全球經濟的籌碼。戰術性增持能源與油服。</li>
+    <li><strong>海灣國家：</strong>對美失望加速安全多元化，沙烏地拒絕正常化。利好非美軍工與防務供應鏈；海灣信用穩健但需計入海峽封鎖風險。</li>
+    <li><strong>法國：</strong>兩年4位總理、民亂風險先進國第4，2027預算與大選臨近。警惕OAT-Bund利差走闊，低配法國銀行與內需股。</li>
+  </ul>
+</div>
+
+<div class="nav-links">
+  <span><a href="newsletter_80_semiconductor.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="footer">
+  彭博研究摘要 | 僅供教學與討論用途 | 2026年6月1日<br>
+  資料來源：Bloomberg Intelligence, Bloomberg Economics, Bloomberg News
+</div>
+
+</body>
+</html>

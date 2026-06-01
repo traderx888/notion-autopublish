@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>彭博研究摘要 #86 — 中美元首會晤與亞洲去美元化暗流</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --accent: #58a6ff;
+          --green: #3fb950; --red: #f85149; --yellow: #d29922; --text: #c9d1d9; --muted: #8b949e;
+          --orange: #f0883e; --purple: #bc8cff; --cyan: #39d2c0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans TC', 'Microsoft JhengHei', Helvetica, Arial, sans-serif; line-height: 1.7; padding: 20px; max-width: 860px; margin: 0 auto; }
+  h1 { color: #fff; font-size: 1.7em; margin-bottom: 4px; }
+  .subtitle { color: var(--muted); font-size: 0.9em; margin-bottom: 8px; }
+  .issue-badge { display: inline-block; background: rgba(88,166,255,0.15); color: var(--accent); padding: 3px 10px; border-radius: 12px; font-size: 0.8em; font-weight: 600; margin-bottom: 20px; }
+  .tag { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 0.72em; font-weight: 600; margin-right: 4px; }
+  .tag-rates { background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-china { background: rgba(240,136,62,0.15); color: var(--orange); }
+  .tag-japan { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-geo   { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-oil   { background: rgba(210,153,34,0.15); color: var(--yellow); }
+  .tag-trade { background: rgba(210,153,34,0.15); color: var(--yellow); }
+  .tag-growth{ background: rgba(63,185,80,0.15); color: var(--green); }
+  .tag-metals{ background: rgba(188,140,255,0.15); color: var(--purple); }
+  .tag-infl  { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-policy{ background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-val   { background: rgba(63,185,80,0.15); color: var(--green); }
+  .tag-vol   { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-semi  { background: rgba(57,210,192,0.15); color: var(--cyan); }
+  .tag-credit{ background: rgba(188,140,255,0.15); color: var(--purple); }
+  .tag-space { background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-misc  { background: rgba(139,148,158,0.15); color: var(--muted); }
+  .section { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 16px; }
+  .section h2 { color: #fff; font-size: 1.15em; margin-bottom: 12px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+  .section h3 { color: var(--accent); font-size: 0.95em; margin: 14px 0 6px; }
+  .article { margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .article:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .article-title { color: #fff; font-weight: 700; font-size: 0.95em; margin-bottom: 4px; }
+  .article-title-cn { color: var(--muted); font-size: 0.85em; margin-bottom: 8px; }
+  .article p { font-size: 0.9em; margin: 6px 0; }
+  .data-point { background: rgba(255,255,255,0.03); padding: 8px 12px; border-radius: 6px; margin: 8px 0; font-size: 0.85em; }
+  .data-point .num { color: #fff; font-weight: 700; }
+  .implication { background: rgba(88,166,255,0.06); border-left: 3px solid var(--accent); padding: 10px 14px; margin: 10px 0; border-radius: 0 6px 6px 0; font-size: 0.88em; }
+  .implication .label { color: var(--accent); font-weight: 700; font-size: 0.8em; text-transform: uppercase; margin-bottom: 4px; }
+  .callout { background: rgba(210,153,34,0.08); border: 1px solid rgba(210,153,34,0.3); border-radius: 6px; padding: 16px; margin: 16px 0; }
+  .callout-title { color: var(--yellow); font-weight: 700; font-size: 0.95em; margin-bottom: 8px; }
+  .callout ul { padding-left: 18px; }
+  .callout li { margin: 4px 0; font-size: 0.88em; }
+  ul { padding-left: 18px; }
+  li { margin: 3px 0; font-size: 0.88em; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(255,255,255,0.03); padding: 12px; border-radius: 6px; text-align: center; }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: #fff; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
+  .toc { background: rgba(88,166,255,0.05); border: 1px solid rgba(88,166,255,0.2); border-radius: 8px; padding: 16px 20px; margin-bottom: 20px; }
+  .toc-title { color: var(--accent); font-weight: 700; font-size: 0.9em; margin-bottom: 8px; }
+  .toc a { color: var(--accent); text-decoration: none; font-size: 0.88em; }
+  .toc a:hover { text-decoration: underline; }
+  .toc ol { padding-left: 20px; }
+  .toc li { margin: 4px 0; }
+  .nav-links { display: flex; justify-content: space-between; margin: 20px 0; font-size: 0.85em; }
+  .nav-links a { color: var(--accent); text-decoration: none; }
+  .nav-links a:hover { text-decoration: underline; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(255,255,255,0.03); padding: 12px; border-radius: 6px; text-align: center; }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: #fff; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
+  .footer { text-align: center; color: var(--muted); font-size: 0.75em; margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--border); }
+</style>
+<script>if(window.self===window.top&&sessionStorage.getItem("student_auth")!=="1"){document.body.innerHTML="";window.location.replace("student.html");}</script>
+</head>
+<body>
+
+<h1>彭博研究摘要</h1>
+<p class="subtitle">第86期 | 中美元首會晤與亞洲去美元化暗流</p>
+<span class="issue-badge">2026年六月上旬更新</span>
+
+<div class="nav-links">
+  <span><a href="newsletter_85_space.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="toc">
+  <div class="toc-title">目錄</div>
+  <ol>
+    <li><a href="#us-china-summit">中美關係 元首會晤，穩局多於破局</a></li>
+    <li><a href="#three-bs-deals">三B採購 波音、牛肉、大豆 — 政治勝利大於實質</a></li>
+    <li><a href="#de-dollarization">去美元化 亞洲本幣結算 — 人民幣最大受益者</a></li>
+    <li><a href="#takeaways">基金經理人重點摘要</a></li>
+  </ol>
+</div>
+
+<div class="section" id="us-china-summit">
+  <h2><span class="tag tag-misc">中美關係</span> 元首會晤，穩局多於破局</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--red)">2,500億</div><div class="lbl">美國對華貿易逆差
+（會晤後仍居高位）</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">~10%</div><div class="lbl">採購協議僅佔
+雙邊貿易總額</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">21%</div><div class="lbl">中國輸美商品
+平均關稅</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">特習會穩定中美關係 — 從對抗走向「可控的相互依存」</div>
+    <p>隨着中美雙方先後發布公告，特朗普與習近平的北京會晤在管理棘手的雙邊貿易關係上取得了一些<span style="color:#fff;font-weight:700">建設性進展</span>。美方情況說明稱，兩國同意設立<span style="color:#fff;font-weight:700">貿易理事會與投資理事會</span>，自近十年前中美戰略經濟對話被擱置以來，新機制有望讓雙方恢復定期溝通。中方則稱在<span style="color:#fff;font-weight:700">某些領域的關稅減讓</span>上達成一致，但未作詳細說明。儘管框架性成果值得肯定，這次會晤並未帶來太多立竿見影的實質突破 —— 雙方在中國工業品大量輸出全球、以及美方仍處高位的對華關稅等核心矛盾上<span style="color:#fff;font-weight:700">毫無着墨</span>。彭博經濟研究判斷，只要這些結構性問題得不到解決，貿易中的更大趨勢仍將延續，這次會晤更多是穩定基調而非根本逆轉。</p>
+    <div class="data-point">新機制：<span style="color:#fff;font-weight:700">貿易理事會＋投資理事會</span> &nbsp;|&nbsp; 中國輸美關稅：<span style="color:#fff;font-weight:700">約21%（高於全球均值10個百分點）</span> &nbsp;|&nbsp; 2025年中國對美出口/進口：<span style="color:#fff;font-weight:700">分別下降20%／15%</span></div>
+    <div class="implication"><div class="label">投資啟示</div>會晤降低尾部風險但不改大趨勢。對沖基金宜<span style="color:#fff;font-weight:700">維持中性人民幣敞口</span>，勿過度解讀「破冰」，關注理事會後續落地細節。</div>
+  </div>
+</div>
+
+<div class="section" id="three-bs-deals">
+  <h2><span class="tag tag-misc">三B採購</span> 波音、牛肉、大豆 — 政治勝利大於實質</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--green)">200架</div><div class="lbl">波音「大」飛機
+採購承諾（或增至750）</div></div>
+    <div class="stat"><div class="val" style="color:var(--green)">170億</div><div class="lbl">額外農產品採購
+（2026-2028）</div></div>
+    <div class="stat"><div class="val" style="color:var(--green)">260-300億</div><div class="lbl">合計自美進口
+預計年增額</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">「三B」採購回暖 — 縮小失衡作用有限</div>
+    <p>對中國而言，採購波音客機（Boeing）、牛肉（beef）與大豆（soybeans）這「三B」屬於容易達成的低垂果實。主要短期成果包括：中國同意購買 <span style="color:#fff;font-weight:700">200 架波音「大」飛機</span>、在 2026 至 2028 年間額外採購 <span style="color:#fff;font-weight:700">170 億美元</span>美國農產品，並續簽數百家美國牛肉加工廠的對華出口許可。特朗普更暗示，通用電氣（GE）發動機採購量達 <span style="color:#fff;font-weight:700">400-450 台</span>，波音飛機採購量或上看 <span style="color:#fff;font-weight:700">750 架</span>。彭博估算，若 200 架成行，每年可使中國自美進口增加約 <span style="color:#fff;font-weight:700">37 億美元</span>；若達 750 架則年增 <span style="color:#fff;font-weight:700">74 億美元</span>，GE 發動機再添 <span style="color:#fff;font-weight:700">12 億美元</span>。然而合計 260-300 億美元的採購僅佔雙邊貿易約 10%，美國對華逆差仍將維持在 <span style="color:#fff;font-weight:700">2,500 億美元</span>（2025 年為 2,800 億）。協議究屬承諾還是意向、時間跨度多長，細節仍高度不確定。</p>
+    <div class="data-point">GE發動機：<span style="color:#fff;font-weight:700">400-450台（年增約12億美元）</span> &nbsp;|&nbsp; 大豆2026承諾：<span style="color:#fff;font-weight:700">2,500萬噸／約120億美元（較2025年增45億）</span> &nbsp;|&nbsp; 飛機交付假設：<span style="color:#fff;font-weight:700">5年攤分</span> &nbsp;|&nbsp; 逆差變化：<span style="color:#fff;font-weight:700">2,800億→2,500億美元</span></div>
+    <div class="implication"><div class="label">投資啟示</div>農產品與航空板塊獲訂單確認性利好。可<span style="color:#fff;font-weight:700">戰術性增持 CBOT 大豆多頭</span>與美國農業／航空供應鏈，但留意「意向非合約」的執行風險，勿追高。</div>
+  </div>
+</div>
+
+<div class="section" id="de-dollarization">
+  <h2><span class="tag tag-misc">去美元化</span> 亞洲本幣結算 — 人民幣最大受益者</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--green)">~20%</div><div class="lbl">本幣結算可降低
+東南亞美元依賴</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">5.6%</div><div class="lbl">非G4貨幣佔已分配
+外儲（3Q25）</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">4.8</div><div class="lbl">馬幣兌美元觸
+1998年來新低</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">東南亞去美元化 — 人民幣或比本幣更受惠</div>
+    <p>過去十年東南亞經濟體持續推動降低美元依賴、力推亞洲區內貿易的本幣結算。彭博策略團隊估算，相互以本幣結算可使其美元依賴降低約 <span style="color:#fff;font-weight:700">20%</span>。然而由於東南亞貨幣在全球貿易中佔比偏小，短期內難以成為主要結算或儲備貨幣 —— 真正受益者反而可能是<span style="color:#fff;font-weight:700">人民幣</span>：中國是 ASEAN-5 在 2023 年的最大貿易夥伴，人民幣作為相對更被接受的結算與儲備貨幣，是這些經濟體天然的美元替代選項。在 IMF COFER 之外的非 G4 貨幣中，<span style="color:#fff;font-weight:700">韓圜與新加坡元</span>儲備份額居前，甚至高於瑞典克朗、紐元等 G10 貨幣，但這組「其他貨幣」截至 3Q25 僅佔已分配儲備的 <span style="color:#fff;font-weight:700">5.6%</span>。馬來西亞林吉特 2 月一度跌穿 <span style="color:#fff;font-weight:700">4.8 兌一美元</span>、創 1998 年以來新低，更凸顯其分散美元波動風險、與印度、泰國等建立本幣結算管道的迫切性。</p>
+    <div class="data-point">ASEAN-5最大貿易夥伴：<span style="color:#fff;font-weight:700">中國（2023）</span> &nbsp;|&nbsp; 領跑非G4儲備：<span style="color:#fff;font-weight:700">韓圜、新加坡元</span> &nbsp;|&nbsp; 大宗商品結算：<span style="color:#fff;font-weight:700">仍以美元為主</span> &nbsp;|&nbsp; 林吉特低點：<span style="color:#fff;font-weight:700">1998年以來最弱</span></div>
+    <div class="implication"><div class="label">投資啟示</div>去美元化是慢變量但方向明確。中長線<span style="color:#fff;font-weight:700">逢低布局人民幣國際化主題</span>（離岸 CNH 結算、人民幣計價大宗），並對林吉特等高波動本幣<span style="color:#fff;font-weight:700">保持對沖</span>。</div>
+  </div>
+</div>
+
+<div class="callout" id="takeaways">
+  <div class="callout-title">基金經理人重點摘要</div>
+  <ul>
+    <li><strong>中美關係：</strong>元首會晤穩定基調、設立貿易與投資理事會，但關稅與產能輸出等結構性矛盾未解。維持中性人民幣敞口，勿過度解讀「破冰」。</li>
+    <li><strong>三B採購：</strong>200架波音（或上看750架）＋170億美元農產品＋400-450台GE發動機。戰術性增持 CBOT 大豆多頭與美國農業／航空供應鏈。</li>
+    <li><strong>貿易失衡：</strong>採購僅佔雙邊貿易約10%，美國對華逆差仍達2,500億美元；21%對華關稅未動，大趨勢延續。</li>
+    <li><strong>去美元化：</strong>東南亞本幣結算可降美元依賴約20%，人民幣為最大受益者。中長線布局人民幣國際化主題。</li>
+    <li><strong>亞洲匯率：</strong>林吉特觸1998年來低位，凸顯本幣脆弱性。對高波動 EM 亞幣保持對沖，留意非G4儲備份額（僅5.6%）緩步上升。</li>
+  </ul>
+</div>
+
+<div class="nav-links">
+  <span><a href="newsletter_85_space.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="footer">
+  彭博研究摘要 | 僅供教學與討論用途 | 2026年6月1日<br>
+  資料來源：Bloomberg Intelligence, Bloomberg Economics, Bloomberg News
+</div>
+
+</body>
+</html>

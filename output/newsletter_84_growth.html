@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>彭博研究摘要 #84 — 勞動力假象與能源衝擊：全球成長動能轉折</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --accent: #58a6ff;
+          --green: #3fb950; --red: #f85149; --yellow: #d29922; --text: #c9d1d9; --muted: #8b949e;
+          --orange: #f0883e; --purple: #bc8cff; --cyan: #39d2c0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans TC', 'Microsoft JhengHei', Helvetica, Arial, sans-serif; line-height: 1.7; padding: 20px; max-width: 860px; margin: 0 auto; }
+  h1 { color: #fff; font-size: 1.7em; margin-bottom: 4px; }
+  .subtitle { color: var(--muted); font-size: 0.9em; margin-bottom: 8px; }
+  .issue-badge { display: inline-block; background: rgba(88,166,255,0.15); color: var(--accent); padding: 3px 10px; border-radius: 12px; font-size: 0.8em; font-weight: 600; margin-bottom: 20px; }
+  .tag { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 0.72em; font-weight: 600; margin-right: 4px; }
+  .tag-rates { background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-china { background: rgba(240,136,62,0.15); color: var(--orange); }
+  .tag-japan { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-geo   { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-oil   { background: rgba(210,153,34,0.15); color: var(--yellow); }
+  .tag-trade { background: rgba(210,153,34,0.15); color: var(--yellow); }
+  .tag-growth{ background: rgba(63,185,80,0.15); color: var(--green); }
+  .tag-metals{ background: rgba(188,140,255,0.15); color: var(--purple); }
+  .tag-infl  { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-policy{ background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-val   { background: rgba(63,185,80,0.15); color: var(--green); }
+  .tag-vol   { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-semi  { background: rgba(57,210,192,0.15); color: var(--cyan); }
+  .tag-credit{ background: rgba(188,140,255,0.15); color: var(--purple); }
+  .tag-space { background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-misc  { background: rgba(139,148,158,0.15); color: var(--muted); }
+  .section { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 16px; }
+  .section h2 { color: #fff; font-size: 1.15em; margin-bottom: 12px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+  .section h3 { color: var(--accent); font-size: 0.95em; margin: 14px 0 6px; }
+  .article { margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .article:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .article-title { color: #fff; font-weight: 700; font-size: 0.95em; margin-bottom: 4px; }
+  .article-title-cn { color: var(--muted); font-size: 0.85em; margin-bottom: 8px; }
+  .article p { font-size: 0.9em; margin: 6px 0; }
+  .data-point { background: rgba(255,255,255,0.03); padding: 8px 12px; border-radius: 6px; margin: 8px 0; font-size: 0.85em; }
+  .data-point .num { color: #fff; font-weight: 700; }
+  .implication { background: rgba(88,166,255,0.06); border-left: 3px solid var(--accent); padding: 10px 14px; margin: 10px 0; border-radius: 0 6px 6px 0; font-size: 0.88em; }
+  .implication .label { color: var(--accent); font-weight: 700; font-size: 0.8em; text-transform: uppercase; margin-bottom: 4px; }
+  .callout { background: rgba(210,153,34,0.08); border: 1px solid rgba(210,153,34,0.3); border-radius: 6px; padding: 16px; margin: 16px 0; }
+  .callout-title { color: var(--yellow); font-weight: 700; font-size: 0.95em; margin-bottom: 8px; }
+  .callout ul { padding-left: 18px; }
+  .callout li { margin: 4px 0; font-size: 0.88em; }
+  ul { padding-left: 18px; }
+  li { margin: 3px 0; font-size: 0.88em; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(255,255,255,0.03); padding: 12px; border-radius: 6px; text-align: center; }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: #fff; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
+  .toc { background: rgba(88,166,255,0.05); border: 1px solid rgba(88,166,255,0.2); border-radius: 8px; padding: 16px 20px; margin-bottom: 20px; }
+  .toc-title { color: var(--accent); font-weight: 700; font-size: 0.9em; margin-bottom: 8px; }
+  .toc a { color: var(--accent); text-decoration: none; font-size: 0.88em; }
+  .toc a:hover { text-decoration: underline; }
+  .toc ol { padding-left: 20px; }
+  .toc li { margin: 4px 0; }
+  .nav-links { display: flex; justify-content: space-between; margin: 20px 0; font-size: 0.85em; }
+  .nav-links a { color: var(--accent); text-decoration: none; }
+  .nav-links a:hover { text-decoration: underline; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(255,255,255,0.03); padding: 12px; border-radius: 6px; text-align: center; }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: #fff; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
+  .footer { text-align: center; color: var(--muted); font-size: 0.75em; margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--border); }
+</style>
+<script>if(window.self===window.top&&sessionStorage.getItem("student_auth")!=="1"){document.body.innerHTML="";window.location.replace("student.html");}</script>
+</head>
+<body>
+
+<h1>彭博研究摘要</h1>
+<p class="subtitle">第84期 | 勞動力假象與能源衝擊：全球成長動能轉折</p>
+<span class="issue-badge">2026年六月上旬更新</span>
+
+<div class="nav-links">
+  <span><a href="newsletter_83_china.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="toc">
+  <div class="toc-title">目錄</div>
+  <ol>
+    <li><a href="#us-labor">美國就業 表象堅韌，暗藏裂痕</a></li>
+    <li><a href="#sea-growth">東南亞 韌性消退，逆風漸起</a></li>
+    <li><a href="#energy-inflation">能源與通膨 伊朗戰火，油價燒向通膨</a></li>
+    <li><a href="#takeaways">基金經理人重點摘要</a></li>
+  </ol>
+</div>
+
+<div class="section" id="us-labor">
+  <h2><span class="tag tag-misc">美國就業</span> 表象堅韌，暗藏裂痕</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val">+95k</div><div class="lbl">5月非農就業
+（彭博預測）</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">33.5萬</div><div class="lbl">疫情前申領均值
+（今遠低於此）</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">8.5萬+</div><div class="lbl">今年科技業裁員
+佔逾30萬總數</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">失業救濟低位的假象 — 數據正在誇大勞動力韌性</div>
+    <p>市場慣於將低位的失業救濟申領視為勞動力市場健康的先行訊號，但彭博經濟研究警示這是一種<span style="color:#fff;font-weight:700">統計假象</span>。申領人數已連續 <span style="color:#fff;font-weight:700">13 週</span>低於去年同期，遠低於疫情前那十年 <span style="color:#fff;font-weight:700">33.5 萬</span>的平均水平，但主因並非離職異常稀少，而是各州在疫情後大幅升級了<span style="color:#fff;font-weight:700">身份驗證與反欺詐系統</span>。德州、俄亥俄州、麻州官員均明確指出，申領激增多源於欺詐性申請而非實際裁員——俄亥俄州一度有逾 <span style="color:#fff;font-weight:700">40%</span> 申請被標記需嚴格核查。更關鍵的是裁員結構：今年逾 <span style="color:#fff;font-weight:700">30 萬</span>宣布裁員中，超過 <span style="color:#fff;font-weight:700">8.5 萬</span>來自高薪科技業，這些人領有豐厚遣散費而傾向延後申領。WARN 通知裁員數與申領數的背離，正是這種傳導弱化的證據。</p>
+    <div class="data-point">連續低於去年同期：<span style="color:#fff;font-weight:700">13週</span> &nbsp;|&nbsp; 疫情前十年均值：<span style="color:#fff;font-weight:700">33.5萬</span> &nbsp;|&nbsp; 科技業裁員：<span style="color:#fff;font-weight:700">8.5萬+</span>（佔30萬總數）| 較去年同期：<span style="color:#fff;font-weight:700">高出1/3</span>，創2023年來最高</div>
+    <div class="implication"><div class="label">投資啟示</div>勿盡信表面強勁的勞動數據——白領與科技裁員加劇正被申領數據掩蓋。<span style="color:#fff;font-weight:700">對利率與風險資產維持防禦性偏空</span>，留意未來幾月就業修正風險。</div>
+  </div>
+  <div class="article">
+    <div class="article-title">5月非農穩健、ECB箭在弦上 — 全球數據週前瞻</div>
+    <p>彭博經濟研究預期美國本週數據將印證底層招聘動能仍穩健：<span style="color:#fff;font-weight:700">5月非農預計增加 95k</span>，<span style="color:#fff;font-weight:700">4月職位空缺料增 85k 至 695 萬個</span>，主要由小企業招聘意願改善帶動，大型企業則相對審慎。<span style="color:#fff;font-weight:700">5月 ISM 製造業 PMI 預計從 52.7 升至 53.0</span>，新訂單加速、庫存偏低支撐生產，惟就業前指標與出貨偏軟令人保持謹慎。離職率料持穩於 <span style="color:#fff;font-weight:700">2%</span>。歐元區方面，<span style="color:#fff;font-weight:700">5月通膨數據將鞏固 6月 ECB 升息</span>的理據。中國成長維持低檔，<span style="color:#fff;font-weight:700">5月製造業 PMI 料續處擴張，但非製造業仍陷收縮</span>。此外，瑞典、瑞士、印度、南韓、台灣等多國通膨數據同步登場。</p>
+    <div class="data-point">5月非農：<span style="color:#fff;font-weight:700">+95k</span> &nbsp;|&nbsp; 4月職位空缺：<span style="color:#fff;font-weight:700">+85k 至 695萬</span> &nbsp;|&nbsp; ISM製造業：<span style="color:#fff;font-weight:700">53.0</span>（前值52.7）| 離職率：<span style="color:#fff;font-weight:700">2%</span> &nbsp;|&nbsp; ECB：<span style="color:#fff;font-weight:700">6月升息在望</span></div>
+    <div class="implication"><div class="label">投資啟示</div>美國招聘表面穩健但已現裂痕，歐元區則因通膨升溫轉向緊縮。<span style="color:#fff;font-weight:700">做多歐元、減持歐元區前端利率期貨</span>；對美元維持中性，等待非農修正確認趨勢。</div>
+  </div>
+</div>
+
+<div class="section" id="sea-growth">
+  <h2><span class="tag tag-misc">東南亞</span> 韌性消退，逆風漸起</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--green)">5.6%</div><div class="lbl">印尼1Q26 GDP
+（4Q25為5.4%）</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">5.4%</div><div class="lbl">馬來西亞1Q26
+（4Q25達6.2%）</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">2.8%</div><div class="lbl">菲律賓1Q26
+GDP年增</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">東南亞 2025 韌性難續 — 2026 多重逆風來襲</div>
+    <p>東南亞 2025 年成長在美國關稅下展現超預期韌性，但彭博經濟研究判斷此韌性<span style="color:#fff;font-weight:700">難以為繼</span>，因前置出貨與有限關稅傳導等支撐將消失，2026 年更面臨貿易讓步加劇本地生產商競爭的新逆風。<span style="color:#fff;font-weight:700">印尼 1Q26 成長加速至 5.6%</span>（4Q25 為 5.4%），由政府支出爆發與家庭消費（升至 <span style="color:#fff;font-weight:700">5.5%</span>，後疫情以來最強）帶動，但 <span style="color:#fff;font-weight:700">3% 財政赤字上限</span>意味刺激短暫，油價衝擊將侵蝕可支配支出。<span style="color:#fff;font-weight:700">馬來西亞放緩至 5.4%</span>（4Q25 達 6.2%），出口與家庭支出全面降溫。<span style="color:#fff;font-weight:700">菲律賓 1Q26 僅 2.8%</span>，受進口攀升拖累，預期 2Q 油價推升成本將續壓內外需。各國央行恐須升息以錨定通膨預期。</p>
+    <div class="data-point">印尼1Q26：<span style="color:#fff;font-weight:700">5.6%</span>（家庭消費5.5%）| 馬來西亞1Q26：<span style="color:#fff;font-weight:700">5.4%</span>（前季6.2%，降0.8pp）| 菲律賓1Q26：<span style="color:#fff;font-weight:700">2.8%</span> &nbsp;|&nbsp; 印尼赤字上限：<span style="color:#fff;font-weight:700">GDP 3%</span> &nbsp;|&nbsp; 風險：<span style="color:#fff;font-weight:700">油價衝擊 + 貿易讓步</span></div>
+    <div class="implication"><div class="label">投資啟示</div>東南亞成長見頂、央行轉向升息以抗通膨——<span style="color:#fff;font-weight:700">減持東南亞本地股債、看空區域貨幣</span>。能源出口國（印尼）相對抗跌，可選擇性配置其能源相關出口受惠標的。</div>
+  </div>
+</div>
+
+<div class="section" id="energy-inflation">
+  <h2><span class="tag tag-misc">能源與通膨</span> 伊朗戰火，油價燒向通膨</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--red)">$4.52</div><div class="lbl">5/10汽油零售價
+（2月底為$2.98）</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">6.1%</div><div class="lbl">消費者一年期
+通膨預期</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">3.8%</div><div class="lbl">上月CPI年增
+（汽油兩月漲28%）</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">油價衝擊侵蝕消費 — 美國夏季駕駛季的隱憂</div>
+    <p>陣亡將士紀念日揭開美國夏季駕駛季序幕，但能源衝擊正改寫消費前景。自 <span style="color:#fff;font-weight:700">2 月美以對伊朗動武</span>以來，全國普通汽油均價從 2 月底的 <span style="color:#fff;font-weight:700">$2.98</span> 飆升至 5 月 10 日的 <span style="color:#fff;font-weight:700">$4.52/加侖</span>。價格暴漲壓抑需求，<span style="color:#fff;font-weight:700">汽油需求降至每日 880 萬桶</span>，低於同期五年均值。Trump 總統暗示除暫停聯邦汽油稅外或推更多舉措應對。通膨壓力已全面傳導：<span style="color:#fff;font-weight:700">上月 CPI 年增 3.8%</span>，其中汽油兩個月內漲 <span style="color:#fff;font-weight:700">28%</span>，雜貨、房租、機票同步上揚。<span style="color:#fff;font-weight:700">4 月消費者預期未來一年通膨將達 6.1%</span>。Fed 上次會議按兵不動，並有 <span style="color:#fff;font-weight:700">3 位官員異議</span>——他們支持維持利率，但反對聲明中暗示下一步可能降息的措辭。Salesforce 股價過去一年因 AI 疑慮重挫近 <span style="color:#fff;font-weight:700">40%</span>。</p>
+    <div class="data-point">汽油價：<span style="color:#fff;font-weight:700">$4.52</span>（2月底$2.98）| 汽油需求：<span style="color:#fff;font-weight:700">880萬桶/日</span>（低於五年均值）| CPI年增：<span style="color:#fff;font-weight:700">3.8%</span>（汽油兩月+28%）| 一年期通膨預期：<span style="color:#fff;font-weight:700">6.1%</span> &nbsp;|&nbsp; Fed異議票：<span style="color:#fff;font-weight:700">3位</span>（反對降息傾向措辭）</div>
+    <div class="implication"><div class="label">投資啟示</div>伊朗戰火推升能源、油價直灌通膨並侵蝕消費力，Fed 降息路徑遭通膨綁架。<span style="color:#fff;font-weight:700">做多能源、減持耐久消費與航空</span>；對前端利率期貨轉中性偏空，押注 Fed 上半年難以降息。</div>
+  </div>
+</div>
+
+<div class="callout" id="takeaways">
+  <div class="callout-title">基金經理人重點摘要</div>
+  <ul>
+    <li><strong>美國就業：</strong>失業救濟低位是欺詐篩查與科技裁員結構造成的假象，非真實韌性。5月非農料+95k但暗藏裂痕。對風險資產維持防禦。</li>
+    <li><strong>東南亞：</strong>2025韌性難續。印尼1Q加速至5.6%但靠短暫財政刺激，馬來西亞降至5.4%。央行轉向升息——減持區域股債與貨幣。</li>
+    <li><strong>能源衝擊：</strong>伊朗戰火令汽油價自$2.98飆至$4.52，CPI年增3.8%、通膨預期升至6.1%。做多能源、看空耐久消費。</li>
+    <li><strong>歐央行：</strong>5月通膨將鞏固6月ECB升息——做多歐元、減持歐元區前端利率期貨。</li>
+    <li><strong>美聯儲：</strong>油價綁架降息路徑，3位官員已對降息措辭異議。對前端利率期貨轉中性偏空，押注上半年難降息。</li>
+    <li><strong>中國：</strong>成長維持低檔，5月製造業PMI料續擴張但非製造業陷收縮——對中國內需復甦保持保留。</li>
+  </ul>
+</div>
+
+<div class="nav-links">
+  <span><a href="newsletter_83_china.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="footer">
+  彭博研究摘要 | 僅供教學與討論用途 | 2026年6月1日<br>
+  資料來源：Bloomberg Intelligence, Bloomberg Economics, Bloomberg News
+</div>
+
+</body>
+</html>

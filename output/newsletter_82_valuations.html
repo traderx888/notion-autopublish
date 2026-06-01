@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>彭博研究摘要 #82 — 牛市投降進行式 — 美銀賣出信號觸發</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --accent: #58a6ff;
+          --green: #3fb950; --red: #f85149; --yellow: #d29922; --text: #c9d1d9; --muted: #8b949e;
+          --orange: #f0883e; --purple: #bc8cff; --cyan: #39d2c0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans TC', 'Microsoft JhengHei', Helvetica, Arial, sans-serif; line-height: 1.7; padding: 20px; max-width: 860px; margin: 0 auto; }
+  h1 { color: #fff; font-size: 1.7em; margin-bottom: 4px; }
+  .subtitle { color: var(--muted); font-size: 0.9em; margin-bottom: 8px; }
+  .issue-badge { display: inline-block; background: rgba(88,166,255,0.15); color: var(--accent); padding: 3px 10px; border-radius: 12px; font-size: 0.8em; font-weight: 600; margin-bottom: 20px; }
+  .tag { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 0.72em; font-weight: 600; margin-right: 4px; }
+  .tag-rates { background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-china { background: rgba(240,136,62,0.15); color: var(--orange); }
+  .tag-japan { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-geo   { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-oil   { background: rgba(210,153,34,0.15); color: var(--yellow); }
+  .tag-trade { background: rgba(210,153,34,0.15); color: var(--yellow); }
+  .tag-growth{ background: rgba(63,185,80,0.15); color: var(--green); }
+  .tag-metals{ background: rgba(188,140,255,0.15); color: var(--purple); }
+  .tag-infl  { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-policy{ background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-val   { background: rgba(63,185,80,0.15); color: var(--green); }
+  .tag-vol   { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-semi  { background: rgba(57,210,192,0.15); color: var(--cyan); }
+  .tag-credit{ background: rgba(188,140,255,0.15); color: var(--purple); }
+  .tag-space { background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-misc  { background: rgba(139,148,158,0.15); color: var(--muted); }
+  .section { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 16px; }
+  .section h2 { color: #fff; font-size: 1.15em; margin-bottom: 12px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+  .section h3 { color: var(--accent); font-size: 0.95em; margin: 14px 0 6px; }
+  .article { margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .article:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .article-title { color: #fff; font-weight: 700; font-size: 0.95em; margin-bottom: 4px; }
+  .article-title-cn { color: var(--muted); font-size: 0.85em; margin-bottom: 8px; }
+  .article p { font-size: 0.9em; margin: 6px 0; }
+  .data-point { background: rgba(255,255,255,0.03); padding: 8px 12px; border-radius: 6px; margin: 8px 0; font-size: 0.85em; }
+  .data-point .num { color: #fff; font-weight: 700; }
+  .implication { background: rgba(88,166,255,0.06); border-left: 3px solid var(--accent); padding: 10px 14px; margin: 10px 0; border-radius: 0 6px 6px 0; font-size: 0.88em; }
+  .implication .label { color: var(--accent); font-weight: 700; font-size: 0.8em; text-transform: uppercase; margin-bottom: 4px; }
+  .callout { background: rgba(210,153,34,0.08); border: 1px solid rgba(210,153,34,0.3); border-radius: 6px; padding: 16px; margin: 16px 0; }
+  .callout-title { color: var(--yellow); font-weight: 700; font-size: 0.95em; margin-bottom: 8px; }
+  .callout ul { padding-left: 18px; }
+  .callout li { margin: 4px 0; font-size: 0.88em; }
+  ul { padding-left: 18px; }
+  li { margin: 3px 0; font-size: 0.88em; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(255,255,255,0.03); padding: 12px; border-radius: 6px; text-align: center; }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: #fff; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
+  .toc { background: rgba(88,166,255,0.05); border: 1px solid rgba(88,166,255,0.2); border-radius: 8px; padding: 16px 20px; margin-bottom: 20px; }
+  .toc-title { color: var(--accent); font-weight: 700; font-size: 0.9em; margin-bottom: 8px; }
+  .toc a { color: var(--accent); text-decoration: none; font-size: 0.88em; }
+  .toc a:hover { text-decoration: underline; }
+  .toc ol { padding-left: 20px; }
+  .toc li { margin: 4px 0; }
+  .nav-links { display: flex; justify-content: space-between; margin: 20px 0; font-size: 0.85em; }
+  .nav-links a { color: var(--accent); text-decoration: none; }
+  .nav-links a:hover { text-decoration: underline; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(255,255,255,0.03); padding: 12px; border-radius: 6px; text-align: center; }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: #fff; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
+  .footer { text-align: center; color: var(--muted); font-size: 0.75em; margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--border); }
+</style>
+<script>if(window.self===window.top&&sessionStorage.getItem("student_auth")!=="1"){document.body.innerHTML="";window.location.replace("student.html");}</script>
+</head>
+<body>
+
+<h1>彭博研究摘要</h1>
+<p class="subtitle">第82期 | 牛市投降進行式 — 美銀賣出信號觸發</p>
+<span class="issue-badge">2026年六月上旬更新</span>
+
+<div class="nav-links">
+  <span><a href="newsletter_81_geopolitics.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="toc">
+  <div class="toc-title">目錄</div>
+  <ol>
+    <li><a href="#positioning">倉位 創紀錄增配，逼近賣出信號</a></li>
+    <li><a href="#bubble">泡沫 集中度超越歷代泡沫，廣度拉警報</a></li>
+    <li><a href="#rates">債券 債市義勇軍出動，殖利率定生死</a></li>
+    <li><a href="#flows">資金流向 九周首見資金流出，日中遭拋售</a></li>
+    <li><a href="#gs-desk">GS交易台 槓桿創三年新高，對沖基金回補科技</a></li>
+    <li><a href="#takeaways">基金經理人重點摘要</a></li>
+  </ol>
+</div>
+
+<div class="section" id="positioning">
+  <h2><span class="tag tag-misc">倉位</span> 創紀錄增配，逼近賣出信號</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--orange)">淨超配50%</div><div class="lbl">5月股票配置
+（創紀錄，前值13%）</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">3.9%</div><div class="lbl">現金水位
+（落入賣出信號區）</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">8.0</div><div class="lbl">牛熊指標
+（賣出信號已觸發）</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">美銀FMS：股票配置創紀錄飆升，牛市投降近完成</div>
+    <p>美銀5月全球基金經理調查顯示，資產配置者對股票的配置以<span style="color:#fff;font-weight:700">有記錄以來最大幅度</span>飆升至淨超配<span style="color:#fff;font-weight:700">50%</span>，遠高於上月的<span style="color:#fff;font-weight:700">13%</span>，為<span style="color:#fff;font-weight:700">2022年1月</span>以來最高。推動力來自企業盈利樂觀與聯儲會降息預期 — 預測雙位數EPS增長的投資者比例創紀錄跳升，僅<span style="color:#fff;font-weight:700">4%</span>預期硬著陸。同時現金水位由4.3%降至<span style="color:#fff;font-weight:700">3.9%</span>，創2024年2月以來最大降幅，已落入賣出信號區。Hartnett認為「向牛市投降」階段接近完成，<span style="color:#fff;font-weight:700">6月初</span>獲利了結時機成熟，而債券殖利率將決定回調幅度。調查於5月8-14日進行，訪問170名管理4610億美元的受訪者。</p>
+    <div class="data-point">股票配置：<span style="color:#fff;font-weight:700">淨超配50%</span>（前值13%） &nbsp;|&nbsp; 現金水位：<span style="color:#fff;font-weight:700">3.9%</span>（賣出區） &nbsp;|&nbsp; 預期硬著陸：<span style="color:#fff;font-weight:700">僅4%</span> &nbsp;|&nbsp; 規模：<span style="color:#fff;font-weight:700">$461b／170人</span></div>
+    <div class="implication"><div class="label">投資啟示</div>倉位已極度擁擠，賣出信號逼近。<span style="color:#fff;font-weight:700">逢高減持股票beta、提高現金與防禦配置</span>，等待6月初獲利了結時機。</div>
+  </div>
+  <div class="article">
+    <div class="article-title">全面risk-on：半導體成頭號擁擠交易</div>
+    <p>調查揭示市場一面倒的risk-on倉位：基金經理<span style="color:#fff;font-weight:700">自2018年1月以來最超配週期股（相對防禦股）</span>、自2024年2月以來最超配科技股、史上第4高的大宗商品超配，以及自2022年6月以來最看空債券，歐元區更首度自2024年12月轉為低配。<span style="color:#fff;font-weight:700">73%</span>受訪者稱「做多全球半導體」為頭號擁擠交易，其次是做多Magnificent Seven（<span style="color:#fff;font-weight:700">14%</span>）與做多石油（6%）。尾部風險方面，<span style="color:#fff;font-weight:700">40%</span>視第二波通膨為最大威脅，地緣衝突（20%）與債券殖利率失序上升（18%）次之，AI泡沫僅11%。潛在信用事件來源則指向影子銀行（<span style="color:#fff;font-weight:700">42%</span>）與AI超大規模業者（34%）。</p>
+    <div class="data-point">頭號擁擠交易：<span style="color:#fff;font-weight:700">做多半導體73%</span> &nbsp;|&nbsp; 最大尾部風險：<span style="color:#fff;font-weight:700">第二波通膨40%</span> &nbsp;|&nbsp; 信用事件來源：<span style="color:#fff;font-weight:700">影子銀行42%／AI業者34%</span> &nbsp;|&nbsp; 消費：<span style="color:#fff;font-weight:700">最不受青睞板塊</span></div>
+    <div class="implication"><div class="label">投資啟示</div>共識極度集中於半導體與週期股。<span style="color:#fff;font-weight:700">逆向操作者應回補債券與美元空頭、減持半導體／科技多頭</span>，並留意消費股的反向價值。</div>
+  </div>
+</div>
+
+<div class="section" id="bubble">
+  <h2><span class="tag tag-misc">泡沫</span> 集中度超越歷代泡沫，廣度拉警報</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--red)">~48%</div><div class="lbl">市場集中度
+（超越1920s/Nifty50/TMT）</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">21只</div><div class="lbl">標普創新高成分股
+（占4%，類1999）</div></div>
+    <div class="stat"><div class="val" style="color:var(--green)">+22% vs -3%</div><div class="lbl">HALO重資產 vs 輕資產
+（2026 YTD）</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">Ground Control to Major TAM — 泡沫特徵齊聚</div>
+    <p>Hartnett在《Flow Show》警告各種泡沫特徵齊聚：強勁價格走勢、散戶狂熱、波動率下滑。加入大型IPO與AI巨頭後，市場集中度已輕鬆超越（約<span style="color:#fff;font-weight:700">48%</span>）咆哮的1920年代、1970年代Nifty 50、1980年代日本與1990年代TMT等歷次泡沫，僅次於1880年代鐵路狂熱。YTD表現排行：石油<span style="color:#fff;font-weight:700">+70.4%</span>遙遙領先，國際股10.1%、美股8.8%、黃金4.4%，比特幣<span style="color:#fff;font-weight:700">-11.7%</span>墊底。亞洲科技強漲同時輸出通膨 — 韓國半導體出口價格年增<span style="color:#fff;font-weight:700">148%</span>、DRAM暴增<span style="color:#fff;font-weight:700">223%</span>。然而韓元逼近30年低、日圓35年低，印尼盾與印度盧比崩跌至紀錄低位，全球資金成本飆升正衝擊風險週邊。</p>
+    <div class="data-point">市場集中度：<span style="color:#fff;font-weight:700">~48%</span>（超越歷代泡沫） &nbsp;|&nbsp; YTD領漲：<span style="color:#fff;font-weight:700">石油+70.4%</span> &nbsp;|&nbsp; 韓DRAM出口價：<span style="color:#fff;font-weight:700">+223% YoY</span> &nbsp;|&nbsp; 比特幣：<span style="color:#fff;font-weight:700">-11.7% YTD</span></div>
+    <div class="implication"><div class="label">投資啟示</div>泡沫進入末段，新興市場往往是風險逆轉起點。<span style="color:#fff;font-weight:700">減碼EM與週邊風險資產</span>；以XBI破$120（殖利率融漲）、XRT破$85（債券衝擊延後）作為訊號燈。</div>
+  </div>
+  <div class="article">
+    <div class="article-title">廣度背離與反AI交易：HALO重資產跑贏</div>
+    <p>市場廣度警訊明顯：儘管標普500創歷史新高，僅有<span style="color:#fff;font-weight:700">21只</span>成分股（占指數<span style="color:#fff;font-weight:700">4%</span>）同步創新高 — 對比2000年3月互聯網泡沫破裂前夕的20只，如出一轍。參考1929年以來歷次泡沫破裂路線圖，大頂出現後6個月內10年期國債殖利率通常下降約<span style="color:#fff;font-weight:700">50個基點</span>，故做多債券常為良策。與此同時「反AI」交易升溫：Roundhill繼DRAM ETF（43天破百億美元、史上最快）後新推HALO ETF（LOHA），聚焦運輸、能源、機械、公用事業等難被軟體取代的重資產實體經濟。2026年全球HALO重資產籃子上漲<span style="color:#fff;font-weight:700">22%</span>，而輕資產股下跌<span style="color:#fff;font-weight:700">3%</span>，分化自2025年底持續擴大。</p>
+    <div class="data-point">創新高成分股：<span style="color:#fff;font-weight:700">僅21只（4%）</span> &nbsp;|&nbsp; 大頂後10yr殖利率：<span style="color:#fff;font-weight:700">6個月內降約50bp</span> &nbsp;|&nbsp; HALO 2026：<span style="color:#fff;font-weight:700">+22% vs 輕資產-3%</span> &nbsp;|&nbsp; DRAM ETF：<span style="color:#fff;font-weight:700">43天破$10b（史上最快）</span></div>
+    <div class="implication"><div class="label">投資啟示</div>廣度背離預示大頂風險。<span style="color:#fff;font-weight:700">啟動泡沫破裂劇本：做多債券、輪動至HALO重資產／價值股以AI-proof組合</span>。</div>
+  </div>
+</div>
+
+<div class="section" id="rates">
+  <h2><span class="tag tag-rates">債券</span> 債市義勇軍出動，殖利率定生死</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--red)">~5.15%</div><div class="lbl">30年期美債殖利率
+（近2007年來高位）</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">62%</div><div class="lbl">投資者預期30yr
+升破6%</div></div>
+    <div class="stat"><div class="val">僅16%</div><div class="lbl">預期Fed今年加息
+（市場落後曲線）</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">伊朗戰爭推升通膨，長端殖利率逼近2007高位</div>
+    <p>近幾周全球債券殖利率大幅攀升，導火線是伊朗戰爭推高能源價格、刺激通膨，並提升各國央行需要加息而非降息的可能性。美國<span style="color:#fff;font-weight:700">30年期國債殖利率</span>已升至約<span style="color:#fff;font-weight:700">5.15%</span>，逼近2007年以來高位。美銀調查顯示<span style="color:#fff;font-weight:700">62%</span>投資者預期30年期美債將升破<span style="color:#fff;font-weight:700">6%</span>，僅20%預期回落至4%。Hartnett指出，殖利率飆升正是繁榮／泡沫的終結方式，亦是「債市義勇軍」出動的原因。基金經理目前自2022年6月以來最看空債券，而牛市的最大脆弱點在於「落後曲線」的聯儲會 — 僅<span style="color:#fff;font-weight:700">16%</span>預期Fed於2026年加息，推升長端殖利率。Hartnett警告，真正的政策緊縮將在未來幾個月CPI觸及<span style="color:#fff;font-weight:700">4-5%</span>後到來。</p>
+    <div class="data-point">30yr美債殖利率：<span style="color:#fff;font-weight:700">~5.15%</span>（近2007高） &nbsp;|&nbsp; 預期破6%：<span style="color:#fff;font-weight:700">62%</span> &nbsp;|&nbsp; 預期Fed今年加息：<span style="color:#fff;font-weight:700">僅16%</span> &nbsp;|&nbsp; CPI預測：<span style="color:#fff;font-weight:700">未來數月觸4-5%</span></div>
+    <div class="implication"><div class="label">投資啟示</div>長端殖利率是回調的決定因素。<span style="color:#fff;font-weight:700">做多前端、警惕長端利率風險</span>；若30yr逼近6%，立即獲利了結股票beta。</div>
+  </div>
+</div>
+
+<div class="section" id="flows">
+  <h2><span class="tag tag-misc">資金流向</span> 九周首見資金流出，日中遭拋售</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--red)">-$70億</div><div class="lbl">全球股票週流出
+（9周以來首次）</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">-$140億</div><div class="lbl">中國股市週流出
+（1月來累計-$2180億）</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">-$82億</div><div class="lbl">日本股市週流出
+（2025年5月來最大）</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">資金轉守：現金債券吸金，股票九周首現流出</div>
+    <p>截至<span style="color:#fff;font-weight:700">5月27日</span>當周，全球股市出現<span style="color:#fff;font-weight:700">九周以來首次資金流出</span>，現金與債券成為避風港。貨幣市場基金吸金<span style="color:#fff;font-weight:700">219億美元</span>、債券<span style="color:#fff;font-weight:700">236億美元</span>，而股票遭遇<span style="color:#fff;font-weight:700">70億美元</span>流出，加密貨幣與黃金分別流出12億與10億美元。地區層面，<span style="color:#fff;font-weight:700">日本股市流出82億美元</span>（2025年5月以來最大），<span style="color:#fff;font-weight:700">中國股市流出140億美元</span>，自1月以來累計流出高達<span style="color:#fff;font-weight:700">2180億美元</span>；基礎設施板塊則逆勢吸金8億美元，延續自2025年4月以來240億美元的累計流入。資金正從風險資產撤離、轉向防禦與固定收益，與FMS調查所示的「牛市投降近完成」相互印證。</p>
+    <div class="data-point">股票週流出：<span style="color:#fff;font-weight:700">-$70億</span>（9周首次） &nbsp;|&nbsp; MMF／債券流入：<span style="color:#fff;font-weight:700">+$219億／+$236億</span> &nbsp;|&nbsp; 中國：<span style="color:#fff;font-weight:700">-$140億</span>（累計-$2180億） &nbsp;|&nbsp; 日本：<span style="color:#fff;font-weight:700">-$82億</span></div>
+    <div class="implication"><div class="label">投資啟示</div>資金流向已轉守。<span style="color:#fff;font-weight:700">順勢增持貨幣基金與債券、減碼中日股票beta</span>；基建為少數逆勢吸金板塊，值得留意。</div>
+  </div>
+</div>
+
+<div class="section" id="gs-desk">
+  <h2><span class="tag tag-misc">GS交易台</span> 槓桿創三年新高，對沖基金回補科技</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--green)">+0.9%</div><div class="lbl">標普週漲幅
+（連續第8周上漲）</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">3年新高</div><div class="lbl">美股L/S總槓桿
+單周增幅</div></div>
+    <div class="stat"><div class="val" style="color:var(--green)">$0.25</div><div class="lbl">NVDA季度股息
+（年化+2.84指數點）</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">高盛Prime：追漲未止，但狂熱買盤降溫</div>
+    <p>高盛Prime Brokerage指出，標普500上周<span style="color:#fff;font-weight:700">+0.9%</span>並連續<span style="color:#fff;font-weight:700">第8周</span>上漲，市場消化NVDA強勁財報、消費數據好壞參半與疲弱經濟報告。美股遭小幅淨買入，多頭買盤超過單一個股的賣空 — <span style="color:#fff;font-weight:700">美股多空總槓桿錄得三年多以來最大單周增幅</span>，各板塊交投活躍度全面上升。在連續一個月拋售資訊科技股（主要是半導體與設備減持）後，對沖基金反手以三月中以來最快速度淨買入該板塊。消費板塊內部分化明顯：非必需消費獲多頭買入，必需消費則遭激進賣空。NVDA宣布<span style="color:#fff;font-weight:700">每季0.25美元</span>股息，按其權重相當於每年<span style="color:#fff;font-weight:700">2.84指數點</span>，推動SPX股息期貨大漲並重訂遠期股息增長預期。交易台同時指出，4月那種「狂熱」追價買盤已明顯降溫。</p>
+    <div class="data-point">標普週漲：<span style="color:#fff;font-weight:700">+0.9%</span>（連8周） &nbsp;|&nbsp; L/S總槓桿：<span style="color:#fff;font-weight:700">3年最大週增</span> &nbsp;|&nbsp; HF科技：<span style="color:#fff;font-weight:700">最快速度回補</span> &nbsp;|&nbsp; NVDA股息：<span style="color:#fff;font-weight:700">$0.25/季（年化2.84指數點）</span></div>
+    <div class="implication"><div class="label">投資啟示</div>槓桿創高加HF回補科技顯示追漲未止，但「狂熱」買盤已較4月明顯降溫。<span style="color:#fff;font-weight:700">短線可跟隨動能，但須收緊風控、防範槓桿去化風險</span>。</div>
+  </div>
+</div>
+
+<div class="callout" id="takeaways">
+  <div class="callout-title">基金經理人重點摘要</div>
+  <ul>
+    <li><strong>倉位：</strong>FMS股票配置創紀錄淨超配50%、現金降至3.9%、牛熊指標8.0觸發賣出信號。逢高減持股票beta，提高現金與防禦配置，等待6月初獲利了結。</li>
+    <li><strong>泡沫與廣度：</strong>市場集中度~48%超越歷代泡沫，標普僅4%成分股創新高（類2000年3月）。啟動破裂劇本——做多債券、輪動至HALO重資產／價值股。</li>
+    <li><strong>利率：</strong>30年期美債~5.15%、62%預期升破6%，CPI料於未來數月觸4-5%。做多前端、警惕長端利率風險，殖利率將決定回調幅度。</li>
+    <li><strong>資金流向：</strong>全球股票九周以來首見流出，中國1月來累計流出$2180億、日本單周-$82億。增持貨幣基金與債券，減碼中日股票，基建逆勢吸金。</li>
+    <li><strong>逆向操作：</strong>做多半導體（73%）為頭號擁擠交易、最看空債券。逆向者應回補債券與美元空頭、減持半導體多頭。</li>
+    <li><strong>GS交易台：</strong>L/S槓桿創三年新高、HF回補科技、連8周上漲，但狂熱買盤降溫。短線跟隨動能但收緊風控，防範槓桿去化。</li>
+  </ul>
+</div>
+
+<div class="nav-links">
+  <span><a href="newsletter_81_geopolitics.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="footer">
+  彭博研究摘要 | 僅供教學與討論用途 | 2026年6月1日<br>
+  資料來源：Bloomberg Intelligence, Bloomberg Economics, Bloomberg News
+</div>
+
+</body>
+</html>
