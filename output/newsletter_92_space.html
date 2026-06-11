@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>彭博研究摘要 #92 — SpaceX 上市倒數：太空數據中心敘事與史上最大 IPO</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --accent: #58a6ff;
+          --green: #3fb950; --red: #f85149; --yellow: #d29922; --text: #c9d1d9; --muted: #8b949e;
+          --orange: #f0883e; --purple: #bc8cff; --cyan: #39d2c0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans TC', 'Microsoft JhengHei', Helvetica, Arial, sans-serif; line-height: 1.7; padding: 20px; max-width: 860px; margin: 0 auto; }
+  h1 { color: #fff; font-size: 1.7em; margin-bottom: 4px; }
+  .subtitle { color: var(--muted); font-size: 0.9em; margin-bottom: 8px; }
+  .issue-badge { display: inline-block; background: rgba(88,166,255,0.15); color: var(--accent); padding: 3px 10px; border-radius: 12px; font-size: 0.8em; font-weight: 600; margin-bottom: 20px; }
+  .tag { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 0.72em; font-weight: 600; margin-right: 4px; }
+  .tag-rates { background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-china { background: rgba(240,136,62,0.15); color: var(--orange); }
+  .tag-japan { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-geo   { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-oil   { background: rgba(210,153,34,0.15); color: var(--yellow); }
+  .tag-trade { background: rgba(210,153,34,0.15); color: var(--yellow); }
+  .tag-growth{ background: rgba(63,185,80,0.15); color: var(--green); }
+  .tag-metals{ background: rgba(188,140,255,0.15); color: var(--purple); }
+  .tag-infl  { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-policy{ background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-val   { background: rgba(63,185,80,0.15); color: var(--green); }
+  .tag-vol   { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-semi  { background: rgba(57,210,192,0.15); color: var(--cyan); }
+  .tag-credit{ background: rgba(188,140,255,0.15); color: var(--purple); }
+  .tag-space { background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-misc  { background: rgba(139,148,158,0.15); color: var(--muted); }
+  .section { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 16px; }
+  .section h2 { color: #fff; font-size: 1.15em; margin-bottom: 12px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+  .section h3 { color: var(--accent); font-size: 0.95em; margin: 14px 0 6px; }
+  .article { margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .article:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .article-title { color: #fff; font-weight: 700; font-size: 0.95em; margin-bottom: 4px; }
+  .article-title-cn { color: var(--muted); font-size: 0.85em; margin-bottom: 8px; }
+  .article p { font-size: 0.9em; margin: 6px 0; }
+  .data-point { background: rgba(255,255,255,0.03); padding: 8px 12px; border-radius: 6px; margin: 8px 0; font-size: 0.85em; }
+  .data-point .num { color: #fff; font-weight: 700; }
+  .implication { background: rgba(88,166,255,0.06); border-left: 3px solid var(--accent); padding: 10px 14px; margin: 10px 0; border-radius: 0 6px 6px 0; font-size: 0.88em; }
+  .implication .label { color: var(--accent); font-weight: 700; font-size: 0.8em; text-transform: uppercase; margin-bottom: 4px; }
+  .callout { background: rgba(210,153,34,0.08); border: 1px solid rgba(210,153,34,0.3); border-radius: 6px; padding: 16px; margin: 16px 0; }
+  .callout-title { color: var(--yellow); font-weight: 700; font-size: 0.95em; margin-bottom: 8px; }
+  .callout ul { padding-left: 18px; }
+  .callout li { margin: 4px 0; font-size: 0.88em; }
+  ul { padding-left: 18px; }
+  li { margin: 3px 0; font-size: 0.88em; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(255,255,255,0.03); padding: 12px; border-radius: 6px; text-align: center; }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: #fff; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
+  .toc { background: rgba(88,166,255,0.05); border: 1px solid rgba(88,166,255,0.2); border-radius: 8px; padding: 16px 20px; margin-bottom: 20px; }
+  .toc-title { color: var(--accent); font-weight: 700; font-size: 0.9em; margin-bottom: 8px; }
+  .toc a { color: var(--accent); text-decoration: none; font-size: 0.88em; }
+  .toc a:hover { text-decoration: underline; }
+  .toc ol { padding-left: 20px; }
+  .toc li { margin: 4px 0; }
+  .nav-links { display: flex; justify-content: space-between; margin: 20px 0; font-size: 0.85em; }
+  .nav-links a { color: var(--accent); text-decoration: none; }
+  .nav-links a:hover { text-decoration: underline; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(255,255,255,0.03); padding: 12px; border-radius: 6px; text-align: center; }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: #fff; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
+  .footer { text-align: center; color: var(--muted); font-size: 0.75em; margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--border); }
+</style>
+<script>if(window.self===window.top&&sessionStorage.getItem("student_auth")!=="1"){document.body.innerHTML="";window.location.replace("student.html");}</script>
+</head>
+<body>
+
+<h1>彭博研究摘要</h1>
+<p class="subtitle">第92期 | SpaceX 上市倒數：太空數據中心敘事與史上最大 IPO</p>
+<span class="issue-badge">2026年六月中旬更新</span>
+
+<div class="nav-links">
+  <span><a href="newsletter_91_geopolitics.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="toc">
+  <div class="toc-title">目錄</div>
+  <ol>
+    <li><a href="#spacex-ipo-pricing">新股定價 史上最大 IPO，四倍超額認購</a></li>
+    <li><a href="#spacex-valuation-warning">估值警示 90 倍營收，長期回歸壓力沉重</a></li>
+    <li><a href="#orbital-compute">太空算力 軌道數據中心：敘事性感，經濟未到</a></li>
+    <li><a href="#ipo-hedging">對沖難題 「難道去做空 NASA？」期權對沖無從下手</a></li>
+    <li><a href="#takeaways">基金經理人重點摘要</a></li>
+  </ol>
+</div>
+
+<div class="section" id="spacex-ipo-pricing">
+  <h2><span class="tag tag-misc">新股定價</span> 史上最大 IPO，四倍超額認購</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--orange)">1.8萬億</div><div class="lbl">SpaceX 估值（美元）
+直逼亞馬遜</div></div>
+    <div class="stat"><div class="val" style="color:var(--green)">4倍+</div><div class="lbl">超額認購
+認購規模逾2500億美元</div></div>
+    <div class="stat"><div class="val">$135</div><div class="lbl">固定發行價（美元）
+未設詢價區間</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">SpaceX 定價倒計時 — 四倍超額認購，改寫 IPO 歷史</div>
+    <p>馬斯克旗下的太空與 AI 巨頭 SpaceX 將於 6 月 11 日正式定價，次日以代號 <span style="color:#fff;font-weight:700">「SPCX」</span> 在納斯達克掛牌，高盛、摩根士丹利、美銀、花旗及摩根大通擔任承銷商。其 IPO 已錄得 <span style="color:#fff;font-weight:700">逾四倍超額認購</span>，總認購規模突破 <span style="color:#fff;font-weight:700">2500 億美元</span>，遠超標配的 <span style="color:#fff;font-weight:700">750 億美元</span> 募資目標，需求火爆迫使承銷行提前停止接受機構訂單。此次定價機制極為罕見，未設傳統詢價區間，而是直接鎖定每股 <span style="color:#fff;font-weight:700">135 美元</span>，發行 <span style="color:#fff;font-weight:700">5.556 億股</span>，市值估值約 <span style="color:#fff;font-weight:700">1.8 萬億美元</span>，直逼亞馬遜。據估算，OpenAI、Anthropic 與 SpaceX 合計將為美股增添 <span style="color:#fff;font-weight:700">3.6 萬億美元</span> 市值。此次發行規模將超越沙特阿美 2019 年 294 億美元紀錄，成為有史以來最大 IPO。</p>
+    <div class="data-point">發行價：<span style="color:#fff;font-weight:700">$135／股（固定）</span> &nbsp;|&nbsp; 發行量：<span style="color:#fff;font-weight:700">5.556 億股</span> &nbsp;|&nbsp; 募資目標：<span style="color:#fff;font-weight:700">$750 億</span> &nbsp;|&nbsp; 實際認購：<span style="color:#fff;font-weight:700">$2500 億+</span> &nbsp;|&nbsp; 估值：<span style="color:#fff;font-weight:700">$1.8 萬億</span></div>
+    <div class="implication"><div class="label">投資啟示</div>需求極度火爆但估值無安全邊際。被動資金初期權重有限（S&amp;P 約 0.1%、Nasdaq 100 約 0.5%），<span style="color:#fff;font-weight:700">勿追高首日開盤，等待上市後波動釋放再評估介入</span>。</div>
+  </div>
+</div>
+
+<div class="section" id="spacex-valuation-warning">
+  <h2><span class="tag tag-misc">估值警示</span> 90 倍營收，長期回歸壓力沉重</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--red)">175x</div><div class="lbl">EBITDA 倍率
+（巴倫分析師估算）</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">-58pp</div><div class="lbl">高估值 IPO
+三年跑輸大盤幅度</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">$780億</div><div class="lbl">Morningstar 估值
+不足馬斯克心理價一半</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">投資者審視馬斯克太空帝國 — 估值與治理雙重質疑</div>
+    <p>Bloomberg 將 SpaceX 比作「多行星、AI 化版本的奇異（GE）」：旗下橫跨可重複使用火箭、衛星互聯網、社交平台與快速成長的 AI 公司，未來還想加入太空旅遊與月球酒店。但鬆散綁定的業務組合與不透明的關聯交易，正讓部分投資者卻步——當年正是這種模式拖垮了 GE。一家丹麥退休基金已表態拒投，稱其 <span style="color:#fff;font-weight:700">「嚴重高估」</span> 且 <span style="color:#fff;font-weight:700">「治理結構災難性」</span>。Morningstar 評估財務後給出 <span style="color:#fff;font-weight:700">7800 億美元</span> 估值，不到馬斯克心目中價值的一半。巴倫分析師 Aaron Rutten 直指估值過高，對應 2026 年預期 <span style="color:#fff;font-weight:700">市銷率 40 倍、EBITDA 倍率 175 倍</span>，公允價值更接近 <span style="color:#fff;font-weight:700">1 萬億美元</span>。佛羅里達大學 Ritter 研究顯示，1980–2024 年估值超 40 倍營收的 IPO，三年後跑輸大盤達 <span style="color:#fff;font-weight:700">58 個百分點</span>。</p>
+    <div class="data-point">Morningstar 估值：<span style="color:#fff;font-weight:700">$7800 億</span> &nbsp;|&nbsp; 巴倫公允價值：<span style="color:#fff;font-weight:700">~$1 萬億</span> &nbsp;|&nbsp; P/S：<span style="color:#fff;font-weight:700">40x</span> &nbsp;|&nbsp; EBITDA 倍率：<span style="color:#fff;font-weight:700">175x</span> &nbsp;|&nbsp; 對應營收倍數：<span style="color:#fff;font-weight:700">&gt;90x</span></div>
+    <div class="implication"><div class="label">投資啟示</div>估值已脫離基本面，史上最大 IPO 同時是最貴 IPO 之一。治理與關聯交易風險偏高，<span style="color:#fff;font-weight:700">將 SPCX 視為波動性題材股而非核心持倉，嚴控倉位佔比</span>。</div>
+  </div>
+  <div class="article">
+    <div class="article-title">解禁與流通壓力 — 4% 自由流通的供需隱憂</div>
+    <p>市場真正擔心的並非首日表現，而是 <span style="color:#fff;font-weight:700">鎖定期結束後的解禁壓力</span>。SpaceX 上市初期可自由流通股份比例預計僅約 <span style="color:#fff;font-weight:700">4%</span>，但按披露的解禁節奏，首份季報後內部人即可出售所持股份的 <span style="color:#fff;font-weight:700">20%</span>；若股價較發行價上漲超 <span style="color:#fff;font-weight:700">30%</span>，還可額外出售 <span style="color:#fff;font-weight:700">10%</span>。馬斯克本人持股中約一半在上市後 <span style="color:#fff;font-weight:700">366 天</span> 內不得出售，其餘限制更早解除。當這些巨量股份分批流入二級市場時，恐對供需格局造成持續衝擊。短期而言，被動資金或提供一定支撐——一旦快速納入基準指數，追蹤 ETF 將被迫買入；但初始指數權重僅約 0.1%–0.5%，實際支撐相對有限。</p>
+    <div class="data-point">初始自由流通：<span style="color:#fff;font-weight:700">~4%</span> &nbsp;|&nbsp; 季報後內部人可售：<span style="color:#fff;font-weight:700">20%</span> &nbsp;|&nbsp; 漲超30%再售：<span style="color:#fff;font-weight:700">+10%</span> &nbsp;|&nbsp; 馬斯克鎖定：<span style="color:#fff;font-weight:700">約半數366天</span></div>
+    <div class="implication"><div class="label">投資啟示</div>極低流通盤意味初期供給稀缺、價格易被推高，但解禁節點將是關鍵風險窗口。<span style="color:#fff;font-weight:700">留意首份季報前後的內部人拋售壓力，逢首份季報前後設防守位</span>。</div>
+  </div>
+</div>
+
+<div class="section" id="orbital-compute">
+  <h2><span class="tag tag-misc">太空算力</span> 軌道數據中心：敘事性感，經濟未到</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val">100GW</div><div class="lbl">SpaceX 目標
+每年發射入軌算力</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">1/5</div><div class="lbl">等同美國年發電量比例
+（2025 為4.4千TWh）</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">2030s末</div><div class="lbl">太空-地面成本平價
+預估達成時點</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">太空數據中心的真相 — 願景宏大，成本暫時跑不通</div>
+    <p>馬斯克在 Dwarkesh 播客中預言，五年後每年在太空運行的 AI 算力將超過地球累計總量，達 <span style="color:#fff;font-weight:700">每年數百 GW</span>。推動太空算力也是 xAI 併入 SpaceX 的動機之一，並在 5 月 20 日提交的 S-1 中明列為核心敘事：目標是 <span style="color:#fff;font-weight:700">每年向太空發射 100 GW 算力</span>，若持續運行，所需發電資源約相當於美國年度發電量的 <span style="color:#fff;font-weight:700">五分之一</span>（2025 年美國發電 4.4 千 TWh）。然而 SemiAnalysis 潑了冷水：「免費太陽能」「免費冷卻」「低延遲」「無需審批」等流行論點多數經不起科學推敲。以今日技術部署軌道算力，成本是地面的 <span style="color:#fff;font-weight:700">數倍</span>，達成太空-地面成本平價需材料科學突破與規模化降本，預計要到 <span style="color:#fff;font-weight:700">2030 年代末</span> 才可能可行，且仍面臨可靠性與在軌維修（GPU 故障如何人工干預）等障礙。</p>
+    <div class="data-point">年發射目標：<span style="color:#fff;font-weight:700">100 GW</span> &nbsp;|&nbsp; 等效美國發電：<span style="color:#fff;font-weight:700">~1/5</span> &nbsp;|&nbsp; 當前成本：<span style="color:#fff;font-weight:700">地面數倍</span> &nbsp;|&nbsp; 平價時點：<span style="color:#fff;font-weight:700">2030 年代末</span> &nbsp;|&nbsp; S-1 提交：<span style="color:#fff;font-weight:700">2026/5/20</span></div>
+    <div class="implication"><div class="label">投資啟示</div>太空算力是支撐 1.8 萬億估值的長線敘事，但十年內難貢獻現金流。<span style="color:#fff;font-weight:700">將其視為期權價值而非當期估值依據，勿為「太空 AI」溢價過度買單</span>。</div>
+  </div>
+</div>
+
+<div class="section" id="ipo-hedging">
+  <h2><span class="tag tag-misc">對沖難題</span> 「難道去做空 NASA？」期權對沖無從下手</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--orange)">近3倍</div><div class="lbl">SpaceX 私募估值
+過去一年漲幅</div></div>
+    <div class="stat"><div class="val">6/16</div><div class="lbl">SPCX 期權
+開始交易日</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">高IV</div><div class="lbl">初期市場預期
+買賣價差極寬</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">SPCX 對沖挑戰 — 近三十年最棘手，無代理標的可用</div>
+    <p>SpaceX 周五以 <span style="color:#fff;font-weight:700">「SPCX」</span> 登陸納斯達克，期權則於 <span style="color:#fff;font-weight:700">6 月 16 日（周一）</span> 才開始交易，留給投資者判斷長期交易特性的時間與樣本都極少。Millbank Dartmoor Portsmouth 首席信息官 Dennis Davitt 直言這是 <span style="color:#fff;font-weight:700">近三十年最大的對沖難題</span>：2000 年科技股 IPO 時尚有一籃子科技股、相關性與流動性代理可構建對沖；2004 年他在瑞信操刀 Google IPO 時也能「賣出一籃子模擬標的」。但 SpaceX 將是唯一一家大規模經營太空業務的上市私營公司——「難道你要去 <span style="color:#fff;font-weight:700">做空 NASA</span>？」對沖必要性對通過私募持股的機構尤為迫切：據 Forge 數據，其私募估值過去一年 <span style="color:#fff;font-weight:700">幾乎翻了兩番</span>，倉位佔比放大、風險隨之上升。SpotGamma 創辦人 Brent Kochuba 預期初期市場將 <span style="color:#fff;font-weight:700">買賣價差極寬、隱含波動率極高</span>。Davitt 也認為馬斯克不會放任 135 美元上市、首日衝到 270 美元的瘋狂走勢。</p>
+    <div class="data-point">代號：<span style="color:#fff;font-weight:700">SPCX</span> &nbsp;|&nbsp; 期權開始：<span style="color:#fff;font-weight:700">6/16</span> &nbsp;|&nbsp; 私募估值一年漲幅：<span style="color:#fff;font-weight:700">近3倍（Forge）</span> &nbsp;|&nbsp; 初期特徵：<span style="color:#fff;font-weight:700">寬價差、高IV</span> &nbsp;|&nbsp; 缺乏代理標的：<span style="color:#fff;font-weight:700">無可比上市公司</span></div>
+    <div class="implication"><div class="label">投資啟示</div>缺乏可比標的使持有 SpaceX 私募股權的機構難以對沖，初期 IV 偏高且流動性差。<span style="color:#fff;font-weight:700">避免在期權上市初期裸寫或裸買 SPCX 期權，待 IV 結構穩定後再以價差策略介入</span>。</div>
+  </div>
+</div>
+
+<div class="callout" id="takeaways">
+  <div class="callout-title">基金經理人重點摘要</div>
+  <ul>
+    <li><strong>SpaceX IPO：</strong>四倍超額認購、認購逾2500億美元，固定價$135、估值約1.8萬億美元，將成史上最大 IPO。需求火爆但勿追首日高點。</li>
+    <li><strong>估值警示：</strong>對應營收逾90倍、EBITDA 175倍，Morningstar 估值僅7800億；歷史上40倍營收以上 IPO 三年跑輸大盤58pp。視為波動題材股，嚴控倉位。</li>
+    <li><strong>解禁風險：</strong>初始自由流通僅約4%，首份季報後內部人可售20%、漲超30%再加10%。留意季報前後拋壓，設防守位。</li>
+    <li><strong>太空算力：</strong>SpaceX 目標每年發射100GW入軌（約美國發電1/5），但成本仍為地面數倍，平價要到2030年代末。屬期權價值，勿為敘事過度溢價。</li>
+    <li><strong>對沖難題：</strong>無可比標的、期權6/16才上市、初期高IV寬價差。避免初期裸寫/裸買 SPCX 期權，待 IV 穩定後改用價差策略。</li>
+    <li><strong>宏觀背景：</strong>中東緊張緩和油價回落（WTI $89 -2.5%），AI 交易回暖帶動美股期指走高，10年期美債收益率4.55%。風險偏好回升利好新股承接。</li>
+  </ul>
+</div>
+
+<div class="nav-links">
+  <span><a href="newsletter_91_geopolitics.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="footer">
+  彭博研究摘要 | 僅供教學與討論用途 | 2026年6月11日<br>
+  資料來源：Bloomberg Intelligence, Bloomberg Economics, Bloomberg News
+</div>
+
+</body>
+</html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>彭博研究摘要 #94 — 油價困局與特朗普的出口管制兩難</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --accent: #58a6ff;
+          --green: #3fb950; --red: #f85149; --yellow: #d29922; --text: #c9d1d9; --muted: #8b949e;
+          --orange: #f0883e; --purple: #bc8cff; --cyan: #39d2c0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans TC', 'Microsoft JhengHei', Helvetica, Arial, sans-serif; line-height: 1.7; padding: 20px; max-width: 860px; margin: 0 auto; }
+  h1 { color: #fff; font-size: 1.7em; margin-bottom: 4px; }
+  .subtitle { color: var(--muted); font-size: 0.9em; margin-bottom: 8px; }
+  .issue-badge { display: inline-block; background: rgba(88,166,255,0.15); color: var(--accent); padding: 3px 10px; border-radius: 12px; font-size: 0.8em; font-weight: 600; margin-bottom: 20px; }
+  .tag { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 0.72em; font-weight: 600; margin-right: 4px; }
+  .tag-rates { background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-china { background: rgba(240,136,62,0.15); color: var(--orange); }
+  .tag-japan { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-geo   { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-oil   { background: rgba(210,153,34,0.15); color: var(--yellow); }
+  .tag-trade { background: rgba(210,153,34,0.15); color: var(--yellow); }
+  .tag-growth{ background: rgba(63,185,80,0.15); color: var(--green); }
+  .tag-metals{ background: rgba(188,140,255,0.15); color: var(--purple); }
+  .tag-infl  { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-policy{ background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-val   { background: rgba(63,185,80,0.15); color: var(--green); }
+  .tag-vol   { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-semi  { background: rgba(57,210,192,0.15); color: var(--cyan); }
+  .tag-credit{ background: rgba(188,140,255,0.15); color: var(--purple); }
+  .tag-space { background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-misc  { background: rgba(139,148,158,0.15); color: var(--muted); }
+  .section { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 16px; }
+  .section h2 { color: #fff; font-size: 1.15em; margin-bottom: 12px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+  .section h3 { color: var(--accent); font-size: 0.95em; margin: 14px 0 6px; }
+  .article { margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .article:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .article-title { color: #fff; font-weight: 700; font-size: 0.95em; margin-bottom: 4px; }
+  .article-title-cn { color: var(--muted); font-size: 0.85em; margin-bottom: 8px; }
+  .article p { font-size: 0.9em; margin: 6px 0; }
+  .data-point { background: rgba(255,255,255,0.03); padding: 8px 12px; border-radius: 6px; margin: 8px 0; font-size: 0.85em; }
+  .data-point .num { color: #fff; font-weight: 700; }
+  .implication { background: rgba(88,166,255,0.06); border-left: 3px solid var(--accent); padding: 10px 14px; margin: 10px 0; border-radius: 0 6px 6px 0; font-size: 0.88em; }
+  .implication .label { color: var(--accent); font-weight: 700; font-size: 0.8em; text-transform: uppercase; margin-bottom: 4px; }
+  .callout { background: rgba(210,153,34,0.08); border: 1px solid rgba(210,153,34,0.3); border-radius: 6px; padding: 16px; margin: 16px 0; }
+  .callout-title { color: var(--yellow); font-weight: 700; font-size: 0.95em; margin-bottom: 8px; }
+  .callout ul { padding-left: 18px; }
+  .callout li { margin: 4px 0; font-size: 0.88em; }
+  ul { padding-left: 18px; }
+  li { margin: 3px 0; font-size: 0.88em; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(255,255,255,0.03); padding: 12px; border-radius: 6px; text-align: center; }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: #fff; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
+  .toc { background: rgba(88,166,255,0.05); border: 1px solid rgba(88,166,255,0.2); border-radius: 8px; padding: 16px 20px; margin-bottom: 20px; }
+  .toc-title { color: var(--accent); font-weight: 700; font-size: 0.9em; margin-bottom: 8px; }
+  .toc a { color: var(--accent); text-decoration: none; font-size: 0.88em; }
+  .toc a:hover { text-decoration: underline; }
+  .toc ol { padding-left: 20px; }
+  .toc li { margin: 4px 0; }
+  .nav-links { display: flex; justify-content: space-between; margin: 20px 0; font-size: 0.85em; }
+  .nav-links a { color: var(--accent); text-decoration: none; }
+  .nav-links a:hover { text-decoration: underline; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(255,255,255,0.03); padding: 12px; border-radius: 6px; text-align: center; }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: #fff; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
+  .footer { text-align: center; color: var(--muted); font-size: 0.75em; margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--border); }
+</style>
+<script>if(window.self===window.top&&sessionStorage.getItem("student_auth")!=="1"){document.body.innerHTML="";window.location.replace("student.html");}</script>
+</head>
+<body>
+
+<h1>彭博研究摘要</h1>
+<p class="subtitle">第94期 | 油價困局與特朗普的出口管制兩難</p>
+<span class="issue-badge">2026年六月中旬更新</span>
+
+<div class="nav-links">
+  <span><a href="newsletter_93_growth.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="toc">
+  <div class="toc-title">目錄</div>
+  <ol>
+    <li><a href="#export-curbs">能源政策 出口管制的政治算盤</a></li>
+    <li><a href="#spr-buffer">庫存與SPR 庫存緩衝正在見底</a></li>
+    <li><a href="#commodity-options">商品期權 選擇權偏向防守看跌</a></li>
+    <li><a href="#takeaways">基金經理人重點摘要</a></li>
+  </ol>
+</div>
+
+<div class="section" id="export-curbs">
+  <h2><span class="tag tag-misc">能源政策</span> 出口管制的政治算盤</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--orange)">&lt;6個月</div><div class="lbl">距中期選舉
+施政壓力升溫</div></div>
+    <div class="stat"><div class="val">+200萬桶/日</div><div class="lbl">成品油出口增量
+（伊朗戰爭以來）</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">數美分</div><div class="lbl">暫停燃油稅
+對油價影響有限</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">特朗普的出口牌 — 會打還是不打？</div>
+    <p>伊朗戰爭擾亂全球供應、油價高企，特朗普在中期選舉前承受降低油價的政治壓力。但他已用盡簡單選項：豁免乙醇摻配規定、暫停《瓊斯法案》、對俄伊原油買家發放制裁豁免，並推動國會暫停零售汽柴油稅 — 後者僅能讓油價降低<span style="color:#fff;font-weight:700">數美分</span>。剩下的主要工具是<span style="color:#fff;font-weight:700">限制能源出口</span>，最可行的目標是<span style="color:#fff;font-weight:700">汽油與柴油等成品油</span>。由於美國原油產出與煉廠產能錯配，單純限制原油出口幫助不大；而暫停《瓊斯法案》則有助把供應運往全國、縮小區域價差。白宮官方仍堅稱不會設限，但市場與政治的雙重壓力正在累積。</p>
+    <div class="data-point">成品油出口增量：<span style="color:#fff;font-weight:700">+200萬桶/日</span>（伊朗戰爭以來）| 暫停燃油稅效果：<span style="color:#fff;font-weight:700">僅數美分</span> &nbsp;|&nbsp; 已用工具：<span style="color:#fff;font-weight:700">乙醇豁免、瓊斯法案暫停、制裁豁免</span></div>
+    <div class="implication"><div class="label">投資啟示</div>成品油出口管制是政策尾部風險。一旦落地，美國國內汽柴油價短期受壓、煉廠利潤遭擠壓，並可能觸發他國跟進禁運。<span style="color:#fff;font-weight:700">對沖思路：做多美國煉廠裂解價差的下行保護，留意成品油出口股的政策敏感度。</span></div>
+  </div>
+  <div class="article">
+    <div class="article-title">美國能源出口管制 — 特朗普的高風險選項</div>
+    <p>Bloomberg Economics 認為，雖然官員一再否認，但限制出口的壓力正由政治觀感與實體市場約束雙重驅動。天然氣方面美國人基本免受全球短缺衝擊，價格偏低、出口受中游運輸與液化產能限制；原油出口管制因煉廠配置錯配亦難壓低油價，且在 SPR 釋放於夏季中後段耗盡前，當局料只會有限度設限。相較之下，<span style="color:#fff;font-weight:700">成品油（尤其汽油與柴油）出口限制</span>幾乎肯定能短期壓低國內價格，加上《瓊斯法案》豁免讓更多消費者受惠 — 但代價是傷及生產商、盟友供應及特朗普的「能源主導」敘事。</p>
+    <div class="data-point">最具吸引力選項：<span style="color:#fff;font-weight:700">成品油出口限制</span> &nbsp;|&nbsp; 約束因素：<span style="color:#fff;font-weight:700">SPR需先釋放至夏季中後段</span> &nbsp;|&nbsp; 風險對象：<span style="color:#fff;font-weight:700">生產商、盟友、能源主導敘事</span></div>
+    <div class="implication"><div class="label">投資啟示</div>政策走向取決於 SPR 緩衝何時見底。短期內全面管制概率低，但成品油定向設限的尾部風險真實存在。<span style="color:#fff;font-weight:700">操作：持有成品油裂解價差的下檔保護，並監測 SPR 週度釋放速度作為政策觸發訊號。</span></div>
+  </div>
+</div>
+
+<div class="section" id="spr-buffer">
+  <h2><span class="tag tag-misc">庫存與SPR</span> 庫存緩衝正在見底</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--red)">-1,780萬桶</div><div class="lbl">上週原油庫存
+（創紀錄降幅）</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">29%</div><div class="lbl">SPR已釋放比例
+（授權1.72億桶）</div></div>
+    <div class="stat"><div class="val">+250萬桶/日</div><div class="lbl">原油及成品油淨出口
+約全球需求2.5%</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">最後供應者 — 美國庫存緩衝快速消耗</div>
+    <p>中東出口蒸發後，美國成為全球「最後供應者」，原油與成品油淨出口跳升<span style="color:#fff;font-weight:700">250萬桶/日</span>，約佔全球需求<span style="color:#fff;font-weight:700">2.5%</span>。世界之所以較預期更平穩地吸收這場歷史性供應衝擊，主要靠原本過剩的全球供應與龐大的商業及緊急儲備。但出口壓力正加速美國原油庫存下滑：上週庫存錄得<span style="color:#fff;font-weight:700">1,780萬桶</span>的紀錄性降幅，其中<span style="color:#fff;font-weight:700">990萬桶</span>來自戰略石油儲備（SPR）。截至5月20日，美國已自 SPR 抽出約<span style="color:#fff;font-weight:700">5,000萬桶</span>，相當於特朗普3月授權1.72億桶的<span style="color:#fff;font-weight:700">29%</span>；其中約<span style="color:#fff;font-weight:700">40%</span>已出口，主要流向歐洲與亞洲。Vortexa 數據顯示約<span style="color:#fff;font-weight:700">2,500萬桶</span>油輪運力正駛向墨西哥灣，需求毫無放緩跡象。</p>
+    <div class="data-point">上週庫存降幅：<span style="color:#fff;font-weight:700">-1,780萬桶</span>（含SPR -990萬）| SPR累計釋放：<span style="color:#fff;font-weight:700">~5,000萬桶（29%）</span> &nbsp;|&nbsp; 出口比例：<span style="color:#fff;font-weight:700">~40% 流向歐亞</span> &nbsp;|&nbsp; 在途運力：<span style="color:#fff;font-weight:700">~2,500萬桶往墨西哥灣</span></div>
+    <div class="implication"><div class="label">投資啟示</div>庫存緩衝消耗速度是後市油價與政策的關鍵變數。SPR 一旦於夏季耗盡，供應彈性將大減。<span style="color:#fff;font-weight:700">操作：做多遠月相對近月的價差走強（curve 趨平/back 化），並把 SPR 釋放速度作為油價方向的領先指標。</span></div>
+  </div>
+</div>
+
+<div class="section" id="commodity-options">
+  <h2><span class="tag tag-misc">商品期權</span> 選擇權偏向防守看跌</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--red)">6,700手</div><div class="lbl">Brent Feb27
+$66/$60熊市價差</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">4,000手</div><div class="lbl">Brent Aug
+$76/$75看跌價差</div></div>
+    <div class="stat"><div class="val">$3,335/噸</div><div class="lbl">Robusta咖啡
+期貨對沖價</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">Brent熊市價差與咖啡領子 — 商品期權動向</div>
+    <p>在美伊談判缺乏新消息、期貨劇烈波動之際，Brent 原油買權與賣權價差交投活躍。ICE Brent 2027年2月 <span style="color:#fff;font-weight:700">$66/$60 賣權價差</span>累計成交逾<span style="color:#fff;font-weight:700">6,700手</span>並開立新倉，其中3,417手以<span style="color:#fff;font-weight:700">$1.17</span>成交；8月 <span style="color:#fff;font-weight:700">$76/$75 賣權價差</span>成交<span style="color:#fff;font-weight:700">4,000手</span>；另有1,000手8月 <span style="color:#fff;font-weight:700">$110/$115 買權價差對 $85 賣權</span>，買方收取5美分權利金。商品端整體偏向防守：Robusta 咖啡因偏度轉向賣權，9月 <span style="color:#fff;font-weight:700">$3,000賣權/$3,800買權領子</span>成交2,000 x 1,000手，並以1,200手9月期貨於<span style="color:#fff;font-weight:700">$3,335/噸</span>對沖、開立新倉。此外亨利港天然氣 CSO 賣權蝶式、玉米買權價差與大豆賣權價差亦有成交。</p>
+    <div class="data-point">Brent Feb27 $66/$60熊差：<span style="color:#fff;font-weight:700">6,700手（新倉）</span> &nbsp;|&nbsp; Brent Aug $76/$75賣差：<span style="color:#fff;font-weight:700">4,000手</span> &nbsp;|&nbsp; Robusta 9月領子：<span style="color:#fff;font-weight:700">2,000x1,000手 @$3,335對沖</span> &nbsp;|&nbsp; 偏度：<span style="color:#fff;font-weight:700">轉向賣權</span></div>
+    <div class="implication"><div class="label">投資啟示</div>機構於 Brent 大量建立下行保護（賣權價差）並開立新倉，顯示交易盤對地緣溢價回吐有所防範。<span style="color:#fff;font-weight:700">操作：以賣權價差（如 $66/$60）低成本對沖油價回落，而非裸買賣權，控制波動率成本。</span></div>
+  </div>
+</div>
+
+<div class="callout" id="takeaways">
+  <div class="callout-title">基金經理人重點摘要</div>
+  <ul>
+    <li><strong>政策風險：</strong>特朗普中期選舉前最可能動用的是「成品油（汽柴油）出口管制」，而非原油。落地概率短期偏低，但屬真實尾部風險，持有美國煉廠裂解價差的下檔保護。</li>
+    <li><strong>SPR緩衝：</strong>已釋放約5,000萬桶（授權29%），夏季中後段恐耗盡。把SPR週度釋放速度與庫存降幅（上週-1,780萬桶）當作油價與政策的領先指標。</li>
+    <li><strong>供需格局：</strong>美國淨出口跳升250萬桶/日（約全球需求2.5%）成最後供應者，但出口加速消耗庫存，支撐曲線back化 — 偏好做多遠近月價差。</li>
+    <li><strong>期權持倉：</strong>機構在Brent大舉建立賣權價差（Feb27 $66/$60達6,700手新倉、Aug $76/$75達4,000手），偏度轉向看跌。以價差結構對沖地緣溢價回吐，控制權利金成本。</li>
+    <li><strong>傳導風險：</strong>任何美國出口設限恐觸發他國跟進禁運，放大全球供應調整難度 — 維持對歐洲成品油與運費（油輪運力流向墨西哥灣）的敞口監測。</li>
+  </ul>
+</div>
+
+<div class="nav-links">
+  <span><a href="newsletter_93_growth.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="footer">
+  彭博研究摘要 | 僅供教學與討論用途 | 2026年6月11日<br>
+  資料來源：Bloomberg Intelligence, Bloomberg Economics, Bloomberg News
+</div>
+
+</body>
+</html>

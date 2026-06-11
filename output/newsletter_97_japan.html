@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>彭博研究摘要 #97 — 日銀轉鷹：六月升息在即，日圓與通膨的二次衝擊</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --accent: #58a6ff;
+          --green: #3fb950; --red: #f85149; --yellow: #d29922; --text: #c9d1d9; --muted: #8b949e;
+          --orange: #f0883e; --purple: #bc8cff; --cyan: #39d2c0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans TC', 'Microsoft JhengHei', Helvetica, Arial, sans-serif; line-height: 1.7; padding: 20px; max-width: 860px; margin: 0 auto; }
+  h1 { color: #fff; font-size: 1.7em; margin-bottom: 4px; }
+  .subtitle { color: var(--muted); font-size: 0.9em; margin-bottom: 8px; }
+  .issue-badge { display: inline-block; background: rgba(88,166,255,0.15); color: var(--accent); padding: 3px 10px; border-radius: 12px; font-size: 0.8em; font-weight: 600; margin-bottom: 20px; }
+  .tag { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 0.72em; font-weight: 600; margin-right: 4px; }
+  .tag-rates { background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-china { background: rgba(240,136,62,0.15); color: var(--orange); }
+  .tag-japan { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-geo   { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-oil   { background: rgba(210,153,34,0.15); color: var(--yellow); }
+  .tag-trade { background: rgba(210,153,34,0.15); color: var(--yellow); }
+  .tag-growth{ background: rgba(63,185,80,0.15); color: var(--green); }
+  .tag-metals{ background: rgba(188,140,255,0.15); color: var(--purple); }
+  .tag-infl  { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-policy{ background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-val   { background: rgba(63,185,80,0.15); color: var(--green); }
+  .tag-vol   { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-semi  { background: rgba(57,210,192,0.15); color: var(--cyan); }
+  .tag-credit{ background: rgba(188,140,255,0.15); color: var(--purple); }
+  .tag-space { background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-misc  { background: rgba(139,148,158,0.15); color: var(--muted); }
+  .section { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 16px; }
+  .section h2 { color: #fff; font-size: 1.15em; margin-bottom: 12px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+  .section h3 { color: var(--accent); font-size: 0.95em; margin: 14px 0 6px; }
+  .article { margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .article:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .article-title { color: #fff; font-weight: 700; font-size: 0.95em; margin-bottom: 4px; }
+  .article-title-cn { color: var(--muted); font-size: 0.85em; margin-bottom: 8px; }
+  .article p { font-size: 0.9em; margin: 6px 0; }
+  .data-point { background: rgba(255,255,255,0.03); padding: 8px 12px; border-radius: 6px; margin: 8px 0; font-size: 0.85em; }
+  .data-point .num { color: #fff; font-weight: 700; }
+  .implication { background: rgba(88,166,255,0.06); border-left: 3px solid var(--accent); padding: 10px 14px; margin: 10px 0; border-radius: 0 6px 6px 0; font-size: 0.88em; }
+  .implication .label { color: var(--accent); font-weight: 700; font-size: 0.8em; text-transform: uppercase; margin-bottom: 4px; }
+  .callout { background: rgba(210,153,34,0.08); border: 1px solid rgba(210,153,34,0.3); border-radius: 6px; padding: 16px; margin: 16px 0; }
+  .callout-title { color: var(--yellow); font-weight: 700; font-size: 0.95em; margin-bottom: 8px; }
+  .callout ul { padding-left: 18px; }
+  .callout li { margin: 4px 0; font-size: 0.88em; }
+  ul { padding-left: 18px; }
+  li { margin: 3px 0; font-size: 0.88em; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(255,255,255,0.03); padding: 12px; border-radius: 6px; text-align: center; }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: #fff; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
+  .toc { background: rgba(88,166,255,0.05); border: 1px solid rgba(88,166,255,0.2); border-radius: 8px; padding: 16px 20px; margin-bottom: 20px; }
+  .toc-title { color: var(--accent); font-weight: 700; font-size: 0.9em; margin-bottom: 8px; }
+  .toc a { color: var(--accent); text-decoration: none; font-size: 0.88em; }
+  .toc a:hover { text-decoration: underline; }
+  .toc ol { padding-left: 20px; }
+  .toc li { margin: 4px 0; }
+  .nav-links { display: flex; justify-content: space-between; margin: 20px 0; font-size: 0.85em; }
+  .nav-links a { color: var(--accent); text-decoration: none; }
+  .nav-links a:hover { text-decoration: underline; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(255,255,255,0.03); padding: 12px; border-radius: 6px; text-align: center; }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: #fff; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
+  .footer { text-align: center; color: var(--muted); font-size: 0.75em; margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--border); }
+</style>
+<script>if(window.self===window.top&&sessionStorage.getItem("student_auth")!=="1"){document.body.innerHTML="";window.location.replace("student.html");}</script>
+</head>
+<body>
+
+<h1>彭博研究摘要</h1>
+<p class="subtitle">第97期 | 日銀轉鷹：六月升息在即，日圓與通膨的二次衝擊</p>
+<span class="issue-badge">2026年六月中旬更新</span>
+
+<div class="nav-links">
+  <span><a href="newsletter_96_inflation.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="toc">
+  <div class="toc-title">目錄</div>
+  <ol>
+    <li><a href="#boj-june-hike">日銀政策 植田轉鷹，六月升息箭在弦上</a></li>
+    <li><a href="#inflation-second-round">通膨邏輯 油價推升工資，通膨的二次效應</a></li>
+    <li><a href="#usdjpy-yield-spread">匯率利差 利差背離的迷思 — 別只信疊圖</a></li>
+    <li><a href="#takeaways">基金經理人重點摘要</a></li>
+  </ol>
+</div>
+
+<div class="section" id="boj-june-hike">
+  <h2><span class="tag tag-misc">日銀政策</span> 植田轉鷹，六月升息箭在弦上</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--orange)">+25bp</div><div class="lbl">6月15-16日會議
+預計升息</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">1.25%</div><div class="lbl">年底政策利率
+目標（基準情境）</div></div>
+    <div class="stat"><div class="val" style="color:var(--green)">159.30</div><div class="lbl">講話後日圓
+短線走強至</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">植田講話偏鷹 — 六月升息機率升高</div>
+    <p>日銀總裁植田和男在週三講話中明確釋出鷹派訊號，為 6月15-16日會議升息 <span style="color:#fff;font-weight:700">25個基點</span> 鋪路。他直言，即使中東不確定性升溫，<span style="color:#fff;font-weight:700">上行通膨風險比下行成長風險更為迫切</span>，並指出近期長端殖利率飆升反映通膨預期轉強，凸顯控制物價的重要性。在 JGB 購債方面措辭較為含糊，但似乎為「放緩甚至暫停減購」留下空間，留待 6月會議的中期評估揭曉。市場將此解讀為鷹派，日圓由講話前約 <span style="color:#fff;font-weight:700">159.9</span> 短線升至 <span style="color:#fff;font-weight:700">159.30</span>。這番話釐清了日銀的反應函數 — 在 3月的通膨優先立場與 4月的觀望之間，央行正倒向前者。</p>
+    <div class="data-point">升息幅度：<span style="color:#fff;font-weight:700">25bp</span> &nbsp;|&nbsp; 會議日期：<span style="color:#fff;font-weight:700">6月15-16日</span> &nbsp;|&nbsp; 基準路徑：<span style="color:#fff;font-weight:700">6月+12月各升一碼</span> &nbsp;|&nbsp; 年底目標：<span style="color:#fff;font-weight:700">1.25%</span></div>
+    <div class="implication"><div class="label">投資啟示</div>日銀反應函數已確立為「通膨優先」。六月升息近乎定局，下半年仍有第二次升息空間 — <span style="color:#fff;font-weight:700">逢低布局日圓多頭，並做空長天期 JGB</span>。</div>
+  </div>
+</div>
+
+<div class="section" id="inflation-second-round">
+  <h2><span class="tag tag-infl">通膨邏輯</span> 油價推升工資，通膨的二次效應</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val">0.6%</div><div class="lbl">2023年GDP平減
+指數漲幅（偏低）</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">二次效應</div><div class="lbl">油價→工資→
+通膨循環</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">深度寬鬆</div><div class="lbl">實質利率仍
+大幅為負</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">日銀的通膨邏輯，恐反而助長通膨</div>
+    <p>Bloomberg Economics 警告，日銀對油價驅動型通膨的評估「過於樂觀」。央行論點是：貿易條件惡化會壓低 GDP 平減指數、冷卻通膨動能 — 這在教科書與通縮年代成立，卻不符當前日本。關鍵在於 <span style="color:#fff;font-weight:700">勞工依據自身面對的 CPI 物價、而非 GDP 平減指數來談判工資</span>。2023年春鬥（shunto）正是例證：在能源價格與日圓貶值推升 CPI 後，工資展開數十年來首次持續成長，但同期 GDP 平減指數僅上升 <span style="color:#fff;font-weight:700">0.6%</span>。如今勞動力短缺嚴重、企業獲利強勁，足以吸收能源成本上升並持續加薪。日本最大商業聯盟經團連（Keidanren）今年更將工資承諾從「錨定」升級為「進一步錨定」。若日銀反應過於謹慎，實質利率將維持深度寬鬆，進一步打壓日圓、放大通膨。</p>
+    <div class="data-point">2023 GDP平減指數：<span style="color:#fff;font-weight:700">+0.6%</span>（vs CPI大漲） &nbsp;|&nbsp; 經團連立場：<span style="color:#fff;font-weight:700">由「錨定」升級為「進一步錨定」</span> &nbsp;|&nbsp; 風險：<span style="color:#fff;font-weight:700">油價→工資→日圓貶值正向循環</span></div>
+    <div class="implication"><div class="label">投資啟示</div>即便六月升息，政策仍可能「太鬆太久」。二次通膨效應與日圓貶值互相強化 — <span style="color:#fff;font-weight:700">押注通膨黏著、做多通膨連動資產，並對日圓貶值風險保持警覺</span>。</div>
+  </div>
+</div>
+
+<div class="section" id="usdjpy-yield-spread">
+  <h2><span class="tag tag-misc">匯率利差</span> 利差背離的迷思 — 別只信疊圖</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val">0.47→0.44</div><div class="lbl">日圓對利差
+日變動相關性</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">~0.45</div><div class="lbl">相關係數
+（其他因素主導）</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">CPI</div><div class="lbl">美國通膨報告
+臨近</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">Macro Man：相信數據，還是相信你的眼睛？</div>
+    <p>Cameron Crise 提醒，USD/JPY 與「10年期 JGB-美債利差」的疊圖看似指向匯率嚴重偏離，但這是市場分析的常見陷阱 — <span style="color:#fff;font-weight:700">相關不等於因果</span>，且應比較報酬率變動而非價格水準。實證上，2021年初至一年前，USD/JPY 對利差日變動的相關係數為 <span style="color:#fff;font-weight:700">0.47</span>；過去一年為 <span style="color:#fff;font-weight:700">0.44</span> — 幾乎未變。他以滾動六個月日變動建構簡單模型發現，近期 USD/JPY 雖跑贏模型預測，但這種「超漲」幅度與過去幾年naive疊圖「奏效」時並無二致。真正的變數在於 <span style="color:#fff;font-weight:700">貿易條件、相對曲線利差等其他因素的重要性上升</span>。即便 0.45 的相關性在統計上顯著，也意味著多數匯率變動由其他因子解釋。這在美國 CPI 報告前夕格外值得市場（與 Kevin Warsh）牢記。</p>
+    <div class="data-point">歷史相關性：<span style="color:#fff;font-weight:700">0.47</span>（2021至一年前） &nbsp;|&nbsp; 近一年相關性：<span style="color:#fff;font-weight:700">0.44</span> &nbsp;|&nbsp; 解讀：<span style="color:#fff;font-weight:700">貿易條件等非利差因素主導</span> &nbsp;|&nbsp; 催化：<span style="color:#fff;font-weight:700">美國CPI報告臨近</span></div>
+    <div class="implication"><div class="label">投資啟示</div>別用naive利差疊圖判斷日圓方向。匯率多由利差以外因素驅動 — <span style="color:#fff;font-weight:700">降低對「利差收斂→日圓升值」單一敘事的曝險，分散押注於貿易條件與曲線利差</span>。</div>
+  </div>
+</div>
+
+<div class="callout" id="takeaways">
+  <div class="callout-title">基金經理人重點摘要</div>
+  <ul>
+    <li><strong>日銀政策：</strong>植田轉鷹，6月15-16日升息25bp近乎定局，基準路徑為6月+12月各升一碼、年底達1.25%。逢低布局日圓多頭、做空長端JGB。</li>
+    <li><strong>通膨二次效應：</strong>勞工依CPI而非GDP平減指數談判工資，油價→工資→日圓貶值形成正向循環。即便升息，實質利率仍深度寬鬆，押注通膨黏著。</li>
+    <li><strong>JGB購債：</strong>植田為放緩或暫停減購留下空間，6月會議中期評估是關鍵 — 留意長端殖利率與曲線形態。</li>
+    <li><strong>日圓匯率：</strong>USD/JPY對利差相關性僅約0.45且穩定，匯率多由貿易條件等非利差因素驅動。勿過度依賴利差疊圖敘事。</li>
+    <li><strong>催化劑：</strong>美國CPI報告臨近，疊加日銀會議，未來一週日圓與利差波動加大 — 控制曝險、保留彈性。</li>
+  </ul>
+</div>
+
+<div class="nav-links">
+  <span><a href="newsletter_96_inflation.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="footer">
+  彭博研究摘要 | 僅供教學與討論用途 | 2026年6月11日<br>
+  資料來源：Bloomberg Intelligence, Bloomberg Economics, Bloomberg News
+</div>
+
+</body>
+</html>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>彭博研究摘要 #95 — AI半導體超級循環 — 算力、記憶體與設備全面升溫</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --accent: #58a6ff;
+          --green: #3fb950; --red: #f85149; --yellow: #d29922; --text: #c9d1d9; --muted: #8b949e;
+          --orange: #f0883e; --purple: #bc8cff; --cyan: #39d2c0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans TC', 'Microsoft JhengHei', Helvetica, Arial, sans-serif; line-height: 1.7; padding: 20px; max-width: 860px; margin: 0 auto; }
+  h1 { color: #fff; font-size: 1.7em; margin-bottom: 4px; }
+  .subtitle { color: var(--muted); font-size: 0.9em; margin-bottom: 8px; }
+  .issue-badge { display: inline-block; background: rgba(88,166,255,0.15); color: var(--accent); padding: 3px 10px; border-radius: 12px; font-size: 0.8em; font-weight: 600; margin-bottom: 20px; }
+  .tag { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 0.72em; font-weight: 600; margin-right: 4px; }
+  .tag-rates { background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-china { background: rgba(240,136,62,0.15); color: var(--orange); }
+  .tag-japan { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-geo   { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-oil   { background: rgba(210,153,34,0.15); color: var(--yellow); }
+  .tag-trade { background: rgba(210,153,34,0.15); color: var(--yellow); }
+  .tag-growth{ background: rgba(63,185,80,0.15); color: var(--green); }
+  .tag-metals{ background: rgba(188,140,255,0.15); color: var(--purple); }
+  .tag-infl  { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-policy{ background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-val   { background: rgba(63,185,80,0.15); color: var(--green); }
+  .tag-vol   { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-semi  { background: rgba(57,210,192,0.15); color: var(--cyan); }
+  .tag-credit{ background: rgba(188,140,255,0.15); color: var(--purple); }
+  .tag-space { background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-misc  { background: rgba(139,148,158,0.15); color: var(--muted); }
+  .section { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 16px; }
+  .section h2 { color: #fff; font-size: 1.15em; margin-bottom: 12px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+  .section h3 { color: var(--accent); font-size: 0.95em; margin: 14px 0 6px; }
+  .article { margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .article:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .article-title { color: #fff; font-weight: 700; font-size: 0.95em; margin-bottom: 4px; }
+  .article-title-cn { color: var(--muted); font-size: 0.85em; margin-bottom: 8px; }
+  .article p { font-size: 0.9em; margin: 6px 0; }
+  .data-point { background: rgba(255,255,255,0.03); padding: 8px 12px; border-radius: 6px; margin: 8px 0; font-size: 0.85em; }
+  .data-point .num { color: #fff; font-weight: 700; }
+  .implication { background: rgba(88,166,255,0.06); border-left: 3px solid var(--accent); padding: 10px 14px; margin: 10px 0; border-radius: 0 6px 6px 0; font-size: 0.88em; }
+  .implication .label { color: var(--accent); font-weight: 700; font-size: 0.8em; text-transform: uppercase; margin-bottom: 4px; }
+  .callout { background: rgba(210,153,34,0.08); border: 1px solid rgba(210,153,34,0.3); border-radius: 6px; padding: 16px; margin: 16px 0; }
+  .callout-title { color: var(--yellow); font-weight: 700; font-size: 0.95em; margin-bottom: 8px; }
+  .callout ul { padding-left: 18px; }
+  .callout li { margin: 4px 0; font-size: 0.88em; }
+  ul { padding-left: 18px; }
+  li { margin: 3px 0; font-size: 0.88em; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(255,255,255,0.03); padding: 12px; border-radius: 6px; text-align: center; }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: #fff; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
+  .toc { background: rgba(88,166,255,0.05); border: 1px solid rgba(88,166,255,0.2); border-radius: 8px; padding: 16px 20px; margin-bottom: 20px; }
+  .toc-title { color: var(--accent); font-weight: 700; font-size: 0.9em; margin-bottom: 8px; }
+  .toc a { color: var(--accent); text-decoration: none; font-size: 0.88em; }
+  .toc a:hover { text-decoration: underline; }
+  .toc ol { padding-left: 20px; }
+  .toc li { margin: 4px 0; }
+  .nav-links { display: flex; justify-content: space-between; margin: 20px 0; font-size: 0.85em; }
+  .nav-links a { color: var(--accent); text-decoration: none; }
+  .nav-links a:hover { text-decoration: underline; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(255,255,255,0.03); padding: 12px; border-radius: 6px; text-align: center; }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: #fff; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
+  .footer { text-align: center; color: var(--muted); font-size: 0.75em; margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--border); }
+</style>
+<script>if(window.self===window.top&&sessionStorage.getItem("student_auth")!=="1"){document.body.innerHTML="";window.location.replace("student.html");}</script>
+</head>
+<body>
+
+<h1>彭博研究摘要</h1>
+<p class="subtitle">第95期 | AI半導體超級循環 — 算力、記憶體與設備全面升溫</p>
+<span class="issue-badge">2026年六月中旬更新</span>
+
+<div class="nav-links">
+  <span><a href="newsletter_94_oil.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="toc">
+  <div class="toc-title">目錄</div>
+  <ol>
+    <li><a href="#ai-datacenter-capex">AI算力 資本開支續航，NVDA穩坐霸主</a></li>
+    <li><a href="#memory-pricing">記憶體 LTA鎖價，供需平衡價格續揚</a></li>
+    <li><a href="#semicap-equipment">設備材料 設備材料起飛，FC-BGA供不應求</a></li>
+    <li><a href="#computex-nvda-vera">Computex Vera CPU登場，TSMC產能無虞</a></li>
+    <li><a href="#takeaways">基金經理人重點摘要</a></li>
+  </ol>
+</div>
+
+<div class="section" id="ai-datacenter-capex">
+  <h2><span class="tag tag-misc">AI算力</span> 資本開支續航，NVDA穩坐霸主</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--green)">~$1兆→$3-4兆</div><div class="lbl">AI資本開支
+CY27→CY30</div></div>
+    <div class="stat"><div class="val">65-70%</div><div class="lbl">NVDA預估
+AI總市佔率</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">5-6%</div><div class="lbl">CPU佔
+AI TAM比重</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">AI資本開支可持續性 — NVDA端到端生態圈穩握主導權</div>
+    <p>BofA將於6月2-4日舊金山全球科技大會迎來 <span style="color:#fff;font-weight:700">36家</span> 半導體公司管理層，包含NVDA財務長Colette Kress主題演講。核心辯論聚焦下半年AI資本開支的可持續性：目前CY27約 <span style="color:#fff;font-weight:700">$1兆</span> 的AI capex，預計到CY30將擴張至 <span style="color:#fff;font-weight:700">$3-4兆</span>，動能由雲端延伸至企業與主權AI。在此情境下，BofA視NVDA為最大受益者，憑藉其端到端生態圈與企業平台，可望維持 <span style="color:#fff;font-weight:700">65-70%</span> 的AI總市佔率，而ASIC廠商則在超大規模雲端佔優。值得注意的是，CPU在AI TAM中的比重將逐步升至 <span style="color:#fff;font-weight:700">5-6%</span>，NVDA於Computex（6月1日CEO主題演講）亦聚焦於此，並推動head node由x86轉向ARM（Vera）。</p>
+    <div class="data-point">AI資本開支：<span style="color:#fff;font-weight:700">$1兆(CY27)→$3-4兆(CY30)</span> &nbsp;|&nbsp; NVDA AI市佔：<span style="color:#fff;font-weight:700">65-70%</span> &nbsp;|&nbsp; CPU佔AI TAM：<span style="color:#fff;font-weight:700">5-6%</span> &nbsp;|&nbsp; 受邀管理層：<span style="color:#fff;font-weight:700">36家半導體公司</span></div>
+    <div class="implication"><div class="label">投資啟示</div>AI資本開支結構性續航，下半年「見頂」疑慮過慮。<span style="color:#fff;font-weight:700">核心持有NVDA</span>，並留意ARM-based CPU（Vera）作為全新綠地市場的增量機會。</div>
+  </div>
+</div>
+
+<div class="section" id="memory-pricing">
+  <h2><span class="tag tag-misc">記憶體</span> LTA鎖價，供需平衡價格續揚</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--green)">±10%</div><div class="lbl">DRAM/NAND
+供需平衡區間</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">0.05%</div><div class="lbl">MU股息率
+(歷史0.4%)</div></div>
+    <div class="stat"><div class="val" style="color:var(--green)">2H26</div><div class="lbl">記憶體出貨
+與毛利擴張</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">記憶體定價可持續性 — LTA普及，HBM3e漲價收斂價差</div>
+    <p>記憶體定價的可持續性是另一關鍵辯論。隨著長期協議（LTA）日益普遍、部分價格甚至固定鎖定，BofA認為直至 <span style="color:#fff;font-weight:700">2028年</span> 都不會出現實質的供給過剩或不足，DRAM與NAND的充足率均維持在平衡點 <span style="color:#fff;font-weight:700">±10%</span> 內。記憶體廠商可能提高股東回報——美光（MU）目前股息率僅 <span style="color:#fff;font-weight:700">0.05%</span>，遠低於歷史的 <span style="color:#fff;font-weight:700">0.4%</span>——作為記憶體模式更具可持續性的佐證。HSBC於5月27-29日韓國科技巡迴亦傳遞一致訊號：CSP資本開支飆升，需求催化劑正轉向CPU客戶，<span style="color:#fff;font-weight:700">HBM3e</span> 價格將上漲以收斂與commodity記憶體的價差；強勁的x86與ARM CPU需求推升伺服器與行動DRAM價格，記憶體廠商可望於 <span style="color:#fff;font-weight:700">2H26</span> 享有出貨增長與毛利擴張。</p>
+    <div class="data-point">供需平衡：<span style="color:#fff;font-weight:700">DRAM/NAND ±10%（至2028）</span> &nbsp;|&nbsp; MU股息率：<span style="color:#fff;font-weight:700">0.05% vs 歷史0.4%</span> &nbsp;|&nbsp; HBM3e：<span style="color:#fff;font-weight:700">漲價收斂價差</span> &nbsp;|&nbsp; 出貨/毛利擴張：<span style="color:#fff;font-weight:700">2H26</span></div>
+    <div class="implication"><div class="label">投資啟示</div>記憶體進入「LTA鎖價+供需平衡」的良性循環，盈利可見度提升。<span style="color:#fff;font-weight:700">偏多記憶體龍頭（Samsung、MU）</span>，並關注潛在提高現金回報的重評價催化。</div>
+  </div>
+</div>
+
+<div class="section" id="semicap-equipment">
+  <h2><span class="tag tag-misc">設備材料</span> 設備材料起飛，FC-BGA供不應求</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val">14家</div><div class="lbl">HSBC韓國
+巡迴覆蓋公司</div></div>
+    <div class="stat"><div class="val" style="color:var(--green)">3Q26</div><div class="lbl">HPSP新增
+DRAM客戶</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">供不應求</div><div class="lbl">高階FC-BGA
+基板需求</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">韓國科技巡迴 — 設備材料盈利即將起飛，HBM製程升級加速</div>
+    <p>HSBC於5月27-29日舉辦韓國科技巡迴，覆蓋記憶體、設備、材料及硬體供應鏈 <span style="color:#fff;font-weight:700">14家</span> 公司，普遍展望樂觀。HSBC指記憶體盈利最為穩固，而設備與材料盈利「即將起飛」，並偏好 <span style="color:#fff;font-weight:700">Samsung</span> 與 <span style="color:#fff;font-weight:700">EO Technics</span>。封裝基板（FC-BGA）是明確的AI受益者——高階FC-BGA需求跑贏供給，反映高稼動與拉長交期，客戶尋求LTA與共同投資以鎖定產能；更大尺寸、更高層數、矽電容嵌入與玻璃核心基板等結構性驅動提升單位含量，支撐多年成長。設備端：EO Technics的雷射全切割開始取代HBM機械切割，PCB鑽孔急速放量；HPSP預計於 <span style="color:#fff;font-weight:700">3Q26</span> 新增DRAM客戶並切入NAND；Park Systems於混合鍵合AFM量測取得進展。</p>
+    <div class="data-point">巡迴覆蓋：<span style="color:#fff;font-weight:700">14家公司（5/27-29）</span> &nbsp;|&nbsp; 首選：<span style="color:#fff;font-weight:700">Samsung、EO Technics</span> &nbsp;|&nbsp; HPSP：<span style="color:#fff;font-weight:700">3Q26新增DRAM客戶</span> &nbsp;|&nbsp; FC-BGA：<span style="color:#fff;font-weight:700">需求跑贏供給、交期拉長</span></div>
+    <div class="implication"><div class="label">投資啟示</div>AI資本開支與記憶體擴產直接驅動設備材料補漲行情。<span style="color:#fff;font-weight:700">布局HBM設備（EO Technics）與FC-BGA基板鏈</span>，留意LTA與共同投資帶來的產能可見度。</div>
+  </div>
+</div>
+
+<div class="section" id="computex-nvda-vera">
+  <h2><span class="tag tag-misc">Computex</span> Vera CPU登場，TSMC產能無虞</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--green)">$200億</div><div class="lbl">Vera CPU
+營收預估</div></div>
+    <div class="stat"><div class="val">250-400萬</div><div class="lbl">Vera CPU
+備貨單位</div></div>
+    <div class="stat"><div class="val" style="color:var(--green)">充足</div><div class="lbl">TSMC 2027
+NVDA產能</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">Computex關鍵要點 — Agentic AI主導，Vera/Rubin如期推進</div>
+    <p>Morgan Stanley指Agentic AI與CPU伺服器主導Computex主題演講。Nvidia、Arm與Qualcomm均強調ARM-based伺服器CPU以支撐未來Agentic AI需求。針對NVDA分析師Joe Moore提問 <span style="color:#fff;font-weight:700">$200億</span> 的Vera CPU營收假設，黃仁勳表示需求橫跨AI伺服器head node與獨立CPU伺服器；鑑於Vera效能遠勝x86，NVDA可為其訂定更高價值（不含記憶體銷售），供應鏈查核顯示 <span style="color:#fff;font-weight:700">250-400萬</span> 顆正在備貨。Rubin已進入晶圓廠生產且無明顯延遲。在CPO（光學）vs 銅纜的選擇上，NVDA表示將盡可能沿用銅纜、僅在必要時採用CPO。最關鍵的是，當被問及2027年能否取得足夠TSMC產能時，黃仁勳明確表示NVDA擁有 <span style="color:#fff;font-weight:700">充足產能</span> 支撐2027年的強勁成長。</p>
+    <div class="data-point">Vera CPU營收：<span style="color:#fff;font-weight:700">$200億</span> &nbsp;|&nbsp; 備貨單位：<span style="color:#fff;font-weight:700">250-400萬顆</span> &nbsp;|&nbsp; Rubin：<span style="color:#fff;font-weight:700">已進晶圓廠、無延遲</span> &nbsp;|&nbsp; TSMC 2027產能：<span style="color:#fff;font-weight:700">充足</span> &nbsp;|&nbsp; CPO策略：<span style="color:#fff;font-weight:700">盡量沿用銅纜</span></div>
+    <div class="implication"><div class="label">投資啟示</div>Computex消除2027年供給瓶頸疑慮，產品路線圖（Vera/Rubin）如期推進。<span style="color:#fff;font-weight:700">維持半導體「具吸引力」評等，偏多NVDA與TSMC供應鏈</span>；銅纜續用對CPO題材構成短期壓力。</div>
+  </div>
+</div>
+
+<div class="callout" id="takeaways">
+  <div class="callout-title">基金經理人重點摘要</div>
+  <ul>
+    <li><strong>AI資本開支：</strong>CY27約$1兆、CY30擴張至$3-4兆，結構性續航。核心持有NVDA（維持65-70%市佔）。</li>
+    <li><strong>記憶體：</strong>LTA鎖價、供需平衡至2028（±10%），HBM3e漲價、2H26毛利擴張。偏多Samsung、MU。</li>
+    <li><strong>設備材料：</strong>盈利即將起飛，HBM設備（EO Technics）與FC-BGA基板供不應求。布局擴產受益鏈。</li>
+    <li><strong>Computex：</strong>Vera CPU($200億、250-400萬顆)與Rubin如期推進，TSMC 2027產能充足。偏多NVDA、TSMC。</li>
+    <li><strong>風險提示：</strong>NVDA表示盡量沿用銅纜、僅必要時採CPO，短期對CPO（光學）題材構成壓力。</li>
+  </ul>
+</div>
+
+<div class="nav-links">
+  <span><a href="newsletter_94_oil.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="footer">
+  彭博研究摘要 | 僅供教學與討論用途 | 2026年6月11日<br>
+  資料來源：Bloomberg Intelligence, Bloomberg Economics, Bloomberg News
+</div>
+
+</body>
+</html>

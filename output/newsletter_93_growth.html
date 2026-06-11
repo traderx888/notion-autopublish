@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>彭博研究摘要 #93 — 美國就業強韌：聯儲會按兵不動至第四季</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --accent: #58a6ff;
+          --green: #3fb950; --red: #f85149; --yellow: #d29922; --text: #c9d1d9; --muted: #8b949e;
+          --orange: #f0883e; --purple: #bc8cff; --cyan: #39d2c0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans TC', 'Microsoft JhengHei', Helvetica, Arial, sans-serif; line-height: 1.7; padding: 20px; max-width: 860px; margin: 0 auto; }
+  h1 { color: #fff; font-size: 1.7em; margin-bottom: 4px; }
+  .subtitle { color: var(--muted); font-size: 0.9em; margin-bottom: 8px; }
+  .issue-badge { display: inline-block; background: rgba(88,166,255,0.15); color: var(--accent); padding: 3px 10px; border-radius: 12px; font-size: 0.8em; font-weight: 600; margin-bottom: 20px; }
+  .tag { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 0.72em; font-weight: 600; margin-right: 4px; }
+  .tag-rates { background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-china { background: rgba(240,136,62,0.15); color: var(--orange); }
+  .tag-japan { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-geo   { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-oil   { background: rgba(210,153,34,0.15); color: var(--yellow); }
+  .tag-trade { background: rgba(210,153,34,0.15); color: var(--yellow); }
+  .tag-growth{ background: rgba(63,185,80,0.15); color: var(--green); }
+  .tag-metals{ background: rgba(188,140,255,0.15); color: var(--purple); }
+  .tag-infl  { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-policy{ background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-val   { background: rgba(63,185,80,0.15); color: var(--green); }
+  .tag-vol   { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-semi  { background: rgba(57,210,192,0.15); color: var(--cyan); }
+  .tag-credit{ background: rgba(188,140,255,0.15); color: var(--purple); }
+  .tag-space { background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-misc  { background: rgba(139,148,158,0.15); color: var(--muted); }
+  .section { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 16px; }
+  .section h2 { color: #fff; font-size: 1.15em; margin-bottom: 12px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+  .section h3 { color: var(--accent); font-size: 0.95em; margin: 14px 0 6px; }
+  .article { margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .article:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .article-title { color: #fff; font-weight: 700; font-size: 0.95em; margin-bottom: 4px; }
+  .article-title-cn { color: var(--muted); font-size: 0.85em; margin-bottom: 8px; }
+  .article p { font-size: 0.9em; margin: 6px 0; }
+  .data-point { background: rgba(255,255,255,0.03); padding: 8px 12px; border-radius: 6px; margin: 8px 0; font-size: 0.85em; }
+  .data-point .num { color: #fff; font-weight: 700; }
+  .implication { background: rgba(88,166,255,0.06); border-left: 3px solid var(--accent); padding: 10px 14px; margin: 10px 0; border-radius: 0 6px 6px 0; font-size: 0.88em; }
+  .implication .label { color: var(--accent); font-weight: 700; font-size: 0.8em; text-transform: uppercase; margin-bottom: 4px; }
+  .callout { background: rgba(210,153,34,0.08); border: 1px solid rgba(210,153,34,0.3); border-radius: 6px; padding: 16px; margin: 16px 0; }
+  .callout-title { color: var(--yellow); font-weight: 700; font-size: 0.95em; margin-bottom: 8px; }
+  .callout ul { padding-left: 18px; }
+  .callout li { margin: 4px 0; font-size: 0.88em; }
+  ul { padding-left: 18px; }
+  li { margin: 3px 0; font-size: 0.88em; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(255,255,255,0.03); padding: 12px; border-radius: 6px; text-align: center; }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: #fff; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
+  .toc { background: rgba(88,166,255,0.05); border: 1px solid rgba(88,166,255,0.2); border-radius: 8px; padding: 16px 20px; margin-bottom: 20px; }
+  .toc-title { color: var(--accent); font-weight: 700; font-size: 0.9em; margin-bottom: 8px; }
+  .toc a { color: var(--accent); text-decoration: none; font-size: 0.88em; }
+  .toc a:hover { text-decoration: underline; }
+  .toc ol { padding-left: 20px; }
+  .toc li { margin: 4px 0; }
+  .nav-links { display: flex; justify-content: space-between; margin: 20px 0; font-size: 0.85em; }
+  .nav-links a { color: var(--accent); text-decoration: none; }
+  .nav-links a:hover { text-decoration: underline; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(255,255,255,0.03); padding: 12px; border-radius: 6px; text-align: center; }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: #fff; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
+  .footer { text-align: center; color: var(--muted); font-size: 0.75em; margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--border); }
+</style>
+<script>if(window.self===window.top&&sessionStorage.getItem("student_auth")!=="1"){document.body.innerHTML="";window.location.replace("student.html");}</script>
+</head>
+<body>
+
+<h1>彭博研究摘要</h1>
+<p class="subtitle">第93期 | 美國就業強韌：聯儲會按兵不動至第四季</p>
+<span class="issue-badge">2026年六月中旬更新</span>
+
+<div class="nav-links">
+  <span><a href="newsletter_92_space.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="toc">
+  <div class="toc-title">目錄</div>
+  <ol>
+    <li><a href="#payrolls">非農就業 連三月超預期，修正才是主角</a></li>
+    <li><a href="#composition">結構與收入 休閒撐場，金融失血</a></li>
+    <li><a href="#fed">聯儲會 通膨見頂，利率按兵不動至Q4</a></li>
+    <li><a href="#takeaways">基金經理人重點摘要</a></li>
+  </ol>
+</div>
+
+<div class="section" id="payrolls">
+  <h2><span class="tag tag-misc">非農就業</span> 連三月超預期，修正才是主角</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--green)">+17.2萬</div><div class="lbl">5月新增非農
+（預期僅8.8萬）</div></div>
+    <div class="stat"><div class="val" style="color:var(--green)">+9.3萬</div><div class="lbl">前兩月合計
+上修幅度</div></div>
+    <div class="stat"><div class="val" style="color:var(--green)">18.8萬</div><div class="lbl">三月移動平均
+（前值7.9萬）</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">美國5月非農連續第三月碾壓預期 — 修正幅度才是真正的故事</div>
+    <p>美國5月非農就業增加 <span style="color:#fff;font-weight:700">17.2萬</span>，遠高於市場普遍預期的 <span style="color:#fff;font-weight:700">8.8萬</span>，也高於彭博經濟研究自身 <span style="color:#fff;font-weight:700">9.5萬</span> 的預測。但這份報告真正的主角是修正：前兩個月數據合計上修 <span style="color:#fff;font-weight:700">9.3萬</span>——3月由18.5萬升至 <span style="color:#fff;font-weight:700">21.4萬</span>，4月由11.5萬升至 <span style="color:#fff;font-weight:700">17.9萬</span>。三個月移動平均因此跳升至 <span style="color:#fff;font-weight:700">18.8萬</span>，遠高於彭博估算維持失業率穩定所需的 <span style="color:#fff;font-weight:700">5萬</span> 盈虧平衡步伐，更遠高於聯儲會幕僚估計的 <span style="color:#fff;font-weight:700">5,000</span>。非季調口徑下就業增加 <span style="color:#fff;font-weight:700">74.1萬</span>，其中企業生滅模型（birth-and-death）貢獻 <span style="color:#fff;font-weight:700">15.8萬</span>，略低於去年同期的17.3萬。整體招聘動能不僅未見熄火，反而在加速。</p>
+    <div class="data-point">5月非農：<span style="color:#fff;font-weight:700">+17.2萬</span> &nbsp;|&nbsp; 普遍預期：<span style="color:#fff;font-weight:700">+8.8萬</span> &nbsp;|&nbsp; 兩月修正：<span style="color:#fff;font-weight:700">+9.3萬</span> &nbsp;|&nbsp; 三月均值：<span style="color:#fff;font-weight:700">18.8萬</span> vs 盈虧平衡 <span style="color:#fff;font-weight:700">5萬</span></div>
+    <div class="implication"><div class="label">投資啟示</div>招聘步伐遠超人口成長吸納能力，衰退敘事再度落空。聯儲會欠缺寬鬆的急迫理由——<span style="color:#fff;font-weight:700">降低對上半年降息的押注，前端利率多頭應減碼</span>。</div>
+  </div>
+</div>
+
+<div class="section" id="composition">
+  <h2><span class="tag tag-misc">結構與收入</span> 休閒撐場，金融失血</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--green)">+7萬</div><div class="lbl">休閒酒店業
+（12月均值僅1.4萬）</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">-2.2萬</div><div class="lbl">金融活動
+（主要行業最大降幅）</div></div>
+    <div class="stat"><div class="val" style="color:var(--green)">+0.3%</div><div class="lbl">5月平均時薪
+（前值0.2%）</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">成長集中於休閒與地方政府 — 廣度不足但收入穩健</div>
+    <p>5月就業成長集中且不均衡：休閒和酒店業單獨貢獻 <span style="color:#fff;font-weight:700">7萬</span>（遠高於12個月均值 <span style="color:#fff;font-weight:700">1.4萬</span>），由餐飲及酒類場所（<span style="color:#fff;font-weight:700">+4.8萬</span>）帶動，一舉取代教育健保成為最大引擎。地方政府新增 <span style="color:#fff;font-weight:700">5.5萬</span>（多在非教育領域），構成政府部門 <span style="color:#fff;font-weight:700">5.2萬</span> 增幅的幾乎全部；醫療健保再添 <span style="color:#fff;font-weight:700">3.5萬</span>。商品生產回穩，建築 <span style="color:#fff;font-weight:700">+1.7萬</span>、製造業重返成長 <span style="color:#fff;font-weight:700">+0.7萬</span>。但拖累同樣明顯：金融活動銳減 <span style="color:#fff;font-weight:700">2.2萬</span>，為主要行業最大降幅，自2025年5月峰值以來已累計流失 <span style="color:#fff;font-weight:700">10.7萬</span>；專業商業服務降溫至 <span style="color:#fff;font-weight:700">6,000</span>。收入面則穩健——平均時薪月增 <span style="color:#fff;font-weight:700">0.3%</span>，總勞動收入估計增逾 <span style="color:#fff;font-weight:700">0.4%</span>，為實質消費提供支撐。</p>
+    <div class="data-point">休閒酒店：<span style="color:#fff;font-weight:700">+7萬</span> &nbsp;|&nbsp; 地方政府：<span style="color:#fff;font-weight:700">+5.5萬</span> &nbsp;|&nbsp; 金融活動：<span style="color:#fff;font-weight:700">-2.2萬</span> &nbsp;|&nbsp; 平均時薪：<span style="color:#fff;font-weight:700">+0.3%</span> &nbsp;|&nbsp; 總勞動收入：<span style="color:#fff;font-weight:700">+0.4%</span></div>
+    <div class="implication"><div class="label">投資啟示</div>成長廣度偏窄、過度依賴週期敏感的休閒業，是潛在脆弱點，但時薪與總收入動能支撐內需。<span style="color:#fff;font-weight:700">維持美國消費相關資產配置，但留意金融業就業持續萎縮的領先警訊</span>。</div>
+  </div>
+</div>
+
+<div class="section" id="fed">
+  <h2><span class="tag tag-misc">聯儲會</span> 通膨見頂，利率按兵不動至Q4</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--green)">4.30%</div><div class="lbl">5月失業率
+（前值4.34%）</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">~75bp</div><div class="lbl">債券殖利率上升
+等效加息幅度</div></div>
+    <div class="stat"><div class="val">Q4</div><div class="lbl">聯儲會
+預計維持利率至</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">強勁招聘鎖定聯儲會按兵不動 — 金融條件已替Fed收緊政策</div>
+    <p>失業率降至 <span style="color:#fff;font-weight:700">4.30%</span>（前值4.34%），U2失業率小幅下滑至 <span style="color:#fff;font-weight:700">2.0%</span>，勞動力增加 <span style="color:#fff;font-weight:700">8.3萬</span>、參與率穩守 <span style="color:#fff;font-weight:700">61.8%</span>——失業流入降幅大於流出，標誌去年底的上升趨勢已逆轉。彭博經濟研究維持核心判斷：在招聘穩健、加上通膨「可能已見頂」的雙重背景下，聯儲會將<span style="color:#fff;font-weight:700">維持利率不變直至今年第四季</span>。值得注意的是，近期長債殖利率急升已使金融條件迅速收緊，彭博估算其效果相當於 <span style="color:#fff;font-weight:700">加息約75個基點</span>，對利率最敏感的住房與建築活動明顯降溫，反而降低了聯儲會短期內主動收緊的必要性。JOLTS亦顯示勞動力市場流動性下降、職位空缺日益集中於專業商業服務單一行業，鷹派官員因此更確信就業風險不及通膨緊迫。</p>
+    <div class="data-point">失業率：<span style="color:#fff;font-weight:700">4.30%</span> &nbsp;|&nbsp; U2：<span style="color:#fff;font-weight:700">2.0%</span> &nbsp;|&nbsp; 參與率：<span style="color:#fff;font-weight:700">61.8%</span> &nbsp;|&nbsp; 殖利率上升等效：<span style="color:#fff;font-weight:700">~75bp</span> &nbsp;|&nbsp; 政策路徑：<span style="color:#fff;font-weight:700">維持至Q4</span></div>
+    <div class="implication"><div class="label">投資啟示</div>市場上半年降息押注過於激進。債市已代Fed完成收緊，殖利率上行空間受限。<span style="color:#fff;font-weight:700">在長端殖利率高檔逢高佈局美債久期，並減持對升息敏感的套利倉位</span>。</div>
+  </div>
+</div>
+
+<div class="callout" id="takeaways">
+  <div class="callout-title">基金經理人重點摘要</div>
+  <ul>
+    <li><strong>就業：</strong>5月非農 +17.2萬 連三月超預期，加上前兩月上修 9.3萬，三月均值跳升至 18.8萬，遠超 5萬盈虧平衡步伐。衰退敘事再度失效。</li>
+    <li><strong>結構：</strong>成長集中於休閒酒店（+7萬）與地方政府（+5.5萬），廣度偏窄；金融活動 -2.2萬為最大拖累，自2025年峰值已流失 10.7萬，留意領先警訊。</li>
+    <li><strong>收入：</strong>時薪月增 0.3%、總勞動收入逾 0.4%，支撐實質消費——維持美國內需相關配置。</li>
+    <li><strong>聯儲會：</strong>通膨見頂＋招聘強韌，預計維持利率不變至第四季。減碼上半年降息押注。</li>
+    <li><strong>利率：</strong>長債殖利率急升已等效加息約 75bp，金融條件替Fed完成收緊。在長端高檔逢高佈局美債久期，減持升息敏感套利倉位。</li>
+  </ul>
+</div>
+
+<div class="nav-links">
+  <span><a href="newsletter_92_space.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="footer">
+  彭博研究摘要 | 僅供教學與討論用途 | 2026年6月11日<br>
+  資料來源：Bloomberg Intelligence, Bloomberg Economics, Bloomberg News
+</div>
+
+</body>
+</html>

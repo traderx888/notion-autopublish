@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>彭博研究摘要 #90 — 強勢人民幣與科技轉型：中國經濟的再平衡</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --accent: #58a6ff;
+          --green: #3fb950; --red: #f85149; --yellow: #d29922; --text: #c9d1d9; --muted: #8b949e;
+          --orange: #f0883e; --purple: #bc8cff; --cyan: #39d2c0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans TC', 'Microsoft JhengHei', Helvetica, Arial, sans-serif; line-height: 1.7; padding: 20px; max-width: 860px; margin: 0 auto; }
+  h1 { color: #fff; font-size: 1.7em; margin-bottom: 4px; }
+  .subtitle { color: var(--muted); font-size: 0.9em; margin-bottom: 8px; }
+  .issue-badge { display: inline-block; background: rgba(88,166,255,0.15); color: var(--accent); padding: 3px 10px; border-radius: 12px; font-size: 0.8em; font-weight: 600; margin-bottom: 20px; }
+  .tag { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 0.72em; font-weight: 600; margin-right: 4px; }
+  .tag-rates { background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-china { background: rgba(240,136,62,0.15); color: var(--orange); }
+  .tag-japan { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-geo   { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-oil   { background: rgba(210,153,34,0.15); color: var(--yellow); }
+  .tag-trade { background: rgba(210,153,34,0.15); color: var(--yellow); }
+  .tag-growth{ background: rgba(63,185,80,0.15); color: var(--green); }
+  .tag-metals{ background: rgba(188,140,255,0.15); color: var(--purple); }
+  .tag-infl  { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-policy{ background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-val   { background: rgba(63,185,80,0.15); color: var(--green); }
+  .tag-vol   { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-semi  { background: rgba(57,210,192,0.15); color: var(--cyan); }
+  .tag-credit{ background: rgba(188,140,255,0.15); color: var(--purple); }
+  .tag-space { background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-misc  { background: rgba(139,148,158,0.15); color: var(--muted); }
+  .section { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 16px; }
+  .section h2 { color: #fff; font-size: 1.15em; margin-bottom: 12px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+  .section h3 { color: var(--accent); font-size: 0.95em; margin: 14px 0 6px; }
+  .article { margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .article:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .article-title { color: #fff; font-weight: 700; font-size: 0.95em; margin-bottom: 4px; }
+  .article-title-cn { color: var(--muted); font-size: 0.85em; margin-bottom: 8px; }
+  .article p { font-size: 0.9em; margin: 6px 0; }
+  .data-point { background: rgba(255,255,255,0.03); padding: 8px 12px; border-radius: 6px; margin: 8px 0; font-size: 0.85em; }
+  .data-point .num { color: #fff; font-weight: 700; }
+  .implication { background: rgba(88,166,255,0.06); border-left: 3px solid var(--accent); padding: 10px 14px; margin: 10px 0; border-radius: 0 6px 6px 0; font-size: 0.88em; }
+  .implication .label { color: var(--accent); font-weight: 700; font-size: 0.8em; text-transform: uppercase; margin-bottom: 4px; }
+  .callout { background: rgba(210,153,34,0.08); border: 1px solid rgba(210,153,34,0.3); border-radius: 6px; padding: 16px; margin: 16px 0; }
+  .callout-title { color: var(--yellow); font-weight: 700; font-size: 0.95em; margin-bottom: 8px; }
+  .callout ul { padding-left: 18px; }
+  .callout li { margin: 4px 0; font-size: 0.88em; }
+  ul { padding-left: 18px; }
+  li { margin: 3px 0; font-size: 0.88em; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(255,255,255,0.03); padding: 12px; border-radius: 6px; text-align: center; }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: #fff; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
+  .toc { background: rgba(88,166,255,0.05); border: 1px solid rgba(88,166,255,0.2); border-radius: 8px; padding: 16px 20px; margin-bottom: 20px; }
+  .toc-title { color: var(--accent); font-weight: 700; font-size: 0.9em; margin-bottom: 8px; }
+  .toc a { color: var(--accent); text-decoration: none; font-size: 0.88em; }
+  .toc a:hover { text-decoration: underline; }
+  .toc ol { padding-left: 20px; }
+  .toc li { margin: 4px 0; }
+  .nav-links { display: flex; justify-content: space-between; margin: 20px 0; font-size: 0.85em; }
+  .nav-links a { color: var(--accent); text-decoration: none; }
+  .nav-links a:hover { text-decoration: underline; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(255,255,255,0.03); padding: 12px; border-radius: 6px; text-align: center; }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: #fff; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
+  .footer { text-align: center; color: var(--muted); font-size: 0.75em; margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--border); }
+</style>
+<script>if(window.self===window.top&&sessionStorage.getItem("student_auth")!=="1"){document.body.innerHTML="";window.location.replace("student.html");}</script>
+</head>
+<body>
+
+<h1>彭博研究摘要</h1>
+<p class="subtitle">第90期 | 強勢人民幣與科技轉型：中國經濟的再平衡</p>
+<span class="issue-badge">2026年六月中旬更新</span>
+
+<div class="nav-links">
+  <span><a href="newsletter_89_valuations.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="toc">
+  <div class="toc-title">目錄</div>
+  <ol>
+    <li><a href="#yuan-fx">人民幣 升值壓力下，監管鬆綁美元存款利率</a></li>
+    <li><a href="#trade">外貿 AI需求壓過能源衝擊，出口超預期</a></li>
+    <li><a href="#tech-pivot">科技轉型 從地產到創新：就業的贏家與輸家</a></li>
+    <li><a href="#geopolitics">地緣政治 五角大樓擴容1260H清單，緩和局勢受考驗</a></li>
+    <li><a href="#policy-macro">政策與宏觀 峰會穩關係、央行續寬鬆、再通膨啟動</a></li>
+    <li><a href="#takeaways">基金經理人重點摘要</a></li>
+  </ol>
+</div>
+
+<div class="section" id="yuan-fx">
+  <h2><span class="tag tag-misc">人民幣</span> 升值壓力下，監管鬆綁美元存款利率</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--green)">+3%</div><div class="lbl">人民幣今年迄今
+對美元升值幅度</div></div>
+    <div class="stat"><div class="val">3.61%</div><div class="lbl">SOFR利率
+(6月3日)</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">歷史新高</div><div class="lbl">企業及家庭
+外幣存款</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">中資銀行獲准上調境內美元存款利率 — 為強勢人民幣降溫</div>
+    <p>知情人士透露，中國近期允許部分中資銀行（包括國有大行）將企業客戶的境內美元存款利率上調至 <span style="color:#fff;font-weight:700">SOFR 水平上方</span>，最新 SOFR 報價為 <span style="color:#fff;font-weight:700">3.61%</span>（6月3日）。此舉意味著這些銀行不再受 <span style="color:#fff;font-weight:700">2023年人民幣貶值時期</span>引入的美元存款利率上限約束——當年的上限旨在減少企業購匯、為人民幣提供支撐。如今監管目標逆轉：人民幣今年迄今對美元已升值逾 <span style="color:#fff;font-weight:700">3%</span>，是亞洲表現最佳的貨幣，出口高增長持續推動外幣存款攀升至歷史新高。提高境內美元利率的吸引力，有助於企業增持美元存款，從而<span style="color:#fff;font-weight:700">減輕結匯對人民幣形成的升值壓力</span>。至少三家已收到通知的銀行尚未開始執行新利率，政策落地仍在初期。</p>
+    <div class="data-point">SOFR利率：<span style="color:#fff;font-weight:700">3.61%</span>（6/3）| 人民幣YTD升幅：<span style="color:#fff;font-weight:700">逾3%</span>（亞洲最佳）| 存款上限引入時間：<span style="color:#fff;font-weight:700">2023年貶值期</span> &nbsp;|&nbsp; 外幣存款：<span style="color:#fff;font-weight:700">創歷史新高</span></div>
+    <div class="implication"><div class="label">投資啟示</div>監管意圖明確：抑制人民幣過快升值。短期人民幣單邊升值空間受限，<span style="color:#fff;font-weight:700">減持人民幣升值押注、考慮做多美元/在岸利差套利</span>。出口商外匯套保需求升溫，匯率彈性將逐步提高。</div>
+  </div>
+</div>
+
+<div class="section" id="trade">
+  <h2><span class="tag tag-trade">外貿</span> AI需求壓過能源衝擊，出口超預期</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--green)">+19.4%</div><div class="lbl">5月出口年增率
+(預期15.0%)</div></div>
+    <div class="stat"><div class="val" style="color:var(--green)">1,050億</div><div class="lbl">5月貿易順差
+美元(前值850億)</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">51.8</div><div class="lbl">RatingDog製造業PMI
+(前值52.2)</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">中國外貿穩健成長 — AI硬體需求抵銷中東能源衝擊</div>
+    <p>中國 5 月進出口成長雙雙超乎預期，顯示對 <span style="color:#fff;font-weight:700">AI 硬體</span>的旺盛需求持續抵消中東能源衝擊的負面影響。出口年增率連續第二個月加快，從 4 月的 <span style="color:#fff;font-weight:700">14.1%</span> 升至 <span style="color:#fff;font-weight:700">19.4%</span>，遠高於普遍預期的 15.0%。其中對美出口在低基數效應下暴增 <span style="color:#fff;font-weight:700">35.6%</span>——去年 5 月美方將關稅推升至畸高後，對美出口曾驟跌 34.5%。進口年增 <span style="color:#fff;font-weight:700">27.4%</span>，5 月貿易順差擴大至 <span style="color:#fff;font-weight:700">1,050 億美元</span>（4 月為 850 億）。這份數據緩解了外界對伊朗戰爭拖累中國出口引擎的擔憂，凸顯全球科技週期與貿易流動之間日益緊密的連結。不過成長部分源於物價上漲與去年關稅休戰前的低基數，並非全然反映需求真實強度。</p>
+    <div class="data-point">5月出口：<span style="color:#fff;font-weight:700">+19.4%</span>（4月+14.1%）| 對美出口：<span style="color:#fff;font-weight:700">+35.6%</span> &nbsp;|&nbsp; 進口：<span style="color:#fff;font-weight:700">+27.4%</span> &nbsp;|&nbsp; 貿易順差：<span style="color:#fff;font-weight:700">$1,050億</span> &nbsp;|&nbsp; AI硬體為核心拉動力</div>
+    <div class="implication"><div class="label">投資啟示</div>出口韌性強於市場定價，但低基數效應將在下半年消退。<span style="color:#fff;font-weight:700">做多 AI 供應鏈相關出口板塊</span>；警惕 RatingDog PMI（51.8）與新出口訂單回落預示的 5 月出口增速放緩。</div>
+  </div>
+  <div class="article">
+    <div class="article-title">RatingDog製造業PMI回落 — 預示5月出口動能減弱</div>
+    <p>5 月 RatingDog 中國製造業 PMI 從 4 月的 <span style="color:#fff;font-weight:700">52.2</span> 降至 <span style="color:#fff;font-weight:700">51.8</span>，雖仍處擴張區間，但擴張速度放緩，強化了官方 PMI 傳遞的訊息：製造業動能減弱，工作天數減少與外部需求走軟是主因。讀數仍高於普遍預期及彭博經濟研究預測的 51.3。下滑主要受<span style="color:#fff;font-weight:700">生產與新訂單</span>拖累，反映五一長假擾動；與官方 PMI 一致，<span style="color:#fff;font-weight:700">新出口訂單顯著回落</span>是新訂單分項走弱的關鍵驅動。價格分項顯示伊朗戰爭引發的能源衝擊略有緩解。作為側重出口企業的調查，該指數印證了其他早期數據——每周港口數據顯示出口雖高於去年同期，但增速可能較 4 月放緩。歐元區製造業 PMI 今年首次下滑、日本 PMI 回落，均指向外部需求轉弱。</p>
+    <div class="data-point">5月PMI：<span style="color:#fff;font-weight:700">51.8</span>（4月52.2）| 彭博預測：<span style="color:#fff;font-weight:700">51.3</span> &nbsp;|&nbsp; 拖累項：<span style="color:#fff;font-weight:700">生產、新出口訂單</span> &nbsp;|&nbsp; 外部訊號：<span style="color:#fff;font-weight:700">歐元區PMI首降、日本PMI回落</span></div>
+    <div class="implication"><div class="label">投資啟示</div>出口擴張動能正在見頂。儘管 5 月貿易數據亮眼，前瞻指標偏弱，<span style="color:#fff;font-weight:700">對下半年出口維持謹慎、避免追高週期性出口股</span>。</div>
+  </div>
+</div>
+
+<div class="section" id="tech-pivot">
+  <h2><span class="tag tag-misc">科技轉型</span> 從地產到創新：就業的贏家與輸家</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--green)">5,000萬</div><div class="lbl">科技產業新增就業
+2021-2030</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">2,500萬</div><div class="lbl">房地產業
+流失就業</div></div>
+    <div class="stat"><div class="val" style="color:var(--green)">23%</div><div class="lbl">高技術+綠色產業
+2030年GDP佔比</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">習近平科技轉向重塑成長模式 — 創造就業贏家與輸家</div>
+    <p>從探索先進晶片製造替代路徑，到對頂尖 AI 人才實施出境管理，北京迫切想在全球科技競賽中迎頭趕上。經濟從房地產驅動轉向創新引領，正在整個經濟體系中造就贏家與輸家。彭博經濟研究估算，<span style="color:#fff;font-weight:700">2021–2030 年科技驅動產業將創造約 5,000 萬個新就業</span>（相當於年度城鎮就業的 10%），接近同期房地產業預計 <span style="color:#fff;font-weight:700">2,500 萬失業人口</span>的兩倍。到 2030 年，高技術與綠色產業佔 GDP 比重將升至 <span style="color:#fff;font-weight:700">23%</span>（房地產降至 13%）。然而隱憂在於<span style="color:#fff;font-weight:700">技能錯配</span>：高技術與綠色產業勞動密集度低於房地產，若需求一比一從住房轉向高技術，整體就業反而<span style="color:#fff;font-weight:700">淨減少約 40 萬個</span>。傳統經濟勞工難以無縫轉型，恐引發結構性失業、加劇收入不確定性、拖累消費信心。</p>
+    <div class="data-point">新增科技就業：<span style="color:#fff;font-weight:700">5,000萬</span>（2021-30）| 地產流失：<span style="color:#fff;font-weight:700">2,500萬</span> &nbsp;|&nbsp; 高技術+綠色GDP佔比：<span style="color:#fff;font-weight:700">17%→23%</span> &nbsp;|&nbsp; 等額轉移淨效應：<span style="color:#fff;font-weight:700">-40萬</span> &nbsp;|&nbsp; 年均新增科技崗位：<span style="color:#fff;font-weight:700">390萬</span></div>
+    <div class="implication"><div class="label">投資啟示</div>中國成長引擎的結構性切換已不可逆。<span style="color:#fff;font-weight:700">長線布局「新三樣」（EV、鋰電、光伏）與IT設備服務</span>；但技能錯配將壓制消費復甦，<span style="color:#fff;font-weight:700">對內需消費股保持選擇性</span>。</div>
+  </div>
+</div>
+
+<div class="section" id="geopolitics">
+  <h2><span class="tag tag-geo">地緣政治</span> 五角大樓擴容1260H清單，緩和局勢受考驗</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--orange)">1260H</div><div class="lbl">涉軍企業清單
+2月發布後曾撤回</div></div>
+    <div class="stat"><div class="val">2026/2月</div><div class="lbl">中國AI模型詞元調用
+超越美國模型</div></div>
+    <div class="stat"><div class="val">未入列</div><div class="lbl">DeepSeek
+暫不在清單上</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">五角大樓擴容1260H涉軍清單 — 中美緩和面臨考驗但破裂風險有限</div>
+    <p>五角大樓將<span style="color:#fff;font-weight:700">百度、阿里巴巴、比亞迪</span>等中國大型科技公司列入「涉軍企業」清單，凸顯中美關係的持續摩擦。列入清單有損企業聲譽，可能降低美企合作意願，但其嚴厲程度<span style="color:#fff;font-weight:700">不及制裁</span>——相關公司仍可在美國市場運營與銷售，因此維繫中美脆弱穩定的局面遭破壞的可能性不大。所有新增企業都曾在<span style="color:#fff;font-weight:700">今年 2 月</span>首次出現在清單上，但發布後旋即被撤下，疑為避免影響川普訪華前的敏感談判。值得注意的是，<span style="color:#fff;font-weight:700">長鑫存儲（CXMT）與長江存儲（YMTC）</span>因全球記憶體短缺被重新加回——PC 製造商曾探索將其作為非美市場的備選記憶體來源。OpenRouter 數據顯示，<span style="color:#fff;font-weight:700">2026 年 2 月中國 AI 模型詞元調用量已超越美國模型</span>且差距持續擴大。市場關注的 <span style="color:#fff;font-weight:700">DeepSeek 並未入列</span>，顯示本批主要針對大型平台與工業企業。</p>
+    <div class="data-point">新增企業：<span style="color:#fff;font-weight:700">百度、阿里、比亞迪、CXMT、YMTC</span> &nbsp;|&nbsp; 性質：<span style="color:#fff;font-weight:700">非制裁，可繼續經營</span> &nbsp;|&nbsp; 清單反覆：<span style="color:#fff;font-weight:700">2月發布→撤回→重發</span> &nbsp;|&nbsp; 中國AI模型詞元：<span style="color:#fff;font-weight:700">2/2026超越美國</span> &nbsp;|&nbsp; DeepSeek：<span style="color:#fff;font-weight:700">未入列</span></div>
+    <div class="implication"><div class="label">投資啟示</div>中美科技脫鉤持續推進但不至於失控。<span style="color:#fff;font-weight:700">規避高度依賴美國國防/政府合同的中國科技供應鏈標的</span>；中國記憶體（CXMT/YMTC）在短缺週期中議價力上升，仍是結構性受益者。</div>
+  </div>
+</div>
+
+<div class="section" id="policy-macro">
+  <h2><span class="tag tag-policy">政策與宏觀</span> 峰會穩關係、央行續寬鬆、再通膨啟動</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--green)">2×25bp</div><div class="lbl">預計年內降準
++2×10bp降息</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">2.8%</div><div class="lbl">全年PPI預測
+(4月時為1.8%)</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">16.3%</div><div class="lbl">4月青年失業率
+(畢業季恐跳升)</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">中美元首會晤穩定關係 — 但對中國成長提振有限</div>
+    <p>川普與習近平的會晤意義重大，雙方就廣泛議題達成協議，特別是同意成立<span style="color:#fff;font-weight:700">貿易理事會與投資理事會</span>，標誌世界兩大經濟體關係顯著趨穩。然而對中國經濟成長的短期提振可能有限：中國經濟在 4 月再度走弱，投資萎縮、消費疲軟、工業生產放緩超預期。第二季初財政支出動能減弱後，近期領先指標顯示政策制定者已<span style="color:#fff;font-weight:700">重新轉向支持成長</span>——5 月 PMI 反映政府主導的支持措施重新成為核心力量，建築業活動打破季節性放緩。但歷史經驗表明，五一長假帶動的消費往往在次月逆轉，缺乏持久需求刺激。中美「脫鉤」更像是「蛻變」：科技脫鉤是現實且快速推進，但金融與間接貿易的相互依存只是變得更隱蔽。</p>
+    <div class="data-point">峰會成果：<span style="color:#fff;font-weight:700">貿易理事會+投資理事會</span> &nbsp;|&nbsp; 4月經濟：<span style="color:#fff;font-weight:700">投資萎縮、消費疲軟</span> &nbsp;|&nbsp; 政策轉向：<span style="color:#fff;font-weight:700">財政重新發力</span> &nbsp;|&nbsp; 中美關係：<span style="color:#fff;font-weight:700">脫鉤＝蛻變，依存更隱蔽</span></div>
+    <div class="implication"><div class="label">投資啟示</div>峰會降低尾部風險但非成長催化劑。<span style="color:#fff;font-weight:700">對中國股市維持中性、聚焦政策受益的基建與科技板塊</span>；假期消費反彈不可持續，避免追逐內需復甦交易。</div>
+  </div>
+  <div class="article">
+    <div class="article-title">央行續寬鬆但不倉促，再通膨悄然啟動</div>
+    <p>中國央行重申繼續實施<span style="color:#fff;font-weight:700">適度寬鬆</span>的貨幣政策，呼應 4 月政治局會議精神。彭博經濟研究預計今年央行將實施 <span style="color:#fff;font-weight:700">兩次 25 個基點降準與兩次 10 個基點降息</span>，並可能透過 MLF、國債逆回購或 PSL 注入流動性以替代降準。鑑於外部不確定性與國內流動性充裕，短期央行料保持觀望、不會倉促行動。通膨面，4 月 PPI 與 CPI 數據強於預期，意味著 <span style="color:#fff;font-weight:700">GDP 平減指數有望在第二季終結連續 12 個季度的下滑</span>，標誌經濟轉向再通膨——主要由能源衝擊推升 PPI，而非需求帶動。彭博將全年 PPI 預測從 1.8% <span style="color:#fff;font-weight:700">上調至 2.8%</span>，CPI 從 0.8% 上調至 <span style="color:#fff;font-weight:700">1.0%</span>。勞動市場方面，4 月城鎮失業率回落至 5.2%、青年失業率降至 <span style="color:#fff;font-weight:700">16.3%</span>，但 6 月畢業季恐再度跳升，新畢業生還須與 AI 競爭崗位。</p>
+    <div class="data-point">預計寬鬆：<span style="color:#fff;font-weight:700">2×25bp降準 + 2×10bp降息</span> &nbsp;|&nbsp; PPI預測：<span style="color:#fff;font-weight:700">1.8%→2.8%</span> &nbsp;|&nbsp; CPI預測：<span style="color:#fff;font-weight:700">0.8%→1.0%</span> &nbsp;|&nbsp; GDP平減指數：<span style="color:#fff;font-weight:700">有望結束12季下滑</span> &nbsp;|&nbsp; 青年失業率：<span style="color:#fff;font-weight:700">16.3%（6月恐跳升）</span></div>
+    <div class="implication"><div class="label">投資啟示</div>再通膨由供給（能源）而非需求驅動，質量偏弱。<span style="color:#fff;font-weight:700">做多受惠於 PPI 回升的上游工業與資源股</span>；央行降準降息路徑明確，<span style="color:#fff;font-weight:700">債市偏多但漸進</span>，留意畢業季就業壓力對消費的拖累。</div>
+  </div>
+</div>
+
+<div class="callout" id="takeaways">
+  <div class="callout-title">基金經理人重點摘要</div>
+  <ul>
+    <li><strong>人民幣：</strong>今年升值逾3%領跑亞洲，監管鬆綁境內美元存款利率（SOFR 3.61%上方）以抑制升值。減持人民幣單邊升值押注。</li>
+    <li><strong>外貿：</strong>5月出口+19.4%超預期，AI硬體需求壓過能源衝擊，順差擴至1,050億美元。但RatingDog PMI回落至51.8、低基數消退，下半年出口動能將放緩。</li>
+    <li><strong>科技轉型：</strong>習近平科技轉向2030年前淨創5,000萬就業、高技術+綠色佔GDP 23%。長線布局「新三樣」與IT設備，但技能錯配壓制消費。</li>
+    <li><strong>地緣政治：</strong>五角大樓1260H清單擴容（百度、阿里、比亞迪、CXMT、YMTC），非制裁但摩擦持續。規避依賴美國國防合同的中國科技標的。</li>
+    <li><strong>政策：</strong>中美峰會穩關係但不提振成長；央行預計2次降準+2次降息，做多前端利率。</li>
+    <li><strong>通膨：</strong>PPI預測上調至2.8%、GDP平減指數料結束12季下滑，再通膨由能源供給驅動。做多上游工業與資源股。</li>
+  </ul>
+</div>
+
+<div class="nav-links">
+  <span><a href="newsletter_89_valuations.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="footer">
+  彭博研究摘要 | 僅供教學與討論用途 | 2026年6月11日<br>
+  資料來源：Bloomberg Intelligence, Bloomberg Economics, Bloomberg News
+</div>
+
+</body>
+</html>

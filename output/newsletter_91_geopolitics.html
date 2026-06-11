@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>彭博研究摘要 #91 — 戰火重塑全球格局：中東、俄烏與台海三線風險</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --accent: #58a6ff;
+          --green: #3fb950; --red: #f85149; --yellow: #d29922; --text: #c9d1d9; --muted: #8b949e;
+          --orange: #f0883e; --purple: #bc8cff; --cyan: #39d2c0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans TC', 'Microsoft JhengHei', Helvetica, Arial, sans-serif; line-height: 1.7; padding: 20px; max-width: 860px; margin: 0 auto; }
+  h1 { color: #fff; font-size: 1.7em; margin-bottom: 4px; }
+  .subtitle { color: var(--muted); font-size: 0.9em; margin-bottom: 8px; }
+  .issue-badge { display: inline-block; background: rgba(88,166,255,0.15); color: var(--accent); padding: 3px 10px; border-radius: 12px; font-size: 0.8em; font-weight: 600; margin-bottom: 20px; }
+  .tag { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 0.72em; font-weight: 600; margin-right: 4px; }
+  .tag-rates { background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-china { background: rgba(240,136,62,0.15); color: var(--orange); }
+  .tag-japan { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-geo   { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-oil   { background: rgba(210,153,34,0.15); color: var(--yellow); }
+  .tag-trade { background: rgba(210,153,34,0.15); color: var(--yellow); }
+  .tag-growth{ background: rgba(63,185,80,0.15); color: var(--green); }
+  .tag-metals{ background: rgba(188,140,255,0.15); color: var(--purple); }
+  .tag-infl  { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-policy{ background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-val   { background: rgba(63,185,80,0.15); color: var(--green); }
+  .tag-vol   { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-semi  { background: rgba(57,210,192,0.15); color: var(--cyan); }
+  .tag-credit{ background: rgba(188,140,255,0.15); color: var(--purple); }
+  .tag-space { background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-misc  { background: rgba(139,148,158,0.15); color: var(--muted); }
+  .section { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 16px; }
+  .section h2 { color: #fff; font-size: 1.15em; margin-bottom: 12px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+  .section h3 { color: var(--accent); font-size: 0.95em; margin: 14px 0 6px; }
+  .article { margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .article:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .article-title { color: #fff; font-weight: 700; font-size: 0.95em; margin-bottom: 4px; }
+  .article-title-cn { color: var(--muted); font-size: 0.85em; margin-bottom: 8px; }
+  .article p { font-size: 0.9em; margin: 6px 0; }
+  .data-point { background: rgba(255,255,255,0.03); padding: 8px 12px; border-radius: 6px; margin: 8px 0; font-size: 0.85em; }
+  .data-point .num { color: #fff; font-weight: 700; }
+  .implication { background: rgba(88,166,255,0.06); border-left: 3px solid var(--accent); padding: 10px 14px; margin: 10px 0; border-radius: 0 6px 6px 0; font-size: 0.88em; }
+  .implication .label { color: var(--accent); font-weight: 700; font-size: 0.8em; text-transform: uppercase; margin-bottom: 4px; }
+  .callout { background: rgba(210,153,34,0.08); border: 1px solid rgba(210,153,34,0.3); border-radius: 6px; padding: 16px; margin: 16px 0; }
+  .callout-title { color: var(--yellow); font-weight: 700; font-size: 0.95em; margin-bottom: 8px; }
+  .callout ul { padding-left: 18px; }
+  .callout li { margin: 4px 0; font-size: 0.88em; }
+  ul { padding-left: 18px; }
+  li { margin: 3px 0; font-size: 0.88em; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(255,255,255,0.03); padding: 12px; border-radius: 6px; text-align: center; }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: #fff; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
+  .toc { background: rgba(88,166,255,0.05); border: 1px solid rgba(88,166,255,0.2); border-radius: 8px; padding: 16px 20px; margin-bottom: 20px; }
+  .toc-title { color: var(--accent); font-weight: 700; font-size: 0.9em; margin-bottom: 8px; }
+  .toc a { color: var(--accent); text-decoration: none; font-size: 0.88em; }
+  .toc a:hover { text-decoration: underline; }
+  .toc ol { padding-left: 20px; }
+  .toc li { margin: 4px 0; }
+  .nav-links { display: flex; justify-content: space-between; margin: 20px 0; font-size: 0.85em; }
+  .nav-links a { color: var(--accent); text-decoration: none; }
+  .nav-links a:hover { text-decoration: underline; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(255,255,255,0.03); padding: 12px; border-radius: 6px; text-align: center; }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: #fff; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
+  .footer { text-align: center; color: var(--muted); font-size: 0.75em; margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--border); }
+</style>
+<script>if(window.self===window.top&&sessionStorage.getItem("student_auth")!=="1"){document.body.innerHTML="";window.location.replace("student.html");}</script>
+</head>
+<body>
+
+<h1>彭博研究摘要</h1>
+<p class="subtitle">第91期 | 戰火重塑全球格局：中東、俄烏與台海三線風險</p>
+<span class="issue-badge">2026年六月中旬更新</span>
+
+<div class="nav-links">
+  <span><a href="newsletter_90_china.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="toc">
+  <div class="toc-title">目錄</div>
+  <ol>
+    <li><a href="#middle-east">中東 停火脆弱，油價懸於一線</a></li>
+    <li><a href="#russia-ukraine">俄烏與高加索 春季攻勢熄火，影響力鬆動</a></li>
+    <li><a href="#taiwan-china">台海與東北亞 十兆美元的戰爭代價</a></li>
+    <li><a href="#bitcoin-risk">加密資產 避險神話破滅，淪為風險資產</a></li>
+    <li><a href="#takeaways">基金經理人重點摘要</a></li>
+  </ol>
+</div>
+
+<div class="section" id="middle-east">
+  <h2><span class="tag tag-misc">中東</span> 停火脆弱，油價懸於一線</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--red)">14,418</div><div class="lbl">川普任內軍事打擊次數
+（拜登四年僅555次）</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">$95-105</div><div class="lbl">布蘭特油價
+基本情境區間</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">$110</div><div class="lbl">衝突再升級
+油價目標</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">意誌之戰：新一輪美伊交火考驗停火協議</div>
+    <p>美伊停火協議並未失效，但已進入「不戰不和」的新常態。6月8日一架伊朗無人機在阿曼近海擊落美軍阿帕契直升機後，美國展開<span style="color:#fff;font-weight:700">三輪</span>報復打擊，目標從軍事設施擴大至南部<span style="color:#fff;font-weight:700">民用水利基礎設施</span>，伊朗則以飛彈反擊美國在約旦、巴林、科威特的基地。雙方都無意重啟高烈度戰爭：川普的核心目標是恢復<span style="color:#fff;font-weight:700">霍爾木茲海峽</span>通航、並在中期選舉前壓低油價；伊朗則聚焦政權存續與威懾力重建。目前戰鬥強度仍低於4月8日之前的水準，但這場零星升級的暴力循環短期內難以收場，每一輪交火都讓最終談判變得更困難。</p>
+    <div class="data-point">美方報復打擊：<span style="color:#fff;font-weight:700">三輪</span> &nbsp;|&nbsp; 衝突烈度：<span style="color:#fff;font-weight:700">仍低於4/8之前</span> &nbsp;|&nbsp; 川普核心訴求：<span style="color:#fff;font-weight:700">霍爾木茲通航＋壓低油價</span> &nbsp;|&nbsp; 伊朗目標：<span style="color:#fff;font-weight:700">政權存續＋解除制裁</span></div>
+    <div class="implication"><div class="label">投資啟示</div>停火脆弱但不會破裂，油價將在 <span style="color:#fff;font-weight:700">$95-105</span> 區間震盪。任何霍爾木茲封鎖傳聞都會觸發跳漲 — <span style="color:#fff;font-weight:700">逢低配置能源多頭與原油Call作為尾部對沖</span>。</div>
+  </div>
+  <div class="article">
+    <div class="article-title">14,418次打擊：武力已成川普的首選外交工具</div>
+    <p>川普「以實力求和平」的信條，正演變為近乎常態化的軍事行動。重返白宮以來，川普已授權至少 <span style="color:#fff;font-weight:700">14,418次</span>跨中東、非洲與西半球的軍事打擊，相較拜登四年任期的 <span style="color:#fff;font-weight:700">555次</span>呈數量級暴增。打擊範圍涵蓋葉門胡塞武裝、伊拉克與敘利亞的ISIS目標、加勒比海與東太平洋的販毒網絡，以及索馬利亞與奈及利亞的武裝團體。對市場而言，這意味著地緣政治風險不會因任何單一停火而消退 — 航運路線、能源基礎設施與供應鏈持續暴露於多區域風險之下。政府對拉丁美洲（古巴、委內瑞拉）的關注升溫，更將衝突風險推近美國本土。</p>
+    <div class="data-point">川普任內打擊：<span style="color:#fff;font-weight:700">14,418次</span> &nbsp;|&nbsp; 拜登四年：<span style="color:#fff;font-weight:700">555次</span> &nbsp;|&nbsp; 涉及戰區：<span style="color:#fff;font-weight:700">中東、非洲、西半球多線並進</span> &nbsp;|&nbsp; 新興熱點：<span style="color:#fff;font-weight:700">拉美（古巴、委內瑞拉）</span></div>
+    <div class="implication"><div class="label">投資啟示</div>地緣風險溢價結構性上移，不會隨單一停火消退。<span style="color:#fff;font-weight:700">維持防務、能源板塊超配，並透過VIX/黃金保留常態化尾部對沖</span>。</div>
+  </div>
+</div>
+
+<div class="section" id="russia-ukraine">
+  <h2><span class="tag tag-misc">俄烏與高加索</span> 春季攻勢熄火，影響力鬆動</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--green)">14平方公里</div><div class="lbl">俄軍5月推進
+（較4月暴跌90%）</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">+37%</div><div class="lbl">俄軍前線突擊
+次數增加</div></div>
+    <div class="stat"><div class="val">~1/3</div><div class="lbl">俄羅斯佔亞美尼亞
+貿易總額比重</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">代價高昂的春季攻勢陷入停滯</div>
+    <p>俄羅斯5月的春季攻勢驟然熄火，全月僅推進 <span style="color:#fff;font-weight:700">14平方公里</span>，較4月本已疲弱的戰果再暴跌 <span style="color:#fff;font-weight:700">90%</span>，創2023年以來單月最弱territorial推進。停滯並非缺乏嘗試 — 俄軍前線突擊次數反而激增 <span style="color:#fff;font-weight:700">37%</span>，但難以將局部突破轉化為實際佔領。烏克蘭沿線成功反攻，奪回扎波羅熱以南30公里的戰略小鎮Stepnohirsk。關鍵變數是烏克蘭的分層無人機壓制：廉價FPV無人機封鎖前線機動，中程打擊無人機則瞄準後方50-180公里的彈藥庫與後勤節點，並持續打擊俄羅斯石油部門以削弱其戰爭財政。儘管如此，普丁對攻佔頓巴斯仍存執念，2026年底前停火或政治解決的可能性偏低。</p>
+    <div class="data-point">5月推進：<span style="color:#fff;font-weight:700">14平方公里（-90%）</span> &nbsp;|&nbsp; 前線突擊：<span style="color:#fff;font-weight:700">+37%</span> &nbsp;|&nbsp; 烏軍戰果：<span style="color:#fff;font-weight:700">收復Stepnohirsk</span> &nbsp;|&nbsp; 停火展望：<span style="color:#fff;font-weight:700">2026年底前難達成</span></div>
+    <div class="implication"><div class="label">投資啟示</div>戰事陷入消耗僵局，烏軍對俄煉油設施的打擊持續壓制俄油供給。<span style="color:#fff;font-weight:700">留意俄羅斯能源出口擾動對油價的間歇性支撐</span>。</div>
+  </div>
+  <div class="article">
+    <div class="article-title">亞美尼亞的「烏克蘭時刻」？尚未到來</div>
+    <p>亞美尼亞向歐盟靠攏，引發莫斯科以貿易與天然氣施壓 — 劇情與烏克蘭似曾相識，但結局可能大不相同。與烏克蘭不同，亞美尼亞<span style="color:#fff;font-weight:700">不與俄羅斯接壤</span>，莫斯科僅剩經濟槓桿。俄羅斯佔亞美尼亞貿易總額約 <span style="color:#fff;font-weight:700">三分之一</span>，並供應其約<span style="color:#fff;font-weight:700">一半</span>的能源消費（天然氣），表面上施壓籌碼充足，趕在6月7日大選前限制亞美尼亞水果、酒類進口並威脅調漲氣價。但2022年以來，亞美尼亞已成為俄羅斯規避西方制裁的<span style="color:#fff;font-weight:700">轉運樞紐</span>，外貿額近乎翻三倍，使這份依賴變為相互需要。亞美尼亞的歐盟整合仍屬願景而非近期現實，若Pashinyan勝選，去俄化更可能是「緩慢離婚」而非驟然決裂。</p>
+    <div class="data-point">俄佔亞貿易比重：<span style="color:#fff;font-weight:700">~1/3</span> &nbsp;|&nbsp; 俄供能源比重：<span style="color:#fff;font-weight:700">~50%（天然氣）</span> &nbsp;|&nbsp; 亞美尼亞角色：<span style="color:#fff;font-weight:700">俄規避制裁轉運樞紐</span> &nbsp;|&nbsp; GDP規模：<span style="color:#fff;font-weight:700">約$300億</span> &nbsp;|&nbsp; 趨勢：<span style="color:#fff;font-weight:700">緩慢去俄化</span></div>
+    <div class="implication"><div class="label">投資啟示</div>莫斯科在後蘇聯空間的影響力持續鬆動，但屬漸進演變，<span style="color:#fff;font-weight:700">對市場無即時衝擊 — 視為俄羅斯戰略收縮的中長期信號</span>。</div>
+  </div>
+</div>
+
+<div class="section" id="taiwan-china">
+  <h2><span class="tag tag-misc">台海與東北亞</span> 十兆美元的戰爭代價</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--red)">$10兆</div><div class="lbl">台海衝突首年
+全球產出損失</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">~8%</div><div class="lbl">相當於
+全球GDP佔比</div></div>
+    <div class="stat"><div class="val">98%</div><div class="lbl">北韓對中國
+貿易依存度</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">台海衝突恐使全球損失10兆美元</div>
+    <p>彭博經濟研究最新測算顯示，若中美因台灣爆發戰爭，僅<span style="color:#fff;font-weight:700">首年</span>就將從全球產出中抹去約 <span style="color:#fff;font-weight:700">$10兆</span>，相當於全球GDP的 <span style="color:#fff;font-weight:700">8%</span>，衝擊規模超過全球金融危機或Covid-19疫情。台灣生產全球<span style="color:#fff;font-weight:700">多數</span>先進邏輯半導體，中國則主導成熟製程晶片、稀土與其他關鍵製造投入。衝突將同時切斷台灣最先進技術的供給，並引爆從智慧型手機、AI伺服器到汽車、機械與電力基礎設施的多重產業投入中斷。貿易制裁、航運要道受阻，加上與AI熱潮高度綁定的股市估值回吐，將使衝擊遠超交戰雙方 — 從德國、義大利到越南、印度，全球無一倖免。戰爭並非必然，但代價足以令人卻步。</p>
+    <div class="data-point">首年全球產出損失：<span style="color:#fff;font-weight:700">$10兆</span> &nbsp;|&nbsp; 佔全球GDP：<span style="color:#fff;font-weight:700">~8%</span> &nbsp;|&nbsp; 對比：<span style="color:#fff;font-weight:700">大於GFC與Covid衝擊</span> &nbsp;|&nbsp; 台灣角色：<span style="color:#fff;font-weight:700">全球多數先進邏輯晶片</span> &nbsp;|&nbsp; 中國角色：<span style="color:#fff;font-weight:700">成熟晶片＋稀土主導</span></div>
+    <div class="implication"><div class="label">投資啟示</div>台海是市場最大的尾部風險，與AI估值高度共振。<span style="color:#fff;font-weight:700">對半導體與AI集中曝險部位，以遠價外Put或波動率長倉建立廉價尾部對沖</span>。</div>
+  </div>
+  <div class="article">
+    <div class="article-title">習近平訪平壤：北京重申對北韓的主導權</div>
+    <p>在俄羅斯加深與金正恩政權往來之際，習近平<span style="color:#fff;font-weight:700">七年來首度</span>訪問平壤，意在重申北京對北韓的影響力，而非宣布新倡議。此行凸顯北韓對中國的持續依賴 — 中國佔其貿易約 <span style="color:#fff;font-weight:700">98%</span>，同時也反映東北亞日益複雜的地緣平衡：莫斯科與平壤走近，北京則出手鞏固其傳統勢力範圍。這場大國在朝鮮半島的微妙角力，與台海、中東並列為亞太地緣張力的關鍵節點，提醒投資人區域風險正多點並進、彼此交織。</p>
+    <div class="data-point">習近平訪平壤：<span style="color:#fff;font-weight:700">七年來首次</span> &nbsp;|&nbsp; 北韓對中貿易依存：<span style="color:#fff;font-weight:700">98%</span> &nbsp;|&nbsp; 戰略意涵：<span style="color:#fff;font-weight:700">抗衡俄朝走近、鞏固勢力範圍</span></div>
+    <div class="implication"><div class="label">投資啟示</div>東北亞大國博弈升溫，屬慢變量但加劇區域不確定性。<span style="color:#fff;font-weight:700">納入亞太地緣風險籃子持續監控，暫無需調整部位</span>。</div>
+  </div>
+</div>
+
+<div class="section" id="bitcoin-risk">
+  <h2><span class="tag tag-misc">加密資產</span> 避險神話破滅，淪為風險資產</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--red)">$63,000</div><div class="lbl">比特幣跌破
+（約為10月高點一半）</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">連6日</div><div class="lbl">比特幣
+連續下跌</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">-$63億</div><div class="lbl">Strategy(MSTR)
+持幣較市值折價</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">比特幣的痛何時結束？地緣風險成主因</div>
+    <p>比特幣在多重逆風下緩跌，週五連續第<span style="color:#fff;font-weight:700">六天</span>下挫並跌破 <span style="color:#fff;font-weight:700">$63,000</span>，約為去年10月高點的<span style="color:#fff;font-weight:700">一半</span>。彭博經濟研究模型指出，<span style="color:#fff;font-weight:700">宏觀與地緣政治不確定性</span>是本輪下跌的首要驅動 — 顯示比特幣正以「風險資產」之姿交易，受制於宏觀尾部風險，徹底削弱其避險敘事，儘管伊朗衝突初期一度展現穩定。結構性支撐也接連失效：Michael Saylor旗下Strategy披露賣出<span style="color:#fff;font-weight:700">32枚</span>比特幣（約$250萬），金額雖小卻打破「只囤不賣」的信條而重創信心。截至6月5日，Strategy市值$453億、持幣估值$516億，已轉為 <span style="color:#fff;font-weight:700">$63億的折價</span>。Google量子運算論文引發的盜竊與偽造交易疑慮，更添賣壓。歷史模式顯示，潛在底部或於2026年第四季成形。</p>
+    <div class="data-point">比特幣價位：<span style="color:#fff;font-weight:700">跌破$63,000（連6日）</span> &nbsp;|&nbsp; 距10月高點：<span style="color:#fff;font-weight:700">約腰斬</span> &nbsp;|&nbsp; 首要驅動：<span style="color:#fff;font-weight:700">宏觀／地緣不確定性</span> &nbsp;|&nbsp; MSTR持幣溢價：<span style="color:#fff;font-weight:700">轉為-$63億折價</span> &nbsp;|&nbsp; Saylor賣出：<span style="color:#fff;font-weight:700">32枚（$250萬）</span> &nbsp;|&nbsp; 潛在底部：<span style="color:#fff;font-weight:700">2026 Q4</span></div>
+    <div class="implication"><div class="label">投資啟示</div>比特幣已喪失避險屬性、與風險資產同向，無法對沖地緣尾部風險。<span style="color:#fff;font-weight:700">勿將加密貨幣計入避險籃子；底部或待Q4，現階段對沖優先選黃金與波動率</span>。</div>
+  </div>
+</div>
+
+<div class="callout" id="takeaways">
+  <div class="callout-title">基金經理人重點摘要</div>
+  <ul>
+    <li><strong>中東：</strong>美伊停火脆弱不破，進入「不戰不和」新常態。油價基本情境 $95-105，封鎖霍爾木茲傳聞即跳漲。逢低配置能源多頭＋原油Call尾部對沖。</li>
+    <li><strong>美國武力：</strong>川普任內已14,418次打擊（拜登僅555次），地緣風險溢價結構性上移，不隨單一停火消退。維持防務／能源超配。</li>
+    <li><strong>俄烏：</strong>俄軍5月僅推進14平方公里（-90%），陷消耗僵局，2026年底前難停火。烏軍打擊俄煉油廠間歇支撐油價。</li>
+    <li><strong>台海：</strong>衝突首年恐損全球產出 $10兆（佔GDP 8%，大於GFC與疫情），與AI估值高度共振。對半導體／AI曝險以遠價外Put建立廉價尾部對沖。</li>
+    <li><strong>東北亞：</strong>習七年來首訪平壤鞏固對北韓主導（佔其貿易98%），抗衡俄朝走近。慢變量，納入亞太風險籃子監控。</li>
+    <li><strong>加密資產：</strong>比特幣跌破$63,000（連6日、近腰斬），由地緣不確定性主導，避險敘事破滅、與風險資產同向。勿計入避險籃子，對沖優先黃金與波動率。</li>
+  </ul>
+</div>
+
+<div class="nav-links">
+  <span><a href="newsletter_90_china.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="footer">
+  彭博研究摘要 | 僅供教學與討論用途 | 2026年6月11日<br>
+  資料來源：Bloomberg Intelligence, Bloomberg Economics, Bloomberg News
+</div>
+
+</body>
+</html>

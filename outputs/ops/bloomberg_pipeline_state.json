@@ -1,6 +1,6 @@
 {
-  "lastRunAt": "2026-06-01T10:37:33+08:00",
-  "lastNewsletterNumber": 88,
+  "lastRunAt": "2026-06-11T23:29:17+08:00",
+  "lastNewsletterNumber": 97,
   "processedFiles": {
     "2026 Outlook Global Aluminum Producers #metals.pdf": {
       "processedAt": "2026-03-26T15:52:49+08:00",
@@ -4058,7 +4058,7 @@
         "policy",
         "geopolitics"
       ],
-      "newsletterNumber": null
+      "newsletterNumber": 94
     },
     "BI US China Summit Trade Progress Boeing Deals #trade #china.pdf": {
       "processedAt": "2026-06-01T10:37:14+08:00",
@@ -4212,7 +4212,7 @@
         "policy",
         "geopolitics"
       ],
-      "newsletterNumber": null
+      "newsletterNumber": 94
     },
     "Global Preview Putin Seeks Closer Ties With Xi #geopolitics #china.pdf": {
       "processedAt": "2026-06-01T10:37:27+08:00",
@@ -4371,6 +4371,435 @@
         "inflation"
       ],
       "newsletterNumber": 87
+    },
+    "BofA Hartnett Flow Show - Post-bubble Long Humiliation Short Hubris #valuations #policy #japan.pdf": {
+      "processedAt": "2026-06-11T23:28:21+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\BofA Hartnett Flow Show - Post-bubble Long Humiliation Short Hubris.md",
+      "topics": [
+        "valuations",
+        "policy",
+        "japan"
+      ],
+      "newsletterNumber": 89
+    },
+    "BofA Hartnett Flow Show - The Wealth Up Biz and World Cup Quiz #valuations #inflation #policy.pdf": {
+      "processedAt": "2026-06-11T23:28:24+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\BofA Hartnett Flow Show - The Wealth Up Biz and World Cup Quiz.md",
+      "topics": [
+        "valuations",
+        "inflation",
+        "policy"
+      ],
+      "newsletterNumber": 89
+    },
+    "BofA Systematic Flows Monitor - CTAs Buying European Equities Treasury Short-Covering #valuations #rates #volatility.pdf": {
+      "processedAt": "2026-06-11T23:28:30+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\BofA Systematic Flows Monitor - CTAs Buying European Equities Treasury Short-Covering.md",
+      "topics": [
+        "valuations",
+        "rates",
+        "volatility"
+      ],
+      "newsletterNumber": 89
+    },
+    "BofA Systematic Flows Monitor - Systematic Equity Unwinds Begin as Nasdaq Triggers Break #volatility #valuations #semiconductor.pdf": {
+      "processedAt": "2026-06-11T23:28:36+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\BofA Systematic Flows Monitor - Systematic Equity Unwinds Begin as Nasdaq Triggers Break.md",
+      "topics": [
+        "volatility",
+        "valuations",
+        "semiconductor"
+      ],
+      "newsletterNumber": null
+    },
+    "BofA US Semiconductors - Global Tech Conf Preview Top Debates #semiconductor #valuations #growth.pdf": {
+      "processedAt": "2026-06-11T23:28:44+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\BofA US Semiconductors - Global Tech Conf Preview Top Debates.md",
+      "topics": [
+        "semiconductor",
+        "valuations",
+        "growth"
+      ],
+      "newsletterNumber": 95
+    },
+    "Brent Put Spreads and Robusta Coffee Fences - Commodity Options #oil #volatility.pdf": {
+      "processedAt": "2026-06-11T23:28:44+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\Brent Put Spreads and Robusta Coffee Fences - Commodity Options.md",
+      "topics": [
+        "oil",
+        "volatility"
+      ],
+      "newsletterNumber": 94
+    },
+    "China Banks Allowed to Raise USD Deposit Rates to Ease Yuan Strength #china #rates.pdf": {
+      "processedAt": "2026-06-11T23:28:45+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\China Banks Allowed to Raise USD Deposit Rates to Ease Yuan Strength.md",
+      "topics": [
+        "china",
+        "rates"
+      ],
+      "newsletterNumber": 90
+    },
+    "China Insight Xis Tech Pivot Job Winners Losers #china #semiconductor #growth.pdf": {
+      "processedAt": "2026-06-11T23:28:45+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\China Insight Xis Tech Pivot Job Winners Losers.md",
+      "topics": [
+        "china",
+        "semiconductor",
+        "growth"
+      ],
+      "newsletterNumber": 90
+    },
+    "China RatingDog Manufacturing PMI Slips Signaling Slower May Exports #china #trade.pdf": {
+      "processedAt": "2026-06-11T23:28:45+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\China RatingDog Manufacturing PMI Slips Signaling Slower May Exports.md",
+      "topics": [
+        "china",
+        "trade"
+      ],
+      "newsletterNumber": 90
+    },
+    "China React RatingDog PMI Slip Signals Softer May Exports #china #growth #trade.pdf": {
+      "processedAt": "2026-06-11T23:28:46+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\China React RatingDog PMI Slip Signals Softer May Exports.md",
+      "topics": [
+        "china",
+        "growth",
+        "trade"
+      ],
+      "newsletterNumber": 90
+    },
+    "China Tech-Green Economic Shift Job Winners and Losers #china #growth.pdf": {
+      "processedAt": "2026-06-11T23:28:47+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\China Tech-Green Economic Shift Job Winners and Losers.md",
+      "topics": [
+        "china",
+        "growth"
+      ],
+      "newsletterNumber": 90
+    },
+    "China Trade Holds Up as AI Demand Offsets Energy Shock #china #trade.pdf": {
+      "processedAt": "2026-06-11T23:28:47+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\China Trade Holds Up as AI Demand Offsets Energy Shock.md",
+      "topics": [
+        "china",
+        "trade"
+      ],
+      "newsletterNumber": 90
+    },
+    "DUP GS US Equities Weekly Rundown May 29 2026 #valuations #growth.pdf": {
+      "processedAt": "2026-06-11T23:28:49+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\DUP GS US Equities Weekly Rundown May 29 2026.md",
+      "topics": [
+        "valuations",
+        "growth"
+      ],
+      "newsletterNumber": null
+    },
+    "DUP Surge in US Vacancies to Reduce Fed Job-Market Concerns #growth #rates.pdf": {
+      "processedAt": "2026-06-11T23:28:49+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\DUP Surge in US Vacancies to Reduce Fed Job-Market Concerns.md",
+      "topics": [
+        "growth",
+        "rates"
+      ],
+      "newsletterNumber": null
+    },
+    "DUP Week Ahead in Workflows ECB Apple Oracle CPI World Cup Rev1 #inflation #policy.pdf": {
+      "processedAt": "2026-06-11T23:28:50+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\DUP Week Ahead in Workflows ECB Apple Oracle CPI World Cup Rev1.md",
+      "topics": [
+        "inflation",
+        "policy"
+      ],
+      "newsletterNumber": null
+    },
+    "Euro Bulls Eyeing 1.20 Cannot Rely on CPI-Led Hawkish ECB #inflation #policy #oil.pdf": {
+      "processedAt": "2026-06-11T23:28:50+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\Euro Bulls Eyeing 1.20 Cannot Rely on CPI-Led Hawkish ECB.md",
+      "topics": [
+        "inflation",
+        "policy",
+        "oil"
+      ],
+      "newsletterNumber": 96
+    },
+    "Global Insight Armenia Russia Trade War Not Quite Ukraine #geopolitics #trade.pdf": {
+      "processedAt": "2026-06-11T23:28:51+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\Global Insight Armenia Russia Trade War Not Quite Ukraine.md",
+      "topics": [
+        "geopolitics",
+        "trade"
+      ],
+      "newsletterNumber": 91
+    },
+    "Global Insight Putins Costly Spring Ukraine Offensive Stalls #geopolitics.pdf": {
+      "processedAt": "2026-06-11T23:28:51+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\Global Insight Putins Costly Spring Ukraine Offensive Stalls.md",
+      "topics": [
+        "geopolitics"
+      ],
+      "newsletterNumber": 91
+    },
+    "Goldman Sachs Prime Services Weekly Positioning May 29 2026 #valuations #volatility.pdf": {
+      "processedAt": "2026-06-11T23:28:53+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\Goldman Sachs Prime Services Weekly Positioning May 29 2026.md",
+      "topics": [
+        "valuations",
+        "volatility"
+      ],
+      "newsletterNumber": 89
+    },
+    "GS Prime Services Weekly Report Jun 5 2026 #valuations #volatility.pdf": {
+      "processedAt": "2026-06-11T23:28:53+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\GS Prime Services Weekly Report Jun 5 2026.md",
+      "topics": [
+        "valuations",
+        "volatility"
+      ],
+      "newsletterNumber": 89
+    },
+    "GS US Equities Weekly Rundown June 5 2026 #valuations #rates.pdf": {
+      "processedAt": "2026-06-11T23:28:56+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\GS US Equities Weekly Rundown June 5 2026.md",
+      "topics": [
+        "valuations",
+        "rates"
+      ],
+      "newsletterNumber": 89
+    },
+    "GS US Equities Weekly Rundown May 29 2026 #valuations #growth.pdf": {
+      "processedAt": "2026-06-11T23:28:58+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\GS US Equities Weekly Rundown May 29 2026.md",
+      "topics": [
+        "valuations",
+        "growth"
+      ],
+      "newsletterNumber": 89
+    },
+    "HSBC Korea AI Supply Chain Tech Tour - Memory and Semi Equipment #semiconductor #china #growth.pdf": {
+      "processedAt": "2026-06-11T23:29:00+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\HSBC Korea AI Supply Chain Tech Tour - Memory and Semi Equipment.md",
+      "topics": [
+        "semiconductor",
+        "china",
+        "growth"
+      ],
+      "newsletterNumber": 95
+    },
+    "Introduction to Space Datacenters and Orbital Compute #space #semiconductor.pdf": {
+      "processedAt": "2026-06-11T23:29:03+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\Introduction to Space Datacenters and Orbital Compute.md",
+      "topics": [
+        "space",
+        "semiconductor"
+      ],
+      "newsletterNumber": 92
+    },
+    "Investors Assess Elon Musks Space Empire - Markets Daily #space #valuations.pdf": {
+      "processedAt": "2026-06-11T23:29:04+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\Investors Assess Elon Musks Space Empire - Markets Daily.md",
+      "topics": [
+        "space",
+        "valuations"
+      ],
+      "newsletterNumber": 92
+    },
+    "JAPAN INSIGHT BOJ Inflation Logic May Fuel More Inflation #japan #inflation #oil.pdf": {
+      "processedAt": "2026-06-11T23:29:04+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\JAPAN INSIGHT BOJ Inflation Logic May Fuel More Inflation.md",
+      "topics": [
+        "japan",
+        "inflation",
+        "oil"
+      ],
+      "newsletterNumber": 97
+    },
+    "JAPAN REACT Ueda Speech Tilts Hawkish June Hike More Likely #japan #policy #rates.pdf": {
+      "processedAt": "2026-06-11T23:29:04+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\JAPAN REACT Ueda Speech Tilts Hawkish June Hike More Likely.md",
+      "topics": [
+        "japan",
+        "policy",
+        "rates"
+      ],
+      "newsletterNumber": 97
+    },
+    "Jobs Report Foreshadows Solid US Income Growth #growth #rates.pdf": {
+      "processedAt": "2026-06-11T23:29:05+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\Jobs Report Foreshadows Solid US Income Growth.md",
+      "topics": [
+        "growth",
+        "rates"
+      ],
+      "newsletterNumber": 93
+    },
+    "Macro Man USDJPY Yield Spread Divergence Ahead of CPI #japan #rates #inflation.pdf": {
+      "processedAt": "2026-06-11T23:29:05+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\Macro Man USDJPY Yield Spread Divergence Ahead of CPI.md",
+      "topics": [
+        "japan",
+        "rates",
+        "inflation"
+      ],
+      "newsletterNumber": 97
+    },
+    "Many Reasons for Value to Keep Winning in Europe #valuations #inflation.pdf": {
+      "processedAt": "2026-06-11T23:29:05+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\Many Reasons for Value to Keep Winning in Europe.md",
+      "topics": [
+        "valuations",
+        "inflation"
+      ],
+      "newsletterNumber": 89
+    },
+    "Morgan Stanley Key Computex Takeaways - Agentic AI TSMC Capacity MediaTek #semiconductor #china #growth.pdf": {
+      "processedAt": "2026-06-11T23:29:07+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\Morgan Stanley Key Computex Takeaways - Agentic AI TSMC Capacity MediaTek.md",
+      "topics": [
+        "semiconductor",
+        "china",
+        "growth"
+      ],
+      "newsletterNumber": 95
+    },
+    "New Fed Chair Warsh Advisor Picks Signal Leadership Style #policy #rates.pdf": {
+      "processedAt": "2026-06-11T23:29:07+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\New Fed Chair Warsh Advisor Picks Signal Leadership Style.md",
+      "topics": [
+        "policy",
+        "rates"
+      ],
+      "newsletterNumber": null
+    },
+    "Pentagon Expands 1260H Military List Tests US-China Detente #china #geopolitics.pdf": {
+      "processedAt": "2026-06-11T23:29:08+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\Pentagon Expands 1260H Military List Tests US-China Detente.md",
+      "topics": [
+        "china",
+        "geopolitics"
+      ],
+      "newsletterNumber": 90
+    },
+    "SpaceX IPO Hedging Challenge for Wall Street #space #valuations.pdf": {
+      "processedAt": "2026-06-11T23:29:08+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\SpaceX IPO Hedging Challenge for Wall Street.md",
+      "topics": [
+        "space",
+        "valuations"
+      ],
+      "newsletterNumber": 92
+    },
+    "SpaceX IPO Pricing 4x Oversubscribed Amid Valuation Warnings #space #valuations.pdf": {
+      "processedAt": "2026-06-11T23:29:09+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\SpaceX IPO Pricing 4x Oversubscribed Amid Valuation Warnings.md",
+      "topics": [
+        "space",
+        "valuations"
+      ],
+      "newsletterNumber": 92
+    },
+    "Ten Trillion at Risk in a Taiwan Conflict - Fault Lines #geopolitics #china #semiconductor.pdf": {
+      "processedAt": "2026-06-11T23:29:09+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\Ten Trillion at Risk in a Taiwan Conflict - Fault Lines.md",
+      "topics": [
+        "geopolitics",
+        "china",
+        "semiconductor"
+      ],
+      "newsletterNumber": 91
+    },
+    "Trump-Xi Summit Stabilizes Ties But Limited Boost to China Growth #china #trade #growth.pdf": {
+      "processedAt": "2026-06-11T23:29:10+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\Trump-Xi Summit Stabilizes Ties But Limited Boost to China Growth.md",
+      "topics": [
+        "china",
+        "trade",
+        "growth"
+      ],
+      "newsletterNumber": 90
+    },
+    "Trumps 14418 Strikes Signal Force Is Go-To Tool - Fault Lines #geopolitics.pdf": {
+      "processedAt": "2026-06-11T23:29:11+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\Trumps 14418 Strikes Signal Force Is Go-To Tool - Fault Lines.md",
+      "topics": [
+        "geopolitics"
+      ],
+      "newsletterNumber": 91
+    },
+    "US Core CPI Set to Stay Mild as Services Spending Weakens #inflation #rates.pdf": {
+      "processedAt": "2026-06-11T23:29:12+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\US Core CPI Set to Stay Mild as Services Spending Weakens.md",
+      "topics": [
+        "inflation",
+        "rates"
+      ],
+      "newsletterNumber": 96
+    },
+    "US Data Preview Steady Jobs Growth Stable Unemployment #growth #rates.pdf": {
+      "processedAt": "2026-06-11T23:29:14+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\US Data Preview Steady Jobs Growth Stable Unemployment.md",
+      "topics": [
+        "growth",
+        "rates"
+      ],
+      "newsletterNumber": 93
+    },
+    "US May Jobs Growth Again Beats Expectations #growth #policy.pdf": {
+      "processedAt": "2026-06-11T23:29:15+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\US May Jobs Growth Again Beats Expectations.md",
+      "topics": [
+        "growth",
+        "policy"
+      ],
+      "newsletterNumber": 93
+    },
+    "US REACT Strong May Hiring Keeps Fed on Hold #growth #policy #inflation.pdf": {
+      "processedAt": "2026-06-11T23:29:15+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\US REACT Strong May Hiring Keeps Fed on Hold.md",
+      "topics": [
+        "growth",
+        "policy",
+        "inflation"
+      ],
+      "newsletterNumber": 93
+    },
+    "US-Iran Renewed Crossfire Tests Trump and Ceasefire #geopolitics #oil.pdf": {
+      "processedAt": "2026-06-11T23:29:16+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\US-Iran Renewed Crossfire Tests Trump and Ceasefire.md",
+      "topics": [
+        "geopolitics",
+        "oil"
+      ],
+      "newsletterNumber": 91
+    },
+    "Week Ahead in Workflows ECB Apple Oracle CPI World Cup #inflation #policy.pdf": {
+      "processedAt": "2026-06-11T23:29:16+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\Week Ahead in Workflows ECB Apple Oracle CPI World Cup.md",
+      "topics": [
+        "inflation",
+        "policy"
+      ],
+      "newsletterNumber": 96
+    },
+    "Weekly Macro Themes V11E17 Gold Downside EM Pivot #metals #inflation #valuations.pdf": {
+      "processedAt": "2026-06-11T23:29:17+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\Weekly Macro Themes V11E17 Gold Downside EM Pivot.md",
+      "topics": [
+        "metals",
+        "inflation",
+        "valuations"
+      ],
+      "newsletterNumber": null
+    },
+    "When Will Bitcoins Pain End - Watch These Charts #geopolitics #volatility.pdf": {
+      "processedAt": "2026-06-11T23:29:17+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\When Will Bitcoins Pain End - Watch These Charts.md",
+      "topics": [
+        "geopolitics",
+        "volatility"
+      ],
+      "newsletterNumber": 91
     }
   },
   "newsletters": {
@@ -5035,6 +5464,78 @@
       "topics": [
         "japan",
         "inflation"
+      ]
+    },
+    "89": {
+      "filename": "newsletter_89_valuations.html",
+      "generatedAt": "2026-06-11T23:33:14+08:00",
+      "articleCount": 8,
+      "topics": [
+        "valuations"
+      ]
+    },
+    "90": {
+      "filename": "newsletter_90_china.html",
+      "generatedAt": "2026-06-11T23:35:14+08:00",
+      "articleCount": 8,
+      "topics": [
+        "china"
+      ]
+    },
+    "91": {
+      "filename": "newsletter_91_geopolitics.html",
+      "generatedAt": "2026-06-11T23:37:18+08:00",
+      "articleCount": 6,
+      "topics": [
+        "geopolitics"
+      ]
+    },
+    "92": {
+      "filename": "newsletter_92_space.html",
+      "generatedAt": "2026-06-11T23:39:01+08:00",
+      "articleCount": 4,
+      "topics": [
+        "space"
+      ]
+    },
+    "93": {
+      "filename": "newsletter_93_growth.html",
+      "generatedAt": "2026-06-11T23:39:58+08:00",
+      "articleCount": 4,
+      "topics": [
+        "growth"
+      ]
+    },
+    "94": {
+      "filename": "newsletter_94_oil.html",
+      "generatedAt": "2026-06-11T23:42:23+08:00",
+      "articleCount": 3,
+      "topics": [
+        "oil"
+      ]
+    },
+    "95": {
+      "filename": "newsletter_95_semiconductor.html",
+      "generatedAt": "2026-06-11T23:43:33+08:00",
+      "articleCount": 3,
+      "topics": [
+        "semiconductor"
+      ]
+    },
+    "96": {
+      "filename": "newsletter_96_inflation.html",
+      "generatedAt": "2026-06-11T23:44:39+08:00",
+      "articleCount": 3,
+      "topics": [
+        "inflation"
+      ]
+    },
+    "97": {
+      "filename": "newsletter_97_japan.html",
+      "generatedAt": "2026-06-11T23:45:43+08:00",
+      "articleCount": 3,
+      "topics": [
+        "japan"
       ]
     }
   },

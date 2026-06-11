@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>彭博研究摘要 #89 — 泡沫晚期：通膨黏著與擁擠的多頭</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --accent: #58a6ff;
+          --green: #3fb950; --red: #f85149; --yellow: #d29922; --text: #c9d1d9; --muted: #8b949e;
+          --orange: #f0883e; --purple: #bc8cff; --cyan: #39d2c0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans TC', 'Microsoft JhengHei', Helvetica, Arial, sans-serif; line-height: 1.7; padding: 20px; max-width: 860px; margin: 0 auto; }
+  h1 { color: #fff; font-size: 1.7em; margin-bottom: 4px; }
+  .subtitle { color: var(--muted); font-size: 0.9em; margin-bottom: 8px; }
+  .issue-badge { display: inline-block; background: rgba(88,166,255,0.15); color: var(--accent); padding: 3px 10px; border-radius: 12px; font-size: 0.8em; font-weight: 600; margin-bottom: 20px; }
+  .tag { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 0.72em; font-weight: 600; margin-right: 4px; }
+  .tag-rates { background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-china { background: rgba(240,136,62,0.15); color: var(--orange); }
+  .tag-japan { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-geo   { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-oil   { background: rgba(210,153,34,0.15); color: var(--yellow); }
+  .tag-trade { background: rgba(210,153,34,0.15); color: var(--yellow); }
+  .tag-growth{ background: rgba(63,185,80,0.15); color: var(--green); }
+  .tag-metals{ background: rgba(188,140,255,0.15); color: var(--purple); }
+  .tag-infl  { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-policy{ background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-val   { background: rgba(63,185,80,0.15); color: var(--green); }
+  .tag-vol   { background: rgba(248,81,73,0.15); color: var(--red); }
+  .tag-semi  { background: rgba(57,210,192,0.15); color: var(--cyan); }
+  .tag-credit{ background: rgba(188,140,255,0.15); color: var(--purple); }
+  .tag-space { background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-misc  { background: rgba(139,148,158,0.15); color: var(--muted); }
+  .section { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 16px; }
+  .section h2 { color: #fff; font-size: 1.15em; margin-bottom: 12px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+  .section h3 { color: var(--accent); font-size: 0.95em; margin: 14px 0 6px; }
+  .article { margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .article:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .article-title { color: #fff; font-weight: 700; font-size: 0.95em; margin-bottom: 4px; }
+  .article-title-cn { color: var(--muted); font-size: 0.85em; margin-bottom: 8px; }
+  .article p { font-size: 0.9em; margin: 6px 0; }
+  .data-point { background: rgba(255,255,255,0.03); padding: 8px 12px; border-radius: 6px; margin: 8px 0; font-size: 0.85em; }
+  .data-point .num { color: #fff; font-weight: 700; }
+  .implication { background: rgba(88,166,255,0.06); border-left: 3px solid var(--accent); padding: 10px 14px; margin: 10px 0; border-radius: 0 6px 6px 0; font-size: 0.88em; }
+  .implication .label { color: var(--accent); font-weight: 700; font-size: 0.8em; text-transform: uppercase; margin-bottom: 4px; }
+  .callout { background: rgba(210,153,34,0.08); border: 1px solid rgba(210,153,34,0.3); border-radius: 6px; padding: 16px; margin: 16px 0; }
+  .callout-title { color: var(--yellow); font-weight: 700; font-size: 0.95em; margin-bottom: 8px; }
+  .callout ul { padding-left: 18px; }
+  .callout li { margin: 4px 0; font-size: 0.88em; }
+  ul { padding-left: 18px; }
+  li { margin: 3px 0; font-size: 0.88em; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(255,255,255,0.03); padding: 12px; border-radius: 6px; text-align: center; }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: #fff; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
+  .toc { background: rgba(88,166,255,0.05); border: 1px solid rgba(88,166,255,0.2); border-radius: 8px; padding: 16px 20px; margin-bottom: 20px; }
+  .toc-title { color: var(--accent); font-weight: 700; font-size: 0.9em; margin-bottom: 8px; }
+  .toc a { color: var(--accent); text-decoration: none; font-size: 0.88em; }
+  .toc a:hover { text-decoration: underline; }
+  .toc ol { padding-left: 20px; }
+  .toc li { margin: 4px 0; }
+  .nav-links { display: flex; justify-content: space-between; margin: 20px 0; font-size: 0.85em; }
+  .nav-links a { color: var(--accent); text-decoration: none; }
+  .nav-links a:hover { text-decoration: underline; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(255,255,255,0.03); padding: 12px; border-radius: 6px; text-align: center; }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: #fff; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
+  .footer { text-align: center; color: var(--muted); font-size: 0.75em; margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--border); }
+</style>
+<script>if(window.self===window.top&&sessionStorage.getItem("student_auth")!=="1"){document.body.innerHTML="";window.location.replace("student.html");}</script>
+</head>
+<body>
+
+<h1>彭博研究摘要</h1>
+<p class="subtitle">第89期 | 泡沫晚期：通膨黏著與擁擠的多頭</p>
+<span class="issue-badge">2026年六月中旬更新</span>
+
+<div class="nav-links">
+  <span><a href="newsletter_88_japan_inflation.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="toc">
+  <div class="toc-title">目錄</div>
+  <ol>
+    <li><a href="#bofa-flow-show">BofA 泡沫末期：做多卑微，做空狂妄</a></li>
+    <li><a href="#systematic-flows">資金流 槓桿衝頂，倉位擁擠</a></li>
+    <li><a href="#us-equities-rotation">美股 九連紅戛然 — NFP澆熄漲勢</a></li>
+    <li><a href="#europe-value">歐洲 歐洲價值股的再通膨順風</a></li>
+    <li><a href="#takeaways">基金經理人重點摘要</a></li>
+  </ol>
+</div>
+
+<div class="section" id="bofa-flow-show">
+  <h2><span class="tag tag-misc">BofA</span> 泡沫末期：做多卑微，做空狂妄</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--orange)">21檔</div><div class="lbl">標普創新高個股
+（僅佔4%）</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">46/68</div><div class="lbl">全球央行
+通膨超標</div></div>
+    <div class="stat"><div class="val" style="color:var(--green)">-45bps</div><div class="lbl">股市見頂後6個月
+10年期殖利率(中位數)</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">後泡沫劇本 — 做多卑微，做空狂妄</div>
+    <p>Hartnett警告市場已進入泡沫末期。標普雖創新高，但僅 <span style="color:#fff;font-weight:700">21檔</span> 個股(約佔SPX <span style="color:#fff;font-weight:700">4%</span>)同步刷新高點，與2000年3月網路泡沫頂部的20檔如出一轍；同時 <span style="color:#fff;font-weight:700">222檔</span> 標普成分股已較高點回落逾20%，<span style="color:#fff;font-weight:700">109檔</span> 跌逾40%，廣度極度惡化。YTD油價以 <span style="color:#fff;font-weight:700">+52.5%</span> 領跑、全球股市僅 +13.9%。降息(<span style="color:#fff;font-weight:700">31</span>)仍多於升息(<span style="color:#fff;font-weight:700">12</span>)，日韓實質政策利率為負，推升Nikkei與Kospi狂飆、日圓與韓元同步崩跌，交易員樂於搶跑泡沫，直到新任主席Warsh被迫收緊金融條件。歷史劇本(1929年以來)清晰：大頂之後做多債券、做多被市場羞辱的防禦股。</p>
+    <div class="data-point">標普創新高個股：<span style="color:#fff;font-weight:700">21檔(4%)</span> &nbsp;|&nbsp; 跌逾20%個股：<span style="color:#fff;font-weight:700">222檔</span> &nbsp;|&nbsp; 全球降息vs升息：<span style="color:#fff;font-weight:700">31 : 12</span> &nbsp;|&nbsp; 油價YTD：<span style="color:#fff;font-weight:700">+52.5%</span></div>
+    <div class="implication"><div class="label">投資啟示</div>市場廣度極窄，呈典型泡沫末期特徵。歷史顯示大頂後10年期殖利率6個月內平均下滑 <span style="color:#fff;font-weight:700">45bps</span> — <span style="color:#fff;font-weight:700">逢高佈局長天期政府債與防禦類股</span>，執行『long humiliation, short hubris』。</div>
+  </div>
+  <div class="article">
+    <div class="article-title">財富效應狂歡 — 通膨螺旋的代價</div>
+    <p>美國家庭股票財富年初至今再增 <span style="color:#fff;font-weight:700">6兆美元</span>，延續25年的 <span style="color:#fff;font-weight:700">10兆</span> 與24年的 <span style="color:#fff;font-weight:700">9兆</span> 漲幅，形成『財富—股價』正向迴圈，但同時點燃『財富—物價』螺旋，K型經濟下通膨復熾。全球 <span style="color:#fff;font-weight:700">68家</span> 央行中已有 <span style="color:#fff;font-weight:700">46家</span> 通膨超標，集體落後曲線，殖利率曲線因升息預期而熊市趨平；長天期、私募信貸槓桿、新興市場貨幣(印度盧比、韓元逼近GFC與亞洲金融危機低點)全面承壓。下週美國失業率(共識 <span style="color:#fff;font-weight:700">4.3%</span>)恐跌至接近通膨(CPI共識 <span style="color:#fff;font-weight:700">4.2%</span>)，為1960年以來第7次，歷史上這類年份(66、73、90、00、08、21)在華爾街無一善終，並暗示曲線倒掛。Warsh直言央行容忍3%通膨『非常危險』。</p>
+    <div class="data-point">美家庭股票財富YTD：<span style="color:#fff;font-weight:700">+6兆美元</span> &nbsp;|&nbsp; 央行通膨超標：<span style="color:#fff;font-weight:700">46/68</span> &nbsp;|&nbsp; 失業率vs CPI：<span style="color:#fff;font-weight:700">4.3% vs 4.2%</span> &nbsp;|&nbsp; 比特幣YTD：<span style="color:#fff;font-weight:700">-18.4%</span></div>
+    <div class="implication"><div class="label">投資啟示</div>通膨黏著＋央行落後＝殖利率曲線熊市趨平並可能倒掛。<span style="color:#fff;font-weight:700">減持新興市場貨幣與高槓桿私募信貸</span>，曲線交易留意倒掛訊號，並提防『財富—物價』螺旋逆轉。</div>
+  </div>
+</div>
+
+<div class="section" id="systematic-flows">
+  <h2><span class="tag tag-misc">資金流</span> 槓桿衝頂，倉位擁擠</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--red)">320.6%</div><div class="lbl">對沖基金總槓桿
+(97百分位)</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">81.4%</div><div class="lbl">淨槓桿
+(92百分位)</div></div>
+    <div class="stat"><div class="val">3.5 : 1</div><div class="lbl">多頭買入
+對空頭賣出</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">CTA趨勢資金逼近滿倉 — 反轉風險積累</div>
+    <p>BofA系統性流量監測顯示，美國與日本的CTA股票倉位已接近滿倉，短中期模型多數逼近最大多單，僅長期趨勢跟隨者仍在追補；歐洲倉位仍低於今年稍早高點，使整體CTA股票曝險尚未見頂。模型持續買進ESTX50期貨。隨著系統性資金日益一致看多，<span style="color:#fff;font-weight:700">任何反轉的市場衝擊都將被放大</span>，惟在主要指數臨近歷史高點、倉位仍有吸損空間下，未來一週風險相對可控，AI主導的順風使回調被視為逢低買點。美債方面趨勢跟隨者維持空單，且以曲線前端最重；近期倉位調整已由波動率而非趨勢主導，<span style="color:#fff;font-weight:700">波動率一旦上升恐觸發空頭回補</span>，10年與30年期在殖利率走低的多頭路徑下尤甚。原油則維持淨多。</p>
+    <div class="data-point">美/日CTA股票倉位：<span style="color:#fff;font-weight:700">接近滿倉</span> &nbsp;|&nbsp; 歐洲倉位：<span style="color:#fff;font-weight:700">仍低於高點</span> &nbsp;|&nbsp; 美債倉位：<span style="color:#fff;font-weight:700">前端最大空頭</span> &nbsp;|&nbsp; 原油：<span style="color:#fff;font-weight:700">維持淨多</span></div>
+    <div class="implication"><div class="label">投資啟示</div>系統性資金高度一致看多，反轉殺傷力放大。<span style="color:#fff;font-weight:700">歐洲股票(ESTX50)仍有補倉空間可順勢佈局</span>；美債若波動率上升，留意空頭回補帶動殖利率下行的交易機會。</div>
+  </div>
+  <div class="article">
+    <div class="article-title">GS Prime：總槓桿創高，多頭瘋狂加碼</div>
+    <p>高盛Prime數據顯示對沖基金擁擠度逼近極值。整體帳本總槓桿一度升至5年新高 <span style="color:#fff;font-weight:700">322.9%</span>，最新讀數 <span style="color:#fff;font-weight:700">320.6%</span>(1年期 <span style="color:#fff;font-weight:700">97百分位</span>)，淨槓桿 <span style="color:#fff;font-weight:700">81.4%</span>(<span style="color:#fff;font-weight:700">92百分位</span>)；基本面多空基金淨槓桿更達 <span style="color:#fff;font-weight:700">61%</span>(<span style="color:#fff;font-weight:700">100百分位</span>)。L/S比 <span style="color:#fff;font-weight:700">1.681</span> 卻僅處1年期 <span style="color:#fff;font-weight:700">23百分位</span>，反映多頭高度擁擠。全球股票錄得近4個月最大淨買入(<span style="color:#fff;font-weight:700">+1.5個標準差</span>)，多頭買入以 <span style="color:#fff;font-weight:700">3.5比1</span> 壓倒空頭賣出，北美與新興亞洲領銜；<span style="color:#fff;font-weight:700">9/11</span> 板塊獲淨買入，由資訊科技、非必需消費、工業與材料帶動，材料板塊淨買入創逾6個月最大，僅通訊服務與公用事業遭淨賣。對沖基金連續第5週加碼非必需消費，惟配置仍處5年低位。</p>
+    <div class="data-point">總槓桿：<span style="color:#fff;font-weight:700">320.6%(97百分位)</span> &nbsp;|&nbsp; 多空買賣比：<span style="color:#fff;font-weight:700">3.5 : 1</span> &nbsp;|&nbsp; 淨買入區域：<span style="color:#fff;font-weight:700">北美+新興亞洲</span> &nbsp;|&nbsp; 最受捧板塊：<span style="color:#fff;font-weight:700">科技/非必需消費/材料</span></div>
+    <div class="implication"><div class="label">投資啟示</div>槓桿與淨多頭逼近歷史極值，L/S比偏低凸顯多頭擁擠。<span style="color:#fff;font-weight:700">順勢但須警惕踩踏風險，以尾部對沖保護高Beta多頭曝險</span>。</div>
+  </div>
+</div>
+
+<div class="section" id="us-equities-rotation">
+  <h2><span class="tag tag-misc">美股</span> 九連紅戛然 — NFP澆熄漲勢</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--red)">-4.5%</div><div class="lbl">那斯達克單週
+（NFP衝擊）</div></div>
+    <div class="stat"><div class="val" style="color:var(--green)">9週</div><div class="lbl">標普連漲
+（5月+5%）</div></div>
+    <div class="stat"><div class="val">$8000億</div><div class="lbl">標普6月未平倉
+兩週內轉倉</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">標普九連紅 — 攀越憂慮之牆</div>
+    <p>截至5月29日當週，標普500連漲第9週、再升 <span style="color:#fff;font-weight:700">+1.4%</span>，全月勁揚 <span style="color:#fff;font-weight:700">+5%</span>，投資人持續攀越科技週期與宏觀地緣的『憂慮之牆』，受強勁獲利成長支撐。記憶體投入成本、Agentic AI與記憶體為當週領漲主題，油價、光通訊與地緣風險主題則落後。Prime方面，對沖基金連續第2週淨買入美股、為6個月最快，由宏觀產品的多頭買入與空頭回補帶動，個股則5週來首見去槓桿；金融為最受捧板塊，工業連2週遭淨賣。期貨端資金面月底急拉，ESM6隱含融資一度高見 <span style="color:#fff;font-weight:700">FF+120</span>(對比前週約 <span style="color:#fff;font-weight:700">FF+67</span>)，終端用戶倉位回升逼近2024高點，槓桿ETF機械式消耗資產負債表，使融資利差右尾增厚。</p>
+    <div class="data-point">標普5月：<span style="color:#fff;font-weight:700">+5%(九連紅)</span> &nbsp;|&nbsp; 領漲主題：<span style="color:#fff;font-weight:700">記憶體/Agentic AI</span> &nbsp;|&nbsp; 期貨融資利率：<span style="color:#fff;font-weight:700">FF+120</span> &nbsp;|&nbsp; 最受捧板塊：<span style="color:#fff;font-weight:700">金融</span></div>
+    <div class="implication"><div class="label">投資啟示</div>AI與記憶體週期續領漲，惟期貨融資飆升顯示槓桿擁擠。<span style="color:#fff;font-weight:700">可順勢做多，但須留意月底資金面緊張帶來的回調風險</span>。</div>
+  </div>
+  <div class="article">
+    <div class="article-title">熱NFP澆熄漲勢 — 防禦股逆襲</div>
+    <p>截至6月5日當週情勢逆轉，標普 <span style="color:#fff;font-weight:700">-2.6%</span>、那指 <span style="color:#fff;font-weight:700">-4.5%</span>，5月非農就業意外強勁，把利率前景重新推上焦點。當週防禦(剔除商品)、債券替代品與流動性區域銀行領漲，太空衛星與量子運算墊底。週五尾盤風險急速出清，那指 <span style="color:#fff;font-weight:700">-477bps</span>、標普 <span style="color:#fff;font-weight:700">-265bps</span>，受熱NFP疊加AVGO財報與Anthropic遞迴學習消息拖累；12個月贏家、無人機、太空、量子、比特幣敏感股與非獲利科技全數重挫逾 <span style="color:#fff;font-weight:700">10%</span>，但剔除AI後的標普當日持平。資金面見大型科技供給(GOOGL)流出以支應其他交易，需求則轉向醫療與金融。期貨端未來兩週約 <span style="color:#fff;font-weight:700">8000億美元</span> 6月未平倉將轉倉或到期，日曆價差報 <span style="color:#fff;font-weight:700">F+73bps</span>，高於1年均值及上季的F+50bps。</p>
+    <div class="data-point">標普/那指單週：<span style="color:#fff;font-weight:700">-2.6% / -4.5%</span> &nbsp;|&nbsp; 非獲利/高估值科技：<span style="color:#fff;font-weight:700">跌逾10%</span> &nbsp;|&nbsp; 標普(剔除AI)：<span style="color:#fff;font-weight:700">當日持平</span> &nbsp;|&nbsp; 日曆價差：<span style="color:#fff;font-weight:700">F+73bps</span></div>
+    <div class="implication"><div class="label">投資啟示</div>強就業數據重燃升息憂慮，高Beta與非獲利科技遭重擊。<span style="color:#fff;font-weight:700">降低投機型成長曝險，轉向防禦股、債券替代品與區域銀行</span>。</div>
+  </div>
+</div>
+
+<div class="section" id="europe-value">
+  <h2><span class="tag tag-misc">歐洲</span> 歐洲價值股的再通膨順風</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--green)">&gt;40%</div><div class="lbl">價值股相對成長股
+遠期本益比折讓</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">2-3次</div><div class="lbl">ECB年底前
+可能升息</div></div>
+    <div class="stat"><div class="val">第2名</div><div class="lbl">價值因子
+今年表現</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">歐洲價值股續勝 — 再通膨交易的最佳載體</div>
+    <p>Bloomberg專欄指出，溫和的通膨回升與可能的數次升息，料將續挺歐洲價值股。今年價值在多頭與多空維度均為僅次於動能的第二強因子，趨勢自2025年延續；伊朗戰事一度中斷其相對領先，面向消費者的廉價股明顯落後，但前景仍亮。下週ECB升息機率極高，年底前可能再升 <span style="color:#fff;font-weight:700">2至3次</span>。Barclays認為價值兼具盈利韌性與抗通膨特性，是再通膨交易『更乾淨、更穩健』的切入點。價值股遠期本益比相對成長股折讓逾 <span style="color:#fff;font-weight:700">40%</span>，遠闊於過去20年 <span style="color:#fff;font-weight:700">30%</span> 的中位數，且盈利上修更快。聚焦能源、電氣化、國防與AI的歐洲新資本支出週期利好HALO(重資產、低淘汰)股，能源、公用、電信及權重最大的銀行皆受惠。惟HSBC數據顯示相對價值曝險已升抵3年高位。</p>
+    <div class="data-point">遠期本益比折讓：<span style="color:#fff;font-weight:700">&gt;40%(歷史中位30%)</span> &nbsp;|&nbsp; ECB年底前升息：<span style="color:#fff;font-weight:700">2-3次</span> &nbsp;|&nbsp; 受惠主題：<span style="color:#fff;font-weight:700">能源/電氣化/國防/AI資本支出</span> &nbsp;|&nbsp; 倉位：<span style="color:#fff;font-weight:700">3年高位</span></div>
+    <div class="implication"><div class="label">投資啟示</div>黏著通膨與鷹派ECB支撐再通膨交易，HALO(重資產低淘汰)股最受惠。<span style="color:#fff;font-weight:700">增持歐洲能源、公用事業、電信與銀行類價值股</span>，但須留意倉位已偏擁擠。</div>
+  </div>
+</div>
+
+<div class="callout" id="takeaways">
+  <div class="callout-title">基金經理人重點摘要</div>
+  <ul>
+    <li><strong>BofA/Hartnett：</strong>泡沫末期市場廣度極窄(僅21檔個股創高)。執行『做多卑微、做空狂妄』— 增持長天期政府債與防禦股。</li>
+    <li><strong>全球央行：</strong>68家央行中46家通膨超標、集體落後曲線，殖利率曲線熊市趨平並可能倒掛。減持新興市場貨幣與高槓桿私募信貸。</li>
+    <li><strong>倉位：</strong>對沖基金總槓桿320.6%(97百分位)、多空比擁擠。可順勢，但須備好尾部對沖以防踩踏。</li>
+    <li><strong>美股：</strong>熱NFP重燃升息憂慮，投機成長股(量子/太空/非獲利科技)單週跌逾10%。砍投機曝險，轉防禦、債券替代與區域銀行。</li>
+    <li><strong>歐洲：</strong>再通膨＋鷹派ECB(年底前2-3次升息)利好價值股，遠期本益比折讓逾40%。增持能源/公用/電信/銀行HALO股，留意倉位已擁擠。</li>
+    <li><strong>CTA/原油：</strong>油價YTD領漲、CTA維持原油淨多；美股CTA近滿倉但歐股(ESTX50)仍有補倉空間，可順勢佈局。</li>
+  </ul>
+</div>
+
+<div class="nav-links">
+  <span><a href="newsletter_88_japan_inflation.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="footer">
+  彭博研究摘要 | 僅供教學與討論用途 | 2026年6月11日<br>
+  資料來源：Bloomberg Intelligence, Bloomberg Economics, Bloomberg News
+</div>
+
+</body>
+</html>
