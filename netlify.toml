@@ -1,0 +1,11 @@
+# Netlify deploy config for the SPCX newsletter.
+# Static site, no build step — Netlify just publishes the folder below.
+[build]
+  publish = "outputs/spcx-newsletter"
+  command = ""
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "no-referrer"
