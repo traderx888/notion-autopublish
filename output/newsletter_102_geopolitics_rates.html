@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>彭博研究摘要 #102 — G7 凝聚力瓦解與新興市場利率分歧</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Noto+Serif+TC:wght@400;700&family=Source+Sans+Pro:wght@400;600;700&display=swap');
+  :root { --bg: #0a0a08; --card: #141410; --border: #2a2820; --accent: #c9a84c;
+          --gold: #f0d87a; --gold-dim: #c4b896; --text: #e0d8c8; --text-bright: #f0ebe0; --muted: #8a8070;
+          --green: #6bbd5b; --red: #e05545; --yellow: #d4a843; --orange: #d49040;
+          --purple: #b08cd0; --cyan: #4cc9b0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { background: #0a0a08 !important; }
+  body { color: var(--text); font-family: 'Source Sans Pro', 'Noto Serif TC', 'Microsoft JhengHei', sans-serif; line-height: 1.8; padding: 24px; max-width: 880px; margin: 0 auto; }
+  h1 { font-family: 'Playfair Display', 'Noto Serif TC', serif; color: var(--gold); font-size: 1.8em; margin-bottom: 4px; font-weight: 900; letter-spacing: 0.02em; }
+  h2 { font-family: 'Playfair Display', 'Noto Serif TC', serif; }
+  .subtitle { color: var(--text-bright); font-size: 0.95em; margin-bottom: 8px; font-family: 'Noto Serif TC', serif; }
+  .issue-badge { display: inline-block; background: rgba(201,168,76,0.15); color: var(--accent); padding: 4px 12px; border-radius: 12px; font-size: 0.8em; font-weight: 600; margin-bottom: 20px; border: 1px solid rgba(201,168,76,0.3); }
+  .tag { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 0.72em; font-weight: 600; margin-right: 4px; }
+  .tag-rates { background: rgba(201,168,76,0.15); color: var(--accent); }
+  .tag-china { background: rgba(212,144,64,0.15); color: var(--orange); }
+  .tag-japan { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-geo   { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-oil   { background: rgba(212,168,67,0.15); color: var(--yellow); }
+  .tag-trade { background: rgba(212,168,67,0.15); color: var(--yellow); }
+  .tag-growth{ background: rgba(107,189,91,0.15); color: var(--green); }
+  .tag-metals{ background: rgba(176,140,208,0.15); color: var(--purple); }
+  .tag-infl  { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-policy{ background: rgba(201,168,76,0.15); color: var(--accent); }
+  .tag-val   { background: rgba(107,189,91,0.15); color: var(--green); }
+  .tag-vol   { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-semi  { background: rgba(76,201,176,0.15); color: var(--cyan); }
+  .tag-credit{ background: rgba(176,140,208,0.15); color: var(--purple); }
+  .tag-space { background: rgba(201,168,76,0.15); color: var(--accent); }
+  .tag-misc  { background: rgba(138,128,112,0.15); color: var(--muted); }
+  .verdict-bar { background: var(--accent); color: #0a0a08; padding: 14px 20px; border-radius: 8px; margin-bottom: 20px; font-weight: 700; font-size: 1.05em; font-family: 'Noto Serif TC', serif; }
+  .section { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 22px; margin-bottom: 18px; }
+  .section h2 { color: var(--gold); font-size: 1.15em; margin-bottom: 12px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+  .section h3 { color: var(--accent); font-size: 0.95em; margin: 14px 0 6px; }
+  .article { margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid rgba(42,40,32,0.7); }
+  .article:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .article-title { color: var(--text-bright); font-weight: 700; font-size: 0.95em; margin-bottom: 4px; }
+  .article-title-cn { color: var(--muted); font-size: 0.85em; margin-bottom: 8px; }
+  .article p { font-size: 0.9em; margin: 6px 0; }
+  .data-point { background: rgba(201,168,76,0.05); padding: 8px 12px; border-radius: 6px; margin: 8px 0; font-size: 0.85em; border: 1px solid rgba(201,168,76,0.12); }
+  .data-point .num { color: var(--text-bright); font-weight: 700; }
+  .implication { background: rgba(201,168,76,0.06); border-left: 3px solid var(--accent); padding: 10px 14px; margin: 10px 0; border-radius: 0 6px 6px 0; font-size: 0.88em; }
+  .implication .label { color: var(--accent); font-weight: 700; font-size: 0.8em; text-transform: uppercase; margin-bottom: 4px; }
+  .red-team { background: rgba(224,85,69,0.06); border: 1px solid rgba(224,85,69,0.25); border-radius: 8px; padding: 18px; margin: 18px 0; }
+  .red-team-title { color: var(--red); font-weight: 700; font-size: 0.95em; margin-bottom: 10px; font-family: 'Playfair Display', serif; }
+  .red-team ul { padding-left: 18px; }
+  .red-team li { margin: 5px 0; font-size: 0.88em; }
+  .callout { background: rgba(201,168,76,0.06); border: 1px solid rgba(201,168,76,0.25); border-radius: 8px; padding: 18px; margin: 18px 0; }
+  .callout-title { color: var(--accent); font-weight: 700; font-size: 0.95em; margin-bottom: 8px; font-family: 'Playfair Display', 'Noto Serif TC', serif; }
+  .callout ul { padding-left: 18px; }
+  .callout li { margin: 5px 0; font-size: 0.88em; }
+  ul { padding-left: 18px; }
+  li { margin: 4px 0; font-size: 0.88em; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(201,168,76,0.05); padding: 12px; border-radius: 6px; text-align: center; border: 1px solid rgba(201,168,76,0.1); }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: var(--gold); font-family: 'Playfair Display', serif; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
+  .toc { background: rgba(201,168,76,0.04); border: 1px solid rgba(201,168,76,0.18); border-radius: 8px; padding: 16px 20px; margin-bottom: 20px; }
+  .toc-title { color: var(--accent); font-weight: 700; font-size: 0.9em; margin-bottom: 8px; }
+  .toc a { color: var(--accent); text-decoration: none; font-size: 0.88em; }
+  .toc a:hover { text-decoration: underline; color: var(--gold); }
+  .toc ol { padding-left: 20px; }
+  .toc li { margin: 4px 0; }
+  .nav-links { display: flex; justify-content: space-between; margin: 20px 0; font-size: 0.85em; }
+  .nav-links a { color: var(--accent); text-decoration: none; }
+  .nav-links a:hover { text-decoration: underline; color: var(--gold); }
+  .divider { height: 1px; background: linear-gradient(90deg, transparent, var(--accent), transparent); margin: 24px 0; opacity: 0.4; }
+  .footer { text-align: center; color: var(--muted); font-size: 0.75em; margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--border); }
+  .footer a { color: var(--accent); text-decoration: none; }
+</style>
+<script>if(window.self===window.top&&sessionStorage.getItem("student_auth")!=="1"){document.body.innerHTML="";window.location.replace("student.html");}</script>
+</head>
+<body>
+
+<h1>彭博研究摘要</h1>
+<p class="subtitle">第102期 | G7 凝聚力瓦解與新興市場利率分歧</p>
+<span class="issue-badge">2026年六月中旬更新</span>
+
+<div class="verdict-bar">結論：G7 埃維昂峰會難有實質成果，對華施壓歐洲只能單打獨鬥；新興市場方面，秘魯通膨上行風險主導，做多銅金資源國資產、對沖 6 月大選政治尾部風險</div>
+
+<div class="nav-links">
+  <span><a href="newsletter_101_metals_oil.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="toc">
+  <div class="toc-title">目錄</div>
+  <ol>
+    <li><a href="#g7-evian">地緣政治 領導力真空，最佳結果是不再撕裂</a></li>
+    <li><a href="#peru-rates">利率 經濟強勁但通膨上行，政治風險高懸</a></li>
+    <li><a href="#red-team">Red Team 反面論證</a></li>
+    <li><a href="#takeaways">基金經理人重點摘要</a></li>
+  </ol>
+</div>
+
+<div class="section" id="g7-evian">
+  <h2><span class="tag tag-geo">地緣政治</span> 領導力真空，最佳結果是不再撕裂</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val">6/15-17</div><div class="lbl">埃維昂 G7 峰會
+（法國輪值主席）</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">14,418</div><div class="lbl">川普全球軍事打擊次數
+（武力優先）</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">&gt;70%</div><div class="lbl">日本稀土進口
+仍來自中國（2025）</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">G7 凝聚力不再 — 最佳結果或只是避免新裂痕</div>
+    <p>6 月 15 日至 17 日，G7 領導人齊聚法國埃維昂，面對全球失衡、供應鏈安全與多場衝突等嚴峻議題。然而真正的問題不在議程，而在領導力缺位。隨著川普政府逐步放棄美國作為西方協調核心的傳統角色，採取有意義集體行動的希望渺茫，峰會成功標準已降至「避免盟友間出現新裂痕」。法國作為輪值主席，將「全球經濟失衡」置於核心，實質指向<span style="color:#f0ebe0;font-weight:700">中國出口激增</span>——歐元區對華貿易逆差持續擴大。馬克龍計畫與中方舉行聯合通話，但已放棄邀請習近平出席，預料北京僅會釋出和解性言論而無實質政策調整。在對華施壓上，歐洲恐怕只能<span style="color:#f0ebe0;font-weight:700">主要依靠自身</span>，關鍵看點是 6 月 18-19 日歐洲理事會峰會的後續工具。</p>
+    <div class="data-point">峰會日期：<span style="color:#f0ebe0;font-weight:700">6/15-17 埃維昂</span> &nbsp;|&nbsp; 成員國：<span style="color:#f0ebe0;font-weight:700">加法德義日英美</span> &nbsp;|&nbsp; 歐洲理事會跟進：<span style="color:#f0ebe0;font-weight:700">6/18-19</span> &nbsp;|&nbsp; 對華手段：<span style="color:#f0ebe0;font-weight:700">歐盟單邊工具為主</span></div>
+    <div class="implication"><div class="label">投資啟示</div>G7 集體對華行動概率低，貿易摩擦將以<span style="color:#f0ebe0;font-weight:700">歐盟單邊措施</span>為主軸。關注 6/18-19 歐洲理事會對華反傾銷/保護工具——<span style="color:#f0ebe0;font-weight:700">做多受惠於貿易壁壘的歐洲本土工業，留意中國出口鏈下行風險</span>。</div>
+  </div>
+  <div class="article">
+    <div class="article-title">關鍵礦產合作面臨現實考驗 — 中國主導地位延續至 2030</div>
+    <p>供應鏈韌性與關鍵礦產是峰會少數仍有實質合作空間的領域。近月美國推動削弱中國在稀土供應鏈的主導地位，並於 4 月與歐盟達成關鍵礦產戰略夥伴關係協議。但障礙重重：華盛頓推進戰略儲備引發盟友對資源獲取與投資的擔憂；加拿大作為美國最大礦產貿易夥伴雖力倡協調，卻受《美墨加協定》談判與貿易緊張拖累。即便加強合作，降低對華依賴仍需時間——日本最早嘗試減少稀土依賴，但<span style="color:#f0ebe0;font-weight:700">截至 2025 年中國仍占其稀土進口逾 70%</span>。彭博經研估計，上游開采多元化推進較快，而<span style="color:#f0ebe0;font-weight:700">加工、金屬化與磁體製造</span>環節因排序與協調挑戰進展緩慢，中國至少在 <span style="color:#f0ebe0;font-weight:700">2030 年前</span>仍將維持稀土供應鏈主導地位。</p>
+    <div class="data-point">美歐礦產協議：<span style="color:#f0ebe0;font-weight:700">4 月達成</span> &nbsp;|&nbsp; 日本對華稀土依賴：<span style="color:#f0ebe0;font-weight:700">&gt;70%（2025）</span> &nbsp;|&nbsp; 中國主導延續至：<span style="color:#f0ebe0;font-weight:700">至少 2030</span> &nbsp;|&nbsp; 瓶頸環節：<span style="color:#f0ebe0;font-weight:700">加工/磁體製造</span></div>
+    <div class="implication"><div class="label">投資啟示</div>稀土去風險化是長線結構性主題，短期供給仍受制於中國。<span style="color:#f0ebe0;font-weight:700">做多稀土上游礦企與磁體替代供應鏈（澳、加、日相關標的）</span>，但須認知重定價需數年——這是配置而非交易。</div>
+  </div>
+
+</div>
+
+<div class="section" id="peru-rates">
+  <h2><span class="tag tag-rates">利率</span> 經濟強勁但通膨上行，政治風險高懸</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--green)">+3.5%</div><div class="lbl">1Q26 GDP
+年增（高於潛在）</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">3.91%</div><div class="lbl">5 月通膨
+（上行風險主導）</div></div>
+    <div class="stat"><div class="val" style="color:var(--green)">5.3%</div><div class="lbl">利馬失業率
+（4 月，去年 5.9%）</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">秘魯需升息以遏制通膨壓力 — 經濟過熱與政治不確定並存</div>
+    <p>秘魯經濟在政治動盪背景下展現韌性。1Q26 GDP <span style="color:#f0ebe0;font-weight:700">年增 3.5%、季增 1.0%</span>，顯示經濟運行於潛在水平之上、產出缺口轉正，家庭消費與投資持續走強。勞動市場緊俏：利馬 4 月失業率降至 <span style="color:#f0ebe0;font-weight:700">5.3%</span>（一年前為 5.9%），遠低於 8.0% 的非疫情均值，薪資上行進一步形成成本推升型通膨壓力。5 月通膨雖因食品供給衝擊消退而回落至 <span style="color:#f0ebe0;font-weight:700">3.91%</span>，但彭博經研判斷<span style="color:#f0ebe0;font-weight:700">上行風險主導</span>。政治面高度不確定：4 月大選因 43 個政黨、約 30 名候選人混戰而無明確領先者，總統大選將進入 <span style="color:#f0ebe0;font-weight:700">6 月決選</span>，民粹轉向風險揮之不去。高銅金價格則強化外部與財政帳，支撐國內需求。</p>
+    <div class="data-point">1Q26 GDP：<span style="color:#f0ebe0;font-weight:700">+3.5% YoY / +1.0% QoQ</span> &nbsp;|&nbsp; 5 月通膨：<span style="color:#f0ebe0;font-weight:700">3.91%（上行風險主導）</span> &nbsp;|&nbsp; 利馬失業率：<span style="color:#f0ebe0;font-weight:700">5.3%</span> &nbsp;|&nbsp; 大選決選：<span style="color:#f0ebe0;font-weight:700">6 月</span> &nbsp;|&nbsp; 候選人：<span style="color:#f0ebe0;font-weight:700">~30 名 / 43 黨</span></div>
+    <div class="implication"><div class="label">投資啟示</div>經濟過熱 + 薪資推升 + 通膨上行風險 = <span style="color:#f0ebe0;font-weight:700">央行升息傾向</span>。<span style="color:#f0ebe0;font-weight:700">做多受惠於高銅金價的秘魯資源出口資產與本幣（PEN）</span>，但須<span style="color:#f0ebe0;font-weight:700">對沖 6 月決選的民粹政治尾部風險</span>；中東衝突致外部融資收緊為 2Q 主要逆風。</div>
+  </div>
+
+</div>
+
+<div class="divider"></div>
+
+<div class="red-team" id="red-team">
+  <div class="red-team-title">&#128308; Red Team — 核心假設與反面論證</div>
+  <ul>
+    <li>假設1：G7 在對華議題上無法形成集體行動，歐洲只能單邊施壓</li>
+    <li>假設2：中國稀土主導地位將延續至 2030 年，去風險化緩慢</li>
+    <li>假設3：秘魯經濟過熱與通膨上行將推動央行升息傾向</li>
+    <li style="color:var(--red)">風險1：若川普對某盟友的不滿在峰會爆發搶走風頭，反而可能促成歐洲加速自主整合，對華強硬超預期</li>
+    <li style="color:var(--red)">風險2：美歐 4 月關鍵礦產戰略夥伴關係加上美國戰略儲備推進，上游開采多元化可能快於預期，削弱中國定價權</li>
+    <li style="color:var(--red)">風險3：6 月決選若選出民粹政府，財政與貨幣框架可能逆轉，央行獨立性受損反而壓低利率預期；中東衝突致外部融資收緊也可能拖累 2Q 增長</li>
+  </ul>
+  <p style="margin-top:10px;padding:10px 14px;background:rgba(224,85,69,0.04);border-radius:6px;font-size:0.9em;border-left:3px solid var(--red)">核心邏輯成立：G7 領導力真空已是結構性現實，歐洲對華單邊化趨勢明確；秘魯基本面（GDP +3.5%、失業 5.3%、通膨上行）支持升息敘事。但兩大尾部風險需對沖——稀土去風險化在加工/磁體環節仍受制中國至 2030，配置須有耐心；秘魯 6 月決選的民粹結果若顛覆政策框架，PEN 多頭與升息押注將失效。資源國 long 須以政治對沖為前提。</p>
+</div>
+
+<div class="callout" id="takeaways">
+  <div class="callout-title">基金經理人重點摘要</div>
+  <ul>
+    <li><strong>G7 / 地緣：</strong>埃維昂峰會（6/15-17）難有實質成果，最佳結果僅是避免新裂痕。對華施壓轉為歐盟單邊化，關注 6/18-19 歐洲理事會工具。做多受惠貿易壁壘的歐洲本土工業。</li>
+    <li><strong>關鍵礦產：</strong>中國稀土主導延續至至少 2030，日本依賴仍逾 70%。加工/磁體環節瓶頸最深。長線配置稀土上游與磁體替代鏈，須有數年耐心。</li>
+    <li><strong>衝突風險：</strong>川普武力優先（14,418 次打擊），美伊戰爭與烏克蘭談判懸而未決。霍爾木茲海峽航運與油價尾部風險上升——對沖能源敞口。</li>
+    <li><strong>秘魯：</strong>經濟過熱（GDP +3.5%）、勞動市場緊俏（失業 5.3%）、通膨上行風險主導（5 月 3.91%）。央行升息傾向。做多銅金資源出口資產與 PEN。</li>
+    <li><strong>新興市場政治：</strong>秘魯 6 月總統決選民粹風險高，須對沖政治尾部；中東衝突致外部融資收緊為 2Q 共同逆風。</li>
+  </ul>
+</div>
+
+<div class="nav-links">
+  <span><a href="newsletter_101_metals_oil.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="footer">
+  彭博研究摘要 | 僅供教學與討論用途 | 2026年6月13日<br>
+  資料來源：Bloomberg Intelligence, Bloomberg Economics, Bloomberg News<br>
+  <a href="https://www.patreon.com/Aireturn">Patreon</a> · <a href="https://t.me/AIreturn">Telegram</a> · Threads @aireturn88
+</div>
+
+</body>
+</html>

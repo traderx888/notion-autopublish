@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>彭博研究摘要 #99 — 信用分化與中國去槓桿：私募信貸的危與機</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Noto+Serif+TC:wght@400;700&family=Source+Sans+Pro:wght@400;600;700&display=swap');
+  :root { --bg: #0a0a08; --card: #141410; --border: #2a2820; --accent: #c9a84c;
+          --gold: #f0d87a; --gold-dim: #c4b896; --text: #e0d8c8; --text-bright: #f0ebe0; --muted: #8a8070;
+          --green: #6bbd5b; --red: #e05545; --yellow: #d4a843; --orange: #d49040;
+          --purple: #b08cd0; --cyan: #4cc9b0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { background: #0a0a08 !important; }
+  body { color: var(--text); font-family: 'Source Sans Pro', 'Noto Serif TC', 'Microsoft JhengHei', sans-serif; line-height: 1.8; padding: 24px; max-width: 880px; margin: 0 auto; }
+  h1 { font-family: 'Playfair Display', 'Noto Serif TC', serif; color: var(--gold); font-size: 1.8em; margin-bottom: 4px; font-weight: 900; letter-spacing: 0.02em; }
+  h2 { font-family: 'Playfair Display', 'Noto Serif TC', serif; }
+  .subtitle { color: var(--text-bright); font-size: 0.95em; margin-bottom: 8px; font-family: 'Noto Serif TC', serif; }
+  .issue-badge { display: inline-block; background: rgba(201,168,76,0.15); color: var(--accent); padding: 4px 12px; border-radius: 12px; font-size: 0.8em; font-weight: 600; margin-bottom: 20px; border: 1px solid rgba(201,168,76,0.3); }
+  .tag { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 0.72em; font-weight: 600; margin-right: 4px; }
+  .tag-rates { background: rgba(201,168,76,0.15); color: var(--accent); }
+  .tag-china { background: rgba(212,144,64,0.15); color: var(--orange); }
+  .tag-japan { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-geo   { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-oil   { background: rgba(212,168,67,0.15); color: var(--yellow); }
+  .tag-trade { background: rgba(212,168,67,0.15); color: var(--yellow); }
+  .tag-growth{ background: rgba(107,189,91,0.15); color: var(--green); }
+  .tag-metals{ background: rgba(176,140,208,0.15); color: var(--purple); }
+  .tag-infl  { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-policy{ background: rgba(201,168,76,0.15); color: var(--accent); }
+  .tag-val   { background: rgba(107,189,91,0.15); color: var(--green); }
+  .tag-vol   { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-semi  { background: rgba(76,201,176,0.15); color: var(--cyan); }
+  .tag-credit{ background: rgba(176,140,208,0.15); color: var(--purple); }
+  .tag-space { background: rgba(201,168,76,0.15); color: var(--accent); }
+  .tag-misc  { background: rgba(138,128,112,0.15); color: var(--muted); }
+  .verdict-bar { background: var(--accent); color: #0a0a08; padding: 14px 20px; border-radius: 8px; margin-bottom: 20px; font-weight: 700; font-size: 1.05em; font-family: 'Noto Serif TC', serif; }
+  .section { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 22px; margin-bottom: 18px; }
+  .section h2 { color: var(--gold); font-size: 1.15em; margin-bottom: 12px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+  .section h3 { color: var(--accent); font-size: 0.95em; margin: 14px 0 6px; }
+  .article { margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid rgba(42,40,32,0.7); }
+  .article:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .article-title { color: var(--text-bright); font-weight: 700; font-size: 0.95em; margin-bottom: 4px; }
+  .article-title-cn { color: var(--muted); font-size: 0.85em; margin-bottom: 8px; }
+  .article p { font-size: 0.9em; margin: 6px 0; }
+  .data-point { background: rgba(201,168,76,0.05); padding: 8px 12px; border-radius: 6px; margin: 8px 0; font-size: 0.85em; border: 1px solid rgba(201,168,76,0.12); }
+  .data-point .num { color: var(--text-bright); font-weight: 700; }
+  .implication { background: rgba(201,168,76,0.06); border-left: 3px solid var(--accent); padding: 10px 14px; margin: 10px 0; border-radius: 0 6px 6px 0; font-size: 0.88em; }
+  .implication .label { color: var(--accent); font-weight: 700; font-size: 0.8em; text-transform: uppercase; margin-bottom: 4px; }
+  .red-team { background: rgba(224,85,69,0.06); border: 1px solid rgba(224,85,69,0.25); border-radius: 8px; padding: 18px; margin: 18px 0; }
+  .red-team-title { color: var(--red); font-weight: 700; font-size: 0.95em; margin-bottom: 10px; font-family: 'Playfair Display', serif; }
+  .red-team ul { padding-left: 18px; }
+  .red-team li { margin: 5px 0; font-size: 0.88em; }
+  .callout { background: rgba(201,168,76,0.06); border: 1px solid rgba(201,168,76,0.25); border-radius: 8px; padding: 18px; margin: 18px 0; }
+  .callout-title { color: var(--accent); font-weight: 700; font-size: 0.95em; margin-bottom: 8px; font-family: 'Playfair Display', 'Noto Serif TC', serif; }
+  .callout ul { padding-left: 18px; }
+  .callout li { margin: 5px 0; font-size: 0.88em; }
+  ul { padding-left: 18px; }
+  li { margin: 4px 0; font-size: 0.88em; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(201,168,76,0.05); padding: 12px; border-radius: 6px; text-align: center; border: 1px solid rgba(201,168,76,0.1); }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: var(--gold); font-family: 'Playfair Display', serif; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
+  .toc { background: rgba(201,168,76,0.04); border: 1px solid rgba(201,168,76,0.18); border-radius: 8px; padding: 16px 20px; margin-bottom: 20px; }
+  .toc-title { color: var(--accent); font-weight: 700; font-size: 0.9em; margin-bottom: 8px; }
+  .toc a { color: var(--accent); text-decoration: none; font-size: 0.88em; }
+  .toc a:hover { text-decoration: underline; color: var(--gold); }
+  .toc ol { padding-left: 20px; }
+  .toc li { margin: 4px 0; }
+  .nav-links { display: flex; justify-content: space-between; margin: 20px 0; font-size: 0.85em; }
+  .nav-links a { color: var(--accent); text-decoration: none; }
+  .nav-links a:hover { text-decoration: underline; color: var(--gold); }
+  .divider { height: 1px; background: linear-gradient(90deg, transparent, var(--accent), transparent); margin: 24px 0; opacity: 0.4; }
+  .footer { text-align: center; color: var(--muted); font-size: 0.75em; margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--border); }
+  .footer a { color: var(--accent); text-decoration: none; }
+</style>
+<script>if(window.self===window.top&&sessionStorage.getItem("student_auth")!=="1"){document.body.innerHTML="";window.location.replace("student.html");}</script>
+</head>
+<body>
+
+<h1>彭博研究摘要</h1>
+<p class="subtitle">第99期 | 信用分化與中國去槓桿：私募信貸的危與機</p>
+<span class="issue-badge">2026年六月中旬更新</span>
+
+<div class="verdict-bar">結論：私募信貸非系統性崩塌而是個股分化，挑選折讓NAV的優質浮息BDC；中國信貸第三個月放緩反映去槓桿與科技轉型，傳統信用指標領先性下降。**做多優質BDC、低配中國週期性信用敏感資產**</div>
+
+<div class="nav-links">
+  <span><a href="newsletter_98_volatility.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="toc">
+  <div class="toc-title">目錄</div>
+  <ol>
+    <li><a href="#private-credit-bdc">私募信貸 BDC冰火兩重天，折讓即機會</a></li>
+    <li><a href="#china-credit-deleveraging">中國信用 信貸連三月放緩，去槓桿換科技</a></li>
+    <li><a href="#red-team">Red Team 反面論證</a></li>
+    <li><a href="#takeaways">基金經理人重點摘要</a></li>
+  </ol>
+</div>
+
+<div class="section" id="private-credit-bdc">
+  <h2><span class="tag tag-misc">私募信貸</span> BDC冰火兩重天，折讓即機會</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--green)">+13.3%</div><div class="lbl">Main Street Capital
+兩年NAV/股增幅</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">EPS Miss</div><div class="lbl">Goldman Sachs BDC
+與Barings BDC</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">折讓NAV</div><div class="lbl">優質浮息組合
+仍受惠高收益率</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">私募信貸BDC的分化是因禍得福 — 折讓中暗藏選股機會</div>
+    <p>在被AI顛覆、贖回壓力與盈利逆風夾擊的私募信貸市場中，業務發展公司（BDC）並非同病相憐。上市BDC出現明顯的兩極分化：<span style="color:#f0ebe0;font-weight:700">FS KKR Capital</span> 與 <span style="color:#f0ebe0;font-weight:700">Goldman Sachs BDC</span> 的非應計貸款（non-accruals）上升、淨資產值（NAV）承壓，而部分組合則展現韌性。這種績效分化正創造選擇性機會 — 許多優質組合在持續受惠於高收益率的<span style="color:#f0ebe0;font-weight:700">浮息環境</span>下，卻以吸引人的折讓價交易於NAV之下。Bloomberg Intelligence分析師 Michael Kaye 指出，1Q的NAV下滑主因是<span style="color:#f0ebe0;font-weight:700">利差走闊</span>，而非廣泛的信用惡化：「信用具韌性，但個別壓力正在上升。」<span style="color:#f0ebe0;font-weight:700">Main Street Capital</span> 以兩年NAV/股增長 <span style="color:#f0ebe0;font-weight:700">13.3%</span> 成為標桿，<span style="color:#f0ebe0;font-weight:700">Gladstone Capital</span> 與 <span style="color:#f0ebe0;font-weight:700">Hercules Capital</span> 亦有實質增值。</p>
+    <div class="data-point">EPS未達標：<span style="color:#f0ebe0;font-weight:700">Goldman Sachs BDC、Barings BDC</span> &nbsp;|&nbsp; NAV標桿：<span style="color:#f0ebe0;font-weight:700">Main Street +13.3%（兩年）</span> &nbsp;|&nbsp; 最差NAV破壞者：<span style="color:#f0ebe0;font-weight:700">BlackRock TCP Capital、Prospect Capital</span> &nbsp;|&nbsp; 殘留組合壓力：<span style="color:#f0ebe0;font-weight:700">Goldman Sachs BDC、Oaktree Specialty Lending</span></div>
+    <div class="implication"><div class="label">投資啟示</div>信用非系統性崩塌，而是個股分化（idiosyncratic）。<span style="color:#f0ebe0;font-weight:700">做多以折讓價交易、NAV持續增值的優質浮息BDC（如Main Street、Hercules），迴避殘留組合與非應計上升的名字（GS BDC、Prospect、BlackRock TCP）</span>。利用Bloomberg ASKB與BI FLOWG BDC追蹤盈利與風險趨勢。</div>
+  </div>
+
+</div>
+
+<div class="section" id="china-credit-deleveraging">
+  <h2><span class="tag tag-misc">中國信用</span> 信貸連三月放緩，去槓桿換科技</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--orange)">7.7%</div><div class="lbl">社融存量同比
+連三月放緩（4月7.8%）</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">5.5%</div><div class="lbl">貸款存量同比
+創新低</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">2.0萬億</div><div class="lbl">5月新增社融
+（去年同期2.3萬億）</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">中國信貸放緩顯示去槓桿與科技轉型 — 傳統信用指標領先性下降</div>
+    <p>Bloomberg Economics 經濟學家 Eric Zhu 指出，中國5月信貸擴張放緩，顯示即使官方建築業PMI改善暗示財政支持回升，其力度仍<span style="color:#f0ebe0;font-weight:700">過於溫和</span>，無法在短期內遏止固定資產投資下行。貸款增速放緩亦凸顯私營部門需求持續疲弱，居民與企業的借貸意願不斷萎縮。更深層看，放貸的結構性疲弱或反映經濟正從資本密集的房地產與基建，轉向<span style="color:#f0ebe0;font-weight:700">輕信用、科技導向</span>的產業 — 若如此，傳統信用指標作為「新經濟」領先指標的參考價值將下降。1-5月新增社融達 <span style="color:#f0ebe0;font-weight:700">17.5萬億元</span>，略低於預測的17.6萬億，但高於市場共識的17.2萬億。其中5月新增 <span style="color:#f0ebe0;font-weight:700">2.0萬億元</span>，雖較4月 <span style="color:#f0ebe0;font-weight:700">6,250億元</span> 的季節性低谷回升，但仍低於去年同期的 <span style="color:#f0ebe0;font-weight:700">2.3萬億元</span>。</p>
+    <div class="data-point">1-5月社融：<span style="color:#f0ebe0;font-weight:700">17.5萬億元</span>（預測17.6萬億／共識17.2萬億） &nbsp;|&nbsp; 5月新增：<span style="color:#f0ebe0;font-weight:700">2.0萬億元</span>（去年2.3萬億） &nbsp;|&nbsp; 社融存量同比：<span style="color:#f0ebe0;font-weight:700">7.7%</span>（4月7.8%，連三月放緩） &nbsp;|&nbsp; 貸款存量：<span style="color:#f0ebe0;font-weight:700">5.5%創新低</span> &nbsp;|&nbsp; 政府融資：<span style="color:#f0ebe0;font-weight:700">15.1%</span>（4月15.6%，連四月放緩） &nbsp;|&nbsp; 企業債融資：<span style="color:#f0ebe0;font-weight:700">8.4%</span>（連九月加快）</div>
+    <div class="implication"><div class="label">投資啟示</div>信貸放緩同時反映需求疲弱與結構轉型，刺激政策節奏受控。<span style="color:#f0ebe0;font-weight:700">低配依賴傳統信貸週期的中國房地產與基建相關資產，關注信用輕、科技導向的「新經濟」板塊</span>。注意：傳統社融／貸款數據對新經濟的領先指示性正在弱化，勿過度解讀總量回升。</div>
+  </div>
+
+</div>
+
+<div class="divider"></div>
+
+<div class="red-team" id="red-team">
+  <div class="red-team-title">&#128308; Red Team — 核心假設與反面論證</div>
+  <ul>
+    <li>假設1：私募信貸的NAV下滑主要源於利差走闊而非根本信用惡化，因此是估值錯殺而非價值毀滅</li>
+    <li>假設2：中國信貸放緩是主動去槓桿與經濟轉型的結果，而非單純需求崩塌</li>
+    <li>假設3：浮息環境的高收益率將持續支撐優質BDC的盈利能力</li>
+    <li style="color:var(--red)">風險1：Goldman Sachs BDC與Oaktree的『殘留組合壓力』與非應計上升，可能是更廣泛信用週期惡化的早期訊號，而非孤立個案 — 文章亦承認『個別壓力正在上升』</li>
+    <li style="color:var(--red)">風險2：中國貸款存量增速跌至5.5%新低、固定資產投資持續下行，若財政支持確實『過於溫和』，去槓桿敘事可能掩蓋了被動的需求衰退</li>
+    <li style="color:var(--red)">風險3：若AI顛覆與贖回壓力持續，浮息高收益率本身（即高融資成本）反而會壓垮被投企業的償債能力，將利差問題轉化為真實違約</li>
+  </ul>
+  <p style="margin-top:10px;padding:10px 14px;background:rgba(224,85,69,0.04);border-radius:6px;font-size:0.9em;border-left:3px solid var(--red)">核心邏輯（分化選股、結構轉型）成立，但兩個尾部風險需對沖。BDC方面：若非應計率從『個別』擴散至多家頭部機構，利差敘事將讓位於信用週期敘事 — 須緊盯GS BDC、Prospect、BlackRock TCP的下季非應計趨勢。中國方面：5.5%的貸款新低與連續下行的政府融資（15.1%）顯示，『主動去槓桿』與『被動需求萎縮』在數據上難以區分，若6月社融未能企穩，應下修中國信用敏感資產的配置權重。</p>
+</div>
+
+<div class="callout" id="takeaways">
+  <div class="callout-title">基金經理人重點摘要</div>
+  <ul>
+    <li><strong>私募信貸：</strong>非系統性崩塌而是個股分化。做多折讓NAV的優質浮息BDC（Main Street +13.3%、Hercules、Gladstone），迴避非應計上升的名字（GS BDC、Prospect、BlackRock TCP、Oaktree）。</li>
+    <li><strong>BDC監測：</strong>NAV下滑主因為利差走闊非信用惡化，但『個別壓力正在上升』。用Bloomberg ASKB／BI FLOWG BDC追蹤下季非應計趨勢作為轉勢訊號。</li>
+    <li><strong>中國信用：</strong>社融存量同比連三月放緩至7.7%，貸款存量5.5%創新低。低配房地產與基建相關信用資產。</li>
+    <li><strong>中國轉型：</strong>經濟轉向輕信用、科技導向產業，傳統社融指標領先性下降。關注『新經濟』板塊而非總量數據。</li>
+    <li><strong>政策觀察：</strong>財政支持力度『過於溫和』，刺激節奏受控。緊盯6月社融能否企穩，否則下修中國信用敏感資產權重。</li>
+    <li><strong>跨市場主題：</strong>美國浮息高收益率是雙刃劍 — 利好BDC收益，但高融資成本若壓垮被投企業償債能力，利差問題恐轉化為真實違約。</li>
+  </ul>
+</div>
+
+<div class="nav-links">
+  <span><a href="newsletter_98_volatility.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="footer">
+  彭博研究摘要 | 僅供教學與討論用途 | 2026年6月13日<br>
+  資料來源：Bloomberg Intelligence, Bloomberg Economics, Bloomberg News<br>
+  <a href="https://www.patreon.com/Aireturn">Patreon</a> · <a href="https://t.me/AIreturn">Telegram</a> · Threads @aireturn88
+</div>
+
+</body>
+</html>

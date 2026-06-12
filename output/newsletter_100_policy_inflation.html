@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>彭博研究摘要 #100 — 沃什的聯儲會革命與通膨預期降溫</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Noto+Serif+TC:wght@400;700&family=Source+Sans+Pro:wght@400;600;700&display=swap');
+  :root { --bg: #0a0a08; --card: #141410; --border: #2a2820; --accent: #c9a84c;
+          --gold: #f0d87a; --gold-dim: #c4b896; --text: #e0d8c8; --text-bright: #f0ebe0; --muted: #8a8070;
+          --green: #6bbd5b; --red: #e05545; --yellow: #d4a843; --orange: #d49040;
+          --purple: #b08cd0; --cyan: #4cc9b0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { background: #0a0a08 !important; }
+  body { color: var(--text); font-family: 'Source Sans Pro', 'Noto Serif TC', 'Microsoft JhengHei', sans-serif; line-height: 1.8; padding: 24px; max-width: 880px; margin: 0 auto; }
+  h1 { font-family: 'Playfair Display', 'Noto Serif TC', serif; color: var(--gold); font-size: 1.8em; margin-bottom: 4px; font-weight: 900; letter-spacing: 0.02em; }
+  h2 { font-family: 'Playfair Display', 'Noto Serif TC', serif; }
+  .subtitle { color: var(--text-bright); font-size: 0.95em; margin-bottom: 8px; font-family: 'Noto Serif TC', serif; }
+  .issue-badge { display: inline-block; background: rgba(201,168,76,0.15); color: var(--accent); padding: 4px 12px; border-radius: 12px; font-size: 0.8em; font-weight: 600; margin-bottom: 20px; border: 1px solid rgba(201,168,76,0.3); }
+  .tag { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 0.72em; font-weight: 600; margin-right: 4px; }
+  .tag-rates { background: rgba(201,168,76,0.15); color: var(--accent); }
+  .tag-china { background: rgba(212,144,64,0.15); color: var(--orange); }
+  .tag-japan { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-geo   { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-oil   { background: rgba(212,168,67,0.15); color: var(--yellow); }
+  .tag-trade { background: rgba(212,168,67,0.15); color: var(--yellow); }
+  .tag-growth{ background: rgba(107,189,91,0.15); color: var(--green); }
+  .tag-metals{ background: rgba(176,140,208,0.15); color: var(--purple); }
+  .tag-infl  { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-policy{ background: rgba(201,168,76,0.15); color: var(--accent); }
+  .tag-val   { background: rgba(107,189,91,0.15); color: var(--green); }
+  .tag-vol   { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-semi  { background: rgba(76,201,176,0.15); color: var(--cyan); }
+  .tag-credit{ background: rgba(176,140,208,0.15); color: var(--purple); }
+  .tag-space { background: rgba(201,168,76,0.15); color: var(--accent); }
+  .tag-misc  { background: rgba(138,128,112,0.15); color: var(--muted); }
+  .verdict-bar { background: var(--accent); color: #0a0a08; padding: 14px 20px; border-radius: 8px; margin-bottom: 20px; font-weight: 700; font-size: 1.05em; font-family: 'Noto Serif TC', serif; }
+  .section { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 22px; margin-bottom: 18px; }
+  .section h2 { color: var(--gold); font-size: 1.15em; margin-bottom: 12px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+  .section h3 { color: var(--accent); font-size: 0.95em; margin: 14px 0 6px; }
+  .article { margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid rgba(42,40,32,0.7); }
+  .article:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .article-title { color: var(--text-bright); font-weight: 700; font-size: 0.95em; margin-bottom: 4px; }
+  .article-title-cn { color: var(--muted); font-size: 0.85em; margin-bottom: 8px; }
+  .article p { font-size: 0.9em; margin: 6px 0; }
+  .data-point { background: rgba(201,168,76,0.05); padding: 8px 12px; border-radius: 6px; margin: 8px 0; font-size: 0.85em; border: 1px solid rgba(201,168,76,0.12); }
+  .data-point .num { color: var(--text-bright); font-weight: 700; }
+  .implication { background: rgba(201,168,76,0.06); border-left: 3px solid var(--accent); padding: 10px 14px; margin: 10px 0; border-radius: 0 6px 6px 0; font-size: 0.88em; }
+  .implication .label { color: var(--accent); font-weight: 700; font-size: 0.8em; text-transform: uppercase; margin-bottom: 4px; }
+  .red-team { background: rgba(224,85,69,0.06); border: 1px solid rgba(224,85,69,0.25); border-radius: 8px; padding: 18px; margin: 18px 0; }
+  .red-team-title { color: var(--red); font-weight: 700; font-size: 0.95em; margin-bottom: 10px; font-family: 'Playfair Display', serif; }
+  .red-team ul { padding-left: 18px; }
+  .red-team li { margin: 5px 0; font-size: 0.88em; }
+  .callout { background: rgba(201,168,76,0.06); border: 1px solid rgba(201,168,76,0.25); border-radius: 8px; padding: 18px; margin: 18px 0; }
+  .callout-title { color: var(--accent); font-weight: 700; font-size: 0.95em; margin-bottom: 8px; font-family: 'Playfair Display', 'Noto Serif TC', serif; }
+  .callout ul { padding-left: 18px; }
+  .callout li { margin: 5px 0; font-size: 0.88em; }
+  ul { padding-left: 18px; }
+  li { margin: 4px 0; font-size: 0.88em; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(201,168,76,0.05); padding: 12px; border-radius: 6px; text-align: center; border: 1px solid rgba(201,168,76,0.1); }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: var(--gold); font-family: 'Playfair Display', serif; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
+  .toc { background: rgba(201,168,76,0.04); border: 1px solid rgba(201,168,76,0.18); border-radius: 8px; padding: 16px 20px; margin-bottom: 20px; }
+  .toc-title { color: var(--accent); font-weight: 700; font-size: 0.9em; margin-bottom: 8px; }
+  .toc a { color: var(--accent); text-decoration: none; font-size: 0.88em; }
+  .toc a:hover { text-decoration: underline; color: var(--gold); }
+  .toc ol { padding-left: 20px; }
+  .toc li { margin: 4px 0; }
+  .nav-links { display: flex; justify-content: space-between; margin: 20px 0; font-size: 0.85em; }
+  .nav-links a { color: var(--accent); text-decoration: none; }
+  .nav-links a:hover { text-decoration: underline; color: var(--gold); }
+  .divider { height: 1px; background: linear-gradient(90deg, transparent, var(--accent), transparent); margin: 24px 0; opacity: 0.4; }
+  .footer { text-align: center; color: var(--muted); font-size: 0.75em; margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--border); }
+  .footer a { color: var(--accent); text-decoration: none; }
+</style>
+<script>if(window.self===window.top&&sessionStorage.getItem("student_auth")!=="1"){document.body.innerHTML="";window.location.replace("student.html");}</script>
+</head>
+<body>
+
+<h1>彭博研究摘要</h1>
+<p class="subtitle">第100期 | 沃什的聯儲會革命與通膨預期降溫</p>
+<span class="issue-badge">2026年六月中旬更新</span>
+
+<div class="verdict-bar">結論：新主席沃什釋出體制變革信號，聯儲會獨立性面臨重塑風險；但油價回落已壓低長期通膨預期至 **3.4%** — 政策不確定性升溫之際，做多前端利率期貨並對沖央行獨立性尾部風險</div>
+
+<div class="nav-links">
+  <span><a href="newsletter_99_credit_china.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="toc">
+  <div class="toc-title">目錄</div>
+  <ol>
+    <li><a href="#warsh-regime-change">聯儲會 沃什上任，體制大改在即</a></li>
+    <li><a href="#inflation-expectations-cooling">通膨預期 油價回落，情緒回暖</a></li>
+    <li><a href="#red-team">Red Team 反面論證</a></li>
+    <li><a href="#takeaways">基金經理人重點摘要</a></li>
+  </ol>
+</div>
+
+<div class="section" id="warsh-regime-change">
+  <h2><span class="tag tag-misc">聯儲會</span> 沃什上任，體制大改在即</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--orange)">1987</div><div class="lbl">上次主席於白宮宣誓
+（葛林斯潘以來首次）</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">1個</div><div class="lbl">顧問主張單一使命
+（廢除充分就業目標）</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">2027</div><div class="lbl">通膨預計仍
+高於2%目標</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">沃什顧問選擇揭示領導風格 — 與鮑威爾徹底切割</div>
+    <p>新任聯儲會主席凱文·沃什（Kevin Warsh）正發出一系列與前任鮑威爾切割的信號。首先，他選擇在<span style="color:#f0ebe0;font-weight:700">白宮</span>宣誓就職，成為自 <span style="color:#f0ebe0;font-weight:700">1987年葛林斯潘</span>以來首位在白宮宣誓的聯儲會主席——當年主持的里根總統對聯儲會的公開立場遠比川普克制。更具實質意義的是他的顧問人選：<span style="color:#f0ebe0;font-weight:700">Paul Winfree</span> 是傳統基金會《2025計畫》聯儲會章節執筆人之一，主張國會應僅賦予聯儲會「價格穩定」<span style="color:#f0ebe0;font-weight:700">單一使命</span>，廢除「充分就業」目標，甚至傾向「實際上廢除」聯儲會、把貨幣政策掌控權交還人民。另一位顧問 <span style="color:#f0ebe0;font-weight:700">Daniel Heil</span> 在貨幣政策與金融監管上並無明顯經驗，曾與沃什在胡佛研究所共事，研究聚焦聯邦預算與稅收。沃什競選提名期間承諾「大刀闊斧改革」、為聯儲會帶來「體制變革」，這些早期選擇顯示他對此承諾態度嚴肅。</p>
+    <div class="data-point">宣誓地點：<span style="color:#f0ebe0;font-weight:700">白宮</span>（1987年來首次） &nbsp;|&nbsp; 顧問1：<span style="color:#f0ebe0;font-weight:700">Paul Winfree</span>（2025計畫聯儲會章節作者） &nbsp;|&nbsp; 顧問2：<span style="color:#f0ebe0;font-weight:700">Daniel Heil</span>（胡佛研究所，無貨幣經驗） &nbsp;|&nbsp; 通膨：<span style="color:#f0ebe0;font-weight:700">高於2%且料持續至2027</span></div>
+    <div class="implication"><div class="label">投資啟示</div>聯儲會獨立性與雙重使命架構面臨被重塑的政策風險。央行可信度若受侵蝕，長端利率與期限溢價恐承壓——<span style="color:#f0ebe0;font-weight:700">做多前端利率期貨，並透過陡峭化交易（steepener）對沖獨立性尾部風險</span>。</div>
+  </div>
+
+</div>
+
+<div class="section" id="inflation-expectations-cooling">
+  <h2><span class="tag tag-infl">通膨預期</span> 油價回落，情緒回暖</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--green)">48.9</div><div class="lbl">6月密大消費者信心
+（初值，前值44.8）</div></div>
+    <div class="stat"><div class="val" style="color:var(--green)">3.4%</div><div class="lbl">長期通膨預期
+（自3.9%回落）</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">4.6%</div><div class="lbl">一年期通膨預期
+（自4.8%回落）</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">汽油降價提振情緒、緩和通膨憂慮 — 但通膨仍被視為首要風險</div>
+    <p>密西根大學消費者信心指數 6 月初值升至 <span style="color:#f0ebe0;font-weight:700">48.9</span>，高於 5 月終值 <span style="color:#f0ebe0;font-weight:700">44.8</span>，並擊敗市場共識 <span style="color:#f0ebe0;font-weight:700">46.0</span> 與彭博自身預測 <span style="color:#f0ebe0;font-weight:700">46.5</span>。當前狀況分項由 45.8 升至 <span style="color:#f0ebe0;font-weight:700">48.4</span>，前瞻預期分項由 44.1 升至 <span style="color:#f0ebe0;font-weight:700">49.3</span>。對央行更具參考意義的<span style="color:#f0ebe0;font-weight:700">長期通膨預期由 3.9% 降至 3.4%</span>，一年期通膨預期亦由 4.8% 回落至 <span style="color:#f0ebe0;font-weight:700">4.6%</span>——對聯儲會而言，這份報告令人稍感安慰，顯示通膨預期正朝正確方向移動。然而，由於消費者對近期汽油價格的預期仍偏高，他們在未來一年仍<span style="color:#f0ebe0;font-weight:700">將通膨視為比失業更大的風險</span>。購屋條件惡化，購買大型耐用品與車輛的條件小幅改善但仍低迷。底線：消費者信心對油價高度敏感，6 月初的樂觀情緒主要反映油站價格回落帶來的紓解，尤以低收入家庭為甚。</p>
+    <div class="data-point">信心指數：<span style="color:#f0ebe0;font-weight:700">48.9</span>（前值44.8，共識46.0） &nbsp;|&nbsp; 當前狀況：<span style="color:#f0ebe0;font-weight:700">48.4</span>（前45.8） &nbsp;|&nbsp; 未來預期：<span style="color:#f0ebe0;font-weight:700">49.3</span>（前44.1） &nbsp;|&nbsp; 長期通膨預期：<span style="color:#f0ebe0;font-weight:700">3.4%</span>（前3.9%）</div>
+    <div class="implication"><div class="label">投資啟示</div>通膨預期回落為聯儲會下半年寬鬆敘事提供支撐，但驅動力來自油價這一波動變數而非結構性降溫。<span style="color:#f0ebe0;font-weight:700">戰術性做多前端利率期貨，但密切跟蹤布蘭特油價作為平倉觸發指標</span>。</div>
+  </div>
+
+</div>
+
+<div class="divider"></div>
+
+<div class="red-team" id="red-team">
+  <div class="red-team-title">&#128308; Red Team — 核心假設與反面論證</div>
+  <ul>
+    <li>假設1：通膨預期回落代表通膨壓力實質緩和，為聯儲會下半年降息鋪路</li>
+    <li>假設2：沃什的體制變革主要為政治姿態，不會實質侵蝕聯儲會貨幣政策框架</li>
+    <li>假設3：油價回落具持續性，可支撐消費者信心與通膨預期續降</li>
+    <li style="color:var(--red)">風險1：信心回升完全建立在油價回落之上——消費者仍將通膨視為比失業更大的風險，且近期汽油價格預期仍偏高，一旦油價反彈，4.6%/3.4% 的通膨預期可能迅速逆轉</li>
+    <li style="color:var(--red)">風險2：沃什顧問 Winfree 主張單一使命、甚至『實際上廢除』聯儲會，若這些理念進入政策議程，市場將重新定價央行獨立性溢價，與『有序降息』敘事直接衝突</li>
+    <li style="color:var(--red)">風險3：通膨已高於 2% 目標並預計持續至 2027 年，結構性通膨黏性可能令任何降息空間遠小於市場預期</li>
+  </ul>
+  <p style="margin-top:10px;padding:10px 14px;background:rgba(224,85,69,0.04);border-radius:6px;font-size:0.9em;border-left:3px solid var(--red)">核心『做多前端利率』邏輯短期仍成立——長期通膨預期由 3.9% 降至 3.4% 是實質利好。但本期兩條主線存在內在張力：通膨改善脆弱（依賴油價）、而政策風險升溫（沃什體制變革）。若沃什的單一使命/獨立性議程實質推進，或布蘭特油價反彈推高通膨預期回 4.8% 以上，前端做多的邏輯將受挑戰，且長端期限溢價恐走高。建議以前端做多為主、陡峭化交易對沖獨立性風險的組合表達，而非單純押注全曲線下移。</p>
+</div>
+
+<div class="callout" id="takeaways">
+  <div class="callout-title">基金經理人重點摘要</div>
+  <ul>
+    <li><strong>聯儲會（新主席）：</strong>沃什釋出體制變革信號——白宮宣誓（1987年來首次）+ 主張單一使命的顧問。央行獨立性面臨重塑風險。</li>
+    <li><strong>通膨預期：</strong>密大長期通膨預期由 3.9% 降至 3.4%，一年期由 4.8% 降至 4.6%——朝正確方向移動，但靠油價驅動。</li>
+    <li><strong>消費者信心：</strong>6 月初值 48.9，擊敗共識 46.0，但消費者仍視通膨為首要風險。</li>
+    <li><strong>通膨基調：</strong>通膨仍高於 2% 目標，預計持續至 2027 年，結構性黏性限制降息空間。</li>
+    <li><strong>利率配置：</strong>做多前端利率期貨，以布蘭特油價為平倉觸發指標。</li>
+    <li><strong>對沖：</strong>以陡峭化交易（steepener）對沖聯儲會獨立性尾部風險與長端期限溢價走高。</li>
+  </ul>
+</div>
+
+<div class="nav-links">
+  <span><a href="newsletter_99_credit_china.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="footer">
+  彭博研究摘要 | 僅供教學與討論用途 | 2026年6月13日<br>
+  資料來源：Bloomberg Intelligence, Bloomberg Economics, Bloomberg News<br>
+  <a href="https://www.patreon.com/Aireturn">Patreon</a> · <a href="https://t.me/AIreturn">Telegram</a> · Threads @aireturn88
+</div>
+
+</body>
+</html>

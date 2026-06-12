@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>彭博研究摘要 #98 — 動能過熱與系統性去槓桿 — 對沖時刻已至</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Noto+Serif+TC:wght@400;700&family=Source+Sans+Pro:wght@400;600;700&display=swap');
+  :root { --bg: #0a0a08; --card: #141410; --border: #2a2820; --accent: #c9a84c;
+          --gold: #f0d87a; --gold-dim: #c4b896; --text: #e0d8c8; --text-bright: #f0ebe0; --muted: #8a8070;
+          --green: #6bbd5b; --red: #e05545; --yellow: #d4a843; --orange: #d49040;
+          --purple: #b08cd0; --cyan: #4cc9b0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { background: #0a0a08 !important; }
+  body { color: var(--text); font-family: 'Source Sans Pro', 'Noto Serif TC', 'Microsoft JhengHei', sans-serif; line-height: 1.8; padding: 24px; max-width: 880px; margin: 0 auto; }
+  h1 { font-family: 'Playfair Display', 'Noto Serif TC', serif; color: var(--gold); font-size: 1.8em; margin-bottom: 4px; font-weight: 900; letter-spacing: 0.02em; }
+  h2 { font-family: 'Playfair Display', 'Noto Serif TC', serif; }
+  .subtitle { color: var(--text-bright); font-size: 0.95em; margin-bottom: 8px; font-family: 'Noto Serif TC', serif; }
+  .issue-badge { display: inline-block; background: rgba(201,168,76,0.15); color: var(--accent); padding: 4px 12px; border-radius: 12px; font-size: 0.8em; font-weight: 600; margin-bottom: 20px; border: 1px solid rgba(201,168,76,0.3); }
+  .tag { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 0.72em; font-weight: 600; margin-right: 4px; }
+  .tag-rates { background: rgba(201,168,76,0.15); color: var(--accent); }
+  .tag-china { background: rgba(212,144,64,0.15); color: var(--orange); }
+  .tag-japan { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-geo   { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-oil   { background: rgba(212,168,67,0.15); color: var(--yellow); }
+  .tag-trade { background: rgba(212,168,67,0.15); color: var(--yellow); }
+  .tag-growth{ background: rgba(107,189,91,0.15); color: var(--green); }
+  .tag-metals{ background: rgba(176,140,208,0.15); color: var(--purple); }
+  .tag-infl  { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-policy{ background: rgba(201,168,76,0.15); color: var(--accent); }
+  .tag-val   { background: rgba(107,189,91,0.15); color: var(--green); }
+  .tag-vol   { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-semi  { background: rgba(76,201,176,0.15); color: var(--cyan); }
+  .tag-credit{ background: rgba(176,140,208,0.15); color: var(--purple); }
+  .tag-space { background: rgba(201,168,76,0.15); color: var(--accent); }
+  .tag-misc  { background: rgba(138,128,112,0.15); color: var(--muted); }
+  .verdict-bar { background: var(--accent); color: #0a0a08; padding: 14px 20px; border-radius: 8px; margin-bottom: 20px; font-weight: 700; font-size: 1.05em; font-family: 'Noto Serif TC', serif; }
+  .section { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 22px; margin-bottom: 18px; }
+  .section h2 { color: var(--gold); font-size: 1.15em; margin-bottom: 12px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+  .section h3 { color: var(--accent); font-size: 0.95em; margin: 14px 0 6px; }
+  .article { margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid rgba(42,40,32,0.7); }
+  .article:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .article-title { color: var(--text-bright); font-weight: 700; font-size: 0.95em; margin-bottom: 4px; }
+  .article-title-cn { color: var(--muted); font-size: 0.85em; margin-bottom: 8px; }
+  .article p { font-size: 0.9em; margin: 6px 0; }
+  .data-point { background: rgba(201,168,76,0.05); padding: 8px 12px; border-radius: 6px; margin: 8px 0; font-size: 0.85em; border: 1px solid rgba(201,168,76,0.12); }
+  .data-point .num { color: var(--text-bright); font-weight: 700; }
+  .implication { background: rgba(201,168,76,0.06); border-left: 3px solid var(--accent); padding: 10px 14px; margin: 10px 0; border-radius: 0 6px 6px 0; font-size: 0.88em; }
+  .implication .label { color: var(--accent); font-weight: 700; font-size: 0.8em; text-transform: uppercase; margin-bottom: 4px; }
+  .red-team { background: rgba(224,85,69,0.06); border: 1px solid rgba(224,85,69,0.25); border-radius: 8px; padding: 18px; margin: 18px 0; }
+  .red-team-title { color: var(--red); font-weight: 700; font-size: 0.95em; margin-bottom: 10px; font-family: 'Playfair Display', serif; }
+  .red-team ul { padding-left: 18px; }
+  .red-team li { margin: 5px 0; font-size: 0.88em; }
+  .callout { background: rgba(201,168,76,0.06); border: 1px solid rgba(201,168,76,0.25); border-radius: 8px; padding: 18px; margin: 18px 0; }
+  .callout-title { color: var(--accent); font-weight: 700; font-size: 0.95em; margin-bottom: 8px; font-family: 'Playfair Display', 'Noto Serif TC', serif; }
+  .callout ul { padding-left: 18px; }
+  .callout li { margin: 5px 0; font-size: 0.88em; }
+  ul { padding-left: 18px; }
+  li { margin: 4px 0; font-size: 0.88em; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(201,168,76,0.05); padding: 12px; border-radius: 6px; text-align: center; border: 1px solid rgba(201,168,76,0.1); }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: var(--gold); font-family: 'Playfair Display', serif; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
+  .toc { background: rgba(201,168,76,0.04); border: 1px solid rgba(201,168,76,0.18); border-radius: 8px; padding: 16px 20px; margin-bottom: 20px; }
+  .toc-title { color: var(--accent); font-weight: 700; font-size: 0.9em; margin-bottom: 8px; }
+  .toc a { color: var(--accent); text-decoration: none; font-size: 0.88em; }
+  .toc a:hover { text-decoration: underline; color: var(--gold); }
+  .toc ol { padding-left: 20px; }
+  .toc li { margin: 4px 0; }
+  .nav-links { display: flex; justify-content: space-between; margin: 20px 0; font-size: 0.85em; }
+  .nav-links a { color: var(--accent); text-decoration: none; }
+  .nav-links a:hover { text-decoration: underline; color: var(--gold); }
+  .divider { height: 1px; background: linear-gradient(90deg, transparent, var(--accent), transparent); margin: 24px 0; opacity: 0.4; }
+  .footer { text-align: center; color: var(--muted); font-size: 0.75em; margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--border); }
+  .footer a { color: var(--accent); text-decoration: none; }
+</style>
+<script>if(window.self===window.top&&sessionStorage.getItem("student_auth")!=="1"){document.body.innerHTML="";window.location.replace("student.html");}</script>
+</head>
+<body>
+
+<h1>彭博研究摘要</h1>
+<p class="subtitle">第98期 | 動能過熱與系統性去槓桿 — 對沖時刻已至</p>
+<span class="issue-badge">2026年六月中旬更新</span>
+
+<div class="verdict-bar">結論：NDX單日暴跌4.8%觸發CTA止損，但逾半多頭部位未平，再跌90bp-2%恐引爆更大規模拋售。動能交易嚴重超買，趨勢未轉但風險報酬不對稱 — 降低淨多頭、用低動能與防禦板塊對沖，做空長天期美債持有。</div>
+
+<div class="nav-links">
+  <span><a href="newsletter_97_japan.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="toc">
+  <div class="toc-title">目錄</div>
+  <ol>
+    <li><a href="#momentum-overbought">動能 漲得太快，回調在即</a></li>
+    <li><a href="#systematic-unwind">系統性資金 CTA止損已啟動，去槓桿才剛開始</a></li>
+    <li><a href="#measuring-moves">量化波動 用標準差丈量極端行情</a></li>
+    <li><a href="#red-team">Red Team 反面論證</a></li>
+    <li><a href="#takeaways">基金經理人重點摘要</a></li>
+  </ol>
+</div>
+
+<div class="section" id="momentum-overbought">
+  <h2><span class="tag tag-misc">動能</span> 漲得太快，回調在即</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--orange)">11次</div><div class="lbl">1980年以來
+類似動能急漲案例</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">+1個月</div><div class="lbl">動能通常再延續
+後見頂回落</div></div>
+    <div class="stat"><div class="val">未轉空</div><div class="lbl">戰術性看多但
+不宜最大淨多頭</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">動能交易過熱 — 對沖優先於追高</div>
+    <p>股市漲勢底層裂縫漸現，債券殖利率處於多年高位，AI資本支出狂熱推動的動能交易成為核心風險。JPMorgan市場情報團隊（Andrew Tyler主導）維持<span style="color:#f0ebe0;font-weight:700">戰術性看多</span>，但強調「鑑於科技股主導回調的機率升高，我們不會持有最大淨多頭」，認為任何回調將被逢低買入、且持續時間短暫，理由是宏觀微觀強勁、散戶回流、企業回購重啟。Goldman Sachs（Ben Snider主導）則警告：自1980年以來<span style="color:#f0ebe0;font-weight:700">11次</span>類似的急速動能急漲後，動能通常再延續約<span style="color:#f0ebe0;font-weight:700">一個月</span>才見頂回落，且股市接近高位時的動能急漲往往預示其後數月的疲軟回報。投資人目前將市場視為動能與AI受益者的「一筆大交易」，這種高度集中正是脆弱性所在。</p>
+    <div class="data-point">歷史類比案例：<span style="color:#f0ebe0;font-weight:700">11次（1980年起）</span> &nbsp;|&nbsp; 動能延續期：<span style="color:#f0ebe0;font-weight:700">約1個月後見頂</span> &nbsp;|&nbsp; JPMorgan立場：<span style="color:#f0ebe0;font-weight:700">戰術看多但非最大淨多頭</span> &nbsp;|&nbsp; 最大風險：<span style="color:#f0ebe0;font-weight:700">債券波動率</span></div>
+    <div class="implication"><div class="label">投資啟示</div>趨勢未轉但短期報酬不對稱。<span style="color:#f0ebe0;font-weight:700">降低淨多頭曝險、增持低動能股票作對沖</span> — Goldman指低動能股在動能回調期通常跑贏甚至絕對上漲。同時<span style="color:#f0ebe0;font-weight:700">加碼防禦板塊</span>（消費必需品、醫療保健、房地產），這些板塊近月與AI及動能呈負相關。</div>
+  </div>
+
+</div>
+
+<div class="section" id="systematic-unwind">
+  <h2><span class="tag tag-misc">系統性資金</span> CTA止損已啟動，去槓桿才剛開始</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--red)">-4.8%</div><div class="lbl">NDX單日跌幅
+（~-4.7σ）</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">第13差</div><div class="lbl">1985年以來
+最糟sigma跌幅</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">-90bp~2%</div><div class="lbl">再跌此幅
+恐引爆更大拋售</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">系統性股票去槓桿啟動 — NDX觸發止損連鎖</div>
+    <p>BofA系統性資金流監測指出，週五的拋售很可能標誌著系統性股票部位更協調去槓桿的開端 — 此前BofA已警示CTA美股曝險日趨一致（過度共識）。NASDAQ-100全日穩步下跌<span style="color:#f0ebe0;font-weight:700">4.8%</span>，創下自2025年10月以來最大的波動率調整後回撤，亦是1985年以來<span style="color:#f0ebe0;font-weight:700">第13差的sigma跌幅（約-4.7σ）</span>。盤前BofA估算NDX的CTA止損觸發點約在下方<span style="color:#f0ebe0;font-weight:700">4.3%至6.8%</span>，意味最厭惡風險的模型週五已開始去槓桿。但BofA認為<span style="color:#f0ebe0;font-weight:700">至少半數CTA多頭基礎仍完好</span>，再跌<span style="color:#f0ebe0;font-weight:700">約90bp至2%</span>可能觸發更廣泛的平倉。NDX以外部位較有韌性：S&amp;P 500止損點在下方約40bp至2.6%，Russell 2000觸發點則低約2%至5%。逢低買盤或可穩定市場，但任何續跌都可能引爆更大規模系統性平倉、放大跌勢。</p>
+    <div class="data-point">NDX跌幅：<span style="color:#f0ebe0;font-weight:700">-4.8%（~-4.7σ）</span> &nbsp;|&nbsp; 1985年來排名：<span style="color:#f0ebe0;font-weight:700">第13差</span> &nbsp;|&nbsp; CTA止損觸發區：<span style="color:#f0ebe0;font-weight:700">下方4.3%-6.8%</span> &nbsp;|&nbsp; 引爆閾值：<span style="color:#f0ebe0;font-weight:700">再跌90bp-2%</span> &nbsp;|&nbsp; S&amp;P止損點：<span style="color:#f0ebe0;font-weight:700">下方40bp-2.6%</span></div>
+    <div class="implication"><div class="label">投資啟示</div>去槓桿尚未完成、半數多頭仍待平倉，下檔具有反身性加速風險。<span style="color:#f0ebe0;font-weight:700">不宜在此處承接科技多頭、保留乾火藥</span>。關注NDX再跌90bp-2%的關鍵閾值 — 一旦跌破，預期波動率與系統性拋壓將自我強化。</div>
+  </div>
+  <div class="article">
+    <div class="article-title">CTA美債空頭獲熱數據加持 — 做空利率部位對沖股票虧損</div>
+    <p>在股票去槓桿的同時，CTA在美國公債期貨的部位<span style="color:#f0ebe0;font-weight:700">維持淨空</span>，最大曝險集中於較短天期合約。週五<span style="color:#f0ebe0;font-weight:700">強於預期的非農就業報告</span>強化了這些空頭 — 市場因而上修通膨繁榮（inflationary boom）風險、下調降息預期，利率部位的獲利反而<span style="color:#f0ebe0;font-weight:700">抵銷了部分CTA的股票虧損</span>。BofA指出，較長天期的公債空頭仍有建倉空間，尤其在波動率回落的情況下。展望後市，公債的止損風險相對有限。這形成一個關鍵的跨資產對沖結構：當熱數據同時打擊股債估值時，CTA的「股多債空」配置使債券空頭成為股票回調期的天然緩衝。</p>
+    <div class="data-point">CTA公債部位：<span style="color:#f0ebe0;font-weight:700">淨空（集中短天期）</span> &nbsp;|&nbsp; 催化劑：<span style="color:#f0ebe0;font-weight:700">非農超預期</span> &nbsp;|&nbsp; 市場重定價：<span style="color:#f0ebe0;font-weight:700">通膨繁榮風險↑、降息預期↓</span> &nbsp;|&nbsp; 對沖效果：<span style="color:#f0ebe0;font-weight:700">債空獲利抵銷股票虧損</span></div>
+    <div class="implication"><div class="label">投資啟示</div>熱數據環境下，<span style="color:#f0ebe0;font-weight:700">做空長天期美債（或持有現有空頭）</span> 既順勢又能對沖股票下檔。波動率回落時長天期空頭仍有建倉空間。慎防「股債雙殺」情境 — 此時傳統60/40分散失效，需以利率空頭與防禦板塊建構真實對沖。</div>
+  </div>
+
+</div>
+
+<div class="section" id="measuring-moves">
+  <h2><span class="tag tag-misc">量化波動</span> 用標準差丈量極端行情</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--orange)">5.6σ</div><div class="lbl">費城半導體指數
+近期總波幅</div></div>
+    <div class="stat"><div class="val">2σ</div><div class="lbl">Trading Envelopes
+預設上下軌</div></div>
+    <div class="stat"><div class="val">均值回歸</div><div class="lbl">極端價格
+傾向回歸均值</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">如何丈量一個行情有多大 — Trading Envelopes工具</div>
+    <p>Bloomberg的Tom Keene介紹了一個實時判斷行情極端程度的技術工具：Trading Envelopes（交易包絡線）。它圍繞移動均線計算一個包絡帶，<span style="color:#f0ebe0;font-weight:700">預設為均線上下兩個標準差</span>，理論基礎是過度狂熱的買賣方常將價格推至極端、隨後傾向<span style="color:#f0ebe0;font-weight:700">均值回歸</span>。以費城半導體指數（SOX）為例，該指數在3月30日顯著跌破預設的下軌2標準差，而近期又突破上軌。透過試誤法擬合，Keene將上軌調至2.2標準差、下軌調至3.4標準差，得出<span style="color:#f0ebe0;font-weight:700">總波幅達5.6個標準差</span> — 屬於一生中數得出來的罕見事件。但他也提醒長線視角：若將道瓊指數拉至1940年以來的季線，即便最慘的暴跌也只像小波瀾，美股自1942年瓜達康納爾戰役低點以來長期向上。</p>
+    <div class="data-point">工具：<span style="color:#f0ebe0;font-weight:700">SOX Index GP TE &lt;GO&gt;</span> &nbsp;|&nbsp; 預設帶寬：<span style="color:#f0ebe0;font-weight:700">±2標準差</span> &nbsp;|&nbsp; SOX擬合波幅：<span style="color:#f0ebe0;font-weight:700">5.6σ（上2.2σ/下3.4σ）</span> &nbsp;|&nbsp; 關鍵日期：<span style="color:#f0ebe0;font-weight:700">3/30跌破下軌</span> &nbsp;|&nbsp; 理論：<span style="color:#f0ebe0;font-weight:700">均值回歸</span></div>
+    <div class="implication"><div class="label">投資啟示</div>半導體近期的5.6σ波幅印證了AI主導板塊的極端波動性。<span style="color:#f0ebe0;font-weight:700">將標準差作為部位調整的客觀標尺</span> — 觸及極端帶寬時，戰術性減碼追高或逢極端拋售分批承接，而非情緒化追漲殺跌。但勿因短期波動而放棄長線結構性多頭。</div>
+  </div>
+
+</div>
+
+<div class="divider"></div>
+
+<div class="red-team" id="red-team">
+  <div class="red-team-title">&#128308; Red Team — 核心假設與反面論證</div>
+  <ul>
+    <li>假設1：CTA去槓桿是短暫技術性事件，逢低買盤（散戶回流、企業回購）將快速穩定市場</li>
+    <li>假設2：動能與AI交易的『一筆大交易』式集中可透過低動能與防禦板塊有效對沖</li>
+    <li>假設3：CTA股多債空結構能持續提供跨資產對沖，債券空頭可緩衝股票虧損</li>
+    <li style="color:var(--red)">風險1：BofA明言至少半數CTA多頭基礎仍完好，再跌90bp-2%即觸發更廣泛平倉 — 若逢低買盤未如期出現，系統性拋售具反身性自我強化特性，回調可能遠超『短暫』</li>
+    <li style="color:var(--red)">風險2：Goldman歷史類比顯示動能急漲後通常再延續一個月才見頂，意味對沖過早可能付出可觀機會成本；且11次樣本量小、AI資本支出週期是否真能類比歷史存疑</li>
+    <li style="color:var(--red)">風險3：熱數據同時打擊股債估值的『股債雙殺』情境下，若通膨繁榮持續，債券空頭雖獲利但股票跌勢可能加深，淨曝險仍受重創；債空對沖規模有限、無法完全覆蓋股票下檔</li>
+  </ul>
+  <p style="margin-top:10px;padding:10px 14px;background:rgba(224,85,69,0.04);border-radius:6px;font-size:0.9em;border-left:3px solid var(--red)">核心邏輯成立 — 動能超買+系統性部位過度共識+半數CTA多頭未平，構成明確的短期不對稱下行風險，降淨多頭與分散對沖是正確姿態。但須警惕兩個破點：其一，若NDX跌破再跌90bp-2%的閾值且逢低買盤缺席，技術性去槓桿將演變為趨勢性下跌，此時應進一步減碼而非承接；其二，趨勢本身尚未轉空（JPMorgan仍戰術看多、美股長期結構向上），過度對沖或過早做空整體市場將承受機會成本。結論：對沖而非清倉，以低動能/防禦板塊+長天期美債空頭建構真實對沖，並以NDX關鍵閾值作為加碼防禦的客觀觸發點。</p>
+</div>
+
+<div class="callout" id="takeaways">
+  <div class="callout-title">基金經理人重點摘要</div>
+  <ul>
+    <li><strong>動能/AI：</strong>嚴重超買，Goldman指1980年來11次類似急漲後通常再延續1個月才見頂。趨勢未轉但短期報酬不對稱，降低淨多頭曝險。</li>
+    <li><strong>系統性資金：</strong>NDX單日暴跌4.8%（~-4.7σ，1985年來第13差）觸發CTA止損，但逾半多頭未平。再跌90bp-2%恐引爆更大拋售 — 保留乾火藥、勿承接科技多頭。</li>
+    <li><strong>對沖工具：</strong>增持低動能股票與防禦板塊（消費必需品、醫療保健、房地產），近月與AI及動能呈負相關，是動能回調期的有效對沖。</li>
+    <li><strong>利率：</strong>非農超預期強化CTA美債淨空，市場上修通膨繁榮風險。做空長天期美債既順勢又對沖股票下檔，波動率回落時仍有建倉空間。</li>
+    <li><strong>風險閾值：</strong>以NDX再跌90bp-2%作為客觀觸發點 — 一旦跌破且逢低買盤缺席，技術性去槓桿恐轉為趨勢性下跌，須進一步減碼。</li>
+    <li><strong>波動丈量：</strong>SOX近期錄得5.6σ總波幅，AI板塊波動極端。以標準差包絡線作部位調整標尺，觸及極端帶寬時減碼追高、勿情緒化操作。</li>
+  </ul>
+</div>
+
+<div class="nav-links">
+  <span><a href="newsletter_97_japan.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="footer">
+  彭博研究摘要 | 僅供教學與討論用途 | 2026年6月13日<br>
+  資料來源：Bloomberg Intelligence, Bloomberg Economics, Bloomberg News<br>
+  <a href="https://www.patreon.com/Aireturn">Patreon</a> · <a href="https://t.me/AIreturn">Telegram</a> · Threads @aireturn88
+</div>
+
+</body>
+</html>

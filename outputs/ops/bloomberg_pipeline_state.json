@@ -1,6 +1,6 @@
 {
-  "lastRunAt": "2026-06-11T23:29:17+08:00",
-  "lastNewsletterNumber": 97,
+  "lastRunAt": "2026-06-13T00:42:39+08:00",
+  "lastNewsletterNumber": 102,
   "processedFiles": {
     "2026 Outlook Global Aluminum Producers #metals.pdf": {
       "processedAt": "2026-03-26T15:52:49+08:00",
@@ -4147,7 +4147,7 @@
         "credit",
         "valuations"
       ],
-      "newsletterNumber": null
+      "newsletterNumber": 99
     },
     "DUP BI China Russia Summit Post Trump #geopolitics #china #oil.pdf": {
       "processedAt": "2026-06-01T10:37:25+08:00",
@@ -4157,7 +4157,7 @@
         "china",
         "oil"
       ],
-      "newsletterNumber": 81
+      "newsletterNumber": -1
     },
     "EDA Primer From RTL to Silicon #semiconductor.pdf": {
       "processedAt": "2026-06-01T10:37:25+08:00",
@@ -4296,7 +4296,7 @@
         "volatility",
         "rates"
       ],
-      "newsletterNumber": null
+      "newsletterNumber": 98
     },
     "Rupee Globalization Goal Asean to Oil Exporters #trade #policy.pdf": {
       "processedAt": "2026-06-01T10:37:31+08:00",
@@ -4410,7 +4410,7 @@
         "valuations",
         "semiconductor"
       ],
-      "newsletterNumber": null
+      "newsletterNumber": 98
     },
     "BofA US Semiconductors - Global Tech Conf Preview Top Debates #semiconductor #valuations #growth.pdf": {
       "processedAt": "2026-06-11T23:28:44+08:00",
@@ -4494,7 +4494,7 @@
         "valuations",
         "growth"
       ],
-      "newsletterNumber": null
+      "newsletterNumber": -1
     },
     "DUP Surge in US Vacancies to Reduce Fed Job-Market Concerns #growth #rates.pdf": {
       "processedAt": "2026-06-11T23:28:49+08:00",
@@ -4503,7 +4503,7 @@
         "growth",
         "rates"
       ],
-      "newsletterNumber": null
+      "newsletterNumber": -1
     },
     "DUP Week Ahead in Workflows ECB Apple Oracle CPI World Cup Rev1 #inflation #policy.pdf": {
       "processedAt": "2026-06-11T23:28:50+08:00",
@@ -4512,7 +4512,7 @@
         "inflation",
         "policy"
       ],
-      "newsletterNumber": null
+      "newsletterNumber": -1
     },
     "Euro Bulls Eyeing 1.20 Cannot Rely on CPI-Led Hawkish ECB #inflation #policy #oil.pdf": {
       "processedAt": "2026-06-11T23:28:50+08:00",
@@ -4670,7 +4670,7 @@
         "policy",
         "rates"
       ],
-      "newsletterNumber": null
+      "newsletterNumber": 100
     },
     "Pentagon Expands 1260H Military List Tests US-China Detente #china #geopolitics.pdf": {
       "processedAt": "2026-06-11T23:29:08+08:00",
@@ -4790,7 +4790,7 @@
         "inflation",
         "valuations"
       ],
-      "newsletterNumber": null
+      "newsletterNumber": 101
     },
     "When Will Bitcoins Pain End - Watch These Charts #geopolitics #volatility.pdf": {
       "processedAt": "2026-06-11T23:29:17+08:00",
@@ -4800,6 +4800,75 @@
         "volatility"
       ],
       "newsletterNumber": 91
+    },
+    "BE G7 Summit Evian Cohesion Fading Best Hope Avoid New Rifts #geopolitics #trade #china.pdf": {
+      "processedAt": "2026-06-13T00:42:37+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\BE G7 Summit Evian Cohesion Fading Best Hope Avoid New Rifts.md",
+      "topics": [
+        "geopolitics",
+        "trade",
+        "china"
+      ],
+      "newsletterNumber": 102
+    },
+    "Can Demand Destruction Outrun Supply Shock as Oil Stocks Dry Up #oil #growth.pdf": {
+      "processedAt": "2026-06-13T00:42:37+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\Can Demand Destruction Outrun Supply Shock as Oil Stocks Dry Up.md",
+      "topics": [
+        "oil",
+        "growth"
+      ],
+      "newsletterNumber": 101
+    },
+    "CHINA REACT Slowing Credit Shows Deleveraging Amid Tech Pivot #china #credit #growth.pdf": {
+      "processedAt": "2026-06-13T00:42:37+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\CHINA REACT Slowing Credit Shows Deleveraging Amid Tech Pivot.md",
+      "topics": [
+        "china",
+        "credit",
+        "growth"
+      ],
+      "newsletterNumber": 99
+    },
+    "DUP CHINA REACT Slowing Credit Shows Deleveraging Amid Tech Pivot ZH #china #credit #growth.pdf": {
+      "processedAt": "2026-06-13T00:42:37+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\DUP CHINA REACT Slowing Credit Shows Deleveraging Amid Tech Pivot ZH.md",
+      "topics": [
+        "china",
+        "credit",
+        "growth"
+      ],
+      "newsletterNumber": -1
+    },
+    "How Big Is That Move Use This Charting Tool #volatility #valuations.pdf": {
+      "processedAt": "2026-06-13T00:42:38+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\How Big Is That Move Use This Charting Tool.md",
+      "topics": [
+        "volatility",
+        "valuations"
+      ],
+      "newsletterNumber": 98
+    },
+    "Peru Needs Higher Rates to Contain Inflationary Pressures #rates #inflation #growth #policy.pdf": {
+      "processedAt": "2026-06-13T00:42:39+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\Peru Needs Higher Rates to Contain Inflationary Pressures.md",
+      "topics": [
+        "rates",
+        "inflation",
+        "growth",
+        "policy"
+      ],
+      "newsletterNumber": 102
+    },
+    "US REACT Cheaper Gas Lifts Sentiment Tempers Inflation Views #inflation #oil #policy.pdf": {
+      "processedAt": "2026-06-13T00:42:39+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\US REACT Cheaper Gas Lifts Sentiment Tempers Inflation Views.md",
+      "topics": [
+        "inflation",
+        "oil",
+        "policy"
+      ],
+      "newsletterNumber": 100
     }
   },
   "newsletters": {
@@ -5536,6 +5605,50 @@
       "articleCount": 3,
       "topics": [
         "japan"
+      ]
+    },
+    "98": {
+      "filename": "newsletter_98_volatility.html",
+      "generatedAt": "2026-06-13T00:50:16+08:00",
+      "articleCount": 3,
+      "topics": [
+        "volatility"
+      ]
+    },
+    "99": {
+      "filename": "newsletter_99_credit_china.html",
+      "generatedAt": "2026-06-13T00:51:20+08:00",
+      "articleCount": 2,
+      "topics": [
+        "credit",
+        "china"
+      ]
+    },
+    "100": {
+      "filename": "newsletter_100_policy_inflation.html",
+      "generatedAt": "2026-06-13T00:52:26+08:00",
+      "articleCount": 2,
+      "topics": [
+        "policy",
+        "inflation"
+      ]
+    },
+    "101": {
+      "filename": "newsletter_101_metals_oil.html",
+      "generatedAt": "2026-06-13T00:53:41+08:00",
+      "articleCount": 2,
+      "topics": [
+        "metals",
+        "oil"
+      ]
+    },
+    "102": {
+      "filename": "newsletter_102_geopolitics_rates.html",
+      "generatedAt": "2026-06-13T00:55:00+08:00",
+      "articleCount": 2,
+      "topics": [
+        "geopolitics",
+        "rates"
       ]
     }
   },

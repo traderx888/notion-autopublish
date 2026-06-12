@@ -38,8 +38,8 @@ from tools.bloomberg_pdf_convert import (
 
 OUTPUT_DIR = REPO_ROOT / "output"
 STUDENT_HTML = OUTPUT_DIR / "student.html"
-MIN_ARTICLES = 3
-MAX_ARTICLES = 10  # split large topic groups to stay within Claude synthesis limits
+MIN_ARTICLES = 2
+MAX_ARTICLES = 8  # split large topic groups to stay within Claude synthesis limits
 
 # ---------------------------------------------------------------------------
 # Topic metadata
@@ -68,74 +68,81 @@ CARD_ICONS = ["&#128202;", "&#127975;", "&#128165;", "&#128176;", "&#127760;", "
 # CSS (from newsletter_5)
 # ---------------------------------------------------------------------------
 NEWSLETTER_CSS = """\
-  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --accent: #58a6ff;
-          --green: #3fb950; --red: #f85149; --yellow: #d29922; --text: #c9d1d9; --muted: #8b949e;
-          --orange: #f0883e; --purple: #bc8cff; --cyan: #39d2c0; }
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Noto+Serif+TC:wght@400;700&family=Source+Sans+Pro:wght@400;600;700&display=swap');
+  :root { --bg: #0a0a08; --card: #141410; --border: #2a2820; --accent: #c9a84c;
+          --gold: #f0d87a; --gold-dim: #c4b896; --text: #e0d8c8; --text-bright: #f0ebe0; --muted: #8a8070;
+          --green: #6bbd5b; --red: #e05545; --yellow: #d4a843; --orange: #d49040;
+          --purple: #b08cd0; --cyan: #4cc9b0; }
   * { margin: 0; padding: 0; box-sizing: border-box; }
-  body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans TC', 'Microsoft JhengHei', Helvetica, Arial, sans-serif; line-height: 1.7; padding: 20px; max-width: 860px; margin: 0 auto; }
-  h1 { color: #fff; font-size: 1.7em; margin-bottom: 4px; }
-  .subtitle { color: var(--muted); font-size: 0.9em; margin-bottom: 8px; }
-  .issue-badge { display: inline-block; background: rgba(88,166,255,0.15); color: var(--accent); padding: 3px 10px; border-radius: 12px; font-size: 0.8em; font-weight: 600; margin-bottom: 20px; }
+  html, body { background: #0a0a08 !important; }
+  body { color: var(--text); font-family: 'Source Sans Pro', 'Noto Serif TC', 'Microsoft JhengHei', sans-serif; line-height: 1.8; padding: 24px; max-width: 880px; margin: 0 auto; }
+  h1 { font-family: 'Playfair Display', 'Noto Serif TC', serif; color: var(--gold); font-size: 1.8em; margin-bottom: 4px; font-weight: 900; letter-spacing: 0.02em; }
+  h2 { font-family: 'Playfair Display', 'Noto Serif TC', serif; }
+  .subtitle { color: var(--text-bright); font-size: 0.95em; margin-bottom: 8px; font-family: 'Noto Serif TC', serif; }
+  .issue-badge { display: inline-block; background: rgba(201,168,76,0.15); color: var(--accent); padding: 4px 12px; border-radius: 12px; font-size: 0.8em; font-weight: 600; margin-bottom: 20px; border: 1px solid rgba(201,168,76,0.3); }
   .tag { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 0.72em; font-weight: 600; margin-right: 4px; }
-  .tag-rates { background: rgba(88,166,255,0.15); color: var(--accent); }
-  .tag-china { background: rgba(240,136,62,0.15); color: var(--orange); }
-  .tag-japan { background: rgba(248,81,73,0.15); color: var(--red); }
-  .tag-geo   { background: rgba(248,81,73,0.15); color: var(--red); }
-  .tag-oil   { background: rgba(210,153,34,0.15); color: var(--yellow); }
-  .tag-trade { background: rgba(210,153,34,0.15); color: var(--yellow); }
-  .tag-growth{ background: rgba(63,185,80,0.15); color: var(--green); }
-  .tag-metals{ background: rgba(188,140,255,0.15); color: var(--purple); }
-  .tag-infl  { background: rgba(248,81,73,0.15); color: var(--red); }
-  .tag-policy{ background: rgba(88,166,255,0.15); color: var(--accent); }
-  .tag-val   { background: rgba(63,185,80,0.15); color: var(--green); }
-  .tag-vol   { background: rgba(248,81,73,0.15); color: var(--red); }
-  .tag-semi  { background: rgba(57,210,192,0.15); color: var(--cyan); }
-  .tag-credit{ background: rgba(188,140,255,0.15); color: var(--purple); }
-  .tag-space { background: rgba(88,166,255,0.15); color: var(--accent); }
-  .tag-misc  { background: rgba(139,148,158,0.15); color: var(--muted); }
-  .section { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 16px; }
-  .section h2 { color: #fff; font-size: 1.15em; margin-bottom: 12px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+  .tag-rates { background: rgba(201,168,76,0.15); color: var(--accent); }
+  .tag-china { background: rgba(212,144,64,0.15); color: var(--orange); }
+  .tag-japan { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-geo   { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-oil   { background: rgba(212,168,67,0.15); color: var(--yellow); }
+  .tag-trade { background: rgba(212,168,67,0.15); color: var(--yellow); }
+  .tag-growth{ background: rgba(107,189,91,0.15); color: var(--green); }
+  .tag-metals{ background: rgba(176,140,208,0.15); color: var(--purple); }
+  .tag-infl  { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-policy{ background: rgba(201,168,76,0.15); color: var(--accent); }
+  .tag-val   { background: rgba(107,189,91,0.15); color: var(--green); }
+  .tag-vol   { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-semi  { background: rgba(76,201,176,0.15); color: var(--cyan); }
+  .tag-credit{ background: rgba(176,140,208,0.15); color: var(--purple); }
+  .tag-space { background: rgba(201,168,76,0.15); color: var(--accent); }
+  .tag-misc  { background: rgba(138,128,112,0.15); color: var(--muted); }
+  .verdict-bar { background: var(--accent); color: #0a0a08; padding: 14px 20px; border-radius: 8px; margin-bottom: 20px; font-weight: 700; font-size: 1.05em; font-family: 'Noto Serif TC', serif; }
+  .section { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 22px; margin-bottom: 18px; }
+  .section h2 { color: var(--gold); font-size: 1.15em; margin-bottom: 12px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
   .section h3 { color: var(--accent); font-size: 0.95em; margin: 14px 0 6px; }
-  .article { margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .article { margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid rgba(42,40,32,0.7); }
   .article:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
-  .article-title { color: #fff; font-weight: 700; font-size: 0.95em; margin-bottom: 4px; }
+  .article-title { color: var(--text-bright); font-weight: 700; font-size: 0.95em; margin-bottom: 4px; }
   .article-title-cn { color: var(--muted); font-size: 0.85em; margin-bottom: 8px; }
   .article p { font-size: 0.9em; margin: 6px 0; }
-  .data-point { background: rgba(255,255,255,0.03); padding: 8px 12px; border-radius: 6px; margin: 8px 0; font-size: 0.85em; }
-  .data-point .num { color: #fff; font-weight: 700; }
-  .implication { background: rgba(88,166,255,0.06); border-left: 3px solid var(--accent); padding: 10px 14px; margin: 10px 0; border-radius: 0 6px 6px 0; font-size: 0.88em; }
+  .data-point { background: rgba(201,168,76,0.05); padding: 8px 12px; border-radius: 6px; margin: 8px 0; font-size: 0.85em; border: 1px solid rgba(201,168,76,0.12); }
+  .data-point .num { color: var(--text-bright); font-weight: 700; }
+  .implication { background: rgba(201,168,76,0.06); border-left: 3px solid var(--accent); padding: 10px 14px; margin: 10px 0; border-radius: 0 6px 6px 0; font-size: 0.88em; }
   .implication .label { color: var(--accent); font-weight: 700; font-size: 0.8em; text-transform: uppercase; margin-bottom: 4px; }
-  .callout { background: rgba(210,153,34,0.08); border: 1px solid rgba(210,153,34,0.3); border-radius: 6px; padding: 16px; margin: 16px 0; }
-  .callout-title { color: var(--yellow); font-weight: 700; font-size: 0.95em; margin-bottom: 8px; }
+  .red-team { background: rgba(224,85,69,0.06); border: 1px solid rgba(224,85,69,0.25); border-radius: 8px; padding: 18px; margin: 18px 0; }
+  .red-team-title { color: var(--red); font-weight: 700; font-size: 0.95em; margin-bottom: 10px; font-family: 'Playfair Display', serif; }
+  .red-team ul { padding-left: 18px; }
+  .red-team li { margin: 5px 0; font-size: 0.88em; }
+  .callout { background: rgba(201,168,76,0.06); border: 1px solid rgba(201,168,76,0.25); border-radius: 8px; padding: 18px; margin: 18px 0; }
+  .callout-title { color: var(--accent); font-weight: 700; font-size: 0.95em; margin-bottom: 8px; font-family: 'Playfair Display', 'Noto Serif TC', serif; }
   .callout ul { padding-left: 18px; }
-  .callout li { margin: 4px 0; font-size: 0.88em; }
+  .callout li { margin: 5px 0; font-size: 0.88em; }
   ul { padding-left: 18px; }
-  li { margin: 3px 0; font-size: 0.88em; }
+  li { margin: 4px 0; font-size: 0.88em; }
   .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
-  .stat { background: rgba(255,255,255,0.03); padding: 12px; border-radius: 6px; text-align: center; }
-  .stat .val { font-size: 1.4em; font-weight: 700; color: #fff; }
+  .stat { background: rgba(201,168,76,0.05); padding: 12px; border-radius: 6px; text-align: center; border: 1px solid rgba(201,168,76,0.1); }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: var(--gold); font-family: 'Playfair Display', serif; }
   .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
-  .toc { background: rgba(88,166,255,0.05); border: 1px solid rgba(88,166,255,0.2); border-radius: 8px; padding: 16px 20px; margin-bottom: 20px; }
+  .toc { background: rgba(201,168,76,0.04); border: 1px solid rgba(201,168,76,0.18); border-radius: 8px; padding: 16px 20px; margin-bottom: 20px; }
   .toc-title { color: var(--accent); font-weight: 700; font-size: 0.9em; margin-bottom: 8px; }
   .toc a { color: var(--accent); text-decoration: none; font-size: 0.88em; }
-  .toc a:hover { text-decoration: underline; }
+  .toc a:hover { text-decoration: underline; color: var(--gold); }
   .toc ol { padding-left: 20px; }
   .toc li { margin: 4px 0; }
   .nav-links { display: flex; justify-content: space-between; margin: 20px 0; font-size: 0.85em; }
   .nav-links a { color: var(--accent); text-decoration: none; }
-  .nav-links a:hover { text-decoration: underline; }
-  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
-  .stat { background: rgba(255,255,255,0.03); padding: 12px; border-radius: 6px; text-align: center; }
-  .stat .val { font-size: 1.4em; font-weight: 700; color: #fff; }
-  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
-  .footer { text-align: center; color: var(--muted); font-size: 0.75em; margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--border); }"""
+  .nav-links a:hover { text-decoration: underline; color: var(--gold); }
+  .divider { height: 1px; background: linear-gradient(90deg, transparent, var(--accent), transparent); margin: 24px 0; opacity: 0.4; }
+  .footer { text-align: center; color: var(--muted); font-size: 0.75em; margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--border); }
+  .footer a { color: var(--accent); text-decoration: none; }"""
 
 
 # ---------------------------------------------------------------------------
 # Claude editorial synthesis prompt
 # ---------------------------------------------------------------------------
 SYNTHESIS_PROMPT = """\
-You are an editorial assistant for a fund management research newsletter targeting finance students in Hong Kong.
+You are an editorial assistant for a fund management research newsletter (學海無涯) targeting finance students in Hong Kong.
 
 You will receive raw Bloomberg research articles grouped by topic. Your job is to synthesize them into a structured newsletter in JSON format.
 
@@ -145,6 +152,7 @@ You will receive raw Bloomberg research articles grouped by topic. Your job is t
 {
   "title_zh": "央行困局與全球利率前景",
   "title_en": "Central Bank Dilemma & Global Rate Outlook",
+  "verdict_zh": "結論：聯準會上半年按兵不動，下半年降息路徑仍在，做多前端利率期貨",
   "sections": [
     {
       "id": "section-anchor",
@@ -166,6 +174,11 @@ You will receive raw Bloomberg research articles grouped by topic. Your job is t
       ]
     }
   ],
+  "red_team": {
+    "assumptions": ["假設1：聯準會有足夠空間在下半年降息", "假設2：通膨壓力將在Q2見頂"],
+    "counter_evidence": ["風險1：若油價因中東衝突持續升溫，CPI可能連續超預期", "風險2：就業市場韌性或延緩Fed轉向時機"],
+    "editorial_verdict": "核心邏輯仍成立，但油價尾部風險需對沖。若Brent突破$130且持續兩個月以上，降息敘事將被推遲至2027。"
+  },
   "fund_manager_takeaways": [
     "<strong>聯準會：</strong>上半年按兵不動。PCE通膨預計5月見頂。做多前端利率期貨。",
     "<strong>日銀：</strong>3月持有0.75%，但4月加息概率高。"
@@ -176,14 +189,16 @@ You will receive raw Bloomberg research articles grouped by topic. Your job is t
 ## Rules
 
 1. **Language**: Write primarily in Traditional Chinese (繁體中文). Use English for proper nouns, tickers, and technical terms.
-2. **Stat grids**: Extract 3 key numbers per section. Use color "red" for negative/risk, "orange" for warning, "green" for positive, "" for neutral.
-3. **Article summaries**: Write 100-150 words of narrative prose per article. Bold key numbers with **double asterisks**. Don't just list facts — tell a story.
-4. **Data points**: Structured "label: **value**" pairs separated by " | ". Extract 2-4 key metrics.
-5. **Investment implications**: Actionable advice for fund managers. Be specific (e.g., "做多前端利率期貨", "減持日圓套利"). Bold the action.
-6. **Fund manager takeaways**: 3-6 bullet points covering all sections. Each starts with a bold category label followed by colon. Mix facts + actions.
-7. **Sections**: Group related articles into 3-5 sections. Each section has a short punchy Chinese heading.
-8. **Don't invent data**: Only use numbers and facts from the source articles.
-9. Output ONLY the JSON, no markdown fences, no explanation.
+2. **Verdict (結論先行)**: One bold sentence at the top summarizing the key takeaway and recommended action. Be specific and actionable.
+3. **Stat grids**: Extract 3 key numbers per section. Use color "red" for negative/risk, "orange" for warning, "green" for positive, "" for neutral.
+4. **Article summaries**: Write 100-150 words of narrative prose per article. Bold key numbers with **double asterisks**. Don't just list facts — tell a story.
+5. **Data points**: Structured "label: **value**" pairs separated by " | ". Extract 2-4 key metrics.
+6. **Investment implications**: Actionable advice for fund managers. Be specific (e.g., "做多前端利率期貨", "減持日圓套利"). Bold the action.
+7. **Red Team (必須)**: Identify 2-3 core assumptions of the thesis, provide counter-evidence for each, then give an editorial verdict with hard data on whether the thesis holds or breaks.
+8. **Fund manager takeaways**: 3-6 bullet points covering all sections. Each starts with a bold category label followed by colon. Mix facts + actions.
+9. **Sections**: Group related articles into 2-4 sections. Each section has a short punchy Chinese heading.
+10. **Don't invent data**: Only use numbers and facts from the source articles.
+11. Output ONLY the JSON, no markdown fences, no explanation.
 
 ## Source Articles
 
@@ -249,12 +264,16 @@ def _merge_small_groups(
     affinity = {
         "rates": {"japan", "inflation", "policy", "credit"},
         "japan": {"rates", "inflation", "policy"},
-        "china": {"trade", "growth", "credit"},
-        "trade": {"china", "policy", "growth"},
-        "geopolitics": {"oil", "volatility"},
-        "oil": {"geopolitics", "metals"},
-        "metals": {"oil", "china", "growth"},
-        "growth": {"china", "trade", "valuations"},
+        "china": {"trade", "growth", "credit", "geopolitics"},
+        "trade": {"china", "policy", "growth", "geopolitics"},
+        "geopolitics": {"oil", "volatility", "china", "trade", "policy"},
+        "oil": {"geopolitics", "metals", "inflation", "growth"},
+        "metals": {"oil", "china", "growth", "inflation"},
+        "growth": {"china", "trade", "valuations", "policy"},
+        "credit": {"rates", "china", "valuations"},
+        "policy": {"rates", "inflation", "growth", "geopolitics"},
+        "inflation": {"rates", "policy", "oil"},
+        "valuations": {"growth", "volatility", "credit"},
     }
     used: set[str] = set()
     newsletters: list[tuple[list[str], list[dict]]] = []
@@ -275,6 +294,23 @@ def _merge_small_groups(
                     if len(articles) >= min_size:
                         break
         newsletters.append((merged_topics, articles))
+
+    # Second pass: merge remaining small groups into a catch-all "global macro" issue
+    small = [(t, a) for t, a in newsletters if len(a) < min_size]
+    ok = [(t, a) for t, a in newsletters if len(a) >= min_size]
+    if small:
+        leftover_topics: list[str] = []
+        leftover_articles: list[dict] = []
+        for topics_list, arts in small:
+            leftover_topics.extend(topics_list)
+            leftover_articles.extend(arts)
+        if leftover_articles:
+            for i in range(0, len(leftover_articles), 6):
+                chunk = leftover_articles[i:i + 6]
+                chunk_topics = list(dict.fromkeys(leftover_topics))[:3]
+                ok.append((chunk_topics, chunk))
+        newsletters = ok
+
     return newsletters
 
 
@@ -407,7 +443,7 @@ def _bold_to_html(text: str) -> str:
     """Convert **bold** markdown to <span> with white bold styling."""
     return re.sub(
         r"\*\*(.+?)\*\*",
-        r'<span style="color:#fff;font-weight:700">\1</span>',
+        r'<span style="color:#f0ebe0;font-weight:700">\1</span>',
         text,
     )
 
@@ -478,7 +514,35 @@ def _render_section_html(section: dict, topics: list[str]) -> str:
 <div class="section" id="{section_id}">
   <h2><span class="tag {css_class}">{tag_zh}</span> {heading}</h2>
 {stats_html}
-{articles_html}</div>"""
+{articles_html}
+</div>"""
+
+
+def _render_red_team_html(red_team: dict) -> str:
+    """Render the Red Team section from synthesized data."""
+    if not red_team:
+        return ""
+    assumptions = red_team.get("assumptions", [])
+    counter = red_team.get("counter_evidence", [])
+    verdict = red_team.get("editorial_verdict", "")
+
+    items_html = ""
+    for a in assumptions:
+        items_html += f"    <li>{html_mod.escape(a)}</li>\n"
+    for c in counter:
+        items_html += f'    <li style="color:var(--red)">{html_mod.escape(c)}</li>\n'
+
+    verdict_html = ""
+    if verdict:
+        verdict_escaped = _bold_to_html(html_mod.escape(verdict))
+        verdict_html = f'\n  <p style="margin-top:10px;padding:10px 14px;background:rgba(224,85,69,0.04);border-radius:6px;font-size:0.9em;border-left:3px solid var(--red)">{verdict_escaped}</p>'
+
+    return f"""\
+<div class="red-team" id="red-team">
+  <div class="red-team-title">&#128308; Red Team — 核心假設與反面論證</div>
+  <ul>
+{items_html}  </ul>{verdict_html}
+</div>"""
 
 
 def render_newsletter_html(
@@ -490,6 +554,12 @@ def render_newsletter_html(
     """Render the full newsletter HTML from synthesized editorial content."""
     title_zh = synthesized.get("title_zh", "研究摘要")
     title_en = synthesized.get("title_en", "Research Summary")
+
+    # Verdict bar
+    verdict_zh = synthesized.get("verdict_zh", "")
+    verdict_html = ""
+    if verdict_zh:
+        verdict_html = f'\n<div class="verdict-bar">{html_mod.escape(verdict_zh)}</div>\n'
 
     # TOC
     toc_items = ""
@@ -503,6 +573,9 @@ def render_newsletter_html(
     sections_html = "\n\n".join(
         _render_section_html(s, topics) for s in sections
     )
+
+    # Red Team section
+    red_team_html = _render_red_team_html(synthesized.get("red_team", {}))
 
     # Fund manager takeaways
     takeaways = synthesized.get("fund_manager_takeaways", [])
@@ -539,7 +612,7 @@ def render_newsletter_html(
 <h1>彭博研究摘要</h1>
 <p class="subtitle">第{number}期 | {title_zh}</p>
 <span class="issue-badge">{month_label}更新</span>
-
+{verdict_html}
 <div class="nav-links">
   {prev_link}
   <span><a href="student.html">返回目錄 &rarr;</a></span>
@@ -548,11 +621,16 @@ def render_newsletter_html(
 <div class="toc">
   <div class="toc-title">目錄</div>
   <ol>
-{toc_items}    <li><a href="#takeaways">基金經理人重點摘要</a></li>
+{toc_items}    <li><a href="#red-team">Red Team 反面論證</a></li>
+    <li><a href="#takeaways">基金經理人重點摘要</a></li>
   </ol>
 </div>
 
 {sections_html}
+
+<div class="divider"></div>
+
+{red_team_html}
 
 {takeaways_html}
 
@@ -563,7 +641,8 @@ def render_newsletter_html(
 
 <div class="footer">
   彭博研究摘要 | 僅供教學與討論用途 | {date_label}<br>
-  資料來源：Bloomberg Intelligence, Bloomberg Economics, Bloomberg News
+  資料來源：Bloomberg Intelligence, Bloomberg Economics, Bloomberg News<br>
+  <a href="https://www.patreon.com/Aireturn">Patreon</a> · <a href="https://t.me/AIreturn">Telegram</a> · Threads @aireturn88
 </div>
 
 </body>
