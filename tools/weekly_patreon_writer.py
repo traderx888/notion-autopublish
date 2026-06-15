@@ -18,8 +18,14 @@ Behavior:
       (.git, __pycache__, node_modules, .venv).
     - Includes files with mtime in [since, until). Default window =
       last 7 days ending today.
-    - Emits one markdown section per file with relative path, mtime, size,
-      and (for text-ish files under a size cap) the head of the file body.
+    - For PDFs (Bloomberg exports), extracts text via pypdf + strips
+      Bloomberg disclaimer boilerplate via shared helpers in
+      `tools.bloomberg_pdf_convert`. Pulls #hashtag topics and a clean
+      title from the filename.
+    - For other text-ish files under a size cap, embeds the raw head.
+    - Anything else: metadata only.
+    - Extraction failures are non-fatal — the entry still appears with a
+      note instead of body.
     - Designed to be idempotent and safe to re-run.
 """
 
@@ -31,14 +37,21 @@ import sys
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
+REPO_ROOT = Path(__file__).resolve().parents[1]
+if str(REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(REPO_ROOT))
+
 
 SKIP_DIRS = {".git", "__pycache__", "node_modules", ".venv", ".idea", ".vscode"}
 TEXT_EXTS = {
     ".md", ".txt", ".csv", ".json", ".yaml", ".yml", ".log", ".py",
     ".ipynb", ".html", ".xml", ".tsv", ".rst", ".cfg", ".ini",
 }
+PDF_EXTS = {".pdf"}
 HEAD_BYTES = 4000
 MAX_FILES = 500
+# PDFs can be much larger on disk than the text they yield — cap separately.
+PDF_MAX_BYTES = 25 * 1024 * 1024
 
 
 def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
@@ -105,6 +118,33 @@ def _read_head(path: Path, n: int) -> str:
         return raw.decode("utf-8", errors="replace")
 
 
+def extract_pdf(path: Path, n_chars: int) -> dict:
+    """Extract a Bloomberg-style PDF into title, topics and a cleaned text head.
+
+    Returns {title, topics, body, error}. `error` is None on success. Reuses the
+    helpers in tools.bloomberg_pdf_convert so disclaimer/footer scrubbing stays
+    consistent with the existing newsletter pipeline."""
+    try:
+        from tools.bloomberg_pdf_convert import (  # type: ignore[import-not-found]
+            extract_pdf_text,
+            parse_topics,
+            strip_disclaimers,
+            title_from_filename,
+        )
+    except ImportError as e:
+        return {"title": path.stem, "topics": [], "body": "", "error": f"import failed: {e}"}
+
+    title = title_from_filename(path.name)
+    topics = parse_topics(path.name)
+    try:
+        raw = extract_pdf_text(path)
+    except Exception as e:  # pypdf raises a zoo of errors; non-fatal
+        return {"title": title, "topics": topics, "body": "", "error": f"extract failed: {e}"}
+
+    cleaned = strip_disclaimers(raw)
+    return {"title": title, "topics": topics, "body": cleaned[:n_chars], "error": None}
+
+
 def render_bundle(
     root: Path,
     since: datetime,
@@ -125,16 +165,31 @@ def render_bundle(
     ]
     for h in hits:
         size_kb = h["size"] / 1024
+        suffix = h["path"].suffix.lower()
         lines.append(f"## `{h['rel']}`")
         lines.append("")
         lines.append(f"- mtime: {h['mtime'].strftime('%Y-%m-%dT%H:%M:%SZ')}")
         lines.append(f"- size: {size_kb:.1f} KB")
-        if h["path"].suffix.lower() in TEXT_EXTS and h["size"] <= head_bytes * 4:
+
+        if suffix in PDF_EXTS and h["size"] <= PDF_MAX_BYTES:
+            pdf = extract_pdf(h["path"], head_bytes)
+            lines.append(f"- title: {pdf['title']}")
+            if pdf["topics"]:
+                lines.append(f"- tags: {' '.join('#' + t for t in pdf['topics'])}")
+            if pdf["error"]:
+                lines.append(f"- extract: {pdf['error']}")
+            elif pdf["body"]:
+                lines.append("")
+                lines.append("```")
+                lines.append(pdf["body"].rstrip())
+                lines.append("```")
+        elif suffix in TEXT_EXTS and h["size"] <= head_bytes * 4:
             head = _read_head(h["path"], head_bytes)
             lines.append("")
             lines.append("```")
             lines.append(head.rstrip())
             lines.append("```")
+
         lines.append("")
     return "\n".join(lines) + "\n"
 

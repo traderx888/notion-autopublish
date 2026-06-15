@@ -53,7 +53,12 @@ python tools/weekly_patreon_writer.py \
 ```
 
 Default window = 過去 7 天。
-Script 會掃 `--root` 下這週改過的檔，把文字檔 head 嵌進 bundle，二進制檔只列 metadata。
+Script 會掃 `--root` 下這週改過的檔：
+- **PDF**（BBG / GS / BofA exports）：透過 `tools.bloomberg_pdf_convert` 共用 helper 抽文字（pypdf）+ 剝 disclaimer + 從檔名抽 `#topic` 標籤 + 抽 title。`PDF_MAX_BYTES` 25MB 上限。萃取失敗只記 metadata，**不會中斷整個 bundle**。
+- **文字類**（`.md` `.txt` `.csv` `.json` …）：直接嵌 UTF-8 head。
+- **其他**：metadata only。
+
+bundle 推 commit 上 PR branch（不要 paste 內容，太長）— 我這邊 `git checkout <commit> -- outputs/weekly/<YYYY-Www>-blp-bundle.md` 就能拿到。
 
 ### 4. 小流合稿
 

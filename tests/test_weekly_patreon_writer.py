@@ -133,3 +133,94 @@ def test_main_round_trip(tmp_path):
     text = out.read_text(encoding="utf-8")
     assert "pdf" in text and "report.txt" in text
     assert "content" in text
+
+
+def test_extract_pdf_happy_path(tmp_path, monkeypatch):
+    fake = tmp_path / "BOFA Hartnett Flow Show #equities #ai.pdf"
+    fake.write_bytes(b"%PDF-1.4 stub")  # real bytes don't matter; we stub the readers
+
+    def fake_extract_pdf_text(path):
+        return ("Header noise\n"
+                "Page 1 of 8\n"
+                "Real article body line one.\n"
+                "Real article body line two.\n")
+
+    monkeypatch.setattr("tools.bloomberg_pdf_convert.extract_pdf_text", fake_extract_pdf_text)
+
+    out = mod.extract_pdf(fake, 200)
+    assert out["error"] is None
+    assert "Real article body line one" in out["body"]
+    assert "Page 1 of 8" not in out["body"]  # disclaimer scrubber ran
+    assert out["topics"] == ["equities", "ai"]
+    assert out["title"] == "BOFA Hartnett Flow Show"
+
+
+def test_extract_pdf_truncates_body(tmp_path, monkeypatch):
+    fake = tmp_path / "big.pdf"
+    fake.write_bytes(b"%PDF-1.4")
+    monkeypatch.setattr(
+        "tools.bloomberg_pdf_convert.extract_pdf_text",
+        lambda p: "abcdef" * 1000,
+    )
+    out = mod.extract_pdf(fake, n_chars := 50)
+    assert out["error"] is None
+    assert len(out["body"]) == n_chars
+
+
+def test_extract_pdf_extract_failure_is_non_fatal(tmp_path, monkeypatch):
+    fake = tmp_path / "broken.pdf"
+    fake.write_bytes(b"not a real pdf")
+
+    def boom(path):
+        raise ValueError("malformed pdf")
+
+    monkeypatch.setattr("tools.bloomberg_pdf_convert.extract_pdf_text", boom)
+    out = mod.extract_pdf(fake, 100)
+    assert out["body"] == ""
+    assert "malformed pdf" in out["error"]
+    assert out["title"] == "broken"
+
+
+def test_render_bundle_uses_pdf_extractor(tmp_path, monkeypatch):
+    pdf = tmp_path / "Article #china.pdf"
+    pdf.write_bytes(b"%PDF-1.4 stub")
+    monkeypatch.setattr(
+        "tools.bloomberg_pdf_convert.extract_pdf_text",
+        lambda p: "PBoC liquidity slumped in April per daily data.",
+    )
+    hits = [{
+        "path": pdf,
+        "rel": "Article #china.pdf",
+        "mtime": datetime.now(timezone.utc),
+        "size": pdf.stat().st_size,
+    }]
+    now = datetime.now(timezone.utc)
+    out = mod.render_bundle(tmp_path, now - timedelta(days=1), now, hits)
+    assert "PBoC liquidity slumped" in out
+    assert "tags: #china" in out
+    assert "title: Article" in out
+
+
+def test_render_bundle_skips_pdf_body_over_size_cap(tmp_path, monkeypatch):
+    pdf = tmp_path / "huge.pdf"
+    pdf.write_bytes(b"%PDF-1.4")
+    called = {"n": 0}
+
+    def fake_extract(p):
+        called["n"] += 1
+        return "should not appear"
+
+    monkeypatch.setattr("tools.bloomberg_pdf_convert.extract_pdf_text", fake_extract)
+    hits = [{
+        "path": pdf,
+        "rel": "huge.pdf",
+        "mtime": datetime.now(timezone.utc),
+        "size": mod.PDF_MAX_BYTES + 1,
+    }]
+    now = datetime.now(timezone.utc)
+    out = mod.render_bundle(tmp_path, now - timedelta(days=1), now, hits)
+    assert called["n"] == 0
+    assert "huge.pdf" in out
+    assert "should not appear" not in out
+
+
