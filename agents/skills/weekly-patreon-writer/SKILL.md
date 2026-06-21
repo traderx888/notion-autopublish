@@ -1,6 +1,6 @@
 ---
 name: weekly-patreon-writer
-description: Produce a weekly Patreon-ready long-form draft by pulling this week's Notion research notes (workspace-wide by date), this week's local files under a configured root (e.g. C:\blp\data Bloomberg exports), letting chief-of-staff (小流) synthesize, and copy-reviewer (小文) review — staged as a Notion Content Calendar Draft. Use when running the weekly Patreon write-up cycle, drafting a Sunday weekly digest, or turning the week's scattered research into one publishable piece.
+description: Produce a weekly Patreon-ready long-form draft by pulling this week's Notion research notes (workspace-wide by date), this week's local files under a configured root (e.g. C:\blp\data Bloomberg exports), letting chief-of-staff (小流) synthesize, and copy-reviewer (小文) review — staged on the Notion Content Calendar with Status=`In progress`. Use when running the weekly Patreon write-up cycle, drafting a Sunday weekly digest, or turning the week's scattered research into one publishable piece.
 ---
 
 # weekly-patreon-writer（週復盤 / 週 Patreon 草稿）
@@ -18,7 +18,22 @@ description: Produce a weekly Patreon-ready long-form draft by pulling this week
   - **本地**：`C:\blp\data`（Bloomberg exports）或其他 `--root` 路徑，按 mtime 過濾
 - **過濾掉**：純內部會議記錄（infra / 系統 setup / 排程討論）、純個人 task list、操作 cheat sheet — 這些不是 Patreon 素材
 - **留下**：market view、deep dive、interview content、名人 digest 候選、本週重點數據
-- 草稿 staging：Notion Content Calendar 變 `Status = Draft`，**不要** 自己改 Ready
+- 草稿 staging：Notion Content Calendar 變 `Status = In progress`（= 草稿 / 待 review）。**不要** 自己改去 `Published` — 那是 user 過完稿才動
+
+### Content Calendar canonical IDs
+
+Workspace 有兩個 Content Calendar — **只用新那個**：
+- DB: `12b3caa8-a487-8049-8baa-d010e7b6fb29`
+- Data source: `12b3caa8-a487-815e-a65f-000bd8adfad6`
+- URL: https://app.notion.com/p/12b3caa8a48780498baad010e7b6fb29
+
+舊那個 `5c6b531d-a701-4543-8be5-6366b12f26ca`（2026-02 last-edited）不要寫進去。
+
+### Status 選項（真實 schema）
+
+只有四個：`Not started`（紅）/ `In progress`（黃）/ `Published`（綠）/ `Archive`（灰）。沒有 `Draft`、沒有 `Ready`。對應：
+- 寫稿中 / 待小文 review → `In progress`
+- 小文 pass + user 過 → user 自己改 `Published`，agent 不動
 
 ## 工作流
 
@@ -83,11 +98,20 @@ bundle 推 commit 上 PR branch（不要 paste 內容，太長）— 我這邊 `
 
 ### 6. Stage 到 Notion
 
-`notion-create-pages`（or `notion-update-page` 接到既有 Content Calendar）：
-- `Status: Draft`
-- 提議 Publish Date（預設下週某天）
-- 把 source URLs 嵌在頁面底
-- **不要** 改 Ready
+`notion-create-pages` 到 data source `12b3caa8-a487-815e-a65f-000bd8adfad6`（or `notion-update-page` 若是改既有 row）。Properties：
+
+- `Post Title`：標題（剝掉 markdown H1 — 由 properties 承載）
+- `Post Description`：1-2 句 summary（會在 Calendar 列表顯示）
+- `Status`：**`In progress`**（不是字面 `Draft`，schema 沒這選項）
+- `Article`：`__YES__`（這是 Patreon 文，勾上）
+- `Purpose`：通常 `Community`（Patreon = 支持者社群）；偶爾用 `Discoverability` 或 `Conversion`
+- `Publish Day`：對應日（e.g. `Sunday`）
+- `date:Publish Date:start`：ISO date，提議下週某天（user 可改）
+- `date:Publish Date:is_datetime`：`0`（單日，不含時間）
+
+Body：放完整 markdown draft，**剝掉 H1 + status preamble**（由 properties 承載）。Source URLs 留在 body 底，連 repo 內 `outputs/weekly/<YYYY-Www>-draft.md` 跟 `*-blp-bundle.md` 路徑。
+
+**不要** 改 `Status = Published` — 那是 user 過完稿才動。
 
 ### 7. Handoff
 
@@ -100,7 +124,7 @@ bundle 推 commit 上 PR branch（不要 paste 內容，太長）— 我這邊 `
 ## Scope Rules
 
 - 一次跑一週 — 過去的 backlog 不在這 skill 的 scope（要做歷史補檔，另開 batch task）
-- 不自動發布；不自己改 Notion `Ready`
+- 不自動發布；不自己改 Notion `Status = Published`
 - Source 不夠寫不出 spine 時 → 老實寫「本週素材不足以撐起一篇 weekly」，不要硬擠。寧可寫個 200 字短文 stage 給 Threads（交給 `threads-writer`）
 
 ## 串接
