@@ -18,22 +18,12 @@
   .subtitle { color: var(--text-bright); font-size: 0.95em; margin-bottom: 8px; font-family: 'Noto Serif TC', serif; }
   .issue-badge { display: inline-block; background: rgba(201,168,76,0.15); color: var(--accent); padding: 4px 12px; border-radius: 12px; font-size: 0.8em; font-weight: 600; margin-bottom: 20px; border: 1px solid rgba(201,168,76,0.3); }
   .tag { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 0.72em; font-weight: 600; margin-right: 4px; }
-  .tag-rates { background: rgba(201,168,76,0.15); color: var(--accent); }
-  .tag-china { background: rgba(212,144,64,0.15); color: var(--orange); }
-  .tag-japan { background: rgba(224,85,69,0.15); color: var(--red); }
-  .tag-geo   { background: rgba(224,85,69,0.15); color: var(--red); }
-  .tag-oil   { background: rgba(212,168,67,0.15); color: var(--yellow); }
-  .tag-trade { background: rgba(212,168,67,0.15); color: var(--yellow); }
-  .tag-growth{ background: rgba(107,189,91,0.15); color: var(--green); }
-  .tag-metals{ background: rgba(176,140,208,0.15); color: var(--purple); }
-  .tag-infl  { background: rgba(224,85,69,0.15); color: var(--red); }
-  .tag-policy{ background: rgba(201,168,76,0.15); color: var(--accent); }
-  .tag-val   { background: rgba(107,189,91,0.15); color: var(--green); }
-  .tag-vol   { background: rgba(224,85,69,0.15); color: var(--red); }
   .tag-semi  { background: rgba(76,201,176,0.15); color: var(--cyan); }
-  .tag-credit{ background: rgba(176,140,208,0.15); color: var(--purple); }
-  .tag-space { background: rgba(201,168,76,0.15); color: var(--accent); }
-  .tag-misc  { background: rgba(138,128,112,0.15); color: var(--muted); }
+  .tag-vol   { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-ai    { background: rgba(176,140,208,0.15); color: var(--purple); }
+  .tag-capex { background: rgba(201,168,76,0.15); color: var(--accent); }
+  .tag-mem   { background: rgba(212,144,64,0.15); color: var(--orange); }
+  .tag-equip { background: rgba(107,189,91,0.15); color: var(--green); }
   .verdict-bar { background: var(--accent); color: #0a0a08; padding: 14px 20px; border-radius: 8px; margin-bottom: 20px; font-weight: 700; font-size: 1.05em; font-family: 'Noto Serif TC', serif; }
   .section { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 22px; margin-bottom: 18px; }
   .section h2 { color: var(--gold); font-size: 1.15em; margin-bottom: 12px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
@@ -41,10 +31,8 @@
   .article { margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid rgba(42,40,32,0.7); }
   .article:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
   .article-title { color: var(--text-bright); font-weight: 700; font-size: 0.95em; margin-bottom: 4px; }
-  .article-title-cn { color: var(--muted); font-size: 0.85em; margin-bottom: 8px; }
   .article p { font-size: 0.9em; margin: 6px 0; }
   .data-point { background: rgba(201,168,76,0.05); padding: 8px 12px; border-radius: 6px; margin: 8px 0; font-size: 0.85em; border: 1px solid rgba(201,168,76,0.12); }
-  .data-point .num { color: var(--text-bright); font-weight: 700; }
   .implication { background: rgba(201,168,76,0.06); border-left: 3px solid var(--accent); padding: 10px 14px; margin: 10px 0; border-radius: 0 6px 6px 0; font-size: 0.88em; }
   .implication .label { color: var(--accent); font-weight: 700; font-size: 0.8em; text-transform: uppercase; margin-bottom: 4px; }
   .red-team { background: rgba(224,85,69,0.06); border: 1px solid rgba(224,85,69,0.25); border-radius: 8px; padding: 18px; margin: 18px 0; }
@@ -57,6 +45,7 @@
   .callout li { margin: 5px 0; font-size: 0.88em; }
   ul { padding-left: 18px; }
   li { margin: 4px 0; font-size: 0.88em; }
+  .b { color: var(--text-bright); font-weight: 700; }
   .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
   .stat { background: rgba(201,168,76,0.05); padding: 12px; border-radius: 6px; text-align: center; border: 1px solid rgba(201,168,76,0.1); }
   .stat .val { font-size: 1.4em; font-weight: 700; color: var(--gold); font-family: 'Playfair Display', serif; }
@@ -70,6 +59,9 @@
   .nav-links { display: flex; justify-content: space-between; margin: 20px 0; font-size: 0.85em; }
   .nav-links a { color: var(--accent); text-decoration: none; }
   .nav-links a:hover { text-decoration: underline; color: var(--gold); }
+  .chart-container { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 18px; margin: 16px 0; }
+  .chart-title { color: var(--accent); font-weight: 700; font-size: 0.88em; margin-bottom: 12px; font-family: 'Playfair Display', serif; }
+  .chart-source { color: var(--muted); font-size: 0.7em; margin-top: 8px; }
   .divider { height: 1px; background: linear-gradient(90deg, transparent, var(--accent), transparent); margin: 24px 0; opacity: 0.4; }
   .footer { text-align: center; color: var(--muted); font-size: 0.75em; margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--border); }
   .footer a { color: var(--accent); text-decoration: none; }
@@ -82,106 +74,484 @@
 <p class="subtitle">第105期 | 半導體泡沫疑雲：投機退潮與基本面分歧</p>
 <span class="issue-badge">2026年六月下旬更新</span>
 
-<div class="verdict-bar">結論：SK Hynix領跌的科技回調屬技術面（投機槓桿）而非基本面崩壞，記憶體龍頭估值過熱需減槓桿；但設備與類比晶片（VAT、Infineon）受AI結構性需求與穩健信用支撐，逢回調分批佈局基本面確定性標的。</div>
+<div class="verdict-bar">結論：SOX指數6月22日創歷史新高14,655後單日暴跌7.9%至13,483，韓國槓桿ETF結構性爆倉為直接導火線。但基本面並未崩壞 — NVIDIA季營收$81.6B（+85% YoY）、TSMC毛利率66.2%、超大規模資本開支$725B均處歷史峰值。建議：減持記憶體龍頭與單一股票槓桿ETF，逢回調分批佈局TSMC/設備股（ASML、VAT），以Micron今晚財報（6/24）作為方向確認。</div>
 
 <div class="nav-links">
   <span><a href="newsletter_104_rates.html">&larr; 前期</a></span>
-  <span><a href="student.html">返回目錄 &rarr;</a></span>
+  <span><a href="newsletter_106_geopolitics.html">後期 &rarr;</a></span>
 </div>
 
 <div class="toc">
   <div class="toc-title">目錄</div>
   <ol>
-    <li><a href="#memory-bubble-selloff">記憶體泡沫 韓國引爆，槓桿反噬</a></li>
-    <li><a href="#fundamental-resilience">基本面韌性 設備與信用，AI撐腰</a></li>
+    <li><a href="#sox-crash">SOX崩跌 創歷史新高隔日暴跌7.9%的解剖</a></li>
+    <li><a href="#leverage-etf">韓國槓桿ETF 尾巴搖狗的結構性爆倉</a></li>
+    <li><a href="#nvidia-tsmc">NVIDIA與TSMC 基本面的另一個世界</a></li>
+    <li><a href="#hyperscaler-capex">超大規模資本開支 $725B的瘋狂與理性</a></li>
+    <li><a href="#hbm-memory">HBM記憶體 供需失衡與定價權重置</a></li>
+    <li><a href="#equipment-wfe">設備與類比晶片 穿越週期的結構性標的</a></li>
     <li><a href="#red-team">Red Team 反面論證</a></li>
     <li><a href="#takeaways">基金經理人重點摘要</a></li>
   </ol>
 </div>
 
-<div class="section" id="memory-bubble-selloff">
-  <h2><span class="tag tag-misc">記憶體泡沫</span> 韓國引爆，槓桿反噬</h2>
+<!-- ============================================================ -->
+<!-- SECTION 1: SOX CRASH -->
+<!-- ============================================================ -->
+<div class="section" id="sox-crash">
+  <h2><span class="tag tag-semi">半導體</span> SOX崩跌 — 創歷史新高隔日暴跌7.9%的解剖</h2>
 
   <div class="stat-grid">
-    <div class="stat"><div class="val" style="color:var(--red)">&gt;10%</div><div class="lbl">SK Hynix
-單日重挫</div></div>
-    <div class="stat"><div class="val" style="color:var(--orange)">+645%</div><div class="lbl">Micron Q3 EPS預測
-12個月升幅</div></div>
-    <div class="stat"><div class="val">$1.2兆</div><div class="lbl">Micron
-市值</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">13,483</div><div class="lbl">SOX 6/23收盤<br>單日-7.87%</div></div>
+    <div class="stat"><div class="val" style="color:var(--green)">+98%</div><div class="lbl">SOXX ETF<br>2026 YTD報酬</div></div>
+    <div class="stat"><div class="val">14,655</div><div class="lbl">SOX歷史新高<br>6月22日盤中</div></div>
+  </div>
+
+  <!-- CHART: SOX 6-Month Trajectory -->
+  <div class="chart-container">
+    <div class="chart-title">SOX半導體指數6個月走勢（2026年1月 — 6月）</div>
+    <svg viewBox="0 0 760 280" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;">
+      <!-- Grid -->
+      <rect x="60" y="20" width="680" height="220" fill="none" stroke="#2a2820" stroke-width="0.5"/>
+      <line x1="60" y1="64" x2="740" y2="64" stroke="#2a2820" stroke-width="0.5" stroke-dasharray="4"/>
+      <line x1="60" y1="108" x2="740" y2="108" stroke="#2a2820" stroke-width="0.5" stroke-dasharray="4"/>
+      <line x1="60" y1="152" x2="740" y2="152" stroke="#2a2820" stroke-width="0.5" stroke-dasharray="4"/>
+      <line x1="60" y1="196" x2="740" y2="196" stroke="#2a2820" stroke-width="0.5" stroke-dasharray="4"/>
+      <!-- Y-axis labels: 16000 to 6000 -->
+      <text x="55" y="24" fill="#8a8070" font-size="10" text-anchor="end">16,000</text>
+      <text x="55" y="68" fill="#8a8070" font-size="10" text-anchor="end">14,000</text>
+      <text x="55" y="112" fill="#8a8070" font-size="10" text-anchor="end">12,000</text>
+      <text x="55" y="156" fill="#8a8070" font-size="10" text-anchor="end">10,000</text>
+      <text x="55" y="200" fill="#8a8070" font-size="10" text-anchor="end">8,000</text>
+      <text x="55" y="244" fill="#8a8070" font-size="10" text-anchor="end">6,000</text>
+      <!-- X-axis labels -->
+      <text x="80" y="258" fill="#8a8070" font-size="9">Jan</text>
+      <text x="193" y="258" fill="#8a8070" font-size="9">Feb</text>
+      <text x="307" y="258" fill="#8a8070" font-size="9">Mar</text>
+      <text x="420" y="258" fill="#8a8070" font-size="9">Apr</text>
+      <text x="533" y="258" fill="#8a8070" font-size="9">May</text>
+      <text x="647" y="258" fill="#8a8070" font-size="9">Jun</text>
+      <!-- Y mapping: 16000=20, 6000=240 => y = 240 - (val-6000)*(220/10000) = 240 - (val-6000)*0.022 -->
+      <!-- Jan: ~7300 => y=211.4, Feb: ~7800 => y=200.4, Mar: ~8200 => y=191.6, Apr(+38%!): ~11300 => y=123.4, May: ~13000 => y=86, Jun peak: 14655 => y=49.6, Jun crash: 13483 => y=75.4 -->
+      <polyline fill="none" stroke="#4cc9b0" stroke-width="2.5"
+        points="80,211 148,205 193,200 250,192 307,192 364,157 420,123 477,100 533,86 590,72 647,50 700,50 720,75"/>
+      <!-- Area fill -->
+      <polygon fill="url(#cyanGrad)" opacity="0.12"
+        points="80,211 148,205 193,200 250,192 307,192 364,157 420,123 477,100 533,86 590,72 647,50 700,50 720,75 720,240 80,240"/>
+      <defs>
+        <linearGradient id="cyanGrad" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#4cc9b0" stop-opacity="0.4"/>
+          <stop offset="100%" stop-color="#4cc9b0" stop-opacity="0"/>
+        </linearGradient>
+      </defs>
+      <!-- April rally annotation -->
+      <rect x="395" y="110" width="60" height="18" rx="3" fill="rgba(107,189,91,0.15)"/>
+      <text x="425" y="123" fill="#6bbd5b" font-size="8" text-anchor="middle">4月 +38%</text>
+      <!-- ATH annotation -->
+      <circle cx="700" cy="50" r="5" fill="#6bbd5b"/>
+      <text x="690" y="42" fill="#6bbd5b" font-size="9" text-anchor="end">14,655 ATH</text>
+      <!-- Crash annotation -->
+      <circle cx="720" cy="75" r="5" fill="#e05545"/>
+      <text x="740" y="82" fill="#e05545" font-size="9" text-anchor="end">13,483</text>
+      <text x="740" y="93" fill="#e05545" font-size="8" text-anchor="end">6/23 -7.9%</text>
+      <!-- 52-week low reference -->
+      <line x1="60" y1="221" x2="740" y2="221" stroke="#8a8070" stroke-width="0.5" stroke-dasharray="6,3"/>
+      <text x="740" y="218" fill="#8a8070" font-size="8" text-anchor="end">52週低點 5,418</text>
+    </svg>
+    <div class="chart-source">資料來源：Nasdaq, Bloomberg, Yahoo Finance | 截至2026年6月23日</div>
   </div>
 
   <div class="article">
-    <div class="article-title">泡沫疑雲再起 — SK Hynix領跌全球科技股，這是頂點嗎？</div>
-    <p>全球科技股陷入劇烈拋售，但這次與地緣政治無關——中東局勢正趨向妥協、油價回落。導火線來自韓國：剛晉身兆元市值的晶片商 <span style="color:#f0ebe0;font-weight:700">SK Hynix</span> 並無重大消息，卻表示「將重心轉向通用型 DRAM 市場」。由於通用記憶體利潤較低，市場解讀為這台「印鈔機」或許不如想像中強勁，引發股價 <span style="color:#f0ebe0;font-weight:700">單日暴跌逾10%</span>。Authers 強調須區分兩個週期：基本面（科技公司確實高速成長，但反而更難估值）與技術面（大眾心理早已進入過度興奮區）。眼前這波純屬後者。風險在於交易可能自我餵養——投資者大量持有單一公司的 <span style="color:#f0ebe0;font-weight:700">雙倍槓桿 ETF</span>（如香港掛牌的 CSOP 雙倍槓桿 SK Hynix ETF），韓國監管當局近期更公開後悔批准同類產品，火上加油。下一棒是即將公布財報、市值達 <span style="color:#f0ebe0;font-weight:700">$1.2兆</span> 的 <span style="color:#f0ebe0;font-weight:700">Micron</span>。</p>
-    <div class="data-point">SK Hynix單日跌幅：<span style="color:#f0ebe0;font-weight:700">逾10%</span> &nbsp;|&nbsp; Micron Q3 EPS預測（12個月）：<span style="color:#f0ebe0;font-weight:700">+645%</span> &nbsp;|&nbsp; 觸發點：<span style="color:#f0ebe0;font-weight:700">轉向通用型DRAM</span> &nbsp;|&nbsp; 槓桿工具：<span style="color:#f0ebe0;font-weight:700">雙倍槓桿單一股票ETF（CSOP, HK掛牌）</span></div>
-    <div class="implication"><div class="label">投資啟示</div>這非泡沫破裂的時刻，但記憶體龍頭股價已脫離基本面、進入投機末端。<span style="color:#f0ebe0;font-weight:700">減持單一股票槓桿ETF、降低記憶體龍頭曝險</span>；Micron財報為近期最大波動源，財報前不宜追高。油價走跌則是印度等進口國的潛在利多。</div>
+    <div class="article-title">歷史新高隔日暴跌 — SOX經歷2000年以來最劇烈單日翻轉</div>
+    <p>費城半導體指數（SOX）在<span class="b">6月22日盤中觸及14,655.29歷史新高</span>後，隔日（6月23日）暴跌<span class="b">7.87%至13,482.51</span>，蒸發超過1,150點。這是SOX自2000年科技泡沫以來最劇烈的單日翻轉。SOXX ETF（iShares半導體ETF）年初至今報酬仍高達<span class="b">+98%</span>，過去12個月累計漲幅<span class="b">+164%</span> — 但正是這種極端的漲幅使得任何回調都被放大。SOX在四月創下<span class="b">+38%</span>的單月漲幅 — 為過去23年以來最強單月，甚至超越2000年2月 — 過去12個月滾動報酬一度達到<span class="b">+211%</span>，位列指數1996年創立以來第六高。</p>
+    <p>直接催化劑來自韓國：韓國金融監督院（FSS）院長李燦鎮週一在記者會上公開表示「後悔批准」三星電子與SK Hynix的單一股票槓桿ETF，引發恐慌性拋售。三星電子單日跌<span class="b">12.31%</span>，SK Hynix跌<span class="b">12.47%</span>，KOSPI觸發熔斷機制。恐慌外溢至全球 — Nasdaq單日跌<span class="b">2.22%</span>，SOX跌<span class="b">7.6%</span>。52週區間已擴大至<span class="b">5,418 — 14,655</span>，振幅達170%。</p>
+    <div class="data-point">SOX 6/23收盤：<span class="b">13,482.51（-7.87%）</span> &nbsp;|&nbsp; 歷史新高：<span class="b">14,655.29（6/22）</span> &nbsp;|&nbsp; SOXX YTD：<span class="b">+98%</span> &nbsp;|&nbsp; 52週區間：<span class="b">5,418 — 14,655</span> &nbsp;|&nbsp; 4月單月：<span class="b">+38%（23年最強）</span></div>
+    <div class="implication"><div class="label">投資啟示</div>SOX在極端漲幅後的單日暴跌屬典型的<span class="b">投機槓桿清算</span>，而非基本面崩壞。歷史上SOX在12個月漲幅超過100%後的回調平均為<span class="b">15-25%</span>，目前僅回調8%。這意味著<span class="b">回調可能尚未結束</span>，但長期結構性多頭趨勢未被破壞。策略：等待SOX回調至12,000-12,500區間（約-15%至-18%）再分批佈局，切勿在恐慌中追空。</div>
   </div>
-
 </div>
 
-<div class="section" id="fundamental-resilience">
-  <h2><span class="tag tag-misc">基本面韌性</span> 設備與信用，AI撐腰</h2>
+<!-- ============================================================ -->
+<!-- SECTION 2: LEVERAGED ETF -->
+<!-- ============================================================ -->
+<div class="section" id="leverage-etf">
+  <h2><span class="tag tag-vol">波動</span> 韓國槓桿ETF — 尾巴搖狗的結構性爆倉</h2>
 
   <div class="stat-grid">
-    <div class="stat"><div class="val" style="color:var(--green)">&lt;1x</div><div class="lbl">Infineon
-2026槓桿率回落</div></div>
-    <div class="stat"><div class="val">$25億</div><div class="lbl">Infineon收購
-Marvell車用乙太網</div></div>
-    <div class="stat"><div class="val" style="color:var(--green)">AI</div><div class="lbl">VAT成長
-結構性驅動</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">$9.1B</div><div class="lbl">韓國單一股票<br>槓桿ETF規模</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">92%</div><div class="lbl">散戶持有比例<br>（14兆韓元）</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">-25.5%</div><div class="lbl">SK Hynix槓桿ETF<br>單日平均跌幅</div></div>
+  </div>
+
+  <!-- CHART: Leveraged ETF Mechanics -->
+  <div class="chart-container">
+    <div class="chart-title">槓桿ETF再平衡的自我強化循環 — 每1%市場波動觸發$9B再平衡需求</div>
+    <svg viewBox="0 0 760 240" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;">
+      <!-- Background -->
+      <rect x="40" y="20" width="700" height="190" fill="none" stroke="#2a2820" stroke-width="0.5" rx="4"/>
+      <!-- Central cycle -->
+      <!-- Stock drops box -->
+      <rect x="80" y="50" width="140" height="50" rx="6" fill="rgba(224,85,69,0.12)" stroke="#e05545" stroke-width="1.5"/>
+      <text x="150" y="72" fill="#e05545" font-size="11" font-weight="700" text-anchor="middle">股價下跌</text>
+      <text x="150" y="88" fill="#e05545" font-size="9" text-anchor="middle">SK Hynix -12.5%</text>
+      <!-- Arrow 1 -->
+      <line x1="220" y1="75" x2="280" y2="75" stroke="#8a8070" stroke-width="1.5" marker-end="url(#arrowGrey)"/>
+      <!-- ETF rebalance box -->
+      <rect x="280" y="50" width="160" height="50" rx="6" fill="rgba(212,144,64,0.12)" stroke="#d49040" stroke-width="1.5"/>
+      <text x="360" y="72" fill="#d49040" font-size="11" font-weight="700" text-anchor="middle">2x ETF強制賣出</text>
+      <text x="360" y="88" fill="#d49040" font-size="9" text-anchor="middle">每1%觸發$9B再平衡</text>
+      <!-- Arrow 2 -->
+      <line x1="440" y1="75" x2="500" y2="75" stroke="#8a8070" stroke-width="1.5" marker-end="url(#arrowGrey)"/>
+      <!-- More selling box -->
+      <rect x="500" y="50" width="160" height="50" rx="6" fill="rgba(224,85,69,0.12)" stroke="#e05545" stroke-width="1.5"/>
+      <text x="580" y="72" fill="#e05545" font-size="11" font-weight="700" text-anchor="middle">拋壓加劇</text>
+      <text x="580" y="88" fill="#e05545" font-size="9" text-anchor="middle">觸發更多止損</text>
+      <!-- Feedback arrow (bottom) -->
+      <path d="M 580 100 L 580 145 L 150 145 L 150 100" fill="none" stroke="#e05545" stroke-width="1.5" stroke-dasharray="6,3" marker-end="url(#arrowRed)"/>
+      <text x="365" y="160" fill="#e05545" font-size="10" font-weight="700" text-anchor="middle">自我強化惡性循環</text>
+      <!-- Stats row -->
+      <rect x="80" y="175" width="200" height="30" rx="4" fill="rgba(201,168,76,0.06)"/>
+      <text x="180" y="195" fill="#c9a84c" font-size="9" text-anchor="middle">Nomura估計：5%波動 = $47B選擇權再平衡</text>
+      <rect x="310" y="175" width="200" height="30" rx="4" fill="rgba(201,168,76,0.06)"/>
+      <text x="410" y="195" fill="#c9a84c" font-size="9" text-anchor="middle">Goldman估計：= 正常日成交量1/8</text>
+      <rect x="540" y="175" width="160" height="30" rx="4" fill="rgba(224,85,69,0.06)"/>
+      <text x="620" y="195" fill="#e05545" font-size="9" text-anchor="middle">VKOSPI：94.81 歷史新高</text>
+      <!-- Arrow markers -->
+      <defs>
+        <marker id="arrowGrey" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6" fill="#8a8070"/></marker>
+        <marker id="arrowRed" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6" fill="#e05545"/></marker>
+      </defs>
+    </svg>
+    <div class="chart-source">資料來源：Nomura Securities, Goldman Sachs, Korea Financial Supervisory Service | 截至2026年6月24日</div>
   </div>
 
   <div class="article">
-    <div class="article-title">Infineon信用故事重回上行 — 槓桿2026年將降至1x以下</div>
-    <p>與記憶體龍頭的投機狂熱形成對比，類比與功率半導體龍頭 <span style="color:#f0ebe0;font-weight:700">Infineon</span> 展現紮實信用基本面。其美元債券利差因 <span style="color:#f0ebe0;font-weight:700">兩度評級上調至高 triple-B</span> 而收斂，營運展望優於多數科技同業；歐元及混合債仍有收窄空間。即使完成 <span style="color:#f0ebe0;font-weight:700">$25億</span> 收購 Marvell 車用乙太網業務，財務政策仍維持紀律，槓桿未持續高於 1x。槓桿率於 2025 財年底（9月）收購後短暫見頂 <span style="color:#f0ebe0;font-weight:700">1.1x</span>，但 pro forma 已接近 <span style="color:#f0ebe0;font-weight:700">0.7-0.8x</span>，受惠於 EBITDA 溫和成長與正自由現金流，本年度料降至 <span style="color:#f0ebe0;font-weight:700">0.6x</span>，關鍵指標已向單 A 級同業靠攏。歷經 2024 年去庫存陣痛後，EBITDA 預計 2026 年重返成長。風險在於關稅與中國本土化競爭（尤其 AI 領域），但其汽車業務的市場地位與資產負債表強度足以吸收短期衝擊。</p>
-    <div class="data-point">評級：<span style="color:#f0ebe0;font-weight:700">高triple-B（兩度上調）</span> &nbsp;|&nbsp; FY2025槓桿峰值：<span style="color:#f0ebe0;font-weight:700">1.1x</span> → pro forma <span style="color:#f0ebe0;font-weight:700">0.7-0.8x</span> → 2026E <span style="color:#f0ebe0;font-weight:700">0.6x</span> &nbsp;|&nbsp; Marvell車用乙太網收購：<span style="color:#f0ebe0;font-weight:700">$25億</span> &nbsp;|&nbsp; GaN Systems收購（2023）：<span style="color:#f0ebe0;font-weight:700">$8.3億</span> &nbsp;|&nbsp; EBITDA：<span style="color:#f0ebe0;font-weight:700">2026年重返成長</span></div>
-    <div class="implication"><div class="label">投資啟示</div>Infineon 信用面提供防禦性曝險。<span style="color:#f0ebe0;font-weight:700">逢殖利率走闊買入歐元及混合債</span>（相對美元債仍有收窄空間）；股票端則為去庫存週期反轉、AI 帶動成長的低槓桿優質標的。</div>
+    <div class="article-title">尾巴搖狗 — 韓國散戶的$9.1B槓桿炸彈如何引爆全球拋售</div>
+    <p>這場全球半導體拋售的導火線既不是基本面轉壞，也不是地緣政治衝擊 — 而是一個<span class="b">金融工程產品的結構性缺陷</span>。五月底，韓國證券交易所批准了16檔追蹤三星電子與SK Hynix的單一股票槓桿ETF，上線時合計資產僅<span class="b">$3B</span>，但在散戶狂熱推動下一個月內膨脹至<span class="b">14兆韓元（$9.1B）</span>，其中<span class="b">92%</span>由散戶持有。這些2倍槓桿ETF必須每日再平衡 — 股價上漲時買入更多、下跌時賣出更多 — 形成自我強化的正回饋循環。</p>
+    <p>Nomura估計每<span class="b">1%的市場波動會觸發約$9B</span>的再平衡需求。Goldman Sachs計算<span class="b">5%的韓國市場波動</span>會產生約<span class="b">$4.7B</span>的選擇權對沖再平衡 — 相當於正常日成交量的八分之一。6月23日的暴跌完美展示了這個機制：SK Hynix跌12.47%觸發ETF強制賣出，ETF賣出又壓低股價，循環往復。KOSPI單日觸發<span class="b">兩次熔斷</span>，韓國「恐懼指數」VKOSPI飆至<span class="b">94.81歷史新高</span>。更荒誕的是，前一日一檔SK Hynix槓桿ETF在收盤競價時因流動性真空<span class="b">逆勢暴漲50%</span>，溢價高達淨值的86%。</p>
+    <div class="data-point">槓桿ETF規模：<span class="b">$3B（上線）→ $9.1B（一個月後）</span> &nbsp;|&nbsp; 散戶佔比：<span class="b">92%</span> &nbsp;|&nbsp; SK Hynix槓桿ETF跌幅：<span class="b">平均-25.6%</span> &nbsp;|&nbsp; 三星槓桿ETF跌幅：<span class="b">平均-24.6%</span> &nbsp;|&nbsp; VKOSPI：<span class="b">94.81（歷史新高）</span></div>
+    <div class="implication"><div class="label">投資啟示</div><span class="b">立即清倉所有單一股票槓桿ETF</span> — 無論多空方向。這類產品的結構性缺陷（每日再平衡、散戶集中持有、流動性真空時的定價失靈）意味著它們在波動環境中是純粹的財富毀滅工具。韓國監管可能在數週內限制或暫停這些產品，屆時流動性會進一步枯竭。對機構而言，KOSPI的結構性波動是<span class="b">做多波動率</span>的機會 — 但僅限於選擇權、而非ETF。</div>
   </div>
-  <div class="article">
-    <div class="article-title">VAT Group — AI驅動晶圓設備需求，純半導體模式受惠最深</div>
-    <p><span style="color:#f0ebe0;font-weight:700">VAT Group</span> 供應半導體製造關鍵的高性能真空閥，銷售與晶圓廠設備（WFE）需求高度連動，是純半導體（pure-play）模式中槓桿 AI 需求最直接的標的。成長動能日益由 AI 晶片需求驅動——先進製程節點與高階記憶體需要更複雜的真空製程控制。與主要 OEM 的緊密合作推升 <span style="color:#f0ebe0;font-weight:700">每台設備含量</span>，因次世代設備需要更高客製化、精度與可靠性，支撐定價與利潤率。不斷擴大的安裝基數帶來備件、服務與改裝的 <span style="color:#f0ebe0;font-weight:700">經常性收入</span>，提供穿越週期的部分韌性。中期成長由半導體複雜度上升與 AI 結構性需求支撐；半導體復甦、產品組合改善與服務成長共同支持 <span style="color:#f0ebe0;font-weight:700">EBITDA 利潤率上行</span>。資本支出可正常化，但 R&amp;D 須維持高位；強健資產負債表則為股利與投資保留彈性。</p>
-    <div class="data-point">商業模式：<span style="color:#f0ebe0;font-weight:700">純半導體真空閥（pure-play）</span> &nbsp;|&nbsp; 成長驅動：<span style="color:#f0ebe0;font-weight:700">AI晶片 + 先進製程/高階記憶體</span> &nbsp;|&nbsp; 韌性來源：<span style="color:#f0ebe0;font-weight:700">備件/服務/改裝經常性收入</span> &nbsp;|&nbsp; 利潤率：<span style="color:#f0ebe0;font-weight:700">半導體復甦+組合+服務支撐上行</span> &nbsp;|&nbsp; 資本配置：<span style="color:#f0ebe0;font-weight:700">R&amp;D維持高位，偏好股利與投資</span></div>
-    <div class="implication"><div class="label">投資啟示</div>VAT 是 AI 設備週期的高品質代理標的，含量提升＋經常性收入降低週期波動。<span style="color:#f0ebe0;font-weight:700">在WFE週期回調時分批佈局</span>；其結構性 AI 曝險與利潤率上行邏輯獨立於記憶體現貨價格波動。</div>
+</div>
+
+<!-- ============================================================ -->
+<!-- SECTION 3: NVIDIA & TSMC -->
+<!-- ============================================================ -->
+<div class="section" id="nvidia-tsmc">
+  <h2><span class="tag tag-ai">AI</span> NVIDIA與TSMC — 基本面的另一個世界</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val">$81.6B</div><div class="lbl">NVIDIA Q1 FY27營收<br>（+85% YoY）</div></div>
+    <div class="stat"><div class="val" style="color:var(--green)">$5.1T</div><div class="lbl">NVIDIA市值<br>全球第一</div></div>
+    <div class="stat"><div class="val">66.2%</div><div class="lbl">TSMC Q1毛利率<br>（+3.9ppt QoQ）</div></div>
   </div>
 
+  <!-- CHART: NVIDIA vs TSMC Revenue Growth -->
+  <div class="chart-container">
+    <div class="chart-title">NVIDIA季度營收 vs TSMC季度營收（$B）— 2025 Q1至2026 Q2</div>
+    <svg viewBox="0 0 760 280" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;">
+      <!-- Grid -->
+      <rect x="70" y="20" width="660" height="220" fill="none" stroke="#2a2820" stroke-width="0.5"/>
+      <line x1="70" y1="64" x2="730" y2="64" stroke="#2a2820" stroke-width="0.5" stroke-dasharray="4"/>
+      <line x1="70" y1="108" x2="730" y2="108" stroke="#2a2820" stroke-width="0.5" stroke-dasharray="4"/>
+      <line x1="70" y1="152" x2="730" y2="152" stroke="#2a2820" stroke-width="0.5" stroke-dasharray="4"/>
+      <line x1="70" y1="196" x2="730" y2="196" stroke="#2a2820" stroke-width="0.5" stroke-dasharray="4"/>
+      <!-- Y-axis: $0 to $100B -->
+      <text x="65" y="24" fill="#8a8070" font-size="10" text-anchor="end">$100B</text>
+      <text x="65" y="68" fill="#8a8070" font-size="10" text-anchor="end">$80B</text>
+      <text x="65" y="112" fill="#8a8070" font-size="10" text-anchor="end">$60B</text>
+      <text x="65" y="156" fill="#8a8070" font-size="10" text-anchor="end">$40B</text>
+      <text x="65" y="200" fill="#8a8070" font-size="10" text-anchor="end">$20B</text>
+      <text x="65" y="244" fill="#8a8070" font-size="10" text-anchor="end">$0</text>
+      <!-- X-axis: 6 quarters -->
+      <!-- Q1 FY26=~Apr25, Q2=~Jul25, Q3=~Oct25, Q4=~Jan26, Q1 FY27=~Apr26, Q2 FY27=~Jul26(guide) -->
+      <text x="120" y="258" fill="#8a8070" font-size="9" text-anchor="middle">Q1 FY26</text>
+      <text x="230" y="258" fill="#8a8070" font-size="9" text-anchor="middle">Q2 FY26</text>
+      <text x="340" y="258" fill="#8a8070" font-size="9" text-anchor="middle">Q3 FY26</text>
+      <text x="450" y="258" fill="#8a8070" font-size="9" text-anchor="middle">Q4 FY26</text>
+      <text x="560" y="258" fill="#8a8070" font-size="9" text-anchor="middle">Q1 FY27</text>
+      <text x="670" y="258" fill="#8a8070" font-size="9" text-anchor="middle">Q2 FY27E</text>
+      <!-- Y mapping: $100B=20, $0=240 => y = 240 - (val/100)*220 -->
+      <!-- NVIDIA bars (gold): Q1:$44.1B, Q2:$53B, Q3:$60B, Q4:$68B, Q1FY27:$81.6B, Q2E:$91B -->
+      <rect x="95" y="142.8" width="30" height="97.2" rx="2" fill="rgba(201,168,76,0.6)" stroke="#c9a84c" stroke-width="1"/>
+      <text x="110" y="137" fill="#c9a84c" font-size="9" font-weight="700" text-anchor="middle">$44.1</text>
+      <rect x="205" y="123.4" width="30" height="116.6" rx="2" fill="rgba(201,168,76,0.6)" stroke="#c9a84c" stroke-width="1"/>
+      <text x="220" y="118" fill="#c9a84c" font-size="9" font-weight="700" text-anchor="middle">$53.0</text>
+      <rect x="315" y="108" width="30" height="132" rx="2" fill="rgba(201,168,76,0.6)" stroke="#c9a84c" stroke-width="1"/>
+      <text x="330" y="103" fill="#c9a84c" font-size="9" font-weight="700" text-anchor="middle">$60.0</text>
+      <rect x="425" y="90.4" width="30" height="149.6" rx="2" fill="rgba(201,168,76,0.6)" stroke="#c9a84c" stroke-width="1"/>
+      <text x="440" y="85" fill="#c9a84c" font-size="9" font-weight="700" text-anchor="middle">$68.0</text>
+      <rect x="535" y="60.5" width="30" height="179.5" rx="2" fill="rgba(201,168,76,0.8)" stroke="#f0d87a" stroke-width="1.5"/>
+      <text x="550" y="55" fill="#f0d87a" font-size="10" font-weight="700" text-anchor="middle">$81.6</text>
+      <rect x="645" y="39.8" width="30" height="200.2" rx="2" fill="rgba(201,168,76,0.3)" stroke="#c9a84c" stroke-width="1" stroke-dasharray="4"/>
+      <text x="660" y="35" fill="#c9a84c" font-size="9" text-anchor="middle">$91.0E</text>
+      <!-- TSMC bars (cyan): Q1:$25.5B, Q2:$28B, Q3:$30B, Q4:$33B, Q1CY26:$35.9B, Q2E:$39.6B -->
+      <rect x="130" y="183.9" width="30" height="56.1" rx="2" fill="rgba(76,201,176,0.5)" stroke="#4cc9b0" stroke-width="1"/>
+      <text x="145" y="178" fill="#4cc9b0" font-size="9" text-anchor="middle">$25.5</text>
+      <rect x="240" y="178.4" width="30" height="61.6" rx="2" fill="rgba(76,201,176,0.5)" stroke="#4cc9b0" stroke-width="1"/>
+      <text x="255" y="173" fill="#4cc9b0" font-size="9" text-anchor="middle">$28.0</text>
+      <rect x="350" y="174" width="30" height="66" rx="2" fill="rgba(76,201,176,0.5)" stroke="#4cc9b0" stroke-width="1"/>
+      <text x="365" y="169" fill="#4cc9b0" font-size="9" text-anchor="middle">$30.0</text>
+      <rect x="460" y="167.4" width="30" height="72.6" rx="2" fill="rgba(76,201,176,0.5)" stroke="#4cc9b0" stroke-width="1"/>
+      <text x="475" y="162" fill="#4cc9b0" font-size="9" text-anchor="middle">$33.0</text>
+      <rect x="570" y="161" width="30" height="79" rx="2" fill="rgba(76,201,176,0.7)" stroke="#4cc9b0" stroke-width="1.5"/>
+      <text x="585" y="156" fill="#4cc9b0" font-size="9" font-weight="700" text-anchor="middle">$35.9</text>
+      <rect x="680" y="152.9" width="30" height="87.1" rx="2" fill="rgba(76,201,176,0.3)" stroke="#4cc9b0" stroke-width="1" stroke-dasharray="4"/>
+      <text x="695" y="148" fill="#4cc9b0" font-size="9" text-anchor="middle">$39.6E</text>
+      <!-- Legend -->
+      <rect x="85" y="265" width="12" height="8" rx="2" fill="rgba(201,168,76,0.6)"/>
+      <text x="102" y="273" fill="#8a8070" font-size="9">NVIDIA</text>
+      <rect x="155" y="265" width="12" height="8" rx="2" fill="rgba(76,201,176,0.5)"/>
+      <text x="172" y="273" fill="#8a8070" font-size="9">TSMC</text>
+      <rect x="215" y="265" width="12" height="8" rx="2" fill="rgba(201,168,76,0.3)" stroke="#c9a84c" stroke-width="0.5" stroke-dasharray="3"/>
+      <text x="232" y="273" fill="#8a8070" font-size="9">指引/預估</text>
+    </svg>
+    <div class="chart-source">資料來源：NVIDIA 8-K, TSMC Investor Relations, Bloomberg Consensus | 截至2026年6月</div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">NVIDIA：$81.6B季營收、75%毛利率、Q2指引$91B — AI硬體的壟斷式成長</div>
+    <p>與SOX的暴跌形成鮮明對比的是，NVIDIA的基本面正處於<span class="b">人類企業史上最強勁的營收加速週期</span>。5月20日公布的Q1 FY2027財報顯示：營收<span class="b">$81.6B</span>（+85% YoY、+20% QoQ），超越Bloomberg共識$79.2B。數據中心營收<span class="b">$75.2B</span>（+92% YoY），其中網路營收<span class="b">$14.8B</span>。非GAAP毛利率<span class="b">75.0%</span>，與上季持平，反映Blackwell已從初期爬坡轉入標準量產。非GAAP EPS <span class="b">$1.87</span>，超越共識$1.77。GAAP淨利<span class="b">$58.3B</span>，自由現金流<span class="b">$48.6B</span> — 單季自由現金流已超越全球絕大多數企業的年營收。</p>
+    <p>更驚人的是Q2指引：<span class="b">$91.0B</span>（共識$86.8B），連續第三季加速。市值達<span class="b">$5.14兆</span>，穩居全球第一。Blackwell平台已被所有主要超大規模雲端商與前沿模型開發商採用，CEO黃仁勳表示已交付「數十萬張」Blackwell GPU。下一代Vera Rubin平台已向客戶交付首批樣品，預計下季開始貢獻營收。股價<span class="b">$210.69</span>，距5月歷史高點$235.47約-10%。</p>
+    <div class="data-point">Q1 FY27營收：<span class="b">$81.6B（+85% YoY）</span> &nbsp;|&nbsp; 數據中心：<span class="b">$75.2B（+92%）</span> &nbsp;|&nbsp; 毛利率：<span class="b">75.0%</span> &nbsp;|&nbsp; Q2指引：<span class="b">$91.0B</span> &nbsp;|&nbsp; 市值：<span class="b">$5.14兆</span> &nbsp;|&nbsp; 股價：<span class="b">$210.69</span></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">TSMC：毛利率66.2%、先進製程營收佔74%、全年成長30%+ — 製造端的結構性護城河</div>
+    <p>TSMC Q1 2026營收<span class="b">$35.9B</span>（+40.6% YoY），毛利率躍升至<span class="b">66.2%</span>（QoQ +3.9ppt），受惠於高產能利用率、成本改善與有利匯率。先進製程（7nm以下）佔晶圓營收<span class="b">74%</span>，其中3nm貢獻<span class="b">25%</span>、5nm貢獻<span class="b">36%</span>。高效能運算（HPC）佔營收<span class="b">61%</span>，較2020年Q1的30%翻倍 — 完美反映AI晶片需求的結構性轉移。</p>
+    <p>Q2指引<span class="b">$39.0-40.2B</span>（+10% QoQ），毛利率指引<span class="b">65.5-67.5%</span>。全年營收成長指引上調至<span class="b">30%+</span>（美元計），意味2026全年營收將突破<span class="b">$158B</span>。N2節點已於2025年Q4量產，良率良好，為下一代AI工作負載提供更高電晶體密度與更低功耗。CoWoS先進封裝月產能預計從2025年的<span class="b">80,000片</span>飆升至2026年的<span class="b">140,000片+</span>。</p>
+    <div class="data-point">TSMC Q1營收：<span class="b">$35.9B（+40.6% YoY）</span> &nbsp;|&nbsp; 毛利率：<span class="b">66.2%</span> &nbsp;|&nbsp; 先進製程佔比：<span class="b">74%</span> &nbsp;|&nbsp; 3nm佔比：<span class="b">25%</span> &nbsp;|&nbsp; Q2指引：<span class="b">$39-40.2B</span> &nbsp;|&nbsp; 全年成長：<span class="b">30%+</span></div>
+    <div class="implication"><div class="label">投資啟示</div>NVIDIA與TSMC的財報數據與SOX的暴跌形成<span class="b">認知斷裂</span> — 這正是區分「投機清算」與「基本面崩壞」的關鍵。NVIDIA毛利率75%且加速成長，TSMC產能利用率高且全年指引上調 — <span class="b">AI半導體的供需緊張完全沒有緩解跡象</span>。逢回調買入TSMC（美股TSM）是風險報酬最佳的佈局 — 它是整個AI硬體供應鏈的<span class="b">必經之路</span>，無論NVIDIA、AMD、蘋果、高通，所有人都必須用TSMC。</div>
+  </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- SECTION 4: HYPERSCALER CAPEX -->
+<!-- ============================================================ -->
+<div class="section" id="hyperscaler-capex">
+  <h2><span class="tag tag-capex">資本開支</span> 超大規模資本開支 — $725B的瘋狂與理性</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val">$725B</div><div class="lbl">四大超大規模<br>2026 Capex合計</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">+77%</div><div class="lbl">YoY成長率<br>（vs 2025 $410B）</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">45-57%</div><div class="lbl">資本密集度<br>佔營收比（歷史性）</div></div>
+  </div>
+
+  <!-- CHART: Hyperscaler Capex Bars -->
+  <div class="chart-container">
+    <div class="chart-title">2026年超大規模資本開支指引（$B）— 較2025年+77%</div>
+    <svg viewBox="0 0 760 260" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;">
+      <!-- Grid -->
+      <rect x="60" y="20" width="680" height="200" fill="none" stroke="#2a2820" stroke-width="0.5"/>
+      <line x1="60" y1="60" x2="740" y2="60" stroke="#2a2820" stroke-width="0.5" stroke-dasharray="4"/>
+      <line x1="60" y1="100" x2="740" y2="100" stroke="#2a2820" stroke-width="0.5" stroke-dasharray="4"/>
+      <line x1="60" y1="140" x2="740" y2="140" stroke="#2a2820" stroke-width="0.5" stroke-dasharray="4"/>
+      <line x1="60" y1="180" x2="740" y2="180" stroke="#2a2820" stroke-width="0.5" stroke-dasharray="4"/>
+      <!-- Y-axis: $0 to $220B -->
+      <text x="55" y="24" fill="#8a8070" font-size="10" text-anchor="end">$220B</text>
+      <text x="55" y="64" fill="#8a8070" font-size="10" text-anchor="end">$165B</text>
+      <text x="55" y="104" fill="#8a8070" font-size="10" text-anchor="end">$110B</text>
+      <text x="55" y="144" fill="#8a8070" font-size="10" text-anchor="end">$55B</text>
+      <text x="55" y="224" fill="#8a8070" font-size="10" text-anchor="end">$0</text>
+      <!-- 2025 bars (dimmer) -->
+      <!-- Amazon 2025: $125B => height = (125/220)*200 = 113.6, y = 220-113.6 = 106.4 -->
+      <rect x="100" y="106.4" width="50" height="113.6" rx="3" fill="rgba(201,168,76,0.2)" stroke="#c9a84c" stroke-width="0.5"/>
+      <text x="125" y="100" fill="#8a8070" font-size="8" text-anchor="middle">$125B</text>
+      <!-- Microsoft 2025: $152B => h=138.2, y=81.8 -->
+      <rect x="230" y="81.8" width="50" height="138.2" rx="3" fill="rgba(201,168,76,0.2)" stroke="#c9a84c" stroke-width="0.5"/>
+      <text x="255" y="76" fill="#8a8070" font-size="8" text-anchor="middle">$152B</text>
+      <!-- Google 2025: $91B => h=82.7, y=137.3 -->
+      <rect x="360" y="137.3" width="50" height="82.7" rx="3" fill="rgba(201,168,76,0.2)" stroke="#c9a84c" stroke-width="0.5"/>
+      <text x="385" y="132" fill="#8a8070" font-size="8" text-anchor="middle">$91B</text>
+      <!-- Meta 2025: $42B => h=38.2, y=181.8 -->
+      <rect x="490" y="181.8" width="50" height="38.2" rx="3" fill="rgba(201,168,76,0.2)" stroke="#c9a84c" stroke-width="0.5"/>
+      <text x="515" y="176" fill="#8a8070" font-size="8" text-anchor="middle">$42B</text>
+      <!-- 2026 bars (brighter) -->
+      <!-- Amazon 2026: $200B => h=181.8, y=38.2 -->
+      <rect x="155" y="38.2" width="50" height="181.8" rx="3" fill="rgba(201,168,76,0.6)" stroke="#f0d87a" stroke-width="1.5"/>
+      <text x="180" y="32" fill="#f0d87a" font-size="10" font-weight="700" text-anchor="middle">$200B</text>
+      <!-- Microsoft 2026: $190B => h=172.7, y=47.3 -->
+      <rect x="285" y="47.3" width="50" height="172.7" rx="3" fill="rgba(201,168,76,0.6)" stroke="#f0d87a" stroke-width="1.5"/>
+      <text x="310" y="41" fill="#f0d87a" font-size="10" font-weight="700" text-anchor="middle">$190B</text>
+      <!-- Google 2026: $180B => h=163.6, y=56.4 -->
+      <rect x="415" y="56.4" width="50" height="163.6" rx="3" fill="rgba(201,168,76,0.6)" stroke="#f0d87a" stroke-width="1.5"/>
+      <text x="440" y="50" fill="#f0d87a" font-size="10" font-weight="700" text-anchor="middle">$180B</text>
+      <!-- Meta 2026: $135B => h=122.7, y=97.3 -->
+      <rect x="545" y="97.3" width="50" height="122.7" rx="3" fill="rgba(201,168,76,0.6)" stroke="#f0d87a" stroke-width="1.5"/>
+      <text x="570" y="91" fill="#f0d87a" font-size="10" font-weight="700" text-anchor="middle">$135B</text>
+      <!-- Combined total -->
+      <rect x="640" y="60" width="80" height="22" rx="4" fill="rgba(224,85,69,0.1)" stroke="#e05545" stroke-width="1"/>
+      <text x="680" y="75" fill="#e05545" font-size="11" font-weight="700" text-anchor="middle">$725B 合計</text>
+      <text x="680" y="90" fill="#8a8070" font-size="8" text-anchor="middle">vs 2025: $410B (+77%)</text>
+      <!-- Company labels -->
+      <text x="130" y="242" fill="#c9a84c" font-size="10" text-anchor="middle">Amazon</text>
+      <text x="260" y="242" fill="#c9a84c" font-size="10" text-anchor="middle">Microsoft</text>
+      <text x="390" y="242" fill="#c9a84c" font-size="10" text-anchor="middle">Google</text>
+      <text x="520" y="242" fill="#c9a84c" font-size="10" text-anchor="middle">Meta</text>
+      <!-- Legend -->
+      <rect x="80" y="252" width="12" height="8" rx="2" fill="rgba(201,168,76,0.2)"/>
+      <text x="97" y="260" fill="#8a8070" font-size="8">2025</text>
+      <rect x="135" y="252" width="12" height="8" rx="2" fill="rgba(201,168,76,0.6)"/>
+      <text x="152" y="260" fill="#8a8070" font-size="8">2026指引</text>
+    </svg>
+    <div class="chart-source">資料來源：Bloomberg, Company Filings (AMZN, MSFT, GOOGL, META), Goldman Sachs | 截至2026年Q2</div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">$725B — 人類史上最大規模的基礎設施投資潮</div>
+    <p>Google、Amazon、Microsoft、Meta四大超大規模雲端商2026年資本開支指引合計<span class="b">$725B</span>，較2025年$410B成長<span class="b">77%</span>，若加入Oracle則達<span class="b">$660-690B</span>。拆解來看：Amazon領先以<span class="b">$200B</span>（AWS成長28%、自研晶片營收run rate $20B），Microsoft <span class="b">$190B</span>（CFO Amy Hood將$25B歸因於記憶體晶片漲價），Google <span class="b">$175-185B</span>（雲端營收YoY +63%至$20B），Meta <span class="b">$125-145B</span>（Zuckerberg稱為「為數十億人提供個人超級智慧」）。</p>
+    <p>資本密集度已達歷史性的<span class="b">45-57%營收比</span> — 在正常的企業財務框架中，這是不可思議的數字。Goldman預測2025-2030年四大超大規模累計資本開支將達<span class="b">$5.3兆</span>。自由現金流首當其衝 — Amazon預計2026年FCF將<span class="b">轉為負值</span>，Meta公布資本開支上調後股價<span class="b">單日跌9.25%</span>。核心邏輯是：每家公司都<span class="b">更怕算力不足</span>，而不怕過度投資 — 因為在AI競賽中落後的代價可能是存亡級的。</p>
+    <div class="data-point">Amazon：<span class="b">$200B</span> &nbsp;|&nbsp; Microsoft：<span class="b">$190B</span> &nbsp;|&nbsp; Google：<span class="b">$175-185B</span> &nbsp;|&nbsp; Meta：<span class="b">$125-145B</span> &nbsp;|&nbsp; 合計：<span class="b">$725B（+77% YoY）</span> &nbsp;|&nbsp; 2025-2030累計：<span class="b">$5.3兆（GS預估）</span></div>
+    <div class="implication"><div class="label">投資啟示</div>$725B資本開支是半導體基本面的<span class="b">終極背書</span> — 這筆錢最終流向NVIDIA（GPU）、TSMC（代工）、SK Hynix/Micron（HBM）、ASML/Applied Materials（設備）。即便AI的投資回報率（ROI）仍存疑，<span class="b">資本開支本身就是確定性營收</span>。風險在於2027年若AI ROI不及預期，資本開支可能急劇收縮 — 但2026年的花費已經鎖定，不會回頭。<span class="b">短期（6-12個月）看好半導體供應鏈確定性收入</span>，中期（18-24個月）須密切監控AI ROI信號。</div>
+  </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- SECTION 5: HBM MEMORY -->
+<!-- ============================================================ -->
+<div class="section" id="hbm-memory">
+  <h2><span class="tag tag-mem">記憶體</span> HBM記憶體 — 供需失衡與定價權重置</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--cyan)">53%</div><div class="lbl">SK Hynix HBM<br>市場份額</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">5-6x</div><div class="lbl">HBM vs DDR5<br>定價溢價</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">+200%</div><div class="lbl">DRAM價格<br>累計漲幅（自2025初）</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">HBM記憶體：AI最關鍵的基礎設施瓶頸 — Micron產能售罄至2026年底</div>
+    <p>HBM（高頻寬記憶體）市場正經歷前所未有的<span class="b">結構性供需失衡</span>。三大DRAM廠商（SK Hynix、Samsung、Micron）控制了全球<span class="b">95%+</span>的產能，且三家都在系統性地將產線從通用DRAM轉向HBM — 因為HBM的<span class="b">每片晶圓營收是DDR5的3-5倍</span>。Micron CEO Sanjay Mehrotra在財報電話會上直言：HBM產能<span class="b">售罄至2026年底</span>，中期僅能滿足客戶需求的<span class="b">50-67%</span>。</p>
+    <p>市場份額方面，SK Hynix以<span class="b">53%</span>領先（Q3 2025 Counterpoint數據），Samsung <span class="b">35%</span>，Micron <span class="b">11%</span>但正快速追趕 — 2025年12月Micron宣布<span class="b">退出消費記憶體市場</span>，全面轉向AI數據中心客戶。HBM定價持續攀升：HBM3約<span class="b">$200/堆疊</span>、HBM3E約<span class="b">$300/堆疊</span>、即將量產的HBM4預估<span class="b">$500/堆疊</span>。由於HBM消耗的晶圓面積是DDR5的<span class="b">3:1</span>比例，產能轉移直接壓縮通用記憶體供應 — 自2025年初以來DRAM價格累計上漲<span class="b">超過200%</span>，Samsung與SK Hynix已將Q1 2026伺服器DRAM報價<span class="b">較Q4 2025上調60-70%</span>。</p>
+    <div class="data-point">HBM市佔：<span class="b">SK Hynix 53% / Samsung 35% / Micron 11%</span> &nbsp;|&nbsp; HBM定價：<span class="b">HBM3 $200 / HBM3E $300 / HBM4 $500（預估）</span> &nbsp;|&nbsp; Micron產能：<span class="b">售罄至2026年底</span> &nbsp;|&nbsp; HBM vs DDR5晶圓轉換比：<span class="b">3:1</span> &nbsp;|&nbsp; 2028 TAM預估：<span class="b">$100B</span></div>
+    <div class="implication"><div class="label">投資啟示</div>HBM的供需緊張是<span class="b">真實且深層的</span> — 不是投機炒作。但SK Hynix的股價已反映了過多樂觀預期，且韓國槓桿ETF的存在使其波動性遠超基本面應有的水準。<span class="b">Micron今晚（6/24）財報是關鍵催化劑</span> — 共識預期營收$35B（+279% YoY）、EPS $19.72（+962% YoY）。若HBM指引與定價強勁，記憶體板塊將獲得基本面確認；若指引疲軟，則SK Hynix「轉向通用型DRAM」的言論將被重新解讀為<span class="b">需求見頂信號</span>。建議：Micron財報前保持觀望，財報後根據HBM指引決定方向。</div>
+  </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- SECTION 6: EQUIPMENT & ANALOG -->
+<!-- ============================================================ -->
+<div class="section" id="equipment-wfe">
+  <h2><span class="tag tag-equip">設備</span> 設備與類比晶片 — 穿越週期的結構性標的</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val">$131B</div><div class="lbl">2026 WFE市場<br>（晶圓設備）</div></div>
+    <div class="stat"><div class="val" style="color:var(--green)">BBB+</div><div class="lbl">Infineon信用評級<br>（S&amp;P 穩定展望）</div></div>
+    <div class="stat"><div class="val">0.6x</div><div class="lbl">Infineon目標槓桿<br>（2026E）</div></div>
+  </div>
+
+  <!-- CHART: WFE Market and Key Players -->
+  <div class="chart-container">
+    <div class="chart-title">全球晶圓設備（WFE）市場規模與五大寡頭（$B）</div>
+    <svg viewBox="0 0 760 220" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;">
+      <!-- Market size bar (background) -->
+      <rect x="80" y="30" width="600" height="40" rx="6" fill="rgba(201,168,76,0.08)" stroke="#2a2820" stroke-width="1"/>
+      <text x="690" y="55" fill="#f0d87a" font-size="12" font-weight="700">$131B</text>
+      <text x="690" y="68" fill="#8a8070" font-size="8">2026E Total WFE</text>
+      <!-- Segmented bar showing top 5 share -->
+      <!-- ASML: ~21% = 126px -->
+      <rect x="80" y="30" width="126" height="40" rx="6" fill="rgba(176,140,208,0.4)" stroke="#b08cd0" stroke-width="1"/>
+      <text x="143" y="50" fill="#f0ebe0" font-size="10" font-weight="700" text-anchor="middle">ASML</text>
+      <text x="143" y="64" fill="#b08cd0" font-size="8" text-anchor="middle">~21%</text>
+      <!-- Applied Materials: ~17% = 102px -->
+      <rect x="206" y="30" width="102" height="40" rx="0" fill="rgba(76,201,176,0.3)" stroke="#4cc9b0" stroke-width="1"/>
+      <text x="257" y="50" fill="#f0ebe0" font-size="10" font-weight="700" text-anchor="middle">AMAT</text>
+      <text x="257" y="64" fill="#4cc9b0" font-size="8" text-anchor="middle">~17%</text>
+      <!-- Lam Research: ~14% = 84px -->
+      <rect x="308" y="30" width="84" height="40" rx="0" fill="rgba(201,168,76,0.3)" stroke="#c9a84c" stroke-width="1"/>
+      <text x="350" y="50" fill="#f0ebe0" font-size="10" font-weight="700" text-anchor="middle">Lam</text>
+      <text x="350" y="64" fill="#c9a84c" font-size="8" text-anchor="middle">~14%</text>
+      <!-- Tokyo Electron: ~13% = 78px -->
+      <rect x="392" y="30" width="78" height="40" rx="0" fill="rgba(212,144,64,0.3)" stroke="#d49040" stroke-width="1"/>
+      <text x="431" y="50" fill="#f0ebe0" font-size="10" font-weight="700" text-anchor="middle">TEL</text>
+      <text x="431" y="64" fill="#d49040" font-size="8" text-anchor="middle">~13%</text>
+      <!-- KLA: ~8% = 48px -->
+      <rect x="470" y="30" width="48" height="40" rx="0" fill="rgba(107,189,91,0.3)" stroke="#6bbd5b" stroke-width="1"/>
+      <text x="494" y="50" fill="#f0ebe0" font-size="9" font-weight="700" text-anchor="middle">KLA</text>
+      <text x="494" y="64" fill="#6bbd5b" font-size="8" text-anchor="middle">~8%</text>
+      <!-- Others -->
+      <rect x="518" y="30" width="162" height="40" rx="0 6 6 0" fill="rgba(138,128,112,0.15)" stroke="#2a2820" stroke-width="1"/>
+      <text x="599" y="55" fill="#8a8070" font-size="10" text-anchor="middle">Others ~27%</text>
+
+      <!-- Key equipment categories below -->
+      <text x="80" y="100" fill="#c9a84c" font-size="10" font-weight="600">關鍵設備類別與AI驅動成長</text>
+
+      <!-- EUV Lithography -->
+      <rect x="80" y="112" width="200" height="35" rx="4" fill="rgba(176,140,208,0.08)" stroke="rgba(176,140,208,0.3)" stroke-width="1"/>
+      <text x="90" y="128" fill="#b08cd0" font-size="9" font-weight="700">EUV光刻機</text>
+      <text x="90" y="142" fill="#8a8070" font-size="8">ASML獨佔 | 單台&gt;$200M | High-NA &gt;$350M</text>
+
+      <!-- Deposition/Etch -->
+      <rect x="290" y="112" width="200" height="35" rx="4" fill="rgba(76,201,176,0.08)" stroke="rgba(76,201,176,0.3)" stroke-width="1"/>
+      <text x="300" y="128" fill="#4cc9b0" font-size="9" font-weight="700">沉積/蝕刻</text>
+      <text x="300" y="142" fill="#8a8070" font-size="8">AMAT + Lam主導 | HBM 3D堆疊關鍵</text>
+
+      <!-- Vacuum/Metrology -->
+      <rect x="500" y="112" width="200" height="35" rx="4" fill="rgba(201,168,76,0.08)" stroke="rgba(201,168,76,0.3)" stroke-width="1"/>
+      <text x="510" y="128" fill="#c9a84c" font-size="9" font-weight="700">真空閥/量測</text>
+      <text x="510" y="142" fill="#8a8070" font-size="8">VAT Group + KLA | 含量提升 + 服務收入</text>
+
+      <!-- CoWoS capacity note -->
+      <rect x="80" y="160" width="620" height="30" rx="4" fill="rgba(224,85,69,0.05)" stroke="rgba(224,85,69,0.15)" stroke-width="1"/>
+      <text x="390" y="180" fill="#e05545" font-size="9" text-anchor="middle">TSMC CoWoS先進封裝月產能：2025年 80K片 → 2026年 140K+片（+75%） — AI最大瓶頸</text>
+    </svg>
+    <div class="chart-source">資料來源：SEMI, Bloomberg Intelligence, Company Filings (ASML, AMAT, VAT, KLAC) | 截至2026年Q1</div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">VAT Group — AI設備週期的純粹代理標的</div>
+    <p><span class="b">VAT Group</span>供應半導體製造關鍵的高性能真空閥，銷售與晶圓廠設備（WFE）需求高度連動，是純半導體（pure-play）模式中槓桿AI需求最直接的標的。成長動能日益由AI晶片需求驅動 — 先進製程節點與高階記憶體需要更複雜的真空製程控制。與主要OEM的緊密合作推升<span class="b">每台設備含量</span>，因次世代設備需要更高客製化、精度與可靠性，支撐定價與利潤率。不斷擴大的安裝基數帶來備件、服務與改裝的<span class="b">經常性收入</span>，提供穿越週期的部分韌性。2026年WFE市場預估達<span class="b">$131B</span>，較2024年$104B的紀錄再成長26%。</p>
+    <div class="data-point">2026 WFE市場：<span class="b">$131B（+26% vs 2024）</span> &nbsp;|&nbsp; 五大寡頭佔比：<span class="b">~73%（ASML 21%, AMAT 17%, Lam 14%, TEL 13%, KLA 8%）</span> &nbsp;|&nbsp; ASML EUV單台：<span class="b">&gt;$200M</span> &nbsp;|&nbsp; High-NA EUV：<span class="b">&gt;$350M</span></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">Infineon — 低槓桿、高評級的防禦性AI功率半導體標的</div>
+    <p>與記憶體龍頭的投機狂熱形成對比，類比與功率半導體龍頭<span class="b">Infineon</span>展現紮實信用基本面。S&P信用評級<span class="b">BBB+（穩定展望）</span>，FY2026 Q1營收<span class="b">EUR3.66B</span>（利潤率17.9%），全年展望已上調至「顯著成長」。AI數據中心電力供應方案營收預計FY2026達<span class="b">EUR1.5B</span>，FY2027進一步攀升至<span class="b">EUR2.5B</span>。即使完成$25億收購Marvell車用乙太網業務，淨槓桿率仍低至<span class="b">1.1x</span>，目標2026年降至<span class="b">0.6x</span> — 關鍵指標已向單A級同業靠攏。股價<span class="b">EUR85.94</span>，距52週高點EUR88.83僅3%，但相較記憶體龍頭的槓桿ETF驅動波動，Infineon提供的是<span class="b">信用強度與基本面確定性</span>。</p>
+    <div class="data-point">信用評級：<span class="b">BBB+（S&amp;P 穩定展望）</span> &nbsp;|&nbsp; 淨槓桿率：<span class="b">1.1x → 0.6x（2026E）</span> &nbsp;|&nbsp; AI電力營收：<span class="b">EUR1.5B（FY26） → EUR2.5B（FY27）</span> &nbsp;|&nbsp; 股價：<span class="b">EUR85.94</span> &nbsp;|&nbsp; 市值：<span class="b">EUR113B</span></div>
+    <div class="implication"><div class="label">投資啟示</div>設備與類比晶片是半導體板塊中<span class="b">穿越週期的結構性標的</span>。VAT Group受益於WFE含量提升與經常性收入，Infineon受益於AI電力需求與低槓桿信用故事。這兩者的共同特點是：(1) 不受韓國槓桿ETF暴力波動影響，(2) 經常性收入佔比高，(3) 基本面確定性高於記憶體。<span class="b">策略：逢半導體板塊回調時優先配置設備股（ASML、VAT、KLA）與低槓桿類比股（Infineon），而非追逐記憶體龍頭。</span></div>
+  </div>
 </div>
 
 <div class="divider"></div>
 
+<!-- ============================================================ -->
+<!-- RED TEAM -->
+<!-- ============================================================ -->
 <div class="red-team" id="red-team">
   <div class="red-team-title">&#128308; Red Team — 核心假設與反面論證</div>
   <ul>
-    <li>假設1：SK Hynix領跌純屬技術面/投機槓桿反噬，基本面（AI記憶體需求）並未轉壞</li>
-    <li>假設2：AI結構性需求將持續支撐設備（VAT）與類比/功率晶片（Infineon）的成長與利潤率</li>
-    <li>假設3：Infineon低槓桿（0.6x）與評級上調提供足夠防禦性，足以吸收關稅與中國競爭衝擊</li>
-    <li style="color:var(--red)">風險1：SK Hynix「轉向通用型DRAM」可能不只是情緒——若反映HBM/高階記憶體訂單見頂，則為基本面警訊而非單純技術回調</li>
-    <li style="color:var(--red)">風險2：單一股票雙倍槓桿ETF的自我餵養式拋售可能外溢至整個半導體板塊，使VAT、Infineon等基本面標的同遭無差別錯殺（短期相關性上升）</li>
-    <li style="color:var(--red)">風險3：中國本土化競爭（尤其AI與功率半導體）與關稅可能侵蝕Infineon汽車業務的市場地位，使EBITDA重返成長的時程延後</li>
+    <li><strong>假設1：</strong>SOX暴跌7.9%純屬韓國槓桿ETF結構性爆倉觸發的技術面清算，AI半導體基本面（NVIDIA $81.6B營收、TSMC 66.2%毛利率）完全未受影響</li>
+    <li><strong>假設2：</strong>超大規模$725B資本開支已鎖定2026年半導體供應鏈營收確定性，短期（6-12個月）基本面風險極低</li>
+    <li><strong>假設3：</strong>HBM供需失衡（Micron產能售罄至年底、定價5-6x溢價）為結構性而非週期性，記憶體定價權已根本性重置</li>
+    <li style="color:var(--red)"><strong>反駁1：</strong>SK Hynix「轉向通用型DRAM」的言論可能不只是PR失誤 — 若反映HBM訂單增速放緩或客戶（NVIDIA）推遲HBM4採購節奏，則記憶體的「結構性供需失衡」敘事將鬆動。今晚Micron財報若HBM指引低於預期，此風險將具體化。歷史上，每一次「這次不一樣」的記憶體超級週期最終都回歸均值</li>
+    <li style="color:var(--red)"><strong>反駁2：</strong>$725B資本開支是「確定性營收」的前提是這些支出不會被削減。但2025年已有先例 — Meta公布資本開支上調後股價單日跌9.25%，反映市場對AI ROI的疑慮日增。若2026下半年AI應用的貨幣化證據不足（例如企業客戶AI採納率停滯），2027年資本開支可能面臨30-40%的急劇收縮，屆時整個供應鏈將同步承壓</li>
+    <li style="color:var(--red)"><strong>反駁3：</strong>NVIDIA 75%毛利率與$91B Q2指引的確壯觀，但市值$5.14兆意味市場已完全定價了數年的超額成長。若Vera Rubin延遲、或中國出口管制進一步收緊（H20已被禁），或AMD MI350X/MI400在某些工作負載上實現實質性替代，NVIDIA的估值溢價可能快速收縮。$5兆市值意味任何減速都是災難性的</li>
   </ul>
-  <p style="margin-top:10px;padding:10px 14px;background:rgba(224,85,69,0.04);border-radius:6px;font-size:0.9em;border-left:3px solid var(--red)">核心邏輯（區分投機泡沫 vs. 基本面韌性）成立：SK Hynix單日逾10%跌幅伴隨雙倍槓桿ETF的存在，技術面特徵明顯。但關鍵尾部風險是「轉向通用型DRAM」的真實含義——若後續Micron財報（EPS預測12個月飆645%已是極端外推）指引轉弱或HBM訂單鬆動，則記憶體調整將從技術面演變為基本面，並透過板塊相關性拖累VAT與Infineon。建議：防禦性配置向低槓桿、經常性收入佔比高的標的（Infineon債、VAT服務收入）傾斜，並以Micron財報作為驗證/推翻記憶體基本面的關鍵觸發點。</p>
+  <p style="margin-top:10px;padding:10px 14px;background:rgba(224,85,69,0.04);border-radius:6px;font-size:0.9em;border-left:3px solid var(--red)"><strong>編輯裁定：</strong>核心邏輯（區分投機清算vs基本面韌性）成立，可信度<span class="b">75%</span>。最大風險不是眼前的SOX回調（這會結束），而是<span class="b">2027年AI ROI清算日</span> — 若超大規模雲端商發現$725B的投資無法轉化為足夠的營收增長，資本開支削減將是毀滅性的。目前該情境機率約<span class="b">20-25%</span>，但若發生，半導體板塊可能從高點回調<span class="b">40-50%</span>。<strong>結論：短期（6-12月）結構性看多，但須用期權對沖2027年尾部風險。今晚Micron財報是近期最重要的方向確認/否定事件。</strong></p>
 </div>
 
+<!-- ============================================================ -->
+<!-- FUND MANAGER TAKEAWAYS -->
+<!-- ============================================================ -->
 <div class="callout" id="takeaways">
   <div class="callout-title">基金經理人重點摘要</div>
   <ul>
-    <li><strong>記憶體（SK Hynix）：</strong>單日暴跌逾10%屬技術面投機反噬，非基本面崩壞。減持單一股票雙倍槓桿ETF與記憶體龍頭曝險。</li>
-    <li><strong>Micron：</strong>$1.2兆市值，Q3 EPS預測12個月飆+645%（極端外推）。即將公布財報為近期最大波動源，是驗證記憶體基本面的關鍵觸發點，財報前勿追高。</li>
-    <li><strong>Infineon：</strong>兩度評級上調至高triple-B，槓桿2026年降至0.6x。逢殖利率走闊買入歐元及混合債（相對美元債仍有收窄空間）。</li>
-    <li><strong>VAT Group：</strong>純半導體真空閥，AI驅動含量提升＋經常性收入。WFE週期回調時分批佈局AI設備高品質代理標的。</li>
-    <li><strong>策略：</strong>區分投機泡沫與基本面韌性——配置向低槓桿、經常性收入高的標的傾斜，避開過熱記憶體龍頭。</li>
-    <li><strong>油價：</strong>持續回落，利好印度等能源進口國，可作為非半導體的對沖配置思路。</li>
+    <li><strong>SOX崩跌：</strong>6月22日歷史新高14,655 → 6月23日暴跌7.9%至13,483。SOXX YTD仍+98%。回調可能延伸至-15~18%（12,000-12,500區間），但結構性多頭未破壞。</li>
+    <li><strong>韓國槓桿ETF：</strong>$9.1B槓桿ETF（92%散戶）的結構性爆倉是直接導火線。立即清倉所有單一股票槓桿ETF。VKOSPI飆至94.81歷史新高，做多韓國波動率。</li>
+    <li><strong>NVIDIA：</strong>Q1 FY27營收$81.6B（+85% YoY）、數據中心$75.2B（+92%）、毛利率75%、Q2指引$91B。市值$5.14兆。基本面無懈可擊，但估值已定價數年超額成長。</li>
+    <li><strong>TSMC：</strong>Q1營收$35.9B（+40.6%）、毛利率66.2%、先進製程佔74%。全年成長30%+。CoWoS產能擴至140K+片/月。逢回調買入TSM — AI硬體的必經之路。</li>
+    <li><strong>超大規模Capex：</strong>四大合計$725B（+77% YoY）。這是2026年半導體營收確定性的終極背書，但2027年AI ROI清算日風險（~20-25%機率）須用期權對沖。</li>
+    <li><strong>HBM記憶體：</strong>SK Hynix 53%市佔、HBM定價5-6x DDR5溢價、Micron產能售罄。今晚Micron財報（預期營收$35B、EPS +962%）是方向確認關鍵。財報前觀望，財報後行動。</li>
+    <li><strong>設備與類比：</strong>WFE市場$131B、五大寡頭佔73%。優先配置ASML、VAT（含量提升+服務收入）、Infineon（BBB+、0.6x槓桿、AI電力EUR1.5B）— 穿越週期、遠離槓桿ETF波動。</li>
   </ul>
 </div>
 
 <div class="nav-links">
   <span><a href="newsletter_104_rates.html">&larr; 前期</a></span>
-  <span><a href="student.html">返回目錄 &rarr;</a></span>
+  <span><a href="newsletter_106_geopolitics.html">後期 &rarr;</a></span>
 </div>
 
 <div class="footer">
   彭博研究摘要 | 僅供教學與討論用途 | 2026年6月24日<br>
-  資料來源：Bloomberg Intelligence, Bloomberg Economics, Bloomberg News<br>
+  資料來源：Bloomberg Intelligence, Bloomberg Economics, NVIDIA 8-K, TSMC IR, CFTC, Nomura, Goldman Sachs, S&amp;P Global, SEMI, Counterpoint Research<br>
   <a href="https://www.patreon.com/Aireturn">Patreon</a> · <a href="https://t.me/AIreturn">Telegram</a> · Threads @aireturn88
 </div>
 

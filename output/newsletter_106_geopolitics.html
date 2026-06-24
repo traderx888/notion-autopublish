@@ -18,22 +18,12 @@
   .subtitle { color: var(--text-bright); font-size: 0.95em; margin-bottom: 8px; font-family: 'Noto Serif TC', serif; }
   .issue-badge { display: inline-block; background: rgba(201,168,76,0.15); color: var(--accent); padding: 4px 12px; border-radius: 12px; font-size: 0.8em; font-weight: 600; margin-bottom: 20px; border: 1px solid rgba(201,168,76,0.3); }
   .tag { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 0.72em; font-weight: 600; margin-right: 4px; }
-  .tag-rates { background: rgba(201,168,76,0.15); color: var(--accent); }
-  .tag-china { background: rgba(212,144,64,0.15); color: var(--orange); }
-  .tag-japan { background: rgba(224,85,69,0.15); color: var(--red); }
   .tag-geo   { background: rgba(224,85,69,0.15); color: var(--red); }
   .tag-oil   { background: rgba(212,168,67,0.15); color: var(--yellow); }
-  .tag-trade { background: rgba(212,168,67,0.15); color: var(--yellow); }
-  .tag-growth{ background: rgba(107,189,91,0.15); color: var(--green); }
-  .tag-metals{ background: rgba(176,140,208,0.15); color: var(--purple); }
-  .tag-infl  { background: rgba(224,85,69,0.15); color: var(--red); }
-  .tag-policy{ background: rgba(201,168,76,0.15); color: var(--accent); }
-  .tag-val   { background: rgba(107,189,91,0.15); color: var(--green); }
+  .tag-rates { background: rgba(201,168,76,0.15); color: var(--accent); }
   .tag-vol   { background: rgba(224,85,69,0.15); color: var(--red); }
-  .tag-semi  { background: rgba(76,201,176,0.15); color: var(--cyan); }
-  .tag-credit{ background: rgba(176,140,208,0.15); color: var(--purple); }
-  .tag-space { background: rgba(201,168,76,0.15); color: var(--accent); }
-  .tag-misc  { background: rgba(138,128,112,0.15); color: var(--muted); }
+  .tag-def   { background: rgba(176,140,208,0.15); color: var(--purple); }
+  .tag-trade { background: rgba(107,189,91,0.15); color: var(--green); }
   .verdict-bar { background: var(--accent); color: #0a0a08; padding: 14px 20px; border-radius: 8px; margin-bottom: 20px; font-weight: 700; font-size: 1.05em; font-family: 'Noto Serif TC', serif; }
   .section { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 22px; margin-bottom: 18px; }
   .section h2 { color: var(--gold); font-size: 1.15em; margin-bottom: 12px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
@@ -41,10 +31,8 @@
   .article { margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid rgba(42,40,32,0.7); }
   .article:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
   .article-title { color: var(--text-bright); font-weight: 700; font-size: 0.95em; margin-bottom: 4px; }
-  .article-title-cn { color: var(--muted); font-size: 0.85em; margin-bottom: 8px; }
   .article p { font-size: 0.9em; margin: 6px 0; }
   .data-point { background: rgba(201,168,76,0.05); padding: 8px 12px; border-radius: 6px; margin: 8px 0; font-size: 0.85em; border: 1px solid rgba(201,168,76,0.12); }
-  .data-point .num { color: var(--text-bright); font-weight: 700; }
   .implication { background: rgba(201,168,76,0.06); border-left: 3px solid var(--accent); padding: 10px 14px; margin: 10px 0; border-radius: 0 6px 6px 0; font-size: 0.88em; }
   .implication .label { color: var(--accent); font-weight: 700; font-size: 0.8em; text-transform: uppercase; margin-bottom: 4px; }
   .red-team { background: rgba(224,85,69,0.06); border: 1px solid rgba(224,85,69,0.25); border-radius: 8px; padding: 18px; margin: 18px 0; }
@@ -57,6 +45,7 @@
   .callout li { margin: 5px 0; font-size: 0.88em; }
   ul { padding-left: 18px; }
   li { margin: 4px 0; font-size: 0.88em; }
+  .b { color: var(--text-bright); font-weight: 700; }
   .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
   .stat { background: rgba(201,168,76,0.05); padding: 12px; border-radius: 6px; text-align: center; border: 1px solid rgba(201,168,76,0.1); }
   .stat .val { font-size: 1.4em; font-weight: 700; color: var(--gold); font-family: 'Playfair Display', serif; }
@@ -70,6 +59,9 @@
   .nav-links { display: flex; justify-content: space-between; margin: 20px 0; font-size: 0.85em; }
   .nav-links a { color: var(--accent); text-decoration: none; }
   .nav-links a:hover { text-decoration: underline; color: var(--gold); }
+  .chart-container { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 18px; margin: 16px 0; }
+  .chart-title { color: var(--accent); font-weight: 700; font-size: 0.88em; margin-bottom: 12px; font-family: 'Playfair Display', serif; }
+  .chart-source { color: var(--muted); font-size: 0.7em; margin-top: 8px; }
   .divider { height: 1px; background: linear-gradient(90deg, transparent, var(--accent), transparent); margin: 24px 0; opacity: 0.4; }
   .footer { text-align: center; color: var(--muted); font-size: 0.75em; margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--border); }
   .footer a { color: var(--accent); text-decoration: none; }
@@ -82,121 +74,464 @@
 <p class="subtitle">第106期 | 美伊協議生效：中東去風險與原油尾部對沖</p>
 <span class="issue-badge">2026年六月下旬更新</span>
 
-<div class="verdict-bar">結論：美伊MOU暫緩中東戰火、壓低原油風險溢價，但協議明顯偏向伊朗且川普威脅反覆無常——**逢高減持原油多頭，保留霍爾木茲海峽60天尾部對沖**</div>
+<div class="verdict-bar">結論：美伊14點MOU簽署後Brent從$126高點暴跌至$77（-39%），地緣風險溢價快速消退，但協議10/14條款偏向伊朗、海峽僅承諾60天免費通行、黎巴嫩戰火未歇。Goldman Sachs警告若停火破裂Brent可反彈至$115。建議：逢反彈減持原油方向性多頭至半倉，保留3個月Brent $95/$115 call spread對沖霍爾木茲尾部風險，collar策略鎖定$70底部。</div>
 
 <div class="nav-links">
   <span><a href="newsletter_105_semiconductor.html">&larr; 前期</a></span>
-  <span><a href="student.html">返回目錄 &rarr;</a></span>
+  <span><a href="newsletter_107_policy_credit_oil.html">後期 &rarr;</a></span>
 </div>
 
 <div class="toc">
   <div class="toc-title">目錄</div>
   <ol>
-    <li><a href="#us-iran-mou">美伊協議 條款失衡，德黑蘭佔盡上風</a></li>
-    <li><a href="#trump-credibility">川普威脅 光說不練？威脅可信度存疑</a></li>
-    <li><a href="#energy-shipping">能源航運 雙重戰線，原油上下風險並存</a></li>
+    <li><a href="#oil-price">原油走勢 Brent從$126崩至$77的去風險路徑</a></li>
+    <li><a href="#us-iran-mou">美伊協議 14點MOU條款深度拆解</a></li>
+    <li><a href="#hormuz">霍爾木茲海峽 全球最大咽喉的開關博弈</a></li>
+    <li><a href="#trump-cred">川普威脅 41次威脅的兌現率分析</a></li>
+    <li><a href="#lebanon">黎巴嫩戰線 真主黨拒絕停火的連鎖效應</a></li>
+    <li><a href="#defense">軍費競賽 中東與全球防衛支出重估</a></li>
     <li><a href="#red-team">Red Team 反面論證</a></li>
     <li><a href="#takeaways">基金經理人重點摘要</a></li>
   </ol>
 </div>
 
+<!-- ============================================================ -->
+<!-- SECTION 1: OIL PRICE TRAJECTORY -->
+<!-- ============================================================ -->
+<div class="section" id="oil-price">
+  <h2><span class="tag tag-oil">原油</span> Brent走勢 — 從$126崩至$77，風險溢價蒸發</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--red)">$77.42</div><div class="lbl">Brent現價<br>三個月新低</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">-39%</div><div class="lbl">自52週高點<br>$126.41跌幅</div></div>
+    <div class="stat"><div class="val">$73.30</div><div class="lbl">WTI現價<br>52週低$54.98</div></div>
+  </div>
+
+  <!-- CHART: Brent Crude 12-month trajectory -->
+  <div class="chart-container">
+    <div class="chart-title">Brent原油12個月走勢（2025年7月 — 2026年6月）</div>
+    <svg viewBox="0 0 760 300" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;">
+      <!-- Grid -->
+      <rect x="60" y="20" width="680" height="240" fill="none" stroke="#2a2820" stroke-width="0.5"/>
+      <line x1="60" y1="68" x2="740" y2="68" stroke="#2a2820" stroke-width="0.5" stroke-dasharray="4"/>
+      <line x1="60" y1="116" x2="740" y2="116" stroke="#2a2820" stroke-width="0.5" stroke-dasharray="4"/>
+      <line x1="60" y1="164" x2="740" y2="164" stroke="#2a2820" stroke-width="0.5" stroke-dasharray="4"/>
+      <line x1="60" y1="212" x2="740" y2="212" stroke="#2a2820" stroke-width="0.5" stroke-dasharray="4"/>
+      <!-- Y-axis labels: $50 to $130, range=80, height=240 -->
+      <!-- y = 260 - (val-50)*(240/80) = 260 - (val-50)*3 -->
+      <text x="55" y="24" fill="#8a8070" font-size="10" text-anchor="end">$130</text>
+      <text x="55" y="68" fill="#8a8070" font-size="10" text-anchor="end">$120</text>
+      <text x="55" y="116" fill="#8a8070" font-size="10" text-anchor="end">$110</text>
+      <text x="55" y="164" fill="#8a8070" font-size="10" text-anchor="end">$100</text>
+      <text x="55" y="212" fill="#8a8070" font-size="10" text-anchor="end">$90</text>
+      <text x="55" y="260" fill="#8a8070" font-size="10" text-anchor="end">$80</text>
+      <!-- X-axis labels -->
+      <text x="60" y="278" fill="#8a8070" font-size="9">Jul 25</text>
+      <text x="117" y="278" fill="#8a8070" font-size="9">Aug</text>
+      <text x="174" y="278" fill="#8a8070" font-size="9">Sep</text>
+      <text x="231" y="278" fill="#8a8070" font-size="9">Oct</text>
+      <text x="288" y="278" fill="#8a8070" font-size="9">Nov</text>
+      <text x="345" y="278" fill="#8a8070" font-size="9">Dec</text>
+      <text x="402" y="278" fill="#8a8070" font-size="9">Jan 26</text>
+      <text x="459" y="278" fill="#8a8070" font-size="9">Feb</text>
+      <text x="516" y="278" fill="#8a8070" font-size="9">Mar</text>
+      <text x="573" y="278" fill="#8a8070" font-size="9">Apr</text>
+      <text x="630" y="278" fill="#8a8070" font-size="9">May</text>
+      <text x="700" y="278" fill="#8a8070" font-size="9">Jun</text>
+      <!-- Price line -->
+      <!-- Jul 25: ~$68 → y=260-(68-50)*3=260-54=206 -->
+      <!-- Aug: ~$65 → y=215 -->
+      <!-- Sep: ~$70 → y=200 -->
+      <!-- Oct: ~$73 → y=191 -->
+      <!-- Nov: ~$72 → y=194 -->
+      <!-- Dec: ~$74 → y=188 -->
+      <!-- Jan 26: ~$76 → y=182 -->
+      <!-- Feb: ~$85 (war starts Feb 28) → y=155 -->
+      <!-- Mar: ~$126 peak → y=32 -->
+      <!-- Apr: ~$110 ceasefire → y=80 -->
+      <!-- May: ~$97 → y=119 -->
+      <!-- Jun: ~$77 → y=179 -->
+      <polyline fill="none" stroke="#c9a84c" stroke-width="2.5"
+        points="60,206 117,215 174,200 231,191 288,194 345,188 402,182 459,155 516,32 573,80 630,119 740,179"/>
+      <!-- Area fill -->
+      <polygon fill="url(#oilGrad)" opacity="0.15"
+        points="60,206 117,215 174,200 231,191 288,194 345,188 402,182 459,155 516,32 573,80 630,119 740,179 740,260 60,260"/>
+      <defs>
+        <linearGradient id="oilGrad" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#c9a84c" stop-opacity="0.4"/>
+          <stop offset="100%" stop-color="#c9a84c" stop-opacity="0"/>
+        </linearGradient>
+      </defs>
+      <!-- War zone shading -->
+      <rect x="459" y="20" width="57" height="240" fill="rgba(224,85,69,0.06)"/>
+      <text x="488" y="16" fill="#e05545" font-size="8" text-anchor="middle">2/28 開戰</text>
+      <!-- MOU zone -->
+      <rect x="700" y="20" width="40" height="240" fill="rgba(107,189,91,0.06)"/>
+      <text x="720" y="16" fill="#6bbd5b" font-size="8" text-anchor="middle">6/17 MOU</text>
+      <!-- Key annotations -->
+      <circle cx="516" cy="32" r="5" fill="#e05545"/>
+      <text x="516" y="50" fill="#e05545" font-size="9" font-weight="700" text-anchor="middle">$126.41 峰值</text>
+      <circle cx="117" cy="215" r="4" fill="#6bbd5b"/>
+      <text x="117" y="230" fill="#6bbd5b" font-size="9" text-anchor="middle">$65 戰前低點</text>
+      <circle cx="740" cy="179" r="5" fill="#c9a84c"/>
+      <text x="710" y="195" fill="#c9a84c" font-size="9" font-weight="700" text-anchor="middle">$77.42 現價</text>
+      <!-- Goldman targets -->
+      <line x1="630" y1="182" x2="740" y2="182" stroke="#6bbd5b" stroke-width="1" stroke-dasharray="4,3"/>
+      <text x="740" y="187" fill="#6bbd5b" font-size="7" text-anchor="end">GS Q4目標 $80</text>
+      <line x1="630" y1="65" x2="740" y2="65" stroke="#e05545" stroke-width="1" stroke-dasharray="4,3"/>
+      <text x="740" y="62" fill="#e05545" font-size="7" text-anchor="end">GS 停火破裂 $115</text>
+    </svg>
+    <div class="chart-source">資料來源：Bloomberg, Trading Economics, Goldman Sachs Research | 截至2026年6月24日</div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">Brent六月暴跌20% — 戰爭溢價一個月內蒸發殆盡</div>
+    <p>Brent原油在六月經歷了劇烈的去風險重估。月初仍處於<span class="b">$96.42</span>（6月1日），6月3日一度反彈至<span class="b">$101.36</span>，但隨著美伊MOU消息逐步明朗，價格開始崩瀉 — 6月16日跌至<span class="b">$81.55</span>，6月22日進一步滑至<span class="b">$79.25</span>，6月23日收報<span class="b">$77.42</span>，為三個月新低，月跌幅達<span class="b">-19.91%</span>。WTI同步走弱至<span class="b">$73.30</span>。從3月的52週高點<span class="b">$126.41</span>計算，Brent已暴跌<span class="b">39%</span>。52週低點<span class="b">$58.72</span>出現在2025年8月OPEC+增產預期高峰期。</p>
+    <p>驅動力來自三個方向的同步壓縮：(1) 美國財政部發出<span class="b">60天伊朗原油出口豁免令</span>，允許美元計價交易，為40餘年來首次；(2) 霍爾木茲海峽交通恢復，科威特與阿聯酋已啟用替代出口路線；(3) 伊朗過去一週已出口超過<span class="b">3,000萬桶</span>。Goldman Sachs因此將Brent Q4預測從$90下調至<span class="b">$80</span>，並警告若停火破裂，價格可反彈至<span class="b">$115</span>。期貨曲線呈<span class="b">backwardation</span>：WTI 8月$73.31、9月$72.61、12月$70.77 — 市場定價進一步走弱。</p>
+    <div class="data-point">Brent現價：<span class="b">$77.42</span> &nbsp;|&nbsp; 52週區間：<span class="b">$58.72-$126.41</span> &nbsp;|&nbsp; 六月跌幅：<span class="b">-19.91%</span> &nbsp;|&nbsp; WTI現價：<span class="b">$73.30</span> &nbsp;|&nbsp; GS Q4目標：<span class="b">$80</span> &nbsp;|&nbsp; 停火破裂情境：<span class="b">$115</span></div>
+    <div class="implication"><div class="label">投資啟示</div>原油已完成「戰爭溢價蒸發」的主要階段，但<span class="b">$77-$80是多空爭奪的關鍵區間</span>。向下看，J.P. Morgan的結構性預測為$60（假設供應完全正常化），但60天豁免到期日（8月21日）構成明確的再定價催化劑。<span class="b">逢反彈至$82-$85減持方向性多頭</span>，但保留尾部對沖 — 當前call-skew翻轉意味著<span class="b">買call對沖的成本比正常時期高</span>，但collar策略反而有利（賣call的溢價更豐厚可用於融資put保護）。</div>
+  </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- SECTION 2: US-IRAN MOU DEEP DIVE -->
+<!-- ============================================================ -->
 <div class="section" id="us-iran-mou">
-  <h2><span class="tag tag-misc">美伊協議</span> 條款失衡，德黑蘭佔盡上風</h2>
+  <h2><span class="tag tag-geo">地緣</span> 美伊協議 — 14點MOU條款深度拆解</h2>
 
   <div class="stat-grid">
-    <div class="stat"><div class="val" style="color:var(--orange)">10/14</div><div class="lbl">MOU條款
-有利伊朗</div></div>
-    <div class="stat"><div class="val">$3,000億</div><div class="lbl">投資與重建
-基金（待定）</div></div>
-    <div class="stat"><div class="val">6/19</div><div class="lbl">原訂
-簽字儀式</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">10/14</div><div class="lbl">MOU條款<br>有利伊朗</div></div>
+    <div class="stat"><div class="val">$3,000億</div><div class="lbl">投資與重建<br>基金承諾</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">60天</div><div class="lbl">最終協議<br>談判窗口</div></div>
+  </div>
+
+  <!-- CHART: MOU Balance Scorecard -->
+  <div class="chart-container">
+    <div class="chart-title">美伊MOU 14點條款利益分配 — 誰佔上風？</div>
+    <svg viewBox="0 0 760 240" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;">
+      <!-- Background -->
+      <rect x="60" y="30" width="680" height="170" fill="none" stroke="#2a2820" stroke-width="0.5"/>
+      <!-- Iran favorable: 10 bars -->
+      <text x="400" y="22" fill="#c9a84c" font-size="12" font-weight="700" text-anchor="middle">14點MOU條款分析</text>
+      <!-- Iran bar -->
+      <rect x="100" y="60" width="340" height="40" rx="4" fill="rgba(224,85,69,0.35)" stroke="#e05545" stroke-width="1.5"/>
+      <text x="270" y="85" fill="#f0ebe0" font-size="14" font-weight="700" text-anchor="middle">10 項有利伊朗</text>
+      <text x="100" y="115" fill="#e05545" font-size="9">制裁解除</text>
+      <text x="175" y="115" fill="#e05545" font-size="9">資產解凍</text>
+      <text x="250" y="115" fill="#e05545" font-size="9">原油出口</text>
+      <text x="325" y="115" fill="#e05545" font-size="9">$3000億基金</text>
+      <text x="100" y="130" fill="#e05545" font-size="9">海峽管控權</text>
+      <text x="195" y="130" fill="#e05545" font-size="9">核計畫延後</text>
+      <text x="295" y="130" fill="#e05545" font-size="9">美軍撤障</text>
+      <text x="375" y="130" fill="#e05545" font-size="9">...</text>
+      <!-- US bar -->
+      <rect x="100" y="145" width="34" height="40" rx="4" fill="rgba(107,189,91,0.35)" stroke="#6bbd5b" stroke-width="1.5"/>
+      <text x="117" y="170" fill="#f0ebe0" font-size="14" font-weight="700" text-anchor="middle">1</text>
+      <text x="145" y="163" fill="#6bbd5b" font-size="9">有利美國</text>
+      <text x="145" y="178" fill="#8a8070" font-size="8">伊朗重申不尋求核武</text>
+      <!-- Neutral bar -->
+      <rect x="490" y="145" width="102" height="40" rx="4" fill="rgba(138,128,112,0.25)" stroke="#8a8070" stroke-width="1"/>
+      <text x="541" y="170" fill="#f0ebe0" font-size="13" font-weight="700" text-anchor="middle">3 中立</text>
+      <!-- Summary annotation -->
+      <rect x="490" y="60" width="230" height="68" rx="6" fill="rgba(224,85,69,0.08)" stroke="rgba(224,85,69,0.3)" stroke-width="1"/>
+      <text x="605" y="80" fill="#e05545" font-size="10" font-weight="700" text-anchor="middle">Bloomberg Economics評估</text>
+      <text x="605" y="96" fill="#e0d8c8" font-size="9" text-anchor="middle">「明顯偏向德黑蘭」</text>
+      <text x="605" y="112" fill="#e0d8c8" font-size="9" text-anchor="middle">華盛頓僅恢復戰前狀態</text>
+      <text x="605" y="128" fill="#e0d8c8" font-size="9" text-anchor="middle">伊朗獲全新讓步</text>
+      <!-- Timeline -->
+      <line x1="100" y1="210" x2="690" y2="210" stroke="#2a2820" stroke-width="1"/>
+      <circle cx="150" cy="210" r="4" fill="#e05545"/>
+      <text x="150" y="225" fill="#8a8070" font-size="8" text-anchor="middle">2/28 開戰</text>
+      <circle cx="300" cy="210" r="4" fill="#d49040"/>
+      <text x="300" y="225" fill="#8a8070" font-size="8" text-anchor="middle">4/8 停火</text>
+      <circle cx="480" cy="210" r="4" fill="#c9a84c"/>
+      <text x="480" y="225" fill="#c9a84c" font-size="8" text-anchor="middle">6/17 MOU簽署</text>
+      <circle cx="640" cy="210" r="4" fill="#e05545" opacity="0.6"/>
+      <text x="640" y="225" fill="#e05545" font-size="8" text-anchor="middle">8/21 豁免到期</text>
+    </svg>
+    <div class="chart-source">資料來源：Bloomberg Economics, CNN (MOU全文), NPR, Al Jazeera | 截至2026年6月</div>
   </div>
 
   <div class="article">
-    <div class="article-title">德黑蘭在美伊協議草案中獲益更多 — 一場不對等的交換</div>
-    <p>彭博經濟研究評估，報導中的14點《諒解備忘錄》明顯偏向德黑蘭——<span style="color:#f0ebe0;font-weight:700">10項有利伊朗、僅1項有利美國、3項中立</span>。交換並不對等：華盛頓主要讓局勢恢復至2月戰爭爆發前（霍爾木茲海峽暫時開放、限制核活動），而伊朗則獲全新讓步——立即解除石油銷售制裁、最終全面取消制裁、解凍資產，以及設立<span style="color:#f0ebe0;font-weight:700">3,000億美元</span>投資與重建基金。關鍵在於海峽僅承諾「60天內」免費安全通行，期滿後伊朗將與阿曼協商管理權，意味未來可能收取過路費並行使管控權。核心的核計畫問題僅留待後續談判、且無保證解決。原訂6月19日簽字。對伊朗而言這是一場勝利——幾乎未作新承諾，卻換得售油權與談判籌碼。</p>
-    <div class="data-point">有利伊朗條款：<span style="color:#f0ebe0;font-weight:700">10/14</span> &nbsp;|&nbsp; 重建基金：<span style="color:#f0ebe0;font-weight:700">$3,000億</span> &nbsp;|&nbsp; 海峽免費通行期：<span style="color:#f0ebe0;font-weight:700">60天</span> &nbsp;|&nbsp; 唯一利美條款：<span style="color:#f0ebe0;font-weight:700">伊朗重申不尋求核武</span></div>
-    <div class="implication"><div class="label">投資啟示</div>協議僅延長停火、未解核心核問題，結構脆弱。德黑蘭佔優意味中東緊張並未根除——<span style="color:#f0ebe0;font-weight:700">短期去風險可逢高減持原油多頭，但勿全數平倉尾部對沖</span>。</div>
+    <div class="article-title">德黑蘭在談判桌上完勝 — 一場不對等的交換</div>
+    <p>6月17日，美國總統川普與伊朗總統佩澤希齊安簽署了<span class="b">14點諒解備忘錄</span>，由巴基斯坦斡旋。彭博經濟研究評估，MOU明顯偏向德黑蘭 — <span class="b">10項有利伊朗、僅1項有利美國、3項中立</span>。核心不對等在於：華盛頓主要將局勢恢復至2月28日戰爭爆發前狀態（霍爾木茲暫開、限制核活動），而伊朗獲得全新讓步 — 立即解除石油銷售制裁（<span class="b">40餘年來首次允許美元交易</span>）、解凍資產、設立<span class="b">$3,000億</span>投資重建基金。</p>
+    <p>關鍵條款拆解：(1) <span class="b">即時永久停火</span>，包含黎巴嫩戰線；(2) 海峽僅承諾<span class="b">60天免費通行</span>，期滿後伊朗與阿曼協商管理權，意味未來可收取過路費；(3) 美國<span class="b">30天內撤除海上封鎖</span>；(4) 核計畫：伊朗「重申不尋求核武」，同意在IAEA監督下將440公斤<span class="b">60%濃縮鈾</span>降級稀釋（downblending），但具體機制留待最終協議；(5) 財政部立即發出<span class="b">原油出口豁免令</span>。6月22日，國務卿Bessent宣布60天一般許可證正式生效，到期日<span class="b">8月21日</span>。協商由Steve Witkoff與Jared Kushner主導，瑞士Burgenstock為談判場地。</p>
+    <div class="data-point">簽署日：<span class="b">6月17日</span> &nbsp;|&nbsp; 有利伊朗：<span class="b">10/14條款</span> &nbsp;|&nbsp; 重建基金：<span class="b">$3,000億</span> &nbsp;|&nbsp; 濃縮鈾：<span class="b">440kg@60%（需降級）</span> &nbsp;|&nbsp; 豁免到期：<span class="b">8月21日</span> &nbsp;|&nbsp; 海峽免費通行：<span class="b">僅60天</span></div>
+    <div class="implication"><div class="label">投資啟示</div>MOU是<span class="b">臨時穩定措施，非最終和平協議</span>。8月21日豁免到期是明確的「時間炸彈」 — 若60天內未達成最終協議，制裁恢復、海峽管控權問題將同時引爆。彭博明確評估達成持久和平機率<span class="b">偏低</span>。投資組合應將8月下旬視為<span class="b">gamma事件</span>，提前佈局尾部對沖。</div>
   </div>
 
+  <div class="article">
+    <div class="article-title">制裁豁免的實際影響 — $90億浮動庫存待釋放</div>
+    <p>60天一般許可證的實質衝擊超出市場預期。前財政部制裁官員Miad Maleki估計，波斯灣仍有約<span class="b">6,700萬桶</span>伊朗原油浮動庫存滯留海上，潛在金融價值<span class="b">$80-90億</span>。伊朗6月出口已從5月的谷底<span class="b">329,000桶/日</span>（月減78%）反彈至<span class="b">565,000桶/日</span>（+72%），但仍遠低於2025年均值<span class="b">168萬桶/日</span>。中國目前購買伊朗<span class="b">約90%</span>的原油出口，以山東獨立煉廠（teapot）為主。Kpler分析師指出：除中國外，尚未見到其他買家因60天豁免而建立新的採購關係 — 期限太短，不足以重建已休眠多年的商業物流網路。</p>
+    <div class="data-point">浮動庫存：<span class="b">6,700萬桶（$80-90億）</span> &nbsp;|&nbsp; 伊朗6月出口：<span class="b">565K bpd（5月329K）</span> &nbsp;|&nbsp; 2025年均值：<span class="b">168萬bpd</span> &nbsp;|&nbsp; 中國佔比：<span class="b">~90%</span> &nbsp;|&nbsp; 戰損設施：<span class="b">80+處能源設施需修復</span></div>
+  </div>
 </div>
 
-<div class="section" id="trump-credibility">
-  <h2><span class="tag tag-misc">川普威脅</span> 光說不練？威脅可信度存疑</h2>
+<!-- ============================================================ -->
+<!-- SECTION 3: STRAIT OF HORMUZ -->
+<!-- ============================================================ -->
+<div class="section" id="hormuz">
+  <h2><span class="tag tag-oil">海運</span> 霍爾木茲海峽 — 全球最大咽喉的開關博弈</h2>
 
   <div class="stat-grid">
-    <div class="stat"><div class="val" style="color:var(--orange)">54%</div><div class="lbl">整體威脅
-兌現率</div></div>
-    <div class="stat"><div class="val" style="color:var(--green)">44%</div><div class="lbl">停火後
-兌現率</div></div>
-    <div class="stat"><div class="val">41次</div><div class="lbl">累計打擊
-威脅（自2/27）</div></div>
+    <div class="stat"><div class="val">20 mb/d</div><div class="lbl">戰前正常流量<br>（2025年均值）</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">-94%</div><div class="lbl">4月通行量<br>崩塌幅度</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">3.5 mb/d</div><div class="lbl">旁路管道<br>最大替代量</div></div>
+  </div>
+
+  <!-- CHART: Hormuz Transit Volume -->
+  <div class="chart-container">
+    <div class="chart-title">霍爾木茲海峽石油通行量（百萬桶/日）— 史上最大中斷與恢復</div>
+    <svg viewBox="0 0 760 280" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;">
+      <!-- Grid -->
+      <rect x="60" y="20" width="680" height="220" fill="none" stroke="#2a2820" stroke-width="0.5"/>
+      <line x1="60" y1="64" x2="740" y2="64" stroke="#2a2820" stroke-width="0.5" stroke-dasharray="4"/>
+      <line x1="60" y1="108" x2="740" y2="108" stroke="#2a2820" stroke-width="0.5" stroke-dasharray="4"/>
+      <line x1="60" y1="152" x2="740" y2="152" stroke="#2a2820" stroke-width="0.5" stroke-dasharray="4"/>
+      <line x1="60" y1="196" x2="740" y2="196" stroke="#2a2820" stroke-width="0.5" stroke-dasharray="4"/>
+      <!-- Y-axis: 0 to 22 mb/d -->
+      <!-- y = 240 - (val/22)*220 -->
+      <text x="55" y="24" fill="#8a8070" font-size="10" text-anchor="end">22</text>
+      <text x="55" y="64" fill="#8a8070" font-size="10" text-anchor="end">18</text>
+      <text x="55" y="108" fill="#8a8070" font-size="10" text-anchor="end">14</text>
+      <text x="55" y="152" fill="#8a8070" font-size="10" text-anchor="end">10</text>
+      <text x="55" y="196" fill="#8a8070" font-size="10" text-anchor="end">6</text>
+      <text x="55" y="240" fill="#8a8070" font-size="10" text-anchor="end">2</text>
+      <text x="30" y="130" fill="#8a8070" font-size="8" text-anchor="middle" transform="rotate(-90,30,130)">百萬桶/日</text>
+      <!-- X-axis -->
+      <text x="100" y="262" fill="#8a8070" font-size="9">Jan 26</text>
+      <text x="200" y="262" fill="#8a8070" font-size="9">Feb</text>
+      <text x="300" y="262" fill="#8a8070" font-size="9">Mar</text>
+      <text x="400" y="262" fill="#8a8070" font-size="9">Apr</text>
+      <text x="500" y="262" fill="#8a8070" font-size="9">May</text>
+      <text x="620" y="262" fill="#8a8070" font-size="9">Jun</text>
+      <text x="720" y="262" fill="#8a8070" font-size="9">Jul(est)</text>
+      <!-- Normal flow: ~20 mb/d → y = 240 - (20/22)*220 = 240 - 200 = 40 -->
+      <!-- Collapse to ~1.2 mb/d in Mar → y = 240 - (1.2/22)*220 = 240 - 12 = 228 -->
+      <!-- Apr: ~1.3 → y = 227 -->
+      <!-- May: ~6 → y = 240 - (6/22)*220 = 180 -->
+      <!-- Jun: ~12 → y = 240 - (12/22)*220 = 120 -->
+      <!-- Jul est: ~18 → y = 240 - (18/22)*220 = 60 -->
+      <!-- Bars for visual impact -->
+      <rect x="80" y="40" width="60" height="200" rx="3" fill="rgba(107,189,91,0.25)" stroke="#6bbd5b" stroke-width="1"/>
+      <text x="110" y="35" fill="#6bbd5b" font-size="9" font-weight="700" text-anchor="middle">20.9</text>
+      <rect x="180" y="42" width="60" height="198" rx="3" fill="rgba(107,189,91,0.2)" stroke="#6bbd5b" stroke-width="1"/>
+      <text x="210" y="37" fill="#6bbd5b" font-size="9" text-anchor="middle">20.0</text>
+      <!-- March collapse -->
+      <rect x="280" y="225" width="60" height="15" rx="3" fill="rgba(224,85,69,0.5)" stroke="#e05545" stroke-width="1.5"/>
+      <text x="310" y="222" fill="#e05545" font-size="10" font-weight="700" text-anchor="middle">2.1</text>
+      <!-- April -->
+      <rect x="380" y="227" width="60" height="13" rx="3" fill="rgba(224,85,69,0.4)" stroke="#e05545" stroke-width="1"/>
+      <text x="410" y="224" fill="#e05545" font-size="9" text-anchor="middle">1.3</text>
+      <!-- May partial recovery -->
+      <rect x="480" y="180" width="60" height="60" rx="3" fill="rgba(212,168,67,0.3)" stroke="#d4a843" stroke-width="1"/>
+      <text x="510" y="176" fill="#d4a843" font-size="9" text-anchor="middle">6.0</text>
+      <!-- June recovery -->
+      <rect x="580" y="120" width="60" height="120" rx="3" fill="rgba(201,168,76,0.3)" stroke="#c9a84c" stroke-width="1"/>
+      <text x="610" y="116" fill="#c9a84c" font-size="9" font-weight="700" text-anchor="middle">12.0</text>
+      <!-- July estimate -->
+      <rect x="690" y="60" width="50" height="180" rx="3" fill="rgba(201,168,76,0.15)" stroke="#c9a84c" stroke-width="1" stroke-dasharray="4"/>
+      <text x="715" y="55" fill="#c9a84c" font-size="9" text-anchor="middle">~18 (est)</text>
+      <!-- Annotations -->
+      <text x="310" y="244" fill="#e05545" font-size="8" text-anchor="middle">IRGC關閉海峽</text>
+      <text x="310" y="254" fill="#e05545" font-size="7" text-anchor="middle">IEA:史上最大中斷</text>
+      <!-- Bypass capacity line -->
+      <line x1="60" y1="205" x2="740" y2="205" stroke="#8a8070" stroke-width="0.8" stroke-dasharray="6,4"/>
+      <text x="740" y="202" fill="#8a8070" font-size="7" text-anchor="end">旁路管道最大 3.5-5.5 mb/d</text>
+    </svg>
+    <div class="chart-source">資料來源：IEA Hormuz Factsheet 2026, Kpler, EIA, Goldman Sachs | 截至2026年6月</div>
   </div>
 
   <div class="article">
-    <div class="article-title">反反覆覆虛虛實實 — 川普對伊威脅的分量有幾成</div>
-    <p>停戰MOU剛簽沒幾天，川普就威脅要「再次猛烈」打擊伊朗，隨後又似乎收回，令市場質疑該把他的威脅多當回事。彭博統計自2月27日以來川普共發出<span style="color:#f0ebe0;font-weight:700">41次</span>單獨打擊威脅，其中<span style="color:#f0ebe0;font-weight:700">54%</span>之後確實發生美軍軍事行動；但若聚焦4月8日停火後的威脅，兌現率降至<span style="color:#f0ebe0;font-weight:700">44%</span>，而最激烈交戰期間則高達<span style="color:#f0ebe0;font-weight:700">58%</span>。在24次「有條件」威脅中，僅10次在條件未滿足下仍動武。結論：川普的威脅信號並不穩定——足以引起重視，但光說不練的次數越多，其話語在德黑蘭眼中的可信度越低，靠威脅在60天談判期內取得理想結果恐難如願。</p>
-    <div class="data-point">累計威脅：<span style="color:#f0ebe0;font-weight:700">41次</span> &nbsp;|&nbsp; 整體兌現率：<span style="color:#f0ebe0;font-weight:700">54%</span> &nbsp;|&nbsp; 停火後兌現率：<span style="color:#f0ebe0;font-weight:700">44%</span> &nbsp;|&nbsp; 交戰期兌現率：<span style="color:#f0ebe0;font-weight:700">58%</span> &nbsp;|&nbsp; 有條件威脅動武：<span style="color:#f0ebe0;font-weight:700">10/24</span></div>
-    <div class="implication"><div class="label">投資啟示</div>停火後動武機率下降，支撐去風險敘事；但54%整體兌現率提醒尾部風險真實存在。<span style="color:#f0ebe0;font-weight:700">勿過度押注「川普只是嘴上說說」——保留廉價對沖以防誤判</span>。</div>
+    <div class="article-title">IEA定性為「全球石油市場史上最大中斷」</div>
+    <p>2月28日伊朗革命衛隊宣布關閉霍爾木茲海峽後，通行量從日均<span class="b">138艘</span>商船（約20.9 mb/d原油與成品油）暴跌至3月7日僅<span class="b">1艘</span>。4月全月僅<span class="b">191艘</span>通過，較正常水準驟降<span class="b">94%</span>。IEA將此定性為全球石油市場史上最大中斷 — 3月累計供應損失超過<span class="b">3.6億桶</span>，4月預計達<span class="b">4.4億桶</span>。OPEC三月產量月減<span class="b">7.88 mb/d（-27%）</span>至20.79 mb/d，衝擊規模超過2020年COVID的6.28 mb/d。</p>
+    <p>沙特與阿聯酋的旁路管道（跨阿拉伯管線、阿布達比富查伊拉管線）最大替代能力僅<span class="b">3.5-5.5 mb/d</span>，不及正常流量的四分之一。伊拉克、科威特、卡達、巴林與伊朗完全沒有旁路基礎設施。這正是海峽作為全球「咽喉」的不可替代性 — 全球<span class="b">20%石油消費</span>、<span class="b">25-27%海運原油</span>、亞洲進口的<span class="b">34%</span>都經由此處。中國三分之一的石油依賴海峽。</p>
+    <div class="data-point">戰前流量：<span class="b">20.9 mb/d</span> &nbsp;|&nbsp; 最低點：<span class="b">~1 mb/d（3月）</span> &nbsp;|&nbsp; 4月通行：<span class="b">191艘（-94%）</span> &nbsp;|&nbsp; 旁路極限：<span class="b">3.5-5.5 mb/d</span> &nbsp;|&nbsp; 累計損失：<span class="b">3月 360M桶</span></div>
+    <div class="implication"><div class="label">投資啟示</div>海峽正在恢復但60天免費期後的管控安排是<span class="b">最大不確定性</span>。伊朗擬與阿曼協商管理權、可能收取過路費 — 這將永久性改變波斯灣航運成本結構。Goldman Sachs預計波斯灣出口在7月底恢復至戰前水準，但這假設MOU持續有效。6月20日伊朗曾因以色列行動<span class="b">再次短暫宣布關閉海峽</span>，隨後在談判壓力下撤回 — 說明海峽作為政治槓桿的角色已不可逆地改變。</div>
   </div>
-
 </div>
 
-<div class="section" id="energy-shipping">
-  <h2><span class="tag tag-misc">能源航運</span> 雙重戰線，原油上下風險並存</h2>
+<!-- ============================================================ -->
+<!-- SECTION 4: TRUMP THREAT CREDIBILITY -->
+<!-- ============================================================ -->
+<div class="section" id="trump-cred">
+  <h2><span class="tag tag-geo">信用</span> 川普威脅 — 41次威脅的兌現率量化分析</h2>
 
   <div class="stat-grid">
-    <div class="stat"><div class="val">$120億</div><div class="lbl">本週撥付伊朗
-凍結資產</div></div>
-    <div class="stat"><div class="val" style="color:var(--orange)">60天</div><div class="lbl">海峽免費
-通行期</div></div>
-    <div class="stat"><div class="val" style="color:var(--red)">↑風險</div><div class="lbl">俄煉油廠
-遭烏軍打擊</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">54%</div><div class="lbl">整體威脅<br>兌現率</div></div>
+    <div class="stat"><div class="val" style="color:var(--green)">44%</div><div class="lbl">停火後<br>兌現率</div></div>
+    <div class="stat"><div class="val">41次</div><div class="lbl">累計打擊<br>威脅（自2/27）</div></div>
+  </div>
+
+  <!-- CHART: Trump Threat Follow-Through -->
+  <div class="chart-container">
+    <div class="chart-title">川普對伊朗威脅兌現率分析 — 按時期分解</div>
+    <svg viewBox="0 0 760 220" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;">
+      <!-- Title -->
+      <text x="400" y="22" fill="#c9a84c" font-size="11" font-weight="700" text-anchor="middle">41次威脅分布與兌現率比較</text>
+      <!-- Overall bar -->
+      <rect x="80" y="45" width="200" height="50" rx="5" fill="rgba(212,144,64,0.3)" stroke="#d49040" stroke-width="1.5"/>
+      <rect x="80" y="45" width="108" height="50" rx="5" fill="rgba(212,144,64,0.5)"/>
+      <text x="180" y="75" fill="#f0ebe0" font-size="16" font-weight="700" text-anchor="middle">54%</text>
+      <text x="180" y="110" fill="#d49040" font-size="10" text-anchor="middle">整體兌現率</text>
+      <text x="180" y="124" fill="#8a8070" font-size="9" text-anchor="middle">41次威脅中22次後續動武</text>
+      <!-- Active combat bar -->
+      <rect x="310" y="45" width="200" height="50" rx="5" fill="rgba(224,85,69,0.3)" stroke="#e05545" stroke-width="1.5"/>
+      <rect x="310" y="45" width="116" height="50" rx="5" fill="rgba(224,85,69,0.5)"/>
+      <text x="410" y="75" fill="#f0ebe0" font-size="16" font-weight="700" text-anchor="middle">58%</text>
+      <text x="410" y="110" fill="#e05545" font-size="10" text-anchor="middle">交戰期兌現率</text>
+      <text x="410" y="124" fill="#8a8070" font-size="9" text-anchor="middle">高強度衝突期間</text>
+      <!-- Post-ceasefire bar -->
+      <rect x="540" y="45" width="200" height="50" rx="5" fill="rgba(107,189,91,0.3)" stroke="#6bbd5b" stroke-width="1.5"/>
+      <rect x="540" y="45" width="88" height="50" rx="5" fill="rgba(107,189,91,0.5)"/>
+      <text x="640" y="75" fill="#f0ebe0" font-size="16" font-weight="700" text-anchor="middle">44%</text>
+      <text x="640" y="110" fill="#6bbd5b" font-size="10" text-anchor="middle">停火後兌現率</text>
+      <text x="640" y="124" fill="#8a8070" font-size="9" text-anchor="middle">4/8停火後威脅</text>
+      <!-- Conditional threats annotation -->
+      <rect x="80" y="145" width="660" height="55" rx="6" fill="rgba(201,168,76,0.04)" stroke="rgba(201,168,76,0.15)" stroke-width="1"/>
+      <text x="110" y="165" fill="#c9a84c" font-size="10" font-weight="700">有條件威脅分析</text>
+      <text x="110" y="182" fill="#e0d8c8" font-size="9">24次「有條件」威脅中，僅10次在條件未滿足下仍動武（42%）</text>
+      <text x="110" y="196" fill="#8a8070" font-size="8">CNN統計：3/23至6/9期間，川普至少38次宣稱「協議即將達成」</text>
+    </svg>
+    <div class="chart-source">資料來源：Bloomberg Economics, CNN, Al Jazeera | 截至2026年6月24日</div>
   </div>
 
   <div class="article">
-    <div class="article-title">沒有合影但暗潮洶湧 — 美伊談判進行中與俄羅斯煉油廠承壓</div>
-    <p>彭博經濟研究判讀，美伊雙方都認真想達成協議、避免重返高強度衝突，但通往最終協議障礙重重，達成持久和平的機率偏低。德黑蘭本週將依MOU收到<span style="color:#f0ebe0;font-weight:700">120億美元</span>凍結資產，惟對川普所稱資金用途限制存有爭議。瑞士Burgenstock會談已確立60天談判框架，含高層委員會、技術工作組及防衝突機制以平息黎巴嫩戰火。能源面上，海峽僅承諾60天免費通行，期滿後伊朗擬收取過路費，為航運成本埋下變數。另一戰線，烏克蘭遠程無人機深入打擊俄羅斯煉油廠，迫使停產、檢修、配給與防空爭奪，雖難阻侵略，卻可能逼莫斯科在和談中放棄部分最大化要求。雙重戰線意味原油下行（去風險）與上行（供應中斷）風險並存。</p>
-    <div class="data-point">凍結資產撥付：<span style="color:#f0ebe0;font-weight:700">$120億</span> &nbsp;|&nbsp; 談判期：<span style="color:#f0ebe0;font-weight:700">60天</span> &nbsp;|&nbsp; 達成持久和平機率：<span style="color:#f0ebe0;font-weight:700">偏低</span> &nbsp;|&nbsp; 烏軍打擊目標：<span style="color:#f0ebe0;font-weight:700">俄煉油廠（成品油供應）</span></div>
-    <div class="implication"><div class="label">投資啟示</div>中東去風險壓低風險溢價，但俄煉油廠遭擊擾亂成品油供應，為油價提供下方支撐。<span style="color:#f0ebe0;font-weight:700">淨倉位偏中性：減持原油方向性多頭，透過買權價差保留霍爾木茲尾部對沖</span>。</div>
+    <div class="article-title">信號不穩定但並非空頭支票 — 54%兌現率的含義</div>
+    <p>MOU簽署後不到一週，川普就威脅要「再次猛烈」打擊伊朗，隨後似乎收回，令市場質疑其威脅的可信度。彭博統計自2月27日以來川普共發出<span class="b">41次</span>單獨打擊威脅，其中<span class="b">54%</span>之後確實發生軍事行動。但分期來看：最激烈交戰期間兌現率<span class="b">58%</span>，4月8日停火後降至<span class="b">44%</span>。在24次「有條件」威脅中，僅10次在條件未滿足下仍動武。CNN統計3月至6月間川普至少<span class="b">38次</span>宣稱「協議即將達成」。</p>
+    <p>6月22日，川普再度威脅軍事行動，引發國債下跌與原油短暫反彈。同日，副總統Vance在瑞士與伊朗官員會面，稱取得「重大進展」。但德黑蘭同時宣布因以色列行動<span class="b">再次關閉海峽</span>（隨後撤回）。Bloomberg分析指出，這種「威脅-收回-再威脅」的模式正在<span class="b">侵蝕美國在對手眼中的信用</span> — 莫斯科與北京雖畏懼美國軍事優勢，卻觀察到它「無法迫使伊朗投降」。國務卿Rubio承認政府「清楚開戰的經濟後果風險」，川普本人在G7以「避免經濟災難」為由辯護MOU。</p>
+    <div class="data-point">累計威脅：<span class="b">41次</span> &nbsp;|&nbsp; 兌現率：<span class="b">整體54% / 交戰58% / 停火後44%</span> &nbsp;|&nbsp; 有條件威脅動武：<span class="b">10/24（42%）</span> &nbsp;|&nbsp; 「即將達成」宣稱：<span class="b">38次+</span></div>
+    <div class="implication"><div class="label">投資啟示</div>54%兌現率意味威脅<span class="b">非紙老虎但也非必然兌現</span>。市場不應完全無視（特別是交戰期58%），但停火後44%的下降趨勢支持「去風險」交易。<span class="b">真正的風險在於以色列</span> — 川普未必能約束以方在黎巴嫩的行動，而伊朗已將此劃為紅線。一旦以色列動作觸發伊朗反應，川普是否加入將取決於國內政治壓力，而非理性計算。</div>
+  </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- SECTION 5: LEBANON FRONT -->
+<!-- ============================================================ -->
+<div class="section" id="lebanon">
+  <h2><span class="tag tag-geo">戰線</span> 黎巴嫩戰線 — 真主黨拒絕停火的連鎖效應</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--red)">拒絕</div><div class="lbl">真主黨對<br>全面停火立場</div></div>
+    <div class="stat"><div class="val">21人</div><div class="lbl">6/19單日<br>傷亡（黎方）</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">60天</div><div class="lbl">與美伊MOU<br>同步談判期</div></div>
   </div>
 
+  <div class="article">
+    <div class="article-title">停火反覆破裂 — 黎巴嫩是美伊協議的最大破壞變數</div>
+    <p>黎巴嫩戰線是整個中東去風險敘事中最脆弱的環節。自3月2日恢復大規模交火以來，以色列與真主黨已經歷<span class="b">至少三次</span>停火-破裂-再停火循環。最新一次：6月3日以色列與黎巴嫩政府達成停火協議，納入「試點區」概念 — 黎巴嫩武裝部隊在南部接管、真主黨撤出、以色列撤軍。但<span class="b">真主黨領導人Naim Kassem明確拒絕</span>，稱在遭受攻擊時撤軍等同「投降」。</p>
+    <p>6月15日美伊MOU明文要求「包含黎巴嫩在內的所有戰線立即永久停火」，但以色列表示將<span class="b">繼續駐軍黎巴嫩</span>。6月19日，以色列對黎南與東部發動隔夜打擊，黎衛生部報告<span class="b">21人死亡</span>、4名以軍陣亡。真主黨承認反擊以色列坦克。隨後雙方「再次同意恢復停火」。6月20日，伊朗因以色列行動宣布關閉海峽，隨後撤回 — 完美展示了<span class="b">黎巴嫩戰線如何直接傳導至霍爾木茲、再傳導至全球油價</span>的連鎖機制。</p>
+    <div class="data-point">停火-破裂循環：<span class="b">3次+（4月、5月、6月）</span> &nbsp;|&nbsp; 真主黨立場：<span class="b">拒絕南部撤軍</span> &nbsp;|&nbsp; 傳導鏈：<span class="b">黎巴嫩→伊朗→海峽→油價</span></div>
+    <div class="implication"><div class="label">投資啟示</div>黎巴嫩是<span class="b">尾部風險的觸發器、而非風險本身</span>。真正的問題是：以色列的行動是否會引爆伊朗MOU退出、進而關閉海峽？6/20已經預演了這個劇本（雖然伊朗撤回）。<span class="b">監控清單</span>：以軍黎南行動規模、真主黨火箭頻率、伊朗「紅線」聲明。任何一項升級都應觸發增加原油尾部對沖的行動。</div>
+  </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- SECTION 6: DEFENSE SPENDING -->
+<!-- ============================================================ -->
+<div class="section" id="defense">
+  <h2><span class="tag tag-def">軍費</span> 軍費競賽 — 中東與全球防衛支出重估</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val">$2.63兆</div><div class="lbl">2025全球軍費<br>創歷史新高</div></div>
+    <div class="stat"><div class="val">5%</div><div class="lbl">NATO新目標<br>GDP佔比（2035）</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">$72.5B</div><div class="lbl">沙特軍費<br>全球第6</div></div>
+  </div>
+
+  <!-- CHART: Defense Spending Bars -->
+  <div class="chart-container">
+    <div class="chart-title">中東主要國家軍費支出比較（2025-2026年，十億美元）</div>
+    <svg viewBox="0 0 760 250" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;">
+      <!-- Grid lines -->
+      <line x1="130" y1="40" x2="130" y2="195" stroke="#2a2820" stroke-width="0.5"/>
+      <line x1="260" y1="40" x2="260" y2="195" stroke="#2a2820" stroke-width="0.5" stroke-dasharray="4"/>
+      <line x1="390" y1="40" x2="390" y2="195" stroke="#2a2820" stroke-width="0.5" stroke-dasharray="4"/>
+      <line x1="520" y1="40" x2="520" y2="195" stroke="#2a2820" stroke-width="0.5" stroke-dasharray="4"/>
+      <line x1="650" y1="40" x2="650" y2="195" stroke="#2a2820" stroke-width="0.5" stroke-dasharray="4"/>
+      <!-- X-axis labels (billions) -->
+      <text x="130" y="210" fill="#8a8070" font-size="9" text-anchor="middle">$0B</text>
+      <text x="260" y="210" fill="#8a8070" font-size="9" text-anchor="middle">$20B</text>
+      <text x="390" y="210" fill="#8a8070" font-size="9" text-anchor="middle">$40B</text>
+      <text x="520" y="210" fill="#8a8070" font-size="9" text-anchor="middle">$60B</text>
+      <text x="650" y="210" fill="#8a8070" font-size="9" text-anchor="middle">$80B</text>
+      <!-- Saudi Arabia: $72.5B → width = (72.5/80)*520 = 471 -->
+      <text x="125" y="58" fill="#e0d8c8" font-size="10" text-anchor="end">沙特</text>
+      <rect x="130" y="45" width="471" height="28" rx="4" fill="rgba(224,85,69,0.35)" stroke="#e05545" stroke-width="1"/>
+      <text x="610" y="64" fill="#f0ebe0" font-size="11" font-weight="700">$72.5B</text>
+      <text x="470" y="64" fill="#e05545" font-size="8">GDP 6.8%</text>
+      <!-- Israel: $46.5B → width = (46.5/80)*520 = 302 -->
+      <text x="125" y="93" fill="#e0d8c8" font-size="10" text-anchor="end">以色列</text>
+      <rect x="130" y="80" width="302" height="28" rx="4" fill="rgba(212,168,67,0.35)" stroke="#d4a843" stroke-width="1"/>
+      <text x="440" y="99" fill="#f0ebe0" font-size="11" font-weight="700">$46.5B</text>
+      <text x="340" y="99" fill="#d4a843" font-size="8">GDP 8.8% (1967年來最高)</text>
+      <!-- UAE: $27B → width = (27/80)*520 = 176 -->
+      <text x="125" y="128" fill="#e0d8c8" font-size="10" text-anchor="end">阿聯酋</text>
+      <rect x="130" y="115" width="176" height="28" rx="4" fill="rgba(201,168,76,0.3)" stroke="#c9a84c" stroke-width="1"/>
+      <text x="314" y="134" fill="#f0ebe0" font-size="11" font-weight="700">$27B</text>
+      <text x="240" y="134" fill="#c9a84c" font-size="8">GDP ~5%</text>
+      <!-- Iran (est): ~$15B → width = (15/80)*520 = 97 -->
+      <text x="125" y="163" fill="#e0d8c8" font-size="10" text-anchor="end">伊朗</text>
+      <rect x="130" y="150" width="97" height="28" rx="4" fill="rgba(176,140,208,0.3)" stroke="#b08cd0" stroke-width="1"/>
+      <text x="235" y="169" fill="#f0ebe0" font-size="11" font-weight="700">~$15B</text>
+      <text x="180" y="169" fill="#b08cd0" font-size="8">估計</text>
+      <!-- Context: US comparison -->
+      <text x="130" y="235" fill="#8a8070" font-size="9">比較：美國 $1,010B（全球第1） | 中國 $245B | 全球合計 $2,630B</text>
+      <text x="130" y="248" fill="#8a8070" font-size="8">歐洲連續12年實質成長：2025年 $563B（+$100B YoY），佔全球 21%（2022年僅17%）</text>
+    </svg>
+    <div class="chart-source">資料來源：IISS Military Balance 2026, SIPRI, NATO, GlobalFirepower | 截至2026年</div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">全球軍費創紀錄$2.63兆 — 中東每個國家都在射程之內</div>
+    <p>IISS《2026年軍事平衡》報告指出，2025年全球軍費達<span class="b">$2.63兆</span>（較2024年$2.48兆增長6%），2026年將突破$2.9兆。中東是最軍事化的區域之一：沙特<span class="b">$72.5B（GDP 6.8%）</span>全球第6，以色列受加沙與黎巴嫩衝突推動飆至<span class="b">$46.5B（GDP 8.8%，1967年來最高）</span>，阿聯酋約<span class="b">$27B</span>。IISS引述專家：「中東幾乎每個國家要麼自己在打仗，要麼鄰國在打仗」— 軍費只會繼續上升。</p>
+    <p>NATO層面，海牙峰會設定<span class="b">2035年GDP 5%</span>的新軍費目標（其中3.5%直接防衛、1.5%安全相關）。2025年首度所有成員國達到2%門檻。歐洲軍費連續<span class="b">12年實質成長</span>，2025年達$563B（YoY+$100B），佔全球<span class="b">21%</span>（2022年僅17%）。波蘭（+120%）、芬蘭（+95%）、羅馬尼亞（+85%）五年增幅驚人。德國以<span class="b">EUR 1,000億</span>特別國防基金推動75%增長。挪威成為首個人均軍費超過美國的北約成員。</p>
+    <div class="data-point">全球軍費：<span class="b">$2.63兆（2025）</span> &nbsp;|&nbsp; 沙特：<span class="b">$72.5B</span> &nbsp;|&nbsp; 以色列：<span class="b">$46.5B（GDP 8.8%）</span> &nbsp;|&nbsp; 歐洲YoY：<span class="b">+$100B</span> &nbsp;|&nbsp; NATO新目標：<span class="b">GDP 5%（2035年）</span></div>
+    <div class="implication"><div class="label">投資啟示</div>軍費競賽是<span class="b">防務股與航太複合體的結構性利多</span>。歐洲連續12年實質增長、中東「人人有戰」的環境意味訂單管線將持續擴張。但對大宗商品投資者，軍費數據的啟示更為間接：<span class="b">高軍費=高衝突概率=能源溢價常態化</span>。即便美伊MOU成功，中東軍備競賽已回不去2022年的水準 — 地緣風險溢價的「新常態」可能比市場當前定價更高。</div>
+  </div>
 </div>
 
 <div class="divider"></div>
 
+<!-- ============================================================ -->
+<!-- RED TEAM -->
+<!-- ============================================================ -->
 <div class="red-team" id="red-team">
   <div class="red-team-title">&#128308; Red Team — 核心假設與反面論證</div>
   <ul>
-    <li>假設1：美伊MOU能維持並走向最終協議，霍爾木茲海峽保持開放，中東風險溢價持續收斂</li>
-    <li>假設2：川普在停火後傾向光說不練，再度大規模動武的機率顯著下降</li>
-    <li>假設3：俄烏煉油廠戰線屬區域性擾動，不足以扭轉全球原油去風險趨勢</li>
-    <li style="color:var(--red)">風險1：彭博明確評估美伊達成持久和平機率偏低；海峽僅承諾60天免費通行，期滿伊朗擬收費並行使管控——這是一枚明確的時間炸彈</li>
-    <li style="color:var(--red)">風險2：川普整體威脅兌現率仍達54%、交戰期高達58%，「足以引起重視」；以色列在黎巴嫩的行動是伊朗劃下的紅線，而川普未必能約束以方</li>
-    <li style="color:var(--red)">風險3：烏克蘭持續深入打擊俄煉油廠造成停產與配給，疊加中東不確定性，原油下行空間實際有限</li>
+    <li><strong>假設1：</strong>美伊MOU能維持60天談判窗口，海峽流量持續恢復，風險溢價繼續收斂至Brent $75-80區間</li>
+    <li><strong>假設2：</strong>川普停火後威脅兌現率下降（44%），大規模動武機率顯著降低，市場可安全「去風險」</li>
+    <li><strong>假設3：</strong>黎巴嫩戰線屬區域性擾動，不足以系統性破壞美伊框架協議</li>
+    <li style="color:var(--red)"><strong>反駁1：</strong>彭博明確評估達成持久和平機率「偏低」。海峽僅承諾60天免費通行，期滿伊朗擬收費並行使管控 — 這是一枚明確的時間炸彈。6月20日伊朗已因以色列行動一度宣布再次關閉海峽，說明MOU的約束力極為脆弱。$3,000億重建基金的資金來源完全未定，一旦談判破裂，伊朗將以此為由退出。Goldman Sachs明確警告Brent可反彈至$115</li>
+    <li style="color:var(--red)"><strong>反駁2：</strong>川普整體威脅兌現率仍達54%、交戰期58%，並非紙老虎。更關鍵的是，CNN統計他至少38次宣稱「協議即將達成」但多數未兌現 — 這意味<span class="b">川普的「和平承諾」同樣不可信</span>。MOU可能是川普在G7前的外交秀，而非真正的戰略退出。國務卿Rubio已承認政府「清楚開戰的經濟後果」，暗示戰爭本身可能重啟</li>
+    <li style="color:var(--red)"><strong>反駁3：</strong>黎巴嫩戰線恰恰是最危險的連鎖觸發器。傳導鏈清晰：以色列打擊黎南→真主黨反擊→伊朗宣布關閉海峽（6/20已預演）→原油飆升→MOU破裂。川普未必能約束以色列，而真主黨已明確拒絕全面停火條款。6月19日單日21人死亡顯示交火強度未減。阿聯酋已退出OPEC以取得出口自主權 — 區域秩序正在重塑，MOU只是其中一個可能失敗的變數</li>
   </ul>
-  <p style="margin-top:10px;padding:10px 14px;background:rgba(224,85,69,0.04);border-radius:6px;font-size:0.9em;border-left:3px solid var(--red)">核心去風險邏輯短期成立，但結構脆弱。MOU僅延長停火、未觸及核心核問題，海峽60天免費期是明確的到期風險點。若簽署因黎巴嫩戰事告吹，或60天期滿伊朗開徵過路費，原油風險溢價將迅速回補。當前對沖成本便宜——減持方向性多頭可行，但全數平倉霍爾木茲尾部對沖屬誤判。</p>
+  <p style="margin-top:10px;padding:10px 14px;background:rgba(224,85,69,0.04);border-radius:6px;font-size:0.9em;border-left:3px solid var(--red)"><strong>編輯裁定：</strong>核心去風險邏輯短期成立 — MOU確實暫緩了衝突，Brent從$126跌至$77反映了市場的集體判斷。但結構脆弱程度被低估。最危險情境的序列：<span class="b">以色列黎南升級 → 真主黨大規模反擊 → 伊朗宣布MOU失效並關閉海峽 → 60天豁免提前終止 → Brent 48小時內反彈$25-30</span>。此序列目前機率約<span class="b">20-25%</span>（高於六月初的10-15%），因為6/19-20的事件已證明傳導鏈是活躍的。<strong>結論：減持方向性多頭可行，但全數平倉尾部對沖屬危險誤判。8月21日豁免到期前應逐步增加gamma保護。</strong></p>
 </div>
 
+<!-- ============================================================ -->
+<!-- FUND MANAGER TAKEAWAYS -->
+<!-- ============================================================ -->
 <div class="callout" id="takeaways">
   <div class="callout-title">基金經理人重點摘要</div>
   <ul>
-    <li><strong>美伊協議：</strong>14點MOU中10項有利伊朗，僅延長停火、未解核問題。6/19原訂簽字，成敗繫於川普能否約束以色列在黎巴嫩的行動。</li>
-    <li><strong>霍爾木茲海峽：</strong>僅承諾60天免費通行，期滿伊朗擬收過路費並行使管控。短期去風險，中期航運成本與地緣變數上升。</li>
-    <li><strong>川普可信度：</strong>整體威脅兌現率54%、停火後降至44%、交戰期58%。信號不穩定，足以引起重視但非必然動武。</li>
-    <li><strong>原油策略：</strong>逢高減持原油方向性多頭以反映去風險，但保留霍爾木茲60天尾部對沖（買權價差）——當前對沖成本便宜。</li>
-    <li><strong>俄烏戰線：</strong>烏軍遠程無人機打擊俄煉油廠，擾亂成品油供應、或迫俄讓步，為油價提供下方支撐，限制油價下行空間。</li>
+    <li><strong>油價現況：</strong>Brent $77.42（六月跌幅-20%），WTI $73.30。52週區間$58.72-$126.41。Goldman Sachs Q4目標$80，若停火破裂$115。期貨曲線backwardation（WTI 12月$70.77）。J.P. Morgan結構性預測$60（供應完全正常化假設）。</li>
+    <li><strong>美伊MOU：</strong>14點中10項有利伊朗，6月17日簽署，60天談判窗口。核心讓步：40年來首次允許伊朗原油美元交易、$3,000億重建基金承諾、30天撤除海上封鎖。核計畫僅留待後續談判。彭博評估達成持久和平機率偏低。</li>
+    <li><strong>制裁豁免：</strong>60天一般許可證（到期8/21），伊朗出口從5月329K bpd反彈至6月565K bpd。67M桶浮動庫存待釋放（$80-90億）。中國佔伊朗出口90%。80+處能源設施戰損需修復。</li>
+    <li><strong>霍爾木茲：</strong>戰前20.9 mb/d → 3月崩至~1 mb/d（IEA：史上最大中斷）→ 6月恢復~12 mb/d → GS預計7月底恢復戰前水準。旁路管道僅3.5-5.5 mb/d。60天免費通行後伊朗擬收過路費 — 永久改變航運成本。</li>
+    <li><strong>川普信用：</strong>41次威脅、54%兌現率、停火後降至44%。38次+「即將達成」宣稱。以色列是不可控變數 — 黎巴嫩傳導鏈（以色列→真主黨→伊朗→海峽→油價）6/20已實測。</li>
+    <li><strong>軍費背景：</strong>全球$2.63兆創新高。沙特$72.5B、以色列$46.5B（GDP 8.8%）。歐洲連12年增長。NATO目標提至GDP 5%。中東軍備競賽不可逆 — 地緣溢價新常態高於市場定價。</li>
+    <li><strong>操作建議：</strong>(1) 逢Brent反彈至$82-85減持方向性多頭至半倉 (2) 保留3個月Brent $95/$115 call spread對沖海峽尾部 (3) 利用當前call-skew翻轉窗口構建collar（$70 put / $95 call），collar成本低於歷史均值 (4) 監控8/21豁免到期 — 提前兩週增加gamma保護 (5) 監控黎巴嫩傳導鏈：以軍黎南行動規模、真主黨火箭頻率、伊朗「紅線」聲明。</li>
   </ul>
 </div>
 
 <div class="nav-links">
   <span><a href="newsletter_105_semiconductor.html">&larr; 前期</a></span>
-  <span><a href="student.html">返回目錄 &rarr;</a></span>
+  <span><a href="newsletter_107_policy_credit_oil.html">後期 &rarr;</a></span>
 </div>
 
 <div class="footer">
   彭博研究摘要 | 僅供教學與討論用途 | 2026年6月24日<br>
-  資料來源：Bloomberg Intelligence, Bloomberg Economics, Bloomberg News<br>
+  資料來源：Bloomberg Intelligence, Bloomberg Economics, Goldman Sachs, J.P. Morgan, IEA, IISS, CFTC, Kpler, EIA, NATO, SIPRI<br>
   <a href="https://www.patreon.com/Aireturn">Patreon</a> · <a href="https://t.me/AIreturn">Telegram</a> · Threads @aireturn88
 </div>
 

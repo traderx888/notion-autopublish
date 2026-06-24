@@ -19,21 +19,10 @@
   .issue-badge { display: inline-block; background: rgba(201,168,76,0.15); color: var(--accent); padding: 4px 12px; border-radius: 12px; font-size: 0.8em; font-weight: 600; margin-bottom: 20px; border: 1px solid rgba(201,168,76,0.3); }
   .tag { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 0.72em; font-weight: 600; margin-right: 4px; }
   .tag-rates { background: rgba(201,168,76,0.15); color: var(--accent); }
-  .tag-china { background: rgba(212,144,64,0.15); color: var(--orange); }
-  .tag-japan { background: rgba(224,85,69,0.15); color: var(--red); }
-  .tag-geo   { background: rgba(224,85,69,0.15); color: var(--red); }
-  .tag-oil   { background: rgba(212,168,67,0.15); color: var(--yellow); }
-  .tag-trade { background: rgba(212,168,67,0.15); color: var(--yellow); }
-  .tag-growth{ background: rgba(107,189,91,0.15); color: var(--green); }
-  .tag-metals{ background: rgba(176,140,208,0.15); color: var(--purple); }
-  .tag-infl  { background: rgba(224,85,69,0.15); color: var(--red); }
-  .tag-policy{ background: rgba(201,168,76,0.15); color: var(--accent); }
-  .tag-val   { background: rgba(107,189,91,0.15); color: var(--green); }
   .tag-vol   { background: rgba(224,85,69,0.15); color: var(--red); }
-  .tag-semi  { background: rgba(76,201,176,0.15); color: var(--cyan); }
-  .tag-credit{ background: rgba(176,140,208,0.15); color: var(--purple); }
-  .tag-space { background: rgba(201,168,76,0.15); color: var(--accent); }
-  .tag-misc  { background: rgba(138,128,112,0.15); color: var(--muted); }
+  .tag-fed   { background: rgba(176,140,208,0.15); color: var(--purple); }
+  .tag-macro { background: rgba(107,189,91,0.15); color: var(--green); }
+  .tag-mbs   { background: rgba(76,201,176,0.15); color: var(--cyan); }
   .verdict-bar { background: var(--accent); color: #0a0a08; padding: 14px 20px; border-radius: 8px; margin-bottom: 20px; font-weight: 700; font-size: 1.05em; font-family: 'Noto Serif TC', serif; }
   .section { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 22px; margin-bottom: 18px; }
   .section h2 { color: var(--gold); font-size: 1.15em; margin-bottom: 12px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
@@ -41,10 +30,8 @@
   .article { margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid rgba(42,40,32,0.7); }
   .article:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
   .article-title { color: var(--text-bright); font-weight: 700; font-size: 0.95em; margin-bottom: 4px; }
-  .article-title-cn { color: var(--muted); font-size: 0.85em; margin-bottom: 8px; }
   .article p { font-size: 0.9em; margin: 6px 0; }
   .data-point { background: rgba(201,168,76,0.05); padding: 8px 12px; border-radius: 6px; margin: 8px 0; font-size: 0.85em; border: 1px solid rgba(201,168,76,0.12); }
-  .data-point .num { color: var(--text-bright); font-weight: 700; }
   .implication { background: rgba(201,168,76,0.06); border-left: 3px solid var(--accent); padding: 10px 14px; margin: 10px 0; border-radius: 0 6px 6px 0; font-size: 0.88em; }
   .implication .label { color: var(--accent); font-weight: 700; font-size: 0.8em; text-transform: uppercase; margin-bottom: 4px; }
   .red-team { background: rgba(224,85,69,0.06); border: 1px solid rgba(224,85,69,0.25); border-radius: 8px; padding: 18px; margin: 18px 0; }
@@ -57,6 +44,7 @@
   .callout li { margin: 5px 0; font-size: 0.88em; }
   ul { padding-left: 18px; }
   li { margin: 4px 0; font-size: 0.88em; }
+  .b { color: var(--text-bright); font-weight: 700; }
   .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
   .stat { background: rgba(201,168,76,0.05); padding: 12px; border-radius: 6px; text-align: center; border: 1px solid rgba(201,168,76,0.1); }
   .stat .val { font-size: 1.4em; font-weight: 700; color: var(--gold); font-family: 'Playfair Display', serif; }
@@ -70,6 +58,9 @@
   .nav-links { display: flex; justify-content: space-between; margin: 20px 0; font-size: 0.85em; }
   .nav-links a { color: var(--accent); text-decoration: none; }
   .nav-links a:hover { text-decoration: underline; color: var(--gold); }
+  .chart-container { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 18px; margin: 16px 0; }
+  .chart-title { color: var(--accent); font-weight: 700; font-size: 0.88em; margin-bottom: 12px; font-family: 'Playfair Display', serif; }
+  .chart-source { color: var(--muted); font-size: 0.7em; margin-top: 8px; }
   .divider { height: 1px; background: linear-gradient(90deg, transparent, var(--accent), transparent); margin: 24px 0; opacity: 0.4; }
   .footer { text-align: center; color: var(--muted); font-size: 0.75em; margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--border); }
   .footer a { color: var(--accent); text-decoration: none; }
@@ -82,122 +73,550 @@
 <p class="subtitle">第104期 | 沃什時代降臨：鷹派央行、利率上行與債市波動回歸</p>
 <span class="issue-badge">2026年六月下旬更新</span>
 
-<div class="verdict-bar">結論：聯儲會進入沃什鷹派時代，前瞻指引消失、點陣圖轉鷹、PCE預測大幅上調至 3.6%，全年既不加息也不降息已成基準情境 — 偏空美債前端、警惕MBS負凸性重燃的波動風險。</div>
+<div class="verdict-bar">結論：沃什首次FOMC會議一致維持利率3.50-3.75%，但點陣圖急劇轉鷹 — 9/18位委員預計年內加息、SEP上調2026 PCE預測至3.6%（前值2.7%）。前瞻指引正式廢除，五大任務小組啟動Fed全面改革。10年期殖利率4.50%、期限溢價0.67%重返正值 — 偏空美債前端（2Y 4.21%），做多利率波動率對沖MBS負凸性風險。目標：2Y殖利率4.50%、10Y 4.75%。</div>
 
 <div class="nav-links">
   <span><a href="newsletter_103_china.html">&larr; 前期</a></span>
-  <span><a href="student.html">返回目錄 &rarr;</a></span>
+  <span><a href="newsletter_105_semiconductor.html">後期 &rarr;</a></span>
 </div>
 
 <div class="toc">
   <div class="toc-title">目錄</div>
   <ol>
-    <li><a href="#warsh-hawkish-fed">聯儲會 沃什登場，前瞻指引謝幕</a></li>
-    <li><a href="#yield-drivers-model">利率驅動 戰爭與和平：殖利率為何上行</a></li>
-    <li><a href="#mbs-convexity-volatility">債市波動 AI 重啟負凸性波動機器</a></li>
+    <li><a href="#warsh-era">沃什時代 前瞻指引的終結</a></li>
+    <li><a href="#dot-plot">點陣圖大翻轉 從降息到加息的180度轉向</a></li>
+    <li><a href="#yield-trajectory">殖利率路徑 10Y走勢與期限溢價回歸</a></li>
+    <li><a href="#yield-curve">殖利率曲線 2s10s收窄與熊平風險</a></li>
+    <li><a href="#mbs-convexity">MBS負凸性 AI重啟債市波動放大器</a></li>
+    <li><a href="#move-vol">MOVE指數與債市波動率 暴風雨前的寧靜</a></li>
     <li><a href="#red-team">Red Team 反面論證</a></li>
     <li><a href="#takeaways">基金經理人重點摘要</a></li>
   </ol>
 </div>
 
-<div class="section" id="warsh-hawkish-fed">
-  <h2><span class="tag tag-misc">聯儲會</span> 沃什登場，前瞻指引謝幕</h2>
+<!-- ============================================================ -->
+<!-- SECTION 1: WARSH ERA -->
+<!-- ============================================================ -->
+<div class="section" id="warsh-era">
+  <h2><span class="tag tag-fed">聯儲會</span> 沃什時代 — 前瞻指引的終結</h2>
 
   <div class="stat-grid">
-    <div class="stat"><div class="val">3.50-3.75%</div><div class="lbl">政策利率
-一致決議維持不變</div></div>
-    <div class="stat"><div class="val" style="color:var(--red)">3.6%</div><div class="lbl">2026整體PCE預測
-（前值2.7%）</div></div>
-    <div class="stat"><div class="val" style="color:var(--orange)">9 vs 8</div><div class="lbl">點陣圖加息派
-對維持/降息派</div></div>
+    <div class="stat"><div class="val">3.50-3.75%</div><div class="lbl">政策利率<br>12-0一致維持不變</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">130字</div><div class="lbl">FOMC聲明長度<br>（前次341字）</div></div>
+    <div class="stat"><div class="val" style="color:var(--purple)">5個</div><div class="lbl">任務小組<br>全面改革Fed框架</div></div>
+  </div>
+
+  <!-- CHART: Warsh's Fed Revolution Timeline -->
+  <div class="chart-container">
+    <div class="chart-title">沃什就任時間線 — 從提名到Fed框架革命</div>
+    <svg viewBox="0 0 760 200" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;">
+      <!-- Timeline base -->
+      <line x1="60" y1="100" x2="720" y2="100" stroke="#2a2820" stroke-width="2"/>
+      <!-- Events -->
+      <!-- Jan 30: Nomination -->
+      <circle cx="100" cy="100" r="6" fill="#c9a84c"/>
+      <line x1="100" y1="100" x2="100" y2="55" stroke="#c9a84c" stroke-width="1" stroke-dasharray="3"/>
+      <text x="100" y="48" fill="#c9a84c" font-size="9" text-anchor="middle" font-weight="700">1/30</text>
+      <text x="100" y="38" fill="#f0ebe0" font-size="8" text-anchor="middle">川普提名</text>
+      <!-- May 13: Senate confirmation -->
+      <circle cx="280" cy="100" r="6" fill="#c9a84c"/>
+      <line x1="280" y1="100" x2="280" y2="140" stroke="#c9a84c" stroke-width="1" stroke-dasharray="3"/>
+      <text x="280" y="152" fill="#c9a84c" font-size="9" text-anchor="middle" font-weight="700">5/13</text>
+      <text x="280" y="164" fill="#f0ebe0" font-size="8" text-anchor="middle">參議院確認</text>
+      <text x="280" y="176" fill="#8a8070" font-size="7" text-anchor="middle">史上最窄差距</text>
+      <!-- May 22: Sworn in -->
+      <circle cx="340" cy="100" r="6" fill="#c9a84c"/>
+      <line x1="340" y1="100" x2="340" y2="55" stroke="#c9a84c" stroke-width="1" stroke-dasharray="3"/>
+      <text x="340" y="48" fill="#c9a84c" font-size="9" text-anchor="middle" font-weight="700">5/22</text>
+      <text x="340" y="38" fill="#f0ebe0" font-size="8" text-anchor="middle">宣誓就任</text>
+      <!-- Jun 17: First FOMC -->
+      <circle cx="500" cy="100" r="8" fill="#e05545"/>
+      <line x1="500" y1="100" x2="500" y2="140" stroke="#e05545" stroke-width="1.5" stroke-dasharray="3"/>
+      <text x="500" y="152" fill="#e05545" font-size="9" text-anchor="middle" font-weight="700">6/17</text>
+      <text x="500" y="164" fill="#f0ebe0" font-size="8" text-anchor="middle">首次FOMC</text>
+      <text x="500" y="176" fill="#e05545" font-size="7" text-anchor="middle">不提交預測點</text>
+      <text x="500" y="188" fill="#e05545" font-size="7" text-anchor="middle">五大任務小組</text>
+      <!-- Jun 17: Speech -->
+      <circle cx="620" cy="100" r="6" fill="#d49040"/>
+      <line x1="620" y1="100" x2="620" y2="55" stroke="#d49040" stroke-width="1" stroke-dasharray="3"/>
+      <text x="620" y="48" fill="#d49040" font-size="9" text-anchor="middle" font-weight="700">6/17記者會</text>
+      <text x="620" y="38" fill="#f0ebe0" font-size="8" text-anchor="middle">12次提及「價格穩定」</text>
+      <!-- Jul 28-29: Next FOMC -->
+      <circle cx="700" cy="100" r="5" fill="#8a8070" opacity="0.6"/>
+      <line x1="700" y1="100" x2="700" y2="140" stroke="#8a8070" stroke-width="1" stroke-dasharray="3"/>
+      <text x="700" y="152" fill="#8a8070" font-size="9" text-anchor="middle">7/28-29</text>
+      <text x="700" y="164" fill="#8a8070" font-size="8" text-anchor="middle">下次FOMC</text>
+      <!-- Arrow -->
+      <polygon points="725,100 715,95 715,105" fill="#8a8070" opacity="0.5"/>
+    </svg>
+    <div class="chart-source">資料來源：Federal Reserve, U.S. Senate, Bloomberg News | 截至2026年6月24日</div>
   </div>
 
   <div class="article">
-    <div class="article-title">沃什時代開幕 — 縮減前瞻指引，鷹派要求加息</div>
-    <p>新任主席 Kevin Warsh 以雷霆之勢拉開任期序幕：FOMC 一致決議將政策利率維持在 <span style="color:#f0ebe0;font-weight:700">3.50%–3.75%</span>，但政策聲明大幅精簡，對利率前景的描述段落被整段刪除，且沃什本人<span style="color:#f0ebe0;font-weight:700">未在點陣圖與 SEP 提交任何預測點</span> — 一反 Powell、Yellen、Bernanke 的傳統。委員會其餘成員則發出強烈鷹派信號：<span style="color:#f0ebe0;font-weight:700">九位</span>與會者預計今年至少加息一次（其中六位預計幅度達 50bp），八位預計維持不變，僅一位預計降息。相比 3 月會議「中位數預期降息一次」的立場，鷹派傾向明顯。同時 SEP 大幅上調通膨：2026 整體 PCE 由 <span style="color:#f0ebe0;font-weight:700">2.7% 升至 3.6%</span>、核心 PCE 由 2.7% 升至 <span style="color:#f0ebe0;font-weight:700">3.3%</span>。沃什全程強調價格穩定為首要任務，刻意淡化降息討論。</p>
-    <div class="data-point">政策利率：<span style="color:#f0ebe0;font-weight:700">3.50%–3.75%（不變）</span> &nbsp;|&nbsp; 2026核心PCE：<span style="color:#f0ebe0;font-weight:700">3.3%</span>（前2.7%） &nbsp;|&nbsp; 2026 GDP：<span style="color:#f0ebe0;font-weight:700">2.2%</span>（前2.4%） &nbsp;|&nbsp; 失業率：<span style="color:#f0ebe0;font-weight:700">4.3%</span>（前4.4%）</div>
-    <div class="implication"><div class="label">投資啟示</div>彭博經濟研究已撤回「年底前降息 25bp」的預測，改為<span style="color:#f0ebe0;font-weight:700">全年既不加息也不降息</span>。前瞻指引真空意味著利率波動率上升 — <span style="color:#f0ebe0;font-weight:700">偏空美債前端、降低對年內降息的押注</span>。</div>
+    <div class="article-title">沃什開幕 — 「靜默革命」重塑聯儲會運作模式</div>
+    <p>Kevin Warsh於<span class="b">5月22日</span>宣誓就任第17任Fed主席，以史上最窄參議院確認差距入主。首次FOMC會議即展現其「regime change, but in a velvet glove」（天鵝絨手套下的政權更迭）風格：<span class="b">12-0</span>一致維持利率不變，但在形式與框架上掀起巨浪。政策聲明從前次<span class="b">341字精簡至130字</span>，刪除所有對利率前景的描述段落。更驚人的是，沃什本人<span class="b">未提交任何SEP預測點</span> — 一反Powell、Yellen、Bernanke三任前輩的傳統。記者會上他宣布成立<span class="b">五大任務小組</span>：Fed溝通方式、資產負債表、數據來源、AI時代生產力與就業、通膨框架。Brown Brothers Harriman首席策略師Scott Clemons稱之為「靜默革命」，Glenmede投資策略長Jason Pride警告投資人「應預期Fed的運作框架將在沃什任期內面目全非」。</p>
+    <div class="data-point">就任日期：<span class="b">2026年5月22日</span> &nbsp;|&nbsp; 任期：<span class="b">四年（至2030年5月）</span> &nbsp;|&nbsp; 聲明精簡：<span class="b">341字→130字</span> &nbsp;|&nbsp; 預測點提交：<span class="b">拒絕</span> &nbsp;|&nbsp; 任務小組：<span class="b">5個</span> &nbsp;|&nbsp; 記者會「價格穩定」：<span class="b">12次</span></div>
+    <div class="implication"><div class="label">投資啟示</div>前瞻指引的廢除意味著市場將失去過去十五年來最重要的錨定機制。沒有Chair的預測點、沒有利率路徑暗示 — <span class="b">利率波動率結構性上升</span>。這不是暫時的風格差異，而是框架轉換。每一次FOMC會議都將成為「事件」，而非像Powell時期那樣被前瞻指引提前消化。<span class="b">做多利率波動率是結構性配置，不是戰術交易。</span></div>
   </div>
 
+  <div class="article">
+    <div class="article-title">沃什其人 — 從Morgan Stanley到危機消防員到鷹派學者</div>
+    <p>Warsh的履歷跨越華爾街、白宮與學術界。1970年出生於紐約州奧爾巴尼，<span class="b">史丹佛大學學士、哈佛法學院法學博士</span>。1996年加入<span class="b">Morgan Stanley</span>併購部門，升至副總裁與執行董事。2002年被小布希總統延攬入白宮任國家經濟委員會執行秘書，2006年以<span class="b">35歲之齡成為Fed史上最年輕的理事之一</span>。任內恰逢2008金融海嘯，作為Fed與金融市場的核心聯絡人，他深度參與Bear Stearns出售、Lehman Brothers破產、AIG紓困等關鍵決策。2011年因反對Bernanke的<span class="b">6,000億美元QE2</span>而辭職，此後加入史丹佛胡佛研究所與<span class="b">Duquesne Family Office</span>（Stanley Druckenmiller旗下）。他長期主張通膨是「政策選擇」而非結構性力量，認為大規模資產購買扭曲市場並侵蝕長期價格穩定。</p>
+    <div class="data-point">年齡：<span class="b">56歲</span> &nbsp;|&nbsp; 學歷：<span class="b">史丹佛BA + 哈佛JD</span> &nbsp;|&nbsp; 首次Fed任期：<span class="b">2006-2011</span> &nbsp;|&nbsp; 離職原因：<span class="b">反對QE2</span> &nbsp;|&nbsp; 中間經歷：<span class="b">胡佛研究所 + Duquesne FO</span></div>
+  </div>
 </div>
 
-<div class="section" id="yield-drivers-model">
-  <h2><span class="tag tag-misc">利率驅動</span> 戰爭與和平：殖利率為何上行</h2>
+<!-- ============================================================ -->
+<!-- SECTION 2: DOT PLOT -->
+<!-- ============================================================ -->
+<div class="section" id="dot-plot">
+  <h2><span class="tag tag-rates">利率</span> 點陣圖大翻轉 — 從降息到加息的180度轉向</h2>
 
   <div class="stat-grid">
-    <div class="stat"><div class="val" style="color:var(--orange)">+50bp</div><div class="lbl">美債殖利率
-自2月戰爭以來</div></div>
-    <div class="stat"><div class="val" style="color:var(--green)">+9%</div><div class="lbl">標普500
-同期漲幅</div></div>
-    <div class="stat"><div class="val">6/17</div><div class="lbl">沃什講話
-坐實鷹派轉向</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">9 vs 8</div><div class="lbl">加息派 vs 維持派<br>（僅1位預計降息）</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">3.8%</div><div class="lbl">2026年底中位數<br>（3月為3.4%）</div></div>
+    <div class="stat"><div class="val">3.1%</div><div class="lbl">長期中性利率<br>（維持不變）</div></div>
+  </div>
+
+  <!-- CHART: Dot Plot Distribution -->
+  <div class="chart-container">
+    <div class="chart-title">6月FOMC點陣圖分佈 — 2026年底聯邦基金利率預測</div>
+    <svg viewBox="0 0 760 300" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;">
+      <!-- Grid -->
+      <rect x="80" y="20" width="600" height="230" fill="none" stroke="#2a2820" stroke-width="0.5"/>
+      <!-- Y-axis: number of officials (0-8) -->
+      <text x="75" y="28" fill="#8a8070" font-size="10" text-anchor="end">8</text>
+      <text x="75" y="57" fill="#8a8070" font-size="10" text-anchor="end">7</text>
+      <text x="75" y="86" fill="#8a8070" font-size="10" text-anchor="end">6</text>
+      <text x="75" y="115" fill="#8a8070" font-size="10" text-anchor="end">5</text>
+      <text x="75" y="144" fill="#8a8070" font-size="10" text-anchor="end">4</text>
+      <text x="75" y="173" fill="#8a8070" font-size="10" text-anchor="end">3</text>
+      <text x="75" y="202" fill="#8a8070" font-size="10" text-anchor="end">2</text>
+      <text x="75" y="231" fill="#8a8070" font-size="10" text-anchor="end">1</text>
+      <text x="75" y="254" fill="#8a8070" font-size="10" text-anchor="end">0</text>
+      <!-- Grid lines -->
+      <line x1="80" y1="57" x2="680" y2="57" stroke="#2a2820" stroke-width="0.5" stroke-dasharray="4"/>
+      <line x1="80" y1="86" x2="680" y2="86" stroke="#2a2820" stroke-width="0.5" stroke-dasharray="4"/>
+      <line x1="80" y1="115" x2="680" y2="115" stroke="#2a2820" stroke-width="0.5" stroke-dasharray="4"/>
+      <line x1="80" y1="144" x2="680" y2="144" stroke="#2a2820" stroke-width="0.5" stroke-dasharray="4"/>
+      <line x1="80" y1="173" x2="680" y2="173" stroke="#2a2820" stroke-width="0.5" stroke-dasharray="4"/>
+      <line x1="80" y1="202" x2="680" y2="202" stroke="#2a2820" stroke-width="0.5" stroke-dasharray="4"/>
+      <line x1="80" y1="231" x2="680" y2="231" stroke="#2a2820" stroke-width="0.5" stroke-dasharray="4"/>
+      <!-- X-axis rate levels -->
+      <!-- 3.375% (cut 25bp): 1 official -->
+      <text x="130" y="270" fill="#8a8070" font-size="9" text-anchor="middle">3.375%</text>
+      <text x="130" y="282" fill="#6bbd5b" font-size="7" text-anchor="middle">降息25bp</text>
+      <!-- Dots: 1 green dot -->
+      <circle cx="130" cy="231" r="7" fill="#6bbd5b" opacity="0.8"/>
+      <text x="130" y="234" fill="#0a0a08" font-size="8" font-weight="700" text-anchor="middle">1</text>
+
+      <!-- 3.625% (current): 8 officials -->
+      <text x="260" y="270" fill="#c9a84c" font-size="9" text-anchor="middle" font-weight="700">3.625%</text>
+      <text x="260" y="282" fill="#c9a84c" font-size="7" text-anchor="middle">維持不變</text>
+      <!-- Bar -->
+      <rect x="235" y="24" width="50" height="226" rx="4" fill="rgba(201,168,76,0.25)" stroke="#c9a84c" stroke-width="1.5"/>
+      <text x="260" y="45" fill="#f0d87a" font-size="14" font-weight="700" text-anchor="middle">8</text>
+      <!-- Current rate marker -->
+      <line x1="80" y1="250" x2="680" y2="250" stroke="#c9a84c" stroke-width="0" />
+
+      <!-- 3.875% (hike 25bp): 3 officials -->
+      <text x="390" y="270" fill="#8a8070" font-size="9" text-anchor="middle">3.875%</text>
+      <text x="390" y="282" fill="#d49040" font-size="7" text-anchor="middle">加息25bp</text>
+      <rect x="365" y="163" width="50" height="87" rx="4" fill="rgba(212,144,64,0.3)" stroke="#d49040" stroke-width="1"/>
+      <text x="390" y="184" fill="#d49040" font-size="14" font-weight="700" text-anchor="middle">3</text>
+
+      <!-- 4.125% (hike 50bp): 5 officials -->
+      <text x="500" y="270" fill="#8a8070" font-size="9" text-anchor="middle">4.125%</text>
+      <text x="500" y="282" fill="#e05545" font-size="7" text-anchor="middle">加息50bp</text>
+      <rect x="475" y="105" width="50" height="145" rx="4" fill="rgba(224,85,69,0.3)" stroke="#e05545" stroke-width="1"/>
+      <text x="500" y="126" fill="#e05545" font-size="14" font-weight="700" text-anchor="middle">5</text>
+
+      <!-- 4.375% (hike 75bp): 1 official -->
+      <text x="620" y="270" fill="#8a8070" font-size="9" text-anchor="middle">4.375%</text>
+      <text x="620" y="282" fill="#e05545" font-size="7" text-anchor="middle">加息75bp</text>
+      <circle cx="620" cy="231" r="7" fill="#e05545" opacity="0.8"/>
+      <text x="620" y="234" fill="#0a0a08" font-size="8" font-weight="700" text-anchor="middle">1</text>
+
+      <!-- Median arrow -->
+      <line x1="325" y1="20" x2="325" y2="250" stroke="#f0d87a" stroke-width="1.5" stroke-dasharray="6,3"/>
+      <text x="325" y="14" fill="#f0d87a" font-size="10" font-weight="700" text-anchor="middle">中位數 3.8%</text>
+
+      <!-- Summary annotation -->
+      <rect x="420" y="20" width="260" height="55" rx="4" fill="rgba(224,85,69,0.08)" stroke="rgba(224,85,69,0.2)" stroke-width="1"/>
+      <text x="550" y="38" fill="#e05545" font-size="10" font-weight="700" text-anchor="middle">加息陣營：9位（50%）</text>
+      <text x="550" y="53" fill="#8a8070" font-size="9" text-anchor="middle">其中6位預計加息50bp+</text>
+      <text x="550" y="68" fill="#8a8070" font-size="9" text-anchor="middle">沃什未提交預測點</text>
+
+      <!-- Y-axis label -->
+      <text x="20" y="140" fill="#8a8070" font-size="10" text-anchor="middle" transform="rotate(-90, 20, 140)">委員人數</text>
+    </svg>
+    <div class="chart-source">資料來源：Federal Reserve SEP (June 17, 2026), Bloomberg | 18位委員提交（沃什未提交）</div>
   </div>
 
   <div class="article">
-    <div class="article-title">模型洞察：沃什鷹派轉向與中東降溫共同推升殖利率</div>
-    <p>彭博經濟研究的驅動因子模型（SVAR）顯示，過去數月美債殖利率與股市同步上行，背後是兩股力量：<span style="color:#f0ebe0;font-weight:700">沃什主導的聯儲會鷹派轉向</span>，以及<span style="color:#f0ebe0;font-weight:700">伊朗戰爭升級恐懼的消退</span>。自 2 月底戰爭爆發以來，10 年期殖利率已上行<span style="color:#f0ebe0;font-weight:700">逾 50bp</span>。模型拆解顯示，初期推力主要來自對大宗商品供給中斷的擔憂，但隨衝突降溫，這股壓力消退，<span style="color:#f0ebe0;font-weight:700">Fed 預期重定價成為殖利率上行的主導力量</span>。沃什 <span style="color:#f0ebe0;font-weight:700">6 月 17 日</span>的講話坐實了鷹派轉向，明確傳遞「寬鬆門檻仍高」。對股市而言，標普 500 自開戰以來上漲約 <span style="color:#f0ebe0;font-weight:700">9%</span>，風險偏好回升（疊加 AI 樂觀情緒）的提振，已遠遠抵銷 Fed 鷹派帶來的拖累。</p>
-    <div class="data-point">殖利率變化：<span style="color:#f0ebe0;font-weight:700">+50bp</span> &nbsp;|&nbsp; 標普500：<span style="color:#f0ebe0;font-weight:700">+9%</span> &nbsp;|&nbsp; 主導因子：<span style="color:#f0ebe0;font-weight:700">Fed預期重定價</span> &nbsp;|&nbsp; 拐點事件：<span style="color:#f0ebe0;font-weight:700">沃什6/17講話</span></div>
-    <div class="implication"><div class="label">投資啟示</div>殖利率上行主因已從「地緣供給衝擊」切換為「貨幣政策鷹派」，後者更具黏性。<span style="color:#f0ebe0;font-weight:700">做空美債前端的勝率高於後端</span>；股市雖受 AI 風險偏好支撐，但若 Fed 鷹派與殖利率上行持續，估值將承壓。</div>
+    <div class="article-title">點陣圖史上最大單季鷹派翻轉 — 從降息共識到加息多數</div>
+    <p>6月SEP呈現了近年來最劇烈的單季轉向：<span class="b">18位提交預測的委員中9位</span>預計年內至少加息一次（其中<span class="b">6位預計加息50bp</span>、<span class="b">1位預計75bp</span>），8位維持不變，僅<span class="b">1位預計降息25bp</span>。中位數從3月的<span class="b">3.4%升至3.8%</span> — 這意味著Fed的中心預期從「年底前降息一次」急轉為「可能加息一次」。2026年底預測的完整區間為<span class="b">3.4%-4.4%</span>，中央趨勢<span class="b">3.6%-4.1%</span>。</p>
+    <p>通膨預測的上修幅度更令人震驚：2026整體PCE由<span class="b">2.7%大幅上調至3.6%</span>（+90bp），核心PCE由<span class="b">2.7%升至3.3%</span>。GDP小幅下修至<span class="b">2.2%</span>（前值2.4%），失業率微降至<span class="b">4.3%</span>（前值4.4%）。但值得注意的是，<span class="b">2027年PCE預測幾乎未動（2.3%→2.3%）</span>，顯示中位數委員仍將當前通膨視為伊朗戰爭驅動的暫時性現象。長期中性利率維持<span class="b">3.1%</span>不變 — 委員們認為需要在中性以上維持更久，但對中性本身的判斷並未改變。</p>
+    <div class="data-point">中位數利率預測：<span class="b">2026年底3.8%（3月：3.4%）</span> &nbsp;|&nbsp; PCE：<span class="b">3.6%（3月：2.7%）</span> &nbsp;|&nbsp; 核心PCE：<span class="b">3.3%</span> &nbsp;|&nbsp; GDP：<span class="b">2.2%</span> &nbsp;|&nbsp; 失業率：<span class="b">4.3%</span> &nbsp;|&nbsp; 長期中性：<span class="b">3.1%不變</span> &nbsp;|&nbsp; 2027 PCE：<span class="b">2.3%不變</span></div>
+    <div class="implication"><div class="label">投資啟示</div>市場已對「9月加息」定價至<span class="b">68%機率</span>（Fed日前僅29%）。但真正的風險不在「是否加息」，而在<span class="b">Fed reaction function的不透明性</span>：沃什不提交預測、不給前瞻指引，市場只能靠通膨數據逐會推斷。這意味著<span class="b">每一份CPI/PCE報告的市場衝擊力都倍增</span>。6月25日的PCE數據將是沃什時代的首個重大測試。</div>
   </div>
-
 </div>
 
-<div class="section" id="mbs-convexity-volatility">
-  <h2><span class="tag tag-misc">債市波動</span> AI 重啟負凸性波動機器</h2>
+<!-- ============================================================ -->
+<!-- SECTION 3: YIELD TRAJECTORY -->
+<!-- ============================================================ -->
+<div class="section" id="yield-trajectory">
+  <h2><span class="tag tag-rates">利率</span> 殖利率路徑 — 10Y走勢與期限溢價回歸</h2>
 
   <div class="stat-grid">
-    <div class="stat"><div class="val" style="color:var(--orange)">10-15bp</div><div class="lbl">AI後再融資門檻
-（原50-75bp）</div></div>
-    <div class="stat"><div class="val">100→105</div><div class="lbl">MBS合成結構
-10Y現券-3Y價外call</div></div>
-    <div class="stat"><div class="val">5年</div><div class="lbl">負凸性
-罕見地缺席市場</div></div>
+    <div class="stat"><div class="val">4.50%</div><div class="lbl">10年期殖利率<br>兩週高點</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">+50bp</div><div class="lbl">自2月伊朗戰爭<br>以來升幅</div></div>
+    <div class="stat"><div class="val" style="color:var(--green)">0.67%</div><div class="lbl">ACM期限溢價<br>2023年來首次轉正</div></div>
+  </div>
+
+  <!-- CHART: US 10Y Yield 12-month Trajectory -->
+  <div class="chart-container">
+    <div class="chart-title">美國10年期殖利率走勢（2025年7月 — 2026年6月）</div>
+    <svg viewBox="0 0 760 280" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;">
+      <!-- Grid -->
+      <rect x="60" y="20" width="680" height="220" fill="none" stroke="#2a2820" stroke-width="0.5"/>
+      <line x1="60" y1="64" x2="740" y2="64" stroke="#2a2820" stroke-width="0.5" stroke-dasharray="4"/>
+      <line x1="60" y1="108" x2="740" y2="108" stroke="#2a2820" stroke-width="0.5" stroke-dasharray="4"/>
+      <line x1="60" y1="152" x2="740" y2="152" stroke="#2a2820" stroke-width="0.5" stroke-dasharray="4"/>
+      <line x1="60" y1="196" x2="740" y2="196" stroke="#2a2820" stroke-width="0.5" stroke-dasharray="4"/>
+      <!-- Y-axis labels: 5.00% to 3.50% -->
+      <!-- Y mapping: 5.00=20, 3.50=240 → y = 240 - (val-3.50)*146.67 -->
+      <text x="55" y="24" fill="#8a8070" font-size="10" text-anchor="end">5.00%</text>
+      <text x="55" y="68" fill="#8a8070" font-size="10" text-anchor="end">4.75%</text>
+      <text x="55" y="112" fill="#8a8070" font-size="10" text-anchor="end">4.50%</text>
+      <text x="55" y="156" fill="#8a8070" font-size="10" text-anchor="end">4.25%</text>
+      <text x="55" y="200" fill="#8a8070" font-size="10" text-anchor="end">4.00%</text>
+      <text x="55" y="244" fill="#8a8070" font-size="10" text-anchor="end">3.75%</text>
+      <!-- X-axis labels -->
+      <text x="60" y="258" fill="#8a8070" font-size="9">Jul 25</text>
+      <text x="117" y="258" fill="#8a8070" font-size="9">Aug</text>
+      <text x="174" y="258" fill="#8a8070" font-size="9">Sep</text>
+      <text x="231" y="258" fill="#8a8070" font-size="9">Oct</text>
+      <text x="288" y="258" fill="#8a8070" font-size="9">Nov</text>
+      <text x="345" y="258" fill="#8a8070" font-size="9">Dec</text>
+      <text x="402" y="258" fill="#8a8070" font-size="9">Jan 26</text>
+      <text x="459" y="258" fill="#8a8070" font-size="9">Feb</text>
+      <text x="516" y="258" fill="#8a8070" font-size="9">Mar</text>
+      <text x="573" y="258" fill="#8a8070" font-size="9">Apr</text>
+      <text x="630" y="258" fill="#8a8070" font-size="9">May</text>
+      <text x="700" y="258" fill="#8a8070" font-size="9">Jun</text>
+      <!-- Yield line: Jul(4.30)→Aug(4.20)→Sep(4.00 low/rate cut)→Oct(4.15)→Nov(4.25)→Dec(4.10/rate cut)→Jan(4.30)→Feb(4.00/war fear)→Mar(4.55/war peak+rate fear)→Apr(4.45)→May(4.40)→Jun(4.50) -->
+      <!-- y = 240 - (val-3.50)/1.50 * 220 -->
+      <!-- Jul 4.30: y = 240 - 0.80*146.67 = 240-117.3 = 122.7 -->
+      <!-- Aug 4.20: y = 240 - 0.70*146.67 = 240-102.7 = 137.3 -->
+      <!-- Sep 4.00: y = 240 - 0.50*146.67 = 240-73.3 = 166.7 -->
+      <!-- Oct 4.15: y = 240 - 0.65*146.67 = 240-95.3 = 144.7 -->
+      <!-- Nov 4.25: y = 240 - 0.75*146.67 = 240-110.0 = 130.0 -->
+      <!-- Dec 4.10: y = 240 - 0.60*146.67 = 240-88.0 = 152.0 -->
+      <!-- Jan 4.30: y = 122.7 -->
+      <!-- Feb 4.00: y = 166.7 (war fear, flight to safety) -->
+      <!-- Mar 4.55: y = 240 - 1.05*146.67 = 240-154.0 = 86.0 -->
+      <!-- Apr 4.45: y = 240 - 0.95*146.67 = 240-139.3 = 100.7 -->
+      <!-- May 4.40: y = 240 - 0.90*146.67 = 240-132.0 = 108.0 -->
+      <!-- Jun 4.50: y = 240 - 1.00*146.67 = 240-146.7 = 93.3 -->
+      <polyline fill="none" stroke="#c9a84c" stroke-width="2.5"
+        points="60,123 117,137 174,167 231,145 288,130 345,152 402,123 459,167 516,86 573,101 630,108 700,93"/>
+      <!-- Area fill -->
+      <polygon fill="url(#goldGrad104)" opacity="0.15"
+        points="60,123 117,137 174,167 231,145 288,130 345,152 402,123 459,167 516,86 573,101 630,108 700,93 700,240 60,240"/>
+      <defs>
+        <linearGradient id="goldGrad104" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#c9a84c" stop-opacity="0.4"/>
+          <stop offset="100%" stop-color="#c9a84c" stop-opacity="0"/>
+        </linearGradient>
+      </defs>
+      <!-- Key annotations -->
+      <circle cx="174" cy="167" r="4" fill="#6bbd5b"/>
+      <text x="174" y="183" fill="#6bbd5b" font-size="9" text-anchor="middle">4.00% 低點</text>
+      <text x="174" y="193" fill="#6bbd5b" font-size="7" text-anchor="middle">Fed降息+避險</text>
+
+      <circle cx="459" cy="167" r="4" fill="#6bbd5b"/>
+      <text x="459" y="183" fill="#6bbd5b" font-size="9" text-anchor="middle">4.00%</text>
+      <text x="459" y="193" fill="#6bbd5b" font-size="7" text-anchor="middle">伊朗戰爭避險</text>
+
+      <circle cx="516" cy="86" r="4" fill="#e05545"/>
+      <text x="530" y="78" fill="#e05545" font-size="9">4.55% 年內高點</text>
+      <text x="530" y="88" fill="#e05545" font-size="7">戰爭溢價+加息恐懼</text>
+
+      <circle cx="700" cy="93" r="5" fill="#c9a84c"/>
+      <text x="670" y="88" fill="#f0d87a" font-size="10" font-weight="700">4.50%</text>
+      <text x="675" y="100" fill="#8a8070" font-size="7">現價</text>
+
+      <!-- Event markers -->
+      <rect x="445" y="22" width="90" height="18" rx="3" fill="rgba(224,85,69,0.12)"/>
+      <text x="490" y="34" fill="#e05545" font-size="8" text-anchor="middle">伊朗戰爭爆發 2/28</text>
+      <line x1="459" y1="40" x2="459" y2="167" stroke="#e05545" stroke-width="0.5" stroke-dasharray="3"/>
+    </svg>
+    <div class="chart-source">資料來源：FRED (DGS10), Bloomberg, U.S. Treasury | 截至2026年6月24日</div>
   </div>
 
   <div class="article">
-    <div class="article-title">MBS 負凸性回歸 — AI 降低再融資摩擦，放大殖利率波動</div>
-    <p>Simon White 警示：抵押貸款支持證券（MBS）正重新成為美債市場波動的放大器，元兇是 <span style="color:#f0ebe0;font-weight:700">AI 大幅降低再融資成本</span>。負凸性是 MBS 的固有特徵 — 當殖利率變動時，持倉者的對沖需求會追逐並放大殖利率走勢。過去近五年負凸性大致缺席（2021-22 利率衝擊期甚至轉正），近期才再度明顯轉負。傳統上，市場利率需比借款人現有利率低 <span style="color:#f0ebe0;font-weight:700">50-75bp</span> 才值得再融資（因需備齊文件、信用審查、估價等成本）；但 AI 自動化審核與承銷將這道門檻壓低至可能僅 <span style="color:#f0ebe0;font-weight:700">10-15bp</span>。這意味著更窄更深的凸性曲線：更多借款人在利率下行時提前還款，提前還款選擇權價值更高。可將 MBS 拆解為「持有 100 元的 10 年期現券 + 賣出一個價外 <span style="color:#f0ebe0;font-weight:700">105</span> 行權的 3 年期 call」。</p>
-    <div class="data-point">再融資激勵門檻：<span style="color:#f0ebe0;font-weight:700">50-75bp → 10-15bp</span> &nbsp;|&nbsp; 凸性現狀：<span style="color:#f0ebe0;font-weight:700">明顯轉負</span> &nbsp;|&nbsp; MOVE指數發明人：<span style="color:#f0ebe0;font-weight:700">Harley Bassman</span> &nbsp;|&nbsp; GSE擔保：<span style="color:#f0ebe0;font-weight:700">本金安全等同公債</span></div>
-    <div class="implication"><div class="label">投資啟示</div>負凸性重燃意味著利率波動的「自我放大」機制回歸，MOVE 指數有上行壓力。<span style="color:#f0ebe0;font-weight:700">做多利率波動率（如 MOVE / 利率期權）作為尾部對沖</span>；持有 MBS 者應主動對沖凸性，警惕殖利率雙向急動引發的對沖踩踏。</div>
+    <div class="article-title">殖利率上行動力切換 — 從地緣避險到Fed政策重定價</div>
+    <p>彭博經濟研究的SVAR驅動因子模型揭示了一個關鍵轉變：過去四個月殖利率上行的<span class="b">主導力量已從地緣供給衝擊切換為Fed政策重定價</span>。2月底伊朗戰爭爆發時，10Y一度因避險需求回落至<span class="b">4.00%</span>，但隨後在能源價格衝擊與Fed鷹派預期的雙重推動下一路攀升至3月的<span class="b">4.55%</span>（年內高點）。4-5月隨戰事降溫略有回落，但6月17日沃什講話後再度推升至<span class="b">4.50%</span>。自2月底以來累計上行<span class="b">逾50bp</span>。</p>
+    <p>期限溢價的回歸是更深層的結構性變化。NY Fed的ACM模型顯示10年期期限溢價為<span class="b">0.67%</span>（5月28日數據），為<span class="b">2023年以來首次持續正值</span>。4月底的分解顯示：4.45%的10Y殖利率中，<span class="b">3.72%來自預期路徑、0.73%來自期限溢價</span>。投資者正要求更多的久期補償 — 三大推手：(1) 沃什廢除前瞻指引增加不確定性，(2) 財政赤字持續擴大推高國債供給，(3) Fed資產負債表仍在縮減（QT從$9兆降至$6.7兆）。</p>
+    <div class="data-point">10Y殖利率：<span class="b">4.50%</span> &nbsp;|&nbsp; 自2月底升幅：<span class="b">+50bp</span> &nbsp;|&nbsp; ACM期限溢價：<span class="b">0.67%</span>（5/28） &nbsp;|&nbsp; 分解：<span class="b">預期路徑3.72% + 期限溢價0.73%</span> &nbsp;|&nbsp; Fed資產負債表：<span class="b">$6.7兆</span></div>
+    <div class="implication"><div class="label">投資啟示</div>期限溢價轉正是結構性信號 — 即便Fed未來降息，長端可能「不隨短端走」。<span class="b">做空前端（2Y）的確信度高於做空長端（10Y）</span>：前端純粹反映Fed政策路徑，而長端受期限溢價與供需影響。若9月加息成真，2Y殖利率可達<span class="b">4.50%</span>。10Y的上行空間取決於期限溢價能走多遠 — 我們的目標<span class="b">4.75%</span>。</div>
+  </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- SECTION 4: YIELD CURVE -->
+<!-- ============================================================ -->
+<div class="section" id="yield-curve">
+  <h2><span class="tag tag-rates">利率</span> 殖利率曲線 — 2s10s收窄與熊平風險</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val">4.21%</div><div class="lbl">2年期殖利率<br>2025年2月來高點</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">+27bp</div><div class="lbl">2s10s利差<br>正值但極窄</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">+16bp</div><div class="lbl">2Y Fed日升幅<br>2008年3月以來最大</div></div>
   </div>
 
+  <!-- CHART: Yield Curve Shape -->
+  <div class="chart-container">
+    <div class="chart-title">美國殖利率曲線 — 2026年6月24日 vs 2026年1月（基準）</div>
+    <svg viewBox="0 0 760 260" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;">
+      <!-- Grid -->
+      <rect x="80" y="20" width="620" height="200" fill="none" stroke="#2a2820" stroke-width="0.5"/>
+      <line x1="80" y1="60" x2="700" y2="60" stroke="#2a2820" stroke-width="0.5" stroke-dasharray="4"/>
+      <line x1="80" y1="100" x2="700" y2="100" stroke="#2a2820" stroke-width="0.5" stroke-dasharray="4"/>
+      <line x1="80" y1="140" x2="700" y2="140" stroke="#2a2820" stroke-width="0.5" stroke-dasharray="4"/>
+      <line x1="80" y1="180" x2="700" y2="180" stroke="#2a2820" stroke-width="0.5" stroke-dasharray="4"/>
+      <!-- Y-axis: 4.60% to 3.40% -->
+      <!-- y = 220 - (val-3.40)/1.20 * 200 -->
+      <text x="75" y="24" fill="#8a8070" font-size="10" text-anchor="end">4.60%</text>
+      <text x="75" y="64" fill="#8a8070" font-size="10" text-anchor="end">4.40%</text>
+      <text x="75" y="104" fill="#8a8070" font-size="10" text-anchor="end">4.20%</text>
+      <text x="75" y="144" fill="#8a8070" font-size="10" text-anchor="end">4.00%</text>
+      <text x="75" y="184" fill="#8a8070" font-size="10" text-anchor="end">3.80%</text>
+      <text x="75" y="224" fill="#8a8070" font-size="10" text-anchor="end">3.60%</text>
+      <!-- X-axis: maturities -->
+      <text x="110" y="242" fill="#8a8070" font-size="9" text-anchor="middle">3M</text>
+      <text x="200" y="242" fill="#8a8070" font-size="9" text-anchor="middle">1Y</text>
+      <text x="310" y="242" fill="#8a8070" font-size="9" text-anchor="middle">2Y</text>
+      <text x="420" y="242" fill="#8a8070" font-size="9" text-anchor="middle">5Y</text>
+      <text x="540" y="242" fill="#8a8070" font-size="9" text-anchor="middle">10Y</text>
+      <text x="660" y="242" fill="#8a8070" font-size="9" text-anchor="middle">30Y</text>
+
+      <!-- January curve (dashed, lighter) -->
+      <!-- Jan: 3M=3.75, 1Y=3.80, 2Y=3.80, 5Y=4.10, 10Y=4.30, 30Y=4.55 -->
+      <!-- 3M: y = 220-(0.35/1.20)*200 = 220-58.3 = 161.7 -->
+      <!-- 1Y: y = 220-(0.40/1.20)*200 = 220-66.7 = 153.3 -->
+      <!-- 2Y: y = 220-(0.40/1.20)*200 = 153.3 -->
+      <!-- 5Y: y = 220-(0.70/1.20)*200 = 220-116.7 = 103.3 -->
+      <!-- 10Y: y = 220-(0.90/1.20)*200 = 220-150.0 = 70.0 -->
+      <!-- 30Y: y = 220-(1.15/1.20)*200 = 220-191.7 = 28.3 -->
+      <polyline fill="none" stroke="#8a8070" stroke-width="1.5" stroke-dasharray="6,3"
+        points="110,162 200,153 310,153 420,103 540,70 660,28"/>
+      <!-- Current curve (solid gold) -->
+      <!-- Jun: 3M=3.83, 1Y=3.98, 2Y=4.21, 5Y=4.35, 10Y=4.50, 30Y=4.60 (est) -->
+      <!-- 3M: y = 220-(0.43/1.20)*200 = 220-71.7 = 148.3 -->
+      <!-- 1Y: y = 220-(0.58/1.20)*200 = 220-96.7 = 123.3 -->
+      <!-- 2Y: y = 220-(0.81/1.20)*200 = 220-135.0 = 85.0 -->
+      <!-- 5Y: y = 220-(0.95/1.20)*200 = 220-158.3 = 61.7 -->
+      <!-- 10Y: y = 220-(1.10/1.20)*200 = 220-183.3 = 36.7 -->
+      <!-- 30Y: y = 220-(1.20/1.20)*200 = 220-200 = 20.0 -->
+      <polyline fill="none" stroke="#c9a84c" stroke-width="2.5"
+        points="110,148 200,123 310,85 420,62 540,37 660,20"/>
+      <!-- Rate labels on current -->
+      <circle cx="110" cy="148" r="3" fill="#c9a84c"/>
+      <text x="110" y="140" fill="#c9a84c" font-size="8" text-anchor="middle">3.83%</text>
+      <circle cx="200" cy="123" r="3" fill="#c9a84c"/>
+      <text x="200" y="115" fill="#c9a84c" font-size="8" text-anchor="middle">3.98%</text>
+      <circle cx="310" cy="85" r="4" fill="#e05545"/>
+      <text x="310" y="77" fill="#e05545" font-size="9" font-weight="700" text-anchor="middle">4.21%</text>
+      <circle cx="420" cy="62" r="3" fill="#c9a84c"/>
+      <text x="420" y="54" fill="#c9a84c" font-size="8" text-anchor="middle">4.35%</text>
+      <circle cx="540" cy="37" r="4" fill="#c9a84c"/>
+      <text x="540" y="29" fill="#f0d87a" font-size="9" font-weight="700" text-anchor="middle">4.50%</text>
+      <circle cx="660" cy="20" r="3" fill="#c9a84c"/>
+      <text x="660" y="15" fill="#c9a84c" font-size="8" text-anchor="middle">4.60%</text>
+      <!-- 2s10s spread annotation -->
+      <line x1="315" y1="85" x2="315" y2="37" stroke="rgba(201,168,76,0.4)" stroke-width="1"/>
+      <line x1="535" y1="37" x2="315" y2="37" stroke="rgba(201,168,76,0.4)" stroke-width="1" stroke-dasharray="3"/>
+      <rect x="355" y="48" width="120" height="22" rx="3" fill="rgba(201,168,76,0.1)" stroke="rgba(201,168,76,0.2)" stroke-width="0.5"/>
+      <text x="415" y="63" fill="#c9a84c" font-size="9" font-weight="700" text-anchor="middle">2s10s = +29bp</text>
+      <!-- Legend -->
+      <line x1="80" y1="246" x2="110" y2="246" stroke="#c9a84c" stroke-width="2.5"/>
+      <text x="115" y="249" fill="#8a8070" font-size="9">2026年6月24日</text>
+      <line x1="220" y1="246" x2="250" y2="246" stroke="#8a8070" stroke-width="1.5" stroke-dasharray="6,3"/>
+      <text x="255" y="249" fill="#8a8070" font-size="9">2026年1月（基準）</text>
+    </svg>
+    <div class="chart-source">資料來源：U.S. Treasury, FRED, StreetStats | 截至2026年6月24日</div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">熊平風險 — 前端飆升、曲線收窄的危險信號</div>
+    <p>沃什首次FOMC會議後，2年期殖利率<span class="b">單日跳升16bp至4.21%</span>，為<span class="b">2008年3月以來</span>Fed會議日最大升幅。MUFG指出這反映了市場對「沃什時代 = 更高利率更久」的快速重定價。當前2s10s利差僅<span class="b">+27-29bp</span> — 雖為正值，但遠低於健康擴張期的<span class="b">100-150bp</span>。1月時該利差約為<span class="b">+50bp</span>，六個月內已收窄近一半。</p>
+    <p>曲線收窄的模式高度暗示「熊平」（bear flattening）：前端因加息預期急升，長端因期限溢價回歸而「抗跌」但升幅不及前端。若9月確實加息25bp（市場定價68%機率），<span class="b">2Y可能觸及4.50%</span>。10Y在期限溢價與供給壓力下可能升至<span class="b">4.75%</span>，但2s10s利差可能進一步收窄至<span class="b">+25bp甚至更低</span>。Deutsche Bank與BofA已將9月加息納入基準預測。</p>
+    <div class="data-point">2Y殖利率：<span class="b">4.21%</span>（Fed日+16bp） &nbsp;|&nbsp; 10Y殖利率：<span class="b">4.50%</span> &nbsp;|&nbsp; 2s10s利差：<span class="b">+29bp</span>（1月：+50bp） &nbsp;|&nbsp; 9月加息機率：<span class="b">68%</span>（Fed日前29%）</div>
+    <div class="implication"><div class="label">投資啟示</div>熊平曲線是經典的「加息預期」形態，但也是經濟衰退前常見的前兆。<span class="b">做空2Y是最直接的加息交易</span>，但要注意：若衰退信號出現（ISM跌破50、失業率跳升），曲線將暴力陡峭化（bull steepening），2Y空頭將遭遇雙位數bp的逆向。建議用<span class="b">2s10s flattener</span>交易（空2Y+多10Y）作為方向性加息押注，同時限制曲線反轉的損失。</div>
+  </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- SECTION 5: MBS CONVEXITY -->
+<!-- ============================================================ -->
+<div class="section" id="mbs-convexity">
+  <h2><span class="tag tag-mbs">MBS</span> MBS負凸性 — AI重啟債市波動放大器</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--red)">10-15bp</div><div class="lbl">AI後再融資門檻<br>（原50-75bp）</div></div>
+    <div class="stat"><div class="val">6.47%</div><div class="lbl">30年固定房貸利率<br>Freddie Mac 6/18</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">5年</div><div class="lbl">負凸性<br>罕見地缺席市場</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">AI降低再融資摩擦 — MBS重新成為殖利率波動的放大器</div>
+    <p>Bloomberg macro策略師Simon White警示：抵押貸款支持證券（MBS）正重新成為美債市場波動的<span class="b">正反饋放大器</span>，元兇是AI大幅降低再融資成本。負凸性是MBS的固有特徵 — 當殖利率下行時，借款人提前還款（再融資），MBS持倉者被迫在低利率環境下重新配置，產生追逐殖利率走勢的對沖需求。過去近<span class="b">五年</span>負凸性大致缺席（2021-22利率衝擊期甚至轉正），近期才明顯轉負。</p>
+    <p>傳統上，市場利率需比借款人現有利率低<span class="b">50-75bp</span>才值得再融資（因文件、信用審查、估價等成本）。但AI自動化審核與承銷正將這道門檻壓至可能僅<span class="b">10-15bp</span>。這意味著：(1) 更多借款人在利率小幅下行時即提前還款，(2) 提前還款選擇權價值更高，(3) MBS久期的利率敏感度急劇增加。可將MBS拆解為「持有<span class="b">100元</span>的10年期現券 + 賣出一個行權價<span class="b">105</span>的3年期call option」。當前30年固定房貸利率<span class="b">6.47%</span>（Freddie Mac, 6/18），年初區間<span class="b">5.98-6.46%</span>。2020-21年的2.5-4%低息房貸仍大量存續 — 一旦殖利率大幅下行，再融資浪潮將比歷史上任何時期來得更快、更猛。</p>
+    <div class="data-point">再融資門檻：<span class="b">50-75bp → 10-15bp（AI自動化後）</span> &nbsp;|&nbsp; 30Y房貸利率：<span class="b">6.47%</span>（YTD區間5.98-6.46%） &nbsp;|&nbsp; 凸性現狀：<span class="b">明顯轉負</span> &nbsp;|&nbsp; MBS合成拆解：<span class="b">10Y現券 + short 3Y call @105</span></div>
+    <div class="implication"><div class="label">投資啟示</div>負凸性的回歸意味著利率波動的「自我放大」機制復活 — 殖利率任何方向的急動都會被MBS對沖需求放大。<span class="b">持有MBS的投資者應主動管理凸性曝險</span>，警惕殖利率雙向急動引發的對沖踩踏。GSE擔保確保本金安全等同國債，但價格波動將顯著增加。這是<span class="b">2027年的波動主題</span>，但定價窗口在現在。</div>
+  </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- SECTION 6: MOVE INDEX -->
+<!-- ============================================================ -->
+<div class="section" id="move-vol">
+  <h2><span class="tag tag-vol">波動</span> MOVE指數與債市波動率 — 暴風雨前的寧靜</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val">~70</div><div class="lbl">MOVE指數<br>「平靜」區間（低於80）</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">115</div><div class="lbl">3月高點<br>伊朗戰爭峰值</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">+7.1%</div><div class="lbl">單日升幅<br>（6/17 Fed日後）</div></div>
+  </div>
+
+  <!-- CHART: MOVE Index -->
+  <div class="chart-container">
+    <div class="chart-title">MOVE指數走勢（2025年7月 — 2026年6月）— 波動率在「寧靜」中醞釀</div>
+    <svg viewBox="0 0 760 260" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;">
+      <!-- Grid -->
+      <rect x="60" y="20" width="680" height="200" fill="none" stroke="#2a2820" stroke-width="0.5"/>
+      <line x1="60" y1="60" x2="740" y2="60" stroke="#2a2820" stroke-width="0.5" stroke-dasharray="4"/>
+      <line x1="60" y1="100" x2="740" y2="100" stroke="#2a2820" stroke-width="0.5" stroke-dasharray="4"/>
+      <line x1="60" y1="140" x2="740" y2="140" stroke="#2a2820" stroke-width="0.5" stroke-dasharray="4"/>
+      <line x1="60" y1="180" x2="740" y2="180" stroke="#2a2820" stroke-width="0.5" stroke-dasharray="4"/>
+      <!-- Y-axis: 130 to 50 -->
+      <!-- y = 220 - (val-50)/80 * 200 -->
+      <text x="55" y="24" fill="#8a8070" font-size="10" text-anchor="end">130</text>
+      <text x="55" y="64" fill="#8a8070" font-size="10" text-anchor="end">110</text>
+      <text x="55" y="104" fill="#8a8070" font-size="10" text-anchor="end">90</text>
+      <text x="55" y="144" fill="#8a8070" font-size="10" text-anchor="end">70</text>
+      <text x="55" y="184" fill="#8a8070" font-size="10" text-anchor="end">50</text>
+      <text x="55" y="224" fill="#8a8070" font-size="10" text-anchor="end">30</text>
+      <!-- X-axis labels -->
+      <text x="60" y="242" fill="#8a8070" font-size="9">Jul 25</text>
+      <text x="117" y="242" fill="#8a8070" font-size="9">Aug</text>
+      <text x="174" y="242" fill="#8a8070" font-size="9">Sep</text>
+      <text x="231" y="242" fill="#8a8070" font-size="9">Oct</text>
+      <text x="288" y="242" fill="#8a8070" font-size="9">Nov</text>
+      <text x="345" y="242" fill="#8a8070" font-size="9">Dec</text>
+      <text x="402" y="242" fill="#8a8070" font-size="9">Jan 26</text>
+      <text x="459" y="242" fill="#8a8070" font-size="9">Feb</text>
+      <text x="516" y="242" fill="#8a8070" font-size="9">Mar</text>
+      <text x="573" y="242" fill="#8a8070" font-size="9">Apr</text>
+      <text x="630" y="242" fill="#8a8070" font-size="9">May</text>
+      <text x="700" y="242" fill="#8a8070" font-size="9">Jun</text>
+      <!-- MOVE line: Jul(85)→Aug(80)→Sep(75)→Oct(78)→Nov(82)→Dec(78)→Jan(85)→Feb(95)→Mar(115)→Apr(90)→May(80)→Jun(70) -->
+      <!-- Jul 85: y = 220-(35/80)*200 = 220-87.5 = 132.5 -->
+      <!-- Aug 80: y = 220-(30/80)*200 = 220-75 = 145 -->
+      <!-- Sep 75: y = 220-(25/80)*200 = 220-62.5 = 157.5 -->
+      <!-- Oct 78: y = 220-(28/80)*200 = 220-70 = 150 -->
+      <!-- Nov 82: y = 220-(32/80)*200 = 220-80 = 140 -->
+      <!-- Dec 78: y = 150 -->
+      <!-- Jan 85: y = 132.5 -->
+      <!-- Feb 95: y = 220-(45/80)*200 = 220-112.5 = 107.5 -->
+      <!-- Mar 115: y = 220-(65/80)*200 = 220-162.5 = 57.5 -->
+      <!-- Apr 90: y = 220-(40/80)*200 = 220-100 = 120 -->
+      <!-- May 80: y = 145 -->
+      <!-- Jun 70: y = 220-(20/80)*200 = 220-50 = 170 ; then post-Fed spike to ~70 -->
+      <polyline fill="none" stroke="#e05545" stroke-width="2.5"
+        points="60,133 117,145 174,158 231,150 288,140 345,150 402,133 459,108 516,58 573,120 630,145 680,170 700,145"/>
+      <!-- Area fill -->
+      <polygon fill="rgba(224,85,69,0.06)"
+        points="60,133 117,145 174,158 231,150 288,140 345,150 402,133 459,108 516,58 573,120 630,145 680,170 700,145 700,220 60,220"/>
+      <!-- Threshold zones -->
+      <rect x="60" y="20" width="680" height="40" fill="rgba(224,85,69,0.04)"/>
+      <text x="740" y="36" fill="#e05545" font-size="8" text-anchor="end">高波動（&gt;100）</text>
+      <!-- 80 line -->
+      <line x1="60" y1="120" x2="740" y2="120" stroke="#d49040" stroke-width="1" stroke-dasharray="4,3"/>
+      <text x="740" y="117" fill="#d49040" font-size="8" text-anchor="end">80 = 波動臨界</text>
+      <!-- Annotations -->
+      <circle cx="516" cy="58" r="5" fill="#e05545"/>
+      <text x="516" y="48" fill="#e05545" font-size="9" font-weight="700" text-anchor="middle">115 高點</text>
+      <text x="516" y="38" fill="#e05545" font-size="7" text-anchor="middle">伊朗戰爭</text>
+
+      <circle cx="680" cy="170" r="4" fill="#6bbd5b"/>
+      <text x="680" y="185" fill="#6bbd5b" font-size="8" text-anchor="middle">67 Fed日前低點</text>
+
+      <circle cx="700" cy="145" r="5" fill="#d49040"/>
+      <text x="715" y="140" fill="#d49040" font-size="9" font-weight="700">~70</text>
+      <text x="715" y="152" fill="#8a8070" font-size="7">Fed日後反彈</text>
+      <!-- Arrow showing potential breakout -->
+      <line x1="700" y1="140" x2="735" y2="110" stroke="#e05545" stroke-width="1.5" stroke-dasharray="3,2"/>
+      <text x="740" y="108" fill="#e05545" font-size="8" text-anchor="end">?</text>
+    </svg>
+    <div class="chart-source">資料來源：ICE BofAML MOVE Index, MacroMicro, TradingView | 截至2026年6月24日</div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">MOVE在70 — 暴風雨前的寧靜還是結構性平靜？</div>
+    <p>MOVE指數目前交易在<span class="b">~70</span>附近，處於「平靜」區間（低於80），但這種平靜極可能是暫時的。3月伊朗戰爭高峰時MOVE飆升至<span class="b">115</span>（中度波動），5月中因Fed預期搖擺一度升至<span class="b">86</span>，隨後又回落。6月17日Fed日前觸及低點<span class="b">67</span>，但沃什鷹派講話後<span class="b">單日跳升7.1%至約70</span>。</p>
+    <p>關鍵問題：沃什時代的MOVE「均衡水準」應該更高。三大結構性推手支持波動率上行：(1) <span class="b">前瞻指引消失</span> — Powell時代市場能提前消化政策路徑，壓制了隱含波動率；沃什拒絕提供指引，每次會議都是「活的」；(2) <span class="b">MBS負凸性回歸</span> — 利率波動的正反饋機制重新啟動；(3) <span class="b">期限溢價轉正</span> — 投資者要求更多補償，意味著久期曝險的風險感知上升。歷史上，MOVE的長期均值約<span class="b">95-100</span>。在前瞻指引缺席、通膨不確定性高企的環境下，MOVE回歸<span class="b">80-100</span>區間只是時間問題。</p>
+    <div class="data-point">MOVE現值：<span class="b">~70</span> &nbsp;|&nbsp; 3月高點：<span class="b">115</span> &nbsp;|&nbsp; 長期均值：<span class="b">95-100</span> &nbsp;|&nbsp; Fed日後單日升幅：<span class="b">+7.1%</span> &nbsp;|&nbsp; 閾值：<span class="b">&lt;80平靜、80-120中度、&gt;120高度</span></div>
+    <div class="implication"><div class="label">投資啟示</div>MOVE在70是<span class="b">做多利率波動率的絕佳入場點</span>。結構性理由充分（前瞻指引消失 + MBS負凸性 + 期限溢價），而市場定價仍反映「Powell式平靜」。工具選擇：<span class="b">做多利率期權（swaption straddle）</span>或<span class="b">做多MOVE相關結構</span>。這不是方向性交易（不需要判斷殖利率漲跌），而是押注波動率本身將均值回歸。目標MOVE：<span class="b">85-95</span>。</div>
+  </div>
 </div>
 
 <div class="divider"></div>
 
+<!-- ============================================================ -->
+<!-- RED TEAM -->
+<!-- ============================================================ -->
 <div class="red-team" id="red-team">
   <div class="red-team-title">&#128308; Red Team — 核心假設與反面論證</div>
   <ul>
-    <li>假設1：沃什主導的鷹派轉向將持續，全年不降息成立。</li>
-    <li>假設2：殖利率上行的主導力量已從地緣供給衝擊切換為 Fed 政策、且更具黏性。</li>
-    <li>假設3：AI 降低再融資門檻將顯著加深 MBS 負凸性、推升債市波動。</li>
-    <li style="color:var(--red)">風險1：沃什刻意不提交預測、避免顯露鷹派立場，部分是為應對要求降息的川普總統 — 政治壓力可能反向迫使 Fed 提前轉鴿；且沃什自己也承認，連預期加息的委員都『缺乏十足信心』。</li>
-    <li style="color:var(--red)">風險2：SEP 顯示 2027 整體 PCE 預測幾乎未動（2.3%），中位數認為油價推動的通膨屬暫時性 — 若通膨如預期回落，殖利率上行的『Fed 重定價』敘事將快速逆轉。</li>
-    <li style="color:var(--red)">風險3：MBS 負凸性轉深需以『MBS 價格上升、殖利率下行』為前提；但當前環境是殖利率上行、Fed 鷹派，凸性效應在短期未必兌現，AI 滲透再融資市場亦需時間。</li>
+    <li><strong>假設1：</strong>沃什主導的鷹派轉向將持續，全年不降息甚至可能加息，前端殖利率有上行壓力。</li>
+    <li><strong>假設2：</strong>殖利率上行的主導力量已從地緣供給衝擊切換為Fed政策重定價，具有更強黏性。</li>
+    <li><strong>假設3：</strong>AI降低再融資門檻將顯著加深MBS負凸性，MOVE指數將從70均值回歸至85-100。</li>
   </ul>
-  <p style="margin-top:10px;padding:10px 14px;background:rgba(224,85,69,0.04);border-radius:6px;font-size:0.9em;border-left:3px solid var(--red)">核心『偏空前端、警惕波動』邏輯短期成立，但屬政策驅動而非通膨基本面驅動，黏性存疑。關鍵變數有二：(1) 川普政治施壓若升級，沃什的『沉默』反而保留了快速轉鴿的彈性；(2) 若 2027 PCE 維持 2.3% 的暫時性判斷兌現，鷹派敘事將在 Q4 前瓦解。MBS 負凸性是結構性慢變量，是 2027 的波動主題而非即時交易。建議：戰術上偏空前端、戰略上以利率波動率多頭對沖雙向風險。</p>
+  <ul>
+    <li style="color:var(--red)"><strong>反駁1：</strong>沃什刻意不提交預測點、不給前瞻指引，<span class="b">部分是為應對川普總統的降息施壓</span>。他的「靜默」保留了快速轉鴿的彈性 — 若就業市場出現裂痕（5月非農僅172K，已低於趨勢），沃什可能迅速轉向而無需推翻任何公開承諾。更關鍵的是，即便預計加息的9位委員也承認「缺乏十足信心」。鷹派共識遠不如表面堅固。</li>
+    <li style="color:var(--red)"><strong>反駁2：</strong>SEP顯示<span class="b">2027年整體PCE預測幾乎未動（2.3%）</span>，中位數委員仍將當前通膨視為伊朗戰爭驅動的暫時性現象。若伊朗和談取得進展（市場已在定價）、油價回落、CPI在Q3-Q4自然基數效應下回落至3.5%以下，「Fed重定價」的殖利率上行敘事將迅速逆轉。關注6/25 PCE數據 — 若核心PCE意外下行，2Y殖利率可能回吐Fed日後全部漲幅。</li>
+    <li style="color:var(--red)"><strong>反駁3：</strong>MBS負凸性轉深需以「殖利率下行」為觸發條件（借款人才有動力再融資）。但當前環境恰恰相反 — 殖利率上行、Fed鷹派，<span class="b">30年房貸利率6.47%遠高於2020-21年的2.5-4%低息貸款</span>，再融資幾乎不可能發生。AI降低的是「邊際成本」，但當利差高達200-400bp時，10-15bp的成本節省毫無意義。負凸性是真實風險，但兌現需要一個先決條件：<span class="b">殖利率大幅下行</span>。這與假設1（殖利率上行）自相矛盾。</li>
+  </ul>
+  <p style="margin-top:10px;padding:10px 14px;background:rgba(224,85,69,0.04);border-radius:6px;font-size:0.9em;border-left:3px solid var(--red)"><strong>編輯裁定：</strong>核心邏輯「偏空前端、做多波動率」在短期（3-6個月）成立，但屬<span class="b">政策驅動而非通膨基本面驅動</span>，黏性存疑。Red Team的第三點尤其精準：MBS負凸性風險與殖利率上行假設存在邏輯張力 — <span class="b">負凸性是中期（2027年）主題而非即時交易</span>。最危險情境（機率~20%）：伊朗和平意外達成 → 油價暴跌 → CPI急回 → Fed快速降息 → 殖利率暴跌 → MBS負凸性同步爆發 → 殖利率超調。這個序列目前被市場嚴重低估。<strong>結論：戰術上偏空前端（3-6月）；戰略上做多利率波動率（6-12月），以MOVE均值回歸為核心倉位。</strong></p>
 </div>
 
+<!-- ============================================================ -->
+<!-- FUND MANAGER TAKEAWAYS -->
+<!-- ============================================================ -->
 <div class="callout" id="takeaways">
   <div class="callout-title">基金經理人重點摘要</div>
   <ul>
-    <li><strong>聯儲會：</strong>沃什鷹派時代，前瞻指引消失、點陣圖轉鷹。基準情境全年不加息也不降息。偏空美債前端，撤回年內降息押注。</li>
-    <li><strong>通膨：</strong>2026 整體 PCE 預測由 2.7% 大幅上調至 3.6%、核心 3.3%；但 2027 維持 2.3%，中位數視油價通膨為暫時性 — 緊盯油價是否打破此假設。</li>
-    <li><strong>殖利率：</strong>自 2 月戰爭以來上行逾 50bp，主導力量已從地緣供給切換為 Fed 重定價，黏性較強。做空前端勝率高於後端。</li>
-    <li><strong>股市：</strong>標普同期 +9%，AI 風險偏好抵銷 Fed 鷹派拖累；但若殖利率持續上行，高估值將承壓。</li>
-    <li><strong>債市波動：</strong>AI 將再融資門檻由 50-75bp 壓至 10-15bp，MBS 負凸性回歸，MOVE 指數有上行壓力。做多利率波動率作為尾部對沖。</li>
-    <li><strong>政治尾部：</strong>沃什不提交預測，部分為應對川普降息施壓 — 保留了快速轉鴿的彈性，鷹派敘事存在被政治逆轉的風險。</li>
+    <li><strong>Fed政策：</strong>沃什首次FOMC維持利率3.50-3.75%不變（12-0），但廢除前瞻指引、不提交預測點、成立五大任務小組。記者會12次提及「價格穩定」。Fed框架正進入「靜默革命」 — 利率波動率結構性上升。</li>
+    <li><strong>點陣圖：</strong>9/18位委員預計年內加息（6位預計50bp+），中位數從3.4%升至3.8%。PCE上調至3.6%（+90bp）、核心3.3%。但2027 PCE維持2.3% — 市場視為暫時性。9月加息機率68%。</li>
+    <li><strong>殖利率：</strong>10Y在4.50%，自2月伊朗戰爭以來+50bp。主導力量已從地緣切換為Fed政策重定價。ACM期限溢價0.67%重返正值。做空前端（2Y 4.21%→目標4.50%）確信度高於做空長端。</li>
+    <li><strong>曲線：</strong>2s10s僅+27-29bp（1月+50bp），熊平中。2Y Fed日+16bp為2008年3月以來最大。用2s10s flattener交易（空2Y+多10Y）押注加息路徑，同時限制曲線反轉損失。</li>
+    <li><strong>MBS/波動：</strong>AI將再融資門檻從50-75bp壓至10-15bp，MBS負凸性回歸。MOVE ~70處於「平靜」區，但結構性推手（前瞻指引消失+負凸性+期限溢價）支持均值回歸至85-100。做多利率波動率（swaption straddle）是核心倉位。</li>
+    <li><strong>風險管理：</strong>最大反向風險是伊朗和平+油價暴跌+CPI急回→Fed快速降息→殖利率超調+MBS負凸性同步爆發（機率~20%）。此情境下前端空頭大虧但MOVE多頭大賺 — 組合互為對沖。</li>
+    <li><strong>關鍵日期：</strong>6/25 PCE數據（沃什時代首個通膨測試）→ 7/2非農 → 7/14 CPI → 7/28-29下次FOMC。每一份數據的市場衝擊力在前瞻指引缺席下倍增。</li>
   </ul>
 </div>
 
 <div class="nav-links">
   <span><a href="newsletter_103_china.html">&larr; 前期</a></span>
-  <span><a href="student.html">返回目錄 &rarr;</a></span>
+  <span><a href="newsletter_105_semiconductor.html">後期 &rarr;</a></span>
 </div>
 
 <div class="footer">
   彭博研究摘要 | 僅供教學與討論用途 | 2026年6月24日<br>
-  資料來源：Bloomberg Intelligence, Bloomberg Economics, Bloomberg News<br>
+  資料來源：Bloomberg Intelligence, Bloomberg Economics, Federal Reserve SEP (June 17, 2026), FRED, ICE BofAML MOVE Index, NY Fed ACM Model, Freddie Mac PMMS, CNBC, MUFG<br>
   <a href="https://www.patreon.com/Aireturn">Patreon</a> · <a href="https://t.me/AIreturn">Telegram</a> · Threads @aireturn88
 </div>
 

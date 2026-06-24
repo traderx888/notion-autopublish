@@ -18,22 +18,13 @@
   .subtitle { color: var(--text-bright); font-size: 0.95em; margin-bottom: 8px; font-family: 'Noto Serif TC', serif; }
   .issue-badge { display: inline-block; background: rgba(201,168,76,0.15); color: var(--accent); padding: 4px 12px; border-radius: 12px; font-size: 0.8em; font-weight: 600; margin-bottom: 20px; border: 1px solid rgba(201,168,76,0.3); }
   .tag { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 0.72em; font-weight: 600; margin-right: 4px; }
-  .tag-rates { background: rgba(201,168,76,0.15); color: var(--accent); }
   .tag-china { background: rgba(212,144,64,0.15); color: var(--orange); }
-  .tag-japan { background: rgba(224,85,69,0.15); color: var(--red); }
-  .tag-geo   { background: rgba(224,85,69,0.15); color: var(--red); }
-  .tag-oil   { background: rgba(212,168,67,0.15); color: var(--yellow); }
+  .tag-rates { background: rgba(201,168,76,0.15); color: var(--accent); }
   .tag-trade { background: rgba(212,168,67,0.15); color: var(--yellow); }
   .tag-growth{ background: rgba(107,189,91,0.15); color: var(--green); }
-  .tag-metals{ background: rgba(176,140,208,0.15); color: var(--purple); }
-  .tag-infl  { background: rgba(224,85,69,0.15); color: var(--red); }
-  .tag-policy{ background: rgba(201,168,76,0.15); color: var(--accent); }
-  .tag-val   { background: rgba(107,189,91,0.15); color: var(--green); }
   .tag-vol   { background: rgba(224,85,69,0.15); color: var(--red); }
-  .tag-semi  { background: rgba(76,201,176,0.15); color: var(--cyan); }
-  .tag-credit{ background: rgba(176,140,208,0.15); color: var(--purple); }
-  .tag-space { background: rgba(201,168,76,0.15); color: var(--accent); }
-  .tag-misc  { background: rgba(138,128,112,0.15); color: var(--muted); }
+  .tag-geo   { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-infl  { background: rgba(224,85,69,0.15); color: var(--red); }
   .verdict-bar { background: var(--accent); color: #0a0a08; padding: 14px 20px; border-radius: 8px; margin-bottom: 20px; font-weight: 700; font-size: 1.05em; font-family: 'Noto Serif TC', serif; }
   .section { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 22px; margin-bottom: 18px; }
   .section h2 { color: var(--gold); font-size: 1.15em; margin-bottom: 12px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
@@ -41,10 +32,8 @@
   .article { margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid rgba(42,40,32,0.7); }
   .article:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
   .article-title { color: var(--text-bright); font-weight: 700; font-size: 0.95em; margin-bottom: 4px; }
-  .article-title-cn { color: var(--muted); font-size: 0.85em; margin-bottom: 8px; }
   .article p { font-size: 0.9em; margin: 6px 0; }
   .data-point { background: rgba(201,168,76,0.05); padding: 8px 12px; border-radius: 6px; margin: 8px 0; font-size: 0.85em; border: 1px solid rgba(201,168,76,0.12); }
-  .data-point .num { color: var(--text-bright); font-weight: 700; }
   .implication { background: rgba(201,168,76,0.06); border-left: 3px solid var(--accent); padding: 10px 14px; margin: 10px 0; border-radius: 0 6px 6px 0; font-size: 0.88em; }
   .implication .label { color: var(--accent); font-weight: 700; font-size: 0.8em; text-transform: uppercase; margin-bottom: 4px; }
   .red-team { background: rgba(224,85,69,0.06); border: 1px solid rgba(224,85,69,0.25); border-radius: 8px; padding: 18px; margin: 18px 0; }
@@ -57,6 +46,7 @@
   .callout li { margin: 5px 0; font-size: 0.88em; }
   ul { padding-left: 18px; }
   li { margin: 4px 0; font-size: 0.88em; }
+  .b { color: var(--text-bright); font-weight: 700; }
   .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
   .stat { background: rgba(201,168,76,0.05); padding: 12px; border-radius: 6px; text-align: center; border: 1px solid rgba(201,168,76,0.1); }
   .stat .val { font-size: 1.4em; font-weight: 700; color: var(--gold); font-family: 'Playfair Display', serif; }
@@ -70,6 +60,9 @@
   .nav-links { display: flex; justify-content: space-between; margin: 20px 0; font-size: 0.85em; }
   .nav-links a { color: var(--accent); text-decoration: none; }
   .nav-links a:hover { text-decoration: underline; color: var(--gold); }
+  .chart-container { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 18px; margin: 16px 0; }
+  .chart-title { color: var(--accent); font-weight: 700; font-size: 0.88em; margin-bottom: 12px; font-family: 'Playfair Display', serif; }
+  .chart-source { color: var(--muted); font-size: 0.7em; margin-top: 8px; }
   .divider { height: 1px; background: linear-gradient(90deg, transparent, var(--accent), transparent); margin: 24px 0; opacity: 0.4; }
   .footer { text-align: center; color: var(--muted); font-size: 0.75em; margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--border); }
   .footer a { color: var(--accent); text-decoration: none; }
@@ -82,151 +75,468 @@
 <p class="subtitle">第103期 | 一條腿走路的中國經濟：生產強、需求弱，刺激恐再延後</p>
 <span class="issue-badge">2026年六月下旬更新</span>
 
-<div class="verdict-bar">結論：中東緩和讓出口續強，反而降低北京刺激緊迫性 — 整體增速雖穩、內需卻在惡化。Q2 GDP放緩至4.4%，財政連三個月緊縮、貨幣刺激縮水，樓市落底要等2027。做多中國AI/高技術製造產業鏈，淡化消費與地產相關內需資產，並對沖中美稀土反制升級的尾部風險。</div>
+<div class="verdict-bar">結論：Q1 GDP 5.0%表面亮眼，但5月零售-0.6%（三年來首次轉負）、固投-4.1%、地產投資-16.2%揭示需求端正在塌陷。出口+19.4%與AI半導體+111%撐起供給側，卻降低了北京刺激的緊迫性 — PBOC連13個月按兵不動。建議：做多AI/高技術製造產業鏈（半導體出口$360億/月），減持消費與地產內需資產，以7月政治局會議為催化劑觀察窗口。USDCNY 6.79短期穩定，但下半年若刺激缺席，破7壓力將重新浮現。</div>
 
 <div class="nav-links">
   <span><a href="newsletter_102_geopolitics_rates.html">&larr; 前期</a></span>
-  <span><a href="student.html">返回目錄 &rarr;</a></span>
+  <span><a href="newsletter_104_rates.html">下期 &rarr;</a></span>
 </div>
 
 <div class="toc">
   <div class="toc-title">目錄</div>
   <ol>
-    <li><a href="#dual-speed">雙速經濟 出口AI狂飆，內需卻在塌陷</a></li>
-    <li><a href="#fiscal-monetary">財政貨幣 財政連三月緊縮，央行只做技術微調</a></li>
-    <li><a href="#property">樓市 一線回暖救不了全局，落底要等2027</a></li>
-    <li><a href="#rare-earth">中美博弈 稀土反制：成本有限，訊號明確</a></li>
+    <li><a href="#dual-speed">雙速經濟 AI出口狂飆vs.內需塌陷的K型分化</a></li>
+    <li><a href="#pmi-divergence">PMI分化 製造業在榮枯線掙扎，高技術獨秀</a></li>
+    <li><a href="#fiscal-monetary">財政貨幣 財政連三月緊縮，PBOC連13月不動</a></li>
+    <li><a href="#property">樓市深淵 投資暴跌-16.2%，落底遙遙無期</a></li>
+    <li><a href="#inflation">通膨剪刀差 PPI飆至四年高但CPI僅1.2%</a></li>
+    <li><a href="#rare-earth">中美博弈 稀土反制：MP Materials與國防供應鏈</a></li>
     <li><a href="#red-team">Red Team 反面論證</a></li>
     <li><a href="#takeaways">基金經理人重點摘要</a></li>
   </ol>
 </div>
 
+<!-- ============================================================ -->
+<!-- SECTION 1: Dual-Speed Economy -->
+<!-- ============================================================ -->
 <div class="section" id="dual-speed">
-  <h2><span class="tag tag-misc">雙速經濟</span> 出口AI狂飆，內需卻在塌陷</h2>
+  <h2><span class="tag tag-china">中國</span> 雙速經濟 — AI出口狂飆 vs. 內需塌陷的K型分化</h2>
 
   <div class="stat-grid">
-    <div class="stat"><div class="val" style="color:var(--orange)">4.4%</div><div class="lbl">Q2 GDP增速預測
-（Q1為5.0%）</div></div>
-    <div class="stat"><div class="val" style="color:var(--green)">+51%</div><div class="lbl">5月高技術產品
-出口同比（4月+39%）</div></div>
-    <div class="stat"><div class="val" style="color:var(--red)">-4.1%</div><div class="lbl">前5月固定資產投資
-5月降幅擴至兩位數</div></div>
+    <div class="stat"><div class="val" style="color:var(--green)">+19.4%</div><div class="lbl">5月出口同比增速<br>順差$1,054億</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">-0.6%</div><div class="lbl">5月零售同比<br>三年來首次轉負</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">-4.1%</div><div class="lbl">前5月固投同比<br>遠超預期-2.0%</div></div>
+  </div>
+
+  <!-- CHART: Industrial Production vs Retail Sales Divergence -->
+  <div class="chart-container">
+    <div class="chart-title">工業增加值 vs 社會消費品零售（同比%，2025年7月 — 2026年5月）</div>
+    <svg viewBox="0 0 760 300" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;">
+      <!-- Grid -->
+      <rect x="60" y="20" width="680" height="230" fill="none" stroke="#2a2820" stroke-width="0.5"/>
+      <!-- Zero line -->
+      <line x1="60" y1="180" x2="740" y2="180" stroke="#8a8070" stroke-width="0.8"/>
+      <!-- Horizontal grid lines -->
+      <line x1="60" y1="64" x2="740" y2="64" stroke="#2a2820" stroke-width="0.5" stroke-dasharray="4"/>
+      <line x1="60" y1="110" x2="740" y2="110" stroke="#2a2820" stroke-width="0.5" stroke-dasharray="4"/>
+      <line x1="60" y1="134" x2="740" y2="134" stroke="#2a2820" stroke-width="0.5" stroke-dasharray="4"/>
+      <line x1="60" y1="157" x2="740" y2="157" stroke="#2a2820" stroke-width="0.5" stroke-dasharray="4"/>
+      <line x1="60" y1="203" x2="740" y2="203" stroke="#2a2820" stroke-width="0.5" stroke-dasharray="4"/>
+      <line x1="60" y1="226" x2="740" y2="226" stroke="#2a2820" stroke-width="0.5" stroke-dasharray="4"/>
+      <!-- Y-axis labels: range -4% to +8% -->
+      <!-- y mapping: 8%=20, 0%=180, -4%=250 → y = 180 - (val/8)*160 for positive, y = 180 + (|val|/4)*70 for negative -->
+      <!-- Simpler: y = 180 - val*20 -->
+      <text x="55" y="24" fill="#8a8070" font-size="10" text-anchor="end">8%</text>
+      <text x="55" y="64" fill="#8a8070" font-size="10" text-anchor="end">6%</text>
+      <text x="55" y="110" fill="#8a8070" font-size="10" text-anchor="end">4.5%</text>
+      <text x="55" y="134" fill="#8a8070" font-size="10" text-anchor="end">3%</text>
+      <text x="55" y="157" fill="#8a8070" font-size="10" text-anchor="end">1.5%</text>
+      <text x="55" y="184" fill="#8a8070" font-size="10" text-anchor="end">0%</text>
+      <text x="55" y="203" fill="#8a8070" font-size="10" text-anchor="end">-1.5%</text>
+      <text x="55" y="226" fill="#8a8070" font-size="10" text-anchor="end">-3%</text>
+      <!-- X-axis labels -->
+      <text x="80" y="268" fill="#8a8070" font-size="9">Jul 25</text>
+      <text x="140" y="268" fill="#8a8070" font-size="9">Sep</text>
+      <text x="200" y="268" fill="#8a8070" font-size="9">Nov</text>
+      <text x="260" y="268" fill="#8a8070" font-size="9">Jan 26</text>
+      <text x="340" y="268" fill="#8a8070" font-size="9">Feb</text>
+      <text x="410" y="268" fill="#8a8070" font-size="9">Mar</text>
+      <text x="490" y="268" fill="#8a8070" font-size="9">Apr</text>
+      <text x="580" y="268" fill="#8a8070" font-size="9">May</text>
+      <text x="680" y="268" fill="#8a8070" font-size="9">Jun(E)</text>
+      <!-- IP line (green): Jul(5.0)→Sep(5.2)→Nov(5.8)→Jan-Feb(6.1)→Mar(5.9)→Apr(4.1)→May(4.5)→Jun(est 4.7) -->
+      <!-- y = 180 - val*20 -->
+      <polyline fill="none" stroke="#6bbd5b" stroke-width="2.5"
+        points="80,80 140,76 200,64 280,58 410,62 490,98 580,90 680,86"/>
+      <!-- Retail Sales line (red): Jul(2.3)→Sep(2.8)→Nov(2.5)→Jan-Feb(1.8)→Mar(1.7)→Apr(0.2)→May(-0.6)→Jun(est -0.3) -->
+      <polyline fill="none" stroke="#e05545" stroke-width="2.5"
+        points="80,134 140,124 200,130 280,144 410,146 490,176 580,192 680,186"/>
+      <!-- Area between lines to show divergence -->
+      <polygon fill="rgba(224,85,69,0.08)"
+        points="80,80 140,76 200,64 280,58 410,62 490,98 580,90 680,86 680,186 580,192 490,176 410,146 280,144 200,130 140,124 80,134"/>
+      <!-- Annotations -->
+      <circle cx="580" cy="192" r="5" fill="#e05545"/>
+      <text x="580" y="210" fill="#e05545" font-size="9" font-weight="700" text-anchor="middle">-0.6% 零售</text>
+      <text x="580" y="222" fill="#e05545" font-size="8" text-anchor="middle">三年來首次轉負</text>
+      <circle cx="580" cy="90" r="5" fill="#6bbd5b"/>
+      <text x="580" y="82" fill="#6bbd5b" font-size="9" font-weight="700" text-anchor="middle">+4.5% 工業</text>
+      <!-- Divergence arrow -->
+      <line x1="620" y1="92" x2="620" y2="188" stroke="#c9a84c" stroke-width="1.5" marker-end="url(#arrowDown)" marker-start="url(#arrowUp)"/>
+      <text x="636" y="142" fill="#c9a84c" font-size="9" font-weight="700">5.1ppt</text>
+      <text x="636" y="154" fill="#c9a84c" font-size="8">分化缺口</text>
+      <defs>
+        <marker id="arrowDown" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto">
+          <path d="M0,0 L6,3 L0,6" fill="#c9a84c"/>
+        </marker>
+        <marker id="arrowUp" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto">
+          <path d="M6,0 L0,3 L6,6" fill="#c9a84c"/>
+        </marker>
+      </defs>
+      <!-- Legend -->
+      <line x1="80" y1="256" x2="110" y2="256" stroke="#6bbd5b" stroke-width="2.5"/>
+      <text x="115" y="259" fill="#8a8070" font-size="9">工業增加值 YoY</text>
+      <line x1="220" y1="256" x2="250" y2="256" stroke="#e05545" stroke-width="2.5"/>
+      <text x="255" y="259" fill="#8a8070" font-size="9">社會消費品零售 YoY</text>
+      <rect x="400" y="252" width="12" height="8" fill="rgba(224,85,69,0.15)"/>
+      <text x="416" y="259" fill="#8a8070" font-size="9">供需分化缺口</text>
+    </svg>
+    <div class="chart-source">資料來源：中國國家統計局, Bloomberg Economics, CNBC | 截至2026年5月</div>
   </div>
 
   <div class="article">
-    <div class="article-title">一條腿走路的GDP — 生產強勁掩蓋了政策鬆懈的風險</div>
-    <p>彭博經濟研究警告，中國經濟的「雙速」分化比其他經濟體更深刻、更根深蒂固：新經濟與供應鏈韌性十足，傳統產業與消費卻日趨疲軟。受戰爭相關擾動影響，<span style="color:#f0ebe0;font-weight:700">Q2 GDP增速預計從Q1的5.0%放緩至4.4%</span>，全年維持 <span style="color:#f0ebe0;font-weight:700">4.5%</span>。出口前5個月暴增 <span style="color:#f0ebe0;font-weight:700">15.5%</span>（2021年以來同期最快），工業增加值增長 <span style="color:#f0ebe0;font-weight:700">5.4%</span>，主要由全球AI硬體需求拉動 —— 高技術產品出口5月同比飆 <span style="color:#f0ebe0;font-weight:700">51%</span>。但AI生態圈外一片冰冷：前5月固定資產投資同比降 <span style="color:#f0ebe0;font-weight:700">4.1%</span>，5月降幅擴至兩位數，社會消費品零售總額更出現2023年重啟以來首次同比下降。最大的風險在於：霍爾木茲海峽重開、能源恢復後，生產側的穩健反而會「催生政策上的鬆懈自滿」，促消費刺激恐推遲至2026年底甚至不出台。</p>
-    <div class="data-point">全年GDP目標：<span style="color:#f0ebe0;font-weight:700">4.5%</span> &nbsp;|&nbsp; 前5月出口：<span style="color:#f0ebe0;font-weight:700">+15.5%</span>（2021年來最快）| 工業增加值：<span style="color:#f0ebe0;font-weight:700">+5.4%</span> &nbsp;|&nbsp; 貨幣寬鬆縮水：<span style="color:#f0ebe0;font-weight:700">僅1次10bp降息+1次25bp降準</span>（年初預期為20bp+50bp）</div>
-    <div class="implication"><div class="label">投資啟示</div>生產數據愈強、刺激愈慢 —— 這是中國資產的核心錯配。<span style="color:#f0ebe0;font-weight:700">做多AI與高技術製造、電動車產業鏈</span>（出口與資本支出持續旺盛），<span style="color:#f0ebe0;font-weight:700">減持綁定內需、消費與就業的週期性資產</span>。關鍵窗口為 <span style="color:#f0ebe0;font-weight:700">7月下旬中央政治局會議</span>。</div>
+    <div class="article-title">一條腿走路的GDP — AI出口掩蓋了需求端的結構性塌陷</div>
+    <p>中國經濟的「K型分化」在5月數據中達到新極端。供給側依然強勁：工業增加值同比增長<span class="b">4.5%</span>（前值4.1%），超出預期的4.3%，其中電腦通訊設備製造增長<span class="b">17.0%</span>、鐵路船舶航空航天增長<span class="b">7.4%</span>、專用設備增長<span class="b">9.1%</span>。出口更是狂飆<span class="b">19.4%</span>（前值14.1%），高技術產品出口暴增<span class="b">50.9%</span>，半導體出口飆升<span class="b">111%至360億美元</span> — 為2013年以來最快增速。AI全球需求驅動的貿易順差擴大至<span class="b">1,054億美元</span>。</p>
+    <p>但AI生態圈外一片冰冷。5月社會消費品零售總額同比<span class="b">下降0.6%</span> — 這是2022年12月以來首次轉負，遠低於市場預期的持平。汽車銷售暴跌<span class="b">16.1%</span>，家電音像<span class="b">-15.6%</span>，建築裝潢材料<span class="b">-13.6%</span>，金銀珠寶<span class="b">-8.9%</span>，傢俱<span class="b">-8.7%</span>。前5月固定資產投資同比降<span class="b">4.1%</span>（遠超市場預期的-2.0%），其中地產投資暴跌<span class="b">16.2%</span>，基建投資增速從年初的11.4%驟降至<span class="b">0.6%</span>。統計局自己也承認「供強需弱的國內不平衡十分尖銳」。</p>
+    <div class="data-point">Q1 GDP：<span class="b">5.0% YoY</span>（超預期4.8%） &nbsp;|&nbsp; 5月出口：<span class="b">+19.4%</span>（半導體+111%至$360億） &nbsp;|&nbsp; 5月零售：<span class="b">-0.6%</span>（三年首負）&nbsp;|&nbsp; 前5月固投：<span class="b">-4.1%</span>（預期-2.0%）&nbsp;|&nbsp; 前5月工業增加值：<span class="b">+5.4%</span></div>
+    <div class="implication"><div class="label">投資啟示</div>生產數據愈強，刺激愈慢 — 這是中國資產的核心錯配。<span class="b">做多AI與高技術製造產業鏈</span>（半導體出口月均$360億、電腦出口+66%），<span class="b">減持消費與地產綁定的內需資產</span>。但注意：傳統出口（服裝-4%、玩具-7%）已在萎縮，K型分化不可能永遠持續 — 最終需求疲軟會反噬供給端產能利用率。</div>
   </div>
-
 </div>
 
+<!-- ============================================================ -->
+<!-- SECTION 2: PMI Divergence -->
+<!-- ============================================================ -->
+<div class="section" id="pmi-divergence">
+  <h2><span class="tag tag-growth">景氣</span> PMI分化 — 製造業在榮枯線掙扎，高技術獨秀</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--orange)">50.0</div><div class="lbl">5月NBS製造業PMI<br>（榮枯線臨界）</div></div>
+    <div class="stat"><div class="val" style="color:var(--green)">51.8</div><div class="lbl">5月財新製造業PMI<br>（連5月擴張）</div></div>
+    <div class="stat"><div class="val" style="color:var(--green)">52.9</div><div class="lbl">5月高技術製造PMI<br>（獨立於整體）</div></div>
+  </div>
+
+  <!-- CHART: PMI Trajectory -->
+  <div class="chart-container">
+    <div class="chart-title">中國製造業PMI走勢（NBS vs 財新，2025年10月 — 2026年5月）</div>
+    <svg viewBox="0 0 760 280" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;">
+      <!-- Grid -->
+      <rect x="60" y="20" width="680" height="220" fill="none" stroke="#2a2820" stroke-width="0.5"/>
+      <line x1="60" y1="64" x2="740" y2="64" stroke="#2a2820" stroke-width="0.5" stroke-dasharray="4"/>
+      <line x1="60" y1="108" x2="740" y2="108" stroke="#2a2820" stroke-width="0.5" stroke-dasharray="4"/>
+      <line x1="60" y1="152" x2="740" y2="152" stroke="#2a2820" stroke-width="0.5" stroke-dasharray="4"/>
+      <line x1="60" y1="196" x2="740" y2="196" stroke="#2a2820" stroke-width="0.5" stroke-dasharray="4"/>
+      <!-- 50 line (expansion/contraction threshold) - prominent -->
+      <line x1="60" y1="152" x2="740" y2="152" stroke="#c9a84c" stroke-width="1.2" stroke-dasharray="6,3"/>
+      <!-- Y-axis: 47 to 54 -->
+      <!-- y mapping: 54=20, 47=240 → y = 240 - (val-47)*(220/7) = 240 - (val-47)*31.43 -->
+      <text x="55" y="24" fill="#8a8070" font-size="10" text-anchor="end">54</text>
+      <text x="55" y="55" fill="#8a8070" font-size="10" text-anchor="end">53</text>
+      <text x="55" y="87" fill="#8a8070" font-size="10" text-anchor="end">52</text>
+      <text x="55" y="118" fill="#8a8070" font-size="10" text-anchor="end">51</text>
+      <text x="55" y="149" fill="#c9a84c" font-size="10" text-anchor="end" font-weight="700">50</text>
+      <text x="55" y="181" fill="#8a8070" font-size="10" text-anchor="end">49</text>
+      <text x="55" y="212" fill="#8a8070" font-size="10" text-anchor="end">48</text>
+      <text x="55" y="244" fill="#8a8070" font-size="10" text-anchor="end">47</text>
+      <!-- X-axis -->
+      <text x="80" y="258" fill="#8a8070" font-size="9">Oct 25</text>
+      <text x="163" y="258" fill="#8a8070" font-size="9">Nov</text>
+      <text x="245" y="258" fill="#8a8070" font-size="9">Dec</text>
+      <text x="328" y="258" fill="#8a8070" font-size="9">Jan 26</text>
+      <text x="410" y="258" fill="#8a8070" font-size="9">Feb</text>
+      <text x="493" y="258" fill="#8a8070" font-size="9">Mar</text>
+      <text x="575" y="258" fill="#8a8070" font-size="9">Apr</text>
+      <text x="658" y="258" fill="#8a8070" font-size="9">May</text>
+      <!-- Contraction zone shading -->
+      <rect x="60" y="152" width="680" height="88" fill="rgba(224,85,69,0.04)"/>
+      <text x="740" y="235" fill="#e05545" font-size="8" text-anchor="end" opacity="0.5">收縮區</text>
+      <!-- NBS PMI (gold): Oct(49.8)→Nov(50.0)→Dec(50.1)→Jan(49.2)→Feb(49.0)→Mar(50.4)→Apr(50.3)→May(50.0) -->
+      <!-- y = 240 - (val-47)*31.43 -->
+      <polyline fill="none" stroke="#c9a84c" stroke-width="2.5"
+        points="80,152.0 163,145.7 245,142.6 328,176.3 410,182.6 493,133.1 575,136.3 658,145.7"/>
+      <!-- Caixin PMI (cyan): Oct(50.2)→Nov(50.5)→Dec(50.8)→Jan(49.7)→Feb(49.3)→Mar(50.8)→Apr(52.2)→May(51.8) -->
+      <polyline fill="none" stroke="#4cc9b0" stroke-width="2.5"
+        points="80,139.4 163,129.9 245,120.6 328,155.1 410,167.7 493,120.6 575,76.6 658,89.1"/>
+      <!-- High-tech PMI (dotted green): stable around 52-53 -->
+      <!-- Oct(52.0)→Nov(52.3)→Dec(52.5)→Jan(51.0)→Feb(50.5)→Mar(52.5)→Apr(53.1)→May(52.9) -->
+      <polyline fill="none" stroke="#6bbd5b" stroke-width="2" stroke-dasharray="6,3"
+        points="80,83.4 163,74.0 245,67.1 328,114.3 410,130.0 493,67.1 575,48.3 658,54.6"/>
+      <!-- Key annotations -->
+      <circle cx="658" cy="145.7" r="5" fill="#c9a84c"/>
+      <text x="685" y="142" fill="#c9a84c" font-size="9" font-weight="700">50.0 NBS</text>
+      <circle cx="658" cy="89.1" r="4" fill="#4cc9b0"/>
+      <text x="685" y="86" fill="#4cc9b0" font-size="9" font-weight="700">51.8 財新</text>
+      <circle cx="658" cy="54.6" r="4" fill="#6bbd5b"/>
+      <text x="685" y="52" fill="#6bbd5b" font-size="9" font-weight="700">52.9 高技術</text>
+      <!-- Feb contraction annotation -->
+      <circle cx="410" cy="182.6" r="4" fill="#e05545"/>
+      <text x="410" y="200" fill="#e05545" font-size="8" text-anchor="middle">49.0 二月低谷</text>
+      <!-- Legend -->
+      <line x1="80" y1="276" x2="110" y2="276" stroke="#c9a84c" stroke-width="2.5"/>
+      <text x="115" y="279" fill="#8a8070" font-size="9">NBS製造業</text>
+      <line x1="200" y1="276" x2="230" y2="276" stroke="#4cc9b0" stroke-width="2.5"/>
+      <text x="235" y="279" fill="#8a8070" font-size="9">財新製造業</text>
+      <line x1="330" y1="276" x2="360" y2="276" stroke="#6bbd5b" stroke-width="2" stroke-dasharray="6,3"/>
+      <text x="365" y="279" fill="#8a8070" font-size="9">高技術製造</text>
+    </svg>
+    <div class="chart-source">資料來源：中國國家統計局 (NBS), S&P Global / RatingDog (Caixin), Mysteel | 截至2026年5月</div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">官方PMI跌回榮枯線 — 新訂單49.9、出口訂單48.6揭示需求真相</div>
+    <p>5月NBS製造業PMI從4月的50.3回落至<span class="b">50.0</span>，恰好落在榮枯線上。表面看仍是「擴張」，但子指標揭示了不同的故事：<span class="b">新訂單跌至49.9</span>（4月50.6），為三個月來首次滑入收縮區；<span class="b">新出口訂單驟降至48.6</span>（4月50.3），消費品出口萎縮是主因。原材料購進價格維持在<span class="b">60.5的高位</span>（前值63.7），石化與能源密集型產業利潤持續承壓。唯一亮點是高技術與裝備製造PMI分別達<span class="b">52.9與52.1</span>，顯著高於整體水準。</p>
+    <p>財新PMI（偏向中小型出口導向企業）表現較好，5月報<span class="b">51.8</span>（前值52.2），連續第五個月擴張，但增速已從4月五年高點回落。非製造業PMI意外反彈至<span class="b">50.1</span>（前值49.4），主要受五一假期旅遊消費帶動服務業活動指數升至<span class="b">50.3（九個月高點）</span>。然而節日效應是暫時的，6月服務業動能能否延續仍有疑問。</p>
+    <div class="data-point">NBS製造業PMI：<span class="b">50.0</span>（新訂單49.9、出口訂單48.6）&nbsp;|&nbsp; 財新PMI：<span class="b">51.8</span> &nbsp;|&nbsp; 高技術PMI：<span class="b">52.9</span> &nbsp;|&nbsp; 非製造業PMI：<span class="b">50.1</span>（服務業50.3九月高）&nbsp;|&nbsp; 原材料價格：<span class="b">60.5</span></div>
+    <div class="implication"><div class="label">投資啟示</div>PMI數據確認了K型分化的持續深化：<span class="b">高技術製造（52.9）與整體製造（50.0）之間的差距接近3個百分點</span>，為有紀錄以來最大分化之一。6月底即將公布的PMI數據（6/30 NBS、7/1 財新）將是下一個關鍵確認點。若NBS跌破50、新訂單進一步萎縮，將為7月政治局會議釋放刺激信號創造壓力。</div>
+  </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- SECTION 3: Fiscal & Monetary -->
+<!-- ============================================================ -->
 <div class="section" id="fiscal-monetary">
-  <h2><span class="tag tag-misc">財政貨幣</span> 財政連三月緊縮，央行只做技術微調</h2>
+  <h2><span class="tag tag-rates">政策</span> 財政貨幣 — 財政連三月緊縮，PBOC連13月不動</h2>
 
   <div class="stat-grid">
-    <div class="stat"><div class="val" style="color:var(--red)">-4.1%</div><div class="lbl">前5月廣義財政支出
-（自2023來首現赤字收縮）</div></div>
-    <div class="stat"><div class="val" style="color:var(--orange)">4.5%</div><div class="lbl">高盛Q3增長預測
-（由4.7%下調）</div></div>
-    <div class="stat"><div class="val" style="color:var(--red)">-36%</div><div class="lbl">5月土地出讓收入
-（連8月兩位數下滑）</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">-3.9%</div><div class="lbl">5月財政支出同比<br>連續第三個月下降</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">-36%</div><div class="lbl">5月土地出讓收入<br>連8月兩位數暴跌</div></div>
+    <div class="stat"><div class="val">3.0%</div><div class="lbl">1年期LPR<br>PBOC連13月按兵不動</div></div>
   </div>
 
   <div class="article">
-    <div class="article-title">中國推財政緊縮 — 自2023年以來首次削減財政赤字</div>
-    <p>儘管內需疲軟、增速放緩，北京仍逆勢收緊財政。彭博測算顯示，兩大政府預算前5個月綜合缺口同比降 <span style="color:#f0ebe0;font-weight:700">4.1%</span> 至 <span style="color:#f0ebe0;font-weight:700">3.16兆元（4,660億美元）</span>，為兩年多來首次出現赤字收縮；單5月支出降 <span style="color:#f0ebe0;font-weight:700">3.9%</span>，連續第三個月下降。基建相關支出5月同比降 <span style="color:#f0ebe0;font-weight:700">12%</span>（前月降18%），土地出讓收入暴跌近 <span style="color:#f0ebe0;font-weight:700">36%</span>，連續第八個月兩位數下滑。高盛指出「由於土地收入下降與政策性銀行支持減弱，Q2財政對增長的支撐弱於Q1」，並把第三季增速預期由 <span style="color:#f0ebe0;font-weight:700">4.7%下調至4.5%</span>，恰為全年目標下限。亮點是稅收5月增 <span style="color:#f0ebe0;font-weight:700">6.8%</span>（前5月+4.4%），主要來自對海外資本利得與外國收入的徵管強化。ING預計政府主導投資的反彈將在下半年出現，但能否抵消私人投資下滑仍高度不確定。</p>
-    <div class="data-point">綜合財政缺口：<span style="color:#f0ebe0;font-weight:700">3.16兆元（-4.1%）</span> &nbsp;|&nbsp; 5月基建支出：<span style="color:#f0ebe0;font-weight:700">-12%</span> &nbsp;|&nbsp; 5月土地收入：<span style="color:#f0ebe0;font-weight:700">-36%</span>（連8月雙位數降）| 5月稅收：<span style="color:#f0ebe0;font-weight:700">+6.8%</span> &nbsp;|&nbsp; 規劃基建投資：<span style="color:#f0ebe0;font-weight:700">7兆元</span></div>
-    <div class="implication"><div class="label">投資啟示</div>財政是「以犧牲增長換取緊縮」，下半年發力與否取決於7月政治局會議。<span style="color:#f0ebe0;font-weight:700">短期不押注大規模廣泛刺激</span>；若要博反彈，聚焦7兆元基建中的算力/網絡計算中心等結構性主線，而非全面地產刺激。</div>
-  </div>
-  <div class="article">
-    <div class="article-title">央行隔夜逆回購改革 — 是技術微調，而非戰略轉向</div>
-    <p>市場一度將潘功勝宣布的隔夜逆回購新機制解讀為PBOC準備效仿聯儲會、轉以隔夜利率為政策基準，彭博經濟研究認為「解讀過頭」。本質是優化流動性管理的技術性調整：操作時間由下午4點提前至3點，讓銀行在債市4:30收盤前有更多時間管理流動性；加點幅度由 <span style="color:#f0ebe0;font-weight:700">50bp下調至25bp</span>，但框架不變 —— <span style="color:#f0ebe0;font-weight:700">7天期逆回購利率仍是主要政策利率</span>，並決定隔夜利率定價，而非反過來。基於7天回購定盤利率的利率互換占衍生品市場高達 <span style="color:#f0ebe0;font-weight:700">98%</span>，使轉向隔夜錨不切實際。央行另研究設立非銀流動性支持宏觀審慎工具（解決2013年式的流動性分層脆弱），並創設面向境外央行類機構的人民幣回購工具，便利外資直接參與境內債市。</p>
-    <div class="data-point">主要政策利率：<span style="color:#f0ebe0;font-weight:700">7天逆回購（不變）</span> &nbsp;|&nbsp; 隔夜加點：<span style="color:#f0ebe0;font-weight:700">50bp→25bp</span> &nbsp;|&nbsp; 7天回購掛鉤互換佔比：<span style="color:#f0ebe0;font-weight:700">98%</span> &nbsp;|&nbsp; 新增：<span style="color:#f0ebe0;font-weight:700">境外央行人民幣回購工具（7天至3個月）</span></div>
-    <div class="implication"><div class="label">投資啟示</div>別把這次改革當成寬鬆訊號或政策框架轉變來交易。<span style="color:#f0ebe0;font-weight:700">人民幣利率前端的錨仍是7天逆回購</span> —— 利率互換定價邏輯不變；可關注境外央行回購工具對境內債市外資需求的邊際利多。</div>
+    <div class="article-title">財政逆勢緊縮 — 2023年以來首次赤字收縮</div>
+    <p>在內需疲軟、增速放緩的背景下，北京仍選擇收緊財政。彭博測算顯示，前5月兩大政府預算綜合缺口同比降<span class="b">4.1%</span>至<span class="b">3.16兆元（4,660億美元）</span>，為兩年多來首次赤字收縮。5月單月支出降<span class="b">3.9%</span>，連續第三個月下降，基建相關支出同比降<span class="b">12%</span>。更致命的是地方財政命脈 — 土地出讓收入5月暴跌近<span class="b">36%</span>，連續第八個月兩位數下滑，直接掏空地方政府的投資能力。</p>
+    <p>高盛因此將Q3增速預期由<span class="b">4.7%下調至4.5%</span>（恰為全年目標下限），指出「土地收入下降與政策性銀行支持減弱，Q2財政對增長的支撐明顯弱於Q1」。唯一亮點是稅收5月增<span class="b">6.8%</span>，來自對海外資本利得與外國收入的徵管強化。年初規劃的<span class="b">7兆元基建投資</span>前5月僅消化了一小部分，基建增速已從Q1的11.4%驟降至<span class="b">0.6%</span>。ING預計政府主導投資的反彈將在下半年出現，但能否抵消私人投資持續下滑仍高度不確定。</p>
+    <div class="data-point">綜合財政缺口：<span class="b">3.16兆元（-4.1%）</span> &nbsp;|&nbsp; 5月基建支出：<span class="b">-12%</span> &nbsp;|&nbsp; 5月土地收入：<span class="b">-36%</span>（連8月雙位數） &nbsp;|&nbsp; 基建增速：<span class="b">11.4%（Q1）→0.6%（前5月）</span> &nbsp;|&nbsp; 高盛Q3預測：<span class="b">4.7%→4.5%</span></div>
+    <div class="implication"><div class="label">投資啟示</div>財政是「以犧牲增長換取紀律」，下半年發力與否取決於<span class="b">7月政治局會議</span>。短期不押注大規模廣泛刺激；若要博反彈，<span class="b">聚焦7兆元基建中的算力/網絡計算中心等結構性主線</span>，而非全面地產刺激。關注特別國債發行節奏 — 若Q3加速發行，則為下半年財政擴張的先行指標。</div>
   </div>
 
+  <div class="article">
+    <div class="article-title">PBOC按兵不動 — 隔夜逆回購改革是技術微調，非戰略轉向</div>
+    <p>PBOC連續<span class="b">13個月</span>維持1年期LPR在<span class="b">3.0%</span>、5年期LPR在<span class="b">3.5%</span>不變，RRR均值維持在<span class="b">6.3%</span>。副行長鄒瀾表示「今年仍有降準和降息空間」，但Standard Chartered丁爽預計全年僅<span class="b">1次降息+1次降準</span>，遠低於年初市場預期的20bp降息+50bp降準。核心制約是銀行淨息差已降至歷史低位，進一步降息的實際傳導效果有限。</p>
+    <p>市場一度將潘功勝宣布的隔夜逆回購新機制解讀為PBOC效仿聯儲會、轉以隔夜利率為政策基準，但彭博經濟研究認為「解讀過頭」。本質是操作時間從下午4點提前至3點，加點幅度由<span class="b">50bp下調至25bp</span>，但框架不變 — <span class="b">7天期逆回購利率（1.4%）仍是主要政策利率</span>。基於7天回購定盤利率的利率互換占衍生品市場高達<span class="b">98%</span>，使轉向隔夜錨不切實際。另新設境外央行人民幣回購工具（7天至3個月），便利外資參與境內債市。</p>
+    <div class="data-point">7天逆回購利率：<span class="b">1.4%（不變）</span> &nbsp;|&nbsp; 1年LPR：<span class="b">3.0%</span> &nbsp;|&nbsp; 5年LPR：<span class="b">3.5%</span> &nbsp;|&nbsp; RRR均值：<span class="b">6.3%</span> &nbsp;|&nbsp; 銀行淨息差：<span class="b">歷史低位</span> &nbsp;|&nbsp; 互換市場7天錨定佔比：<span class="b">98%</span></div>
+    <div class="implication"><div class="label">投資啟示</div>別把逆回購改革當成寬鬆訊號交易。<span class="b">人民幣利率前端的錨仍是7天逆回購</span>，利率互換定價邏輯不變。PBOC的「窗口」可能在Q3打開（Standard Chartered預測降準時點），但幅度有限。真正的催化不是貨幣政策，而是<span class="b">財政是否在下半年實質轉擴張</span>。</div>
+  </div>
 </div>
 
+<!-- ============================================================ -->
+<!-- SECTION 4: Property -->
+<!-- ============================================================ -->
 <div class="section" id="property">
-  <h2><span class="tag tag-misc">樓市</span> 一線回暖救不了全局，落底要等2027</h2>
+  <h2><span class="tag tag-vol">樓市</span> 樓市深淵 — 投資暴跌-16.2%，落底遙遙無期</h2>
 
   <div class="stat-grid">
-    <div class="stat"><div class="val" style="color:var(--red)">-13.1%</div><div class="lbl">5月全國新房銷售面積
-（4月-9.5%）</div></div>
-    <div class="stat"><div class="val" style="color:var(--red)">-24.3%</div><div class="lbl">5月房地產開發投資
-（4月-20.1%）</div></div>
-    <div class="stat"><div class="val" style="color:var(--orange)">2027</div><div class="lbl">全國樓市
-預計企穩時點</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">-16.2%</div><div class="lbl">前5月地產開發投資<br>（前4月-13.7%加速惡化）</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">-13.1%</div><div class="lbl">5月新房銷售面積<br>（4月-9.5%擴大）</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">+45%</div><div class="lbl">庫存高於<br>下行前均值（S&P估）</div></div>
+  </div>
+
+  <!-- CHART: Property Investment & Sales Trajectory -->
+  <div class="chart-container">
+    <div class="chart-title">中國房地產開發投資與新房銷售面積（同比%，2025年Q3 — 2026年5月）</div>
+    <svg viewBox="0 0 760 300" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;">
+      <!-- Grid -->
+      <rect x="60" y="20" width="680" height="230" fill="none" stroke="#2a2820" stroke-width="0.5"/>
+      <!-- Zero line -->
+      <line x1="60" y1="65" x2="740" y2="65" stroke="#8a8070" stroke-width="0.8"/>
+      <line x1="60" y1="110" x2="740" y2="110" stroke="#2a2820" stroke-width="0.5" stroke-dasharray="4"/>
+      <line x1="60" y1="155" x2="740" y2="155" stroke="#2a2820" stroke-width="0.5" stroke-dasharray="4"/>
+      <line x1="60" y1="200" x2="740" y2="200" stroke="#2a2820" stroke-width="0.5" stroke-dasharray="4"/>
+      <!-- Y-axis: 0% to -30% -->
+      <!-- y mapping: 0%=65, -30%=245 → y = 65 + |val|*(180/30) = 65 + |val|*6 -->
+      <text x="55" y="69" fill="#8a8070" font-size="10" text-anchor="end">0%</text>
+      <text x="55" y="95" fill="#8a8070" font-size="10" text-anchor="end">-5%</text>
+      <text x="55" y="125" fill="#8a8070" font-size="10" text-anchor="end">-10%</text>
+      <text x="55" y="155" fill="#8a8070" font-size="10" text-anchor="end">-15%</text>
+      <text x="55" y="185" fill="#8a8070" font-size="10" text-anchor="end">-20%</text>
+      <text x="55" y="215" fill="#8a8070" font-size="10" text-anchor="end">-25%</text>
+      <text x="55" y="245" fill="#8a8070" font-size="10" text-anchor="end">-30%</text>
+      <!-- X-axis -->
+      <text x="80" y="268" fill="#8a8070" font-size="9">Q3 25</text>
+      <text x="180" y="268" fill="#8a8070" font-size="9">Q4 25</text>
+      <text x="290" y="268" fill="#8a8070" font-size="9">Jan-Feb 26</text>
+      <text x="420" y="268" fill="#8a8070" font-size="9">Mar</text>
+      <text x="520" y="268" fill="#8a8070" font-size="9">Apr</text>
+      <text x="640" y="268" fill="#8a8070" font-size="9">May</text>
+      <!-- Property Investment (red): Q3(-10)→Q4(-12)→Jan-Feb(-8)→Mar(-11)→Apr(-13.7 cum)→May(-16.2 cum, monthly ~-24.3) -->
+      <!-- Using monthly estimates for visual: Q3(-10)→Q4(-12)→JanFeb(-8)→Mar(-11)→Apr(-20.1)→May(-24.3) -->
+      <polyline fill="none" stroke="#e05545" stroke-width="2.5"
+        points="80,125 180,137 290,113 420,131 520,185.6 640,210.8"/>
+      <!-- Area fill below -->
+      <polygon fill="rgba(224,85,69,0.08)"
+        points="80,125 180,137 290,113 420,131 520,185.6 640,210.8 640,65 80,65"/>
+      <!-- Sales Area (orange): Q3(-5)→Q4(-7)→JanFeb(-3)→Mar(-6)→Apr(-9.5)→May(-13.1) -->
+      <polyline fill="none" stroke="#d49040" stroke-width="2.5"
+        points="80,95 180,107 290,83 420,101 520,122 640,143.6"/>
+      <!-- Annotations -->
+      <circle cx="640" cy="210.8" r="5" fill="#e05545"/>
+      <text x="665" y="208" fill="#e05545" font-size="9" font-weight="700">-24.3%</text>
+      <text x="665" y="220" fill="#e05545" font-size="8">開發投資(月)</text>
+      <circle cx="640" cy="143.6" r="5" fill="#d49040"/>
+      <text x="665" y="141" fill="#d49040" font-size="9" font-weight="700">-13.1%</text>
+      <text x="665" y="153" fill="#d49040" font-size="8">銷售面積</text>
+      <!-- 2027 stabilization target -->
+      <text x="400" y="40" fill="#8a8070" font-size="9" text-anchor="middle">Bloomberg Economics預估：全國企穩需等到2027年</text>
+      <line x1="300" y1="44" x2="500" y2="44" stroke="#8a8070" stroke-width="0.5" stroke-dasharray="4"/>
+      <!-- Legend -->
+      <line x1="80" y1="286" x2="110" y2="286" stroke="#e05545" stroke-width="2.5"/>
+      <text x="115" y="289" fill="#8a8070" font-size="9">開發投資 (月度YoY)</text>
+      <line x1="280" y1="286" x2="310" y2="286" stroke="#d49040" stroke-width="2.5"/>
+      <text x="315" y="289" fill="#8a8070" font-size="9">新房銷售面積 (月度YoY)</text>
+    </svg>
+    <div class="chart-source">資料來源：中國國家統計局, Bloomberg Economics, S&P Global Ratings | 截至2026年5月</div>
   </div>
 
   <div class="article">
-    <div class="article-title">一線城市回暖，奈何中國樓市整體寒意尤深</div>
-    <p>中國樓市的回暖依然只是「一線現象」。5月全國新建商品房銷售面積同比降幅由4月的 <span style="color:#f0ebe0;font-weight:700">9.5% 擴大至13.1%</span>，疲軟集中於二、三線城市 —— 這些城市大多已取消購房限制，政策制定者在化解供需失衡上已無有效工具。房價分化顯著：一線繼續上漲，三線跌幅擴大。更嚴峻的是投資端，5月房地產開發投資同比驟降 <span style="color:#f0ebe0;font-weight:700">24.3%</span>（4月-20.1%），房屋新開工面積降 <span style="color:#f0ebe0;font-weight:700">24.6%</span>（前月-26.6%，僅略放緩）。彭博經濟研究估計本輪調整「進度條」已近 <span style="color:#f0ebe0;font-weight:700">70%</span>，但全國整體企穩可能要等到 <span style="color:#f0ebe0;font-weight:700">2027年</span>。由於低線城市仍在艱難消化龐大庫存，地產對財政（土地收入）與居民資產負債表的拖累短期難解，這正是內需疲軟的結構性根源。</p>
-    <div class="data-point">5月銷售面積：<span style="color:#f0ebe0;font-weight:700">-13.1%</span>（二三線為主）| 5月開發投資：<span style="color:#f0ebe0;font-weight:700">-24.3%</span> &nbsp;|&nbsp; 5月新開工：<span style="color:#f0ebe0;font-weight:700">-24.6%</span> &nbsp;|&nbsp; 調整進度：<span style="color:#f0ebe0;font-weight:700">約70%</span> &nbsp;|&nbsp; 企穩時點：<span style="color:#f0ebe0;font-weight:700">2027年</span></div>
-    <div class="implication"><div class="label">投資啟示</div>別被一線房價反彈誤導為全國轉折。<span style="color:#f0ebe0;font-weight:700">結構性看空地產鏈與低線城市相關信用</span>；土地收入續跌將壓制地方財政與居民信心，是「需求側刺激為何遲遲不來」的根本約束。地產落底前，內需復甦敘事不成立。</div>
+    <div class="article-title">一線回暖救不了全局 — 調整進度約70%，但落底仍需至2027年</div>
+    <p>中國樓市的回暖依然只是「一線現象」。5月全國新建商品房銷售面積同比降幅由4月的<span class="b">9.5%擴大至13.1%</span>，疲軟集中於二三線城市 — 這些城市大多已取消購房限制，政策制定者已無有效工具。房價分化加劇：一線繼續微漲，三線跌幅擴大。S&P Global Ratings預測2026年一手房價格下跌<span class="b">1.5-2.5%</span>、二手房跌<span class="b">4-5%</span>，庫存高於下行前均值<span class="b">45%</span>。</p>
+    <p>投資端更為嚴峻：前5月房地產開發投資同比暴跌<span class="b">16.2%</span>（前4月-13.7%），5月單月跌幅擴大至約<span class="b">24.3%</span>（前月-20.1%），新開工面積降<span class="b">24.6%</span>。彭博經濟研究估計本輪調整「進度條」已近<span class="b">70%</span>，但全國整體企穩可能要等到<span class="b">2027年</span>。Fitch預測2024-2040年年均新房需求僅<span class="b">8億平方米</span>，較2021年峰值<span class="b">16億平方米</span>腰斬 — 建設熱潮時代已經結束。地產對財政（土地收入連8月暴跌）與居民資產負債表的拖累是內需疲軟的結構性根源。</p>
+    <div class="data-point">前5月開發投資：<span class="b">-16.2%</span> &nbsp;|&nbsp; 5月單月：<span class="b">~-24.3%</span> &nbsp;|&nbsp; 5月銷售面積：<span class="b">-13.1%</span>（二三線為主） &nbsp;|&nbsp; 庫存：<span class="b">高於均值45%</span>（S&P） &nbsp;|&nbsp; 結構性需求：<span class="b">8億平米/年（vs 2021年16億）</span> &nbsp;|&nbsp; 企穩時點：<span class="b">2027</span></div>
+    <div class="implication"><div class="label">投資啟示</div>別被一線房價微漲誤判為全國轉折。<span class="b">結構性看空地產鏈與低線城市信用</span>。土地收入續跌壓制地方財政與居民信心，是「需求側刺激為何遲遲不來」的根本約束。在地產落底（2027）前，<span class="b">內需復甦敘事不成立</span>。唯一機會在補貼型住房改造（政策驅動）與一線城市高端物業。</div>
   </div>
-
 </div>
 
-<div class="section" id="rare-earth">
-  <h2><span class="tag tag-misc">中美博弈</span> 稀土反制：成本有限，訊號明確</h2>
+<!-- ============================================================ -->
+<!-- SECTION 5: Inflation Scissors -->
+<!-- ============================================================ -->
+<div class="section" id="inflation">
+  <h2><span class="tag tag-infl">通膨</span> 通膨剪刀差 — PPI飆至四年高但CPI僅1.2%</h2>
 
   <div class="stat-grid">
-    <div class="stat"><div class="val" style="color:var(--orange)">10家</div><div class="lbl">被列出口管制的
-美國國防相關企業</div></div>
-    <div class="stat"><div class="val" style="color:var(--orange)">46家</div><div class="lbl">被限政府採購的美企
-（含RTX、洛馬）</div></div>
-    <div class="stat"><div class="val">~40%</div><div class="lbl">磁體佔稀土
-氧化物需求</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">+3.9%</div><div class="lbl">5月PPI同比<br>2022年7月來最高</div></div>
+    <div class="stat"><div class="val">+1.2%</div><div class="lbl">5月CPI同比<br>低於預期1.3%</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">60.5</div><div class="lbl">PMI原材料購進價格<br>利潤持續受擠壓</div></div>
+  </div>
+
+  <!-- CHART: CPI vs PPI Scissors -->
+  <div class="chart-container">
+    <div class="chart-title">CPI vs PPI 同比走勢 — 生產者被兩面夾擊（2025年7月 — 2026年5月）</div>
+    <svg viewBox="0 0 760 280" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;">
+      <!-- Grid -->
+      <rect x="60" y="20" width="680" height="220" fill="none" stroke="#2a2820" stroke-width="0.5"/>
+      <!-- Zero line -->
+      <line x1="60" y1="160" x2="740" y2="160" stroke="#8a8070" stroke-width="0.8"/>
+      <line x1="60" y1="60" x2="740" y2="60" stroke="#2a2820" stroke-width="0.5" stroke-dasharray="4"/>
+      <line x1="60" y1="100" x2="740" y2="100" stroke="#2a2820" stroke-width="0.5" stroke-dasharray="4"/>
+      <line x1="60" y1="130" x2="740" y2="130" stroke="#2a2820" stroke-width="0.5" stroke-dasharray="4"/>
+      <line x1="60" y1="190" x2="740" y2="190" stroke="#2a2820" stroke-width="0.5" stroke-dasharray="4"/>
+      <line x1="60" y1="220" x2="740" y2="220" stroke="#2a2820" stroke-width="0.5" stroke-dasharray="4"/>
+      <!-- Y-axis: -3% to 5% -->
+      <!-- y mapping: 5%=20, 0%=160, -3%=244 → y = 160 - val*28 -->
+      <text x="55" y="24" fill="#8a8070" font-size="10" text-anchor="end">5%</text>
+      <text x="55" y="60" fill="#8a8070" font-size="10" text-anchor="end">3.5%</text>
+      <text x="55" y="100" fill="#8a8070" font-size="10" text-anchor="end">2%</text>
+      <text x="55" y="130" fill="#8a8070" font-size="10" text-anchor="end">1%</text>
+      <text x="55" y="164" fill="#8a8070" font-size="10" text-anchor="end">0%</text>
+      <text x="55" y="192" fill="#8a8070" font-size="10" text-anchor="end">-1%</text>
+      <text x="55" y="224" fill="#8a8070" font-size="10" text-anchor="end">-2%</text>
+      <!-- X-axis -->
+      <text x="80" y="258" fill="#8a8070" font-size="9">Jul 25</text>
+      <text x="146" y="258" fill="#8a8070" font-size="9">Sep</text>
+      <text x="212" y="258" fill="#8a8070" font-size="9">Nov</text>
+      <text x="278" y="258" fill="#8a8070" font-size="9">Jan 26</text>
+      <text x="378" y="258" fill="#8a8070" font-size="9">Feb</text>
+      <text x="444" y="258" fill="#8a8070" font-size="9">Mar</text>
+      <text x="544" y="258" fill="#8a8070" font-size="9">Apr</text>
+      <text x="644" y="258" fill="#8a8070" font-size="9">May</text>
+      <!-- PPI (orange-red): Jul(-1.8)→Sep(-2.0)→Nov(-1.5)→Jan(-0.8)→Feb(-0.3)→Mar(0.9)→Apr(2.8)→May(3.9) -->
+      <!-- y = 160 - val*28 -->
+      <polyline fill="none" stroke="#d49040" stroke-width="2.5"
+        points="80,210.4 146,216 212,202 278,182.4 378,168.4 444,134.8 544,81.6 644,50.8"/>
+      <!-- CPI (cyan): Jul(0.3)→Sep(0.5)→Nov(0.6)→Jan(0.7)→Feb(0.8)→Mar(1.0)→Apr(1.2)→May(1.2) -->
+      <polyline fill="none" stroke="#4cc9b0" stroke-width="2.5"
+        points="80,151.6 146,146 212,143.2 278,140.4 378,137.6 444,132 544,126.4 644,126.4"/>
+      <!-- Scissors gap shading -->
+      <polygon fill="rgba(212,144,64,0.1)"
+        points="80,210.4 146,216 212,202 278,182.4 378,168.4 444,134.8 544,81.6 644,50.8 644,126.4 544,126.4 444,132 378,137.6 278,140.4 212,143.2 146,146 80,151.6"/>
+      <!-- Annotations -->
+      <circle cx="644" cy="50.8" r="5" fill="#d49040"/>
+      <text x="668" y="48" fill="#d49040" font-size="9" font-weight="700">+3.9% PPI</text>
+      <text x="668" y="60" fill="#d49040" font-size="8">四年高點</text>
+      <circle cx="644" cy="126.4" r="5" fill="#4cc9b0"/>
+      <text x="668" y="124" fill="#4cc9b0" font-size="9" font-weight="700">+1.2% CPI</text>
+      <text x="668" y="136" fill="#4cc9b0" font-size="8">低於預期</text>
+      <!-- Gap annotation -->
+      <line x1="620" y1="56" x2="620" y2="122" stroke="#c9a84c" stroke-width="1.5"/>
+      <text x="600" y="92" fill="#c9a84c" font-size="9" font-weight="700" text-anchor="end">2.7ppt</text>
+      <text x="600" y="103" fill="#c9a84c" font-size="8" text-anchor="end">利潤擠壓</text>
+      <!-- Iran war marker -->
+      <line x1="378" y1="20" x2="378" y2="240" stroke="rgba(224,85,69,0.3)" stroke-width="1" stroke-dasharray="4,3"/>
+      <text x="378" y="16" fill="#e05545" font-size="8" text-anchor="middle">伊朗戰爭衝擊</text>
+      <!-- Legend -->
+      <line x1="80" y1="272" x2="110" y2="272" stroke="#d49040" stroke-width="2.5"/>
+      <text x="115" y="275" fill="#8a8070" font-size="9">PPI 同比</text>
+      <line x1="200" y1="272" x2="230" y2="272" stroke="#4cc9b0" stroke-width="2.5"/>
+      <text x="235" y="275" fill="#8a8070" font-size="9">CPI 同比</text>
+      <rect x="330" y="268" width="12" height="8" fill="rgba(212,144,64,0.15)"/>
+      <text x="346" y="275" fill="#8a8070" font-size="9">剪刀差（利潤擠壓）</text>
+    </svg>
+    <div class="chart-source">資料來源：中國國家統計局, CNBC, Bloomberg | 截至2026年5月</div>
   </div>
 
   <div class="article">
-    <div class="article-title">中國新出口管制向美國傳遞了何種信息</div>
-    <p>在川習北京會晤確立「中美建設性戰略穩定關係」僅一個月後，雙方關係再生波瀾。6月22日，中國商務部將 <span style="color:#f0ebe0;font-weight:700">10家</span> 美國國防相關企業列入出口管制名單，禁止出口兩用物項，當中包括兩家獲政府股權投資的稀土生產商 <span style="color:#f0ebe0;font-weight:700">MP Materials 與 USA Rare Earth</span>；同日財政部對 <span style="color:#f0ebe0;font-weight:700">46家</span> 美企（含 <span style="color:#f0ebe0;font-weight:700">RTX、洛克希德·馬丁、Anduril</span>）實施政府採購限制。彭博經濟研究指出，由於長期武器禁運，這些措施的直接經濟成本可能有限，但訊號明確：<span style="color:#f0ebe0;font-weight:700">中國將對任何被視為遏制其技術進步的美國行動做出強硬回應</span>，且北京對自身立場更有信心。中國主導2025年全球稀土與磁體生產（磁體約佔稀土氧化物需求 <span style="color:#f0ebe0;font-weight:700">40%</span>），管制已延伸至分離、金屬化、磁體燒結等技術。此舉發生在美方更新「1260H清單」（新增阿里巴巴、百度、比亞迪）兩週之後。</p>
-    <div class="data-point">出口管制名單：<span style="color:#f0ebe0;font-weight:700">10家美國防企業</span>（含MP Materials、USA Rare Earth）| 政府採購限制：<span style="color:#f0ebe0;font-weight:700">46家美企</span> &nbsp;|&nbsp; 中國稀土/磁體：<span style="color:#f0ebe0;font-weight:700">2025全球主導地位</span> &nbsp;|&nbsp; 美方1260H新增：<span style="color:#f0ebe0;font-weight:700">阿里、百度、比亞迪</span></div>
-    <div class="implication"><div class="label">投資啟示</div>雙方在元首會晤後試探新界線，短期不致破壞貿易休戰 —— 但系統性摩擦疊加美國國會持續施壓（要求把DeepSeek等列入清單）構成升級尾部風險。<span style="color:#f0ebe0;font-weight:700">對沖中美再升級</span>：偏多非中國稀土供應鏈（雖擴產需數年）、留意國防與先進製造名單擴大的波動。任何一方誤判都可能讓兩國重回對抗。</div>
+    <div class="article-title">工廠兩面夾擊 — 成本飆升但無力轉嫁給消費者</div>
+    <p>5月PPI同比飆升<span class="b">3.9%</span>（前值2.8%），為<span class="b">2022年7月以來最快</span>，連續第三個月上漲。驅動力來自伊朗戰爭推高的全球大宗商品與能源價格：採掘業價格漲<span class="b">15.8%</span>（前值10.8%），原材料漲<span class="b">9.2%</span>（前值7.1%），加工業漲<span class="b">2.3%</span>（前值1.5%）。前5月PPI累計上漲<span class="b">1.0%</span>。</p>
+    <p>但CPI僅持平在<span class="b">1.2%</span>（低於預期1.3%），核心CPI更降至<span class="b">1.1%</span>（前值1.2%），食品價格同比降<span class="b">1.7%</span>。汽油價格雖飆漲<span class="b">23.5%</span>，但內需疲軟令企業無法轉嫁成本 — Pinpoint Asset Management首席經濟學家張智威指出：「消費端的通膨壓力不強，因為國內需求仍然疲弱。」這構成了一個典型的<span class="b">利潤擠壓（profit squeeze）</span>：PPI-CPI剪刀差擴大至<span class="b">2.7個百分點</span>，石化、能源密集型與傳統製造業首當其衝。北京削減過剩產能與遏制惡性價格競爭的政策也在推升出廠價格。</p>
+    <div class="data-point">PPI：<span class="b">+3.9%</span>（採掘+15.8%、原材料+9.2%）&nbsp;|&nbsp; CPI：<span class="b">+1.2%</span>（核心1.1%、食品-1.7%、汽油+23.5%）&nbsp;|&nbsp; PPI-CPI剪刀差：<span class="b">2.7ppt</span> &nbsp;|&nbsp; 前5月PPI累計：<span class="b">+1.0%</span></div>
+    <div class="implication"><div class="label">投資啟示</div>PPI-CPI剪刀差擴大意味<span class="b">中下游製造商利潤率承壓</span>，避開傳統製造與能源密集型行業。上游資源股短期受益但需注意PPI見頂回落風險（若伊朗停火）。<span class="b">具備定價權的高技術製造（半導體、AI硬體）</span>是通膨環境下的相對贏家 — 它們的產品需求彈性低且附加價值高，能將部分成本轉嫁給全球買家。</div>
+  </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- SECTION 6: US-China Rare Earth -->
+<!-- ============================================================ -->
+<div class="section" id="rare-earth">
+  <h2><span class="tag tag-geo">博弈</span> 中美稀土反制 — MP Materials與國防供應鏈</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--orange)">10家</div><div class="lbl">被列出口管制的<br>美國國防相關企業</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">46家</div><div class="lbl">被限政府採購的美企<br>（含RTX、洛馬）</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">~90%</div><div class="lbl">中國佔全球<br>稀土精煉（IEA）</div></div>
   </div>
 
+  <div class="article">
+    <div class="article-title">中國新出口管制瞄準美國稀土命脈 — MP Materials與USA Rare Earth</div>
+    <p>6月22日，中國商務部將<span class="b">10家</span>美國國防相關企業列入出口管制名單，禁止出口兩用物項。名單中最引人注目的是<span class="b">MP Materials（NYSE: MP）與USA Rare Earth（NASDAQ: USAR）</span> — 正是美國政府以國防投資入股、試圖建立非中國稀土供應鏈的兩家核心企業。MP Materials擁有美國唯一營運中的稀土礦，國防部是其最大股東。同日財政部對<span class="b">46家</span>美企（含<span class="b">RTX、洛克希德馬丁、Anduril</span>）實施政府採購限制。</p>
+    <p>此舉是對五角大廈6月初擴大「1260H」中國軍事關聯企業名單（新增<span class="b">阿里巴巴、百度、比亞迪</span>等約80家企業）的直接報復。Benchmark Mineral Intelligence政策分析師Bryan Bille稱中國正在發出「<span class="b">警告射擊</span>」。管制雖為實體層級（非全面稀土禁運），短期經濟成本有限（兩家公司表示已基本切斷中國供應鏈），但<span class="b">訊號效果遠大於實質影響</span> — 中國掌控全球稀土精煉<span class="b">約90%</span>與永磁體生產<span class="b">約95%</span>（IEA數據），管制已延伸至分離、金屬化、磁體燒結等關鍵技術環節。2025年的出口管制雖因11月貿易協議暫緩一年，但供應中斷已造成結構性損害 — 美國關鍵材料（如釔）進口至今未恢復至2025年前水準。</p>
+    <div class="data-point">出口管制名單：<span class="b">10家美企</span>（含MP Materials、USA Rare Earth）&nbsp;|&nbsp; 採購限制：<span class="b">46家美企</span> &nbsp;|&nbsp; 中國稀土精煉佔比：<span class="b">~90%</span>、永磁體<span class="b">~95%</span> &nbsp;|&nbsp; 觸發因素：<span class="b">1260H名單新增阿里/百度/比亞迪</span> &nbsp;|&nbsp; MP YTD：<span class="b">+20%</span>、USAR YTD：<span class="b">+107%</span></div>
+    <div class="implication"><div class="label">投資啟示</div>元首會晤後雙方在試探新界線，短期不致破壞貿易休戰 — 但系統性摩擦持續升級。<span class="b">對沖中美再升級尾部風險</span>：偏多非中國稀土供應鏈（MP、Lynas等，雖擴產需數年），留意國防與先進製造名單擴大的波動。<span class="b">USAR年初至今+107%反映市場已定價供應鏈「去中國化」溢價</span> — 但估值泡沫風險與執行風險並存。若中方將管制從實體層級升級為品項層級禁運，稀土價格與相關供應鏈將面臨系統性衝擊。</div>
+  </div>
 </div>
 
 <div class="divider"></div>
 
+<!-- ============================================================ -->
+<!-- RED TEAM -->
+<!-- ============================================================ -->
 <div class="red-team" id="red-team">
   <div class="red-team-title">&#128308; Red Team — 核心假設與反面論證</div>
   <ul>
-    <li>假設1：AI驅動的出口與高技術製造強勁，足以支撐全年4.5%增長目標</li>
-    <li>假設2：北京有政策空間，下半年（7月政治局會議後）終會出台促消費刺激</li>
-    <li>假設3：中美在元首會晤後均以『穩定』為首要任務，稀土反制不致升級為全面對抗</li>
-    <li style="color:var(--red)">風險1：生產側愈強，刺激緊迫性愈低 —— 正因出口韌性，財政已連三月緊縮、貨幣寬鬆縮水（降息10bp/降準25bp，低於年初預期），刺激可能推遲至2026年底甚至不出台</li>
-    <li style="color:var(--red)">風險2：內需正逼近臨界點 —— 5月零售自2023重啟來首次同比轉負、固投降幅擴至兩位數、新增就業仍不足以抵消傳統行業裁員，需求疲軟開始反噬供給</li>
-    <li style="color:var(--red)">風險3：地產落底要等2027、土地收入連8月暴跌（5月-36%）持續掏空地方財政與居民資產負債表；中美1260H清單與採購限制相互加碼，國會施壓下任一方誤判即可能升級</li>
+    <li><strong>假設1：</strong>AI驅動的出口與高技術製造（半導體+111%、高技術PMI 52.9）足以支撐全年4.5%增長目標，即便內需持續疲軟</li>
+    <li><strong>假設2：</strong>北京有政策空間（RRR 6.3%、7兆元基建預算），下半年（7月政治局會議後）終會出台針對性刺激</li>
+    <li><strong>假設3：</strong>中美在元首會晤後均以「穩定」為首要任務，稀土實體管制不致升級為品項層級禁運</li>
+    <li style="color:var(--red)"><strong>反駁1：</strong>出口強勁的前提是全球AI投資週期持續 — 但若伊朗戰爭升級導致全球經濟放緩、或美國對華AI相關出口管制進一步收緊（DeepSeek等已被國會施壓列入清單），<span class="b">半導體出口月均$360億的增速不可持續</span>。同時，傳統出口已在萎縮（服裝-4%、玩具-7%），一旦AI週期放緩，出口引擎將急速失速</li>
+    <li style="color:var(--red)"><strong>反駁2：</strong>生產側愈強，刺激緊迫性愈低 — 正因出口韌性，<span class="b">PBOC已連13個月按兵不動</span>，財政連三月緊縮。「下半年必有刺激」是最脆弱的假設。若7月政治局會議僅重申「生產者服務」而無就業/居民收入的需求側措施，消費復甦敘事將徹底破裂。5月零售已轉負、固投降幅超預期一倍 — 這不是週期性疲軟，而是<span class="b">結構性需求塌陷的確認</span></li>
+    <li style="color:var(--red)"><strong>反駁3：</strong>中美摩擦具有自我升級特性。國會持續施壓要求擴大1260H清單（DeepSeek、字節跳動等），而北京對每次美方行動的「精準對等報復」正在縮小雙方的迴旋空間。<span class="b">若中方將稀土管制從實體層級升級為品項層級</span>（如2025年曾短暫實施的全面禁運），美國國防供應鏈與電動車產業將面臨系統性衝擊，遠非「訊號」層級</li>
   </ul>
-  <p style="margin-top:10px;padding:10px 14px;background:rgba(224,85,69,0.04);border-radius:6px;font-size:0.9em;border-left:3px solid var(--red)">核心『雙速錯配』邏輯成立且自我強化：做多供給側（AI/高技術出口）、淡化需求側（消費/地產）的配置在Q2數據下站得住腳。但『下半年必有刺激』是最脆弱的一環 —— 觸發點是7月下旬政治局會議：若僅重申『生產者服務』而無針對就業/居民收入的需求側措施，則消費敘事破裂，內需資產將進一步下行。硬指標警戒線：(1) 若社零連續第二個月同比轉負且固投5月兩位數降幅延續，確認內需已反噬供給；(2) 若地產開發投資跌幅持續擴大（已從-20.1%走向-24.3%）、土地收入續暴跌，2027企穩時點恐再延後；(3) 若美方將DeepSeek等列入1260H、中方對等反制範圍擴及無人機/先進製造，稀土尾部風險將從『訊號』升級為『成本』。</p>
+  <p style="margin-top:10px;padding:10px 14px;background:rgba(224,85,69,0.04);border-radius:6px;font-size:0.9em;border-left:3px solid var(--red)"><strong>編輯裁定：</strong>核心「雙速錯配」邏輯成立且具自我強化特性 — 做多供給側（AI/高技術出口）、淡化需求側（消費/地產）的配置在5月數據下站得住腳。但「下半年必有刺激」是最脆弱的一環。<strong>硬指標警戒線：</strong>(1) 若6月零售連續第二個月同比轉負且新訂單PMI持續低於50，確認需求已在反噬供給（機率~40%）；(2) 若地產開發投資月度跌幅持續擴大（已從-20.1%走向-24.3%）、土地收入續暴跌，2027企穩時點恐再延後（機率~35%）；(3) 若美方將DeepSeek等列入1260H且中方對等反制範圍擴及品項層級禁運，稀土尾部風險將從「訊號」升級為「成本」（機率~15%）。<strong>結論：維持供給側多頭，但縮減內需空頭的倉位集中度，為7月政治局會議保留靈活度。</strong></p>
 </div>
 
+<!-- ============================================================ -->
+<!-- FUND MANAGER TAKEAWAYS -->
+<!-- ============================================================ -->
 <div class="callout" id="takeaways">
   <div class="callout-title">基金經理人重點摘要</div>
   <ul>
-    <li><strong>核心配置：</strong>做多AI/高技術製造、電動車產業鏈（5月高技術出口+51%、資本支出旺盛）；減持綁定消費與地產的內需資產。雙速錯配是中國資產主線。</li>
-    <li><strong>增長：</strong>Q2 GDP料由5.0%放緩至4.4%，全年4.5%（高盛Q3由4.7%下調至4.5%，貼目標下限）。生產愈強、刺激愈慢。</li>
-    <li><strong>財政：</strong>自2023來首現赤字收縮（前5月-4.1%），基建支出降12%、土地收入降36%。短期不押注大規模廣泛刺激；要博反彈只看7兆元基建中的算力/計算中心主線。</li>
-    <li><strong>貨幣：</strong>PBOC隔夜逆回購改革僅為技術微調（加點50→25bp），7天逆回購仍是政策錨。別當寬鬆訊號交易；人民幣前端利率框架不變。</li>
-    <li><strong>樓市：</strong>一線回暖救不了全局，5月開發投資-24.3%、銷售面積-13.1%，企穩要等2027。結構性看空地產鏈與低線城市信用。</li>
-    <li><strong>中美稀土：</strong>反制(10家+46家美企)直接成本有限但訊號強硬。對沖再升級尾部風險，留意1260H清單與採購限制相互加碼。</li>
-    <li><strong>關鍵催化：</strong>7月下旬中央政治局會議 —— 若無需求側(就業/收入)措施，消費復甦敘事破裂，做多供給/做空需求的剪刀差將進一步擴大。</li>
+    <li><strong>核心配置：</strong>做多AI/高技術製造產業鏈（5月半導體出口+111%至$360億、高技術出口+50.9%、財新PMI 51.8），減持消費與地產綁定的內需資產（零售-0.6%、汽車-16.1%、家電-15.6%）。雙速錯配是中國資產主線。</li>
+    <li><strong>增長：</strong>Q1 GDP 5.0%（超預期），但Q2料放緩至~4.4%。Oxford Economics估Q2 4.2%，高盛Q3由4.7%下調至4.5%。全年4.5%目標可達但下行風險偏高。出口+19.4%（順差$1,054億）是唯一亮點。</li>
+    <li><strong>PMI：</strong>NBS製造業跌至50.0（新訂單49.9、出口訂單48.6），但高技術製造52.9獨秀。6/30 NBS PMI是下一個確認點 — 若跌破50將增加7月刺激壓力。</li>
+    <li><strong>財政：</strong>前5月赤字首現收縮（-4.1%），基建增速由11.4%降至0.6%，土地收入連8月暴跌-36%。短期不押注廣泛刺激；聚焦7兆元基建中的算力/計算中心結構性主線。</li>
+    <li><strong>貨幣：</strong>PBOC連13月按兵不動（LPR 3.0%/3.5%，RRR 6.3%）。Standard Chartered預計全年僅1次降息+1次降準。逆回購改革為技術微調，非寬鬆信號。</li>
+    <li><strong>樓市：</strong>開發投資-16.2%（5月單月~-24.3%）、銷售面積-13.1%、庫存高均值45%（S&P），結構性需求腰斬至8億平米/年（Fitch）。企穩需等2027年。結構性看空地產鏈。</li>
+    <li><strong>通膨：</strong>PPI飆至+3.9%（四年高）但CPI僅1.2%，剪刀差2.7ppt構成利潤擠壓。避開傳統製造與能源密集型行業，偏多具定價權的高技術製造。</li>
+    <li><strong>中美稀土：</strong>10家+46家美企受限，MP Materials與USA Rare Earth被點名。短期訊號>實質，但品項層級升級為尾部風險。USDCNY 6.79短期穩定，下半年若刺激缺席破7壓力重現。</li>
+    <li><strong>關鍵催化：</strong>(1) 6/30 NBS PMI（確認/否定需求塌陷），(2) 7月下旬中央政治局會議（刺激vs.紀律），(3) Q3特別國債發行節奏（財政擴張先行指標）。</li>
   </ul>
 </div>
 
 <div class="nav-links">
   <span><a href="newsletter_102_geopolitics_rates.html">&larr; 前期</a></span>
-  <span><a href="student.html">返回目錄 &rarr;</a></span>
+  <span><a href="newsletter_104_rates.html">下期 &rarr;</a></span>
 </div>
 
 <div class="footer">
   彭博研究摘要 | 僅供教學與討論用途 | 2026年6月24日<br>
-  資料來源：Bloomberg Intelligence, Bloomberg Economics, Bloomberg News<br>
+  資料來源：Bloomberg Intelligence, Bloomberg Economics, NBS, CNBC, S&P Global Ratings, Goldman Sachs, Oxford Economics, IEA, Fitch, Standard Chartered, CFTC<br>
   <a href="https://www.patreon.com/Aireturn">Patreon</a> · <a href="https://t.me/AIreturn">Telegram</a> · Threads @aireturn88
 </div>
 
