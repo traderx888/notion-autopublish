@@ -1,6 +1,6 @@
 {
-  "lastRunAt": "2026-06-13T00:42:39+08:00",
-  "lastNewsletterNumber": 102,
+  "lastRunAt": "2026-06-24T15:08:52+08:00",
+  "lastNewsletterNumber": 108,
   "processedFiles": {
     "2026 Outlook Global Aluminum Producers #metals.pdf": {
       "processedAt": "2026-03-26T15:52:49+08:00",
@@ -4869,6 +4869,186 @@
         "policy"
       ],
       "newsletterNumber": 100
+    },
+    "AI Is Reviving the Bond Market Volatility Machine MBS Convexity #rates #volatility.pdf": {
+      "processedAt": "2026-06-24T15:08:44+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\AI Is Reviving the Bond Market Volatility Machine MBS Convexity.md",
+      "topics": [
+        "rates",
+        "volatility"
+      ],
+      "newsletterNumber": 104
+    },
+    "Anthropic vs Washington Fable Model Ban Dispute ZH #policy #trade.pdf": {
+      "processedAt": "2026-06-24T15:08:45+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\Anthropic vs Washington Fable Model Ban Dispute ZH.md",
+      "topics": [
+        "policy",
+        "trade"
+      ],
+      "newsletterNumber": 107
+    },
+    "China Dual-Speed Economy Outlook Avoid Policy Complacency ZH #china #growth #policy.pdf": {
+      "processedAt": "2026-06-24T15:08:45+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\China Dual-Speed Economy Outlook Avoid Policy Complacency ZH.md",
+      "topics": [
+        "china",
+        "growth",
+        "policy"
+      ],
+      "newsletterNumber": 103
+    },
+    "China Fiscal Austerity First Deficit Cut Since 2023 ZH #china #policy #growth.pdf": {
+      "processedAt": "2026-06-24T15:08:46+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\China Fiscal Austerity First Deficit Cut Since 2023 ZH.md",
+      "topics": [
+        "china",
+        "policy",
+        "growth"
+      ],
+      "newsletterNumber": 103
+    },
+    "China New Export Controls Signal to US Rare Earth Tensions ZH #china #trade #metals.pdf": {
+      "processedAt": "2026-06-24T15:08:46+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\China New Export Controls Signal to US Rare Earth Tensions ZH.md",
+      "topics": [
+        "china",
+        "trade",
+        "metals"
+      ],
+      "newsletterNumber": 103
+    },
+    "China Property Tier-1 Cities Recover Lower Tiers Still Falling ZH #china #growth.pdf": {
+      "processedAt": "2026-06-24T15:08:47+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\China Property Tier-1 Cities Recover Lower Tiers Still Falling ZH.md",
+      "topics": [
+        "china",
+        "growth"
+      ],
+      "newsletterNumber": 103
+    },
+    "Credit Crunch BlackRock Rosenberg on Systematic AI in Fixed Income #credit #rates.pdf": {
+      "processedAt": "2026-06-24T15:08:47+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\Credit Crunch BlackRock Rosenberg on Systematic AI in Fixed Income.md",
+      "topics": [
+        "credit",
+        "rates"
+      ],
+      "newsletterNumber": 107
+    },
+    "Double Double Toil and Bubble Tech Selloff SK Hynix Micron #semiconductor #valuations.pdf": {
+      "processedAt": "2026-06-24T15:08:47+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\Double Double Toil and Bubble Tech Selloff SK Hynix Micron.md",
+      "topics": [
+        "semiconductor",
+        "valuations"
+      ],
+      "newsletterNumber": 105
+    },
+    "DUP Japan Insight Watch Yen-Carry Risks BOJ Gradualism ZH #japan #rates #volatility.pdf": {
+      "processedAt": "2026-06-24T15:08:48+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\DUP Japan Insight Watch Yen-Carry Risks BOJ Gradualism ZH.md",
+      "topics": [
+        "japan",
+        "rates",
+        "volatility"
+      ],
+      "newsletterNumber": -1
+    },
+    "Fed Warsh Era Less Forward Guidance Hawks Want Hikes ZH #rates #policy #inflation.pdf": {
+      "processedAt": "2026-06-24T15:08:49+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\Fed Warsh Era Less Forward Guidance Hawks Want Hikes ZH.md",
+      "topics": [
+        "rates",
+        "policy",
+        "inflation"
+      ],
+      "newsletterNumber": 104
+    },
+    "Hormuz Strait Ships Departing Oil Flow Resuming ZH #oil #geopolitics #inflation.pdf": {
+      "processedAt": "2026-06-24T15:08:50+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\Hormuz Strait Ships Departing Oil Flow Resuming ZH.md",
+      "topics": [
+        "oil",
+        "geopolitics",
+        "inflation"
+      ],
+      "newsletterNumber": 107
+    },
+    "Infineon Credit Outlook Below 1x Leverage Looms #semiconductor #credit.pdf": {
+      "processedAt": "2026-06-24T15:08:50+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\Infineon Credit Outlook Below 1x Leverage Looms.md",
+      "topics": [
+        "semiconductor",
+        "credit"
+      ],
+      "newsletterNumber": 105
+    },
+    "Japan Insight Watch Yen-Carry Risks BOJ Gradualism #japan #rates #volatility.pdf": {
+      "processedAt": "2026-06-24T15:08:50+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\Japan Insight Watch Yen-Carry Risks BOJ Gradualism.md",
+      "topics": [
+        "japan",
+        "rates",
+        "volatility"
+      ],
+      "newsletterNumber": 108
+    },
+    "Model Insight Warsh and Peace Fed Hawkish Shift Drives Markets #rates #policy #geopolitics.pdf": {
+      "processedAt": "2026-06-24T15:08:50+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\Model Insight Warsh and Peace Fed Hawkish Shift Drives Markets.md",
+      "topics": [
+        "rates",
+        "policy",
+        "geopolitics"
+      ],
+      "newsletterNumber": 104
+    },
+    "No Photo-Ops But Fraught US-Iran Talks Underway Fault Lines #geopolitics #oil.pdf": {
+      "processedAt": "2026-06-24T15:08:51+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\No Photo-Ops But Fraught US-Iran Talks Underway Fault Lines.md",
+      "topics": [
+        "geopolitics",
+        "oil"
+      ],
+      "newsletterNumber": 106
+    },
+    "PBOC Overnight Repo Reform Not a Strategic Shift ZH #china #policy #rates.pdf": {
+      "processedAt": "2026-06-24T15:08:51+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\PBOC Overnight Repo Reform Not a Strategic Shift ZH.md",
+      "topics": [
+        "china",
+        "policy",
+        "rates"
+      ],
+      "newsletterNumber": 103
+    },
+    "Tehran Gets More From US-Iran MOU Draft ZH #geopolitics #oil.pdf": {
+      "processedAt": "2026-06-24T15:08:52+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\Tehran Gets More From US-Iran MOU Draft ZH.md",
+      "topics": [
+        "geopolitics",
+        "oil"
+      ],
+      "newsletterNumber": 106
+    },
+    "Trump Iran Threats Track Record 54pct Follow-Through ZH #geopolitics #oil.pdf": {
+      "processedAt": "2026-06-24T15:08:52+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\Trump Iran Threats Track Record 54pct Follow-Through ZH.md",
+      "topics": [
+        "geopolitics",
+        "oil"
+      ],
+      "newsletterNumber": 106
+    },
+    "VAT Group Tech Edge AI-Driven Semi Demand Lift Growth View #semiconductor #growth.pdf": {
+      "processedAt": "2026-06-24T15:08:52+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\VAT Group Tech Edge AI-Driven Semi Demand Lift Growth View.md",
+      "topics": [
+        "semiconductor",
+        "growth"
+      ],
+      "newsletterNumber": 105
     }
   },
   "newsletters": {
@@ -5649,6 +5829,48 @@
       "topics": [
         "geopolitics",
         "rates"
+      ]
+    },
+    "103": {
+      "filename": "newsletter_103_china.html",
+      "generatedAt": "2026-06-24T15:11:43+08:00",
+      "articleCount": 5,
+      "topics": [
+        "china"
+      ]
+    },
+    "104": {
+      "filename": "newsletter_104_rates.html",
+      "generatedAt": "2026-06-24T15:13:03+08:00",
+      "articleCount": 3,
+      "topics": [
+        "rates"
+      ]
+    },
+    "105": {
+      "filename": "newsletter_105_semiconductor.html",
+      "generatedAt": "2026-06-24T15:14:29+08:00",
+      "articleCount": 3,
+      "topics": [
+        "semiconductor"
+      ]
+    },
+    "106": {
+      "filename": "newsletter_106_geopolitics.html",
+      "generatedAt": "2026-06-24T15:16:30+08:00",
+      "articleCount": 3,
+      "topics": [
+        "geopolitics"
+      ]
+    },
+    "107": {
+      "filename": "newsletter_107_policy_credit_oil.html",
+      "generatedAt": "2026-06-24T15:18:11+08:00",
+      "articleCount": 3,
+      "topics": [
+        "policy",
+        "credit",
+        "oil"
       ]
     }
   },

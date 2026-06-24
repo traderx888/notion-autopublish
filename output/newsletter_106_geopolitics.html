@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>彭博研究摘要 #106 — 美伊協議生效：中東去風險與原油尾部對沖</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Noto+Serif+TC:wght@400;700&family=Source+Sans+Pro:wght@400;600;700&display=swap');
+  :root { --bg: #0a0a08; --card: #141410; --border: #2a2820; --accent: #c9a84c;
+          --gold: #f0d87a; --gold-dim: #c4b896; --text: #e0d8c8; --text-bright: #f0ebe0; --muted: #8a8070;
+          --green: #6bbd5b; --red: #e05545; --yellow: #d4a843; --orange: #d49040;
+          --purple: #b08cd0; --cyan: #4cc9b0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { background: #0a0a08 !important; }
+  body { color: var(--text); font-family: 'Source Sans Pro', 'Noto Serif TC', 'Microsoft JhengHei', sans-serif; line-height: 1.8; padding: 24px; max-width: 880px; margin: 0 auto; }
+  h1 { font-family: 'Playfair Display', 'Noto Serif TC', serif; color: var(--gold); font-size: 1.8em; margin-bottom: 4px; font-weight: 900; letter-spacing: 0.02em; }
+  h2 { font-family: 'Playfair Display', 'Noto Serif TC', serif; }
+  .subtitle { color: var(--text-bright); font-size: 0.95em; margin-bottom: 8px; font-family: 'Noto Serif TC', serif; }
+  .issue-badge { display: inline-block; background: rgba(201,168,76,0.15); color: var(--accent); padding: 4px 12px; border-radius: 12px; font-size: 0.8em; font-weight: 600; margin-bottom: 20px; border: 1px solid rgba(201,168,76,0.3); }
+  .tag { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 0.72em; font-weight: 600; margin-right: 4px; }
+  .tag-rates { background: rgba(201,168,76,0.15); color: var(--accent); }
+  .tag-china { background: rgba(212,144,64,0.15); color: var(--orange); }
+  .tag-japan { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-geo   { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-oil   { background: rgba(212,168,67,0.15); color: var(--yellow); }
+  .tag-trade { background: rgba(212,168,67,0.15); color: var(--yellow); }
+  .tag-growth{ background: rgba(107,189,91,0.15); color: var(--green); }
+  .tag-metals{ background: rgba(176,140,208,0.15); color: var(--purple); }
+  .tag-infl  { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-policy{ background: rgba(201,168,76,0.15); color: var(--accent); }
+  .tag-val   { background: rgba(107,189,91,0.15); color: var(--green); }
+  .tag-vol   { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-semi  { background: rgba(76,201,176,0.15); color: var(--cyan); }
+  .tag-credit{ background: rgba(176,140,208,0.15); color: var(--purple); }
+  .tag-space { background: rgba(201,168,76,0.15); color: var(--accent); }
+  .tag-misc  { background: rgba(138,128,112,0.15); color: var(--muted); }
+  .verdict-bar { background: var(--accent); color: #0a0a08; padding: 14px 20px; border-radius: 8px; margin-bottom: 20px; font-weight: 700; font-size: 1.05em; font-family: 'Noto Serif TC', serif; }
+  .section { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 22px; margin-bottom: 18px; }
+  .section h2 { color: var(--gold); font-size: 1.15em; margin-bottom: 12px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+  .section h3 { color: var(--accent); font-size: 0.95em; margin: 14px 0 6px; }
+  .article { margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid rgba(42,40,32,0.7); }
+  .article:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .article-title { color: var(--text-bright); font-weight: 700; font-size: 0.95em; margin-bottom: 4px; }
+  .article-title-cn { color: var(--muted); font-size: 0.85em; margin-bottom: 8px; }
+  .article p { font-size: 0.9em; margin: 6px 0; }
+  .data-point { background: rgba(201,168,76,0.05); padding: 8px 12px; border-radius: 6px; margin: 8px 0; font-size: 0.85em; border: 1px solid rgba(201,168,76,0.12); }
+  .data-point .num { color: var(--text-bright); font-weight: 700; }
+  .implication { background: rgba(201,168,76,0.06); border-left: 3px solid var(--accent); padding: 10px 14px; margin: 10px 0; border-radius: 0 6px 6px 0; font-size: 0.88em; }
+  .implication .label { color: var(--accent); font-weight: 700; font-size: 0.8em; text-transform: uppercase; margin-bottom: 4px; }
+  .red-team { background: rgba(224,85,69,0.06); border: 1px solid rgba(224,85,69,0.25); border-radius: 8px; padding: 18px; margin: 18px 0; }
+  .red-team-title { color: var(--red); font-weight: 700; font-size: 0.95em; margin-bottom: 10px; font-family: 'Playfair Display', serif; }
+  .red-team ul { padding-left: 18px; }
+  .red-team li { margin: 5px 0; font-size: 0.88em; }
+  .callout { background: rgba(201,168,76,0.06); border: 1px solid rgba(201,168,76,0.25); border-radius: 8px; padding: 18px; margin: 18px 0; }
+  .callout-title { color: var(--accent); font-weight: 700; font-size: 0.95em; margin-bottom: 8px; font-family: 'Playfair Display', 'Noto Serif TC', serif; }
+  .callout ul { padding-left: 18px; }
+  .callout li { margin: 5px 0; font-size: 0.88em; }
+  ul { padding-left: 18px; }
+  li { margin: 4px 0; font-size: 0.88em; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(201,168,76,0.05); padding: 12px; border-radius: 6px; text-align: center; border: 1px solid rgba(201,168,76,0.1); }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: var(--gold); font-family: 'Playfair Display', serif; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
+  .toc { background: rgba(201,168,76,0.04); border: 1px solid rgba(201,168,76,0.18); border-radius: 8px; padding: 16px 20px; margin-bottom: 20px; }
+  .toc-title { color: var(--accent); font-weight: 700; font-size: 0.9em; margin-bottom: 8px; }
+  .toc a { color: var(--accent); text-decoration: none; font-size: 0.88em; }
+  .toc a:hover { text-decoration: underline; color: var(--gold); }
+  .toc ol { padding-left: 20px; }
+  .toc li { margin: 4px 0; }
+  .nav-links { display: flex; justify-content: space-between; margin: 20px 0; font-size: 0.85em; }
+  .nav-links a { color: var(--accent); text-decoration: none; }
+  .nav-links a:hover { text-decoration: underline; color: var(--gold); }
+  .divider { height: 1px; background: linear-gradient(90deg, transparent, var(--accent), transparent); margin: 24px 0; opacity: 0.4; }
+  .footer { text-align: center; color: var(--muted); font-size: 0.75em; margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--border); }
+  .footer a { color: var(--accent); text-decoration: none; }
+</style>
+<script>if(window.self===window.top&&sessionStorage.getItem("student_auth")!=="1"){document.body.innerHTML="";window.location.replace("student.html");}</script>
+</head>
+<body>
+
+<h1>彭博研究摘要</h1>
+<p class="subtitle">第106期 | 美伊協議生效：中東去風險與原油尾部對沖</p>
+<span class="issue-badge">2026年六月下旬更新</span>
+
+<div class="verdict-bar">結論：美伊MOU暫緩中東戰火、壓低原油風險溢價，但協議明顯偏向伊朗且川普威脅反覆無常——**逢高減持原油多頭，保留霍爾木茲海峽60天尾部對沖**</div>
+
+<div class="nav-links">
+  <span><a href="newsletter_105_semiconductor.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="toc">
+  <div class="toc-title">目錄</div>
+  <ol>
+    <li><a href="#us-iran-mou">美伊協議 條款失衡，德黑蘭佔盡上風</a></li>
+    <li><a href="#trump-credibility">川普威脅 光說不練？威脅可信度存疑</a></li>
+    <li><a href="#energy-shipping">能源航運 雙重戰線，原油上下風險並存</a></li>
+    <li><a href="#red-team">Red Team 反面論證</a></li>
+    <li><a href="#takeaways">基金經理人重點摘要</a></li>
+  </ol>
+</div>
+
+<div class="section" id="us-iran-mou">
+  <h2><span class="tag tag-misc">美伊協議</span> 條款失衡，德黑蘭佔盡上風</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--orange)">10/14</div><div class="lbl">MOU條款
+有利伊朗</div></div>
+    <div class="stat"><div class="val">$3,000億</div><div class="lbl">投資與重建
+基金（待定）</div></div>
+    <div class="stat"><div class="val">6/19</div><div class="lbl">原訂
+簽字儀式</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">德黑蘭在美伊協議草案中獲益更多 — 一場不對等的交換</div>
+    <p>彭博經濟研究評估，報導中的14點《諒解備忘錄》明顯偏向德黑蘭——<span style="color:#f0ebe0;font-weight:700">10項有利伊朗、僅1項有利美國、3項中立</span>。交換並不對等：華盛頓主要讓局勢恢復至2月戰爭爆發前（霍爾木茲海峽暫時開放、限制核活動），而伊朗則獲全新讓步——立即解除石油銷售制裁、最終全面取消制裁、解凍資產，以及設立<span style="color:#f0ebe0;font-weight:700">3,000億美元</span>投資與重建基金。關鍵在於海峽僅承諾「60天內」免費安全通行，期滿後伊朗將與阿曼協商管理權，意味未來可能收取過路費並行使管控權。核心的核計畫問題僅留待後續談判、且無保證解決。原訂6月19日簽字。對伊朗而言這是一場勝利——幾乎未作新承諾，卻換得售油權與談判籌碼。</p>
+    <div class="data-point">有利伊朗條款：<span style="color:#f0ebe0;font-weight:700">10/14</span> &nbsp;|&nbsp; 重建基金：<span style="color:#f0ebe0;font-weight:700">$3,000億</span> &nbsp;|&nbsp; 海峽免費通行期：<span style="color:#f0ebe0;font-weight:700">60天</span> &nbsp;|&nbsp; 唯一利美條款：<span style="color:#f0ebe0;font-weight:700">伊朗重申不尋求核武</span></div>
+    <div class="implication"><div class="label">投資啟示</div>協議僅延長停火、未解核心核問題，結構脆弱。德黑蘭佔優意味中東緊張並未根除——<span style="color:#f0ebe0;font-weight:700">短期去風險可逢高減持原油多頭，但勿全數平倉尾部對沖</span>。</div>
+  </div>
+
+</div>
+
+<div class="section" id="trump-credibility">
+  <h2><span class="tag tag-misc">川普威脅</span> 光說不練？威脅可信度存疑</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--orange)">54%</div><div class="lbl">整體威脅
+兌現率</div></div>
+    <div class="stat"><div class="val" style="color:var(--green)">44%</div><div class="lbl">停火後
+兌現率</div></div>
+    <div class="stat"><div class="val">41次</div><div class="lbl">累計打擊
+威脅（自2/27）</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">反反覆覆虛虛實實 — 川普對伊威脅的分量有幾成</div>
+    <p>停戰MOU剛簽沒幾天，川普就威脅要「再次猛烈」打擊伊朗，隨後又似乎收回，令市場質疑該把他的威脅多當回事。彭博統計自2月27日以來川普共發出<span style="color:#f0ebe0;font-weight:700">41次</span>單獨打擊威脅，其中<span style="color:#f0ebe0;font-weight:700">54%</span>之後確實發生美軍軍事行動；但若聚焦4月8日停火後的威脅，兌現率降至<span style="color:#f0ebe0;font-weight:700">44%</span>，而最激烈交戰期間則高達<span style="color:#f0ebe0;font-weight:700">58%</span>。在24次「有條件」威脅中，僅10次在條件未滿足下仍動武。結論：川普的威脅信號並不穩定——足以引起重視，但光說不練的次數越多，其話語在德黑蘭眼中的可信度越低，靠威脅在60天談判期內取得理想結果恐難如願。</p>
+    <div class="data-point">累計威脅：<span style="color:#f0ebe0;font-weight:700">41次</span> &nbsp;|&nbsp; 整體兌現率：<span style="color:#f0ebe0;font-weight:700">54%</span> &nbsp;|&nbsp; 停火後兌現率：<span style="color:#f0ebe0;font-weight:700">44%</span> &nbsp;|&nbsp; 交戰期兌現率：<span style="color:#f0ebe0;font-weight:700">58%</span> &nbsp;|&nbsp; 有條件威脅動武：<span style="color:#f0ebe0;font-weight:700">10/24</span></div>
+    <div class="implication"><div class="label">投資啟示</div>停火後動武機率下降，支撐去風險敘事；但54%整體兌現率提醒尾部風險真實存在。<span style="color:#f0ebe0;font-weight:700">勿過度押注「川普只是嘴上說說」——保留廉價對沖以防誤判</span>。</div>
+  </div>
+
+</div>
+
+<div class="section" id="energy-shipping">
+  <h2><span class="tag tag-misc">能源航運</span> 雙重戰線，原油上下風險並存</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val">$120億</div><div class="lbl">本週撥付伊朗
+凍結資產</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">60天</div><div class="lbl">海峽免費
+通行期</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">↑風險</div><div class="lbl">俄煉油廠
+遭烏軍打擊</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">沒有合影但暗潮洶湧 — 美伊談判進行中與俄羅斯煉油廠承壓</div>
+    <p>彭博經濟研究判讀，美伊雙方都認真想達成協議、避免重返高強度衝突，但通往最終協議障礙重重，達成持久和平的機率偏低。德黑蘭本週將依MOU收到<span style="color:#f0ebe0;font-weight:700">120億美元</span>凍結資產，惟對川普所稱資金用途限制存有爭議。瑞士Burgenstock會談已確立60天談判框架，含高層委員會、技術工作組及防衝突機制以平息黎巴嫩戰火。能源面上，海峽僅承諾60天免費通行，期滿後伊朗擬收取過路費，為航運成本埋下變數。另一戰線，烏克蘭遠程無人機深入打擊俄羅斯煉油廠，迫使停產、檢修、配給與防空爭奪，雖難阻侵略，卻可能逼莫斯科在和談中放棄部分最大化要求。雙重戰線意味原油下行（去風險）與上行（供應中斷）風險並存。</p>
+    <div class="data-point">凍結資產撥付：<span style="color:#f0ebe0;font-weight:700">$120億</span> &nbsp;|&nbsp; 談判期：<span style="color:#f0ebe0;font-weight:700">60天</span> &nbsp;|&nbsp; 達成持久和平機率：<span style="color:#f0ebe0;font-weight:700">偏低</span> &nbsp;|&nbsp; 烏軍打擊目標：<span style="color:#f0ebe0;font-weight:700">俄煉油廠（成品油供應）</span></div>
+    <div class="implication"><div class="label">投資啟示</div>中東去風險壓低風險溢價，但俄煉油廠遭擊擾亂成品油供應，為油價提供下方支撐。<span style="color:#f0ebe0;font-weight:700">淨倉位偏中性：減持原油方向性多頭，透過買權價差保留霍爾木茲尾部對沖</span>。</div>
+  </div>
+
+</div>
+
+<div class="divider"></div>
+
+<div class="red-team" id="red-team">
+  <div class="red-team-title">&#128308; Red Team — 核心假設與反面論證</div>
+  <ul>
+    <li>假設1：美伊MOU能維持並走向最終協議，霍爾木茲海峽保持開放，中東風險溢價持續收斂</li>
+    <li>假設2：川普在停火後傾向光說不練，再度大規模動武的機率顯著下降</li>
+    <li>假設3：俄烏煉油廠戰線屬區域性擾動，不足以扭轉全球原油去風險趨勢</li>
+    <li style="color:var(--red)">風險1：彭博明確評估美伊達成持久和平機率偏低；海峽僅承諾60天免費通行，期滿伊朗擬收費並行使管控——這是一枚明確的時間炸彈</li>
+    <li style="color:var(--red)">風險2：川普整體威脅兌現率仍達54%、交戰期高達58%，「足以引起重視」；以色列在黎巴嫩的行動是伊朗劃下的紅線，而川普未必能約束以方</li>
+    <li style="color:var(--red)">風險3：烏克蘭持續深入打擊俄煉油廠造成停產與配給，疊加中東不確定性，原油下行空間實際有限</li>
+  </ul>
+  <p style="margin-top:10px;padding:10px 14px;background:rgba(224,85,69,0.04);border-radius:6px;font-size:0.9em;border-left:3px solid var(--red)">核心去風險邏輯短期成立，但結構脆弱。MOU僅延長停火、未觸及核心核問題，海峽60天免費期是明確的到期風險點。若簽署因黎巴嫩戰事告吹，或60天期滿伊朗開徵過路費，原油風險溢價將迅速回補。當前對沖成本便宜——減持方向性多頭可行，但全數平倉霍爾木茲尾部對沖屬誤判。</p>
+</div>
+
+<div class="callout" id="takeaways">
+  <div class="callout-title">基金經理人重點摘要</div>
+  <ul>
+    <li><strong>美伊協議：</strong>14點MOU中10項有利伊朗，僅延長停火、未解核問題。6/19原訂簽字，成敗繫於川普能否約束以色列在黎巴嫩的行動。</li>
+    <li><strong>霍爾木茲海峽：</strong>僅承諾60天免費通行，期滿伊朗擬收過路費並行使管控。短期去風險，中期航運成本與地緣變數上升。</li>
+    <li><strong>川普可信度：</strong>整體威脅兌現率54%、停火後降至44%、交戰期58%。信號不穩定，足以引起重視但非必然動武。</li>
+    <li><strong>原油策略：</strong>逢高減持原油方向性多頭以反映去風險，但保留霍爾木茲60天尾部對沖（買權價差）——當前對沖成本便宜。</li>
+    <li><strong>俄烏戰線：</strong>烏軍遠程無人機打擊俄煉油廠，擾亂成品油供應、或迫俄讓步，為油價提供下方支撐，限制油價下行空間。</li>
+  </ul>
+</div>
+
+<div class="nav-links">
+  <span><a href="newsletter_105_semiconductor.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="footer">
+  彭博研究摘要 | 僅供教學與討論用途 | 2026年6月24日<br>
+  資料來源：Bloomberg Intelligence, Bloomberg Economics, Bloomberg News<br>
+  <a href="https://www.patreon.com/Aireturn">Patreon</a> · <a href="https://t.me/AIreturn">Telegram</a> · Threads @aireturn88
+</div>
+
+</body>
+</html>

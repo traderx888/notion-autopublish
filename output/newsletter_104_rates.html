@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>彭博研究摘要 #104 — 沃什時代降臨：鷹派央行、利率上行與債市波動回歸</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Noto+Serif+TC:wght@400;700&family=Source+Sans+Pro:wght@400;600;700&display=swap');
+  :root { --bg: #0a0a08; --card: #141410; --border: #2a2820; --accent: #c9a84c;
+          --gold: #f0d87a; --gold-dim: #c4b896; --text: #e0d8c8; --text-bright: #f0ebe0; --muted: #8a8070;
+          --green: #6bbd5b; --red: #e05545; --yellow: #d4a843; --orange: #d49040;
+          --purple: #b08cd0; --cyan: #4cc9b0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { background: #0a0a08 !important; }
+  body { color: var(--text); font-family: 'Source Sans Pro', 'Noto Serif TC', 'Microsoft JhengHei', sans-serif; line-height: 1.8; padding: 24px; max-width: 880px; margin: 0 auto; }
+  h1 { font-family: 'Playfair Display', 'Noto Serif TC', serif; color: var(--gold); font-size: 1.8em; margin-bottom: 4px; font-weight: 900; letter-spacing: 0.02em; }
+  h2 { font-family: 'Playfair Display', 'Noto Serif TC', serif; }
+  .subtitle { color: var(--text-bright); font-size: 0.95em; margin-bottom: 8px; font-family: 'Noto Serif TC', serif; }
+  .issue-badge { display: inline-block; background: rgba(201,168,76,0.15); color: var(--accent); padding: 4px 12px; border-radius: 12px; font-size: 0.8em; font-weight: 600; margin-bottom: 20px; border: 1px solid rgba(201,168,76,0.3); }
+  .tag { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 0.72em; font-weight: 600; margin-right: 4px; }
+  .tag-rates { background: rgba(201,168,76,0.15); color: var(--accent); }
+  .tag-china { background: rgba(212,144,64,0.15); color: var(--orange); }
+  .tag-japan { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-geo   { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-oil   { background: rgba(212,168,67,0.15); color: var(--yellow); }
+  .tag-trade { background: rgba(212,168,67,0.15); color: var(--yellow); }
+  .tag-growth{ background: rgba(107,189,91,0.15); color: var(--green); }
+  .tag-metals{ background: rgba(176,140,208,0.15); color: var(--purple); }
+  .tag-infl  { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-policy{ background: rgba(201,168,76,0.15); color: var(--accent); }
+  .tag-val   { background: rgba(107,189,91,0.15); color: var(--green); }
+  .tag-vol   { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-semi  { background: rgba(76,201,176,0.15); color: var(--cyan); }
+  .tag-credit{ background: rgba(176,140,208,0.15); color: var(--purple); }
+  .tag-space { background: rgba(201,168,76,0.15); color: var(--accent); }
+  .tag-misc  { background: rgba(138,128,112,0.15); color: var(--muted); }
+  .verdict-bar { background: var(--accent); color: #0a0a08; padding: 14px 20px; border-radius: 8px; margin-bottom: 20px; font-weight: 700; font-size: 1.05em; font-family: 'Noto Serif TC', serif; }
+  .section { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 22px; margin-bottom: 18px; }
+  .section h2 { color: var(--gold); font-size: 1.15em; margin-bottom: 12px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+  .section h3 { color: var(--accent); font-size: 0.95em; margin: 14px 0 6px; }
+  .article { margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid rgba(42,40,32,0.7); }
+  .article:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .article-title { color: var(--text-bright); font-weight: 700; font-size: 0.95em; margin-bottom: 4px; }
+  .article-title-cn { color: var(--muted); font-size: 0.85em; margin-bottom: 8px; }
+  .article p { font-size: 0.9em; margin: 6px 0; }
+  .data-point { background: rgba(201,168,76,0.05); padding: 8px 12px; border-radius: 6px; margin: 8px 0; font-size: 0.85em; border: 1px solid rgba(201,168,76,0.12); }
+  .data-point .num { color: var(--text-bright); font-weight: 700; }
+  .implication { background: rgba(201,168,76,0.06); border-left: 3px solid var(--accent); padding: 10px 14px; margin: 10px 0; border-radius: 0 6px 6px 0; font-size: 0.88em; }
+  .implication .label { color: var(--accent); font-weight: 700; font-size: 0.8em; text-transform: uppercase; margin-bottom: 4px; }
+  .red-team { background: rgba(224,85,69,0.06); border: 1px solid rgba(224,85,69,0.25); border-radius: 8px; padding: 18px; margin: 18px 0; }
+  .red-team-title { color: var(--red); font-weight: 700; font-size: 0.95em; margin-bottom: 10px; font-family: 'Playfair Display', serif; }
+  .red-team ul { padding-left: 18px; }
+  .red-team li { margin: 5px 0; font-size: 0.88em; }
+  .callout { background: rgba(201,168,76,0.06); border: 1px solid rgba(201,168,76,0.25); border-radius: 8px; padding: 18px; margin: 18px 0; }
+  .callout-title { color: var(--accent); font-weight: 700; font-size: 0.95em; margin-bottom: 8px; font-family: 'Playfair Display', 'Noto Serif TC', serif; }
+  .callout ul { padding-left: 18px; }
+  .callout li { margin: 5px 0; font-size: 0.88em; }
+  ul { padding-left: 18px; }
+  li { margin: 4px 0; font-size: 0.88em; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(201,168,76,0.05); padding: 12px; border-radius: 6px; text-align: center; border: 1px solid rgba(201,168,76,0.1); }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: var(--gold); font-family: 'Playfair Display', serif; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
+  .toc { background: rgba(201,168,76,0.04); border: 1px solid rgba(201,168,76,0.18); border-radius: 8px; padding: 16px 20px; margin-bottom: 20px; }
+  .toc-title { color: var(--accent); font-weight: 700; font-size: 0.9em; margin-bottom: 8px; }
+  .toc a { color: var(--accent); text-decoration: none; font-size: 0.88em; }
+  .toc a:hover { text-decoration: underline; color: var(--gold); }
+  .toc ol { padding-left: 20px; }
+  .toc li { margin: 4px 0; }
+  .nav-links { display: flex; justify-content: space-between; margin: 20px 0; font-size: 0.85em; }
+  .nav-links a { color: var(--accent); text-decoration: none; }
+  .nav-links a:hover { text-decoration: underline; color: var(--gold); }
+  .divider { height: 1px; background: linear-gradient(90deg, transparent, var(--accent), transparent); margin: 24px 0; opacity: 0.4; }
+  .footer { text-align: center; color: var(--muted); font-size: 0.75em; margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--border); }
+  .footer a { color: var(--accent); text-decoration: none; }
+</style>
+<script>if(window.self===window.top&&sessionStorage.getItem("student_auth")!=="1"){document.body.innerHTML="";window.location.replace("student.html");}</script>
+</head>
+<body>
+
+<h1>彭博研究摘要</h1>
+<p class="subtitle">第104期 | 沃什時代降臨：鷹派央行、利率上行與債市波動回歸</p>
+<span class="issue-badge">2026年六月下旬更新</span>
+
+<div class="verdict-bar">結論：聯儲會進入沃什鷹派時代，前瞻指引消失、點陣圖轉鷹、PCE預測大幅上調至 3.6%，全年既不加息也不降息已成基準情境 — 偏空美債前端、警惕MBS負凸性重燃的波動風險。</div>
+
+<div class="nav-links">
+  <span><a href="newsletter_103_china.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="toc">
+  <div class="toc-title">目錄</div>
+  <ol>
+    <li><a href="#warsh-hawkish-fed">聯儲會 沃什登場，前瞻指引謝幕</a></li>
+    <li><a href="#yield-drivers-model">利率驅動 戰爭與和平：殖利率為何上行</a></li>
+    <li><a href="#mbs-convexity-volatility">債市波動 AI 重啟負凸性波動機器</a></li>
+    <li><a href="#red-team">Red Team 反面論證</a></li>
+    <li><a href="#takeaways">基金經理人重點摘要</a></li>
+  </ol>
+</div>
+
+<div class="section" id="warsh-hawkish-fed">
+  <h2><span class="tag tag-misc">聯儲會</span> 沃什登場，前瞻指引謝幕</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val">3.50-3.75%</div><div class="lbl">政策利率
+一致決議維持不變</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">3.6%</div><div class="lbl">2026整體PCE預測
+（前值2.7%）</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">9 vs 8</div><div class="lbl">點陣圖加息派
+對維持/降息派</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">沃什時代開幕 — 縮減前瞻指引，鷹派要求加息</div>
+    <p>新任主席 Kevin Warsh 以雷霆之勢拉開任期序幕：FOMC 一致決議將政策利率維持在 <span style="color:#f0ebe0;font-weight:700">3.50%–3.75%</span>，但政策聲明大幅精簡，對利率前景的描述段落被整段刪除，且沃什本人<span style="color:#f0ebe0;font-weight:700">未在點陣圖與 SEP 提交任何預測點</span> — 一反 Powell、Yellen、Bernanke 的傳統。委員會其餘成員則發出強烈鷹派信號：<span style="color:#f0ebe0;font-weight:700">九位</span>與會者預計今年至少加息一次（其中六位預計幅度達 50bp），八位預計維持不變，僅一位預計降息。相比 3 月會議「中位數預期降息一次」的立場，鷹派傾向明顯。同時 SEP 大幅上調通膨：2026 整體 PCE 由 <span style="color:#f0ebe0;font-weight:700">2.7% 升至 3.6%</span>、核心 PCE 由 2.7% 升至 <span style="color:#f0ebe0;font-weight:700">3.3%</span>。沃什全程強調價格穩定為首要任務，刻意淡化降息討論。</p>
+    <div class="data-point">政策利率：<span style="color:#f0ebe0;font-weight:700">3.50%–3.75%（不變）</span> &nbsp;|&nbsp; 2026核心PCE：<span style="color:#f0ebe0;font-weight:700">3.3%</span>（前2.7%） &nbsp;|&nbsp; 2026 GDP：<span style="color:#f0ebe0;font-weight:700">2.2%</span>（前2.4%） &nbsp;|&nbsp; 失業率：<span style="color:#f0ebe0;font-weight:700">4.3%</span>（前4.4%）</div>
+    <div class="implication"><div class="label">投資啟示</div>彭博經濟研究已撤回「年底前降息 25bp」的預測，改為<span style="color:#f0ebe0;font-weight:700">全年既不加息也不降息</span>。前瞻指引真空意味著利率波動率上升 — <span style="color:#f0ebe0;font-weight:700">偏空美債前端、降低對年內降息的押注</span>。</div>
+  </div>
+
+</div>
+
+<div class="section" id="yield-drivers-model">
+  <h2><span class="tag tag-misc">利率驅動</span> 戰爭與和平：殖利率為何上行</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--orange)">+50bp</div><div class="lbl">美債殖利率
+自2月戰爭以來</div></div>
+    <div class="stat"><div class="val" style="color:var(--green)">+9%</div><div class="lbl">標普500
+同期漲幅</div></div>
+    <div class="stat"><div class="val">6/17</div><div class="lbl">沃什講話
+坐實鷹派轉向</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">模型洞察：沃什鷹派轉向與中東降溫共同推升殖利率</div>
+    <p>彭博經濟研究的驅動因子模型（SVAR）顯示，過去數月美債殖利率與股市同步上行，背後是兩股力量：<span style="color:#f0ebe0;font-weight:700">沃什主導的聯儲會鷹派轉向</span>，以及<span style="color:#f0ebe0;font-weight:700">伊朗戰爭升級恐懼的消退</span>。自 2 月底戰爭爆發以來，10 年期殖利率已上行<span style="color:#f0ebe0;font-weight:700">逾 50bp</span>。模型拆解顯示，初期推力主要來自對大宗商品供給中斷的擔憂，但隨衝突降溫，這股壓力消退，<span style="color:#f0ebe0;font-weight:700">Fed 預期重定價成為殖利率上行的主導力量</span>。沃什 <span style="color:#f0ebe0;font-weight:700">6 月 17 日</span>的講話坐實了鷹派轉向，明確傳遞「寬鬆門檻仍高」。對股市而言，標普 500 自開戰以來上漲約 <span style="color:#f0ebe0;font-weight:700">9%</span>，風險偏好回升（疊加 AI 樂觀情緒）的提振，已遠遠抵銷 Fed 鷹派帶來的拖累。</p>
+    <div class="data-point">殖利率變化：<span style="color:#f0ebe0;font-weight:700">+50bp</span> &nbsp;|&nbsp; 標普500：<span style="color:#f0ebe0;font-weight:700">+9%</span> &nbsp;|&nbsp; 主導因子：<span style="color:#f0ebe0;font-weight:700">Fed預期重定價</span> &nbsp;|&nbsp; 拐點事件：<span style="color:#f0ebe0;font-weight:700">沃什6/17講話</span></div>
+    <div class="implication"><div class="label">投資啟示</div>殖利率上行主因已從「地緣供給衝擊」切換為「貨幣政策鷹派」，後者更具黏性。<span style="color:#f0ebe0;font-weight:700">做空美債前端的勝率高於後端</span>；股市雖受 AI 風險偏好支撐，但若 Fed 鷹派與殖利率上行持續，估值將承壓。</div>
+  </div>
+
+</div>
+
+<div class="section" id="mbs-convexity-volatility">
+  <h2><span class="tag tag-misc">債市波動</span> AI 重啟負凸性波動機器</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--orange)">10-15bp</div><div class="lbl">AI後再融資門檻
+（原50-75bp）</div></div>
+    <div class="stat"><div class="val">100→105</div><div class="lbl">MBS合成結構
+10Y現券-3Y價外call</div></div>
+    <div class="stat"><div class="val">5年</div><div class="lbl">負凸性
+罕見地缺席市場</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">MBS 負凸性回歸 — AI 降低再融資摩擦，放大殖利率波動</div>
+    <p>Simon White 警示：抵押貸款支持證券（MBS）正重新成為美債市場波動的放大器，元兇是 <span style="color:#f0ebe0;font-weight:700">AI 大幅降低再融資成本</span>。負凸性是 MBS 的固有特徵 — 當殖利率變動時，持倉者的對沖需求會追逐並放大殖利率走勢。過去近五年負凸性大致缺席（2021-22 利率衝擊期甚至轉正），近期才再度明顯轉負。傳統上，市場利率需比借款人現有利率低 <span style="color:#f0ebe0;font-weight:700">50-75bp</span> 才值得再融資（因需備齊文件、信用審查、估價等成本）；但 AI 自動化審核與承銷將這道門檻壓低至可能僅 <span style="color:#f0ebe0;font-weight:700">10-15bp</span>。這意味著更窄更深的凸性曲線：更多借款人在利率下行時提前還款，提前還款選擇權價值更高。可將 MBS 拆解為「持有 100 元的 10 年期現券 + 賣出一個價外 <span style="color:#f0ebe0;font-weight:700">105</span> 行權的 3 年期 call」。</p>
+    <div class="data-point">再融資激勵門檻：<span style="color:#f0ebe0;font-weight:700">50-75bp → 10-15bp</span> &nbsp;|&nbsp; 凸性現狀：<span style="color:#f0ebe0;font-weight:700">明顯轉負</span> &nbsp;|&nbsp; MOVE指數發明人：<span style="color:#f0ebe0;font-weight:700">Harley Bassman</span> &nbsp;|&nbsp; GSE擔保：<span style="color:#f0ebe0;font-weight:700">本金安全等同公債</span></div>
+    <div class="implication"><div class="label">投資啟示</div>負凸性重燃意味著利率波動的「自我放大」機制回歸，MOVE 指數有上行壓力。<span style="color:#f0ebe0;font-weight:700">做多利率波動率（如 MOVE / 利率期權）作為尾部對沖</span>；持有 MBS 者應主動對沖凸性，警惕殖利率雙向急動引發的對沖踩踏。</div>
+  </div>
+
+</div>
+
+<div class="divider"></div>
+
+<div class="red-team" id="red-team">
+  <div class="red-team-title">&#128308; Red Team — 核心假設與反面論證</div>
+  <ul>
+    <li>假設1：沃什主導的鷹派轉向將持續，全年不降息成立。</li>
+    <li>假設2：殖利率上行的主導力量已從地緣供給衝擊切換為 Fed 政策、且更具黏性。</li>
+    <li>假設3：AI 降低再融資門檻將顯著加深 MBS 負凸性、推升債市波動。</li>
+    <li style="color:var(--red)">風險1：沃什刻意不提交預測、避免顯露鷹派立場，部分是為應對要求降息的川普總統 — 政治壓力可能反向迫使 Fed 提前轉鴿；且沃什自己也承認，連預期加息的委員都『缺乏十足信心』。</li>
+    <li style="color:var(--red)">風險2：SEP 顯示 2027 整體 PCE 預測幾乎未動（2.3%），中位數認為油價推動的通膨屬暫時性 — 若通膨如預期回落，殖利率上行的『Fed 重定價』敘事將快速逆轉。</li>
+    <li style="color:var(--red)">風險3：MBS 負凸性轉深需以『MBS 價格上升、殖利率下行』為前提；但當前環境是殖利率上行、Fed 鷹派，凸性效應在短期未必兌現，AI 滲透再融資市場亦需時間。</li>
+  </ul>
+  <p style="margin-top:10px;padding:10px 14px;background:rgba(224,85,69,0.04);border-radius:6px;font-size:0.9em;border-left:3px solid var(--red)">核心『偏空前端、警惕波動』邏輯短期成立，但屬政策驅動而非通膨基本面驅動，黏性存疑。關鍵變數有二：(1) 川普政治施壓若升級，沃什的『沉默』反而保留了快速轉鴿的彈性；(2) 若 2027 PCE 維持 2.3% 的暫時性判斷兌現，鷹派敘事將在 Q4 前瓦解。MBS 負凸性是結構性慢變量，是 2027 的波動主題而非即時交易。建議：戰術上偏空前端、戰略上以利率波動率多頭對沖雙向風險。</p>
+</div>
+
+<div class="callout" id="takeaways">
+  <div class="callout-title">基金經理人重點摘要</div>
+  <ul>
+    <li><strong>聯儲會：</strong>沃什鷹派時代，前瞻指引消失、點陣圖轉鷹。基準情境全年不加息也不降息。偏空美債前端，撤回年內降息押注。</li>
+    <li><strong>通膨：</strong>2026 整體 PCE 預測由 2.7% 大幅上調至 3.6%、核心 3.3%；但 2027 維持 2.3%，中位數視油價通膨為暫時性 — 緊盯油價是否打破此假設。</li>
+    <li><strong>殖利率：</strong>自 2 月戰爭以來上行逾 50bp，主導力量已從地緣供給切換為 Fed 重定價，黏性較強。做空前端勝率高於後端。</li>
+    <li><strong>股市：</strong>標普同期 +9%，AI 風險偏好抵銷 Fed 鷹派拖累；但若殖利率持續上行，高估值將承壓。</li>
+    <li><strong>債市波動：</strong>AI 將再融資門檻由 50-75bp 壓至 10-15bp，MBS 負凸性回歸，MOVE 指數有上行壓力。做多利率波動率作為尾部對沖。</li>
+    <li><strong>政治尾部：</strong>沃什不提交預測，部分為應對川普降息施壓 — 保留了快速轉鴿的彈性，鷹派敘事存在被政治逆轉的風險。</li>
+  </ul>
+</div>
+
+<div class="nav-links">
+  <span><a href="newsletter_103_china.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="footer">
+  彭博研究摘要 | 僅供教學與討論用途 | 2026年6月24日<br>
+  資料來源：Bloomberg Intelligence, Bloomberg Economics, Bloomberg News<br>
+  <a href="https://www.patreon.com/Aireturn">Patreon</a> · <a href="https://t.me/AIreturn">Telegram</a> · Threads @aireturn88
+</div>
+
+</body>
+</html>

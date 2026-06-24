@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>彭博研究摘要 #103 — 一條腿走路的中國經濟：生產強、需求弱，刺激恐再延後</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Noto+Serif+TC:wght@400;700&family=Source+Sans+Pro:wght@400;600;700&display=swap');
+  :root { --bg: #0a0a08; --card: #141410; --border: #2a2820; --accent: #c9a84c;
+          --gold: #f0d87a; --gold-dim: #c4b896; --text: #e0d8c8; --text-bright: #f0ebe0; --muted: #8a8070;
+          --green: #6bbd5b; --red: #e05545; --yellow: #d4a843; --orange: #d49040;
+          --purple: #b08cd0; --cyan: #4cc9b0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { background: #0a0a08 !important; }
+  body { color: var(--text); font-family: 'Source Sans Pro', 'Noto Serif TC', 'Microsoft JhengHei', sans-serif; line-height: 1.8; padding: 24px; max-width: 880px; margin: 0 auto; }
+  h1 { font-family: 'Playfair Display', 'Noto Serif TC', serif; color: var(--gold); font-size: 1.8em; margin-bottom: 4px; font-weight: 900; letter-spacing: 0.02em; }
+  h2 { font-family: 'Playfair Display', 'Noto Serif TC', serif; }
+  .subtitle { color: var(--text-bright); font-size: 0.95em; margin-bottom: 8px; font-family: 'Noto Serif TC', serif; }
+  .issue-badge { display: inline-block; background: rgba(201,168,76,0.15); color: var(--accent); padding: 4px 12px; border-radius: 12px; font-size: 0.8em; font-weight: 600; margin-bottom: 20px; border: 1px solid rgba(201,168,76,0.3); }
+  .tag { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 0.72em; font-weight: 600; margin-right: 4px; }
+  .tag-rates { background: rgba(201,168,76,0.15); color: var(--accent); }
+  .tag-china { background: rgba(212,144,64,0.15); color: var(--orange); }
+  .tag-japan { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-geo   { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-oil   { background: rgba(212,168,67,0.15); color: var(--yellow); }
+  .tag-trade { background: rgba(212,168,67,0.15); color: var(--yellow); }
+  .tag-growth{ background: rgba(107,189,91,0.15); color: var(--green); }
+  .tag-metals{ background: rgba(176,140,208,0.15); color: var(--purple); }
+  .tag-infl  { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-policy{ background: rgba(201,168,76,0.15); color: var(--accent); }
+  .tag-val   { background: rgba(107,189,91,0.15); color: var(--green); }
+  .tag-vol   { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-semi  { background: rgba(76,201,176,0.15); color: var(--cyan); }
+  .tag-credit{ background: rgba(176,140,208,0.15); color: var(--purple); }
+  .tag-space { background: rgba(201,168,76,0.15); color: var(--accent); }
+  .tag-misc  { background: rgba(138,128,112,0.15); color: var(--muted); }
+  .verdict-bar { background: var(--accent); color: #0a0a08; padding: 14px 20px; border-radius: 8px; margin-bottom: 20px; font-weight: 700; font-size: 1.05em; font-family: 'Noto Serif TC', serif; }
+  .section { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 22px; margin-bottom: 18px; }
+  .section h2 { color: var(--gold); font-size: 1.15em; margin-bottom: 12px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+  .section h3 { color: var(--accent); font-size: 0.95em; margin: 14px 0 6px; }
+  .article { margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid rgba(42,40,32,0.7); }
+  .article:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .article-title { color: var(--text-bright); font-weight: 700; font-size: 0.95em; margin-bottom: 4px; }
+  .article-title-cn { color: var(--muted); font-size: 0.85em; margin-bottom: 8px; }
+  .article p { font-size: 0.9em; margin: 6px 0; }
+  .data-point { background: rgba(201,168,76,0.05); padding: 8px 12px; border-radius: 6px; margin: 8px 0; font-size: 0.85em; border: 1px solid rgba(201,168,76,0.12); }
+  .data-point .num { color: var(--text-bright); font-weight: 700; }
+  .implication { background: rgba(201,168,76,0.06); border-left: 3px solid var(--accent); padding: 10px 14px; margin: 10px 0; border-radius: 0 6px 6px 0; font-size: 0.88em; }
+  .implication .label { color: var(--accent); font-weight: 700; font-size: 0.8em; text-transform: uppercase; margin-bottom: 4px; }
+  .red-team { background: rgba(224,85,69,0.06); border: 1px solid rgba(224,85,69,0.25); border-radius: 8px; padding: 18px; margin: 18px 0; }
+  .red-team-title { color: var(--red); font-weight: 700; font-size: 0.95em; margin-bottom: 10px; font-family: 'Playfair Display', serif; }
+  .red-team ul { padding-left: 18px; }
+  .red-team li { margin: 5px 0; font-size: 0.88em; }
+  .callout { background: rgba(201,168,76,0.06); border: 1px solid rgba(201,168,76,0.25); border-radius: 8px; padding: 18px; margin: 18px 0; }
+  .callout-title { color: var(--accent); font-weight: 700; font-size: 0.95em; margin-bottom: 8px; font-family: 'Playfair Display', 'Noto Serif TC', serif; }
+  .callout ul { padding-left: 18px; }
+  .callout li { margin: 5px 0; font-size: 0.88em; }
+  ul { padding-left: 18px; }
+  li { margin: 4px 0; font-size: 0.88em; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(201,168,76,0.05); padding: 12px; border-radius: 6px; text-align: center; border: 1px solid rgba(201,168,76,0.1); }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: var(--gold); font-family: 'Playfair Display', serif; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
+  .toc { background: rgba(201,168,76,0.04); border: 1px solid rgba(201,168,76,0.18); border-radius: 8px; padding: 16px 20px; margin-bottom: 20px; }
+  .toc-title { color: var(--accent); font-weight: 700; font-size: 0.9em; margin-bottom: 8px; }
+  .toc a { color: var(--accent); text-decoration: none; font-size: 0.88em; }
+  .toc a:hover { text-decoration: underline; color: var(--gold); }
+  .toc ol { padding-left: 20px; }
+  .toc li { margin: 4px 0; }
+  .nav-links { display: flex; justify-content: space-between; margin: 20px 0; font-size: 0.85em; }
+  .nav-links a { color: var(--accent); text-decoration: none; }
+  .nav-links a:hover { text-decoration: underline; color: var(--gold); }
+  .divider { height: 1px; background: linear-gradient(90deg, transparent, var(--accent), transparent); margin: 24px 0; opacity: 0.4; }
+  .footer { text-align: center; color: var(--muted); font-size: 0.75em; margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--border); }
+  .footer a { color: var(--accent); text-decoration: none; }
+</style>
+<script>if(window.self===window.top&&sessionStorage.getItem("student_auth")!=="1"){document.body.innerHTML="";window.location.replace("student.html");}</script>
+</head>
+<body>
+
+<h1>彭博研究摘要</h1>
+<p class="subtitle">第103期 | 一條腿走路的中國經濟：生產強、需求弱，刺激恐再延後</p>
+<span class="issue-badge">2026年六月下旬更新</span>
+
+<div class="verdict-bar">結論：中東緩和讓出口續強，反而降低北京刺激緊迫性 — 整體增速雖穩、內需卻在惡化。Q2 GDP放緩至4.4%，財政連三個月緊縮、貨幣刺激縮水，樓市落底要等2027。做多中國AI/高技術製造產業鏈，淡化消費與地產相關內需資產，並對沖中美稀土反制升級的尾部風險。</div>
+
+<div class="nav-links">
+  <span><a href="newsletter_102_geopolitics_rates.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="toc">
+  <div class="toc-title">目錄</div>
+  <ol>
+    <li><a href="#dual-speed">雙速經濟 出口AI狂飆，內需卻在塌陷</a></li>
+    <li><a href="#fiscal-monetary">財政貨幣 財政連三月緊縮，央行只做技術微調</a></li>
+    <li><a href="#property">樓市 一線回暖救不了全局，落底要等2027</a></li>
+    <li><a href="#rare-earth">中美博弈 稀土反制：成本有限，訊號明確</a></li>
+    <li><a href="#red-team">Red Team 反面論證</a></li>
+    <li><a href="#takeaways">基金經理人重點摘要</a></li>
+  </ol>
+</div>
+
+<div class="section" id="dual-speed">
+  <h2><span class="tag tag-misc">雙速經濟</span> 出口AI狂飆，內需卻在塌陷</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--orange)">4.4%</div><div class="lbl">Q2 GDP增速預測
+（Q1為5.0%）</div></div>
+    <div class="stat"><div class="val" style="color:var(--green)">+51%</div><div class="lbl">5月高技術產品
+出口同比（4月+39%）</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">-4.1%</div><div class="lbl">前5月固定資產投資
+5月降幅擴至兩位數</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">一條腿走路的GDP — 生產強勁掩蓋了政策鬆懈的風險</div>
+    <p>彭博經濟研究警告，中國經濟的「雙速」分化比其他經濟體更深刻、更根深蒂固：新經濟與供應鏈韌性十足，傳統產業與消費卻日趨疲軟。受戰爭相關擾動影響，<span style="color:#f0ebe0;font-weight:700">Q2 GDP增速預計從Q1的5.0%放緩至4.4%</span>，全年維持 <span style="color:#f0ebe0;font-weight:700">4.5%</span>。出口前5個月暴增 <span style="color:#f0ebe0;font-weight:700">15.5%</span>（2021年以來同期最快），工業增加值增長 <span style="color:#f0ebe0;font-weight:700">5.4%</span>，主要由全球AI硬體需求拉動 —— 高技術產品出口5月同比飆 <span style="color:#f0ebe0;font-weight:700">51%</span>。但AI生態圈外一片冰冷：前5月固定資產投資同比降 <span style="color:#f0ebe0;font-weight:700">4.1%</span>，5月降幅擴至兩位數，社會消費品零售總額更出現2023年重啟以來首次同比下降。最大的風險在於：霍爾木茲海峽重開、能源恢復後，生產側的穩健反而會「催生政策上的鬆懈自滿」，促消費刺激恐推遲至2026年底甚至不出台。</p>
+    <div class="data-point">全年GDP目標：<span style="color:#f0ebe0;font-weight:700">4.5%</span> &nbsp;|&nbsp; 前5月出口：<span style="color:#f0ebe0;font-weight:700">+15.5%</span>（2021年來最快）| 工業增加值：<span style="color:#f0ebe0;font-weight:700">+5.4%</span> &nbsp;|&nbsp; 貨幣寬鬆縮水：<span style="color:#f0ebe0;font-weight:700">僅1次10bp降息+1次25bp降準</span>（年初預期為20bp+50bp）</div>
+    <div class="implication"><div class="label">投資啟示</div>生產數據愈強、刺激愈慢 —— 這是中國資產的核心錯配。<span style="color:#f0ebe0;font-weight:700">做多AI與高技術製造、電動車產業鏈</span>（出口與資本支出持續旺盛），<span style="color:#f0ebe0;font-weight:700">減持綁定內需、消費與就業的週期性資產</span>。關鍵窗口為 <span style="color:#f0ebe0;font-weight:700">7月下旬中央政治局會議</span>。</div>
+  </div>
+
+</div>
+
+<div class="section" id="fiscal-monetary">
+  <h2><span class="tag tag-misc">財政貨幣</span> 財政連三月緊縮，央行只做技術微調</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--red)">-4.1%</div><div class="lbl">前5月廣義財政支出
+（自2023來首現赤字收縮）</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">4.5%</div><div class="lbl">高盛Q3增長預測
+（由4.7%下調）</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">-36%</div><div class="lbl">5月土地出讓收入
+（連8月兩位數下滑）</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">中國推財政緊縮 — 自2023年以來首次削減財政赤字</div>
+    <p>儘管內需疲軟、增速放緩，北京仍逆勢收緊財政。彭博測算顯示，兩大政府預算前5個月綜合缺口同比降 <span style="color:#f0ebe0;font-weight:700">4.1%</span> 至 <span style="color:#f0ebe0;font-weight:700">3.16兆元（4,660億美元）</span>，為兩年多來首次出現赤字收縮；單5月支出降 <span style="color:#f0ebe0;font-weight:700">3.9%</span>，連續第三個月下降。基建相關支出5月同比降 <span style="color:#f0ebe0;font-weight:700">12%</span>（前月降18%），土地出讓收入暴跌近 <span style="color:#f0ebe0;font-weight:700">36%</span>，連續第八個月兩位數下滑。高盛指出「由於土地收入下降與政策性銀行支持減弱，Q2財政對增長的支撐弱於Q1」，並把第三季增速預期由 <span style="color:#f0ebe0;font-weight:700">4.7%下調至4.5%</span>，恰為全年目標下限。亮點是稅收5月增 <span style="color:#f0ebe0;font-weight:700">6.8%</span>（前5月+4.4%），主要來自對海外資本利得與外國收入的徵管強化。ING預計政府主導投資的反彈將在下半年出現，但能否抵消私人投資下滑仍高度不確定。</p>
+    <div class="data-point">綜合財政缺口：<span style="color:#f0ebe0;font-weight:700">3.16兆元（-4.1%）</span> &nbsp;|&nbsp; 5月基建支出：<span style="color:#f0ebe0;font-weight:700">-12%</span> &nbsp;|&nbsp; 5月土地收入：<span style="color:#f0ebe0;font-weight:700">-36%</span>（連8月雙位數降）| 5月稅收：<span style="color:#f0ebe0;font-weight:700">+6.8%</span> &nbsp;|&nbsp; 規劃基建投資：<span style="color:#f0ebe0;font-weight:700">7兆元</span></div>
+    <div class="implication"><div class="label">投資啟示</div>財政是「以犧牲增長換取緊縮」，下半年發力與否取決於7月政治局會議。<span style="color:#f0ebe0;font-weight:700">短期不押注大規模廣泛刺激</span>；若要博反彈，聚焦7兆元基建中的算力/網絡計算中心等結構性主線，而非全面地產刺激。</div>
+  </div>
+  <div class="article">
+    <div class="article-title">央行隔夜逆回購改革 — 是技術微調，而非戰略轉向</div>
+    <p>市場一度將潘功勝宣布的隔夜逆回購新機制解讀為PBOC準備效仿聯儲會、轉以隔夜利率為政策基準，彭博經濟研究認為「解讀過頭」。本質是優化流動性管理的技術性調整：操作時間由下午4點提前至3點，讓銀行在債市4:30收盤前有更多時間管理流動性；加點幅度由 <span style="color:#f0ebe0;font-weight:700">50bp下調至25bp</span>，但框架不變 —— <span style="color:#f0ebe0;font-weight:700">7天期逆回購利率仍是主要政策利率</span>，並決定隔夜利率定價，而非反過來。基於7天回購定盤利率的利率互換占衍生品市場高達 <span style="color:#f0ebe0;font-weight:700">98%</span>，使轉向隔夜錨不切實際。央行另研究設立非銀流動性支持宏觀審慎工具（解決2013年式的流動性分層脆弱），並創設面向境外央行類機構的人民幣回購工具，便利外資直接參與境內債市。</p>
+    <div class="data-point">主要政策利率：<span style="color:#f0ebe0;font-weight:700">7天逆回購（不變）</span> &nbsp;|&nbsp; 隔夜加點：<span style="color:#f0ebe0;font-weight:700">50bp→25bp</span> &nbsp;|&nbsp; 7天回購掛鉤互換佔比：<span style="color:#f0ebe0;font-weight:700">98%</span> &nbsp;|&nbsp; 新增：<span style="color:#f0ebe0;font-weight:700">境外央行人民幣回購工具（7天至3個月）</span></div>
+    <div class="implication"><div class="label">投資啟示</div>別把這次改革當成寬鬆訊號或政策框架轉變來交易。<span style="color:#f0ebe0;font-weight:700">人民幣利率前端的錨仍是7天逆回購</span> —— 利率互換定價邏輯不變；可關注境外央行回購工具對境內債市外資需求的邊際利多。</div>
+  </div>
+
+</div>
+
+<div class="section" id="property">
+  <h2><span class="tag tag-misc">樓市</span> 一線回暖救不了全局，落底要等2027</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--red)">-13.1%</div><div class="lbl">5月全國新房銷售面積
+（4月-9.5%）</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">-24.3%</div><div class="lbl">5月房地產開發投資
+（4月-20.1%）</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">2027</div><div class="lbl">全國樓市
+預計企穩時點</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">一線城市回暖，奈何中國樓市整體寒意尤深</div>
+    <p>中國樓市的回暖依然只是「一線現象」。5月全國新建商品房銷售面積同比降幅由4月的 <span style="color:#f0ebe0;font-weight:700">9.5% 擴大至13.1%</span>，疲軟集中於二、三線城市 —— 這些城市大多已取消購房限制，政策制定者在化解供需失衡上已無有效工具。房價分化顯著：一線繼續上漲，三線跌幅擴大。更嚴峻的是投資端，5月房地產開發投資同比驟降 <span style="color:#f0ebe0;font-weight:700">24.3%</span>（4月-20.1%），房屋新開工面積降 <span style="color:#f0ebe0;font-weight:700">24.6%</span>（前月-26.6%，僅略放緩）。彭博經濟研究估計本輪調整「進度條」已近 <span style="color:#f0ebe0;font-weight:700">70%</span>，但全國整體企穩可能要等到 <span style="color:#f0ebe0;font-weight:700">2027年</span>。由於低線城市仍在艱難消化龐大庫存，地產對財政（土地收入）與居民資產負債表的拖累短期難解，這正是內需疲軟的結構性根源。</p>
+    <div class="data-point">5月銷售面積：<span style="color:#f0ebe0;font-weight:700">-13.1%</span>（二三線為主）| 5月開發投資：<span style="color:#f0ebe0;font-weight:700">-24.3%</span> &nbsp;|&nbsp; 5月新開工：<span style="color:#f0ebe0;font-weight:700">-24.6%</span> &nbsp;|&nbsp; 調整進度：<span style="color:#f0ebe0;font-weight:700">約70%</span> &nbsp;|&nbsp; 企穩時點：<span style="color:#f0ebe0;font-weight:700">2027年</span></div>
+    <div class="implication"><div class="label">投資啟示</div>別被一線房價反彈誤導為全國轉折。<span style="color:#f0ebe0;font-weight:700">結構性看空地產鏈與低線城市相關信用</span>；土地收入續跌將壓制地方財政與居民信心，是「需求側刺激為何遲遲不來」的根本約束。地產落底前，內需復甦敘事不成立。</div>
+  </div>
+
+</div>
+
+<div class="section" id="rare-earth">
+  <h2><span class="tag tag-misc">中美博弈</span> 稀土反制：成本有限，訊號明確</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--orange)">10家</div><div class="lbl">被列出口管制的
+美國國防相關企業</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">46家</div><div class="lbl">被限政府採購的美企
+（含RTX、洛馬）</div></div>
+    <div class="stat"><div class="val">~40%</div><div class="lbl">磁體佔稀土
+氧化物需求</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">中國新出口管制向美國傳遞了何種信息</div>
+    <p>在川習北京會晤確立「中美建設性戰略穩定關係」僅一個月後，雙方關係再生波瀾。6月22日，中國商務部將 <span style="color:#f0ebe0;font-weight:700">10家</span> 美國國防相關企業列入出口管制名單，禁止出口兩用物項，當中包括兩家獲政府股權投資的稀土生產商 <span style="color:#f0ebe0;font-weight:700">MP Materials 與 USA Rare Earth</span>；同日財政部對 <span style="color:#f0ebe0;font-weight:700">46家</span> 美企（含 <span style="color:#f0ebe0;font-weight:700">RTX、洛克希德·馬丁、Anduril</span>）實施政府採購限制。彭博經濟研究指出，由於長期武器禁運，這些措施的直接經濟成本可能有限，但訊號明確：<span style="color:#f0ebe0;font-weight:700">中國將對任何被視為遏制其技術進步的美國行動做出強硬回應</span>，且北京對自身立場更有信心。中國主導2025年全球稀土與磁體生產（磁體約佔稀土氧化物需求 <span style="color:#f0ebe0;font-weight:700">40%</span>），管制已延伸至分離、金屬化、磁體燒結等技術。此舉發生在美方更新「1260H清單」（新增阿里巴巴、百度、比亞迪）兩週之後。</p>
+    <div class="data-point">出口管制名單：<span style="color:#f0ebe0;font-weight:700">10家美國防企業</span>（含MP Materials、USA Rare Earth）| 政府採購限制：<span style="color:#f0ebe0;font-weight:700">46家美企</span> &nbsp;|&nbsp; 中國稀土/磁體：<span style="color:#f0ebe0;font-weight:700">2025全球主導地位</span> &nbsp;|&nbsp; 美方1260H新增：<span style="color:#f0ebe0;font-weight:700">阿里、百度、比亞迪</span></div>
+    <div class="implication"><div class="label">投資啟示</div>雙方在元首會晤後試探新界線，短期不致破壞貿易休戰 —— 但系統性摩擦疊加美國國會持續施壓（要求把DeepSeek等列入清單）構成升級尾部風險。<span style="color:#f0ebe0;font-weight:700">對沖中美再升級</span>：偏多非中國稀土供應鏈（雖擴產需數年）、留意國防與先進製造名單擴大的波動。任何一方誤判都可能讓兩國重回對抗。</div>
+  </div>
+
+</div>
+
+<div class="divider"></div>
+
+<div class="red-team" id="red-team">
+  <div class="red-team-title">&#128308; Red Team — 核心假設與反面論證</div>
+  <ul>
+    <li>假設1：AI驅動的出口與高技術製造強勁，足以支撐全年4.5%增長目標</li>
+    <li>假設2：北京有政策空間，下半年（7月政治局會議後）終會出台促消費刺激</li>
+    <li>假設3：中美在元首會晤後均以『穩定』為首要任務，稀土反制不致升級為全面對抗</li>
+    <li style="color:var(--red)">風險1：生產側愈強，刺激緊迫性愈低 —— 正因出口韌性，財政已連三月緊縮、貨幣寬鬆縮水（降息10bp/降準25bp，低於年初預期），刺激可能推遲至2026年底甚至不出台</li>
+    <li style="color:var(--red)">風險2：內需正逼近臨界點 —— 5月零售自2023重啟來首次同比轉負、固投降幅擴至兩位數、新增就業仍不足以抵消傳統行業裁員，需求疲軟開始反噬供給</li>
+    <li style="color:var(--red)">風險3：地產落底要等2027、土地收入連8月暴跌（5月-36%）持續掏空地方財政與居民資產負債表；中美1260H清單與採購限制相互加碼，國會施壓下任一方誤判即可能升級</li>
+  </ul>
+  <p style="margin-top:10px;padding:10px 14px;background:rgba(224,85,69,0.04);border-radius:6px;font-size:0.9em;border-left:3px solid var(--red)">核心『雙速錯配』邏輯成立且自我強化：做多供給側（AI/高技術出口）、淡化需求側（消費/地產）的配置在Q2數據下站得住腳。但『下半年必有刺激』是最脆弱的一環 —— 觸發點是7月下旬政治局會議：若僅重申『生產者服務』而無針對就業/居民收入的需求側措施，則消費敘事破裂，內需資產將進一步下行。硬指標警戒線：(1) 若社零連續第二個月同比轉負且固投5月兩位數降幅延續，確認內需已反噬供給；(2) 若地產開發投資跌幅持續擴大（已從-20.1%走向-24.3%）、土地收入續暴跌，2027企穩時點恐再延後；(3) 若美方將DeepSeek等列入1260H、中方對等反制範圍擴及無人機/先進製造，稀土尾部風險將從『訊號』升級為『成本』。</p>
+</div>
+
+<div class="callout" id="takeaways">
+  <div class="callout-title">基金經理人重點摘要</div>
+  <ul>
+    <li><strong>核心配置：</strong>做多AI/高技術製造、電動車產業鏈（5月高技術出口+51%、資本支出旺盛）；減持綁定消費與地產的內需資產。雙速錯配是中國資產主線。</li>
+    <li><strong>增長：</strong>Q2 GDP料由5.0%放緩至4.4%，全年4.5%（高盛Q3由4.7%下調至4.5%，貼目標下限）。生產愈強、刺激愈慢。</li>
+    <li><strong>財政：</strong>自2023來首現赤字收縮（前5月-4.1%），基建支出降12%、土地收入降36%。短期不押注大規模廣泛刺激；要博反彈只看7兆元基建中的算力/計算中心主線。</li>
+    <li><strong>貨幣：</strong>PBOC隔夜逆回購改革僅為技術微調（加點50→25bp），7天逆回購仍是政策錨。別當寬鬆訊號交易；人民幣前端利率框架不變。</li>
+    <li><strong>樓市：</strong>一線回暖救不了全局，5月開發投資-24.3%、銷售面積-13.1%，企穩要等2027。結構性看空地產鏈與低線城市信用。</li>
+    <li><strong>中美稀土：</strong>反制(10家+46家美企)直接成本有限但訊號強硬。對沖再升級尾部風險，留意1260H清單與採購限制相互加碼。</li>
+    <li><strong>關鍵催化：</strong>7月下旬中央政治局會議 —— 若無需求側(就業/收入)措施，消費復甦敘事破裂，做多供給/做空需求的剪刀差將進一步擴大。</li>
+  </ul>
+</div>
+
+<div class="nav-links">
+  <span><a href="newsletter_102_geopolitics_rates.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="footer">
+  彭博研究摘要 | 僅供教學與討論用途 | 2026年6月24日<br>
+  資料來源：Bloomberg Intelligence, Bloomberg Economics, Bloomberg News<br>
+  <a href="https://www.patreon.com/Aireturn">Patreon</a> · <a href="https://t.me/AIreturn">Telegram</a> · Threads @aireturn88
+</div>
+
+</body>
+</html>

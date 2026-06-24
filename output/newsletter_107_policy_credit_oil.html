@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>彭博研究摘要 #107 — 油價降溫、AI政治化與系統化信用新紀元</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Noto+Serif+TC:wght@400;700&family=Source+Sans+Pro:wght@400;600;700&display=swap');
+  :root { --bg: #0a0a08; --card: #141410; --border: #2a2820; --accent: #c9a84c;
+          --gold: #f0d87a; --gold-dim: #c4b896; --text: #e0d8c8; --text-bright: #f0ebe0; --muted: #8a8070;
+          --green: #6bbd5b; --red: #e05545; --yellow: #d4a843; --orange: #d49040;
+          --purple: #b08cd0; --cyan: #4cc9b0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { background: #0a0a08 !important; }
+  body { color: var(--text); font-family: 'Source Sans Pro', 'Noto Serif TC', 'Microsoft JhengHei', sans-serif; line-height: 1.8; padding: 24px; max-width: 880px; margin: 0 auto; }
+  h1 { font-family: 'Playfair Display', 'Noto Serif TC', serif; color: var(--gold); font-size: 1.8em; margin-bottom: 4px; font-weight: 900; letter-spacing: 0.02em; }
+  h2 { font-family: 'Playfair Display', 'Noto Serif TC', serif; }
+  .subtitle { color: var(--text-bright); font-size: 0.95em; margin-bottom: 8px; font-family: 'Noto Serif TC', serif; }
+  .issue-badge { display: inline-block; background: rgba(201,168,76,0.15); color: var(--accent); padding: 4px 12px; border-radius: 12px; font-size: 0.8em; font-weight: 600; margin-bottom: 20px; border: 1px solid rgba(201,168,76,0.3); }
+  .tag { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 0.72em; font-weight: 600; margin-right: 4px; }
+  .tag-rates { background: rgba(201,168,76,0.15); color: var(--accent); }
+  .tag-china { background: rgba(212,144,64,0.15); color: var(--orange); }
+  .tag-japan { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-geo   { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-oil   { background: rgba(212,168,67,0.15); color: var(--yellow); }
+  .tag-trade { background: rgba(212,168,67,0.15); color: var(--yellow); }
+  .tag-growth{ background: rgba(107,189,91,0.15); color: var(--green); }
+  .tag-metals{ background: rgba(176,140,208,0.15); color: var(--purple); }
+  .tag-infl  { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-policy{ background: rgba(201,168,76,0.15); color: var(--accent); }
+  .tag-val   { background: rgba(107,189,91,0.15); color: var(--green); }
+  .tag-vol   { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-semi  { background: rgba(76,201,176,0.15); color: var(--cyan); }
+  .tag-credit{ background: rgba(176,140,208,0.15); color: var(--purple); }
+  .tag-space { background: rgba(201,168,76,0.15); color: var(--accent); }
+  .tag-misc  { background: rgba(138,128,112,0.15); color: var(--muted); }
+  .verdict-bar { background: var(--accent); color: #0a0a08; padding: 14px 20px; border-radius: 8px; margin-bottom: 20px; font-weight: 700; font-size: 1.05em; font-family: 'Noto Serif TC', serif; }
+  .section { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 22px; margin-bottom: 18px; }
+  .section h2 { color: var(--gold); font-size: 1.15em; margin-bottom: 12px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+  .section h3 { color: var(--accent); font-size: 0.95em; margin: 14px 0 6px; }
+  .article { margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid rgba(42,40,32,0.7); }
+  .article:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .article-title { color: var(--text-bright); font-weight: 700; font-size: 0.95em; margin-bottom: 4px; }
+  .article-title-cn { color: var(--muted); font-size: 0.85em; margin-bottom: 8px; }
+  .article p { font-size: 0.9em; margin: 6px 0; }
+  .data-point { background: rgba(201,168,76,0.05); padding: 8px 12px; border-radius: 6px; margin: 8px 0; font-size: 0.85em; border: 1px solid rgba(201,168,76,0.12); }
+  .data-point .num { color: var(--text-bright); font-weight: 700; }
+  .implication { background: rgba(201,168,76,0.06); border-left: 3px solid var(--accent); padding: 10px 14px; margin: 10px 0; border-radius: 0 6px 6px 0; font-size: 0.88em; }
+  .implication .label { color: var(--accent); font-weight: 700; font-size: 0.8em; text-transform: uppercase; margin-bottom: 4px; }
+  .red-team { background: rgba(224,85,69,0.06); border: 1px solid rgba(224,85,69,0.25); border-radius: 8px; padding: 18px; margin: 18px 0; }
+  .red-team-title { color: var(--red); font-weight: 700; font-size: 0.95em; margin-bottom: 10px; font-family: 'Playfair Display', serif; }
+  .red-team ul { padding-left: 18px; }
+  .red-team li { margin: 5px 0; font-size: 0.88em; }
+  .callout { background: rgba(201,168,76,0.06); border: 1px solid rgba(201,168,76,0.25); border-radius: 8px; padding: 18px; margin: 18px 0; }
+  .callout-title { color: var(--accent); font-weight: 700; font-size: 0.95em; margin-bottom: 8px; font-family: 'Playfair Display', 'Noto Serif TC', serif; }
+  .callout ul { padding-left: 18px; }
+  .callout li { margin: 5px 0; font-size: 0.88em; }
+  ul { padding-left: 18px; }
+  li { margin: 4px 0; font-size: 0.88em; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(201,168,76,0.05); padding: 12px; border-radius: 6px; text-align: center; border: 1px solid rgba(201,168,76,0.1); }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: var(--gold); font-family: 'Playfair Display', serif; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
+  .toc { background: rgba(201,168,76,0.04); border: 1px solid rgba(201,168,76,0.18); border-radius: 8px; padding: 16px 20px; margin-bottom: 20px; }
+  .toc-title { color: var(--accent); font-weight: 700; font-size: 0.9em; margin-bottom: 8px; }
+  .toc a { color: var(--accent); text-decoration: none; font-size: 0.88em; }
+  .toc a:hover { text-decoration: underline; color: var(--gold); }
+  .toc ol { padding-left: 20px; }
+  .toc li { margin: 4px 0; }
+  .nav-links { display: flex; justify-content: space-between; margin: 20px 0; font-size: 0.85em; }
+  .nav-links a { color: var(--accent); text-decoration: none; }
+  .nav-links a:hover { text-decoration: underline; color: var(--gold); }
+  .divider { height: 1px; background: linear-gradient(90deg, transparent, var(--accent), transparent); margin: 24px 0; opacity: 0.4; }
+  .footer { text-align: center; color: var(--muted); font-size: 0.75em; margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--border); }
+  .footer a { color: var(--accent); text-decoration: none; }
+</style>
+<script>if(window.self===window.top&&sessionStorage.getItem("student_auth")!=="1"){document.body.innerHTML="";window.location.replace("student.html");}</script>
+</head>
+<body>
+
+<h1>彭博研究摘要</h1>
+<p class="subtitle">第107期 | 油價降溫、AI政治化與系統化信用新紀元</p>
+<span class="issue-badge">2026年六月下旬更新</span>
+
+<div class="verdict-bar">結論：霍爾木茲復航壓低油價至 $77、全球通膨5月見頂，降息敘事重獲支撐 — **做多前端利率期貨**；同時警惕AI監管「信任政治」與系統化策略對信用市場的結構性衝擊。</div>
+
+<div class="nav-links">
+  <span><a href="newsletter_106_geopolitics.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="toc">
+  <div class="toc-title">目錄</div>
+  <ol>
+    <li><a href="#oil-hormuz-inflation">石油與通膨 霍爾木茲復航，通膨見頂</a></li>
+    <li><a href="#ai-policy-anthropic">AI政策 信任政治，監管反噬</a></li>
+    <li><a href="#systematic-credit">系統化信用 LLM重塑固定收益主動管理</a></li>
+    <li><a href="#red-team">Red Team 反面論證</a></li>
+    <li><a href="#takeaways">基金經理人重點摘要</a></li>
+  </ol>
+</div>
+
+<div class="section" id="oil-hormuz-inflation">
+  <h2><span class="tag tag-misc">石油與通膨</span> 霍爾木茲復航，通膨見頂</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--green)">&lt;$77</div><div class="lbl">原油現價
+（每桶）</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">~1,000萬桶/日</div><div class="lbl">海峽石油流量
+約戰前一半</div></div>
+    <div class="stat"><div class="val" style="color:var(--green)">-0.3~0.4pp</div><div class="lbl">油價跌至$70
+對通膨拖累</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">霍爾木茲海峽復航 — 油價回落為全球通膨鬆綁</div>
+    <p>在美伊簽署恢復通航諒解備忘錄近一周後，霍爾木茲海峽油運恢復至自 <span style="color:#f0ebe0;font-weight:700">2月下旬</span> 戰爭爆發以來最高水平。6月19至23日，至少 <span style="color:#f0ebe0;font-weight:700">23艘超級油輪</span> 載運逾 <span style="color:#f0ebe0;font-weight:700">3,500萬桶</span> 原油駛離；伊朗自身6月17至23日出口逾 <span style="color:#f0ebe0;font-weight:700">3,200萬桶</span>，其中約1,200萬桶經海峽運出。過去七天海峽平均流量回升至約 <span style="color:#f0ebe0;font-weight:700">每天1,000萬桶</span>，約為戰前一半，但已是開戰以來最高。疊加美國廣泛制裁豁免與海峽外港口出口激增，油價跌破 <span style="color:#f0ebe0;font-weight:700">每桶77美元</span>。彭博Nowcast顯示發達經濟體通膨已小幅回落 — 6月美國CPI即時預測 <span style="color:#f0ebe0;font-weight:700">3.9%</span>、歐元區與加拿大 <span style="color:#f0ebe0;font-weight:700">2.6%</span>、瑞士 <span style="color:#f0ebe0;font-weight:700">0.4%</span>，多數經濟體整體通膨可能已在 <span style="color:#f0ebe0;font-weight:700">5月見頂</span>。</p>
+    <div class="data-point">海峽流量：<span style="color:#f0ebe0;font-weight:700">~1,000萬桶/日（戰前一半）</span> &nbsp;|&nbsp; 美伊6月出口：<span style="color:#f0ebe0;font-weight:700">&gt;3,200萬桶</span> &nbsp;|&nbsp; UAE/沙特繞行：<span style="color:#f0ebe0;font-weight:700">+500萬桶/日</span> &nbsp;|&nbsp; 全球供應缺口：<span style="color:#f0ebe0;font-weight:700">縮至&lt;500萬桶/日（戰前需求5%）</span></div>
+    <div class="implication"><div class="label">投資啟示</div>通膨見頂 + 油價回落重新打開降息空間。<span style="color:#f0ebe0;font-weight:700">做多前端利率期貨</span>；能源股獲利了結，留意伊朗60天後徵收強制「服務費」的尾部風險。</div>
+  </div>
+  <div class="article">
+    <div class="article-title">SHOK模型：油價若守住$70，五大經濟體通膨同步走低</div>
+    <p>彭博經濟研究全球SHOK模型顯示，若美伊持久協議維持、布倫特原油穩定在 <span style="color:#f0ebe0;font-weight:700">每桶70美元</span>（略高於戰前水平），相較3月基準預測，美國、英國、歐元區、日本與中國通膨將回落 <span style="color:#f0ebe0;font-weight:700">0.3至0.4個百分點</span>，多數經濟體成長則獲 <span style="color:#f0ebe0;font-weight:700">0.1至0.2個百分點</span> 提振。值得注意的是，美國作為主要能源生產國，戰時高油價提供了緩衝，因此油價下跌時受益相對較小。風險仍多：全球原油與油品庫存持續下降、水雷威脅未除、歐洲掃雷行動尚未實施，且美伊談判可能偏離軌道。空載油輪駛入海峽數量依然偏低，反映貨主仍憂慮衝突重燃。此前模型假設為Q3每桶90美元、Q4每桶85美元，下修幅度可觀。</p>
+    <div class="data-point">通膨下修：<span style="color:#f0ebe0;font-weight:700">美/英/歐/日/中 -0.3~0.4pp</span> &nbsp;|&nbsp; 成長提振：<span style="color:#f0ebe0;font-weight:700">+0.1~0.2pp</span> &nbsp;|&nbsp; 舊假設：<span style="color:#f0ebe0;font-weight:700">Q3 $90、Q4 $85</span> &nbsp;|&nbsp; 美國受益：<span style="color:#f0ebe0;font-weight:700">較小（能源生產國）</span></div>
+    <div class="implication"><div class="label">投資啟示</div>油價是通膨與央行路徑的核心搖擺變數。基準情境利多久期資產 — <span style="color:#f0ebe0;font-weight:700">增持已開發市場政府債</span>；但須對沖中東衝突重燃的尾部風險（Brent反彈情境）。</div>
+  </div>
+
+</div>
+
+<div class="section" id="ai-policy-anthropic">
+  <h2><span class="tag tag-misc">AI政策</span> 信任政治，監管反噬</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--red)">Fable 5 / Mythos 5</div><div class="lbl">被限制外國
+公民訪問的模型</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">1家</div><div class="lbl">被點名
+（非全行業）</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">供應鏈風險</div><div class="lbl">美政府對
+Anthropic定性</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">Anthropic 與華盛頓的宿怨 — 監管倡導者反成被監管對象</div>
+    <p>川普政府以國家安全為由，要求 Anthropic 暫停外國公民訪問旗下 <span style="color:#f0ebe0;font-weight:700">Fable 5</span> 與 <span style="color:#f0ebe0;font-weight:700">Mythos 5</span> 模型，商務部長盧特尼克在信中列舉出口管制法律依據，但未說明具體技術門檻。官方擔憂指向「越獄」漏洞 — Fable 5 在安全防護被繞過後或可被引導識別軟件漏洞。然而英國AI安全研究所指出，越獄漏洞在所有前沿系統中 <span style="color:#f0ebe0;font-weight:700">普遍存在</span>，《2026國際AI安全報告》亦然，意味問題並非 Anthropic 獨有。更深層摩擦帶有政治色彩：Anthropic 曾是主張國安監管前沿AI的主要推手，如今卻成被監管對象；1月起因堅持 Claude 軍事用途限制與五角大樓僵持，2月遭美政府列為 <span style="color:#f0ebe0;font-weight:700">供應鏈風險</span> — 一名防務官員稱該認定「受意識形態驅動」。</p>
+    <div class="data-point">受限模型：<span style="color:#f0ebe0;font-weight:700">Fable 5、Mythos 5</span> &nbsp;|&nbsp; 觸發者：<span style="color:#f0ebe0;font-weight:700">亞馬遜CEO Jassy 向財長貝森特反映安全隱患</span> &nbsp;|&nbsp; 對手陣營：<span style="color:#f0ebe0;font-weight:700">OpenAI、Google、xAI 已向政府靠攏</span> &nbsp;|&nbsp; 解方：<span style="color:#f0ebe0;font-weight:700">或為「態度調整」而非技術修補</span></div>
+    <div class="implication"><div class="label">投資啟示</div>前沿AI管控正由「信任政治經濟學」驅動，而非純技術門檻。<span style="color:#f0ebe0;font-weight:700">重估 AI 政策風險溢價</span> — 過度依賴單一前沿模型、且與華盛頓關係緊張的供應商存在合約與供應鏈中斷風險。</div>
+  </div>
+
+</div>
+
+<div class="section" id="systematic-credit">
+  <h2><span class="tag tag-misc">系統化信用</span> LLM重塑固定收益主動管理</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val">10,000小時</div><div class="lbl">深度基本面投資
+的傳統技能門檻</div></div>
+    <div class="stat"><div class="val">IALT</div><div class="lbl">貝萊德新系統化
+另類主動ETF</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">利率脫鉤</div><div class="lbl">系統化策略
+關注主題</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">貝萊德 Rosenberg：LLM 讓系統化策略迎來「花生醬巧克力」時刻</div>
+    <p>貝萊德系統化部門固定收益資深經理 Jeffrey Rosenberg 表示，大型語言模型（LLM）讓團隊得以重新思考能從工具與技術中萃取的「預期技能」。他打比方：若深度基本面價值投資需投入 <span style="color:#f0ebe0;font-weight:700">10,000小時</span> 打造高技能、高集中度組合，如今技術或讓系統化策略達成類似效果 — 這是對「最大化微小優勢」舊模式的演進。在 Bloomberg Intelligence 的 Credit Crunch 播客中，他與 Noel Hebert 討論了 <span style="color:#f0ebe0;font-weight:700">利率脫鉤（rates decorrelation）</span>、系統化策略的「花生醬巧克力」融合時刻，以及公司最新流動性系統化策略產品 <span style="color:#f0ebe0;font-weight:700">iShares Systematic Alternatives Active ETF（IALT）</span>。此為 BI 旗下 FICC Focus 系列內容。</p>
+    <div class="data-point">傳統技能門檻：<span style="color:#f0ebe0;font-weight:700">10,000小時深度基本面</span> &nbsp;|&nbsp; 新產品：<span style="color:#f0ebe0;font-weight:700">iShares IALT（系統化另類主動ETF）</span> &nbsp;|&nbsp; 關鍵主題：<span style="color:#f0ebe0;font-weight:700">利率脫鉤、系統化×基本面融合</span></div>
+    <div class="implication"><div class="label">投資啟示</div>系統化 + AI 正侵蝕傳統主動信用管理的護城河。<span style="color:#f0ebe0;font-weight:700">關注流動性系統化策略（如 IALT）配置機會</span>，並重新評估純人力基本面團隊的費率合理性。</div>
+  </div>
+
+</div>
+
+<div class="divider"></div>
+
+<div class="red-team" id="red-team">
+  <div class="red-team-title">&#128308; Red Team — 核心假設與反面論證</div>
+  <ul>
+    <li>假設1：美伊諒解備忘錄持久維持，霍爾木茲復航不可逆，油價穩守$70-77</li>
+    <li>假設2：油價回落足以將通膨壓回降息可接受區間，央行下半年轉鴿</li>
+    <li>假設3：AI監管屬個案政治摩擦，不會升級為全行業出口管制</li>
+    <li style="color:var(--red)">風險1：海峽流量仍僅戰前一半、空載油輪稀少、水雷未清、歐洲掃雷未啟動 — 復航脆弱；伊朗60天後將徵收強制「服務費」，握有持久控制籌碼</li>
+    <li style="color:var(--red)">風險2：美國6月CPI Nowcast仍高達 **3.9%**，距目標尚遠；美國作為能源生產國油價下跌受益最小，通膨黏性或延緩Fed轉向</li>
+    <li style="color:var(--red)">風險3：Anthropic 被列供應鏈風險、解方或僅需「態度調整」，顯示監管由信任政治驅動 — 門檻不透明意味未來限制可能蔓延至其他供應商與盟國訪問權</li>
+  </ul>
+  <p style="margin-top:10px;padding:10px 14px;background:rgba(224,85,69,0.04);border-radius:6px;font-size:0.9em;border-left:3px solid var(--red)">核心降息邏輯（油價降溫→通膨見頂→做多前端利率）成立，但建立在脆弱的地緣平衡上。觸發條件：若布倫特重返並站穩 $90 以上兩個月，或海峽再度封鎖，0.3-0.4pp 的通膨利好將反轉，降息敘事失效；美國CPI 3.9% 也提示寬鬆空間遠不如歐元區（2.6%）。AI 監管風險屬結構性而非週期性 — 不影響利率主線，但對科技/AI供應鏈估值構成獨立尾部風險。</p>
+</div>
+
+<div class="callout" id="takeaways">
+  <div class="callout-title">基金經理人重點摘要</div>
+  <ul>
+    <li><strong>石油：</strong>霍爾木茲復航，油價跌破 $77，過去七天流量回升至約1,000萬桶/日。能源股獲利了結。</li>
+    <li><strong>通膨：</strong>全球通膨料5月見頂，6月美國CPI Nowcast 3.9%、歐元區2.6%。油價若守 $70，五大經濟體通膨再降 0.3-0.4pp。</li>
+    <li><strong>利率：</strong>降息空間重啟 — <strong>做多前端利率期貨、增持已開發市場政府債</strong>；對沖Brent反彈至 $90+ 的尾部風險。</li>
+    <li><strong>AI政策：</strong>Fable 5/Mythos 5 遭限制外國訪問，Anthropic 被列供應鏈風險。監管由「信任政治」驅動 — <strong>重估前沿AI供應鏈集中度風險</strong>。</li>
+    <li><strong>信用：</strong>貝萊德以 LLM 重塑系統化固定收益，推出 IALT。<strong>關注系統化×基本面融合策略</strong>，重估純人力主動管理費率。</li>
+    <li><strong>尾部風險：</strong>伊朗60天後徵海峽「服務費」、水雷未清、美CPI黏性 — 復航與降息敘事均屬脆弱平衡，需動態對沖。</li>
+  </ul>
+</div>
+
+<div class="nav-links">
+  <span><a href="newsletter_106_geopolitics.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="footer">
+  彭博研究摘要 | 僅供教學與討論用途 | 2026年6月24日<br>
+  資料來源：Bloomberg Intelligence, Bloomberg Economics, Bloomberg News<br>
+  <a href="https://www.patreon.com/Aireturn">Patreon</a> · <a href="https://t.me/AIreturn">Telegram</a> · Threads @aireturn88
+</div>
+
+</body>
+</html>
