@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>彭博研究摘要 #114 — 監管收緊與流動性寬鬆：雲端巨頭遭歐盟盯上，中國央行維穩債市</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Noto+Serif+TC:wght@400;700&family=Source+Sans+Pro:wght@400;600;700&display=swap');
+  :root { --bg: #0a0a08; --card: #141410; --border: #2a2820; --accent: #c9a84c;
+          --gold: #f0d87a; --gold-dim: #c4b896; --text: #e0d8c8; --text-bright: #f0ebe0; --muted: #8a8070;
+          --green: #6bbd5b; --red: #e05545; --yellow: #d4a843; --orange: #d49040;
+          --purple: #b08cd0; --cyan: #4cc9b0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { background: #0a0a08 !important; }
+  body { color: var(--text); font-family: 'Source Sans Pro', 'Noto Serif TC', 'Microsoft JhengHei', sans-serif; line-height: 1.8; padding: 24px; max-width: 880px; margin: 0 auto; }
+  h1 { font-family: 'Playfair Display', 'Noto Serif TC', serif; color: var(--gold); font-size: 1.8em; margin-bottom: 4px; font-weight: 900; letter-spacing: 0.02em; }
+  h2 { font-family: 'Playfair Display', 'Noto Serif TC', serif; }
+  .subtitle { color: var(--text-bright); font-size: 0.95em; margin-bottom: 8px; font-family: 'Noto Serif TC', serif; }
+  .issue-badge { display: inline-block; background: rgba(201,168,76,0.15); color: var(--accent); padding: 4px 12px; border-radius: 12px; font-size: 0.8em; font-weight: 600; margin-bottom: 20px; border: 1px solid rgba(201,168,76,0.3); }
+  .tag { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 0.72em; font-weight: 600; margin-right: 4px; }
+  .tag-rates { background: rgba(201,168,76,0.15); color: var(--accent); }
+  .tag-china { background: rgba(212,144,64,0.15); color: var(--orange); }
+  .tag-japan { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-geo   { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-oil   { background: rgba(212,168,67,0.15); color: var(--yellow); }
+  .tag-trade { background: rgba(212,168,67,0.15); color: var(--yellow); }
+  .tag-growth{ background: rgba(107,189,91,0.15); color: var(--green); }
+  .tag-metals{ background: rgba(176,140,208,0.15); color: var(--purple); }
+  .tag-infl  { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-policy{ background: rgba(201,168,76,0.15); color: var(--accent); }
+  .tag-val   { background: rgba(107,189,91,0.15); color: var(--green); }
+  .tag-vol   { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-semi  { background: rgba(76,201,176,0.15); color: var(--cyan); }
+  .tag-credit{ background: rgba(176,140,208,0.15); color: var(--purple); }
+  .tag-space { background: rgba(201,168,76,0.15); color: var(--accent); }
+  .tag-misc  { background: rgba(138,128,112,0.15); color: var(--muted); }
+  .verdict-bar { background: var(--accent); color: #0a0a08; padding: 14px 20px; border-radius: 8px; margin-bottom: 20px; font-weight: 700; font-size: 1.05em; font-family: 'Noto Serif TC', serif; }
+  .section { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 22px; margin-bottom: 18px; }
+  .section h2 { color: var(--gold); font-size: 1.15em; margin-bottom: 12px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+  .section h3 { color: var(--accent); font-size: 0.95em; margin: 14px 0 6px; }
+  .article { margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid rgba(42,40,32,0.7); }
+  .article:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .article-title { color: var(--text-bright); font-weight: 700; font-size: 0.95em; margin-bottom: 4px; }
+  .article-title-cn { color: var(--muted); font-size: 0.85em; margin-bottom: 8px; }
+  .article p { font-size: 0.9em; margin: 6px 0; }
+  .data-point { background: rgba(201,168,76,0.05); padding: 8px 12px; border-radius: 6px; margin: 8px 0; font-size: 0.85em; border: 1px solid rgba(201,168,76,0.12); }
+  .data-point .num { color: var(--text-bright); font-weight: 700; }
+  .implication { background: rgba(201,168,76,0.06); border-left: 3px solid var(--accent); padding: 10px 14px; margin: 10px 0; border-radius: 0 6px 6px 0; font-size: 0.88em; }
+  .implication .label { color: var(--accent); font-weight: 700; font-size: 0.8em; text-transform: uppercase; margin-bottom: 4px; }
+  .red-team { background: rgba(224,85,69,0.06); border: 1px solid rgba(224,85,69,0.25); border-radius: 8px; padding: 18px; margin: 18px 0; }
+  .red-team-title { color: var(--red); font-weight: 700; font-size: 0.95em; margin-bottom: 10px; font-family: 'Playfair Display', serif; }
+  .red-team ul { padding-left: 18px; }
+  .red-team li { margin: 5px 0; font-size: 0.88em; }
+  .callout { background: rgba(201,168,76,0.06); border: 1px solid rgba(201,168,76,0.25); border-radius: 8px; padding: 18px; margin: 18px 0; }
+  .callout-title { color: var(--accent); font-weight: 700; font-size: 0.95em; margin-bottom: 8px; font-family: 'Playfair Display', 'Noto Serif TC', serif; }
+  .callout ul { padding-left: 18px; }
+  .callout li { margin: 5px 0; font-size: 0.88em; }
+  ul { padding-left: 18px; }
+  li { margin: 4px 0; font-size: 0.88em; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(201,168,76,0.05); padding: 12px; border-radius: 6px; text-align: center; border: 1px solid rgba(201,168,76,0.1); }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: var(--gold); font-family: 'Playfair Display', serif; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
+  .toc { background: rgba(201,168,76,0.04); border: 1px solid rgba(201,168,76,0.18); border-radius: 8px; padding: 16px 20px; margin-bottom: 20px; }
+  .toc-title { color: var(--accent); font-weight: 700; font-size: 0.9em; margin-bottom: 8px; }
+  .toc a { color: var(--accent); text-decoration: none; font-size: 0.88em; }
+  .toc a:hover { text-decoration: underline; color: var(--gold); }
+  .toc ol { padding-left: 20px; }
+  .toc li { margin: 4px 0; }
+  .nav-links { display: flex; justify-content: space-between; margin: 20px 0; font-size: 0.85em; }
+  .nav-links a { color: var(--accent); text-decoration: none; }
+  .nav-links a:hover { text-decoration: underline; color: var(--gold); }
+  .divider { height: 1px; background: linear-gradient(90deg, transparent, var(--accent), transparent); margin: 24px 0; opacity: 0.4; }
+  .footer { text-align: center; color: var(--muted); font-size: 0.75em; margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--border); }
+  .footer a { color: var(--accent); text-decoration: none; }
+</style>
+<script>if(window.self===window.top&&sessionStorage.getItem("student_auth")!=="1"){document.body.innerHTML="";window.location.replace("student.html");}</script>
+</head>
+<body>
+
+<h1>彭博研究摘要</h1>
+<p class="subtitle">第114期 | 監管收緊與流動性寬鬆：雲端巨頭遭歐盟盯上，中國央行維穩債市</p>
+<span class="issue-badge">2026年七月上旬更新</span>
+
+<div class="verdict-bar">結論：歐盟DMA監管風險升溫，AWS/Azure護城河面臨政策折價；中國央行隔夜逆回購常態化壓低債市尾部風險，做多在岸人民幣債券與離岸避險資產。</div>
+
+<div class="nav-links">
+  <span><a href="newsletter_113_uncategorized.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="toc">
+  <div class="toc-title">目錄</div>
+  <ol>
+    <li><a href="#eu-cloud-dma">科技監管 雲端雙雄淪為「守門人」</a></li>
+    <li><a href="#pboc-repo-cny-bonds">中國利率 隔夜逆回購維穩，人民幣債成避險資產</a></li>
+    <li><a href="#red-team">Red Team 反面論證</a></li>
+    <li><a href="#takeaways">基金經理人重點摘要</a></li>
+  </ol>
+</div>
+
+<div class="section" id="eu-cloud-dma">
+  <h2><span class="tag tag-misc">科技監管</span> 雲端雙雄淪為「守門人」</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--orange)">6個月</div><div class="lbl">確定認定後
+合規緩衝期</div></div>
+    <div class="stat"><div class="val">11月</div><div class="lbl">歐盟啟動
+DMA調查</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">AWS+Azure</div><div class="lbl">被點名的
+雲端服務</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">歐盟擬將AWS與Azure納入DMA — 雲端護城河面臨政策折價</div>
+    <p>歐盟執委會週四表示，Amazon與Microsoft的雲端服務（<span style="color:#f0ebe0;font-weight:700">AWS</span> 與 <span style="color:#f0ebe0;font-weight:700">Microsoft Azure</span>）應被認定為《數位市場法》（DMA）下的「守門人」（gatekeeper）。官員指出，兩者的營收、營運與投資「顯著超越」競爭對手，加上龐大用戶基礎，而其 <span style="color:#f0ebe0;font-weight:700">AI工具與合作夥伴關係</span> 正推升雲端需求，且大部分需求被鎖在自身生態系內。這項認定目前仍屬 <span style="color:#f0ebe0;font-weight:700">初步（preliminary）</span>，兩家公司有權查閱文件並書面回應；若最終確定，將有 <span style="color:#f0ebe0;font-weight:700">六個月</span> 時間達成全面合規。AWS回應稱歐洲雲端市場競爭健康、客戶選擇更多、價格更低，額外監管恐削弱競爭力並嚇阻投資。此案延續自 <span style="color:#f0ebe0;font-weight:700">去年11月</span> 啟動的調查，是歐盟擴大科技監管版圖的關鍵一步。</p>
+    <div class="data-point">被認定服務：<span style="color:#f0ebe0;font-weight:700">AWS、Azure</span> &nbsp;|&nbsp; 認定狀態：<span style="color:#f0ebe0;font-weight:700">初步（可申辯）</span> &nbsp;|&nbsp; 合規期限：<span style="color:#f0ebe0;font-weight:700">確定後6個月</span> &nbsp;|&nbsp; 調查起點：<span style="color:#f0ebe0;font-weight:700">去年11月</span></div>
+    <div class="implication"><div class="label">投資啟示</div>DMA增添的互通性與開放義務將壓縮雲端毛利與生態系鎖定效應。對 <span style="color:#f0ebe0;font-weight:700">AMZN/MSFT</span> 而言屬中期政策尾部風險 — <span style="color:#f0ebe0;font-weight:700">對雲端業務估值溢價保持審慎，關注最終認定與合規成本指引</span>。</div>
+  </div>
+
+</div>
+
+<div class="section" id="pboc-repo-cny-bonds">
+  <h2><span class="tag tag-misc">中國利率</span> 隔夜逆回購維穩，人民幣債成避險資產</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--green)">1.73%</div><div class="lbl">10年期國債殖利率
+（自年初1.85%降）</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">+15bp</div><div class="lbl">2013年6月月末
+殖利率急升前例</div></div>
+    <div class="stat"><div class="val">月末</div><div class="lbl">隔夜逆回購
+可能常態化時點</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">PBOC啟動隔夜逆回購 — 平抑月末流動性、提升人民幣債券吸引力</div>
+    <p>中國央行宣布於 <span style="color:#f0ebe0;font-weight:700">6月最後兩天</span> 開展 <span style="color:#f0ebe0;font-weight:700">隔夜逆回購</span> 操作，採 <span style="color:#f0ebe0;font-weight:700">固定利率、數量招標</span>（利率水平尚未公佈）。此舉呼應行長潘功勝穩定極短期流動性與貨幣市場利率的方案，目標是平抑月末、季末因銀行融出意願下降而頻發的流動性緊張。彭博經濟研究David Qu指出，在債市牛市中此類緊張尤為危險 — 交易員依賴低成本隔夜資金維持頭寸，一旦融資趨緊恐被迫虧損拋售，如 <span style="color:#f0ebe0;font-weight:700">2013年6月</span> 10年期國債殖利率月末數日內急漲 <span style="color:#f0ebe0;font-weight:700">15個基點</span> 的典型案例。當前中國正處新一輪債牛，10年期殖利率已從年初 <span style="color:#f0ebe0;font-weight:700">1.85%</span> 降至 <span style="color:#f0ebe0;font-weight:700">1.73%</span>。配合香港即將推出 <span style="color:#f0ebe0;font-weight:700">人民幣國債期貨</span> 及央行新設 <span style="color:#f0ebe0;font-weight:700">境外央行回購工具</span>，降低融資成本與價格波動有助鞏固在岸債券作為「避險資產」的地位，推動人民幣資產國際化。</p>
+    <div class="data-point">操作時點：<span style="color:#f0ebe0;font-weight:700">6月最後兩天</span> &nbsp;|&nbsp; 招標方式：<span style="color:#f0ebe0;font-weight:700">固定利率、數量招標</span> &nbsp;|&nbsp; 10Y殖利率：<span style="color:#f0ebe0;font-weight:700">1.85%→1.73%</span> &nbsp;|&nbsp; 配套：<span style="color:#f0ebe0;font-weight:700">香港人民幣國債期貨 + 境外央行回購工具</span></div>
+    <div class="implication"><div class="label">投資啟示</div>央行為債牛提供流動性後盾，月末尾部風險顯著降低。<span style="color:#f0ebe0;font-weight:700">做多在岸人民幣債券</span>，並可透過離岸人民幣資產表達避險升值主題；隔夜逆回購若月底常態化，將進一步壓低殖利率波動率。</div>
+  </div>
+
+</div>
+
+<div class="divider"></div>
+
+<div class="red-team" id="red-team">
+  <div class="red-team-title">&#128308; Red Team — 核心假設與反面論證</div>
+  <ul>
+    <li>假設1：歐盟DMA監管將實質壓縮AWS/Azure的雲端獲利與生態系鎖定，構成估值折價。</li>
+    <li>假設2：中國央行隔夜逆回購能有效消除月末流動性緊張，債牛可持續、殖利率續降。</li>
+    <li>假設3：人民幣債券的『避險資產』敘事由升值與價格穩定共同支撐。</li>
+    <li style="color:var(--red)">風險1：認定仍屬初步，AWS/Azure有六個月申辯與合規窗口；歷史上DMA對現有守門人的實際獲利衝擊有限，AI需求增長或抵銷監管拖累。</li>
+    <li style="color:var(--red)">風險2：流動性工具僅平抑短端波動，無法對抗基本面 — 若經濟意外復甦或通膨回升，10年期殖利率仍可能反轉，2013年錢荒正是政策與市場預期錯位所致。</li>
+    <li style="color:var(--red)">風險3：人民幣『避險』屬性高度依賴匯率升值；一旦中美利差重新走闊或資本外流，債券吸引力將快速逆轉。</li>
+  </ul>
+  <p style="margin-top:10px;padding:10px 14px;background:rgba(224,85,69,0.04);border-radius:6px;font-size:0.9em;border-left:3px solid var(--red)">兩大主題核心邏輯成立但方向相反：監管收緊（利空科技）與流動性維穩（利多中債）。中債做多論點較穩健 — 央行工具＋香港期貨＋境外回購三管齊下，短端尾部風險確被壓低；但需緊盯人民幣匯率，若USD/CNH突破關鍵位並持續，避險敘事將鬆動。DMA對雲端巨頭屬慢燃風險，短期不改基本面，除非最終認定附帶重大結構性拆分義務。</p>
+</div>
+
+<div class="callout" id="takeaways">
+  <div class="callout-title">基金經理人重點摘要</div>
+  <ul>
+    <li><strong>科技監管：</strong>歐盟擬將AWS/Azure納入DMA守門人，屬初步認定、確定後有6個月合規期。對AMZN/MSFT雲端估值溢價保持審慎，關注最終裁定與合規成本。</li>
+    <li><strong>中國利率：</strong>PBOC於6月末啟動隔夜逆回購（固定利率、數量招標），或於每月末常態化，壓低債市尾部風險。做多在岸人民幣債券。</li>
+    <li><strong>中國債市：</strong>10年期國債殖利率自年初1.85%降至1.73%，新一輪債牛延續；配套香港人民幣國債期貨與境外央行回購工具強化國際化。</li>
+    <li><strong>人民幣資產：</strong>債券『避險資產』屬性由升值＋價格穩定支撐，可透過離岸人民幣表達；緊盯USD/CNH，匯率反轉是最大風險點。</li>
+    <li><strong>對沖提醒：</strong>科技監管（利空）與中債維穩（利多）方向相反，組合上以做多中債為高信心倉位，科技倉位保留政策尾部對沖。</li>
+  </ul>
+</div>
+
+<div class="nav-links">
+  <span><a href="newsletter_113_uncategorized.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="footer">
+  彭博研究摘要 | 僅供教學與討論用途 | 2026年7月2日<br>
+  資料來源：Bloomberg Intelligence, Bloomberg Economics, Bloomberg News<br>
+  <a href="https://www.patreon.com/Aireturn">Patreon</a> · <a href="https://t.me/AIreturn">Telegram</a> · Threads @aireturn88
+</div>
+
+</body>
+</html>

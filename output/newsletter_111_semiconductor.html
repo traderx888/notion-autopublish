@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>彭博研究摘要 #111 — 半導體博弈與記憶體超級週期</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Noto+Serif+TC:wght@400;700&family=Source+Sans+Pro:wght@400;600;700&display=swap');
+  :root { --bg: #0a0a08; --card: #141410; --border: #2a2820; --accent: #c9a84c;
+          --gold: #f0d87a; --gold-dim: #c4b896; --text: #e0d8c8; --text-bright: #f0ebe0; --muted: #8a8070;
+          --green: #6bbd5b; --red: #e05545; --yellow: #d4a843; --orange: #d49040;
+          --purple: #b08cd0; --cyan: #4cc9b0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { background: #0a0a08 !important; }
+  body { color: var(--text); font-family: 'Source Sans Pro', 'Noto Serif TC', 'Microsoft JhengHei', sans-serif; line-height: 1.8; padding: 24px; max-width: 880px; margin: 0 auto; }
+  h1 { font-family: 'Playfair Display', 'Noto Serif TC', serif; color: var(--gold); font-size: 1.8em; margin-bottom: 4px; font-weight: 900; letter-spacing: 0.02em; }
+  h2 { font-family: 'Playfair Display', 'Noto Serif TC', serif; }
+  .subtitle { color: var(--text-bright); font-size: 0.95em; margin-bottom: 8px; font-family: 'Noto Serif TC', serif; }
+  .issue-badge { display: inline-block; background: rgba(201,168,76,0.15); color: var(--accent); padding: 4px 12px; border-radius: 12px; font-size: 0.8em; font-weight: 600; margin-bottom: 20px; border: 1px solid rgba(201,168,76,0.3); }
+  .tag { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 0.72em; font-weight: 600; margin-right: 4px; }
+  .tag-rates { background: rgba(201,168,76,0.15); color: var(--accent); }
+  .tag-china { background: rgba(212,144,64,0.15); color: var(--orange); }
+  .tag-japan { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-geo   { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-oil   { background: rgba(212,168,67,0.15); color: var(--yellow); }
+  .tag-trade { background: rgba(212,168,67,0.15); color: var(--yellow); }
+  .tag-growth{ background: rgba(107,189,91,0.15); color: var(--green); }
+  .tag-metals{ background: rgba(176,140,208,0.15); color: var(--purple); }
+  .tag-infl  { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-policy{ background: rgba(201,168,76,0.15); color: var(--accent); }
+  .tag-val   { background: rgba(107,189,91,0.15); color: var(--green); }
+  .tag-vol   { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-semi  { background: rgba(76,201,176,0.15); color: var(--cyan); }
+  .tag-credit{ background: rgba(176,140,208,0.15); color: var(--purple); }
+  .tag-space { background: rgba(201,168,76,0.15); color: var(--accent); }
+  .tag-misc  { background: rgba(138,128,112,0.15); color: var(--muted); }
+  .verdict-bar { background: var(--accent); color: #0a0a08; padding: 14px 20px; border-radius: 8px; margin-bottom: 20px; font-weight: 700; font-size: 1.05em; font-family: 'Noto Serif TC', serif; }
+  .section { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 22px; margin-bottom: 18px; }
+  .section h2 { color: var(--gold); font-size: 1.15em; margin-bottom: 12px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+  .section h3 { color: var(--accent); font-size: 0.95em; margin: 14px 0 6px; }
+  .article { margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid rgba(42,40,32,0.7); }
+  .article:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .article-title { color: var(--text-bright); font-weight: 700; font-size: 0.95em; margin-bottom: 4px; }
+  .article-title-cn { color: var(--muted); font-size: 0.85em; margin-bottom: 8px; }
+  .article p { font-size: 0.9em; margin: 6px 0; }
+  .data-point { background: rgba(201,168,76,0.05); padding: 8px 12px; border-radius: 6px; margin: 8px 0; font-size: 0.85em; border: 1px solid rgba(201,168,76,0.12); }
+  .data-point .num { color: var(--text-bright); font-weight: 700; }
+  .implication { background: rgba(201,168,76,0.06); border-left: 3px solid var(--accent); padding: 10px 14px; margin: 10px 0; border-radius: 0 6px 6px 0; font-size: 0.88em; }
+  .implication .label { color: var(--accent); font-weight: 700; font-size: 0.8em; text-transform: uppercase; margin-bottom: 4px; }
+  .red-team { background: rgba(224,85,69,0.06); border: 1px solid rgba(224,85,69,0.25); border-radius: 8px; padding: 18px; margin: 18px 0; }
+  .red-team-title { color: var(--red); font-weight: 700; font-size: 0.95em; margin-bottom: 10px; font-family: 'Playfair Display', serif; }
+  .red-team ul { padding-left: 18px; }
+  .red-team li { margin: 5px 0; font-size: 0.88em; }
+  .callout { background: rgba(201,168,76,0.06); border: 1px solid rgba(201,168,76,0.25); border-radius: 8px; padding: 18px; margin: 18px 0; }
+  .callout-title { color: var(--accent); font-weight: 700; font-size: 0.95em; margin-bottom: 8px; font-family: 'Playfair Display', 'Noto Serif TC', serif; }
+  .callout ul { padding-left: 18px; }
+  .callout li { margin: 5px 0; font-size: 0.88em; }
+  ul { padding-left: 18px; }
+  li { margin: 4px 0; font-size: 0.88em; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(201,168,76,0.05); padding: 12px; border-radius: 6px; text-align: center; border: 1px solid rgba(201,168,76,0.1); }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: var(--gold); font-family: 'Playfair Display', serif; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
+  .toc { background: rgba(201,168,76,0.04); border: 1px solid rgba(201,168,76,0.18); border-radius: 8px; padding: 16px 20px; margin-bottom: 20px; }
+  .toc-title { color: var(--accent); font-weight: 700; font-size: 0.9em; margin-bottom: 8px; }
+  .toc a { color: var(--accent); text-decoration: none; font-size: 0.88em; }
+  .toc a:hover { text-decoration: underline; color: var(--gold); }
+  .toc ol { padding-left: 20px; }
+  .toc li { margin: 4px 0; }
+  .nav-links { display: flex; justify-content: space-between; margin: 20px 0; font-size: 0.85em; }
+  .nav-links a { color: var(--accent); text-decoration: none; }
+  .nav-links a:hover { text-decoration: underline; color: var(--gold); }
+  .divider { height: 1px; background: linear-gradient(90deg, transparent, var(--accent), transparent); margin: 24px 0; opacity: 0.4; }
+  .footer { text-align: center; color: var(--muted); font-size: 0.75em; margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--border); }
+  .footer a { color: var(--accent); text-decoration: none; }
+</style>
+<script>if(window.self===window.top&&sessionStorage.getItem("student_auth")!=="1"){document.body.innerHTML="";window.location.replace("student.html");}</script>
+</head>
+<body>
+
+<h1>彭博研究摘要</h1>
+<p class="subtitle">第111期 | 半導體博弈與記憶體超級週期</p>
+<span class="issue-badge">2026年七月上旬更新</span>
+
+<div class="verdict-bar">結論：AI驅動的記憶體超級週期仍在推進，但估值已極度擁擠且中美管制升級 — 逢回調吸納SK海力士、鎧俠等記憶體龍頭，同時以稀土相關標的對沖地緣尾部風險</div>
+
+<div class="nav-links">
+  <span><a href="newsletter_110_inflation.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="toc">
+  <div class="toc-title">目錄</div>
+  <ol>
+    <li><a href="#us-china-duv">出口管制 戰火燒向艾司摩爾老款DUV</a></li>
+    <li><a href="#memory-boom">記憶體 AI狂潮點燃NAND，資金奔向美股舞台</a></li>
+    <li><a href="#korea-ai-cost">亞洲科技 三大工程 vs AI成本現實檢驗</a></li>
+    <li><a href="#red-team">Red Team 反面論證</a></li>
+    <li><a href="#takeaways">基金經理人重點摘要</a></li>
+  </ol>
+</div>
+
+<div class="section" id="us-china-duv">
+  <h2><span class="tag tag-misc">出口管制</span> 戰火燒向艾司摩爾老款DUV</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val">7nm</div><div class="lbl">NXT:1980i
+可支援製程</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">2030年代中期</div><div class="lbl">中國7nm DUV
+量產預估</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">~2040年</div><div class="lbl">中國5nm EUV
+量產預估</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">中美晶片博弈盯上艾司摩爾老款機型 — DUV成新戰場</div>
+    <p>下一場晶片管制博弈已從EUV延伸至浸沒式深紫外光刻（DUV）— 這是中國晶圓廠目前仍可合法取得的最強光刻技術。美國國會審議中的《MATCH法案》旨在擴大對艾司摩爾在華DUV銷售、維護與技術支持的限制，並可對依賴美國技術的外國設備祭出類似「外國直接產品規則」（FDPR）的單邊防範措施。在荷蘭限制新型DUV出口後，中國買家轉而採購技術較低的 <span style="color:#f0ebe0;font-weight:700">NXT:1980i</span>（可支援7奈米，但良率較差）。華為與中芯國際已透過多重圖形（multi-patterning）技術，以老款DUV反覆蝕刻實現7奈米突破，代價是速度慢、次品率高、良率低。彭博指出，即便一台完整EUV流入中國，其價值更多在於參考範例而非量產捷徑。</p>
+    <div class="data-point">替代機型：<span style="color:#f0ebe0;font-weight:700">NXT:1980i（7nm）</span> &nbsp;|&nbsp; 突破方式：<span style="color:#f0ebe0;font-weight:700">多重曝光/蝕刻</span> &nbsp;|&nbsp; 法案：<span style="color:#f0ebe0;font-weight:700">MATCH法案 + FDPR式管制</span> &nbsp;|&nbsp; 荷蘭立場：<span style="color:#f0ebe0;font-weight:700">抵制</span></div>
+    <div class="implication"><div class="label">投資啟示</div>盟友抵制意味斷供範圍受限或進程緩慢，給中國留下囤積設備的時間窗口。中國最可能的反制是稀土、磁體與關鍵原物料 — <span style="color:#f0ebe0;font-weight:700">配置稀土/關鍵材料相關標的對沖科技管制升級的尾部風險</span>。</div>
+  </div>
+
+</div>
+
+<div class="section" id="memory-boom">
+  <h2><span class="tag tag-misc">記憶體</span> AI狂潮點燃NAND，資金奔向美股舞台</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--green)">+800%</div><div class="lbl">鎧俠今年
+股價漲幅</div></div>
+    <div class="stat"><div class="val">$290億</div><div class="lbl">SK海力士
+美國上市規模</div></div>
+    <div class="stat"><div class="val">2027春季</div><div class="lbl">鎧俠美國
+ADR發行</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">鎧俠計劃2027春季發行美國存託股 — 追逐AI記憶體熱潮</div>
+    <p>日本快閃記憶體龍頭鎧俠（Kioxia）擬於2027年4至6月本財年結束後發行美國存託憑證（ADR），直通全球最大資本市場。財務長川村表示這是「極具意義的專案」，公司同時研究股票分割以吸引散戶。受AI帶動的記憶體榮景推升，鎧俠今年股價已飆升近 <span style="color:#f0ebe0;font-weight:700">800%</span>，並在SK海力士宣布 <span style="color:#f0ebe0;font-weight:700">290億美元</span> 美國上市、美光（Micron）財報遠超預期後，單日再漲 <span style="color:#f0ebe0;font-weight:700">15%</span>，一舉成為日本市值最高企業，並登上MSCI世界指數表現最佳個股。鎧俠專攻NAND（快閃儲存），雖非AI工作負載最關鍵的高頻寬記憶體（HBM），但隨AI資料量暴增、全體記憶體產能吃緊，需求正持續流向NAND，PC與智慧手機需求亦同步回暖。</p>
+    <div class="data-point">ADR時點：<span style="color:#f0ebe0;font-weight:700">2027年4-6月</span> &nbsp;|&nbsp; 今年漲幅：<span style="color:#f0ebe0;font-weight:700">~800%</span> &nbsp;|&nbsp; 單日：<span style="color:#f0ebe0;font-weight:700">+15%</span> &nbsp;|&nbsp; SK海力士上市：<span style="color:#f0ebe0;font-weight:700">$290億</span> &nbsp;|&nbsp; 地位：<span style="color:#f0ebe0;font-weight:700">日本市值第一 / MSCI世界指數表現最佳</span></div>
+    <div class="implication"><div class="label">投資啟示</div>SK海力士、鎧俠爭相赴美上市，反映記憶體板塊資金磁吸效應。<span style="color:#f0ebe0;font-weight:700">逢回調吸納記憶體供應鏈龍頭</span>，但須警惕上市與股票分割釋放的供給稀釋，估值已計入近乎完美的預期。</div>
+  </div>
+
+</div>
+
+<div class="section" id="korea-ai-cost">
+  <h2><span class="tag tag-misc">亞洲科技</span> 三大工程 vs AI成本現實檢驗</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--green)">2,000兆韓圜</div><div class="lbl">三星+SK
+三大工程投資($1.3兆)</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">-5.8%</div><div class="lbl">韓國綜合指數
+單日跌幅</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">$71.99</div><div class="lbl">布蘭特原油
+(下跌4.3%)</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">韓國宣布「三大躍進工程」 — 但AI成本現實檢驗澆熄漲勢</div>
+    <p>韓國總統李在明主持發布「大躍進三大工程」計畫，據《韓國經濟日報》報導，三星與SK的相關投資規模可高達 <span style="color:#f0ebe0;font-weight:700">2,000兆韓圜（約1.3兆美元）</span>。政策面利多之際，市場卻遭遇「AI成本現實檢驗」— iPad、Xbox價格因記憶體短缺傳導至終端而上調，蘋果漲價衝擊亞洲科技股。韓國綜合指數（Kospi）單日重挫 <span style="color:#f0ebe0;font-weight:700">5.8%</span> 至8,411.21點，為AI股狂熱後的劇烈震盪一週寫下註腳。同時彭博行業研究點名韓國、台灣、荷蘭等晶片曝險地區出現拋售。宏觀背景上，布蘭特原油下跌4.3%至 <span style="color:#f0ebe0;font-weight:700">$71.99</span>、日圓持穩於161.75、美國10年期公債殖利率收窄至4.37%、金價升1.5%至$4,088.74。</p>
+    <div class="data-point">投資規模：<span style="color:#f0ebe0;font-weight:700">2,000兆韓圜 ($1.3兆)</span> &nbsp;|&nbsp; Kospi：<span style="color:#f0ebe0;font-weight:700">-5.8% 至 8,411</span> &nbsp;|&nbsp; 拋售區域：<span style="color:#f0ebe0;font-weight:700">韓/台/荷</span> &nbsp;|&nbsp; 終端訊號：<span style="color:#f0ebe0;font-weight:700">iPad/Xbox 漲價</span></div>
+    <div class="implication"><div class="label">投資啟示</div>記憶體短缺已從利潤利多轉為終端需求破壞的風險訊號。<span style="color:#f0ebe0;font-weight:700">短線減碼估值擁擠的AI科技股，等待回調後分批布局有政策與資本支出支撐的龍頭</span>。留意油價回落對通膨與利率的緩和作用。</div>
+  </div>
+
+</div>
+
+<div class="divider"></div>
+
+<div class="red-team" id="red-team">
+  <div class="red-team-title">&#128308; Red Team — 核心假設與反面論證</div>
+  <ul>
+    <li>假設1：AI驅動的記憶體需求將持續擴張，支撐鎧俠、SK海力士、美光的高估值</li>
+    <li>假設2：美國對華DUV管制將有效遏制中國先進晶片產能，鞏固既有龍頭的護城河</li>
+    <li>假設3：近期亞洲科技股回調僅為健康調整，記憶體超級週期尚未見頂</li>
+    <li style="color:var(--red)">風險1：AI成本現實檢驗已啟動 — iPad、Xbox漲價顯示記憶體短缺正傳導至終端，需求可能因價格破壞而放緩；Kospi單日暴跌5.8%暴露估值脆弱性</li>
+    <li style="color:var(--red)">風險2：荷蘭抵制MATCH法案，盟友斷供恐範圍受限或進程緩慢，給中國囤積設備的時間；華為與中芯國際已用多重曝光在無EUV下實現7奈米</li>
+    <li style="color:var(--red)">風險3：鎧俠今年漲800%、赴美上市與股票分割潮，估值已計入完美預期，任何新增產能釋放或AI資本支出放緩都可能觸發劇烈回調</li>
+  </ul>
+  <p style="margin-top:10px;padding:10px 14px;background:rgba(224,85,69,0.04);border-radius:6px;font-size:0.9em;border-left:3px solid var(--red)">核心邏輯（AI工作負載推升NAND/HBM需求）仍成立，但估值已極度擁擠。中美DUV管制是尾部風險而非基本面拐點 — 中國要商業規模量產7nm DUV需至2030年代中期、5nm EUV更遠至2040年左右，短期不改變供給格局。真正的下行風險在於：若三星、SK海力士新增產能如期釋放，或AI資本支出增速放緩，記憶體現貨價格見頂將是最大威脅。建議持有龍頭但嚴控倉位，並以稀土/關鍵材料標的對沖地緣反制。</p>
+</div>
+
+<div class="callout" id="takeaways">
+  <div class="callout-title">基金經理人重點摘要</div>
+  <ul>
+    <li><strong>記憶體超級週期：</strong>AI推升NAND/HBM需求邏輯仍成立，但估值擁擠。逢回調吸納SK海力士、鎧俠、美光等龍頭，嚴控倉位。</li>
+    <li><strong>資本市場：</strong>SK海力士（$290億）與鎧俠（2027春季ADR）爭相赴美上市，資金磁吸效應強，但留意上市與股票分割的供給稀釋。</li>
+    <li><strong>出口管制：</strong>《MATCH法案》盯上艾司摩爾老款DUV，但荷蘭抵制使斷供恐緩慢；中國先進晶片量產仍需十年 — 屬尾部風險而非拐點。</li>
+    <li><strong>地緣對沖：</strong>中國最可能以稀土、磁體反制。配置稀土/關鍵材料相關標的對沖科技管制升級。</li>
+    <li><strong>亞洲科技：</strong>AI成本現實檢驗已啟動（iPad/Xbox漲價、Kospi單日-5.8%），短線減碼估值最貴的AI科技股，等回調再布局。</li>
+    <li><strong>宏觀：</strong>布蘭特跌至$71.99、美10Y收窄至4.37%，油價回落緩和通膨壓力，對利率敏感的成長股相對有利。</li>
+  </ul>
+</div>
+
+<div class="nav-links">
+  <span><a href="newsletter_110_inflation.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="footer">
+  彭博研究摘要 | 僅供教學與討論用途 | 2026年7月2日<br>
+  資料來源：Bloomberg Intelligence, Bloomberg Economics, Bloomberg News<br>
+  <a href="https://www.patreon.com/Aireturn">Patreon</a> · <a href="https://t.me/AIreturn">Telegram</a> · Threads @aireturn88
+</div>
+
+</body>
+</html>

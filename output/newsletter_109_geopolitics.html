@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>彭博研究摘要 #109 — 地緣裂縫：AI供應鏈、新軍備競賽與拉美風險</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Noto+Serif+TC:wght@400;700&family=Source+Sans+Pro:wght@400;600;700&display=swap');
+  :root { --bg: #0a0a08; --card: #141410; --border: #2a2820; --accent: #c9a84c;
+          --gold: #f0d87a; --gold-dim: #c4b896; --text: #e0d8c8; --text-bright: #f0ebe0; --muted: #8a8070;
+          --green: #6bbd5b; --red: #e05545; --yellow: #d4a843; --orange: #d49040;
+          --purple: #b08cd0; --cyan: #4cc9b0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { background: #0a0a08 !important; }
+  body { color: var(--text); font-family: 'Source Sans Pro', 'Noto Serif TC', 'Microsoft JhengHei', sans-serif; line-height: 1.8; padding: 24px; max-width: 880px; margin: 0 auto; }
+  h1 { font-family: 'Playfair Display', 'Noto Serif TC', serif; color: var(--gold); font-size: 1.8em; margin-bottom: 4px; font-weight: 900; letter-spacing: 0.02em; }
+  h2 { font-family: 'Playfair Display', 'Noto Serif TC', serif; }
+  .subtitle { color: var(--text-bright); font-size: 0.95em; margin-bottom: 8px; font-family: 'Noto Serif TC', serif; }
+  .issue-badge { display: inline-block; background: rgba(201,168,76,0.15); color: var(--accent); padding: 4px 12px; border-radius: 12px; font-size: 0.8em; font-weight: 600; margin-bottom: 20px; border: 1px solid rgba(201,168,76,0.3); }
+  .tag { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 0.72em; font-weight: 600; margin-right: 4px; }
+  .tag-rates { background: rgba(201,168,76,0.15); color: var(--accent); }
+  .tag-china { background: rgba(212,144,64,0.15); color: var(--orange); }
+  .tag-japan { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-geo   { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-oil   { background: rgba(212,168,67,0.15); color: var(--yellow); }
+  .tag-trade { background: rgba(212,168,67,0.15); color: var(--yellow); }
+  .tag-growth{ background: rgba(107,189,91,0.15); color: var(--green); }
+  .tag-metals{ background: rgba(176,140,208,0.15); color: var(--purple); }
+  .tag-infl  { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-policy{ background: rgba(201,168,76,0.15); color: var(--accent); }
+  .tag-val   { background: rgba(107,189,91,0.15); color: var(--green); }
+  .tag-vol   { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-semi  { background: rgba(76,201,176,0.15); color: var(--cyan); }
+  .tag-credit{ background: rgba(176,140,208,0.15); color: var(--purple); }
+  .tag-space { background: rgba(201,168,76,0.15); color: var(--accent); }
+  .tag-misc  { background: rgba(138,128,112,0.15); color: var(--muted); }
+  .verdict-bar { background: var(--accent); color: #0a0a08; padding: 14px 20px; border-radius: 8px; margin-bottom: 20px; font-weight: 700; font-size: 1.05em; font-family: 'Noto Serif TC', serif; }
+  .section { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 22px; margin-bottom: 18px; }
+  .section h2 { color: var(--gold); font-size: 1.15em; margin-bottom: 12px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+  .section h3 { color: var(--accent); font-size: 0.95em; margin: 14px 0 6px; }
+  .article { margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid rgba(42,40,32,0.7); }
+  .article:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .article-title { color: var(--text-bright); font-weight: 700; font-size: 0.95em; margin-bottom: 4px; }
+  .article-title-cn { color: var(--muted); font-size: 0.85em; margin-bottom: 8px; }
+  .article p { font-size: 0.9em; margin: 6px 0; }
+  .data-point { background: rgba(201,168,76,0.05); padding: 8px 12px; border-radius: 6px; margin: 8px 0; font-size: 0.85em; border: 1px solid rgba(201,168,76,0.12); }
+  .data-point .num { color: var(--text-bright); font-weight: 700; }
+  .implication { background: rgba(201,168,76,0.06); border-left: 3px solid var(--accent); padding: 10px 14px; margin: 10px 0; border-radius: 0 6px 6px 0; font-size: 0.88em; }
+  .implication .label { color: var(--accent); font-weight: 700; font-size: 0.8em; text-transform: uppercase; margin-bottom: 4px; }
+  .red-team { background: rgba(224,85,69,0.06); border: 1px solid rgba(224,85,69,0.25); border-radius: 8px; padding: 18px; margin: 18px 0; }
+  .red-team-title { color: var(--red); font-weight: 700; font-size: 0.95em; margin-bottom: 10px; font-family: 'Playfair Display', serif; }
+  .red-team ul { padding-left: 18px; }
+  .red-team li { margin: 5px 0; font-size: 0.88em; }
+  .callout { background: rgba(201,168,76,0.06); border: 1px solid rgba(201,168,76,0.25); border-radius: 8px; padding: 18px; margin: 18px 0; }
+  .callout-title { color: var(--accent); font-weight: 700; font-size: 0.95em; margin-bottom: 8px; font-family: 'Playfair Display', 'Noto Serif TC', serif; }
+  .callout ul { padding-left: 18px; }
+  .callout li { margin: 5px 0; font-size: 0.88em; }
+  ul { padding-left: 18px; }
+  li { margin: 4px 0; font-size: 0.88em; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(201,168,76,0.05); padding: 12px; border-radius: 6px; text-align: center; border: 1px solid rgba(201,168,76,0.1); }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: var(--gold); font-family: 'Playfair Display', serif; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
+  .toc { background: rgba(201,168,76,0.04); border: 1px solid rgba(201,168,76,0.18); border-radius: 8px; padding: 16px 20px; margin-bottom: 20px; }
+  .toc-title { color: var(--accent); font-weight: 700; font-size: 0.9em; margin-bottom: 8px; }
+  .toc a { color: var(--accent); text-decoration: none; font-size: 0.88em; }
+  .toc a:hover { text-decoration: underline; color: var(--gold); }
+  .toc ol { padding-left: 20px; }
+  .toc li { margin: 4px 0; }
+  .nav-links { display: flex; justify-content: space-between; margin: 20px 0; font-size: 0.85em; }
+  .nav-links a { color: var(--accent); text-decoration: none; }
+  .nav-links a:hover { text-decoration: underline; color: var(--gold); }
+  .divider { height: 1px; background: linear-gradient(90deg, transparent, var(--accent), transparent); margin: 24px 0; opacity: 0.4; }
+  .footer { text-align: center; color: var(--muted); font-size: 0.75em; margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--border); }
+  .footer a { color: var(--accent); text-decoration: none; }
+</style>
+<script>if(window.self===window.top&&sessionStorage.getItem("student_auth")!=="1"){document.body.innerHTML="";window.location.replace("student.html");}</script>
+</head>
+<body>
+
+<h1>彭博研究摘要</h1>
+<p class="subtitle">第109期 | 地緣裂縫：AI供應鏈、新軍備競賽與拉美風險</p>
+<span class="issue-badge">2026年七月上旬更新</span>
+
+<div class="verdict-bar">結論：AI敘事的最大尾部風險不在估值而在地緣——台海、稀土與關稅三重脆弱性疊加新一輪核擴散，建議對沖半導體集中度風險、增持軍工與稀土供應鏈、對拉美主權債保持選擇性。</div>
+
+<div class="nav-links">
+  <span></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="toc">
+  <div class="toc-title">目錄</div>
+  <ol>
+    <li><a href="#ai-supply-chain">AI地緣 台海、稀土與關稅——AI熱潮的三重暗礁</a></li>
+    <li><a href="#arms-race-nato">軍備競賽 無人機、核武與北約裂痕——新安全困境成形</a></li>
+    <li><a href="#latam-risk">拉美風險 阿根廷復甦不均,委內瑞拉地震攪局</a></li>
+    <li><a href="#red-team">Red Team 反面論證</a></li>
+    <li><a href="#takeaways">基金經理人重點摘要</a></li>
+  </ol>
+</div>
+
+<div class="section" id="ai-supply-chain">
+  <h2><span class="tag tag-misc">AI地緣</span> 台海、稀土與關稅——AI熱潮的三重暗礁</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--orange)">60%+</div><div class="lbl">台灣佔全球
+先進邏輯晶片產量</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">$640億</div><div class="lbl">被推遲或否決的
+美國資料中心項目</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">$900億</div><div class="lbl">25%晶片關稅
+每年新增成本</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">AI熱潮下的地緣暗流——市值集中的另一面是供應鏈集中</div>
+    <p>44家AI相關公司已佔標普500總市值的 <span style="color:#f0ebe0;font-weight:700">45%</span>，貢獻指數 <span style="color:#f0ebe0;font-weight:700">71%</span> 的獲利成長；到2032年微軟、Alphabet、亞馬遜、Meta與甲骨文的AI資本支出合計可能達 <span style="color:#f0ebe0;font-weight:700">3兆至4兆美元</span>。支撐這一切的是「政治不會構成阻礙」的信念，而彭博點出六個裂縫。最致命的是台海：台灣生產全球 <span style="color:#f0ebe0;font-weight:700">60%以上</span> 的先進邏輯晶片，2025年供應約 <span style="color:#f0ebe0;font-weight:700">$860億</span> 的AI伺服器，幾乎所有美國品牌AI伺服器都由台灣製造。任何圍島衝突都將迫使雲端商對現有算力實施配給，AI基建長期停滯。供應鏈同時仰賴中國主導的稀土加工、卡達 <span style="color:#f0ebe0;font-weight:700">三分之一</span> 的全球氦氣產量,以及易受衝突衝擊的氖氣——伊朗與烏克蘭戰爭已證明這些「不起眼」的材料可瞬間卡住產量。</p>
+    <div class="data-point">AI佔標普市值：<span style="color:#f0ebe0;font-weight:700">45%</span> &nbsp;|&nbsp; AI獲利貢獻：<span style="color:#f0ebe0;font-weight:700">71%</span> &nbsp;|&nbsp; 2032資本支出：<span style="color:#f0ebe0;font-weight:700">$3-4兆</span> &nbsp;|&nbsp; 台灣邏輯晶片份額：<span style="color:#f0ebe0;font-weight:700">60%+</span> &nbsp;|&nbsp; 2025台灣伺服器供應：<span style="color:#f0ebe0;font-weight:700">$860億</span></div>
+    <div class="implication"><div class="label">投資啟示</div>市值集中度=供應鏈集中度。建議<span style="color:#f0ebe0;font-weight:700">對半導體單一地緣風險加碼對沖</span>（買入日韓/美國本土晶圓產能受益股、稀土與氦氣替代供應鏈），並將台海情境納入AI持倉壓力測試。</div>
+  </div>
+  <div class="article">
+    <div class="article-title">關稅懸而未決與本土抵制——AI建設的內部阻力</div>
+    <p>美國核心AI硬體技術棧約 <span style="color:#f0ebe0;font-weight:700">80%</span> 依賴進口,晶片關稅仍懸而未決。業內估算對資料中心半導體徵 <span style="color:#f0ebe0;font-weight:700">25%</span> 關稅每年將增加約 <span style="color:#f0ebe0;font-weight:700">$900億</span> 成本,足以在2030年前迫使美國約 <span style="color:#f0ebe0;font-weight:700">20%</span> 的規劃項目遷移、取消或延後——但更大的抑制在於不確定性本身。政治阻力也在升溫:北卡Matthews市開發商在2,700人請願後撤回提案,市長稱每100封郵件約99封反對。蓋洛普5月調查顯示 <span style="color:#f0ebe0;font-weight:700">71%</span> 美國人反對在自家地區建AI資料中心(反對率甚至高於核電廠的53%);已有約 <span style="color:#f0ebe0;font-weight:700">$640億</span> 項目被推遲或否決。維州監管機構估算資料中心到2040年可能使普通居民每月電費增加 <span style="color:#f0ebe0;font-weight:700">$14至$37</span>。兩黨選民亦懷疑AI:<span style="color:#f0ebe0;font-weight:700">80%</span> 美國人要求安全規則,即使會拖慢發展。</p>
+    <div class="data-point">核心硬體進口依賴：<span style="color:#f0ebe0;font-weight:700">80%</span> &nbsp;|&nbsp; 關稅稅率(擬議)：<span style="color:#f0ebe0;font-weight:700">25%</span> &nbsp;|&nbsp; 受阻項目：<span style="color:#f0ebe0;font-weight:700">$640億</span> &nbsp;|&nbsp; 反對建資料中心：<span style="color:#f0ebe0;font-weight:700">71%</span> &nbsp;|&nbsp; 月電費增幅：<span style="color:#f0ebe0;font-weight:700">$14-37</span></div>
+    <div class="implication"><div class="label">投資啟示</div>關稅+電網+民意三重摩擦意味AI資本支出兌現節奏將慢於市場預期。<span style="color:#f0ebe0;font-weight:700">對純算力/資料中心REIT保持謹慎</span>,偏好電力、電網與冷卻基建等「賣鏟子」環節。</div>
+  </div>
+
+</div>
+
+<div class="section" id="arms-race-nato">
+  <h2><span class="tag tag-misc">軍備競賽</span> 無人機、核武與北約裂痕——新安全困境成形</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--red)">63,000+</div><div class="lbl">1989年核彈頭峰值
+（1945年僅6枚）</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">57筆</div><div class="lbl">2022年武裝無人機
+採購交易（1991僅1筆）</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">20年低</div><div class="lbl">俄羅斯成品油
+日產量創新低</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">新一輪全球軍備競賽開啟——最大風險是核擴散</div>
+    <p>冷戰以來首次可能有多國同時尋求核武。彭博考察三類技術的擴散軌跡:核彈頭從1945年的 <span style="color:#f0ebe0;font-weight:700">6枚</span> 暴增至1989年的 <span style="color:#f0ebe0;font-weight:700">63,000+枚</span>(擴張最快);精確制導武器(PGM)從1991年估計的 <span style="color:#f0ebe0;font-weight:700">27枚</span> 增至2017年的 <span style="color:#f0ebe0;font-weight:700">287枚</span>,穩步而非顛覆式擴散;無人機交易則從1991年的 <span style="color:#f0ebe0;font-weight:700">1筆</span> 躍升至2022年的 <span style="color:#f0ebe0;font-weight:700">57筆</span>。烏克蘭與伊朗戰爭把無人機與AI賦能技術變成暢銷品,因採用商用組件、成本低廉,擴散最快最廣。最危險的是核浪潮:中國正迅速增強核力,美俄軍控條約已擱置,沙烏地已與巴基斯坦達成「核保護傘」協議,部分歐洲國家亦在考慮自主核武。近期衝突讓不少國家相信,唯有核威懾才能可靠抵禦更強對手。</p>
+    <div class="data-point">核彈頭峰值：<span style="color:#f0ebe0;font-weight:700">63,000+</span> &nbsp;|&nbsp; PGM(1991→2017)：<span style="color:#f0ebe0;font-weight:700">27→287</span> &nbsp;|&nbsp; 無人機交易(1991→2022)：<span style="color:#f0ebe0;font-weight:700">1→57</span> &nbsp;|&nbsp; 沙烏地：<span style="color:#f0ebe0;font-weight:700">巴基斯坦核保護傘</span> &nbsp;|&nbsp; 中國：<span style="color:#f0ebe0;font-weight:700">核力快速擴張</span></div>
+    <div class="implication"><div class="label">投資啟示</div>結構性國防開支上行是多年主題。<span style="color:#f0ebe0;font-weight:700">增持軍工、無人機/反無人機、精確制導與國防電子供應鏈</span>;地緣尾部風險上升利多黃金作為長期對沖。</div>
+  </div>
+  <div class="article">
+    <div class="article-title">美國縮減駐歐兵力+烏克蘭煉油廠打擊——歐洲安全天平搖擺</div>
+    <p>五角大廈即刻縮減危機時可提供北約的艦機,並啟動為期 <span style="color:#f0ebe0;font-weight:700">六個月</span> 的駐歐態勢檢討,暗示更多裁減將至。5月已在德國撤約 <span style="color:#f0ebe0;font-weight:700">5,000</span> 名地面部隊(擬轉移波蘭),10月結束駐羅馬尼亞旅級輪換,並暫停向波蘭部署多域特遣隊。缺乏與盟友協調的裁軍讓即將在安卡拉召開的北約峰會憂心忡忡——華盛頓可能製造出莫斯科可趁的能力缺口。另一端,烏克蘭對俄煉油廠的遠程打擊已從零星轉為系統化,打擊範圍east至烏拉爾以東2,000公里的秋明。煉油是比原油生產更脆弱的瓶頸,俄成品油日產量已創 <span style="color:#f0ebe0;font-weight:700">20年新低</span>,將在2026年9月議會選舉前對克里姆林宮施加經濟與政治壓力。</p>
+    <div class="data-point">駐德撤軍：<span style="color:#f0ebe0;font-weight:700">~5,000人</span> &nbsp;|&nbsp; 駐歐檢討期：<span style="color:#f0ebe0;font-weight:700">6個月</span> &nbsp;|&nbsp; 烏軍打擊縱深：<span style="color:#f0ebe0;font-weight:700">2,000公里(秋明)</span> &nbsp;|&nbsp; 俄成品油產量：<span style="color:#f0ebe0;font-weight:700">20年低</span> &nbsp;|&nbsp; 俄議會選舉：<span style="color:#f0ebe0;font-weight:700">2026年9月</span></div>
+    <div class="implication"><div class="label">投資啟示</div>北約凝聚力鬆動+俄能源基建承壓提升歐洲防務自主開支預期。<span style="color:#f0ebe0;font-weight:700">做多歐洲軍工(Rheinmetall等)</span>,並留意俄成品油出口中斷對區域煉油利差(crack spread)的階段性支撐。</div>
+  </div>
+
+</div>
+
+<div class="section" id="latam-risk">
+  <h2><span class="tag tag-misc">拉美風險</span> 阿根廷復甦不均,委內瑞拉地震攪局</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--green)">+2.3%</div><div class="lbl">阿根廷1Q GDP
+（按年）</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">-20萬</div><div class="lbl">阿根廷正式就業
+低於Milei上任時</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">$67億</div><div class="lbl">委內瑞拉地震
+直接損失</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">阿根廷:與美結盟的地緣緩衝下,復甦動能真實但不均</div>
+    <p>阿根廷1Q GDP按年增 <span style="color:#f0ebe0;font-weight:700">2.3%</span>、按季增 <span style="color:#f0ebe0;font-weight:700">0.7%</span>,4Q25更上修至 <span style="color:#f0ebe0;font-weight:700">1.2%</span>,顯示動能加速。但增長並不均衡:領跑的部門並非吸納最多就業者。失業率 <span style="color:#f0ebe0;font-weight:700">7.8%</span>(略低於一年前的7.9%),然正式就業毫無增長,正式薪資冊仍比Milei上任時低約 <span style="color:#f0ebe0;font-weight:700">20萬</span> 個崗位,非正式部門在吸收缺口、把就業率撐在 <span style="color:#f0ebe0;font-weight:700">45%</span> 的歷史高位。實際薪資去年10月一度較Milei上任時高近5%,之後回落,3月大致持平、4月略有回升。財政與外部脆弱性為近年最受控,但勞動市場已成為Milei改革政治持久力的關鍵指標,市場波動料伴隨2027年10月大選前的不確定性。</p>
+    <div class="data-point">1Q GDP按年：<span style="color:#f0ebe0;font-weight:700">+2.3%</span> &nbsp;|&nbsp; 按季：<span style="color:#f0ebe0;font-weight:700">+0.7%</span> &nbsp;|&nbsp; 失業率：<span style="color:#f0ebe0;font-weight:700">7.8%</span> &nbsp;|&nbsp; 正式就業缺口：<span style="color:#f0ebe0;font-weight:700">-20萬</span> &nbsp;|&nbsp; 大選：<span style="color:#f0ebe0;font-weight:700">2027年10月</span></div>
+    <div class="implication"><div class="label">投資啟示</div>宏觀企穩+美方地緣背書為阿根廷資產提供緩衝,但復甦不均與大選噪音將週期性放大波動。<span style="color:#f0ebe0;font-weight:700">對阿根廷主權債/股保持選擇性偏多、逢波動加倉</span>,而非單邊追高。</div>
+  </div>
+  <div class="article">
+    <div class="article-title">委內瑞拉雙震:Machado、債務與投資斷層線</div>
+    <p>兩場致命地震首先是人道悲劇,但也可能重塑這個拉美產油國的前景。聯合國估算直接損失 <span style="color:#f0ebe0;font-weight:700">$67億</span>(區間 <span style="color:#f0ebe0;font-weight:700">$47億至$87億</span>)。重建或提振投資,並強化美國釋放受制裁石油收益以助重建的理由;委方已表示計劃從約 <span style="color:#f0ebe0;font-weight:700">$45億</span> 的IMF特別提款權(SDR)中動用 <span style="color:#f0ebe0;font-weight:700">$2億</span>。但政治更趨流動:過渡總統Delcy Rodriguez因救災不力承壓,流亡反對派領袖Machado揚言返國(川普政府據報已拒其請求)。這一切為主權債重組蒙上陰影——投資者擔心未來政府可能推翻協議、要求更優條款;而重組愈慷慨,繼任政府挑戰它的誘因愈大。另據Fault Lines,聯準會主席Warsh在Sintra論壇語調較FOMC略偏鴿,市場預期Fed年內按兵不動。</p>
+    <div class="data-point">地震直接損失：<span style="color:#f0ebe0;font-weight:700">$67億</span>(區間$47-87億) &nbsp;|&nbsp; IMF SDR動用：<span style="color:#f0ebe0;font-weight:700">$2億/$45億</span> &nbsp;|&nbsp; 政治風險：<span style="color:#f0ebe0;font-weight:700">Machado返國+Rodriguez承壓</span> &nbsp;|&nbsp; Fed基調：<span style="color:#f0ebe0;font-weight:700">年內按兵不動</span></div>
+    <div class="implication"><div class="label">投資啟示</div>重建需求與制裁收益釋放是潛在利多,但政治轉型使債務重組再談判風險驟升。<span style="color:#f0ebe0;font-weight:700">對委內瑞拉主權債維持低配、僅在極端折價下投機性參與</span>;Warsh偏鴿為新興市場提供邊際流動性支撐。</div>
+  </div>
+
+</div>
+
+<div class="divider"></div>
+
+<div class="red-team" id="red-team">
+  <div class="red-team-title">&#128308; Red Team — 核心假設與反面論證</div>
+  <ul>
+    <li>假設1:AI資本支出($3-4兆)將如期兌現,地緣風險僅為尾部而非基準情境。</li>
+    <li>假設2:新一輪核擴散與軍備競賽將轉化為結構性、可投資的國防開支上行。</li>
+    <li>假設3:阿根廷宏觀企穩具政治持久力,委內瑞拉重建能推進而非陷入政治僵局。</li>
+    <li style="color:var(--red)">風險1:即便無台海衝突,關稅($900億/年)、電網瓶頸與71%民意抵制($640億項目受阻)已足以拖慢AI建設節奏,&#x27;政治不構成阻礙&#x27;的核心信念本身可能證偽。</li>
+    <li style="color:var(--red)">風險2:軍備開支取決於政治意願與財政支持,二者皆無保障;美國無協調地縮減駐歐兵力反而顯示開支可向下,國防主題並非單向。</li>
+    <li style="color:var(--red)">風險3:阿根廷正式就業零增長、薪資冊仍低20萬崗位,復甦不均可能在2027大選前觸發政治逆轉;委內瑞拉Machado返國若引爆對抗,重組將無限期擱置。</li>
+  </ul>
+  <p style="margin-top:10px;padding:10px 14px;background:rgba(224,85,69,0.04);border-radius:6px;font-size:0.9em;border-left:3px solid var(--red)">核心邏輯成立但需分層對沖。AI地緣脆弱性是被低估的實質風險(非純尾部)——關稅與民意摩擦已在兌現,即使台海不生變,AI資本支出的『斜率』也將趨緩,故偏好『賣鏟子』(電力/電網/冷卻)而非純算力。國防開支上行方向明確但幅度不確定,以軍工+黃金雙軌對沖而非重倉單押。拉美維持選擇性:阿根廷逢波動偏多、委內瑞拉低配。若25%晶片關稅落地並疊加台海緊張,AI集中度風險將從尾部升為基準,屆時需系統性減持半導體集中持倉。</p>
+</div>
+
+<div class="callout" id="takeaways">
+  <div class="callout-title">基金經理人重點摘要</div>
+  <ul>
+    <li><strong>AI供應鏈:</strong>市值集中(標普45%)=供應鏈集中(台灣60%+晶片、卡達1/3氦氣、中國稀土)。對單一地緣風險加碼對沖,台海情境納入AI持倉壓力測試。</li>
+    <li><strong>AI節奏:</strong>關稅($900億/年)、電網、71%民意抵制($640億受阻)將拖慢資本支出兌現。偏好電力/電網/冷卻『賣鏟子』環節,對純資料中心REIT謹慎。</li>
+    <li><strong>國防:</strong>核彈頭峰值63,000、無人機交易2022年達57筆——結構性開支上行。增持軍工、無人機/反無人機、精確制導與國防電子。</li>
+    <li><strong>歐洲/俄羅斯:</strong>美縮減駐歐兵力(撤德5,000)+烏軍打擊使俄成品油產量創20年低。做多歐洲軍工,留意成品油crack spread階段性支撐。</li>
+    <li><strong>阿根廷:</strong>1Q GDP +2.3%但正式就業缺口-20萬。宏觀企穩+美方背書提供緩衝,主權債逢波動選擇性偏多,勿單邊追高。</li>
+    <li><strong>委內瑞拉/Fed:</strong>地震損失$67億+Machado返國推高重組再談判風險,維持低配。Warsh語調偏鴿、Fed年內按兵不動,為新興市場提供邊際流動性。</li>
+  </ul>
+</div>
+
+<div class="nav-links">
+  <span></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="footer">
+  彭博研究摘要 | 僅供教學與討論用途 | 2026年7月2日<br>
+  資料來源：Bloomberg Intelligence, Bloomberg Economics, Bloomberg News<br>
+  <a href="https://www.patreon.com/Aireturn">Patreon</a> · <a href="https://t.me/AIreturn">Telegram</a> · Threads @aireturn88
+</div>
+
+</body>
+</html>

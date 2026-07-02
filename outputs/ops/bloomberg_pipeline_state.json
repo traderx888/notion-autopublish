@@ -1,6 +1,6 @@
 {
-  "lastRunAt": "2026-06-24T15:08:52+08:00",
-  "lastNewsletterNumber": 108,
+  "lastRunAt": "2026-07-02T18:28:33+08:00",
+  "lastNewsletterNumber": 116,
   "processedFiles": {
     "2026 Outlook Global Aluminum Producers #metals.pdf": {
       "processedAt": "2026-03-26T15:52:49+08:00",
@@ -5049,6 +5049,217 @@
         "growth"
       ],
       "newsletterNumber": 105
+    },
+    "AI Boom Geopolitical Undercurrents Taiwan Chips Supply Chain ZH #geopolitics #semiconductor.pdf": {
+      "processedAt": "2026-07-02T18:28:24+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\AI Boom Geopolitical Undercurrents Taiwan Chips Supply Chain ZH.md",
+      "topics": [
+        "geopolitics",
+        "semiconductor"
+      ],
+      "newsletterNumber": 109
+    },
+    "Amazon Microsoft Seen As Gatekeepers to Cloud DMA #trade #policy.pdf": {
+      "processedAt": "2026-07-02T18:28:25+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\Amazon Microsoft Seen As Gatekeepers to Cloud DMA.md",
+      "topics": [
+        "trade",
+        "policy"
+      ],
+      "newsletterNumber": 114
+    },
+    "China US Chip Battle Targets ASML Legacy DUV Models ZH #semiconductor #china #trade #geopolitics.pdf": {
+      "processedAt": "2026-07-02T18:28:25+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\China US Chip Battle Targets ASML Legacy DUV Models ZH.md",
+      "topics": [
+        "semiconductor",
+        "china",
+        "trade",
+        "geopolitics"
+      ],
+      "newsletterNumber": 111
+    },
+    "Core PCE Inflation May Be Overstated Software Mismeasurement ZH #inflation.pdf": {
+      "processedAt": "2026-07-02T18:28:26+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\Core PCE Inflation May Be Overstated Software Mismeasurement ZH.md",
+      "topics": [
+        "inflation"
+      ],
+      "newsletterNumber": 110
+    },
+    "Drones Bombs Nuclear Weapons New Global Arms Race ZH #geopolitics.pdf": {
+      "processedAt": "2026-07-02T18:28:27+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\Drones Bombs Nuclear Weapons New Global Arms Race ZH.md",
+      "topics": [
+        "geopolitics"
+      ],
+      "newsletterNumber": 109
+    },
+    "Fed Warsh at Sintra Hawk or Dove Rate Debate #rates #policy.pdf": {
+      "processedAt": "2026-07-02T18:28:27+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\Fed Warsh at Sintra Hawk or Dove Rate Debate.md",
+      "topics": [
+        "rates",
+        "policy"
+      ],
+      "newsletterNumber": 115
+    },
+    "French Inflation Back at 2% as Energy Shock Fades #inflation #growth.pdf": {
+      "processedAt": "2026-07-02T18:28:27+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\French Inflation Back at 2% as Energy Shock Fades.md",
+      "topics": [
+        "inflation",
+        "growth"
+      ],
+      "newsletterNumber": 110
+    },
+    "GLOBAL INSIGHT Ukraines Refinery Strikes Raise Russias Pain #geopolitics #oil.pdf": {
+      "processedAt": "2026-07-02T18:28:27+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\GLOBAL INSIGHT Ukraines Refinery Strikes Raise Russias Pain.md",
+      "topics": [
+        "geopolitics",
+        "oil"
+      ],
+      "newsletterNumber": 109
+    },
+    "GLOBAL INSIGHT US Cutbacks in Europe Hurt NATO Deterrence #geopolitics.pdf": {
+      "processedAt": "2026-07-02T18:28:28+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\GLOBAL INSIGHT US Cutbacks in Europe Hurt NATO Deterrence.md",
+      "topics": [
+        "geopolitics"
+      ],
+      "newsletterNumber": 109
+    },
+    "Global Rotation Has a Lot of Europe Written in It #valuations #semiconductor.pdf": {
+      "processedAt": "2026-07-02T18:28:28+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\Global Rotation Has a Lot of Europe Written in It.md",
+      "topics": [
+        "valuations",
+        "semiconductor"
+      ],
+      "newsletterNumber": 112
+    },
+    "HYBE Korea Tax Investigation Two Audit Teams ZH.pdf": {
+      "processedAt": "2026-07-02T18:28:28+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\HYBE Korea Tax Investigation Two Audit Teams ZH.md",
+      "topics": [],
+      "newsletterNumber": 113
+    },
+    "Japans Kioxia Plans to Offer US Depositary Shares #semiconductor #japan.pdf": {
+      "processedAt": "2026-07-02T18:28:28+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\Japans Kioxia Plans to Offer US Depositary Shares.md",
+      "topics": [
+        "semiconductor",
+        "japan"
+      ],
+      "newsletterNumber": 111
+    },
+    "Nex and HYBE Announce Partnership BTS Gaming.pdf": {
+      "processedAt": "2026-07-02T18:28:29+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\Nex and HYBE Announce Partnership BTS Gaming.md",
+      "topics": [],
+      "newsletterNumber": 113
+    },
+    "PBOC Overnight Reverse Repo Boosts CNY Bond Appeal ZH #china #rates.pdf": {
+      "processedAt": "2026-07-02T18:28:29+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\PBOC Overnight Reverse Repo Boosts CNY Bond Appeal ZH.md",
+      "topics": [
+        "china",
+        "rates"
+      ],
+      "newsletterNumber": 114
+    },
+    "SOUTH KOREA DAYBOOK Three Mega Projects Samsung SK #semiconductor.pdf": {
+      "processedAt": "2026-07-02T18:28:29+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\SOUTH KOREA DAYBOOK Three Mega Projects Samsung SK.md",
+      "topics": [
+        "semiconductor"
+      ],
+      "newsletterNumber": 111
+    },
+    "SpaceX Options Pit NearTerm Call Mania Against Put Wave #space #volatility.pdf": {
+      "processedAt": "2026-07-02T18:28:29+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\SpaceX Options Pit NearTerm Call Mania Against Put Wave.md",
+      "topics": [
+        "space",
+        "volatility"
+      ],
+      "newsletterNumber": null
+    },
+    "Super El Nino Threatens Food Price Shock Inflation ZH #inflation #growth.pdf": {
+      "processedAt": "2026-07-02T18:28:30+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\Super El Nino Threatens Food Price Shock Inflation ZH.md",
+      "topics": [
+        "inflation",
+        "growth"
+      ],
+      "newsletterNumber": 110
+    },
+    "The Magnificent 7 Are Facing Magnificent Worries #valuations #semiconductor.pdf": {
+      "processedAt": "2026-07-02T18:28:30+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\The Magnificent 7 Are Facing Magnificent Worries.md",
+      "topics": [
+        "valuations",
+        "semiconductor"
+      ],
+      "newsletterNumber": 112
+    },
+    "UKs Burnham Has Fiscal Flexibility No Free Pass #policy #growth.pdf": {
+      "processedAt": "2026-07-02T18:28:30+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\UKs Burnham Has Fiscal Flexibility No Free Pass.md",
+      "topics": [
+        "policy",
+        "growth"
+      ],
+      "newsletterNumber": 116
+    },
+    "US Alignment Provides Geopolitical Buffer to Argentinas Risks #geopolitics #growth.pdf": {
+      "processedAt": "2026-07-02T18:28:30+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\US Alignment Provides Geopolitical Buffer to Argentinas Risks.md",
+      "topics": [
+        "geopolitics",
+        "growth"
+      ],
+      "newsletterNumber": 109
+    },
+    "US Data Preview Nonfarm Strong Jobs May Fuel Rate Hike ZH #growth #rates #inflation.pdf": {
+      "processedAt": "2026-07-02T18:28:32+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\US Data Preview Nonfarm Strong Jobs May Fuel Rate Hike ZH.md",
+      "topics": [
+        "growth",
+        "rates",
+        "inflation"
+      ],
+      "newsletterNumber": 116
+    },
+    "US Japan Rate Spread 2023 Redux Yen May Break 170 ZH #japan #rates.pdf": {
+      "processedAt": "2026-07-02T18:28:32+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\US Japan Rate Spread 2023 Redux Yen May Break 170 ZH.md",
+      "topics": [
+        "japan",
+        "rates"
+      ],
+      "newsletterNumber": 115
+    },
+    "US PREVIEW May Spending Core PCE Affirm Fed Hawkish Tilt #inflation #rates #growth.pdf": {
+      "processedAt": "2026-07-02T18:28:32+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\US PREVIEW May Spending Core PCE Affirm Fed Hawkish Tilt.md",
+      "topics": [
+        "inflation",
+        "rates",
+        "growth"
+      ],
+      "newsletterNumber": 110
+    },
+    "Venezuela Earthquakes Machado Debt Investment Fault Lines #geopolitics #oil #credit.pdf": {
+      "processedAt": "2026-07-02T18:28:33+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\Venezuela Earthquakes Machado Debt Investment Fault Lines.md",
+      "topics": [
+        "geopolitics",
+        "oil",
+        "credit"
+      ],
+      "newsletterNumber": 109
     }
   },
   "newsletters": {
@@ -5871,6 +6082,73 @@
         "policy",
         "credit",
         "oil"
+      ]
+    },
+    "109": {
+      "filename": "newsletter_109_geopolitics.html",
+      "generatedAt": "2026-07-02T18:31:10+08:00",
+      "articleCount": 6,
+      "topics": [
+        "geopolitics"
+      ]
+    },
+    "110": {
+      "filename": "newsletter_110_inflation.html",
+      "generatedAt": "2026-07-02T18:32:47+08:00",
+      "articleCount": 4,
+      "topics": [
+        "inflation"
+      ]
+    },
+    "111": {
+      "filename": "newsletter_111_semiconductor.html",
+      "generatedAt": "2026-07-02T18:34:25+08:00",
+      "articleCount": 3,
+      "topics": [
+        "semiconductor"
+      ]
+    },
+    "112": {
+      "filename": "newsletter_112_valuations.html",
+      "generatedAt": "2026-07-02T18:35:53+08:00",
+      "articleCount": 2,
+      "topics": [
+        "valuations"
+      ]
+    },
+    "113": {
+      "filename": "newsletter_113_uncategorized.html",
+      "generatedAt": "2026-07-02T18:37:05+08:00",
+      "articleCount": 2,
+      "topics": [
+        "uncategorized"
+      ]
+    },
+    "114": {
+      "filename": "newsletter_114_trade_china.html",
+      "generatedAt": "2026-07-02T18:38:10+08:00",
+      "articleCount": 2,
+      "topics": [
+        "trade",
+        "china"
+      ]
+    },
+    "115": {
+      "filename": "newsletter_115_rates_japan.html",
+      "generatedAt": "2026-07-02T18:39:19+08:00",
+      "articleCount": 2,
+      "topics": [
+        "rates",
+        "japan"
+      ]
+    },
+    "116": {
+      "filename": "newsletter_116_policy_growth.html",
+      "generatedAt": "2026-07-02T18:40:52+08:00",
+      "articleCount": 2,
+      "topics": [
+        "policy",
+        "growth"
       ]
     }
   },

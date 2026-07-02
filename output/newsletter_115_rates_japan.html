@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>彭博研究摘要 #115 — 沃什的鴿鷹之辯與日圓貶勢重演</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Noto+Serif+TC:wght@400;700&family=Source+Sans+Pro:wght@400;600;700&display=swap');
+  :root { --bg: #0a0a08; --card: #141410; --border: #2a2820; --accent: #c9a84c;
+          --gold: #f0d87a; --gold-dim: #c4b896; --text: #e0d8c8; --text-bright: #f0ebe0; --muted: #8a8070;
+          --green: #6bbd5b; --red: #e05545; --yellow: #d4a843; --orange: #d49040;
+          --purple: #b08cd0; --cyan: #4cc9b0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { background: #0a0a08 !important; }
+  body { color: var(--text); font-family: 'Source Sans Pro', 'Noto Serif TC', 'Microsoft JhengHei', sans-serif; line-height: 1.8; padding: 24px; max-width: 880px; margin: 0 auto; }
+  h1 { font-family: 'Playfair Display', 'Noto Serif TC', serif; color: var(--gold); font-size: 1.8em; margin-bottom: 4px; font-weight: 900; letter-spacing: 0.02em; }
+  h2 { font-family: 'Playfair Display', 'Noto Serif TC', serif; }
+  .subtitle { color: var(--text-bright); font-size: 0.95em; margin-bottom: 8px; font-family: 'Noto Serif TC', serif; }
+  .issue-badge { display: inline-block; background: rgba(201,168,76,0.15); color: var(--accent); padding: 4px 12px; border-radius: 12px; font-size: 0.8em; font-weight: 600; margin-bottom: 20px; border: 1px solid rgba(201,168,76,0.3); }
+  .tag { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 0.72em; font-weight: 600; margin-right: 4px; }
+  .tag-rates { background: rgba(201,168,76,0.15); color: var(--accent); }
+  .tag-china { background: rgba(212,144,64,0.15); color: var(--orange); }
+  .tag-japan { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-geo   { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-oil   { background: rgba(212,168,67,0.15); color: var(--yellow); }
+  .tag-trade { background: rgba(212,168,67,0.15); color: var(--yellow); }
+  .tag-growth{ background: rgba(107,189,91,0.15); color: var(--green); }
+  .tag-metals{ background: rgba(176,140,208,0.15); color: var(--purple); }
+  .tag-infl  { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-policy{ background: rgba(201,168,76,0.15); color: var(--accent); }
+  .tag-val   { background: rgba(107,189,91,0.15); color: var(--green); }
+  .tag-vol   { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-semi  { background: rgba(76,201,176,0.15); color: var(--cyan); }
+  .tag-credit{ background: rgba(176,140,208,0.15); color: var(--purple); }
+  .tag-space { background: rgba(201,168,76,0.15); color: var(--accent); }
+  .tag-misc  { background: rgba(138,128,112,0.15); color: var(--muted); }
+  .verdict-bar { background: var(--accent); color: #0a0a08; padding: 14px 20px; border-radius: 8px; margin-bottom: 20px; font-weight: 700; font-size: 1.05em; font-family: 'Noto Serif TC', serif; }
+  .section { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 22px; margin-bottom: 18px; }
+  .section h2 { color: var(--gold); font-size: 1.15em; margin-bottom: 12px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+  .section h3 { color: var(--accent); font-size: 0.95em; margin: 14px 0 6px; }
+  .article { margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid rgba(42,40,32,0.7); }
+  .article:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .article-title { color: var(--text-bright); font-weight: 700; font-size: 0.95em; margin-bottom: 4px; }
+  .article-title-cn { color: var(--muted); font-size: 0.85em; margin-bottom: 8px; }
+  .article p { font-size: 0.9em; margin: 6px 0; }
+  .data-point { background: rgba(201,168,76,0.05); padding: 8px 12px; border-radius: 6px; margin: 8px 0; font-size: 0.85em; border: 1px solid rgba(201,168,76,0.12); }
+  .data-point .num { color: var(--text-bright); font-weight: 700; }
+  .implication { background: rgba(201,168,76,0.06); border-left: 3px solid var(--accent); padding: 10px 14px; margin: 10px 0; border-radius: 0 6px 6px 0; font-size: 0.88em; }
+  .implication .label { color: var(--accent); font-weight: 700; font-size: 0.8em; text-transform: uppercase; margin-bottom: 4px; }
+  .red-team { background: rgba(224,85,69,0.06); border: 1px solid rgba(224,85,69,0.25); border-radius: 8px; padding: 18px; margin: 18px 0; }
+  .red-team-title { color: var(--red); font-weight: 700; font-size: 0.95em; margin-bottom: 10px; font-family: 'Playfair Display', serif; }
+  .red-team ul { padding-left: 18px; }
+  .red-team li { margin: 5px 0; font-size: 0.88em; }
+  .callout { background: rgba(201,168,76,0.06); border: 1px solid rgba(201,168,76,0.25); border-radius: 8px; padding: 18px; margin: 18px 0; }
+  .callout-title { color: var(--accent); font-weight: 700; font-size: 0.95em; margin-bottom: 8px; font-family: 'Playfair Display', 'Noto Serif TC', serif; }
+  .callout ul { padding-left: 18px; }
+  .callout li { margin: 5px 0; font-size: 0.88em; }
+  ul { padding-left: 18px; }
+  li { margin: 4px 0; font-size: 0.88em; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(201,168,76,0.05); padding: 12px; border-radius: 6px; text-align: center; border: 1px solid rgba(201,168,76,0.1); }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: var(--gold); font-family: 'Playfair Display', serif; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
+  .toc { background: rgba(201,168,76,0.04); border: 1px solid rgba(201,168,76,0.18); border-radius: 8px; padding: 16px 20px; margin-bottom: 20px; }
+  .toc-title { color: var(--accent); font-weight: 700; font-size: 0.9em; margin-bottom: 8px; }
+  .toc a { color: var(--accent); text-decoration: none; font-size: 0.88em; }
+  .toc a:hover { text-decoration: underline; color: var(--gold); }
+  .toc ol { padding-left: 20px; }
+  .toc li { margin: 4px 0; }
+  .nav-links { display: flex; justify-content: space-between; margin: 20px 0; font-size: 0.85em; }
+  .nav-links a { color: var(--accent); text-decoration: none; }
+  .nav-links a:hover { text-decoration: underline; color: var(--gold); }
+  .divider { height: 1px; background: linear-gradient(90deg, transparent, var(--accent), transparent); margin: 24px 0; opacity: 0.4; }
+  .footer { text-align: center; color: var(--muted); font-size: 0.75em; margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--border); }
+  .footer a { color: var(--accent); text-decoration: none; }
+</style>
+<script>if(window.self===window.top&&sessionStorage.getItem("student_auth")!=="1"){document.body.innerHTML="";window.location.replace("student.html");}</script>
+</head>
+<body>
+
+<h1>彭博研究摘要</h1>
+<p class="subtitle">第115期 | 沃什的鴿鷹之辯與日圓貶勢重演</p>
+<span class="issue-badge">2026年七月上旬更新</span>
+
+<div class="verdict-bar">結論：沃什以「政客式」鷹派言論拖延升息，年底任務小組結論偏向「不急於升息」；美聯儲維持偏緊、日銀被政治施壓放緩加息，美日利差複製2023格局 — 做多美元兌日圓、逢回布局170目標。</div>
+
+<div class="nav-links">
+  <span><a href="newsletter_114_trade_china.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="toc">
+  <div class="toc-title">目錄</div>
+  <ol>
+    <li><a href="#fed-warsh-sintra">聯準會 沃什的政客算計：鷹調拖延，任務小組買時間</a></li>
+    <li><a href="#japan-yen-170">日圓 美日利差重演2023，日圓瞄準170</a></li>
+    <li><a href="#red-team">Red Team 反面論證</a></li>
+    <li><a href="#takeaways">基金經理人重點摘要</a></li>
+  </ol>
+</div>
+
+<div class="section" id="fed-warsh-sintra">
+  <h2><span class="tag tag-misc">聯準會</span> 沃什的政客算計：鷹調拖延，任務小組買時間</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val">5→3</div><div class="lbl">五個任務小組
+三個結論料偏「不急升息」</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">年底</div><div class="lbl">任務小組結論
+出爐時點</div></div>
+    <div class="stat"><div class="val">6/16-17</div><div class="lbl">沃什FOMC首秀
+委員會對半分裂</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">沃什現身Sintra — 是鷹還是鴿？答案是「政客」</div>
+    <p>在聯準會主席沃什 (Kevin Warsh) 於 <span style="color:#f0ebe0;font-weight:700">6月16-17日</span> FOMC首秀後數週，市場仍在爭論其鴿鷹屬性。彭博經濟研究認為，沃什本質上是位<span style="color:#f0ebe0;font-weight:700">政客</span>，其6月會議言論刻意兩面討好 — 預料他在 <span style="color:#f0ebe0;font-weight:700">7月1日</span> ECB年度Sintra會議上將延續此策略。他將以<span style="color:#f0ebe0;font-weight:700">物價穩定</span>為單一焦點，發表偏鷹言論，藉此安撫委員會中主張升息、以證明聯準會獨立於川普的一派。與此同時，沃什已設立<span style="color:#f0ebe0;font-weight:700">五個任務小組</span>檢視關鍵議題，藉此為下一步政策<span style="color:#f0ebe0;font-weight:700">爭取時間</span> — 在小組結論出爐前，FOMC不太可能升息。</p>
+    <div class="data-point">沃什FOMC首秀：<span style="color:#f0ebe0;font-weight:700">6月16-17日</span> &nbsp;|&nbsp; Sintra登場：<span style="color:#f0ebe0;font-weight:700">7月1日</span> &nbsp;|&nbsp; 任務小組數：<span style="color:#f0ebe0;font-weight:700">5個</span> &nbsp;|&nbsp; 結論時點：<span style="color:#f0ebe0;font-weight:700">年底</span> &nbsp;|&nbsp; 三個小組（數據來源、就業與生產力、通膨框架）料偏「<span style="color:#f0ebe0;font-weight:700">不急升息</span>」</div>
+    <div class="implication"><div class="label">投資啟示</div>沃什的鷹派修辭是「表演」而非行動綱領。任務小組結論指向CPI/PCE平減指數<span style="color:#f0ebe0;font-weight:700">高估通膨</span>、勞動生產力被低估 — 為明年<span style="color:#f0ebe0;font-weight:700">降息</span>鋪路。短期政策僵局 → <span style="color:#f0ebe0;font-weight:700">做多前端利率期貨博降息、同時對沖美元偏強</span>。</div>
+  </div>
+
+</div>
+
+<div class="section" id="japan-yen-170">
+  <h2><span class="tag tag-misc">日圓</span> 美日利差重演2023，日圓瞄準170</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--red)">165.82</div><div class="lbl">USD/JPY
+年底中位數預測</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">34%</div><div class="lbl">年底突破
+170的概率</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">&lt;5%</div><div class="lbl">維持在
+150以下的概率</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">美日利差再現2023光景 — 日圓恐跌破170</div>
+    <p>美元兌日圓正逼近 <span style="color:#f0ebe0;font-weight:700">1986年以來最弱</span>水平。彭博經濟研究的分位數回歸模型（以期貨隱含美日利差為變量）顯示，年底日圓貶壓<span style="color:#f0ebe0;font-weight:700">至少不弱於2023年同期</span>。截至 <span style="color:#f0ebe0;font-weight:700">6月30日</span>，模型對9月底中位數預測為 <span style="color:#f0ebe0;font-weight:700">164.2</span>、年底為 <span style="color:#f0ebe0;font-weight:700">165.82</span>；年底突破 <span style="color:#f0ebe0;font-weight:700">170</span> 的概率達 <span style="color:#f0ebe0;font-weight:700">34%</span>，維持在150以下的概率不到 <span style="color:#f0ebe0;font-weight:700">5%</span>。驅動因素與2023年如出一轍：市場預期聯準會可能進一步收緊，而<span style="color:#f0ebe0;font-weight:700">鴿派日銀</span>不急於升息，理由是通膨尚未穩固錨定於2%。今年貶勢更甚 — 因缺少2023年市場對日銀退出YCC/QQE的預期支撐。</p>
+    <div class="data-point">9月底中位數：<span style="color:#f0ebe0;font-weight:700">164.2</span> &nbsp;|&nbsp; 年底中位數：<span style="color:#f0ebe0;font-weight:700">165.82</span> &nbsp;|&nbsp; 破170概率：<span style="color:#f0ebe0;font-weight:700">34%</span> &nbsp;|&nbsp; 破165概率：<span style="color:#f0ebe0;font-weight:700">54%</span> &nbsp;|&nbsp; 跌破150概率：<span style="color:#f0ebe0;font-weight:700">4%</span> &nbsp;|&nbsp; 2023年11月低點：<span style="color:#f0ebe0;font-weight:700">151.72</span>（較6/30貶5.1%）</div>
+    <div class="implication"><div class="label">投資啟示</div>中東緊張推升油價與日本進口成本，高市早苗內閣施壓日銀放緩加息 — 日銀雖已升息但幅度<span style="color:#f0ebe0;font-weight:700">不足以實質收窄利差</span>。日圓將在下半年<span style="color:#f0ebe0;font-weight:700">緩慢持續貶值</span>。<span style="color:#f0ebe0;font-weight:700">做多美元兌日圓、逢回布局170目標；減持日圓套利融資曝險</span>。</div>
+  </div>
+
+</div>
+
+<div class="divider"></div>
+
+<div class="red-team" id="red-team">
+  <div class="red-team-title">&#128308; Red Team — 核心假設與反面論證</div>
+  <ul>
+    <li>假設1：聯準會維持偏緊、且沃什的鷹派僅為政治表演，年底任務小組結論將為明年降息鋪路</li>
+    <li>假設2：日銀在高市內閣施壓下持續放緩加息，美日利差維持寬闊</li>
+    <li>假設3：分位數模型（以歷史美日利差為基準）能有效外推2026年日圓走勢，故日圓貶勢複製2023</li>
+    <li style="color:var(--red)">風險1：若FOMC中主張升息的一派勝出、聯準會真的加息以彰顯獨立性，利差擴大將加速日圓崩跌 — 但這與『做多前端利率期貨博降息』的論點相互矛盾，兩個交易無法同時成立</li>
+    <li style="color:var(--red)">風險2：若日圓貶破165-170觸發日本財務省/日銀干預（如2022、2024年），或油價衝擊迫使日銀被動加息，日圓可能急速反彈</li>
+    <li style="color:var(--red)">風險3：模型明確承認2023年市場對日銀退出YCC/QQE的預期曾為日圓提供支撐，今年缺此因素 — 但這也意味任何『日銀鷹派轉向』的意外都會不成比例地重擊空頭部位</li>
+  </ul>
+  <p style="margin-top:10px;padding:10px 14px;background:rgba(224,85,69,0.04);border-radius:6px;font-size:0.9em;border-left:3px solid var(--red)">核心邏輯（美日利差寬闊 → 日圓偏弱）成立，模型給出年底165.82中位數與34%破170概率具說服力。但需注意兩個張力：其一，Fed『博降息』與日圓『博貶值』對聯準會路徑的假設方向相反，投資者須擇一而非同時押注；其二，170是政治敏感價位，干預尾部風險真實存在。建議做多USD/JPY但於168-170設緊止損，並以日圓買權對沖干預跳空。</p>
+</div>
+
+<div class="callout" id="takeaways">
+  <div class="callout-title">基金經理人重點摘要</div>
+  <ul>
+    <li><strong>聯準會：</strong>沃什以鷹派修辭與五個任務小組拖延時間，年底前不太可能升息。三個小組結論料指向通膨被高估、為明年降息鋪路。做多前端利率期貨。</li>
+    <li><strong>日銀：</strong>高市內閣施壓放緩加息，雖已升息但不足以收窄利差。維持鴿派，日圓下半年緩貶。</li>
+    <li><strong>美日利差：</strong>複製2023格局。USD/JPY年底中位數165.82，破170概率34%。做多美元兌日圓、逢回布局170目標。</li>
+    <li><strong>油價／中東：</strong>地緣緊張推升油價與日本進口成本，強化日圓貶壓，同時構成美國通膨上行風險。</li>
+    <li><strong>風險對沖：</strong>170為政治敏感價位，日本當局干預尾部風險真實 — 以日圓買權對沖跳空，止損設168-170。</li>
+    <li><strong>邏輯一致性：</strong>『Fed博降息』與『日圓博貶值』對聯準會路徑假設相反，須擇一押注，勿同時重倉。</li>
+  </ul>
+</div>
+
+<div class="nav-links">
+  <span><a href="newsletter_114_trade_china.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="footer">
+  彭博研究摘要 | 僅供教學與討論用途 | 2026年7月2日<br>
+  資料來源：Bloomberg Intelligence, Bloomberg Economics, Bloomberg News<br>
+  <a href="https://www.patreon.com/Aireturn">Patreon</a> · <a href="https://t.me/AIreturn">Telegram</a> · Threads @aireturn88
+</div>
+
+</body>
+</html>

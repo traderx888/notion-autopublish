@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>彭博研究摘要 #113 — HYBE 雙線敘事：稅務風暴 vs. IP 變現</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Noto+Serif+TC:wght@400;700&family=Source+Sans+Pro:wght@400;600;700&display=swap');
+  :root { --bg: #0a0a08; --card: #141410; --border: #2a2820; --accent: #c9a84c;
+          --gold: #f0d87a; --gold-dim: #c4b896; --text: #e0d8c8; --text-bright: #f0ebe0; --muted: #8a8070;
+          --green: #6bbd5b; --red: #e05545; --yellow: #d4a843; --orange: #d49040;
+          --purple: #b08cd0; --cyan: #4cc9b0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { background: #0a0a08 !important; }
+  body { color: var(--text); font-family: 'Source Sans Pro', 'Noto Serif TC', 'Microsoft JhengHei', sans-serif; line-height: 1.8; padding: 24px; max-width: 880px; margin: 0 auto; }
+  h1 { font-family: 'Playfair Display', 'Noto Serif TC', serif; color: var(--gold); font-size: 1.8em; margin-bottom: 4px; font-weight: 900; letter-spacing: 0.02em; }
+  h2 { font-family: 'Playfair Display', 'Noto Serif TC', serif; }
+  .subtitle { color: var(--text-bright); font-size: 0.95em; margin-bottom: 8px; font-family: 'Noto Serif TC', serif; }
+  .issue-badge { display: inline-block; background: rgba(201,168,76,0.15); color: var(--accent); padding: 4px 12px; border-radius: 12px; font-size: 0.8em; font-weight: 600; margin-bottom: 20px; border: 1px solid rgba(201,168,76,0.3); }
+  .tag { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 0.72em; font-weight: 600; margin-right: 4px; }
+  .tag-rates { background: rgba(201,168,76,0.15); color: var(--accent); }
+  .tag-china { background: rgba(212,144,64,0.15); color: var(--orange); }
+  .tag-japan { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-geo   { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-oil   { background: rgba(212,168,67,0.15); color: var(--yellow); }
+  .tag-trade { background: rgba(212,168,67,0.15); color: var(--yellow); }
+  .tag-growth{ background: rgba(107,189,91,0.15); color: var(--green); }
+  .tag-metals{ background: rgba(176,140,208,0.15); color: var(--purple); }
+  .tag-infl  { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-policy{ background: rgba(201,168,76,0.15); color: var(--accent); }
+  .tag-val   { background: rgba(107,189,91,0.15); color: var(--green); }
+  .tag-vol   { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-semi  { background: rgba(76,201,176,0.15); color: var(--cyan); }
+  .tag-credit{ background: rgba(176,140,208,0.15); color: var(--purple); }
+  .tag-space { background: rgba(201,168,76,0.15); color: var(--accent); }
+  .tag-misc  { background: rgba(138,128,112,0.15); color: var(--muted); }
+  .verdict-bar { background: var(--accent); color: #0a0a08; padding: 14px 20px; border-radius: 8px; margin-bottom: 20px; font-weight: 700; font-size: 1.05em; font-family: 'Noto Serif TC', serif; }
+  .section { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 22px; margin-bottom: 18px; }
+  .section h2 { color: var(--gold); font-size: 1.15em; margin-bottom: 12px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+  .section h3 { color: var(--accent); font-size: 0.95em; margin: 14px 0 6px; }
+  .article { margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid rgba(42,40,32,0.7); }
+  .article:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .article-title { color: var(--text-bright); font-weight: 700; font-size: 0.95em; margin-bottom: 4px; }
+  .article-title-cn { color: var(--muted); font-size: 0.85em; margin-bottom: 8px; }
+  .article p { font-size: 0.9em; margin: 6px 0; }
+  .data-point { background: rgba(201,168,76,0.05); padding: 8px 12px; border-radius: 6px; margin: 8px 0; font-size: 0.85em; border: 1px solid rgba(201,168,76,0.12); }
+  .data-point .num { color: var(--text-bright); font-weight: 700; }
+  .implication { background: rgba(201,168,76,0.06); border-left: 3px solid var(--accent); padding: 10px 14px; margin: 10px 0; border-radius: 0 6px 6px 0; font-size: 0.88em; }
+  .implication .label { color: var(--accent); font-weight: 700; font-size: 0.8em; text-transform: uppercase; margin-bottom: 4px; }
+  .red-team { background: rgba(224,85,69,0.06); border: 1px solid rgba(224,85,69,0.25); border-radius: 8px; padding: 18px; margin: 18px 0; }
+  .red-team-title { color: var(--red); font-weight: 700; font-size: 0.95em; margin-bottom: 10px; font-family: 'Playfair Display', serif; }
+  .red-team ul { padding-left: 18px; }
+  .red-team li { margin: 5px 0; font-size: 0.88em; }
+  .callout { background: rgba(201,168,76,0.06); border: 1px solid rgba(201,168,76,0.25); border-radius: 8px; padding: 18px; margin: 18px 0; }
+  .callout-title { color: var(--accent); font-weight: 700; font-size: 0.95em; margin-bottom: 8px; font-family: 'Playfair Display', 'Noto Serif TC', serif; }
+  .callout ul { padding-left: 18px; }
+  .callout li { margin: 5px 0; font-size: 0.88em; }
+  ul { padding-left: 18px; }
+  li { margin: 4px 0; font-size: 0.88em; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(201,168,76,0.05); padding: 12px; border-radius: 6px; text-align: center; border: 1px solid rgba(201,168,76,0.1); }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: var(--gold); font-family: 'Playfair Display', serif; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
+  .toc { background: rgba(201,168,76,0.04); border: 1px solid rgba(201,168,76,0.18); border-radius: 8px; padding: 16px 20px; margin-bottom: 20px; }
+  .toc-title { color: var(--accent); font-weight: 700; font-size: 0.9em; margin-bottom: 8px; }
+  .toc a { color: var(--accent); text-decoration: none; font-size: 0.88em; }
+  .toc a:hover { text-decoration: underline; color: var(--gold); }
+  .toc ol { padding-left: 20px; }
+  .toc li { margin: 4px 0; }
+  .nav-links { display: flex; justify-content: space-between; margin: 20px 0; font-size: 0.85em; }
+  .nav-links a { color: var(--accent); text-decoration: none; }
+  .nav-links a:hover { text-decoration: underline; color: var(--gold); }
+  .divider { height: 1px; background: linear-gradient(90deg, transparent, var(--accent), transparent); margin: 24px 0; opacity: 0.4; }
+  .footer { text-align: center; color: var(--muted); font-size: 0.75em; margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--border); }
+  .footer a { color: var(--accent); text-decoration: none; }
+</style>
+<script>if(window.self===window.top&&sessionStorage.getItem("student_auth")!=="1"){document.body.innerHTML="";window.location.replace("student.html");}</script>
+</head>
+<body>
+
+<h1>彭博研究摘要</h1>
+<p class="subtitle">第113期 | HYBE 雙線敘事：稅務風暴 vs. IP 變現</p>
+<span class="issue-badge">2026年七月上旬更新</span>
+
+<div class="verdict-bar">結論：HYBE 面臨韓國國稅廳「兩支調查組」罕見高強度特別稅務調查，疊加創辦人上市前欺詐指控，短期監管尾部風險顯著上升；BTS 遊戲化 IP 授權雖顯示變現韌性，但難抵治理折價 — 對娛樂板塊持倉降槓桿、觀望為上。</div>
+
+<div class="nav-links">
+  <span><a href="newsletter_112_valuations.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="toc">
+  <div class="toc-title">目錄</div>
+  <ol>
+    <li><a href="#tax-probe">監管風險 兩支調查組壓境，罕見高強度稽查</a></li>
+    <li><a href="#ip-monetization">IP 變現 BTS 遊戲化授權，變現韌性猶存</a></li>
+    <li><a href="#red-team">Red Team 反面論證</a></li>
+    <li><a href="#takeaways">基金經理人重點摘要</a></li>
+  </ol>
+</div>
+
+<div class="section" id="tax-probe">
+  <h2><span class="tag tag-misc">監管風險</span> 兩支調查組壓境，罕見高強度稽查</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--red)">90–120天</div><div class="lbl">特別稅務調查
+預計持續天數</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">2支</div><div class="lbl">首爾調查4局
+投入調查組（罕見）</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">27家</div><div class="lbl">同日宣布查稅
+擾亂股市企業</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">韓國國稅廳突襲 HYBE — 兩支精銳調查組展開90天特別稅務調查</div>
+    <p>首爾地方國稅廳調查4局於上月29日在<span style="color:#f0ebe0;font-weight:700">未提前通知</span>下，向龍山區 HYBE 總部派遣<span style="color:#f0ebe0;font-weight:700">兩支調查組</span>，並已統一扣押會計資料進行精密分析。稅務界指出，即便是不定期稅務調查通常也僅動員一支調查組，此次<span style="color:#f0ebe0;font-weight:700">罕見</span>投入兩支，意味調查強度極高。業界預測調查將持續<span style="color:#f0ebe0;font-weight:700">最少90天、最長120天</span>，視情況還可能延長。HYBE 已緊急聘請<span style="color:#f0ebe0;font-weight:700">金·張律師事務所</span>（Kim &amp; Chang）擔任稅務代理人應對。值得注意的是，國稅廳同日宣布對<span style="color:#f0ebe0;font-weight:700">27家</span>透過擾亂股市牟取不當利益的逃稅企業展開專項調查 — HYBE 被捲入這波監管收緊浪潮，市場需重新評估其治理與合規風險敞口。</p>
+    <div class="data-point">調查天數：<span style="color:#f0ebe0;font-weight:700">90–120天</span> &nbsp;|&nbsp; 投入調查組：<span style="color:#f0ebe0;font-weight:700">2支（罕見）</span> &nbsp;|&nbsp; 突襲日期：<span style="color:#f0ebe0;font-weight:700">上月29日</span> &nbsp;|&nbsp; 稅務代理人：<span style="color:#f0ebe0;font-weight:700">金·張律所</span> &nbsp;|&nbsp; 同批查稅企業：<span style="color:#f0ebe0;font-weight:700">27家</span></div>
+    <div class="implication"><div class="label">投資啟示</div>監管不確定性在調查落幕前無法定價。娛樂板塊持倉應<span style="color:#f0ebe0;font-weight:700">降槓桿、設停損</span>，避免在稽查結果與潛在補稅金額明朗前追高。</div>
+  </div>
+  <div class="article">
+    <div class="article-title">多機構聯動調查 — 創辦人方時赫捲入上市前欺詐指控</div>
+    <p>此次稅務調查並非孤立事件。HYBE 議長<span style="color:#f0ebe0;font-weight:700">方時赫</span>被指控在<span style="color:#f0ebe0;font-weight:700">2019年公司上市前</span>，向現有投資者謊稱沒有上市計劃，隨後讓其關聯私募基金設立的<span style="color:#f0ebe0;font-weight:700">特殊目的公司（SPC）</span>收購股份，涉嫌違反《資本市場法》的<span style="color:#f0ebe0;font-weight:700">欺詐性不正當交易</span>。警方已於上月24日對總部進行扣押搜查；金融委員會下屬證券期貨委員會亦已將方議長檢舉至檢方，由金融監督院特別司法警察在首爾南部地檢指揮下調查同一案件。業界認為，稅務調查很可能與其他執法機構的調查<span style="color:#f0ebe0;font-weight:700">相互關聯</span>。多線並進意味著風險並非單純稅負，而可能觸及創辦人法律責任與公司治理根基。</p>
+    <div class="data-point">指控核心：<span style="color:#f0ebe0;font-weight:700">上市前欺詐（違反資本市場法）</span> &nbsp;|&nbsp; 涉事年份：<span style="color:#f0ebe0;font-weight:700">2019 IPO</span> &nbsp;|&nbsp; 警方搜查：<span style="color:#f0ebe0;font-weight:700">上月24日</span> &nbsp;|&nbsp; 聯動機構：<span style="color:#f0ebe0;font-weight:700">國稅廳＋警方＋證期委＋金監院</span></div>
+    <div class="implication"><div class="label">投資啟示</div>創辦人法律風險是治理尾部風險的核心。若指控成立將重挫控制權穩定性 — 建議<span style="color:#f0ebe0;font-weight:700">對娛樂板塊個股風險敞口設對沖</span>，優先配置治理透明的同業。</div>
+  </div>
+
+</div>
+
+<div class="section" id="ip-monetization">
+  <h2><span class="tag tag-misc">IP 變現</span> BTS 遊戲化授權，變現韌性猶存</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--green)">BTS</div><div class="lbl">全球頂級 IP
+首個平台專屬體驗</div></div>
+    <div class="stat"><div class="val">Starri</div><div class="lbl">Nex 首個
+聯名版遊戲</div></div>
+    <div class="stat"><div class="val">2026</div><div class="lbl">年內上線
+（later this year）</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">Nex × HYBE 合作 — BTS 音樂體驗登陸體感遊戲平台</div>
+    <p>與監管陰霾形成對照，HYBE 於6月22日宣布與 <span style="color:#f0ebe0;font-weight:700">Nex Playground</span>（無手把體感遊戲主機）達成合作，將 BTS 品牌音樂體驗帶入其熱門遊戲 <span style="color:#f0ebe0;font-weight:700">Starri</span>，成為 Nex <span style="color:#f0ebe0;font-weight:700">首個聯名版</span>、亦是該平台<span style="color:#f0ebe0;font-weight:700">首個藝人專屬體驗</span>，預計年內上線。玩家透過全身動作與 BTS 音樂互動，將客廳轉化為互動式演出場景。Nex 國際總裁 Tom Kang 稱此為 Starri franchise 演進的重要里程碑。此舉展現 HYBE 將旗艦 IP <span style="color:#f0ebe0;font-weight:700">跨界遊戲化變現</span>的能力 — 即便當家藝人服役，品牌授權仍能持續產生現金流，體現其「娛樂生活方式平台」定位下的收入多元化韌性。</p>
+    <div class="data-point">合作方：<span style="color:#f0ebe0;font-weight:700">Nex（Nex Playground）</span> &nbsp;|&nbsp; 載體遊戲：<span style="color:#f0ebe0;font-weight:700">Starri（首個聯名版）</span> &nbsp;|&nbsp; IP：<span style="color:#f0ebe0;font-weight:700">BTS（首個藝人專屬體驗）</span> &nbsp;|&nbsp; 上線時程：<span style="color:#f0ebe0;font-weight:700">2026年內</span> &nbsp;|&nbsp; 技術：<span style="color:#f0ebe0;font-weight:700">無手把體感/動作追蹤</span></div>
+    <div class="implication"><div class="label">投資啟示</div>IP 授權變現韌性是 HYBE 的長線價值支柱。但短期難抵監管折價 — <span style="color:#f0ebe0;font-weight:700">不宜以商業利好抄底</span>，待稽查落地再評估基本面重估空間。</div>
+  </div>
+
+</div>
+
+<div class="divider"></div>
+
+<div class="red-team" id="red-team">
+  <div class="red-team-title">&#128308; Red Team — 核心假設與反面論證</div>
+  <ul>
+    <li>假設1：稅務調查為例行稽查，補稅金額可控，不涉創辦人刑責。</li>
+    <li>假設2：BTS IP 變現能力足以支撐 HYBE 基本面，抵消監管噪音。</li>
+    <li>假設3：多機構調查彼此獨立，不會升級為系統性治理危機。</li>
+    <li style="color:var(--red)">風險1：投入**兩支調查組**屬罕見（通常僅一支），且與**27家擾亂股市企業**同批列入 — 強度與定性均指向非例行，補稅與罰則規模可能遠超市場預期。</li>
+    <li style="color:var(--red)">風險2：IP 授權（如 Starri 聯名）現金流體量有限，難以對沖創辦人**2019上市前欺詐**指控帶來的控制權與估值折價。</li>
+    <li style="color:var(--red)">風險3：國稅廳、警方、證期委、金監院**四線聯動**且針對同一案件，明顯是協同施壓 — 獨立性假設不成立，事件升級概率被低估。</li>
+  </ul>
+  <p style="margin-top:10px;padding:10px 14px;background:rgba(224,85,69,0.04);border-radius:6px;font-size:0.9em;border-left:3px solid var(--red)">核心邏輯（監管風險主導、變現韌性次之）成立，但市場對稅務調查的定性風險嚴重低估。關鍵觸發：若特別調查延長至<span style="color:#f0ebe0;font-weight:700">120天上限</span>、或方時赫欺詐指控進入正式起訴階段，則敘事由「合規噪音」轉為「治理危機」，估值需下修一個檔次。在調查結果與潛在補稅金額明朗前，商業利好（BTS 遊戲授權）不足以構成買入理由。</p>
+</div>
+
+<div class="callout" id="takeaways">
+  <div class="callout-title">基金經理人重點摘要</div>
+  <ul>
+    <li><strong>監管風險：</strong>國稅廳罕見投入兩支調查組，90–120天特別稅務調查，強度極高。娛樂板塊持倉降槓桿、設停損。</li>
+    <li><strong>創辦人風險：</strong>方時赫涉2019上市前欺詐（SPC收購股份），警方＋證期委＋金監院四線聯動。治理尾部風險上升，設對沖。</li>
+    <li><strong>定價邏輯：</strong>監管不確定性在調查落幕前無法定價，避免追高或以商業利好抄底。</li>
+    <li><strong>IP 變現：</strong>BTS × Nex Starri 聯名（年內上線）顯示 IP 遊戲化變現韌性，但體量有限，難抵治理折價。</li>
+    <li><strong>操作：</strong>觀望為上；待稽查結果與補稅金額明朗，優先配置治理透明的同業，再評估 HYBE 重估空間。</li>
+  </ul>
+</div>
+
+<div class="nav-links">
+  <span><a href="newsletter_112_valuations.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="footer">
+  彭博研究摘要 | 僅供教學與討論用途 | 2026年7月2日<br>
+  資料來源：Bloomberg Intelligence, Bloomberg Economics, Bloomberg News<br>
+  <a href="https://www.patreon.com/Aireturn">Patreon</a> · <a href="https://t.me/AIreturn">Telegram</a> · Threads @aireturn88
+</div>
+
+</body>
+</html>

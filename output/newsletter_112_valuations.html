@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>彭博研究摘要 #112 — AI交易2.0：Mag 7失寵，資金輪動歐洲與均權</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Noto+Serif+TC:wght@400;700&family=Source+Sans+Pro:wght@400;600;700&display=swap');
+  :root { --bg: #0a0a08; --card: #141410; --border: #2a2820; --accent: #c9a84c;
+          --gold: #f0d87a; --gold-dim: #c4b896; --text: #e0d8c8; --text-bright: #f0ebe0; --muted: #8a8070;
+          --green: #6bbd5b; --red: #e05545; --yellow: #d4a843; --orange: #d49040;
+          --purple: #b08cd0; --cyan: #4cc9b0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { background: #0a0a08 !important; }
+  body { color: var(--text); font-family: 'Source Sans Pro', 'Noto Serif TC', 'Microsoft JhengHei', sans-serif; line-height: 1.8; padding: 24px; max-width: 880px; margin: 0 auto; }
+  h1 { font-family: 'Playfair Display', 'Noto Serif TC', serif; color: var(--gold); font-size: 1.8em; margin-bottom: 4px; font-weight: 900; letter-spacing: 0.02em; }
+  h2 { font-family: 'Playfair Display', 'Noto Serif TC', serif; }
+  .subtitle { color: var(--text-bright); font-size: 0.95em; margin-bottom: 8px; font-family: 'Noto Serif TC', serif; }
+  .issue-badge { display: inline-block; background: rgba(201,168,76,0.15); color: var(--accent); padding: 4px 12px; border-radius: 12px; font-size: 0.8em; font-weight: 600; margin-bottom: 20px; border: 1px solid rgba(201,168,76,0.3); }
+  .tag { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 0.72em; font-weight: 600; margin-right: 4px; }
+  .tag-rates { background: rgba(201,168,76,0.15); color: var(--accent); }
+  .tag-china { background: rgba(212,144,64,0.15); color: var(--orange); }
+  .tag-japan { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-geo   { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-oil   { background: rgba(212,168,67,0.15); color: var(--yellow); }
+  .tag-trade { background: rgba(212,168,67,0.15); color: var(--yellow); }
+  .tag-growth{ background: rgba(107,189,91,0.15); color: var(--green); }
+  .tag-metals{ background: rgba(176,140,208,0.15); color: var(--purple); }
+  .tag-infl  { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-policy{ background: rgba(201,168,76,0.15); color: var(--accent); }
+  .tag-val   { background: rgba(107,189,91,0.15); color: var(--green); }
+  .tag-vol   { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-semi  { background: rgba(76,201,176,0.15); color: var(--cyan); }
+  .tag-credit{ background: rgba(176,140,208,0.15); color: var(--purple); }
+  .tag-space { background: rgba(201,168,76,0.15); color: var(--accent); }
+  .tag-misc  { background: rgba(138,128,112,0.15); color: var(--muted); }
+  .verdict-bar { background: var(--accent); color: #0a0a08; padding: 14px 20px; border-radius: 8px; margin-bottom: 20px; font-weight: 700; font-size: 1.05em; font-family: 'Noto Serif TC', serif; }
+  .section { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 22px; margin-bottom: 18px; }
+  .section h2 { color: var(--gold); font-size: 1.15em; margin-bottom: 12px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+  .section h3 { color: var(--accent); font-size: 0.95em; margin: 14px 0 6px; }
+  .article { margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid rgba(42,40,32,0.7); }
+  .article:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .article-title { color: var(--text-bright); font-weight: 700; font-size: 0.95em; margin-bottom: 4px; }
+  .article-title-cn { color: var(--muted); font-size: 0.85em; margin-bottom: 8px; }
+  .article p { font-size: 0.9em; margin: 6px 0; }
+  .data-point { background: rgba(201,168,76,0.05); padding: 8px 12px; border-radius: 6px; margin: 8px 0; font-size: 0.85em; border: 1px solid rgba(201,168,76,0.12); }
+  .data-point .num { color: var(--text-bright); font-weight: 700; }
+  .implication { background: rgba(201,168,76,0.06); border-left: 3px solid var(--accent); padding: 10px 14px; margin: 10px 0; border-radius: 0 6px 6px 0; font-size: 0.88em; }
+  .implication .label { color: var(--accent); font-weight: 700; font-size: 0.8em; text-transform: uppercase; margin-bottom: 4px; }
+  .red-team { background: rgba(224,85,69,0.06); border: 1px solid rgba(224,85,69,0.25); border-radius: 8px; padding: 18px; margin: 18px 0; }
+  .red-team-title { color: var(--red); font-weight: 700; font-size: 0.95em; margin-bottom: 10px; font-family: 'Playfair Display', serif; }
+  .red-team ul { padding-left: 18px; }
+  .red-team li { margin: 5px 0; font-size: 0.88em; }
+  .callout { background: rgba(201,168,76,0.06); border: 1px solid rgba(201,168,76,0.25); border-radius: 8px; padding: 18px; margin: 18px 0; }
+  .callout-title { color: var(--accent); font-weight: 700; font-size: 0.95em; margin-bottom: 8px; font-family: 'Playfair Display', 'Noto Serif TC', serif; }
+  .callout ul { padding-left: 18px; }
+  .callout li { margin: 5px 0; font-size: 0.88em; }
+  ul { padding-left: 18px; }
+  li { margin: 4px 0; font-size: 0.88em; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(201,168,76,0.05); padding: 12px; border-radius: 6px; text-align: center; border: 1px solid rgba(201,168,76,0.1); }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: var(--gold); font-family: 'Playfair Display', serif; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
+  .toc { background: rgba(201,168,76,0.04); border: 1px solid rgba(201,168,76,0.18); border-radius: 8px; padding: 16px 20px; margin-bottom: 20px; }
+  .toc-title { color: var(--accent); font-weight: 700; font-size: 0.9em; margin-bottom: 8px; }
+  .toc a { color: var(--accent); text-decoration: none; font-size: 0.88em; }
+  .toc a:hover { text-decoration: underline; color: var(--gold); }
+  .toc ol { padding-left: 20px; }
+  .toc li { margin: 4px 0; }
+  .nav-links { display: flex; justify-content: space-between; margin: 20px 0; font-size: 0.85em; }
+  .nav-links a { color: var(--accent); text-decoration: none; }
+  .nav-links a:hover { text-decoration: underline; color: var(--gold); }
+  .divider { height: 1px; background: linear-gradient(90deg, transparent, var(--accent), transparent); margin: 24px 0; opacity: 0.4; }
+  .footer { text-align: center; color: var(--muted); font-size: 0.75em; margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--border); }
+  .footer a { color: var(--accent); text-decoration: none; }
+</style>
+<script>if(window.self===window.top&&sessionStorage.getItem("student_auth")!=="1"){document.body.innerHTML="";window.location.replace("student.html");}</script>
+</head>
+<body>
+
+<h1>彭博研究摘要</h1>
+<p class="subtitle">第112期 | AI交易2.0：Mag 7失寵，資金輪動歐洲與均權</p>
+<span class="issue-badge">2026年七月上旬更新</span>
+
+<div class="verdict-bar">結論：超大型科技從「融資多頭」翻轉為「融資空頭」，Mag 7單月蒸發3萬億美元 — 減持擁擠的hyperscaler，轉進歐洲Stoxx 600與S&amp;P 500均權指數。</div>
+
+<div class="nav-links">
+  <span><a href="newsletter_111_semiconductor.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="toc">
+  <div class="toc-title">目錄</div>
+  <ol>
+    <li><a href="#mag7-worries">大型科技 七雄失寵，資金奪門而出</a></li>
+    <li><a href="#europe-rotation">全球輪動 融資空頭：hyperscaler拖累標普，歐洲創新高</a></li>
+    <li><a href="#red-team">Red Team 反面論證</a></li>
+    <li><a href="#takeaways">基金經理人重點摘要</a></li>
+  </ol>
+</div>
+
+<div class="section" id="mag7-worries">
+  <h2><span class="tag tag-misc">大型科技</span> 七雄失寵，資金奪門而出</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--red)">-13%</div><div class="lbl">Roundhill Mag 7 ETF
+6月跌幅（2023年來最差）</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">-$3萬億</div><div class="lbl">Mag 7單月
+市值蒸發</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">&gt;30%</div><div class="lbl">Mag 7佔
+大盤市值比重</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">Mag 7的宏偉煩惱 — 從最擁擠多頭到市場棄兒</div>
+    <p>一年前基金經理眼中最擁擠的交易「做多Mag 7」，如今已淪為孤獨的棄兒。追蹤七雄的Roundhill Mag 7 ETF在6月重挫 <span style="color:#f0ebe0;font-weight:700">13%</span>，創2023年4月成立以來最差月份；相反追蹤其餘標普成分股的Defiance ex-Mag 7 ETF同期上漲 <span style="color:#f0ebe0;font-weight:700">2.6%</span>。在晶片股歷史性飆升、軟體持續低迷之際，市場幾乎遺忘了七雄 — 七家公司單月合計蒸發約 <span style="color:#f0ebe0;font-weight:700">3萬億美元</span> 市值。每家各有隱憂：Amazon、Meta、Microsoft、Alphabet豪擲AI建置；Nvidia面臨新晶片圍剿；Apple苦戰記憶體漲價；Tesla一如既往波動。距5月14日ETF創歷史新高僅六週，跌勢或屬可預期，但值得追問「Mag 7」是否還有意義。</p>
+    <div class="data-point">6月跌幅：<span style="color:#f0ebe0;font-weight:700">-13%（Roundhill）</span> &nbsp;|&nbsp; ex-Mag 7 ETF：<span style="color:#f0ebe0;font-weight:700">+2.6%</span> &nbsp;|&nbsp; 市值蒸發：<span style="color:#f0ebe0;font-weight:700">~$3萬億</span> &nbsp;|&nbsp; 佔大盤比重：<span style="color:#f0ebe0;font-weight:700">仍&gt;30%</span></div>
+    <div class="implication"><div class="label">投資啟示</div>七雄敘事正在瓦解。<span style="color:#f0ebe0;font-weight:700">減持一籃子Mag 7，改持均權或ex-Mag 7產品</span> 以捕捉市場其餘部分的擴散行情。</div>
+  </div>
+  <div class="article">
+    <div class="article-title">供應鏈上位 — Micron市值逼近Meta，晶片設備成新寵</div>
+    <p>領漲2026年的不再是七雄本身，而是為其供貨AI硬體的幕後功臣。財報亮眼後，記憶體大廠 <span style="color:#f0ebe0;font-weight:700">Micron</span> 市值已幾乎追平 <span style="color:#f0ebe0;font-weight:700">Meta</span>；晶片設備商Applied Materials與半導體巨頭Broadcom更與Nvidia並列，成為上月對沖基金第二、第三擁擠的多頭部位（Hazeltree數據）。與此同時，馬斯克宇宙生變 — Tesla已非其最大上市公司，SpaceX兩週前破紀錄的IPO更搶走市場目光。諷刺的是，Mag 7對信用投資人反而更具吸引力：AI雲端供應商被視為高度可靠的債券發行人。這意味著股權端的失寵與信用端的青睞正在分道揚鑣。</p>
+    <div class="data-point">Micron市值：<span style="color:#f0ebe0;font-weight:700">≈Meta</span> &nbsp;|&nbsp; 對沖基金擁擠多頭：<span style="color:#f0ebe0;font-weight:700">Nvidia、AMAT、Broadcom</span> &nbsp;|&nbsp; 市場領頭：<span style="color:#f0ebe0;font-weight:700">AI硬體供應鏈</span> &nbsp;|&nbsp; Mag 7信用：<span style="color:#f0ebe0;font-weight:700">可靠債券發行人</span></div>
+    <div class="implication"><div class="label">投資啟示</div>資金正從「AI買家」轉向「AI賣鏟人」。<span style="color:#f0ebe0;font-weight:700">超配半導體與晶片設備供應鏈，而非終端hyperscaler股權</span>；信用端可留意Mag 7投資級債。</div>
+  </div>
+
+</div>
+
+<div class="section" id="europe-rotation">
+  <h2><span class="tag tag-misc">全球輪動</span> 融資空頭：hyperscaler拖累標普，歐洲創新高</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--red)">$0</div><div class="lbl">hyperscaler今年
+授權回購（2025為$140B）</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">十年最高</div><div class="lbl">對沖基金美股科技
+淨賣出（GS Prime）</div></div>
+    <div class="stat"><div class="val" style="color:var(--green)">新高</div><div class="lbl">Stoxx 600
+（廣度健康）</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">全球輪動處處寫著歐洲 — 只要AI資本開支不停歇</div>
+    <p>一場廣泛輪動正在市場動盪背後上演，利好國際股市，且只要AI hyperscaler繼續無節制支出便將延續。受制於超大型股權重，標普500指數層面漲幅有限；反觀歐洲廣度更健康，Stoxx 600屢創新高。Amundi策略師對美股中性、對均權基準正面，並看好受惠歐盟與德國財政刺激的歐洲板塊。Nomura的McElligott指出，標普無法創新高，因主要支出者已從市場的結構性「融資多頭」翻轉為「融資空頭」 — 均權指數自10月起持續跑贏hyperscaler。這些昔日的回購冠軍如今為滿足暴增的資本開支而發債發股：今年授權回購 <span style="color:#f0ebe0;font-weight:700">歸零</span>，遠低於2025年的 <span style="color:#f0ebe0;font-weight:700">$140億</span> 與前年的 <span style="color:#f0ebe0;font-weight:700">$190億</span>。</p>
+    <div class="data-point">hyperscaler回購：<span style="color:#f0ebe0;font-weight:700">$0（vs 2025 $140B、2024 $190B）</span> &nbsp;|&nbsp; 均權跑贏hyperscaler：<span style="color:#f0ebe0;font-weight:700">自10月起</span> &nbsp;|&nbsp; Amundi立場：<span style="color:#f0ebe0;font-weight:700">美股中性、均權正面、歐洲建設性</span> &nbsp;|&nbsp; Stoxx 600：<span style="color:#f0ebe0;font-weight:700">創新高</span></div>
+    <div class="implication"><div class="label">投資啟示</div>回購引擎熄火，波動壓抑消失。<span style="color:#f0ebe0;font-weight:700">做多S&amp;P 500均權指數與Stoxx 600，相對做空hyperscaler籃子</span>；聚焦受惠歐盟/德國財政刺激的歐洲板塊。</div>
+  </div>
+  <div class="article">
+    <div class="article-title">對沖基金奪路而逃 — 美科技淨賣出創十年之最</div>
+    <p>資金流已印證輪動。據Goldman Sachs Prime Services數據，對沖基金上週激進削減美股科技曝險，淨賣出無論絕對值或相對值皆創 <span style="color:#f0ebe0;font-weight:700">十年多來最高</span>，且由半導體相關股票的拋售領軍，美國科技基金同時錄得顯著淨流出。Amundi補充，機會集廣泛：美國與亞洲更暴露於資本開支、瓶頸與硬體建置的週期早段，而印度與歐洲則更受惠於後段的部署與採用。此外，自美伊達成脆弱停火以來，歐洲股市持續跑贏美股 — 這個曾經最受地緣風險拖累的地區，如今搖身成為相對避風港。記憶體、光通訊、資料中心建商與公用事業等AI受惠股雖漲勢凌厲，卻已變得極度擁擠。</p>
+    <div class="data-point">科技淨賣出：<span style="color:#f0ebe0;font-weight:700">十年多來最高（GS Prime）</span> &nbsp;|&nbsp; 領跌板塊：<span style="color:#f0ebe0;font-weight:700">半導體</span> &nbsp;|&nbsp; 週期定位：<span style="color:#f0ebe0;font-weight:700">美/亞早段、印/歐後段</span> &nbsp;|&nbsp; 停火後：<span style="color:#f0ebe0;font-weight:700">歐洲跑贏美股</span></div>
+    <div class="implication"><div class="label">投資啟示</div>擁擠度是最大尾部風險。<span style="color:#f0ebe0;font-weight:700">逢高減持記憶體、光通訊、資料中心等擁擠AI受惠股</span>；地域上增配歐洲與印度以捕捉AI採用後段紅利。</div>
+  </div>
+
+</div>
+
+<div class="divider"></div>
+
+<div class="red-team" id="red-team">
+  <div class="red-team-title">&#128308; Red Team — 核心假設與反面論證</div>
+  <ul>
+    <li>假設1：AI hyperscaler將持續無節制的資本開支，維持供應鏈需求與輪動邏輯</li>
+    <li>假設2：Mag 7的失寵是結構性轉向，而非短期回調（距5月14日高點僅六週）</li>
+    <li>假設3：歐洲的廣度優勢與財政刺激可支撐Stoxx 600持續跑贏</li>
+    <li style="color:var(--red)">風險1：若AI資本開支見頂或投資回報質疑升溫，供應鏈（半導體）受創將比終端股權更劇，輪動邏輯反轉</li>
+    <li style="color:var(--red)">風險2：Mag 7仍佔大盤&gt;30%權重，若巨頭財報超預期，資金可能快速回補這一「便宜的成長」</li>
+    <li style="color:var(--red)">風險3：歐洲跑贏部分建基於美伊「脆弱停火」；若中東衝突重燃，避險資金將回流美元資產而非歐股</li>
+  </ul>
+  <p style="margin-top:10px;padding:10px 14px;background:rgba(224,85,69,0.04);border-radius:6px;font-size:0.9em;border-left:3px solid var(--red)">核心「融資多頭→融資空頭」邏輯成立且有硬數據支撐 — 回購歸零（vs 2025 $140B）與十年最高的科技淨賣出難以證偽。但這是一場擁擠度的輪動，而非趨勢終結：Mag 7單月已跌13%、蒸發$3萬億，短線超賣風險上升。策略上宜做多均權/歐洲、相對做空hyperscaler，但需以停火破裂與巨頭財報作為對沖觸發點。</p>
+</div>
+
+<div class="callout" id="takeaways">
+  <div class="callout-title">基金經理人重點摘要</div>
+  <ul>
+    <li><strong>Mag 7：</strong>單月蒸發$3萬億、ETF跌13%創2023年來最差。減持擁擠籃子，改持均權/ex-Mag 7產品捕捉擴散行情。</li>
+    <li><strong>供應鏈：</strong>Micron市值逼近Meta，AMAT、Broadcom躋身對沖基金最擁擠多頭。超配「賣鏟人」半導體與晶片設備，而非終端hyperscaler。</li>
+    <li><strong>回購引擎：</strong>hyperscaler今年授權回購歸零（2025為$140B）。波動壓抑消失，昔日「funding longs」已翻轉為「funding shorts」。</li>
+    <li><strong>歐洲/均權：</strong>Stoxx 600創新高、廣度健康，均權自10月起跑贏hyperscaler。做多Stoxx 600與S&P 500均權，聚焦歐盟/德國財政刺激板塊。</li>
+    <li><strong>資金流：</strong>對沖基金美股科技淨賣出創十年之最（GS Prime），由半導體領軍。逢高減持擁擠AI受惠股（記憶體、光通訊、資料中心）。</li>
+    <li><strong>對沖：</strong>歐洲跑贏部分依賴美伊脆弱停火 — 以中東衝突重燃與巨頭財報超預期作為反轉觸發點，保留美元避險頭寸。</li>
+  </ul>
+</div>
+
+<div class="nav-links">
+  <span><a href="newsletter_111_semiconductor.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="footer">
+  彭博研究摘要 | 僅供教學與討論用途 | 2026年7月2日<br>
+  資料來源：Bloomberg Intelligence, Bloomberg Economics, Bloomberg News<br>
+  <a href="https://www.patreon.com/Aireturn">Patreon</a> · <a href="https://t.me/AIreturn">Telegram</a> · Threads @aireturn88
+</div>
+
+</body>
+</html>

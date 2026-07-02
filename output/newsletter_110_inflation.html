@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>彭博研究摘要 #110 — 通膨假象與供給衝擊：核心PCE的計量迷霧</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Noto+Serif+TC:wght@400;700&family=Source+Sans+Pro:wght@400;600;700&display=swap');
+  :root { --bg: #0a0a08; --card: #141410; --border: #2a2820; --accent: #c9a84c;
+          --gold: #f0d87a; --gold-dim: #c4b896; --text: #e0d8c8; --text-bright: #f0ebe0; --muted: #8a8070;
+          --green: #6bbd5b; --red: #e05545; --yellow: #d4a843; --orange: #d49040;
+          --purple: #b08cd0; --cyan: #4cc9b0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { background: #0a0a08 !important; }
+  body { color: var(--text); font-family: 'Source Sans Pro', 'Noto Serif TC', 'Microsoft JhengHei', sans-serif; line-height: 1.8; padding: 24px; max-width: 880px; margin: 0 auto; }
+  h1 { font-family: 'Playfair Display', 'Noto Serif TC', serif; color: var(--gold); font-size: 1.8em; margin-bottom: 4px; font-weight: 900; letter-spacing: 0.02em; }
+  h2 { font-family: 'Playfair Display', 'Noto Serif TC', serif; }
+  .subtitle { color: var(--text-bright); font-size: 0.95em; margin-bottom: 8px; font-family: 'Noto Serif TC', serif; }
+  .issue-badge { display: inline-block; background: rgba(201,168,76,0.15); color: var(--accent); padding: 4px 12px; border-radius: 12px; font-size: 0.8em; font-weight: 600; margin-bottom: 20px; border: 1px solid rgba(201,168,76,0.3); }
+  .tag { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 0.72em; font-weight: 600; margin-right: 4px; }
+  .tag-rates { background: rgba(201,168,76,0.15); color: var(--accent); }
+  .tag-china { background: rgba(212,144,64,0.15); color: var(--orange); }
+  .tag-japan { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-geo   { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-oil   { background: rgba(212,168,67,0.15); color: var(--yellow); }
+  .tag-trade { background: rgba(212,168,67,0.15); color: var(--yellow); }
+  .tag-growth{ background: rgba(107,189,91,0.15); color: var(--green); }
+  .tag-metals{ background: rgba(176,140,208,0.15); color: var(--purple); }
+  .tag-infl  { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-policy{ background: rgba(201,168,76,0.15); color: var(--accent); }
+  .tag-val   { background: rgba(107,189,91,0.15); color: var(--green); }
+  .tag-vol   { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-semi  { background: rgba(76,201,176,0.15); color: var(--cyan); }
+  .tag-credit{ background: rgba(176,140,208,0.15); color: var(--purple); }
+  .tag-space { background: rgba(201,168,76,0.15); color: var(--accent); }
+  .tag-misc  { background: rgba(138,128,112,0.15); color: var(--muted); }
+  .verdict-bar { background: var(--accent); color: #0a0a08; padding: 14px 20px; border-radius: 8px; margin-bottom: 20px; font-weight: 700; font-size: 1.05em; font-family: 'Noto Serif TC', serif; }
+  .section { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 22px; margin-bottom: 18px; }
+  .section h2 { color: var(--gold); font-size: 1.15em; margin-bottom: 12px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+  .section h3 { color: var(--accent); font-size: 0.95em; margin: 14px 0 6px; }
+  .article { margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid rgba(42,40,32,0.7); }
+  .article:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .article-title { color: var(--text-bright); font-weight: 700; font-size: 0.95em; margin-bottom: 4px; }
+  .article-title-cn { color: var(--muted); font-size: 0.85em; margin-bottom: 8px; }
+  .article p { font-size: 0.9em; margin: 6px 0; }
+  .data-point { background: rgba(201,168,76,0.05); padding: 8px 12px; border-radius: 6px; margin: 8px 0; font-size: 0.85em; border: 1px solid rgba(201,168,76,0.12); }
+  .data-point .num { color: var(--text-bright); font-weight: 700; }
+  .implication { background: rgba(201,168,76,0.06); border-left: 3px solid var(--accent); padding: 10px 14px; margin: 10px 0; border-radius: 0 6px 6px 0; font-size: 0.88em; }
+  .implication .label { color: var(--accent); font-weight: 700; font-size: 0.8em; text-transform: uppercase; margin-bottom: 4px; }
+  .red-team { background: rgba(224,85,69,0.06); border: 1px solid rgba(224,85,69,0.25); border-radius: 8px; padding: 18px; margin: 18px 0; }
+  .red-team-title { color: var(--red); font-weight: 700; font-size: 0.95em; margin-bottom: 10px; font-family: 'Playfair Display', serif; }
+  .red-team ul { padding-left: 18px; }
+  .red-team li { margin: 5px 0; font-size: 0.88em; }
+  .callout { background: rgba(201,168,76,0.06); border: 1px solid rgba(201,168,76,0.25); border-radius: 8px; padding: 18px; margin: 18px 0; }
+  .callout-title { color: var(--accent); font-weight: 700; font-size: 0.95em; margin-bottom: 8px; font-family: 'Playfair Display', 'Noto Serif TC', serif; }
+  .callout ul { padding-left: 18px; }
+  .callout li { margin: 5px 0; font-size: 0.88em; }
+  ul { padding-left: 18px; }
+  li { margin: 4px 0; font-size: 0.88em; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(201,168,76,0.05); padding: 12px; border-radius: 6px; text-align: center; border: 1px solid rgba(201,168,76,0.1); }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: var(--gold); font-family: 'Playfair Display', serif; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
+  .toc { background: rgba(201,168,76,0.04); border: 1px solid rgba(201,168,76,0.18); border-radius: 8px; padding: 16px 20px; margin-bottom: 20px; }
+  .toc-title { color: var(--accent); font-weight: 700; font-size: 0.9em; margin-bottom: 8px; }
+  .toc a { color: var(--accent); text-decoration: none; font-size: 0.88em; }
+  .toc a:hover { text-decoration: underline; color: var(--gold); }
+  .toc ol { padding-left: 20px; }
+  .toc li { margin: 4px 0; }
+  .nav-links { display: flex; justify-content: space-between; margin: 20px 0; font-size: 0.85em; }
+  .nav-links a { color: var(--accent); text-decoration: none; }
+  .nav-links a:hover { text-decoration: underline; color: var(--gold); }
+  .divider { height: 1px; background: linear-gradient(90deg, transparent, var(--accent), transparent); margin: 24px 0; opacity: 0.4; }
+  .footer { text-align: center; color: var(--muted); font-size: 0.75em; margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--border); }
+  .footer a { color: var(--accent); text-decoration: none; }
+</style>
+<script>if(window.self===window.top&&sessionStorage.getItem("student_auth")!=="1"){document.body.innerHTML="";window.location.replace("student.html");}</script>
+</head>
+<body>
+
+<h1>彭博研究摘要</h1>
+<p class="subtitle">第110期 | 通膨假象與供給衝擊：核心PCE的計量迷霧</p>
+<span class="issue-badge">2026年七月上旬更新</span>
+
+<div class="verdict-bar">結論：5月核心PCE表面熱燙（年化6個月4.1%），但約0.12-0.17個百分點源自軟件計量錯配而非真實通膨；聯準會年內料按兵不動，逢高布局前端利率期貨，並以可可、糖等軟商品對沖油價與聖嬰尾部風險</div>
+
+<div class="nav-links">
+  <span><a href="newsletter_109_geopolitics.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="toc">
+  <div class="toc-title">目錄</div>
+  <ol>
+    <li><a href="#core-pce-mismeasurement">計量迷霧 SD卡冒充軟件，核心PCE被高估</a></li>
+    <li><a href="#supply-shocks">供給衝擊 聖嬰現象與伊朗戰爭：食品油價尾部風險</a></li>
+    <li><a href="#europe-france">歐洲 法國通膨回落至2%，但增長熄火</a></li>
+    <li><a href="#red-team">Red Team 反面論證</a></li>
+    <li><a href="#takeaways">基金經理人重點摘要</a></li>
+  </ol>
+</div>
+
+<div class="section" id="core-pce-mismeasurement">
+  <h2><span class="tag tag-misc">計量迷霧</span> SD卡冒充軟件，核心PCE被高估</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--orange)">+14.5%</div><div class="lbl">5月CPI「電腦軟件及配件」
+同比漲幅</div></div>
+    <div class="stat"><div class="val" style="color:var(--green)">-0.3pp</div><div class="lbl">剔除SD卡後
+6個月年化核心PCE降幅</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">~0.7pp</div><div class="lbl">去年11月以來軟件
+對核心PCE年化貢獻</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">張冠李戴 —— 核心PCE通膨為何可能被高估</div>
+    <p>彭博經濟研究（Anna Wong、Troy Durie）指出，聯儲會首選的核心PCE通膨近期走高，部分是<span style="color:#f0ebe0;font-weight:700">計量問題</span>而非基本面壓力。癥結在於：CPI「電腦軟件及配件」類別5月同比大漲 <span style="color:#f0ebe0;font-weight:700">14.5%</span>，但這波漲勢主要來自去年11月起飆升的內存晶片與 <span style="color:#f0ebe0;font-weight:700">SD卡、硬碟、空白光盤</span> 等實物存儲產品——彭博價格項目顯示，剔除SD卡後軟件通膨降至 <span style="color:#f0ebe0;font-weight:700">11.1%</span>，剔除所有存儲產品更降至 <span style="color:#f0ebe0;font-weight:700">6.9%</span>。問題是BEA用CPI這一分項去平減PCE軟件支出，而PCE定義並不含這些實物存儲品。由於軟件在核心PCE的權重（<span style="color:#f0ebe0;font-weight:700">約1.2%</span>）遠高於CPI（<span style="color:#f0ebe0;font-weight:700">僅0.03%</span>），錯配被放大：軟件對核心PCE的年化貢獻可從 <span style="color:#f0ebe0;font-weight:700">0.59個百分點降至0.35（剔SD卡）乃至0.27（剔全部存儲）</span>。糾正錯配可使年化核心PCE降低 <span style="color:#f0ebe0;font-weight:700">約0.12至0.17個百分點</span>。</p>
+    <div class="data-point">CPI軟件類同比：<span style="color:#f0ebe0;font-weight:700">+14.5%</span> &nbsp;|&nbsp; 剔SD卡後：<span style="color:#f0ebe0;font-weight:700">11.1%</span>、剔全部存儲：<span style="color:#f0ebe0;font-weight:700">6.9%</span> &nbsp;|&nbsp; 軟件核心PCE權重：<span style="color:#f0ebe0;font-weight:700">1.2%</span>（CPI僅0.03%） &nbsp;|&nbsp; 年化核心PCE高估幅度：<span style="color:#f0ebe0;font-weight:700">0.12-0.17pp</span></div>
+    <div class="implication"><div class="label">投資啟示</div>市場對熱PCE的鷹派解讀部分建立在統計瑕疵上。一旦內存/存儲價格趨穩，此貢獻將自動消退——<span style="color:#f0ebe0;font-weight:700">逢通膨數據高點布局前端利率期貨多頭</span>，賭下半年真實通膨回落。</div>
+  </div>
+  <div class="article">
+    <div class="article-title">5月PCE預覽 —— 熱數據坐實聯準會鷹派立場</div>
+    <p>Bloomberg Economics（Stuart Paul等）預估5月PCE物價指數環比 <span style="color:#f0ebe0;font-weight:700">+0.48%</span>（4月 +0.40%），年率升至 <span style="color:#f0ebe0;font-weight:700">4.1%</span>（前值3.8%）；核心PCE平減指數環比 <span style="color:#f0ebe0;font-weight:700">+0.35%</span>（4月0.24%），同比自3.3%升至 <span style="color:#f0ebe0;font-weight:700">3.4%</span>。折算後，1個月年化核心PCE跳至 <span style="color:#f0ebe0;font-weight:700">4.3%</span>（前值2.9%），但3個月年化反而降至 <span style="color:#f0ebe0;font-weight:700">3.6%</span>（前值3.8%），6個月年化升至 <span style="color:#f0ebe0;font-weight:700">4.1%</span>。漲幅主要來自機票、醫療與 <span style="color:#f0ebe0;font-weight:700">組合管理費（環比+4.8%，CPI未計入）</span>。收入料增 <span style="color:#f0ebe0;font-weight:700">0.4%</span>、支出增 <span style="color:#f0ebe0;font-weight:700">0.6%</span>，受退稅與財富效應支撐，為強勁的第二季GDP鋪路。報告坐實了6月FOMC的鷹派基調，但團隊預期通膨將 <span style="color:#f0ebe0;font-weight:700">自6月起進入長期回落</span>，聯準會年內按兵不動。</p>
+    <div class="data-point">PCE環比：<span style="color:#f0ebe0;font-weight:700">+0.48%</span>（年率4.1%） &nbsp;|&nbsp; 核心PCE同比：<span style="color:#f0ebe0;font-weight:700">3.4%</span>（環比0.35%） &nbsp;|&nbsp; 6個月年化核心PCE：<span style="color:#f0ebe0;font-weight:700">4.1%</span> &nbsp;|&nbsp; 支出：<span style="color:#f0ebe0;font-weight:700">+0.6%</span>、收入 +0.4% &nbsp;|&nbsp; 聯準會：<span style="color:#f0ebe0;font-weight:700">年內維持不變</span></div>
+    <div class="implication"><div class="label">投資啟示</div>熱通膨+熱支出短期支撐鷹派，但1個月與3個月數據背離（4.3% vs 3.6%）暗示動能見頂。<span style="color:#f0ebe0;font-weight:700">維持前端利率期貨逢低吸納策略</span>，等待6月起的通膨轉向確認。</div>
+  </div>
+
+</div>
+
+<div class="section" id="supply-shocks">
+  <h2><span class="tag tag-misc">供給衝擊</span> 聖嬰現象與伊朗戰爭：食品油價尾部風險</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--red)">+77%</div><div class="lbl">可可自2月底以來
+漲幅（領漲商品）</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">+2°C</div><div class="lbl">太平洋海溫較常態
+（超級聖嬰門檻）</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">+18%</div><div class="lbl">花旗預估可可未來
+12個月潛在續漲</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">超級聖嬰威脅食品價格 —— 通膨憂慮再添柴火</div>
+    <p>NOAA警告太平洋關鍵監測區海溫今年恐較常態高出 <span style="color:#f0ebe0;font-weight:700">至少2°C（3.6°F）</span>，跨越「超級聖嬰」門檻，加劇乾旱、洪災與熱浪風險。疊加 <span style="color:#f0ebe0;font-weight:700">伊朗戰爭</span> 帶來的能源衝擊，消費者負擔雪上加霜。商品市場已見反應：<span style="color:#f0ebe0;font-weight:700">可可自2月底以來飆升77%</span>，領漲各類商品，花旗預估未來12個月因聖嬰威脅作物還可能 <span style="color:#f0ebe0;font-weight:700">續漲18%</span>；棉花漲 <span style="color:#f0ebe0;font-weight:700">15%</span>、糖漲 <span style="color:#f0ebe0;font-weight:700">10%</span>，且銀行預測供給短缺。歐洲6月創紀錄熱浪、印度大部分地區處於乾旱或風險之中，威脅糖、棉、稻米等關鍵作物與食品通膨。央行官員正密切監控天氣，隨時準備在價格壓力擴散時出手。</p>
+    <div class="data-point">海溫異常：<span style="color:#f0ebe0;font-weight:700">+2°C</span>（超級聖嬰） &nbsp;|&nbsp; 可可：<span style="color:#f0ebe0;font-weight:700">+77%</span>（自2月底） &nbsp;|&nbsp; 棉花 +15%、糖 +10% &nbsp;|&nbsp; 花旗預估可可續漲：<span style="color:#f0ebe0;font-weight:700">+18%/12個月</span></div>
+    <div class="implication"><div class="label">投資啟示</div>食品與能源是通膨敘事的最大尾部風險，可能延遲聯準會轉向。<span style="color:#f0ebe0;font-weight:700">以可可、糖等軟商品多頭對沖利率多頭部位</span>，若伊朗戰事升溫則加碼能源對沖。</div>
+  </div>
+
+</div>
+
+<div class="section" id="europe-france">
+  <h2><span class="tag tag-misc">歐洲</span> 法國通膨回落至2%，但增長熄火</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--green)">2.0%</div><div class="lbl">法國6月通膨
+（5月為2.8%）</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">-0.1%</div><div class="lbl">法國1Q26 GDP
+環比意外收縮</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">8.1%</div><div class="lbl">法國Q1失業率
+（同比+0.7pp）</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">能源衝擊消退 —— 法國通膨重返2%</div>
+    <p>法國6月通膨自5月的 <span style="color:#f0ebe0;font-weight:700">2.8%</span> 回落至 <span style="color:#f0ebe0;font-weight:700">2.0%</span>，受能源價格放緩及服務、工業品成本走軟共同帶動，顯示能源驅動的通膨升溫可能只是暫時（儘管未來數月仍有反彈可能）。彭博BE預期2026年通膨臨時升至 <span style="color:#f0ebe0;font-weight:700">2.3%</span>，2027年將降至ECB 2%目標下方——與2022年不同，<span style="color:#f0ebe0;font-weight:700">降溫的勞動市場與受控的電價</span> 將限制物價壓力擴散。但增長黯淡：1Q26 GDP意外 <span style="color:#f0ebe0;font-weight:700">收縮0.1%</span>（4Q25僅+0.2%），內需疲弱、伊朗戰爭開打拖累，BE將全年增長下修至 <span style="color:#f0ebe0;font-weight:700">0.7%</span>（低於政府0.9%）。失業率升至 <span style="color:#f0ebe0;font-weight:700">8.1%</span>（同比+0.7pp），逼近疫前水平；政治分裂令2029年將赤字削減至GDP 3%的財政整頓更加棘手。</p>
+    <div class="data-point">6月通膨：<span style="color:#f0ebe0;font-weight:700">2.0%</span>（5月2.8%） &nbsp;|&nbsp; 2026預估通膨：<span style="color:#f0ebe0;font-weight:700">2.3%</span>，2027&lt;2% &nbsp;|&nbsp; 1Q26 GDP：<span style="color:#f0ebe0;font-weight:700">-0.1%</span> &nbsp;|&nbsp; 全年增長：<span style="color:#f0ebe0;font-weight:700">0.7%</span>（政府0.9%） &nbsp;|&nbsp; 失業率：<span style="color:#f0ebe0;font-weight:700">8.1%</span></div>
+    <div class="implication"><div class="label">投資啟示</div>法國通膨回落+增長熄火強化ECB的鴿派空間。<span style="color:#f0ebe0;font-weight:700">相對美國，做多歐洲前端利率/歐債</span>；留意政治風險對法德利差的擾動。</div>
+  </div>
+
+</div>
+
+<div class="divider"></div>
+
+<div class="red-team" id="red-team">
+  <div class="red-team-title">&#128308; Red Team — 核心假設與反面論證</div>
+  <ul>
+    <li>假設1：近期核心PCE走高有相當部分是SD卡/存儲產品的計量錯配，剔除後通膨壓力顯著較低</li>
+    <li>假設2：油價與食品衝擊屬暫時性，通膨將自6月起進入長期回落，聯準會年內按兵不動後轉向降息</li>
+    <li>假設3：歐洲（法國）能源驅動的通膨升溫是一次性的，2027年將回落至ECB目標下方</li>
+    <li style="color:var(--red)">風險1：計量修正僅0.12-0.17pp，核心PCE同比仍達3.4%、6個月年化4.1%，遠高於2%目標——即便剔除軟件錯配，通膨依舊黏著；且彭博自身承認未對AI軟件做享受質量調整，方向不確定</li>
+    <li style="color:var(--red)">風險2：可可+77%、糖+10%、超級聖嬰疊加伊朗戰爭能源衝擊，是實實在在的供給側輸入性通膨，可能連續數月推高CPI，與「暫時性」敘事直接衝突</li>
+    <li style="color:var(--red)">風險3：5月支出+0.6%、收入+0.4%、組合管理費+4.8%顯示需求與財富效應仍強，1個月年化核心PCE高達4.3%，聯準會或有理由更久維持鷹派</li>
+  </ul>
+  <p style="margin-top:10px;padding:10px 14px;background:rgba(224,85,69,0.04);border-radius:6px;font-size:0.9em;border-left:3px solid var(--red)">核心邏輯（下半年真實通膨回落、聯準會年內按兵不動後轉向）仍成立：計量錯配確實誇大了商品端通膨，且1個月4.3%與3個月3.6%的背離印證動能見頂。但論點的最大破綻在供給側——若可可/糖續漲且油價因伊朗戰爭與超級聖嬰持續升溫，食品能源通膨足以抵銷計量修正帶來的0.15pp利好，將降息敘事推遲。硬指標門檻：若6個月年化核心PCE不能自4.1%回落至3.5%以下、或Brent持續站上高位兩個月以上，前端利率多頭需減碼並加碼軟商品/能源對沖。</p>
+</div>
+
+<div class="callout" id="takeaways">
+  <div class="callout-title">基金經理人重點摘要</div>
+  <ul>
+    <li><strong>核心PCE：</strong>5月同比3.4%、6個月年化4.1%看似熱燙，但約0.12-0.17pp來自SD卡/存儲產品的軟件計量錯配。逢數據高點布局前端利率期貨多頭。</li>
+    <li><strong>聯準會：</strong>熱通膨+熱支出坐實6月鷹派，但團隊預期6月起通膨長期回落，年內按兵不動。等待轉向確認再加碼。</li>
+    <li><strong>供給衝擊：</strong>可可+77%、糖+10%、超級聖嬰（海溫+2°C）疊加伊朗戰爭能源衝擊，為最大尾部風險。以軟商品多頭對沖利率部位。</li>
+    <li><strong>歐洲/法國：</strong>6月通膨回落至2.0%（5月2.8%），但1Q26 GDP -0.1%、失業率8.1%。ECB鴿派空間打開，相對美國做多歐洲前端利率。</li>
+    <li><strong>對沖建議：</strong>若Brent持續高位兩個月以上或可可續漲18%，降息敘事將被推遲——同步持有前端利率多頭與軟商品/能源對沖，管理雙向風險。</li>
+  </ul>
+</div>
+
+<div class="nav-links">
+  <span><a href="newsletter_109_geopolitics.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="footer">
+  彭博研究摘要 | 僅供教學與討論用途 | 2026年7月2日<br>
+  資料來源：Bloomberg Intelligence, Bloomberg Economics, Bloomberg News<br>
+  <a href="https://www.patreon.com/Aireturn">Patreon</a> · <a href="https://t.me/AIreturn">Telegram</a> · Threads @aireturn88
+</div>
+
+</body>
+</html>

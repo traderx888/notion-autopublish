@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>彭博研究摘要 #116 — 就業火熱與鷹派回歸：加息幽靈重臨</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Noto+Serif+TC:wght@400;700&family=Source+Sans+Pro:wght@400;600;700&display=swap');
+  :root { --bg: #0a0a08; --card: #141410; --border: #2a2820; --accent: #c9a84c;
+          --gold: #f0d87a; --gold-dim: #c4b896; --text: #e0d8c8; --text-bright: #f0ebe0; --muted: #8a8070;
+          --green: #6bbd5b; --red: #e05545; --yellow: #d4a843; --orange: #d49040;
+          --purple: #b08cd0; --cyan: #4cc9b0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { background: #0a0a08 !important; }
+  body { color: var(--text); font-family: 'Source Sans Pro', 'Noto Serif TC', 'Microsoft JhengHei', sans-serif; line-height: 1.8; padding: 24px; max-width: 880px; margin: 0 auto; }
+  h1 { font-family: 'Playfair Display', 'Noto Serif TC', serif; color: var(--gold); font-size: 1.8em; margin-bottom: 4px; font-weight: 900; letter-spacing: 0.02em; }
+  h2 { font-family: 'Playfair Display', 'Noto Serif TC', serif; }
+  .subtitle { color: var(--text-bright); font-size: 0.95em; margin-bottom: 8px; font-family: 'Noto Serif TC', serif; }
+  .issue-badge { display: inline-block; background: rgba(201,168,76,0.15); color: var(--accent); padding: 4px 12px; border-radius: 12px; font-size: 0.8em; font-weight: 600; margin-bottom: 20px; border: 1px solid rgba(201,168,76,0.3); }
+  .tag { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 0.72em; font-weight: 600; margin-right: 4px; }
+  .tag-rates { background: rgba(201,168,76,0.15); color: var(--accent); }
+  .tag-china { background: rgba(212,144,64,0.15); color: var(--orange); }
+  .tag-japan { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-geo   { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-oil   { background: rgba(212,168,67,0.15); color: var(--yellow); }
+  .tag-trade { background: rgba(212,168,67,0.15); color: var(--yellow); }
+  .tag-growth{ background: rgba(107,189,91,0.15); color: var(--green); }
+  .tag-metals{ background: rgba(176,140,208,0.15); color: var(--purple); }
+  .tag-infl  { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-policy{ background: rgba(201,168,76,0.15); color: var(--accent); }
+  .tag-val   { background: rgba(107,189,91,0.15); color: var(--green); }
+  .tag-vol   { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-semi  { background: rgba(76,201,176,0.15); color: var(--cyan); }
+  .tag-credit{ background: rgba(176,140,208,0.15); color: var(--purple); }
+  .tag-space { background: rgba(201,168,76,0.15); color: var(--accent); }
+  .tag-misc  { background: rgba(138,128,112,0.15); color: var(--muted); }
+  .verdict-bar { background: var(--accent); color: #0a0a08; padding: 14px 20px; border-radius: 8px; margin-bottom: 20px; font-weight: 700; font-size: 1.05em; font-family: 'Noto Serif TC', serif; }
+  .section { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 22px; margin-bottom: 18px; }
+  .section h2 { color: var(--gold); font-size: 1.15em; margin-bottom: 12px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+  .section h3 { color: var(--accent); font-size: 0.95em; margin: 14px 0 6px; }
+  .article { margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid rgba(42,40,32,0.7); }
+  .article:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .article-title { color: var(--text-bright); font-weight: 700; font-size: 0.95em; margin-bottom: 4px; }
+  .article-title-cn { color: var(--muted); font-size: 0.85em; margin-bottom: 8px; }
+  .article p { font-size: 0.9em; margin: 6px 0; }
+  .data-point { background: rgba(201,168,76,0.05); padding: 8px 12px; border-radius: 6px; margin: 8px 0; font-size: 0.85em; border: 1px solid rgba(201,168,76,0.12); }
+  .data-point .num { color: var(--text-bright); font-weight: 700; }
+  .implication { background: rgba(201,168,76,0.06); border-left: 3px solid var(--accent); padding: 10px 14px; margin: 10px 0; border-radius: 0 6px 6px 0; font-size: 0.88em; }
+  .implication .label { color: var(--accent); font-weight: 700; font-size: 0.8em; text-transform: uppercase; margin-bottom: 4px; }
+  .red-team { background: rgba(224,85,69,0.06); border: 1px solid rgba(224,85,69,0.25); border-radius: 8px; padding: 18px; margin: 18px 0; }
+  .red-team-title { color: var(--red); font-weight: 700; font-size: 0.95em; margin-bottom: 10px; font-family: 'Playfair Display', serif; }
+  .red-team ul { padding-left: 18px; }
+  .red-team li { margin: 5px 0; font-size: 0.88em; }
+  .callout { background: rgba(201,168,76,0.06); border: 1px solid rgba(201,168,76,0.25); border-radius: 8px; padding: 18px; margin: 18px 0; }
+  .callout-title { color: var(--accent); font-weight: 700; font-size: 0.95em; margin-bottom: 8px; font-family: 'Playfair Display', 'Noto Serif TC', serif; }
+  .callout ul { padding-left: 18px; }
+  .callout li { margin: 5px 0; font-size: 0.88em; }
+  ul { padding-left: 18px; }
+  li { margin: 4px 0; font-size: 0.88em; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(201,168,76,0.05); padding: 12px; border-radius: 6px; text-align: center; border: 1px solid rgba(201,168,76,0.1); }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: var(--gold); font-family: 'Playfair Display', serif; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
+  .toc { background: rgba(201,168,76,0.04); border: 1px solid rgba(201,168,76,0.18); border-radius: 8px; padding: 16px 20px; margin-bottom: 20px; }
+  .toc-title { color: var(--accent); font-weight: 700; font-size: 0.9em; margin-bottom: 8px; }
+  .toc a { color: var(--accent); text-decoration: none; font-size: 0.88em; }
+  .toc a:hover { text-decoration: underline; color: var(--gold); }
+  .toc ol { padding-left: 20px; }
+  .toc li { margin: 4px 0; }
+  .nav-links { display: flex; justify-content: space-between; margin: 20px 0; font-size: 0.85em; }
+  .nav-links a { color: var(--accent); text-decoration: none; }
+  .nav-links a:hover { text-decoration: underline; color: var(--gold); }
+  .divider { height: 1px; background: linear-gradient(90deg, transparent, var(--accent), transparent); margin: 24px 0; opacity: 0.4; }
+  .footer { text-align: center; color: var(--muted); font-size: 0.75em; margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--border); }
+  .footer a { color: var(--accent); text-decoration: none; }
+</style>
+<script>if(window.self===window.top&&sessionStorage.getItem("student_auth")!=="1"){document.body.innerHTML="";window.location.replace("student.html");}</script>
+</head>
+<body>
+
+<h1>彭博研究摘要</h1>
+<p class="subtitle">第116期 | 就業火熱與鷹派回歸：加息幽靈重臨</p>
+<span class="issue-badge">2026年七月上旬更新</span>
+
+<div class="verdict-bar">結論：6月非農若如預期強勁、時薪穩健，市場對年內加息的押注將升溫 — 減持長天期債券、對沖利率上行風險，同時緊盯7月通膨數據確認節奏</div>
+
+<div class="nav-links">
+  <span><a href="newsletter_115_rates_japan.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="toc">
+  <div class="toc-title">目錄</div>
+  <ol>
+    <li><a href="#fed-hawkish-pivot">聯儲會 鷹派回歸，加息重回牌桌</a></li>
+    <li><a href="#us-data-mosaic">美國經濟 分化擴張：勞動降溫、建設集中AI</a></li>
+    <li><a href="#uk-burnham-gilts">英國財政 Burnham的財政空間：有彈性，非免死金牌</a></li>
+    <li><a href="#red-team">Red Team 反面論證</a></li>
+    <li><a href="#takeaways">基金經理人重點摘要</a></li>
+  </ol>
+</div>
+
+<div class="section" id="fed-hawkish-pivot">
+  <h2><span class="tag tag-misc">聯儲會</span> 鷹派回歸，加息重回牌桌</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--orange)">20萬</div><div class="lbl">6月非農預測
+（BE高於普遍預期）</div></div>
+    <div class="stat"><div class="val">4.3%</div><div class="lbl">6月失業率
+（與前值持平）</div></div>
+    <div class="stat"><div class="val">53.5</div><div class="lbl">6月ISM製造業PMI
+（自54.0小幅回落）</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">非農料依舊強勁 — 就業火熱恐點燃加息預期</div>
+    <p>近期科技股回調，反映市場對人工智能投資成本過高的疑慮，以及對聯儲會轉鷹的擔憂。蘋果等公司提價與零組件成本上升有關，暗示AI相關需求正在推高通膨。FOMC 6月會議的表態，加上主席 <span style="color:#f0ebe0;font-weight:700">Kevin Warsh</span> 的新聞發布會，都增加了短期內加息的可能性。下一個關鍵考驗是周四公佈的 6月非農就業報告。彭博團隊對非農人數的預測 <span style="color:#f0ebe0;font-weight:700">高於普遍預期</span>（BE預估 <span style="color:#f0ebe0;font-weight:700">20萬</span>，前值 17.2萬），政府部門、醫療健保與教育領域貢獻顯著，休閒與酒店業招聘更因 <span style="color:#f0ebe0;font-weight:700">世界杯</span> 獲得提振。若數據強勁、尤其時薪穩健成長，市場對年內加息的押注可能加大 — 屆時 6月通膨數據將變得愈發關鍵，而彭博預計當月通膨較為溫和。</p>
+    <div class="data-point">6月非農BE預估：<span style="color:#f0ebe0;font-weight:700">20萬</span>（前值17.2萬） &nbsp;|&nbsp; 6月失業率：<span style="color:#f0ebe0;font-weight:700">4.3%</span>（持平） &nbsp;|&nbsp; 加息催化：<span style="color:#f0ebe0;font-weight:700">AI成本推升通膨 + Warsh鷹派表態</span> &nbsp;|&nbsp; 通膨預期：<span style="color:#f0ebe0;font-weight:700">當月溫和，7月數據成關鍵</span></div>
+    <div class="implication"><div class="label">投資啟示</div>鷹派敘事重臨，加息尾部風險不容忽視。<span style="color:#f0ebe0;font-weight:700">減持長天期利率債、對沖前端利率上行</span>；但因彭博預計當月通膨溫和，勿過度追空 — 以 <span style="color:#f0ebe0;font-weight:700">7月通膨數據</span> 作為最終確認。</div>
+  </div>
+
+</div>
+
+<div class="section" id="us-data-mosaic">
+  <h2><span class="tag tag-misc">美國經濟</span> 分化擴張：勞動降溫、建設集中AI</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--orange)">733萬</div><div class="lbl">5月JOLTS職位空缺
+（自761.8萬回落）</div></div>
+    <div class="stat"><div class="val" style="color:var(--green)">94.0</div><div class="lbl">6月消費者信心
+（前值93.1，地緣趨緩提振）</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">1.2%</div><div class="lbl">裁員/減員率
+（料自低位回升）</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">本周數據前瞻 — 擴張不均，勞動市場悄然降溫</div>
+    <p>本周數據將進一步反映各行業擴張快慢不均的局面。彭博估計 5月整體 <span style="color:#f0ebe0;font-weight:700">職位空缺數下降近30萬至733萬</span>（BE預估733萬，普遍預估728.8萬，前值761.8萬），高頻私營部門數據顯示空缺急劇減少，大型企業報告勞動力需求持續下降；但職位空缺與失業人數之比仍保持在 <span style="color:#f0ebe0;font-weight:700">1.0以上</span>。離職率料維持在 <span style="color:#f0ebe0;font-weight:700">2.0%</span> 左右，員工流動對工資的上行壓力較小，而 5月失業救濟申領上升預示裁員與減員率可能回升至 <span style="color:#f0ebe0;font-weight:700">1.2%</span>。ISM製造業PMI料自 54.0 小幅回落至 <span style="color:#f0ebe0;font-weight:700">53.5</span>，庫存改善與供應鏈壓力緩解構成拖累；建築支出（5月BE <span style="color:#f0ebe0;font-weight:700">0.1%</span>，前值0.4%）預計仍集中於 <span style="color:#f0ebe0;font-weight:700">數據中心與電力基礎設施</span>，反映企業持續為AI建設投入資金。消費者信心料自 93.1 升至 <span style="color:#f0ebe0;font-weight:700">94.0</span>，受惠於 <span style="color:#f0ebe0;font-weight:700">美伊諒解備忘錄</span> 後汽油價格壓力緩解。</p>
+    <div class="data-point">5月JOLTS空缺：<span style="color:#f0ebe0;font-weight:700">733萬</span>（降近30萬） &nbsp;|&nbsp; 空缺/失業比：<span style="color:#f0ebe0;font-weight:700">&gt;1.0</span> &nbsp;|&nbsp; 離職率：<span style="color:#f0ebe0;font-weight:700">~2.0%</span> &nbsp;|&nbsp; 4月凱斯-席勒房價：<span style="color:#f0ebe0;font-weight:700">+0.76%（BE，低於普遍0.92%）</span> &nbsp;|&nbsp; 建築支出焦點：<span style="color:#f0ebe0;font-weight:700">數據中心 + 電力基建</span></div>
+    <div class="implication"><div class="label">投資啟示</div>勞動需求邊際降溫、房市受高抵押利率拖累，與強勁非農形成張力 — 這正是Fed雙向風險的核心。<span style="color:#f0ebe0;font-weight:700">維持AI基建與電力主題多頭</span>（建築支出結構性支撐），但對利率敏感的房地產鏈保持謹慎。</div>
+  </div>
+
+</div>
+
+<div class="section" id="uk-burnham-gilts">
+  <h2><span class="tag tag-misc">英國財政</span> Burnham的財政空間：有彈性，非免死金牌</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--red)">49天</div><div class="lbl">Truss任期
+（£45億未融資減稅殷鑑）</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">£45億</div><div class="lbl">2022 Truss未融資減稅
+（曾引債息飆升）</div></div>
+    <div class="stat"><div class="val">PSNFL</div><div class="lbl">現行債務錨
+（2024改革目標）</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">Burnham有財政彈性 但無免死金牌 — 神經緊繃的Gilt市場</div>
+    <p>候任首相 Andy Burnham（最快下月中上任）贏得選民與工黨高層，但真正需要說服的是 <span style="color:#f0ebe0;font-weight:700">神經緊繃的gilt市場</span>。前車之鑑是 Liz Truss，其 2022年任期僅 <span style="color:#f0ebe0;font-weight:700">49天</span>，因 <span style="color:#f0ebe0;font-weight:700">£45億未融資減稅</span> 計劃令債息飆升。Burnham 正尋找現行財政規則中的空間以增加支出：工黨 2024年改革將債務目標定為 <span style="color:#f0ebe0;font-weight:700">公共部門淨金融負債（PSNFL）</span>、借貸目標定為經常預算平衡。他可透過對公營企業的 <span style="color:#f0ebe0;font-weight:700">貸款或注資</span>（同時計入資產與負債，PSNFL不變），或經由 <span style="color:#f0ebe0;font-weight:700">British Business Bank、National Wealth Fund</span> 等政策銀行來撬動投資 — 若配套嚴謹護欄，市場或可容忍。但彭博警告：若將目標由 PSNFL 轉為更寬泛的 <span style="color:#f0ebe0;font-weight:700">公共部門淨值（PSNW）</span>，將鬆綁支出約束、引發不利市場反應。與此同時，美伊MOU持穩，海灣阿拉伯國家已開始 <span style="color:#f0ebe0;font-weight:700">直接與伊朗接觸</span>，構建更持久的對話機制。</p>
+    <div class="data-point">候任首相：<span style="color:#f0ebe0;font-weight:700">Andy Burnham（最快下月中）</span> &nbsp;|&nbsp; 債務錨：<span style="color:#f0ebe0;font-weight:700">PSNFL（2024改革）</span> &nbsp;|&nbsp; 撬動工具：<span style="color:#f0ebe0;font-weight:700">政策銀行注資/貸款，PSNFL中性</span> &nbsp;|&nbsp; 紅線：<span style="color:#f0ebe0;font-weight:700">轉向PSNW → 市場不利反應</span> &nbsp;|&nbsp; 地緣：<span style="color:#f0ebe0;font-weight:700">海灣國家轉向直接對話伊朗</span></div>
+    <div class="implication"><div class="label">投資啟示</div>英國財政「有彈性但無免死金牌」— 關鍵在護欄是否可信。<span style="color:#f0ebe0;font-weight:700">留意gilt期限溢價與英鎊</span>：若Burnham以政策銀行「表外」方式增支則市場可控；若試圖改錨至PSNW，<span style="color:#f0ebe0;font-weight:700">做空長端gilt / 對沖英鎊下行</span>。</div>
+  </div>
+
+</div>
+
+<div class="divider"></div>
+
+<div class="red-team" id="red-team">
+  <div class="red-team-title">&#128308; Red Team — 核心假設與反面論證</div>
+  <ul>
+    <li>假設1：6月非農將如彭博預測般強勁（20萬），足以觸發加息預期升溫</li>
+    <li>假設2：AI相關成本（蘋果提價、零組件）正持續推高通膨，構成鷹派理據</li>
+    <li>假設3：Burnham能在不驚動gilt市場的前提下，透過政策銀行撬動財政擴張</li>
+    <li style="color:var(--red)">風險1：JOLTS職位空缺已降近30萬至733萬、裁員率料升至1.2%，勞動需求邊際降溫 — 單月非農強勁未必代表趨勢，Fed可能不為所動</li>
+    <li style="color:var(--red)">風險2：彭博自身預計『當月通膨較為溫和』，且油價因美伊MOU回落、ISM受訪者反映價格壓力緩解 — 通膨推力並不一面倒</li>
+    <li style="color:var(--red)">風險3：Truss殷鑑在前（49天/£45億），gilt市場對任何『改錨至PSNW』或缺乏護欄的增支極度敏感，政治議程與市場容忍度未必兼容</li>
+  </ul>
+  <p style="margin-top:10px;padding:10px 14px;background:rgba(224,85,69,0.04);border-radius:6px;font-size:0.9em;border-left:3px solid var(--red)">核心邏輯（就業韌性+AI通膨→鷹派風險）成立，但屬『尾部風險』而非基準情形：勞動市場正邊際降溫，彭博亦預期通膨溫和，故加息更像是市場定價的風險溢價而非既定路徑。真正的確認點是 <span style="color:#f0ebe0;font-weight:700">7月通膨數據</span> — 若非農強勁疊加CPI再超預期，加息敘事才會坐實；否則本輪只是鷹派噪音。英國方面，只要Burnham堅守PSNFL、以政策銀行表外撬動投資，市場可控；一旦試圖改錨PSNW，gilt將複製Truss式衝擊。</p>
+</div>
+
+<div class="callout" id="takeaways">
+  <div class="callout-title">基金經理人重點摘要</div>
+  <ul>
+    <li><strong>聯儲會：</strong>Warsh鷹派表態+AI成本推升通膨，加息重回牌桌。減持長天期債、對沖前端利率上行，但以7月通膨數據作最終確認。</li>
+    <li><strong>就業：</strong>6月非農BE預估20萬（高於共識），時薪是關鍵；世界杯提振休閒酒店業。但JOLTS空缺降近30萬、裁員率料升至1.2%，趨勢在降溫。</li>
+    <li><strong>製造業/建設：</strong>ISM PMI料回落至53.5；建築支出集中於數據中心與電力基建 — 維持AI基建與電力主題多頭。</li>
+    <li><strong>消費/房市：</strong>消費者信心升至94.0（美伊MOU+油價回落提振）；但高抵押利率拖累房價，凱斯-席勒僅+0.76% — 房地產鏈保持謹慎。</li>
+    <li><strong>英國：</strong>Burnham有財政彈性但無免死金牌。守PSNFL用政策銀行撬動則市場可控；若改錨PSNW，做空長端gilt/對沖英鎊。</li>
+    <li><strong>地緣/能源：</strong>美伊MOU持穩、霍爾木茲海峽石油外運增加，油價壓力緩解；海灣國家轉向直接與伊朗對話，區域安全格局重塑。</li>
+  </ul>
+</div>
+
+<div class="nav-links">
+  <span><a href="newsletter_115_rates_japan.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="footer">
+  彭博研究摘要 | 僅供教學與討論用途 | 2026年7月2日<br>
+  資料來源：Bloomberg Intelligence, Bloomberg Economics, Bloomberg News<br>
+  <a href="https://www.patreon.com/Aireturn">Patreon</a> · <a href="https://t.me/AIreturn">Telegram</a> · Threads @aireturn88
+</div>
+
+</body>
+</html>
