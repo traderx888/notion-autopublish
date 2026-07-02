@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>彭博研究摘要 #118 — 霍爾木茲降溫、SpaceX期權對決與量子SPAC降溫</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Noto+Serif+TC:wght@400;700&family=Source+Sans+Pro:wght@400;600;700&display=swap');
+  :root { --bg: #0a0a08; --card: #141410; --border: #2a2820; --accent: #c9a84c;
+          --gold: #f0d87a; --gold-dim: #c4b896; --text: #e0d8c8; --text-bright: #f0ebe0; --muted: #8a8070;
+          --green: #6bbd5b; --red: #e05545; --yellow: #d4a843; --orange: #d49040;
+          --purple: #b08cd0; --cyan: #4cc9b0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { background: #0a0a08 !important; }
+  body { color: var(--text); font-family: 'Source Sans Pro', 'Noto Serif TC', 'Microsoft JhengHei', sans-serif; line-height: 1.8; padding: 24px; max-width: 880px; margin: 0 auto; }
+  h1 { font-family: 'Playfair Display', 'Noto Serif TC', serif; color: var(--gold); font-size: 1.8em; margin-bottom: 4px; font-weight: 900; letter-spacing: 0.02em; }
+  h2 { font-family: 'Playfair Display', 'Noto Serif TC', serif; }
+  .subtitle { color: var(--text-bright); font-size: 0.95em; margin-bottom: 8px; font-family: 'Noto Serif TC', serif; }
+  .issue-badge { display: inline-block; background: rgba(201,168,76,0.15); color: var(--accent); padding: 4px 12px; border-radius: 12px; font-size: 0.8em; font-weight: 600; margin-bottom: 20px; border: 1px solid rgba(201,168,76,0.3); }
+  .tag { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 0.72em; font-weight: 600; margin-right: 4px; }
+  .tag-rates { background: rgba(201,168,76,0.15); color: var(--accent); }
+  .tag-china { background: rgba(212,144,64,0.15); color: var(--orange); }
+  .tag-japan { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-geo   { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-oil   { background: rgba(212,168,67,0.15); color: var(--yellow); }
+  .tag-trade { background: rgba(212,168,67,0.15); color: var(--yellow); }
+  .tag-growth{ background: rgba(107,189,91,0.15); color: var(--green); }
+  .tag-metals{ background: rgba(176,140,208,0.15); color: var(--purple); }
+  .tag-infl  { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-policy{ background: rgba(201,168,76,0.15); color: var(--accent); }
+  .tag-val   { background: rgba(107,189,91,0.15); color: var(--green); }
+  .tag-vol   { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-semi  { background: rgba(76,201,176,0.15); color: var(--cyan); }
+  .tag-credit{ background: rgba(176,140,208,0.15); color: var(--purple); }
+  .tag-space { background: rgba(201,168,76,0.15); color: var(--accent); }
+  .tag-misc  { background: rgba(138,128,112,0.15); color: var(--muted); }
+  .verdict-bar { background: var(--accent); color: #0a0a08; padding: 14px 20px; border-radius: 8px; margin-bottom: 20px; font-weight: 700; font-size: 1.05em; font-family: 'Noto Serif TC', serif; }
+  .section { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 22px; margin-bottom: 18px; }
+  .section h2 { color: var(--gold); font-size: 1.15em; margin-bottom: 12px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+  .section h3 { color: var(--accent); font-size: 0.95em; margin: 14px 0 6px; }
+  .article { margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid rgba(42,40,32,0.7); }
+  .article:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .article-title { color: var(--text-bright); font-weight: 700; font-size: 0.95em; margin-bottom: 4px; }
+  .article-title-cn { color: var(--muted); font-size: 0.85em; margin-bottom: 8px; }
+  .article p { font-size: 0.9em; margin: 6px 0; }
+  .data-point { background: rgba(201,168,76,0.05); padding: 8px 12px; border-radius: 6px; margin: 8px 0; font-size: 0.85em; border: 1px solid rgba(201,168,76,0.12); }
+  .data-point .num { color: var(--text-bright); font-weight: 700; }
+  .implication { background: rgba(201,168,76,0.06); border-left: 3px solid var(--accent); padding: 10px 14px; margin: 10px 0; border-radius: 0 6px 6px 0; font-size: 0.88em; }
+  .implication .label { color: var(--accent); font-weight: 700; font-size: 0.8em; text-transform: uppercase; margin-bottom: 4px; }
+  .red-team { background: rgba(224,85,69,0.06); border: 1px solid rgba(224,85,69,0.25); border-radius: 8px; padding: 18px; margin: 18px 0; }
+  .red-team-title { color: var(--red); font-weight: 700; font-size: 0.95em; margin-bottom: 10px; font-family: 'Playfair Display', serif; }
+  .red-team ul { padding-left: 18px; }
+  .red-team li { margin: 5px 0; font-size: 0.88em; }
+  .callout { background: rgba(201,168,76,0.06); border: 1px solid rgba(201,168,76,0.25); border-radius: 8px; padding: 18px; margin: 18px 0; }
+  .callout-title { color: var(--accent); font-weight: 700; font-size: 0.95em; margin-bottom: 8px; font-family: 'Playfair Display', 'Noto Serif TC', serif; }
+  .callout ul { padding-left: 18px; }
+  .callout li { margin: 5px 0; font-size: 0.88em; }
+  ul { padding-left: 18px; }
+  li { margin: 4px 0; font-size: 0.88em; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(201,168,76,0.05); padding: 12px; border-radius: 6px; text-align: center; border: 1px solid rgba(201,168,76,0.1); }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: var(--gold); font-family: 'Playfair Display', serif; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
+  .toc { background: rgba(201,168,76,0.04); border: 1px solid rgba(201,168,76,0.18); border-radius: 8px; padding: 16px 20px; margin-bottom: 20px; }
+  .toc-title { color: var(--accent); font-weight: 700; font-size: 0.9em; margin-bottom: 8px; }
+  .toc a { color: var(--accent); text-decoration: none; font-size: 0.88em; }
+  .toc a:hover { text-decoration: underline; color: var(--gold); }
+  .toc ol { padding-left: 20px; }
+  .toc li { margin: 4px 0; }
+  .nav-links { display: flex; justify-content: space-between; margin: 20px 0; font-size: 0.85em; }
+  .nav-links a { color: var(--accent); text-decoration: none; }
+  .nav-links a:hover { text-decoration: underline; color: var(--gold); }
+  .divider { height: 1px; background: linear-gradient(90deg, transparent, var(--accent), transparent); margin: 24px 0; opacity: 0.4; }
+  .footer { text-align: center; color: var(--muted); font-size: 0.75em; margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--border); }
+  .footer a { color: var(--accent); text-decoration: none; }
+</style>
+<script>if(window.self===window.top&&sessionStorage.getItem("student_auth")!=="1"){document.body.innerHTML="";window.location.replace("student.html");}</script>
+</head>
+<body>
+
+<h1>彭博研究摘要</h1>
+<p class="subtitle">第118期 | 霍爾木茲降溫、SpaceX期權對決與量子SPAC降溫</p>
+<span class="issue-badge">2026年七月上旬更新</span>
+
+<div class="verdict-bar">結論：油價回落至$71/桶壓低發達經濟體通膨0.3-0.4個百分點，通膨已在5月見頂 — 做多前端利率期貨、對沖霍爾木茲尾部風險；SpaceX與量子SPAC的散戶狂熱與機構套現形成鮮明對立，估值端保持謹慎。</div>
+
+<div class="nav-links">
+  <span><a href="newsletter_117_growth.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="toc">
+  <div class="toc-title">目錄</div>
+  <ol>
+    <li><a href="#hormuz-oil">石油與通膨 海峽航運復甦放緩，油價定錨通膨拐點</a></li>
+    <li><a href="#spacex-options">太空與波動率 SpaceX期權：散戶看漲狂熱 vs 機構鎖倉看跌</a></li>
+    <li><a href="#iqm-quantum">半導體與估值 量子SPAC降溫：IQM上市首日破發</a></li>
+    <li><a href="#red-team">Red Team 反面論證</a></li>
+    <li><a href="#takeaways">基金經理人重點摘要</a></li>
+  </ol>
+</div>
+
+<div class="section" id="hormuz-oil">
+  <h2><span class="tag tag-misc">石油與通膨</span> 海峽航運復甦放緩，油價定錨通膨拐點</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--green)">$71/桶</div><div class="lbl">全球基準油價
+接近戰前水平</div></div>
+    <div class="stat"><div class="val" style="color:var(--green)">-0.3~0.4pp</div><div class="lbl">油價回落對發達
+經濟體通膨影響</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">&lt;800萬桶/日</div><div class="lbl">海峽石油運量
+（自峰值1600萬急跌）</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">霍爾木茲海峽航運恢復緩慢 — 打打停停下油價卻穩守戰前水平</div>
+    <p>自美伊簽署諒解備忘錄恢復航運已過兩周，霍爾木茲海峽運量雖升但增速放緩。伊朗於 <span style="color:#f0ebe0;font-weight:700">6月25日和27日</span> 襲擊兩艘商船後，美伊隨即針鋒相對打擊對方軍事目標，海峽石油七日平均運量從 <span style="color:#f0ebe0;font-weight:700">每日1,600萬桶</span> 的峰值（戰前運量的 <span style="color:#f0ebe0;font-weight:700">80%</span>）急跌至 <span style="color:#f0ebe0;font-weight:700">不足800萬桶</span>。然而石油交易員似乎並未受驚 — 全球基準油價穩守 <span style="color:#f0ebe0;font-weight:700">每桶71美元</span> 附近，接近戰前水平，顯示市場認為最糟時期已過。彭博Nowcast即時預測顯示通膨可能已在 <span style="color:#f0ebe0;font-weight:700">5月見頂</span>，多數發達經濟體逐步回落。若布倫特維持 <span style="color:#f0ebe0;font-weight:700">$70/桶</span>，全球SHOK模型顯示美、英、歐、日、中通膨將回落 <span style="color:#f0ebe0;font-weight:700">0.3-0.4個百分點</span>，成長獲 <span style="color:#f0ebe0;font-weight:700">0.1-0.2個百分點</span> 提振。6月19-30日至少 <span style="color:#f0ebe0;font-weight:700">182艘油輪</span> 駛離、載超 <span style="color:#f0ebe0;font-weight:700">1.34億桶</span>。</p>
+    <div class="data-point">6月美CPI Nowcast：<span style="color:#f0ebe0;font-weight:700">3.9%</span> &nbsp;|&nbsp; 歐元區：<span style="color:#f0ebe0;font-weight:700">2.8%</span> &nbsp;|&nbsp; 加拿大：<span style="color:#f0ebe0;font-weight:700">2.6%</span> &nbsp;|&nbsp; 瑞士：<span style="color:#f0ebe0;font-weight:700">0.3%</span> &nbsp;|&nbsp; 伊朗解封後出口：<span style="color:#f0ebe0;font-weight:700">超5,000萬桶</span></div>
+    <div class="implication"><div class="label">投資啟示</div>油價定錨通膨拐點，通膨5月見頂支撐下半年降息敘事 — <span style="color:#f0ebe0;font-weight:700">做多前端利率期貨</span>。但伊朗擬對過境船隻徵收強制「服務費」、拒絕英法排雷、空載油輪入港不足，供應恢復仍需時日 — <span style="color:#f0ebe0;font-weight:700">保留能源多頭作為地緣尾部對沖</span>。</div>
+  </div>
+
+</div>
+
+<div class="section" id="spacex-options">
+  <h2><span class="tag tag-misc">太空與波動率</span> SpaceX期權：散戶看漲狂熱 vs 機構鎖倉看跌</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--orange)">+52%</div><div class="lbl">Max Call行權價
+隱含漲幅</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">$67億</div><div class="lbl">超150%價外
+看漲期權名義值</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">2.25</div><div class="lbl">2027年6月
+Put/Call比率</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">SpaceX期權戰場 — 近月看漲狂熱對決2027看跌浪潮</div>
+    <p>SpaceX（SPCX US）在期權市場形成巨大對決：近月散戶看漲狂熱 vs 長天期機構對沖看跌。深度價外看漲期權主導盤面，由 <span style="color:#f0ebe0;font-weight:700">7月17日到期</span> 合約領軍，佔總未平倉量 <span style="color:#f0ebe0;font-weight:700">23%</span>，Max Call行權價 <span style="color:#f0ebe0;font-weight:700">$235</span>，較周三收盤隱含 <span style="color:#f0ebe0;font-weight:700">52%</span> 漲幅，Put/Call比率僅 <span style="color:#f0ebe0;font-weight:700">0.75</span>（極度看漲）。超120%價值度看漲主導未平倉，超150%價值度合約更吸引 <span style="color:#f0ebe0;font-weight:700">$67億</span> 名義值。但一年後敘事翻轉：Elon Musk及部分持股方於 <span style="color:#f0ebe0;font-weight:700">6月12日</span> 簽署一年鎖倉協議，機構空頭瞄準 <span style="color:#f0ebe0;font-weight:700">2027年6月17日</span>（鎖倉解除數日後）期權，最大未平倉看跌行權價 <span style="color:#f0ebe0;font-weight:700">$150</span>、其次 <span style="color:#f0ebe0;font-weight:700">$95</span>，Put/Call比率升至 <span style="color:#f0ebe0;font-weight:700">2.25</span>。此分歧折射估值飆升與近期營運現金流的根本錯配。</p>
+    <div class="data-point">近月Max Call：<span style="color:#f0ebe0;font-weight:700">$235</span> &nbsp;|&nbsp; 近月P/C：<span style="color:#f0ebe0;font-weight:700">0.75</span> &nbsp;|&nbsp; 2027看跌主力行權：<span style="color:#f0ebe0;font-weight:700">$150 / $95</span> &nbsp;|&nbsp; 2027 P/C：<span style="color:#f0ebe0;font-weight:700">2.25</span> &nbsp;|&nbsp; 鎖倉簽署：<span style="color:#f0ebe0;font-weight:700">6/12</span></div>
+    <div class="implication"><div class="label">投資啟示</div>散戶追逐凸性、機構為鎖倉解禁佈局下行保護，是典型的估值-現金流錯配訊號。<span style="color:#f0ebe0;font-weight:700">避免裸多近月價外看漲</span>；若參與，宜用日曆價差捕捉近月狂熱同時對沖2027鎖倉風險。</div>
+  </div>
+
+</div>
+
+<div class="section" id="iqm-quantum">
+  <h2><span class="tag tag-misc">半導體與估值</span> 量子SPAC降溫：IQM上市首日破發</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--red)">-3.4%</div><div class="lbl">IQM上市
+首日跌幅</div></div>
+    <div class="stat"><div class="val">$2.34億</div><div class="lbl">SPAC+PIPE
+募資額</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">€3,100萬</div><div class="lbl">2025年營收
+（約$3,500萬）</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">芬蘭量子計算商IQM經SPAC上市首日破發</div>
+    <p>芬蘭量子電腦製造商IQM（Nasdaq: <span style="color:#f0ebe0;font-weight:700">IQMX</span>）經與空白支票公司合併於紐約上市，首日下跌 <span style="color:#f0ebe0;font-weight:700">3.4%</span> 至 <span style="color:#f0ebe0;font-weight:700">$12.97</span>；此前該SPAC周三曾大漲 <span style="color:#f0ebe0;font-weight:700">24%</span> 至 <span style="color:#f0ebe0;font-weight:700">$13.42</span>。IQM透過SPAC合併及PIPE募資 <span style="color:#f0ebe0;font-weight:700">$2.34億</span>，股價較 <span style="color:#f0ebe0;font-weight:700">$10</span> 的IPO及PIPE定價仍高約 <span style="color:#f0ebe0;font-weight:700">30%</span>。量子計算是承諾最終在金融、藥物開發、網路安全等領域超越傳統電腦的實驗性技術，並受政策順風 — Trump政府今年承諾投入 <span style="color:#f0ebe0;font-weight:700">$20億</span> 發展該領域。IQM於2018年脫胎自芬蘭Espoo一所大學，採用超導電路，迄今交付 <span style="color:#f0ebe0;font-weight:700">18台</span> 機器，2025年營收 <span style="color:#f0ebe0;font-weight:700">€3,100萬（$3,500萬）</span>，年底累積 <span style="color:#f0ebe0;font-weight:700">€6,700萬</span> 未來合約預訂。JPMorgan任財務顧問，公司亦將於赫爾辛基掛牌。</p>
+    <div class="data-point">首日收盤：<span style="color:#f0ebe0;font-weight:700">$12.97</span> &nbsp;|&nbsp; IPO/PIPE定價：<span style="color:#f0ebe0;font-weight:700">$10</span> &nbsp;|&nbsp; 交付機器：<span style="color:#f0ebe0;font-weight:700">18台</span> &nbsp;|&nbsp; 未來預訂：<span style="color:#f0ebe0;font-weight:700">€6,700萬</span> &nbsp;|&nbsp; Trump量子投入：<span style="color:#f0ebe0;font-weight:700">$20億</span></div>
+    <div class="implication"><div class="label">投資啟示</div>IQM是繼Xanadu、Quantinuum後又一量子SPAC，但首日破發顯示市場對高估值、極低營收（$3,500萬）的實驗性技術漸趨審慎。<span style="color:#f0ebe0;font-weight:700">量子板塊以政策題材交易而非基本面</span> — 對量子SPAC保持選擇性，避免追高，聚焦有實質交付與訂單能見度的標的。</div>
+  </div>
+
+</div>
+
+<div class="divider"></div>
+
+<div class="red-team" id="red-team">
+  <div class="red-team-title">&#128308; Red Team — 核心假設與反面論證</div>
+  <ul>
+    <li>假設1：油價將穩守$70-71/桶，通膨已在5月見頂並持續回落，為下半年降息鋪路</li>
+    <li>假設2：SpaceX與量子等高估值/低現金流題材的散戶狂熱可持續，不會因機構套現而崩塌</li>
+    <li>假設3：霍爾木茲海峽航運將逐步恢復至戰前水平，供應衝擊僅為暫時性</li>
+    <li style="color:var(--red)">風險1：伊朗持續零星襲擊商船、擬徵強制過境費、拒絕英法排雷，海峽運量已從1,600萬桶/日峰值急跌至不足800萬桶 — 若敵對升級油價可能重新測試戰時高位，通膨拐點被推翻</li>
+    <li style="color:var(--red)">風險2：SpaceX 2027年P/C升至2.25、機構瞄準鎖倉解禁佈局下行；IQM首日即破發 — 顯示估值-現金流錯配一旦被機構定價，散戶凸性追逐可迅速逆轉</li>
+    <li style="color:var(--red)">風險3：空載油輪入港數量不足以維持當前出口規模，船東憂再度被困波斯灣，「隱身」關閉應答器令數據失真，恢復進度或被高估</li>
+  </ul>
+  <p style="margin-top:10px;padding:10px 14px;background:rgba(224,85,69,0.04);border-radius:6px;font-size:0.9em;border-left:3px solid var(--red)">核心邏輯（油價回落→通膨5月見頂→做多前端利率期貨）在$70-71油價下成立，SHOK模型量化支撐0.3-0.4pp通膨降幅。但地緣尾部風險真實：若伊朗襲擊升級推動海峽運量持續低於戰前、或強制通行費令油價重新站上$85+並維持兩個月，通膨拐點與降息敘事將被推遲。估值端（SpaceX/量子SPAC），機構已用長天期看跌與破發表態，散戶狂熱不宜追隨。</p>
+</div>
+
+<div class="callout" id="takeaways">
+  <div class="callout-title">基金經理人重點摘要</div>
+  <ul>
+    <li><strong>石油：</strong>油價穩守$71/桶、接近戰前水平，交易員認為最糟已過。做多能源多頭同時作為地緣尾部對沖。</li>
+    <li><strong>通膨：</strong>Nowcast顯示通膨5月見頂，6月美CPI 3.9%、歐元區2.8%。油價$70將壓低發達經濟體通膨0.3-0.4pp。</li>
+    <li><strong>利率：</strong>通膨拐點確認 — 做多前端利率期貨，押注下半年降息路徑。</li>
+    <li><strong>SpaceX：</strong>近月看漲狂熱（P/C 0.75）vs 2027鎖倉後看跌（P/C 2.25）。避免裸多近月價外Call，宜用日曆價差。</li>
+    <li><strong>量子/IQM：</strong>SPAC首日破發-3.4%，$3,500萬營收撐不起高估值。量子以政策題材交易，選擇性參與、避免追高。</li>
+    <li><strong>霍爾木茲風險：</strong>海峽運量從1,600萬急跌至<800萬桶/日，伊朗擬徵通行費 — 若Brent突破$85並持續兩月，降息敘事將被推遲。</li>
+  </ul>
+</div>
+
+<div class="nav-links">
+  <span><a href="newsletter_117_growth.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="footer">
+  彭博研究摘要 | 僅供教學與討論用途 | 2026年7月2日<br>
+  資料來源：Bloomberg Intelligence, Bloomberg Economics, Bloomberg News<br>
+  <a href="https://www.patreon.com/Aireturn">Patreon</a> · <a href="https://t.me/AIreturn">Telegram</a> · Threads @aireturn88
+</div>
+
+</body>
+</html>

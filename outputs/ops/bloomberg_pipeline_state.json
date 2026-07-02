@@ -1,6 +1,6 @@
 {
-  "lastRunAt": "2026-07-02T18:28:33+08:00",
-  "lastNewsletterNumber": 116,
+  "lastRunAt": "2026-07-02T23:33:04+08:00",
+  "lastNewsletterNumber": 118,
   "processedFiles": {
     "2026 Outlook Global Aluminum Producers #metals.pdf": {
       "processedAt": "2026-03-26T15:52:49+08:00",
@@ -5184,7 +5184,7 @@
         "space",
         "volatility"
       ],
-      "newsletterNumber": null
+      "newsletterNumber": 118
     },
     "Super El Nino Threatens Food Price Shock Inflation ZH #inflation #growth.pdf": {
       "processedAt": "2026-07-02T18:28:30+08:00",
@@ -5260,6 +5260,44 @@
         "credit"
       ],
       "newsletterNumber": 109
+    },
+    "Hormuz Strait Shipping Recovery Slows After US-Iran Strikes #oil #geopolitics #inflation.pdf": {
+      "processedAt": "2026-07-02T23:33:04+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\Hormuz Strait Shipping Recovery Slows After US-Iran Strikes.md",
+      "topics": [
+        "oil",
+        "geopolitics",
+        "inflation"
+      ],
+      "newsletterNumber": 118
+    },
+    "Quantum Computing Firm IQM Falls After SPAC Debut #semiconductor #valuations.pdf": {
+      "processedAt": "2026-07-02T23:33:04+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\Quantum Computing Firm IQM Falls After SPAC Debut.md",
+      "topics": [
+        "semiconductor",
+        "valuations"
+      ],
+      "newsletterNumber": 118
+    },
+    "US REACT Auto Sales Set Stage for Rebound #growth #inflation.pdf": {
+      "processedAt": "2026-07-02T23:33:04+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\US REACT Auto Sales Set Stage for Rebound.md",
+      "topics": [
+        "growth",
+        "inflation"
+      ],
+      "newsletterNumber": 117
+    },
+    "US REACT Softer June Job Gains Keep Fed on Hold #growth #rates #policy.pdf": {
+      "processedAt": "2026-07-02T23:33:04+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\US REACT Softer June Job Gains Keep Fed on Hold.md",
+      "topics": [
+        "growth",
+        "rates",
+        "policy"
+      ],
+      "newsletterNumber": 117
     }
   },
   "newsletters": {
@@ -6149,6 +6187,24 @@
       "topics": [
         "policy",
         "growth"
+      ]
+    },
+    "117": {
+      "filename": "newsletter_117_growth.html",
+      "generatedAt": "2026-07-02T23:39:09+08:00",
+      "articleCount": 2,
+      "topics": [
+        "growth"
+      ]
+    },
+    "118": {
+      "filename": "newsletter_118_space_oil_semiconductor.html",
+      "generatedAt": "2026-07-02T23:40:31+08:00",
+      "articleCount": 3,
+      "topics": [
+        "space",
+        "oil",
+        "semiconductor"
       ]
     }
   },

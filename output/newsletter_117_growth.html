@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>彭博研究摘要 #117 — 美國經濟雙面刃：消費強勁 vs 就業降溫</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Noto+Serif+TC:wght@400;700&family=Source+Sans+Pro:wght@400;600;700&display=swap');
+  :root { --bg: #0a0a08; --card: #141410; --border: #2a2820; --accent: #c9a84c;
+          --gold: #f0d87a; --gold-dim: #c4b896; --text: #e0d8c8; --text-bright: #f0ebe0; --muted: #8a8070;
+          --green: #6bbd5b; --red: #e05545; --yellow: #d4a843; --orange: #d49040;
+          --purple: #b08cd0; --cyan: #4cc9b0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { background: #0a0a08 !important; }
+  body { color: var(--text); font-family: 'Source Sans Pro', 'Noto Serif TC', 'Microsoft JhengHei', sans-serif; line-height: 1.8; padding: 24px; max-width: 880px; margin: 0 auto; }
+  h1 { font-family: 'Playfair Display', 'Noto Serif TC', serif; color: var(--gold); font-size: 1.8em; margin-bottom: 4px; font-weight: 900; letter-spacing: 0.02em; }
+  h2 { font-family: 'Playfair Display', 'Noto Serif TC', serif; }
+  .subtitle { color: var(--text-bright); font-size: 0.95em; margin-bottom: 8px; font-family: 'Noto Serif TC', serif; }
+  .issue-badge { display: inline-block; background: rgba(201,168,76,0.15); color: var(--accent); padding: 4px 12px; border-radius: 12px; font-size: 0.8em; font-weight: 600; margin-bottom: 20px; border: 1px solid rgba(201,168,76,0.3); }
+  .tag { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 0.72em; font-weight: 600; margin-right: 4px; }
+  .tag-rates { background: rgba(201,168,76,0.15); color: var(--accent); }
+  .tag-china { background: rgba(212,144,64,0.15); color: var(--orange); }
+  .tag-japan { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-geo   { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-oil   { background: rgba(212,168,67,0.15); color: var(--yellow); }
+  .tag-trade { background: rgba(212,168,67,0.15); color: var(--yellow); }
+  .tag-growth{ background: rgba(107,189,91,0.15); color: var(--green); }
+  .tag-metals{ background: rgba(176,140,208,0.15); color: var(--purple); }
+  .tag-infl  { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-policy{ background: rgba(201,168,76,0.15); color: var(--accent); }
+  .tag-val   { background: rgba(107,189,91,0.15); color: var(--green); }
+  .tag-vol   { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-semi  { background: rgba(76,201,176,0.15); color: var(--cyan); }
+  .tag-credit{ background: rgba(176,140,208,0.15); color: var(--purple); }
+  .tag-space { background: rgba(201,168,76,0.15); color: var(--accent); }
+  .tag-misc  { background: rgba(138,128,112,0.15); color: var(--muted); }
+  .verdict-bar { background: var(--accent); color: #0a0a08; padding: 14px 20px; border-radius: 8px; margin-bottom: 20px; font-weight: 700; font-size: 1.05em; font-family: 'Noto Serif TC', serif; }
+  .section { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 22px; margin-bottom: 18px; }
+  .section h2 { color: var(--gold); font-size: 1.15em; margin-bottom: 12px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+  .section h3 { color: var(--accent); font-size: 0.95em; margin: 14px 0 6px; }
+  .article { margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid rgba(42,40,32,0.7); }
+  .article:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .article-title { color: var(--text-bright); font-weight: 700; font-size: 0.95em; margin-bottom: 4px; }
+  .article-title-cn { color: var(--muted); font-size: 0.85em; margin-bottom: 8px; }
+  .article p { font-size: 0.9em; margin: 6px 0; }
+  .data-point { background: rgba(201,168,76,0.05); padding: 8px 12px; border-radius: 6px; margin: 8px 0; font-size: 0.85em; border: 1px solid rgba(201,168,76,0.12); }
+  .data-point .num { color: var(--text-bright); font-weight: 700; }
+  .implication { background: rgba(201,168,76,0.06); border-left: 3px solid var(--accent); padding: 10px 14px; margin: 10px 0; border-radius: 0 6px 6px 0; font-size: 0.88em; }
+  .implication .label { color: var(--accent); font-weight: 700; font-size: 0.8em; text-transform: uppercase; margin-bottom: 4px; }
+  .red-team { background: rgba(224,85,69,0.06); border: 1px solid rgba(224,85,69,0.25); border-radius: 8px; padding: 18px; margin: 18px 0; }
+  .red-team-title { color: var(--red); font-weight: 700; font-size: 0.95em; margin-bottom: 10px; font-family: 'Playfair Display', serif; }
+  .red-team ul { padding-left: 18px; }
+  .red-team li { margin: 5px 0; font-size: 0.88em; }
+  .callout { background: rgba(201,168,76,0.06); border: 1px solid rgba(201,168,76,0.25); border-radius: 8px; padding: 18px; margin: 18px 0; }
+  .callout-title { color: var(--accent); font-weight: 700; font-size: 0.95em; margin-bottom: 8px; font-family: 'Playfair Display', 'Noto Serif TC', serif; }
+  .callout ul { padding-left: 18px; }
+  .callout li { margin: 5px 0; font-size: 0.88em; }
+  ul { padding-left: 18px; }
+  li { margin: 4px 0; font-size: 0.88em; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(201,168,76,0.05); padding: 12px; border-radius: 6px; text-align: center; border: 1px solid rgba(201,168,76,0.1); }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: var(--gold); font-family: 'Playfair Display', serif; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
+  .toc { background: rgba(201,168,76,0.04); border: 1px solid rgba(201,168,76,0.18); border-radius: 8px; padding: 16px 20px; margin-bottom: 20px; }
+  .toc-title { color: var(--accent); font-weight: 700; font-size: 0.9em; margin-bottom: 8px; }
+  .toc a { color: var(--accent); text-decoration: none; font-size: 0.88em; }
+  .toc a:hover { text-decoration: underline; color: var(--gold); }
+  .toc ol { padding-left: 20px; }
+  .toc li { margin: 4px 0; }
+  .nav-links { display: flex; justify-content: space-between; margin: 20px 0; font-size: 0.85em; }
+  .nav-links a { color: var(--accent); text-decoration: none; }
+  .nav-links a:hover { text-decoration: underline; color: var(--gold); }
+  .divider { height: 1px; background: linear-gradient(90deg, transparent, var(--accent), transparent); margin: 24px 0; opacity: 0.4; }
+  .footer { text-align: center; color: var(--muted); font-size: 0.75em; margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--border); }
+  .footer a { color: var(--accent); text-decoration: none; }
+</style>
+<script>if(window.self===window.top&&sessionStorage.getItem("student_auth")!=="1"){document.body.innerHTML="";window.location.replace("student.html");}</script>
+</head>
+<body>
+
+<h1>彭博研究摘要</h1>
+<p class="subtitle">第117期 | 美國經濟雙面刃：消費強勁 vs 就業降溫</p>
+<span class="issue-badge">2026年七月上旬更新</span>
+
+<div class="verdict-bar">結論：6月車市回暖撐起Q2消費，但非農僅增5.7萬遠遜預期 — Fed 7月按兵不動已成定局，做多前端利率期貨、逢低吸納消費循環股。</div>
+
+<div class="nav-links">
+  <span><a href="newsletter_116_policy_growth.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="toc">
+  <div class="toc-title">目錄</div>
+  <ol>
+    <li><a href="#consumer-autos">消費動能 車市回暖，消費未熄火</a></li>
+    <li><a href="#labor-fed">就業與聯準會 招聘降溫，Fed樂得按兵不動</a></li>
+    <li><a href="#red-team">Red Team 反面論證</a></li>
+    <li><a href="#takeaways">基金經理人重點摘要</a></li>
+  </ol>
+</div>
+
+<div class="section" id="consumer-autos">
+  <h2><span class="tag tag-misc">消費動能</span> 車市回暖，消費未熄火</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--green)">16.52M</div><div class="lbl">6月輕型車銷售
+（年化，高於預期16.10M）</div></div>
+    <div class="stat"><div class="val" style="color:var(--green)">+14.2%</div><div class="lbl">季環比年化增速
+（前值持平）</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">$777</div><div class="lbl">Q2平均月供
+（歷史新高）</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">美國車市回暖 — 為實質消費反彈鋪路</div>
+    <p>6月輕型車銷售年化升至 <span style="color:#f0ebe0;font-weight:700">16.52百萬輛</span>，高於5月的 <span style="color:#f0ebe0;font-weight:700">16.08百萬輛</span>，並超越市場共識的 <span style="color:#f0ebe0;font-weight:700">16.10百萬輛</span>。這一水平不僅優於第一季平均的 <span style="color:#f0ebe0;font-weight:700">15.65百萬輛</span>，也高於去年全年平均的 <span style="color:#f0ebe0;font-weight:700">16.12百萬輛</span>。以季環比年化計算，銷售大增 <span style="color:#f0ebe0;font-weight:700">14.2%</span>，扭轉前值持平的頹勢。Bloomberg Intelligence估計，強勁的汽車銷售可為第二季GDP貢獻約 <span style="color:#f0ebe0;font-weight:700">0.6個百分點</span>。汽油價格回落、預期中的整體通膨下行，加上世界盃相關活動的提振，共同支撐消費者的購買意願。然而隱憂仍在：Q2平均月供攀升至歷史新高的 <span style="color:#f0ebe0;font-weight:700">$777</span>，近四分之一買家承做 <span style="color:#f0ebe0;font-weight:700">7年期以上</span> 車貸 — 融資成本高企與貸款期限拉長雖尚未壓垮需求，卻是懸頂之劍。</p>
+    <div class="data-point">6月銷售：<span style="color:#f0ebe0;font-weight:700">16.52M（年化）</span> &nbsp;|&nbsp; 季環比年化：<span style="color:#f0ebe0;font-weight:700">+14.2%</span> &nbsp;|&nbsp; Q2 GDP貢獻：<span style="color:#f0ebe0;font-weight:700">約0.6ppt</span> &nbsp;|&nbsp; 平均月供：<span style="color:#f0ebe0;font-weight:700">$777（新高）</span> &nbsp;|&nbsp; 7年+車貸佔比：<span style="color:#f0ebe0;font-weight:700">近25%</span></div>
+    <div class="implication"><div class="label">投資啟示</div>消費循環板塊短線有支撐 — <span style="color:#f0ebe0;font-weight:700">逢低吸納汽車零售與消費信貸相關股</span>。但需警惕高月供對後續需求的滯後拖累，避免追高。</div>
+  </div>
+
+</div>
+
+<div class="section" id="labor-fed">
+  <h2><span class="tag tag-misc">就業與聯準會</span> 招聘降溫，Fed樂得按兵不動</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--red)">+57k</div><div class="lbl">6月非農就業
+（遠低於預期113k）</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">-74k</div><div class="lbl">前兩月合計下修
+（4月+5月）</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">4.2%</div><div class="lbl">6月失業率
+（前值4.30%）</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">6月就業放緩 — Fed 7月料續按兵不動</div>
+    <p>6月非農就業僅增 <span style="color:#f0ebe0;font-weight:700">5.7萬</span>（前值下修至 <span style="color:#f0ebe0;font-weight:700">12.9萬</span>），遠低於市場共識的 <span style="color:#f0ebe0;font-weight:700">11.3萬</span> 及Bloomberg的 <span style="color:#f0ebe0;font-weight:700">20萬</span> 預測。前兩月合計下修 <span style="color:#f0ebe0;font-weight:700">7.4萬</span>：4月由17.9萬修至 <span style="color:#f0ebe0;font-weight:700">14.8萬</span>，5月由17.2萬修至 <span style="color:#f0ebe0;font-weight:700">12.9萬</span>。三個月移動平均降至 <span style="color:#f0ebe0;font-weight:700">11.1萬</span>（前值16.4萬），雖較5月放緩，但仍高於 <span style="color:#f0ebe0;font-weight:700">5萬</span> 的失業率打平門檻。細分結構喜憂參半：私人服務業急劇放緩至 <span style="color:#f0ebe0;font-weight:700">3.9萬</span>，休閒與酒店業因季節性招聘疲弱大減 <span style="color:#f0ebe0;font-weight:700">6.1萬</span>，成為主要拖累。家庭調查則偏強，失業率降至 <span style="color:#f0ebe0;font-weight:700">4.2%</span>（前值4.30%），但這部分源於勞動參與率下滑 <span style="color:#f0ebe0;font-weight:700">0.3個百分點</span> 至 <span style="color:#f0ebe0;font-weight:700">61.5%</span>。整體而言，就業放緩加上預期為負的6月CPI，足以讓Fed在7月維持利率不變。</p>
+    <div class="data-point">6月非農：<span style="color:#f0ebe0;font-weight:700">+57k</span>（預期113k、預測200k） &nbsp;|&nbsp; 前兩月下修：<span style="color:#f0ebe0;font-weight:700">-74k</span> &nbsp;|&nbsp; 3個月均值：<span style="color:#f0ebe0;font-weight:700">111k</span> &nbsp;|&nbsp; 私人就業：<span style="color:#f0ebe0;font-weight:700">+49k</span> &nbsp;|&nbsp; 休閒酒店：<span style="color:#f0ebe0;font-weight:700">-61k</span> &nbsp;|&nbsp; 失業率：<span style="color:#f0ebe0;font-weight:700">4.2%</span> &nbsp;|&nbsp; 參與率：<span style="color:#f0ebe0;font-weight:700">61.5%（-0.3ppt）</span></div>
+    <div class="implication"><div class="label">投資啟示</div>軟就業+負CPI鎖定Fed 7月不動，但下半年降息路徑更清晰 — <span style="color:#f0ebe0;font-weight:700">做多前端利率期貨（SOFR/2年期）</span>，同時警惕失業率下降的「假強勢」（實為參與率下滑所致）。</div>
+  </div>
+
+</div>
+
+<div class="divider"></div>
+
+<div class="red-team" id="red-team">
+  <div class="red-team-title">&#128308; Red Team — 核心假設與反面論證</div>
+  <ul>
+    <li>假設1：6月就業放緩是趨勢性降溫，Fed下半年具備降息空間</li>
+    <li>假設2：車市強勁代表消費動能可持續，Q2 GDP無虞</li>
+    <li>假設3：失業率降至4.2%反映勞動市場穩健</li>
+    <li style="color:var(--red)">風險1：三個月均值仍達11.1萬，遠高於5萬打平門檻，勞動市場「放緩不失速」，Fed未必如市場般急於降息</li>
+    <li style="color:var(--red)">風險2：Q2平均月供衝上$777歷史新高、近25%買家承做7年以上車貸，需求恐為透支未來、後續有斷崖風險</li>
+    <li style="color:var(--red)">風險3：失業率下降主因是參與率下滑0.3ppt至61.5%，屬「勞動力退出」的假象，而非真實需求改善</li>
+  </ul>
+  <p style="margin-top:10px;padding:10px 14px;background:rgba(224,85,69,0.04);border-radius:6px;font-size:0.9em;border-left:3px solid var(--red)">核心邏輯（Fed 7月按兵不動）成立且高度確定，但「下半年順利降息」的敘事偏脆弱。真正的關鍵不在7月，而在就業趨勢：若三個月均值維持在10萬以上且失業率因參與率下滑而虛低，Fed缺乏緊迫感，降息或延後至Q4。消費端則須嚴防車貸槓桿見頂 — 若月供持續破紀錄，Q3消費恐反轉。做多前端利率的倉位需搭配對「就業意外走強」的保護。</p>
+</div>
+
+<div class="callout" id="takeaways">
+  <div class="callout-title">基金經理人重點摘要</div>
+  <ul>
+    <li><strong>聯準會：</strong>6月非農僅+5.7萬、疊加預期為負的CPI，7月按兵不動已成定局。做多前端利率期貨（SOFR/2年期）。</li>
+    <li><strong>就業市場：</strong>放緩但未失速，3個月均值仍達11.1萬（高於5萬門檻）。失業率降至4.2%屬參與率下滑的假象，勿過度樂觀。</li>
+    <li><strong>消費/車市：</strong>6月銷售年化16.52M、季環比+14.2%，撐起Q2 GDP約0.6ppt。逢低吸納消費循環股。</li>
+    <li><strong>車貸尾部風險：</strong>Q2月供衝上$777新高、近25%為7年+車貸，需求或透支未來。減碼高風險消費信貸敞口。</li>
+    <li><strong>Q2 GDP：</strong>汽車+消費強勁下料錄得穩健增長，短線美股消費板塊有支撐，但留意就業降溫的滯後傳導。</li>
+  </ul>
+</div>
+
+<div class="nav-links">
+  <span><a href="newsletter_116_policy_growth.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="footer">
+  彭博研究摘要 | 僅供教學與討論用途 | 2026年7月2日<br>
+  資料來源：Bloomberg Intelligence, Bloomberg Economics, Bloomberg News<br>
+  <a href="https://www.patreon.com/Aireturn">Patreon</a> · <a href="https://t.me/AIreturn">Telegram</a> · Threads @aireturn88
+</div>
+
+</body>
+</html>
