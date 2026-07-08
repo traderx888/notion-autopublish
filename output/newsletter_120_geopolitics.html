@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>彭博研究摘要 #120 — 地緣風暴：烏克蘭空襲升級、北約分歧與美伊衝突重燃</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Noto+Serif+TC:wght@400;700&family=Source+Sans+Pro:wght@400;600;700&display=swap');
+  :root { --bg: #0a0a08; --card: #141410; --border: #2a2820; --accent: #c9a84c;
+          --gold: #f0d87a; --gold-dim: #c4b896; --text: #e0d8c8; --text-bright: #f0ebe0; --muted: #8a8070;
+          --green: #6bbd5b; --red: #e05545; --yellow: #d4a843; --orange: #d49040;
+          --purple: #b08cd0; --cyan: #4cc9b0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { background: #0a0a08 !important; }
+  body { color: var(--text); font-family: 'Source Sans Pro', 'Noto Serif TC', 'Microsoft JhengHei', sans-serif; line-height: 1.8; padding: 24px; max-width: 880px; margin: 0 auto; }
+  h1 { font-family: 'Playfair Display', 'Noto Serif TC', serif; color: var(--gold); font-size: 1.8em; margin-bottom: 4px; font-weight: 900; letter-spacing: 0.02em; }
+  h2 { font-family: 'Playfair Display', 'Noto Serif TC', serif; }
+  .subtitle { color: var(--text-bright); font-size: 0.95em; margin-bottom: 8px; font-family: 'Noto Serif TC', serif; }
+  .issue-badge { display: inline-block; background: rgba(201,168,76,0.15); color: var(--accent); padding: 4px 12px; border-radius: 12px; font-size: 0.8em; font-weight: 600; margin-bottom: 20px; border: 1px solid rgba(201,168,76,0.3); }
+  .tag { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 0.72em; font-weight: 600; margin-right: 4px; }
+  .tag-rates { background: rgba(201,168,76,0.15); color: var(--accent); }
+  .tag-china { background: rgba(212,144,64,0.15); color: var(--orange); }
+  .tag-japan { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-geo   { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-oil   { background: rgba(212,168,67,0.15); color: var(--yellow); }
+  .tag-trade { background: rgba(212,168,67,0.15); color: var(--yellow); }
+  .tag-growth{ background: rgba(107,189,91,0.15); color: var(--green); }
+  .tag-metals{ background: rgba(176,140,208,0.15); color: var(--purple); }
+  .tag-infl  { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-policy{ background: rgba(201,168,76,0.15); color: var(--accent); }
+  .tag-val   { background: rgba(107,189,91,0.15); color: var(--green); }
+  .tag-vol   { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-semi  { background: rgba(76,201,176,0.15); color: var(--cyan); }
+  .tag-credit{ background: rgba(176,140,208,0.15); color: var(--purple); }
+  .tag-space { background: rgba(201,168,76,0.15); color: var(--accent); }
+  .tag-misc  { background: rgba(138,128,112,0.15); color: var(--muted); }
+  .verdict-bar { background: var(--accent); color: #0a0a08; padding: 14px 20px; border-radius: 8px; margin-bottom: 20px; font-weight: 700; font-size: 1.05em; font-family: 'Noto Serif TC', serif; }
+  .section { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 22px; margin-bottom: 18px; }
+  .section h2 { color: var(--gold); font-size: 1.15em; margin-bottom: 12px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+  .section h3 { color: var(--accent); font-size: 0.95em; margin: 14px 0 6px; }
+  .article { margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid rgba(42,40,32,0.7); }
+  .article:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .article-title { color: var(--text-bright); font-weight: 700; font-size: 0.95em; margin-bottom: 4px; }
+  .article-title-cn { color: var(--muted); font-size: 0.85em; margin-bottom: 8px; }
+  .article p { font-size: 0.9em; margin: 6px 0; }
+  .data-point { background: rgba(201,168,76,0.05); padding: 8px 12px; border-radius: 6px; margin: 8px 0; font-size: 0.85em; border: 1px solid rgba(201,168,76,0.12); }
+  .data-point .num { color: var(--text-bright); font-weight: 700; }
+  .implication { background: rgba(201,168,76,0.06); border-left: 3px solid var(--accent); padding: 10px 14px; margin: 10px 0; border-radius: 0 6px 6px 0; font-size: 0.88em; }
+  .implication .label { color: var(--accent); font-weight: 700; font-size: 0.8em; text-transform: uppercase; margin-bottom: 4px; }
+  .red-team { background: rgba(224,85,69,0.06); border: 1px solid rgba(224,85,69,0.25); border-radius: 8px; padding: 18px; margin: 18px 0; }
+  .red-team-title { color: var(--red); font-weight: 700; font-size: 0.95em; margin-bottom: 10px; font-family: 'Playfair Display', serif; }
+  .red-team ul { padding-left: 18px; }
+  .red-team li { margin: 5px 0; font-size: 0.88em; }
+  .callout { background: rgba(201,168,76,0.06); border: 1px solid rgba(201,168,76,0.25); border-radius: 8px; padding: 18px; margin: 18px 0; }
+  .callout-title { color: var(--accent); font-weight: 700; font-size: 0.95em; margin-bottom: 8px; font-family: 'Playfair Display', 'Noto Serif TC', serif; }
+  .callout ul { padding-left: 18px; }
+  .callout li { margin: 5px 0; font-size: 0.88em; }
+  ul { padding-left: 18px; }
+  li { margin: 4px 0; font-size: 0.88em; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(201,168,76,0.05); padding: 12px; border-radius: 6px; text-align: center; border: 1px solid rgba(201,168,76,0.1); }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: var(--gold); font-family: 'Playfair Display', serif; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
+  .toc { background: rgba(201,168,76,0.04); border: 1px solid rgba(201,168,76,0.18); border-radius: 8px; padding: 16px 20px; margin-bottom: 20px; }
+  .toc-title { color: var(--accent); font-weight: 700; font-size: 0.9em; margin-bottom: 8px; }
+  .toc a { color: var(--accent); text-decoration: none; font-size: 0.88em; }
+  .toc a:hover { text-decoration: underline; color: var(--gold); }
+  .toc ol { padding-left: 20px; }
+  .toc li { margin: 4px 0; }
+  .nav-links { display: flex; justify-content: space-between; margin: 20px 0; font-size: 0.85em; }
+  .nav-links a { color: var(--accent); text-decoration: none; }
+  .nav-links a:hover { text-decoration: underline; color: var(--gold); }
+  .divider { height: 1px; background: linear-gradient(90deg, transparent, var(--accent), transparent); margin: 24px 0; opacity: 0.4; }
+  .footer { text-align: center; color: var(--muted); font-size: 0.75em; margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--border); }
+  .footer a { color: var(--accent); text-decoration: none; }
+</style>
+<script>if(window.self===window.top&&sessionStorage.getItem("student_auth")!=="1"){document.body.innerHTML="";window.location.replace("student.html");}</script>
+</head>
+<body>
+
+<h1>彭博研究摘要</h1>
+<p class="subtitle">第120期 | 地緣風暴：烏克蘭空襲升級、北約分歧與美伊衝突重燃</p>
+<span class="issue-badge">2026年七月上旬更新</span>
+
+<div class="verdict-bar">結論：三條地緣戰線同步升溫，戰場僵局推升「非戰場」風險——烏克蘭空襲、北約軍費裂痕、美伊霍爾木茲對峙。核心交易：布倫特原油尾部風險上行，做多能源與國防板塊，對沖油價驅動的通膨路徑。</div>
+
+<div class="nav-links">
+  <span><a href="newsletter_119_rates.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="toc">
+  <div class="toc-title">目錄</div>
+  <ol>
+    <li><a href="#russia-ukraine-air-war">俄烏戰爭 地面停滯，空中升級</a></li>
+    <li><a href="#nato-summit-ankara">北約峰會 避免與川普攤牌</a></li>
+    <li><a href="#us-iran-hormuz-oil">美伊衝突 霍爾木茲再對峙，油價承壓</a></li>
+    <li><a href="#red-team">Red Team 反面論證</a></li>
+    <li><a href="#takeaways">基金經理人重點摘要</a></li>
+  </ol>
+</div>
+
+<div class="section" id="russia-ukraine-air-war">
+  <h2><span class="tag tag-misc">俄烏戰爭</span> 地面停滯，空中升級</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--green)">-58%</div><div class="lbl">上半年俄軍推進速度
+（按年計）</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">84 km²</div><div class="lbl">6月俄軍淨佔領
+（5月僅14 km²）</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">≥30</div><div class="lbl">7月2日基輔空襲
+死亡人數</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">俄軍轉向空中蜂群 — 地面攻勢受挫下的施壓策略</div>
+    <p>俄羅斯對基輔發動的最新彈道飛彈與無人機「蜂群」混合攻擊，被視為對戰場進展有限的刻意補償——以更高的平民代價施壓烏克蘭。7月6日的攻擊延續了7月2日的大規模行動，俄軍一次投入<span style="color:#f0ebe0;font-weight:700">數百架無人機</span>搭配彈道、巡弋與高超音速飛彈。烏克蘭防空攔截了約 <span style="color:#f0ebe0;font-weight:700">95% 的無人機</span>，卻無法攔下彈道飛彈部分，暴露出最致命的防禦缺口：<span style="color:#f0ebe0;font-weight:700">Patriot 攔截彈短缺</span>。這使得攔截彈供應成為 Ankara 北約峰會的核心議題。俄方形式上稱打擊軍事與能源設施，但效果集中於公寓與住宅區——7月2日基輔攻擊即造成 <span style="color:#f0ebe0;font-weight:700">至少30人死亡、逾10人受傷</span>。歷史顯示此類戰術通常強化而非瓦解烏克蘭抵抗意志。</p>
+    <div class="data-point">無人機攔截率：<span style="color:#f0ebe0;font-weight:700">約95%</span> &nbsp;|&nbsp; 7月2日死亡：<span style="color:#f0ebe0;font-weight:700">≥30人</span> &nbsp;|&nbsp; 關鍵缺口：<span style="color:#f0ebe0;font-weight:700">Patriot 攔截彈與發射器</span> &nbsp;|&nbsp; 高價值目標：<span style="color:#f0ebe0;font-weight:700">基輔、Odesa、Dnipro、Kharkiv、Lviv</span></div>
+    <div class="implication"><div class="label">投資啟示</div>空襲升級直接利好防空與飛彈補給供應鏈。<span style="color:#f0ebe0;font-weight:700">關注國防承包商（Patriot/攔截彈製造商）與歐洲防務板塊</span>，此為多月結構性需求而非短線事件。</div>
+  </div>
+  <div class="article">
+    <div class="article-title">俄軍攻勢未能突破 — 消耗戰格局延續</div>
+    <p>據烏克蘭開源情報 DeepStateMap，俄軍6月淨佔領 <span style="color:#f0ebe0;font-weight:700">84平方公里</span>，較5月的 <span style="color:#f0ebe0;font-weight:700">14平方公里</span> 回升，但仍是近兩年第二低月度戰果。上半年俄軍共佔領 <span style="color:#f0ebe0;font-weight:700">770平方公里</span>，按年大減 <span style="color:#f0ebe0;font-weight:700">58%</span>。核心制約是兵員素質——儘管突擊行動在5、6月急劇增加，卻無法轉化為去年規模的領土擴張，前線攻擊組織鬆散、傷亡高企。戰爭進入7月呈「更劇烈但仍屬消耗」的格局：俄軍持續在 Donetsk（尤其 Kostiantynivka 要塞城市）與北部邊境試探弱點，烏克蘭則加深對俄縱深打擊，日益命中國防工業與燃料供應。分析認為克里姆林宮政治算計未變，戰爭將在未來數月延續。</p>
+    <div class="data-point">6月淨佔領：<span style="color:#f0ebe0;font-weight:700">84 km²</span> &nbsp;|&nbsp; 上半年累計：<span style="color:#f0ebe0;font-weight:700">770 km²（-58% YoY）</span> &nbsp;|&nbsp; 前線長度：<span style="color:#f0ebe0;font-weight:700">1,300 公里</span> &nbsp;|&nbsp; 主戰區：<span style="color:#f0ebe0;font-weight:700">Donetsk / Kostiantynivka</span></div>
+    <div class="implication"><div class="label">投資啟示</div>戰場僵局意味停火敘事短期難落地。<span style="color:#f0ebe0;font-weight:700">維持地緣風險溢價的多頭配置</span>——戰爭延續支撐能源與國防，同時壓制東歐風險資產估值。</div>
+  </div>
+
+</div>
+
+<div class="section" id="nato-summit-ankara">
+  <h2><span class="tag tag-misc">北約峰會</span> 避免與川普攤牌</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--orange)">3.5%</div><div class="lbl">GDP核心軍費目標
+（多國恐未達標）</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">5%</div><div class="lbl">整體軍費目標
+（更難達成）</div></div>
+    <div class="stat"><div class="val">195,000</div><div class="lbl">歐洲軍費支撐的
+美國就業（Rutte說法）</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">Ankara 峰會：川普、標靶與戰斧 — 歐洲防務的十字路口</div>
+    <p>7月7-8日的 Ankara 北約峰會，歐洲盟友的首要目標只有一個：<span style="color:#f0ebe0;font-weight:700">避免與川普就軍費與伊朗問題爆發衝突</span>。秘書長 Mark Rutte 力陳歐洲正大幅增加軍費，並主張更高的歐洲支出能支撐 <span style="color:#f0ebe0;font-weight:700">195,000 個美國就業</span>——試圖說服川普此舉對美國有利。然而數據顯示多數歐洲政府將資金投向本土企業，且並非所有國家能達到 <span style="color:#f0ebe0;font-weight:700">3.5% GDP 核心目標</span>，遑論 <span style="color:#f0ebe0;font-weight:700">5% 整體目標</span>。更深層問題是：峰會究竟標誌歐洲防務責任的協調轉移，還是加深華盛頓削減駐軍後暴露的戰略不確定性。美方近期撤軍與<span style="color:#f0ebe0;font-weight:700">取消在德國部署戰斧巡弋飛彈</span>的計畫令歐洲不安，德國總理 Merz 正尋求與美企聯合生產武器以填補能力缺口。SAFE 與 EDIP 對美企參與的限制或成新的摩擦點。</p>
+    <div class="data-point">核心目標：<span style="color:#f0ebe0;font-weight:700">3.5% GDP</span> &nbsp;|&nbsp; 整體目標：<span style="color:#f0ebe0;font-weight:700">5% GDP</span> &nbsp;|&nbsp; 美國就業論點：<span style="color:#f0ebe0;font-weight:700">195,000</span> &nbsp;|&nbsp; 摩擦點：<span style="color:#f0ebe0;font-weight:700">戰斧撤案、SAFE/EDIP 限制</span></div>
+    <div class="implication"><div class="label">投資啟示</div>美歐防務裂痕推動歐洲自主軍工資本開支週期。<span style="color:#f0ebe0;font-weight:700">做多歐洲本土國防承包商（受惠於資金留在域內）</span>，同時警惕跨大西洋摩擦對歐元區風險情緒的間歇性衝擊。</div>
+  </div>
+
+</div>
+
+<div class="section" id="us-iran-hormuz-oil">
+  <h2><span class="tag tag-misc">美伊衝突</span> 霍爾木茲再對峙，油價承壓</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--orange)">$72→$76</div><div class="lbl">布倫特原油
+（打擊前緊張升溫）</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">License X1</div><div class="lbl">美撤銷伊朗石油
+制裁豁免</div></div>
+    <div class="stat"><div class="val">10天</div><div class="lbl">現有交易
+過渡期</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">軍事打擊與制裁逆轉 — 諒解備忘錄瀕臨破裂</div>
+    <p>美國對伊朗發動新一輪打擊，回應三艘在霍爾木茲海峽內或附近的商船遇襲，凸顯 <span style="color:#f0ebe0;font-weight:700">6月17日《諒解備忘錄》</span> 的脆弱。緊張升級推動布倫特原油期貨從約 <span style="color:#f0ebe0;font-weight:700">每桶72美元</span> 攀升至約 <span style="color:#f0ebe0;font-weight:700">76美元</span>。美國同時頒布 <span style="color:#f0ebe0;font-weight:700">通用許可證 X1</span>，立即撤銷此前針對伊朗石油銷售的制裁豁免（原 License X 於6月22日頒布、效期至8月21日），僅給予現有交易 <span style="color:#f0ebe0;font-weight:700">10天過渡期</span>，且款項須匯入美國凍結賬戶。伊朗在阿曼灣向卡達 LNG 運輸船發射飛彈，紅海亦重現對貨船的襲擊。分析認為德黑蘭以「虛張聲勢」施壓談判，風險在於做過頭——川普政府本欲退出，且行事難測。撤銷豁免消除了伊朗留在談判桌的關鍵動力，預示更多針鋒相對的零星衝突。</p>
+    <div class="data-point">布倫特：<span style="color:#f0ebe0;font-weight:700">$72 → $76/桶</span> &nbsp;|&nbsp; 制裁逆轉：<span style="color:#f0ebe0;font-weight:700">License X → X1</span> &nbsp;|&nbsp; 過渡期：<span style="color:#f0ebe0;font-weight:700">10天</span> &nbsp;|&nbsp; 熱點：<span style="color:#f0ebe0;font-weight:700">霍爾木茲、阿曼灣、紅海</span></div>
+    <div class="implication"><div class="label">投資啟示</div>霍爾木茲與紅海航運風險為油價提供不對稱上行。<span style="color:#f0ebe0;font-weight:700">戰術性做多布倫特原油與油輪運費，並以能源股對沖組合的通膨敏感度</span>；密切追蹤諒解備忘錄存續。</div>
+  </div>
+
+</div>
+
+<div class="divider"></div>
+
+<div class="red-team" id="red-team">
+  <div class="red-team-title">&#128308; Red Team — 核心假設與反面論證</div>
+  <ul>
+    <li>假設1：俄烏戰爭僵局延續、地緣風險溢價維持，支撐能源與國防多頭</li>
+    <li>假設2：美伊零星衝突推升油價的上行風險大於下行（供給溢價擴大）</li>
+    <li>假設3：美歐防務裂痕驅動歐洲軍工資本開支結構性上行</li>
+    <li style="color:var(--red)">風險1：俄軍上半年推進速度已按年下滑58%、戰力受兵員素質制約，若克里姆林宮政治算計轉向或西方施壓奏效，停火敘事可能快速壓縮風險溢價</li>
+    <li style="color:var(--red)">風險2：紅海航運量仍低於胡塞衝突前水平且胡塞極不願捲入，衝突或維持「低烈度」而非全面戰爭——油價漲幅（$72→$76）迄今溫和，未必延續</li>
+    <li style="color:var(--red)">風險3：數據顯示歐洲多數軍費投向本土企業且多國恐未達3.5% GDP目標，實際增量或低於敘事，跨大西洋摩擦亦可能拖累而非提振歐元區風險資產</li>
+  </ul>
+  <p style="margin-top:10px;padding:10px 14px;background:rgba(224,85,69,0.04);border-radius:6px;font-size:0.9em;border-left:3px solid var(--red)">核心邏輯（地緣風險溢價上行）成立，但油價交易需嚴設條件。目前布倫特僅由 $72 升至 $76、紅海運量仍低於衝突前，屬「脆弱升溫」而非結構性斷供。若霍爾木茲出現實質封鎖或 LNG/原油油輪持續遇襲導致布倫特突破 $90 並維持兩個月以上，能源與通膨敘事將全面確立；反之若諒解備忘錄修復、俄烏出現停火語言，多頭應迅速獲利了結。國防板塊的結構性邏輯（Patriot 補給、歐洲軍工）韌性最強，受單一事件反轉影響最小。</p>
+</div>
+
+<div class="callout" id="takeaways">
+  <div class="callout-title">基金經理人重點摘要</div>
+  <ul>
+    <li><strong>俄烏戰爭：</strong>地面攻勢受挫（上半年推進 -58%），俄軍轉向飛彈蜂群空襲，戰爭將延續。維持地緣風險溢價多頭。</li>
+    <li><strong>防空供應鏈：</strong>Patriot 攔截彈短缺成關鍵缺口，做多國防承包商與攔截彈製造商——多月結構性需求。</li>
+    <li><strong>北約峰會：</strong>歐洲多國恐未達 3.5% GDP 軍費目標，美歐裂痕加深。做多歐洲本土軍工，警惕跨大西洋摩擦衝擊歐元區情緒。</li>
+    <li><strong>美伊/原油：</strong>美撤銷制裁豁免（License X1），布倫特升至 ~$76。戰術做多布倫特與油輪運費，以能源股對沖通膨敏感度。</li>
+    <li><strong>觸發條件：</strong>布倫特突破 $90 且持續兩個月 → 全面確立能源/通膨敘事；諒解備忘錄修復或俄烏停火語言 → 迅速獲利了結地緣多頭。</li>
+  </ul>
+</div>
+
+<div class="nav-links">
+  <span><a href="newsletter_119_rates.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="footer">
+  彭博研究摘要 | 僅供教學與討論用途 | 2026年7月8日<br>
+  資料來源：Bloomberg Intelligence, Bloomberg Economics, Bloomberg News<br>
+  <a href="https://www.patreon.com/Aireturn">Patreon</a> · <a href="https://t.me/AIreturn">Telegram</a> · Threads @aireturn88
+</div>
+
+</body>
+</html>

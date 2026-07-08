@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>彭博研究摘要 #121 — 中國6月數據前瞻：信貸疲軟與通膨溫和</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Noto+Serif+TC:wght@400;700&family=Source+Sans+Pro:wght@400;600;700&display=swap');
+  :root { --bg: #0a0a08; --card: #141410; --border: #2a2820; --accent: #c9a84c;
+          --gold: #f0d87a; --gold-dim: #c4b896; --text: #e0d8c8; --text-bright: #f0ebe0; --muted: #8a8070;
+          --green: #6bbd5b; --red: #e05545; --yellow: #d4a843; --orange: #d49040;
+          --purple: #b08cd0; --cyan: #4cc9b0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { background: #0a0a08 !important; }
+  body { color: var(--text); font-family: 'Source Sans Pro', 'Noto Serif TC', 'Microsoft JhengHei', sans-serif; line-height: 1.8; padding: 24px; max-width: 880px; margin: 0 auto; }
+  h1 { font-family: 'Playfair Display', 'Noto Serif TC', serif; color: var(--gold); font-size: 1.8em; margin-bottom: 4px; font-weight: 900; letter-spacing: 0.02em; }
+  h2 { font-family: 'Playfair Display', 'Noto Serif TC', serif; }
+  .subtitle { color: var(--text-bright); font-size: 0.95em; margin-bottom: 8px; font-family: 'Noto Serif TC', serif; }
+  .issue-badge { display: inline-block; background: rgba(201,168,76,0.15); color: var(--accent); padding: 4px 12px; border-radius: 12px; font-size: 0.8em; font-weight: 600; margin-bottom: 20px; border: 1px solid rgba(201,168,76,0.3); }
+  .tag { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 0.72em; font-weight: 600; margin-right: 4px; }
+  .tag-rates { background: rgba(201,168,76,0.15); color: var(--accent); }
+  .tag-china { background: rgba(212,144,64,0.15); color: var(--orange); }
+  .tag-japan { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-geo   { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-oil   { background: rgba(212,168,67,0.15); color: var(--yellow); }
+  .tag-trade { background: rgba(212,168,67,0.15); color: var(--yellow); }
+  .tag-growth{ background: rgba(107,189,91,0.15); color: var(--green); }
+  .tag-metals{ background: rgba(176,140,208,0.15); color: var(--purple); }
+  .tag-infl  { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-policy{ background: rgba(201,168,76,0.15); color: var(--accent); }
+  .tag-val   { background: rgba(107,189,91,0.15); color: var(--green); }
+  .tag-vol   { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-semi  { background: rgba(76,201,176,0.15); color: var(--cyan); }
+  .tag-credit{ background: rgba(176,140,208,0.15); color: var(--purple); }
+  .tag-space { background: rgba(201,168,76,0.15); color: var(--accent); }
+  .tag-misc  { background: rgba(138,128,112,0.15); color: var(--muted); }
+  .verdict-bar { background: var(--accent); color: #0a0a08; padding: 14px 20px; border-radius: 8px; margin-bottom: 20px; font-weight: 700; font-size: 1.05em; font-family: 'Noto Serif TC', serif; }
+  .section { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 22px; margin-bottom: 18px; }
+  .section h2 { color: var(--gold); font-size: 1.15em; margin-bottom: 12px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+  .section h3 { color: var(--accent); font-size: 0.95em; margin: 14px 0 6px; }
+  .article { margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid rgba(42,40,32,0.7); }
+  .article:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .article-title { color: var(--text-bright); font-weight: 700; font-size: 0.95em; margin-bottom: 4px; }
+  .article-title-cn { color: var(--muted); font-size: 0.85em; margin-bottom: 8px; }
+  .article p { font-size: 0.9em; margin: 6px 0; }
+  .data-point { background: rgba(201,168,76,0.05); padding: 8px 12px; border-radius: 6px; margin: 8px 0; font-size: 0.85em; border: 1px solid rgba(201,168,76,0.12); }
+  .data-point .num { color: var(--text-bright); font-weight: 700; }
+  .implication { background: rgba(201,168,76,0.06); border-left: 3px solid var(--accent); padding: 10px 14px; margin: 10px 0; border-radius: 0 6px 6px 0; font-size: 0.88em; }
+  .implication .label { color: var(--accent); font-weight: 700; font-size: 0.8em; text-transform: uppercase; margin-bottom: 4px; }
+  .red-team { background: rgba(224,85,69,0.06); border: 1px solid rgba(224,85,69,0.25); border-radius: 8px; padding: 18px; margin: 18px 0; }
+  .red-team-title { color: var(--red); font-weight: 700; font-size: 0.95em; margin-bottom: 10px; font-family: 'Playfair Display', serif; }
+  .red-team ul { padding-left: 18px; }
+  .red-team li { margin: 5px 0; font-size: 0.88em; }
+  .callout { background: rgba(201,168,76,0.06); border: 1px solid rgba(201,168,76,0.25); border-radius: 8px; padding: 18px; margin: 18px 0; }
+  .callout-title { color: var(--accent); font-weight: 700; font-size: 0.95em; margin-bottom: 8px; font-family: 'Playfair Display', 'Noto Serif TC', serif; }
+  .callout ul { padding-left: 18px; }
+  .callout li { margin: 5px 0; font-size: 0.88em; }
+  ul { padding-left: 18px; }
+  li { margin: 4px 0; font-size: 0.88em; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(201,168,76,0.05); padding: 12px; border-radius: 6px; text-align: center; border: 1px solid rgba(201,168,76,0.1); }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: var(--gold); font-family: 'Playfair Display', serif; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
+  .toc { background: rgba(201,168,76,0.04); border: 1px solid rgba(201,168,76,0.18); border-radius: 8px; padding: 16px 20px; margin-bottom: 20px; }
+  .toc-title { color: var(--accent); font-weight: 700; font-size: 0.9em; margin-bottom: 8px; }
+  .toc a { color: var(--accent); text-decoration: none; font-size: 0.88em; }
+  .toc a:hover { text-decoration: underline; color: var(--gold); }
+  .toc ol { padding-left: 20px; }
+  .toc li { margin: 4px 0; }
+  .nav-links { display: flex; justify-content: space-between; margin: 20px 0; font-size: 0.85em; }
+  .nav-links a { color: var(--accent); text-decoration: none; }
+  .nav-links a:hover { text-decoration: underline; color: var(--gold); }
+  .divider { height: 1px; background: linear-gradient(90deg, transparent, var(--accent), transparent); margin: 24px 0; opacity: 0.4; }
+  .footer { text-align: center; color: var(--muted); font-size: 0.75em; margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--border); }
+  .footer a { color: var(--accent); text-decoration: none; }
+</style>
+<script>if(window.self===window.top&&sessionStorage.getItem("student_auth")!=="1"){document.body.innerHTML="";window.location.replace("student.html");}</script>
+</head>
+<body>
+
+<h1>彭博研究摘要</h1>
+<p class="subtitle">第121期 | 中國6月數據前瞻：信貸疲軟與通膨溫和</p>
+<span class="issue-badge">2026年七月上旬更新</span>
+
+<div class="verdict-bar">結論：中國6月信貸受政府債發行放緩拖累、PPI/CPI雙雙走弱，內需通縮壓力未解 — 押注人行下半年寬鬆，做多中國利率債、審慎看待順週期資產。</div>
+
+<div class="nav-links">
+  <span><a href="newsletter_120_geopolitics.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="toc">
+  <div class="toc-title">目錄</div>
+  <ol>
+    <li><a href="#credit-funding">信貸 季末衝量難掩政府融資退潮</a></li>
+    <li><a href="#inflation">通膨 油價回落壓PPI，內需通縮陰霾未散</a></li>
+    <li><a href="#red-team">Red Team 反面論證</a></li>
+    <li><a href="#takeaways">基金經理人重點摘要</a></li>
+  </ol>
+</div>
+
+<div class="section" id="credit-funding">
+  <h2><span class="tag tag-credit">信貸</span> 季末衝量難掩政府融資退潮</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--orange)">3.9萬億</div><div class="lbl">6月社融增量
+（人民幣，低於去年4.2萬億）</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">8,200億</div><div class="lbl">6月政府融資
+（去年同期1.4萬億）</div></div>
+    <div class="stat"><div class="val">2.4萬億</div><div class="lbl">6月新增人民幣貸款
+（上半年累計11.5萬億）</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">6月信貸擴張料保持疲軟 — 政府債發行放緩構成拖累</div>
+    <p>彭博經濟研究預計，儘管銀行在季度末通常會加快放貸、令整體融資規模較5月回升，中國6月信貸擴張仍將保持疲軟。核心拖累來自政府融資：6月政府融資總額預計僅 <span style="color:#f0ebe0;font-weight:700">8,200億元人民幣</span>，遠低於去年同期的 <span style="color:#f0ebe0;font-weight:700">1.4萬億元</span>，直接壓低社融增量。經濟學家預測6月社會融資規模增量為 <span style="color:#f0ebe0;font-weight:700">3.9萬億元</span>，低於去年同期的 <span style="color:#f0ebe0;font-weight:700">4.2萬億元</span>；上半年累計社融達 <span style="color:#f0ebe0;font-weight:700">21.4萬億元</span>。新增人民幣貸款預計 <span style="color:#f0ebe0;font-weight:700">2.4萬億元</span>，上半年累計 <span style="color:#f0ebe0;font-weight:700">11.5萬億元</span>。民間融資需求的溫和回升，可能部分抵消政府融資減少形成的拖累，但難以扭轉同比走弱的整體格局。數據將於香港時間7月9日至15日期間公佈。</p>
+    <div class="data-point">社融增量：<span style="color:#f0ebe0;font-weight:700">3.9萬億元</span>（去年4.2萬億） &nbsp;|&nbsp; 政府融資：<span style="color:#f0ebe0;font-weight:700">8,200億元</span>（去年1.4萬億） &nbsp;|&nbsp; 新增人民幣貸款：<span style="color:#f0ebe0;font-weight:700">2.4萬億元</span> &nbsp;|&nbsp; 上半年社融累計：<span style="color:#f0ebe0;font-weight:700">21.4萬億元</span></div>
+    <div class="implication"><div class="label">投資啟示</div>政府債發行退潮是主拖累，反映財政節奏放緩而非私人需求崩塌。若下半年財政與貨幣不加碼，社融同比缺口將擴大 — <span style="color:#f0ebe0;font-weight:700">做多中國國債、看漲人行下半年降準降息預期</span>。</div>
+  </div>
+
+</div>
+
+<div class="section" id="inflation">
+  <h2><span class="tag tag-infl">通膨</span> 油價回落壓PPI，內需通縮陰霾未散</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--orange)">2.4%</div><div class="lbl">6月PPI同比預測
+（5月為3.6%）</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">1.1%</div><div class="lbl">6月CPI同比預測
+（前值1.2%）</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">-1.2pt</div><div class="lbl">PPI環比收窄幅度
+（原油、鋼鐵回落）</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">6月PPI通膨料放緩，CPI保持溫和 — 大宗商品降溫的雙面性</div>
+    <p>受全球油價走低影響，彭博經濟研究預計中國6月工業生產者出廠價格（PPI）同比漲幅將從5月的 <span style="color:#f0ebe0;font-weight:700">3.6%</span> 大幅收窄至 <span style="color:#f0ebe0;font-weight:700">2.4%</span>。驅動因素在於原油和鋼鐵等大宗商品價格較5月回落，官方製造業PMI中的原物料購進價格與出廠價格指數同步下滑，顯示上游價格動能轉弱。消費端，CPI通膨率預計從前一個月的 <span style="color:#f0ebe0;font-weight:700">1.2%</span> 小幅下降至 <span style="color:#f0ebe0;font-weight:700">1.1%</span>：豬肉價格可能拖累食品價格進一步下跌，而汽車等非食品價格漲幅維持溫和。數據將於香港時間7月9日周四上午9:30發布。整體而言，PPI受輸入性通縮壓制、CPI在低位徘徊，凸顯內需依然疲弱、企業定價能力有限的結構性難題。</p>
+    <div class="data-point">PPI同比：<span style="color:#f0ebe0;font-weight:700">2.4%</span>（前值3.6%） &nbsp;|&nbsp; CPI同比：<span style="color:#f0ebe0;font-weight:700">1.1%</span>（前值1.2%） &nbsp;|&nbsp; PPI驅動：<span style="color:#f0ebe0;font-weight:700">原油、鋼鐵回落</span> &nbsp;|&nbsp; CPI驅動：<span style="color:#f0ebe0;font-weight:700">豬肉價格拖累食品</span></div>
+    <div class="implication"><div class="label">投資啟示</div>油價下行雖利好利潤率與貿易條件，但同時放大通縮敘事。低通膨為寬鬆敞開大門 — <span style="color:#f0ebe0;font-weight:700">偏好中國久期資產、對順週期／工業金屬相關頭寸保持審慎</span>。</div>
+  </div>
+
+</div>
+
+<div class="divider"></div>
+
+<div class="red-team" id="red-team">
+  <div class="red-team-title">&#128308; Red Team — 核心假設與反面論證</div>
+  <ul>
+    <li>假設1：6月信貸疲軟主要由政府融資放緩（財政節奏）驅動，而非私人信貸需求萎縮</li>
+    <li>假設2：PPI放緩源於全球油價與大宗商品回落，屬輸入性、暫時性因素</li>
+    <li>假設3：低通膨環境將迫使人行在下半年進一步寬鬆</li>
+    <li style="color:var(--red)">風險1：若民間融資回升不及預期，社融走弱恐反映的是實體需求塌陷而非單純財政擾動，寬鬆效果將打折</li>
+    <li style="color:var(--red)">風險2：油價僅為近月擾動，若中東地緣衝突推升Brent，PPI可能快速反彈，通縮敘事逆轉</li>
+    <li style="color:var(--red)">風險3：人行受匯率穩定與資本外流約束，寬鬆空間或不及市場定價，降息落地時點恐延後</li>
+  </ul>
+  <p style="margin-top:10px;padding:10px 14px;background:rgba(224,85,69,0.04);border-radius:6px;font-size:0.9em;border-left:3px solid var(--red)">核心邏輯（信貸弱＋通膨低＝寬鬆在即）方向成立，做多中國久期仍是勝率較高的表達。但需警惕兩點硬約束：一是私人融資若持續不振，說明問題在需求端而非供給端刺激所能解決；二是若6月社融實際落在3.9萬億預測之下、且CPI跌破1%，通縮風險將壓過寬鬆利好，屆時應從『做多寬鬆預期』切換為『對沖需求硬著陸』。</p>
+</div>
+
+<div class="callout" id="takeaways">
+  <div class="callout-title">基金經理人重點摘要</div>
+  <ul>
+    <li><strong>信貸：</strong>6月社融預計3.9萬億、低於去年4.2萬億，政府融資驟降至8,200億是主因。押注下半年財政＋貨幣加碼。</li>
+    <li><strong>通膨：</strong>PPI同比料從3.6%收窄至2.4%、CPI由1.2%降至1.1%。內需通縮壓力持續。</li>
+    <li><strong>利率：</strong>信貸弱＋通膨低雙重信號 — <strong>做多中國國債、看漲人行下半年降準降息</strong>。</li>
+    <li><strong>大宗：</strong>原油、鋼鐵、豬肉價格回落主導價格走弱。<strong>對順週期與工業金屬頭寸保持審慎</strong>。</li>
+    <li><strong>尾部風險：</strong>若中東衝突推升油價，PPI恐反彈、通縮敘事逆轉；若民間融資不振，則需從寬鬆交易切換為對沖需求硬著陸。</li>
+    <li><strong>日程：</strong>CPI/PPI於7月9日9:30公佈，社融於7月9-15日期間發布 — 密切關注實際值與預測的偏離方向。</li>
+  </ul>
+</div>
+
+<div class="nav-links">
+  <span><a href="newsletter_120_geopolitics.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="footer">
+  彭博研究摘要 | 僅供教學與討論用途 | 2026年7月8日<br>
+  資料來源：Bloomberg Intelligence, Bloomberg Economics, Bloomberg News<br>
+  <a href="https://www.patreon.com/Aireturn">Patreon</a> · <a href="https://t.me/AIreturn">Telegram</a> · Threads @aireturn88
+</div>
+
+</body>
+</html>

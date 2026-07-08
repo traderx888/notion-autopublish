@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>彭博研究摘要 #123 — 供給衝擊退潮，AI通膨接棒：三大衝擊與川普選民困局</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Noto+Serif+TC:wght@400;700&family=Source+Sans+Pro:wght@400;600;700&display=swap');
+  :root { --bg: #0a0a08; --card: #141410; --border: #2a2820; --accent: #c9a84c;
+          --gold: #f0d87a; --gold-dim: #c4b896; --text: #e0d8c8; --text-bright: #f0ebe0; --muted: #8a8070;
+          --green: #6bbd5b; --red: #e05545; --yellow: #d4a843; --orange: #d49040;
+          --purple: #b08cd0; --cyan: #4cc9b0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { background: #0a0a08 !important; }
+  body { color: var(--text); font-family: 'Source Sans Pro', 'Noto Serif TC', 'Microsoft JhengHei', sans-serif; line-height: 1.8; padding: 24px; max-width: 880px; margin: 0 auto; }
+  h1 { font-family: 'Playfair Display', 'Noto Serif TC', serif; color: var(--gold); font-size: 1.8em; margin-bottom: 4px; font-weight: 900; letter-spacing: 0.02em; }
+  h2 { font-family: 'Playfair Display', 'Noto Serif TC', serif; }
+  .subtitle { color: var(--text-bright); font-size: 0.95em; margin-bottom: 8px; font-family: 'Noto Serif TC', serif; }
+  .issue-badge { display: inline-block; background: rgba(201,168,76,0.15); color: var(--accent); padding: 4px 12px; border-radius: 12px; font-size: 0.8em; font-weight: 600; margin-bottom: 20px; border: 1px solid rgba(201,168,76,0.3); }
+  .tag { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 0.72em; font-weight: 600; margin-right: 4px; }
+  .tag-rates { background: rgba(201,168,76,0.15); color: var(--accent); }
+  .tag-china { background: rgba(212,144,64,0.15); color: var(--orange); }
+  .tag-japan { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-geo   { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-oil   { background: rgba(212,168,67,0.15); color: var(--yellow); }
+  .tag-trade { background: rgba(212,168,67,0.15); color: var(--yellow); }
+  .tag-growth{ background: rgba(107,189,91,0.15); color: var(--green); }
+  .tag-metals{ background: rgba(176,140,208,0.15); color: var(--purple); }
+  .tag-infl  { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-policy{ background: rgba(201,168,76,0.15); color: var(--accent); }
+  .tag-val   { background: rgba(107,189,91,0.15); color: var(--green); }
+  .tag-vol   { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-semi  { background: rgba(76,201,176,0.15); color: var(--cyan); }
+  .tag-credit{ background: rgba(176,140,208,0.15); color: var(--purple); }
+  .tag-space { background: rgba(201,168,76,0.15); color: var(--accent); }
+  .tag-misc  { background: rgba(138,128,112,0.15); color: var(--muted); }
+  .verdict-bar { background: var(--accent); color: #0a0a08; padding: 14px 20px; border-radius: 8px; margin-bottom: 20px; font-weight: 700; font-size: 1.05em; font-family: 'Noto Serif TC', serif; }
+  .section { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 22px; margin-bottom: 18px; }
+  .section h2 { color: var(--gold); font-size: 1.15em; margin-bottom: 12px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+  .section h3 { color: var(--accent); font-size: 0.95em; margin: 14px 0 6px; }
+  .article { margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid rgba(42,40,32,0.7); }
+  .article:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .article-title { color: var(--text-bright); font-weight: 700; font-size: 0.95em; margin-bottom: 4px; }
+  .article-title-cn { color: var(--muted); font-size: 0.85em; margin-bottom: 8px; }
+  .article p { font-size: 0.9em; margin: 6px 0; }
+  .data-point { background: rgba(201,168,76,0.05); padding: 8px 12px; border-radius: 6px; margin: 8px 0; font-size: 0.85em; border: 1px solid rgba(201,168,76,0.12); }
+  .data-point .num { color: var(--text-bright); font-weight: 700; }
+  .implication { background: rgba(201,168,76,0.06); border-left: 3px solid var(--accent); padding: 10px 14px; margin: 10px 0; border-radius: 0 6px 6px 0; font-size: 0.88em; }
+  .implication .label { color: var(--accent); font-weight: 700; font-size: 0.8em; text-transform: uppercase; margin-bottom: 4px; }
+  .red-team { background: rgba(224,85,69,0.06); border: 1px solid rgba(224,85,69,0.25); border-radius: 8px; padding: 18px; margin: 18px 0; }
+  .red-team-title { color: var(--red); font-weight: 700; font-size: 0.95em; margin-bottom: 10px; font-family: 'Playfair Display', serif; }
+  .red-team ul { padding-left: 18px; }
+  .red-team li { margin: 5px 0; font-size: 0.88em; }
+  .callout { background: rgba(201,168,76,0.06); border: 1px solid rgba(201,168,76,0.25); border-radius: 8px; padding: 18px; margin: 18px 0; }
+  .callout-title { color: var(--accent); font-weight: 700; font-size: 0.95em; margin-bottom: 8px; font-family: 'Playfair Display', 'Noto Serif TC', serif; }
+  .callout ul { padding-left: 18px; }
+  .callout li { margin: 5px 0; font-size: 0.88em; }
+  ul { padding-left: 18px; }
+  li { margin: 4px 0; font-size: 0.88em; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(201,168,76,0.05); padding: 12px; border-radius: 6px; text-align: center; border: 1px solid rgba(201,168,76,0.1); }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: var(--gold); font-family: 'Playfair Display', serif; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
+  .toc { background: rgba(201,168,76,0.04); border: 1px solid rgba(201,168,76,0.18); border-radius: 8px; padding: 16px 20px; margin-bottom: 20px; }
+  .toc-title { color: var(--accent); font-weight: 700; font-size: 0.9em; margin-bottom: 8px; }
+  .toc a { color: var(--accent); text-decoration: none; font-size: 0.88em; }
+  .toc a:hover { text-decoration: underline; color: var(--gold); }
+  .toc ol { padding-left: 20px; }
+  .toc li { margin: 4px 0; }
+  .nav-links { display: flex; justify-content: space-between; margin: 20px 0; font-size: 0.85em; }
+  .nav-links a { color: var(--accent); text-decoration: none; }
+  .nav-links a:hover { text-decoration: underline; color: var(--gold); }
+  .divider { height: 1px; background: linear-gradient(90deg, transparent, var(--accent), transparent); margin: 24px 0; opacity: 0.4; }
+  .footer { text-align: center; color: var(--muted); font-size: 0.75em; margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--border); }
+  .footer a { color: var(--accent); text-decoration: none; }
+</style>
+<script>if(window.self===window.top&&sessionStorage.getItem("student_auth")!=="1"){document.body.innerHTML="";window.location.replace("student.html");}</script>
+</head>
+<body>
+
+<h1>彭博研究摘要</h1>
+<p class="subtitle">第123期 | 供給衝擊退潮，AI通膨接棒：三大衝擊與川普選民困局</p>
+<span class="issue-badge">2026年七月上旬更新</span>
+
+<div class="verdict-bar">結論：油價與金屬關稅衝擊已於5月見頂，整體CPI明年將回落至2%附近；但AI記憶體驅動的通膨要到2027年2月才觸頂，且回落更慢——做多前端利率、逢高減碼記憶體敏感型消費電子成本鏈，並警惕農村/工薪選民經濟壓力對11月中期選舉的政策外溢。</div>
+
+<div class="nav-links">
+  <span><a href="newsletter_122_japan.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="toc">
+  <div class="toc-title">目錄</div>
+  <ol>
+    <li><a href="#three-shocks">通膨 三大衝擊：油與金屬退潮，AI獨撐</a></li>
+    <li><a href="#trump-base">政策 川普選民基礎：承諾未兌現的政治風險</a></li>
+    <li><a href="#red-team">Red Team 反面論證</a></li>
+    <li><a href="#takeaways">基金經理人重點摘要</a></li>
+  </ol>
+</div>
+
+<div class="section" id="three-shocks">
+  <h2><span class="tag tag-infl">通膨</span> 三大衝擊：油與金屬退潮，AI獨撐</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--orange)">4.2%</div><div class="lbl">5月CPI同比
+（供給衝擊峰值）</div></div>
+    <div class="stat"><div class="val" style="color:var(--green)">~2%</div><div class="lbl">明年通膨
+預計回落至</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">25%→50%</div><div class="lbl">鋼鋁關稅
+（一次性抬價）</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">關稅金屬通膨消退，AI衝擊更為持久 — 彭博價格項目模型</div>
+    <p>彭博價格項目（BPP）以近 <span style="color:#f0ebe0;font-weight:700">14萬</span> 個產品、每月 <span style="color:#f0ebe0;font-weight:700">32.1萬</span> 條報價（遠超BLS的 <span style="color:#f0ebe0;font-weight:700">10.2萬</span> 條）重建CPI，揭示三大供給衝擊的真實路徑。第一次金屬衝擊源於2025年3月鋼鋁 <span style="color:#f0ebe0;font-weight:700">25%</span>（三個月後升至 <span style="color:#f0ebe0;font-weight:700">50%</span>）關稅，受影響商品通膨已於今年3月見頂；第二次源於去年12月中國出口管制，將壓力維持至2026年底後回落。汽油通膨於 <span style="color:#f0ebe0;font-weight:700">5月</span> 見頂，因基數效應預計 <span style="color:#f0ebe0;font-weight:700">2027年初轉負</span>，機票約於 <span style="color:#f0ebe0;font-weight:700">7月</span> 觸頂。模型顯示油、金屬衝擊對整體通膨的影響已在5月見頂，當月CPI同比 <span style="color:#f0ebe0;font-weight:700">4.2%</span>。關鍵洞見：關稅只造成價格水平一次性抬升，不會使通膨率永久上升——供應鏈調整到位後衝擊自然退潮。</p>
+    <div class="data-point">CPI峰值：<span style="color:#f0ebe0;font-weight:700">5月4.2%同比</span> &nbsp;|&nbsp; 汽油：<span style="color:#f0ebe0;font-weight:700">5月見頂，2027初轉負</span> &nbsp;|&nbsp; 金屬敏感品：<span style="color:#f0ebe0;font-weight:700">3月見頂</span> &nbsp;|&nbsp; 機票：<span style="color:#f0ebe0;font-weight:700">7月見頂</span> &nbsp;|&nbsp; BPP粒度：<span style="color:#f0ebe0;font-weight:700">14萬產品/32.1萬報價</span></div>
+    <div class="implication"><div class="label">投資啟示</div>整體通膨的供給端拖累正在轉向。<span style="color:#f0ebe0;font-weight:700">做多前端利率期貨</span>，博弈明年通膨向2%回歸；對油價/金屬敏感的成本鏈可逢高對沖，因兩大衝擊將在2027年前由推手轉為抑制力量。</div>
+  </div>
+  <div class="article">
+    <div class="article-title">AI記憶體通膨接棒 — 峰值遠在2027年，且回落更慢</div>
+    <p>與油、金屬不同，AI相關通膨令人不安。AI需求成長超越晶片供給，早在戰爭前記憶晶片短缺已推升SD卡、硬碟、內存模塊價格——此類「計算機軟件及配件」在CPI權重極低，但在聯儲會首選指標 <span style="color:#f0ebe0;font-weight:700">PCE中權重高達1.1%</span>。月度VAR模型顯示，存儲相關類別價格約於 <span style="color:#f0ebe0;font-weight:700">9月</span> 見頂；而受內存拖累最重的個人電腦、電視、智慧手機，峰值要到 <span style="color:#f0ebe0;font-weight:700">2027年2月</span> 才出現。新車也受記憶晶片短缺波及，價格將持續上漲 <span style="color:#f0ebe0;font-weight:700">至2027年底</span>，並間接外溢至二手車與汽車保險。更棘手的是，部分AI相關VAR模型不遵循傳統價格傳導規律，暗示回落速度可能比歷史均值更慢、更難預測。</p>
+    <div class="data-point">PCE權重：<span style="color:#f0ebe0;font-weight:700">1.1%（存儲類）</span> &nbsp;|&nbsp; 存儲配件峰值：<span style="color:#f0ebe0;font-weight:700">9月</span> &nbsp;|&nbsp; PC/TV/手機峰值：<span style="color:#f0ebe0;font-weight:700">2027年2月</span> &nbsp;|&nbsp; 新車：<span style="color:#f0ebe0;font-weight:700">漲至2027年底</span> &nbsp;|&nbsp; 特徵：<span style="color:#f0ebe0;font-weight:700">回落慢於歷史均值</span></div>
+    <div class="implication"><div class="label">投資啟示</div>AI是通膨敘事中最黏的一環。<span style="color:#f0ebe0;font-weight:700">低估Fed下半年降息空間的市場定價可趁機切入前端</span>，但需警惕記憶體驅動的核心商品通膨拖長「最後一哩」；記憶體敏感消費電子的成本上升將壓縮硬體毛利，選股上偏好定價權強者。</div>
+  </div>
+
+</div>
+
+<div class="section" id="trump-base">
+  <h2><span class="tag tag-policy">政策</span> 川普選民基礎：承諾未兌現的政治風險</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--red)">+4.7%</div><div class="lbl">就任以來
+通膨累計漲幅</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">$3.93</div><div class="lbl">每加侖油價
+（較5月$4.55回落）</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">+46%</div><div class="lbl">2025年
+農民破產激增</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">選民基礎尚未從振興承諾中獲益 — 川普聯盟的持久性存疑</div>
+    <p>川普2024年靠比2020年更廣、更深的聯盟重返白宮：贏得 <span style="color:#f0ebe0;font-weight:700">55%</span> 男性選民，18–29歲男性支持率從 <span style="color:#f0ebe0;font-weight:700">41%</span> 升至 <span style="color:#f0ebe0;font-weight:700">56%</span>（約 <span style="color:#f0ebe0;font-weight:700">150萬</span> 票轉向），年收入3萬–10萬美元選民給予 <span style="color:#f0ebe0;font-weight:700">70%</span> 支持，農村得票 <span style="color:#f0ebe0;font-weight:700">66%</span>、農業縣近 <span style="color:#f0ebe0;font-weight:700">78%</span>。然而這些高度暴露於通膨、就業與貿易動盪的群體尚未獲得回報：就任以來通膨累計 <span style="color:#f0ebe0;font-weight:700">+4.7%</span>（超三分之一發生在2月伊朗戰爭後），低收入家庭因食品居住支出占比高而受創最深；男性主導行業就業自2024年4月 <span style="color:#f0ebe0;font-weight:700">~3800萬</span> 峰值降至 <span style="color:#f0ebe0;font-weight:700">~3760萬</span>；年輕男性失業率 <span style="color:#f0ebe0;font-weight:700">+0.3pp</span>。農業則遭成本上升與價格下跌雙重擠壓，2025年破產激增 <span style="color:#f0ebe0;font-weight:700">46%</span>。</p>
+    <div class="data-point">通膨：<span style="color:#f0ebe0;font-weight:700">就任以來+4.7%</span> &nbsp;|&nbsp; 油價：<span style="color:#f0ebe0;font-weight:700">$3.93（峰值$4.55）</span> &nbsp;|&nbsp; 男性行業就業：<span style="color:#f0ebe0;font-weight:700">3800萬→3760萬</span> &nbsp;|&nbsp; 年輕男性失業：<span style="color:#f0ebe0;font-weight:700">+0.3pp</span> &nbsp;|&nbsp; 農業縣得票：<span style="color:#f0ebe0;font-weight:700">78%</span></div>
+    <div class="implication"><div class="label">投資啟示</div>政治壓力正倒逼政策微調——6月29日暫停摩洛哥磷肥部分關稅八個月、6月1日下調農業機械關稅。<span style="color:#f0ebe0;font-weight:700">關注中期選舉前的關稅緩和與財政刺激傾向</span>，若共和黨為保票倉加碼寬鬆，可能延長通膨黏性、利多前端曲線但增加長端供給風險。</div>
+  </div>
+
+</div>
+
+<div class="divider"></div>
+
+<div class="red-team" id="red-team">
+  <div class="red-team-title">&#128308; Red Team — 核心假設與反面論證</div>
+  <ul>
+    <li>假設1：油與金屬衝擊將如VAR模型預測般消退，整體通膨明年回落至2%附近。</li>
+    <li>假設2：AI記憶體通膨雖持久，但屬於窄幅商品衝擊，不會廣泛外溢至核心服務。</li>
+    <li>假設3：伊朗停火維持、霍爾木茲海峽保持開放，能源衝擊持續減弱。</li>
+    <li style="color:var(--red)">風險1：模型自承部分AI相關VAR「不遵循傳統價格傳導規律」，回落速度可能比歷史均值更慢、更難預測——2%的回歸時點存在顯著不確定性。</li>
+    <li style="color:var(--red)">風險2：AI衝擊已從記憶體外溢至新車（漲至2027年底）並將間接影響二手車、汽車保險，波及面比「窄幅商品」更廣，PCE 1.1%權重的存儲類直接觸及Fed首選指標。</li>
+    <li style="color:var(--red)">風險3：文中明言「若衝突再次升級並引發新的供給衝擊，情況也可能發生變化」；油價雖從$4.55回落至$3.93，仍較戰前高約$1，地緣尾部風險未解。</li>
+  </ul>
+  <p style="margin-top:10px;padding:10px 14px;background:rgba(224,85,69,0.04);border-radius:6px;font-size:0.9em;border-left:3px solid var(--red)">核心邏輯成立——油與金屬的一次性關稅衝擊確在退潮，整體通膨的供給端拖累已於5月見頂。但敘事的脆弱點在AI：記憶體驅動的核心商品通膨峰值遠在2027年2月且回落更慢，可能讓「最後一哩」拖長，使Fed下半年降息幅度低於市場預期。前端利率做多的方向正確，但需以AI通膨黏性與霍爾木茲海峽重新關閉（油價若回升並持穩於$4.5以上兩個月）作為對沖觸發點。</p>
+</div>
+
+<div class="callout" id="takeaways">
+  <div class="callout-title">基金經理人重點摘要</div>
+  <ul>
+    <li><strong>整體通膨：</strong>油與金屬衝擊已於5月見頂（CPI同比4.2%），明年回落至~2%。做多前端利率期貨，博弈通膨向目標回歸。</li>
+    <li><strong>AI通膨：</strong>最黏一環——存儲配件9月見頂，PC/TV/手機峰值遲至2027年2月，新車漲至2027年底且回落慢。低估Fed降息幅度的市場定價可趁機切入前端。</li>
+    <li><strong>PCE風險點：</strong>SD卡/硬碟等存儲類在PCE權重達1.1%，直接觸及Fed首選指標——核心商品通膨可能拖長降息路徑，警惕鴿派預期回擺。</li>
+    <li><strong>成本鏈：</strong>記憶體敏感消費電子與新車毛利承壓，選股偏好定價權強者；油價/金屬敏感成本鏈可逢高對沖。</li>
+    <li><strong>政治外溢：</strong>通膨就任以來+4.7%、農民破產+46%，工薪與農村選民壓力大。中期選舉前關注關稅緩和與財政刺激傾向——利多前端、增長端供給風險。</li>
+    <li><strong>能源尾部：</strong>油價$3.93（峰值$4.55）仍高於戰前約$1。以霍爾木茲海峽重新關閉、Brent持穩高位兩個月作為降息敘事被推遲的對沖觸發點。</li>
+  </ul>
+</div>
+
+<div class="nav-links">
+  <span><a href="newsletter_122_japan.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="footer">
+  彭博研究摘要 | 僅供教學與討論用途 | 2026年7月8日<br>
+  資料來源：Bloomberg Intelligence, Bloomberg Economics, Bloomberg News<br>
+  <a href="https://www.patreon.com/Aireturn">Patreon</a> · <a href="https://t.me/AIreturn">Telegram</a> · Threads @aireturn88
+</div>
+
+</body>
+</html>

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>彭博研究摘要 #119 — 沃什時代的鷹派聯儲與歐元利率套利機會</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Noto+Serif+TC:wght@400;700&family=Source+Sans+Pro:wght@400;600;700&display=swap');
+  :root { --bg: #0a0a08; --card: #141410; --border: #2a2820; --accent: #c9a84c;
+          --gold: #f0d87a; --gold-dim: #c4b896; --text: #e0d8c8; --text-bright: #f0ebe0; --muted: #8a8070;
+          --green: #6bbd5b; --red: #e05545; --yellow: #d4a843; --orange: #d49040;
+          --purple: #b08cd0; --cyan: #4cc9b0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { background: #0a0a08 !important; }
+  body { color: var(--text); font-family: 'Source Sans Pro', 'Noto Serif TC', 'Microsoft JhengHei', sans-serif; line-height: 1.8; padding: 24px; max-width: 880px; margin: 0 auto; }
+  h1 { font-family: 'Playfair Display', 'Noto Serif TC', serif; color: var(--gold); font-size: 1.8em; margin-bottom: 4px; font-weight: 900; letter-spacing: 0.02em; }
+  h2 { font-family: 'Playfair Display', 'Noto Serif TC', serif; }
+  .subtitle { color: var(--text-bright); font-size: 0.95em; margin-bottom: 8px; font-family: 'Noto Serif TC', serif; }
+  .issue-badge { display: inline-block; background: rgba(201,168,76,0.15); color: var(--accent); padding: 4px 12px; border-radius: 12px; font-size: 0.8em; font-weight: 600; margin-bottom: 20px; border: 1px solid rgba(201,168,76,0.3); }
+  .tag { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 0.72em; font-weight: 600; margin-right: 4px; }
+  .tag-rates { background: rgba(201,168,76,0.15); color: var(--accent); }
+  .tag-china { background: rgba(212,144,64,0.15); color: var(--orange); }
+  .tag-japan { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-geo   { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-oil   { background: rgba(212,168,67,0.15); color: var(--yellow); }
+  .tag-trade { background: rgba(212,168,67,0.15); color: var(--yellow); }
+  .tag-growth{ background: rgba(107,189,91,0.15); color: var(--green); }
+  .tag-metals{ background: rgba(176,140,208,0.15); color: var(--purple); }
+  .tag-infl  { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-policy{ background: rgba(201,168,76,0.15); color: var(--accent); }
+  .tag-val   { background: rgba(107,189,91,0.15); color: var(--green); }
+  .tag-vol   { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-semi  { background: rgba(76,201,176,0.15); color: var(--cyan); }
+  .tag-credit{ background: rgba(176,140,208,0.15); color: var(--purple); }
+  .tag-space { background: rgba(201,168,76,0.15); color: var(--accent); }
+  .tag-misc  { background: rgba(138,128,112,0.15); color: var(--muted); }
+  .verdict-bar { background: var(--accent); color: #0a0a08; padding: 14px 20px; border-radius: 8px; margin-bottom: 20px; font-weight: 700; font-size: 1.05em; font-family: 'Noto Serif TC', serif; }
+  .section { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 22px; margin-bottom: 18px; }
+  .section h2 { color: var(--gold); font-size: 1.15em; margin-bottom: 12px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+  .section h3 { color: var(--accent); font-size: 0.95em; margin: 14px 0 6px; }
+  .article { margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid rgba(42,40,32,0.7); }
+  .article:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .article-title { color: var(--text-bright); font-weight: 700; font-size: 0.95em; margin-bottom: 4px; }
+  .article-title-cn { color: var(--muted); font-size: 0.85em; margin-bottom: 8px; }
+  .article p { font-size: 0.9em; margin: 6px 0; }
+  .data-point { background: rgba(201,168,76,0.05); padding: 8px 12px; border-radius: 6px; margin: 8px 0; font-size: 0.85em; border: 1px solid rgba(201,168,76,0.12); }
+  .data-point .num { color: var(--text-bright); font-weight: 700; }
+  .implication { background: rgba(201,168,76,0.06); border-left: 3px solid var(--accent); padding: 10px 14px; margin: 10px 0; border-radius: 0 6px 6px 0; font-size: 0.88em; }
+  .implication .label { color: var(--accent); font-weight: 700; font-size: 0.8em; text-transform: uppercase; margin-bottom: 4px; }
+  .red-team { background: rgba(224,85,69,0.06); border: 1px solid rgba(224,85,69,0.25); border-radius: 8px; padding: 18px; margin: 18px 0; }
+  .red-team-title { color: var(--red); font-weight: 700; font-size: 0.95em; margin-bottom: 10px; font-family: 'Playfair Display', serif; }
+  .red-team ul { padding-left: 18px; }
+  .red-team li { margin: 5px 0; font-size: 0.88em; }
+  .callout { background: rgba(201,168,76,0.06); border: 1px solid rgba(201,168,76,0.25); border-radius: 8px; padding: 18px; margin: 18px 0; }
+  .callout-title { color: var(--accent); font-weight: 700; font-size: 0.95em; margin-bottom: 8px; font-family: 'Playfair Display', 'Noto Serif TC', serif; }
+  .callout ul { padding-left: 18px; }
+  .callout li { margin: 5px 0; font-size: 0.88em; }
+  ul { padding-left: 18px; }
+  li { margin: 4px 0; font-size: 0.88em; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(201,168,76,0.05); padding: 12px; border-radius: 6px; text-align: center; border: 1px solid rgba(201,168,76,0.1); }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: var(--gold); font-family: 'Playfair Display', serif; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
+  .toc { background: rgba(201,168,76,0.04); border: 1px solid rgba(201,168,76,0.18); border-radius: 8px; padding: 16px 20px; margin-bottom: 20px; }
+  .toc-title { color: var(--accent); font-weight: 700; font-size: 0.9em; margin-bottom: 8px; }
+  .toc a { color: var(--accent); text-decoration: none; font-size: 0.88em; }
+  .toc a:hover { text-decoration: underline; color: var(--gold); }
+  .toc ol { padding-left: 20px; }
+  .toc li { margin: 4px 0; }
+  .nav-links { display: flex; justify-content: space-between; margin: 20px 0; font-size: 0.85em; }
+  .nav-links a { color: var(--accent); text-decoration: none; }
+  .nav-links a:hover { text-decoration: underline; color: var(--gold); }
+  .divider { height: 1px; background: linear-gradient(90deg, transparent, var(--accent), transparent); margin: 24px 0; opacity: 0.4; }
+  .footer { text-align: center; color: var(--muted); font-size: 0.75em; margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--border); }
+  .footer a { color: var(--accent); text-decoration: none; }
+</style>
+<script>if(window.self===window.top&&sessionStorage.getItem("student_auth")!=="1"){document.body.innerHTML="";window.location.replace("student.html");}</script>
+</head>
+<body>
+
+<h1>彭博研究摘要</h1>
+<p class="subtitle">第119期 | 沃什時代的鷹派聯儲與歐元利率套利機會</p>
+<span class="issue-badge">2026年七月上旬更新</span>
+
+<div class="verdict-bar">結論：聯準會全年按兵不動、下一步更可能加息而非降息，短端利率上行風險未除；歐元利率波動趨穩，夏季持有套利（carry）為最佳策略。</div>
+
+<div class="nav-links">
+  <span><a href="newsletter_118_space_oil_semiconductor.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="toc">
+  <div class="toc-title">目錄</div>
+  <ol>
+    <li><a href="#fed-hawkish-hold">聯準會 沃什掌舵，鷹派點陣圖壓陣</a></li>
+    <li><a href="#us-data-soft-landing">美國數據 溫和擴張，就業穩住降息門檻</a></li>
+    <li><a href="#euro-rates-carry">歐元利率 波動趨穩，夏季套利當道</a></li>
+    <li><a href="#red-team">Red Team 反面論證</a></li>
+    <li><a href="#takeaways">基金經理人重點摘要</a></li>
+  </ol>
+</div>
+
+<div class="section" id="fed-hawkish-hold">
+  <h2><span class="tag tag-misc">聯準會</span> 沃什掌舵，鷹派點陣圖壓陣</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--orange)">全年不變</div><div class="lbl">聯邦基金利率
+2026餘下時間預期</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">半數</div><div class="lbl">點陣圖成員
+預計今年至少加息一次</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">5年</div><div class="lbl">通膨持續
+高於2%目標</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">FOMC會議紀要或重燃鷹派情緒 — 下一步更可能是加息</div>
+    <p>6月16-17日是主席凱文·沃什 (Kevin Warsh) 上任後的首次FOMC會議，其紀要（周三14:00公佈）預計顯示委員會內部<span style="color:#f0ebe0;font-weight:700">支持加息的力量正在增強</span>。4月時「多數」與會者已認為，若通膨持續高於2%，收緊政策或屬適當；如今點陣圖中<span style="color:#f0ebe0;font-weight:700">半數成員預計今年至少加息一次</span>，這一鷹派立場恐更加堅定。在通膨已連續<span style="color:#f0ebe0;font-weight:700">五年</span>高於目標的背景下，委員會重心全放在通膨風險與恢復價格穩定上。市場關注是否有委員在其基準展望中直接將加息列為適宜之舉。沃什大幅精簡溝通方式（聲明篇幅明顯縮短），紀要或更簡短、細節更少，但整體將強化6月SEP的鷹派信號。</p>
+    <div class="data-point">FOMC投票行長：<span style="color:#f0ebe0;font-weight:700">Williams、Hammack、Kashkari、Logan、Paulson</span> &nbsp;|&nbsp; 政策定位：<span style="color:#f0ebe0;font-weight:700">輕微限制性 (Daly)</span> &nbsp;|&nbsp; 沃什立場：<span style="color:#f0ebe0;font-weight:700">通膨風險已下降、承諾價格穩定</span> &nbsp;|&nbsp; 下一步：<span style="color:#f0ebe0;font-weight:700">加息機率高於降息</span></div>
+    <div class="implication"><div class="label">投資啟示</div>低估聯儲上半年降息的敘事已被沃什顛覆。<span style="color:#f0ebe0;font-weight:700">避免押注2026年降息</span>，短端利率期貨勿盲目做多；對利率上行尾部風險保持對沖。</div>
+  </div>
+  <div class="article">
+    <div class="article-title">Fed Watch官員發言 — 從Waller到Hammack的鷹鴿光譜</div>
+    <p>近期官員發言凸顯內部分歧但鷹派佔上風。理事Waller (7/6) 稱前瞻指引需<span style="color:#f0ebe0;font-weight:700">保持靈活</span>，暗示不願被過早的降息承諾綁手綁腳。舊金山聯儲Daly (7/2) 表示政策仍處<span style="color:#f0ebe0;font-weight:700">輕微限制性</span>，通膨應會回落，並讚許美伊停火後油價回吐。主席Warsh (7/1) 於ECB論壇強調<span style="color:#f0ebe0;font-weight:700">通膨風險已下降</span>、誓言交付價格穩定。最鷹的克里夫蘭聯儲Hammack (6/30) 直言通膨太高已持續五年，<span style="color:#f0ebe0;font-weight:700">可能需要更高利率</span>才能拉回目標。制度面上，最高法院以5-4裁定理事Lisa Cook可留任，強化了聯儲獨立性。</p>
+    <div class="data-point">Waller：<span style="color:#f0ebe0;font-weight:700">前瞻指引需靈活</span> &nbsp;|&nbsp; Daly：<span style="color:#f0ebe0;font-weight:700">政策輕微限制性</span> &nbsp;|&nbsp; Hammack：<span style="color:#f0ebe0;font-weight:700">或需加息壓通膨</span> &nbsp;|&nbsp; 6月非農：<span style="color:#f0ebe0;font-weight:700">顯著放緩</span>但失業率反降</div>
+    <div class="implication"><div class="label">投資啟示</div>官員光譜偏鷹，僅弱就業數據暫壓加息預期。<span style="color:#f0ebe0;font-weight:700">做陡曲線的空間有限</span>；在鷹派紀要公佈後，短端殖利率反彈時可逢高減碼久期。</div>
+  </div>
+
+</div>
+
+<div class="section" id="us-data-soft-landing">
+  <h2><span class="tag tag-misc">美國數據</span> 溫和擴張，就業穩住降息門檻</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--orange)">54.0</div><div class="lbl">6月ISM服務業PMI
+（前值54.5）</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">777億</div><div class="lbl">5月貿易逆差(美元)
+前值559億大幅走擴</div></div>
+    <div class="stat"><div class="val" style="color:var(--green)">21.3萬</div><div class="lbl">首次申領失業救濟
+仍處歷史低位</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">美國數據前瞻 — 溫和擴張支撐全年不變的政策判斷</div>
+    <p>彭博經濟研究維持聯儲<span style="color:#f0ebe0;font-weight:700">2026年餘下時間按兵不動</span>的判斷。6月非農疲軟加上沃什在辛特拉論壇的講話（強調促進就業與AI生產率提升）令其更確信決策者面對通膨升溫不會急於行動。數據方面，6月ISM服務業PMI預估自5月的躍升54.5小幅回落至<span style="color:#f0ebe0;font-weight:700">54.0</span>，訂單成長減弱、庫存激增預示生產放緩。5月貿易逆差料自559億顯著擴大至<span style="color:#f0ebe0;font-weight:700">777億美元</span>，因出口普遍下滑、進口強勁；隨霍爾木茲海峽重開，原油出口四周均值已從每日1,310萬桶降至1,200萬桶。首申失業金料維持<span style="color:#f0ebe0;font-weight:700">21.3萬</span>的歷史低位，裁員幾無上行壓力。整體通膨預計將很快開始回落。</p>
+    <div class="data-point">資本品進口(5月)：<span style="color:#f0ebe0;font-weight:700">+0.4%</span>（低於4月+5.8%） &nbsp;|&nbsp; 二手房銷量(6月)：<span style="color:#f0ebe0;font-weight:700">422萬</span>、環比+1.3% &nbsp;|&nbsp; 就業信號：<span style="color:#f0ebe0;font-weight:700">申領人數低於去年同期</span> &nbsp;|&nbsp; 整體結論：<span style="color:#f0ebe0;font-weight:700">經濟溫和成長、通膨料回落</span></div>
+    <div class="implication"><div class="label">投資啟示</div>數據不足以撼動「全年不變」基準，但強勁進口＋走擴逆差構成GDP拖累。<span style="color:#f0ebe0;font-weight:700">短端利率區間震盪為主</span>；用相對價值而非方向性押注捕捉波動。</div>
+  </div>
+
+</div>
+
+<div class="section" id="euro-rates-carry">
+  <h2><span class="tag tag-misc">歐元利率</span> 波動趨穩，夏季套利當道</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--orange)">48%</div><div class="lbl">政策利率2027年底
+低於2.5%的隱含機率</div></div>
+    <div class="stat"><div class="val" style="color:var(--green)">已回吐</div><div class="lbl">長端Gamma
+完全回到戰前基準</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">&gt;2022</div><div class="lbl">EUR 3m2y波動之波動
+伊朗衝突期峰值</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">歐元利率波動磨底 — 夏季carry主題獲支撐</div>
+    <p>彭博策略師Tanvir Sandhu指出，利率波動正在企穩，隨ECB政策預期區間收窄，<span style="color:#f0ebe0;font-weight:700">持有套利 (carry)</span> 成為夏季主題。能源驅動的尾部風險消退後，波動率曲面維持正常化模式，但因隱含波動已大幅回撤，進一步下行將是<span style="color:#f0ebe0;font-weight:700">緩慢的磨底過程</span>。伊朗衝突期間，歐洲<span style="color:#f0ebe0;font-weight:700">前端波動率</span>重定價尤為劇烈——雖峰值仍低於2022年高點，但速度異常，其<span style="color:#f0ebe0;font-weight:700">波動之波動 (vol-of-vol) 一度超越2022水平</span>。當前長端Gamma已完全回到戰前基準，前端因吸收了更高利率與更大衝擊而落後。ECB政策分佈收窄：地緣風險緩解壓低右尾，年內再加息預期則限制左尾。</p>
+    <div class="data-point">波動曲線(3m2y vs 3m10y)：<span style="color:#f0ebe0;font-weight:700">倒掛已緩解但仍低於戰前</span> &nbsp;|&nbsp; 2027年底利率&lt;2.5%機率：<span style="color:#f0ebe0;font-weight:700">48%</span> &nbsp;|&nbsp; ECB年內：<span style="color:#f0ebe0;font-weight:700">仍有加息預期</span> &nbsp;|&nbsp; 首次寬鬆定價：<span style="color:#f0ebe0;font-weight:700">2027年、牛陡曲線</span> &nbsp;|&nbsp; 定位：<span style="color:#f0ebe0;font-weight:700">carry優於方向</span></div>
+    <div class="implication"><div class="label">投資啟示</div>在區間明確、波動受抑的環境下，<span style="color:#f0ebe0;font-weight:700">做多歐元利率carry / 賣出波動率</span>為佔優策略；留意年底通膨側寫轉向2027首次寬鬆時的<span style="color:#f0ebe0;font-weight:700">牛陡曲線</span>機會。</div>
+  </div>
+
+</div>
+
+<div class="divider"></div>
+
+<div class="red-team" id="red-team">
+  <div class="red-team-title">&#128308; Red Team — 核心假設與反面論證</div>
+  <ul>
+    <li>假設1：聯準會2026年餘下時間維持利率不變，經濟溫和擴張、通膨即將回落。</li>
+    <li>假設2：能源驅動的尾部風險已隨美伊停火消退，波動率單向正常化，歐元carry可安穩持有。</li>
+    <li>假設3：勞動市場保持韌性（申領人數歷史低位）足以讓聯儲避免加息。</li>
+    <li style="color:var(--red)">風險1：沃什首次會議紀要與點陣圖偏鷹，半數成員預期今年至少加息一次、Hammack公開主張加息——政策「不變」可能滑向「加息」，而非市場預期的降息。</li>
+    <li style="color:var(--red)">風險2：前端波動率在伊朗衝突中以多標準差速度重定價、vol-of-vol超越2022，證明沉睡市場可瞬間repricing；霍爾木茲一旦再度緊張，carry將被波動吞噬。</li>
+    <li style="color:var(--red)">風險3：5月貿易逆差自559億走擴至777億美元、進口強勁而出口下滑，構成GDP拖累；若疊加ISM服務業續弱與AI驅動的科技業裁員擴散，『溫和擴張』敘事恐生變。</li>
+  </ul>
+  <p style="margin-top:10px;padding:10px 14px;background:rgba(224,85,69,0.04);border-radius:6px;font-size:0.9em;border-left:3px solid var(--red)">核心邏輯（聯儲鷹派不變、歐元carry佔優）成立，但方向性風險不對稱：聯儲的尾部是加息而非降息，投資者切勿沿用舊的降息劇本。歐元carry具吸引力，惟其收益完全建立在地緣平靜之上——一旦Brent因中東再起而重上高位並持續兩個月，前端波動率將如伊朗衝突時般多標準差跳升，carry回吐殆盡。建議持有carry的同時以廉價的前端payer或期權尾部對沖。</p>
+</div>
+
+<div class="callout" id="takeaways">
+  <div class="callout-title">基金經理人重點摘要</div>
+  <ul>
+    <li><strong>聯準會：</strong>全年按兵不動，沃什時代下一步更可能是加息而非降息。避免押注2026降息，對短端利率上行做尾部對沖。</li>
+    <li><strong>官員光譜：</strong>Waller求靈活、Daly稱輕微限制性、Hammack主張加息。鷹派佔上風，做陡曲線空間有限。</li>
+    <li><strong>美國數據：</strong>ISM服務業料回落至54.0，5月貿易逆差走擴至777億美元，首申失業金21.3萬仍歷史低位。經濟溫和擴張、通膨料回落。</li>
+    <li><strong>歐央行：</strong>政策區間收窄、年內仍有加息預期，2027年底利率<2.5%隱含機率48%。做多歐元carry、賣波動率。</li>
+    <li><strong>波動率：</strong>長端Gamma已回戰前基準，前端落後、磨底緩慢。前端仍是外生衝擊瞬間repricing的最佳提醒——carry需搭配尾部對沖。</li>
+    <li><strong>油價尾部：</strong>霍爾木茲重開令原油出口降至日均1,200萬桶。中東若再起，Brent持續走高將同時重燃聯儲鷹派與歐元波動率，是本季最大共同風險。</li>
+  </ul>
+</div>
+
+<div class="nav-links">
+  <span><a href="newsletter_118_space_oil_semiconductor.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="footer">
+  彭博研究摘要 | 僅供教學與討論用途 | 2026年7月8日<br>
+  資料來源：Bloomberg Intelligence, Bloomberg Economics, Bloomberg News<br>
+  <a href="https://www.patreon.com/Aireturn">Patreon</a> · <a href="https://t.me/AIreturn">Telegram</a> · Threads @aireturn88
+</div>
+
+</body>
+</html>

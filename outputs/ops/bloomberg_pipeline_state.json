@@ -1,6 +1,6 @@
 {
-  "lastRunAt": "2026-07-02T23:33:04+08:00",
-  "lastNewsletterNumber": 118,
+  "lastRunAt": "2026-07-08T14:11:46+08:00",
+  "lastNewsletterNumber": 124,
   "processedFiles": {
     "2026 Outlook Global Aluminum Producers #metals.pdf": {
       "processedAt": "2026-03-26T15:52:49+08:00",
@@ -5298,6 +5298,159 @@
         "policy"
       ],
       "newsletterNumber": 117
+    },
+    "DUP Is Samsungs Nvidia-Beating Profit AI Peak #semiconductor.pdf": {
+      "processedAt": null,
+      "mdPath": null,
+      "topics": [],
+      "newsletterNumber": "DUP"
+    },
+    "DUP Trump Voter Base Economic Promises #policy.pdf": {
+      "processedAt": null,
+      "mdPath": null,
+      "topics": [],
+      "newsletterNumber": "DUP"
+    },
+    "DUP Trump Voter Base Economic Promises v2 #policy.pdf": {
+      "processedAt": null,
+      "mdPath": null,
+      "topics": [],
+      "newsletterNumber": "DUP"
+    },
+    "China June Credit Soft as Government Funding Slowed #china #credit.pdf": {
+      "processedAt": "2026-07-08T14:11:38+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\China June Credit Soft as Government Funding Slowed.md",
+      "topics": [
+        "china",
+        "credit"
+      ],
+      "newsletterNumber": 121
+    },
+    "China June PPI to Ease CPI to Stay Soft #china #inflation.pdf": {
+      "processedAt": "2026-07-08T14:11:38+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\China June PPI to Ease CPI to Stay Soft.md",
+      "topics": [
+        "china",
+        "inflation"
+      ],
+      "newsletterNumber": 121
+    },
+    "Euro Rates Volatility Grind Supports Carry Theme Over Summer #rates #volatility.pdf": {
+      "processedAt": "2026-07-08T14:11:38+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\Euro Rates Volatility Grind Supports Carry Theme Over Summer.md",
+      "topics": [
+        "rates",
+        "volatility"
+      ],
+      "newsletterNumber": 119
+    },
+    "Fed Watch Recent Policy Comments and Decisions #rates #policy.pdf": {
+      "processedAt": "2026-07-08T14:11:39+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\Fed Watch Recent Policy Comments and Decisions.md",
+      "topics": [
+        "rates",
+        "policy"
+      ],
+      "newsletterNumber": 119
+    },
+    "Global Insight Russia Escalates From Air as Ground Gains Stall #geopolitics.pdf": {
+      "processedAt": "2026-07-08T14:11:39+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\Global Insight Russia Escalates From Air as Ground Gains Stall.md",
+      "topics": [
+        "geopolitics"
+      ],
+      "newsletterNumber": 120
+    },
+    "Global Insight Russian Attacks in Ukraine Fail to Break Through #geopolitics.pdf": {
+      "processedAt": "2026-07-08T14:11:40+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\Global Insight Russian Attacks in Ukraine Fail to Break Through.md",
+      "topics": [
+        "geopolitics"
+      ],
+      "newsletterNumber": 120
+    },
+    "Japan Insight Yen at 40-Year Lows FDI Role in the Slide #japan.pdf": {
+      "processedAt": "2026-07-08T14:11:40+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\Japan Insight Yen at 40-Year Lows FDI Role in the Slide.md",
+      "topics": [
+        "japan"
+      ],
+      "newsletterNumber": 122
+    },
+    "Japan Record Current Account Surplus Yet Yen at 40-Year Lows #japan.pdf": {
+      "processedAt": "2026-07-08T14:11:40+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\Japan Record Current Account Surplus Yet Yen at 40-Year Lows.md",
+      "topics": [
+        "japan"
+      ],
+      "newsletterNumber": 122
+    },
+    "NATO Summit Preview Trump Targets and Tomahawks #geopolitics.pdf": {
+      "processedAt": "2026-07-08T14:11:40+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\NATO Summit Preview Trump Targets and Tomahawks.md",
+      "topics": [
+        "geopolitics"
+      ],
+      "newsletterNumber": 120
+    },
+    "Samsungs Nvidia-Beating Profit Start of AI Peak or Noise #semiconductor.pdf": {
+      "processedAt": "2026-07-08T14:11:41+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\Samsungs Nvidia-Beating Profit Start of AI Peak or Noise.md",
+      "topics": [
+        "semiconductor"
+      ],
+      "newsletterNumber": 124
+    },
+    "Tariff and Metals Inflation Fading While AI Impact More Persistent #inflation #semiconductor.pdf": {
+      "processedAt": "2026-07-08T14:11:42+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\Tariff and Metals Inflation Fading While AI Impact More Persistent.md",
+      "topics": [
+        "inflation",
+        "semiconductor"
+      ],
+      "newsletterNumber": 123
+    },
+    "Treasury Fed Minutes Delta China Week Ahead in Workflows #rates.pdf": {
+      "processedAt": "2026-07-08T14:11:42+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\Treasury Fed Minutes Delta China Week Ahead in Workflows.md",
+      "topics": [
+        "rates"
+      ],
+      "newsletterNumber": 119
+    },
+    "Trump Voter Base Yet to Benefit From Economic Promises #policy.pdf": {
+      "processedAt": "2026-07-08T14:11:44+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\Trump Voter Base Yet to Benefit From Economic Promises.md",
+      "topics": [
+        "policy"
+      ],
+      "newsletterNumber": 123
+    },
+    "US Eco Week Ahead FOMC Minutes May Rekindle Hawkish Bets #rates #policy.pdf": {
+      "processedAt": "2026-07-08T14:11:44+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\US Eco Week Ahead FOMC Minutes May Rekindle Hawkish Bets.md",
+      "topics": [
+        "rates",
+        "policy"
+      ],
+      "newsletterNumber": 119
+    },
+    "US-Iran Military Strikes and Sanctions Reversal Risk More Conflict #geopolitics #oil.pdf": {
+      "processedAt": "2026-07-08T14:11:45+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\US-Iran Military Strikes and Sanctions Reversal Risk More Conflict.md",
+      "topics": [
+        "geopolitics",
+        "oil"
+      ],
+      "newsletterNumber": 120
+    },
+    "Wildcatters Seek a Piece of Venezuela Oil Boom Despite Quakes #oil.pdf": {
+      "processedAt": "2026-07-08T14:11:46+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\Wildcatters Seek a Piece of Venezuela Oil Boom Despite Quakes.md",
+      "topics": [
+        "oil"
+      ],
+      "newsletterNumber": 124
     }
   },
   "newsletters": {
@@ -6205,6 +6358,56 @@
         "space",
         "oil",
         "semiconductor"
+      ]
+    },
+    "119": {
+      "filename": "newsletter_119_rates.html",
+      "generatedAt": "2026-07-08T14:13:37+08:00",
+      "articleCount": 4,
+      "topics": [
+        "rates"
+      ]
+    },
+    "120": {
+      "filename": "newsletter_120_geopolitics.html",
+      "generatedAt": "2026-07-08T14:15:24+08:00",
+      "articleCount": 4,
+      "topics": [
+        "geopolitics"
+      ]
+    },
+    "121": {
+      "filename": "newsletter_121_china.html",
+      "generatedAt": "2026-07-08T14:16:25+08:00",
+      "articleCount": 2,
+      "topics": [
+        "china"
+      ]
+    },
+    "122": {
+      "filename": "newsletter_122_japan.html",
+      "generatedAt": "2026-07-08T14:17:24+08:00",
+      "articleCount": 2,
+      "topics": [
+        "japan"
+      ]
+    },
+    "123": {
+      "filename": "newsletter_123_inflation_policy.html",
+      "generatedAt": "2026-07-08T14:18:55+08:00",
+      "articleCount": 2,
+      "topics": [
+        "inflation",
+        "policy"
+      ]
+    },
+    "124": {
+      "filename": "newsletter_124_semiconductor_oil.html",
+      "generatedAt": "2026-07-08T14:20:17+08:00",
+      "articleCount": 2,
+      "topics": [
+        "semiconductor",
+        "oil"
       ]
     }
   },

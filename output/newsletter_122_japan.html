@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>彭博研究摘要 #122 — 日圓困局：創紀錄順差為何救不了40年新低</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Noto+Serif+TC:wght@400;700&family=Source+Sans+Pro:wght@400;600;700&display=swap');
+  :root { --bg: #0a0a08; --card: #141410; --border: #2a2820; --accent: #c9a84c;
+          --gold: #f0d87a; --gold-dim: #c4b896; --text: #e0d8c8; --text-bright: #f0ebe0; --muted: #8a8070;
+          --green: #6bbd5b; --red: #e05545; --yellow: #d4a843; --orange: #d49040;
+          --purple: #b08cd0; --cyan: #4cc9b0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { background: #0a0a08 !important; }
+  body { color: var(--text); font-family: 'Source Sans Pro', 'Noto Serif TC', 'Microsoft JhengHei', sans-serif; line-height: 1.8; padding: 24px; max-width: 880px; margin: 0 auto; }
+  h1 { font-family: 'Playfair Display', 'Noto Serif TC', serif; color: var(--gold); font-size: 1.8em; margin-bottom: 4px; font-weight: 900; letter-spacing: 0.02em; }
+  h2 { font-family: 'Playfair Display', 'Noto Serif TC', serif; }
+  .subtitle { color: var(--text-bright); font-size: 0.95em; margin-bottom: 8px; font-family: 'Noto Serif TC', serif; }
+  .issue-badge { display: inline-block; background: rgba(201,168,76,0.15); color: var(--accent); padding: 4px 12px; border-radius: 12px; font-size: 0.8em; font-weight: 600; margin-bottom: 20px; border: 1px solid rgba(201,168,76,0.3); }
+  .tag { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 0.72em; font-weight: 600; margin-right: 4px; }
+  .tag-rates { background: rgba(201,168,76,0.15); color: var(--accent); }
+  .tag-china { background: rgba(212,144,64,0.15); color: var(--orange); }
+  .tag-japan { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-geo   { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-oil   { background: rgba(212,168,67,0.15); color: var(--yellow); }
+  .tag-trade { background: rgba(212,168,67,0.15); color: var(--yellow); }
+  .tag-growth{ background: rgba(107,189,91,0.15); color: var(--green); }
+  .tag-metals{ background: rgba(176,140,208,0.15); color: var(--purple); }
+  .tag-infl  { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-policy{ background: rgba(201,168,76,0.15); color: var(--accent); }
+  .tag-val   { background: rgba(107,189,91,0.15); color: var(--green); }
+  .tag-vol   { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-semi  { background: rgba(76,201,176,0.15); color: var(--cyan); }
+  .tag-credit{ background: rgba(176,140,208,0.15); color: var(--purple); }
+  .tag-space { background: rgba(201,168,76,0.15); color: var(--accent); }
+  .tag-misc  { background: rgba(138,128,112,0.15); color: var(--muted); }
+  .verdict-bar { background: var(--accent); color: #0a0a08; padding: 14px 20px; border-radius: 8px; margin-bottom: 20px; font-weight: 700; font-size: 1.05em; font-family: 'Noto Serif TC', serif; }
+  .section { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 22px; margin-bottom: 18px; }
+  .section h2 { color: var(--gold); font-size: 1.15em; margin-bottom: 12px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+  .section h3 { color: var(--accent); font-size: 0.95em; margin: 14px 0 6px; }
+  .article { margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid rgba(42,40,32,0.7); }
+  .article:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .article-title { color: var(--text-bright); font-weight: 700; font-size: 0.95em; margin-bottom: 4px; }
+  .article-title-cn { color: var(--muted); font-size: 0.85em; margin-bottom: 8px; }
+  .article p { font-size: 0.9em; margin: 6px 0; }
+  .data-point { background: rgba(201,168,76,0.05); padding: 8px 12px; border-radius: 6px; margin: 8px 0; font-size: 0.85em; border: 1px solid rgba(201,168,76,0.12); }
+  .data-point .num { color: var(--text-bright); font-weight: 700; }
+  .implication { background: rgba(201,168,76,0.06); border-left: 3px solid var(--accent); padding: 10px 14px; margin: 10px 0; border-radius: 0 6px 6px 0; font-size: 0.88em; }
+  .implication .label { color: var(--accent); font-weight: 700; font-size: 0.8em; text-transform: uppercase; margin-bottom: 4px; }
+  .red-team { background: rgba(224,85,69,0.06); border: 1px solid rgba(224,85,69,0.25); border-radius: 8px; padding: 18px; margin: 18px 0; }
+  .red-team-title { color: var(--red); font-weight: 700; font-size: 0.95em; margin-bottom: 10px; font-family: 'Playfair Display', serif; }
+  .red-team ul { padding-left: 18px; }
+  .red-team li { margin: 5px 0; font-size: 0.88em; }
+  .callout { background: rgba(201,168,76,0.06); border: 1px solid rgba(201,168,76,0.25); border-radius: 8px; padding: 18px; margin: 18px 0; }
+  .callout-title { color: var(--accent); font-weight: 700; font-size: 0.95em; margin-bottom: 8px; font-family: 'Playfair Display', 'Noto Serif TC', serif; }
+  .callout ul { padding-left: 18px; }
+  .callout li { margin: 5px 0; font-size: 0.88em; }
+  ul { padding-left: 18px; }
+  li { margin: 4px 0; font-size: 0.88em; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(201,168,76,0.05); padding: 12px; border-radius: 6px; text-align: center; border: 1px solid rgba(201,168,76,0.1); }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: var(--gold); font-family: 'Playfair Display', serif; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
+  .toc { background: rgba(201,168,76,0.04); border: 1px solid rgba(201,168,76,0.18); border-radius: 8px; padding: 16px 20px; margin-bottom: 20px; }
+  .toc-title { color: var(--accent); font-weight: 700; font-size: 0.9em; margin-bottom: 8px; }
+  .toc a { color: var(--accent); text-decoration: none; font-size: 0.88em; }
+  .toc a:hover { text-decoration: underline; color: var(--gold); }
+  .toc ol { padding-left: 20px; }
+  .toc li { margin: 4px 0; }
+  .nav-links { display: flex; justify-content: space-between; margin: 20px 0; font-size: 0.85em; }
+  .nav-links a { color: var(--accent); text-decoration: none; }
+  .nav-links a:hover { text-decoration: underline; color: var(--gold); }
+  .divider { height: 1px; background: linear-gradient(90deg, transparent, var(--accent), transparent); margin: 24px 0; opacity: 0.4; }
+  .footer { text-align: center; color: var(--muted); font-size: 0.75em; margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--border); }
+  .footer a { color: var(--accent); text-decoration: none; }
+</style>
+<script>if(window.self===window.top&&sessionStorage.getItem("student_auth")!=="1"){document.body.innerHTML="";window.location.replace("student.html");}</script>
+</head>
+<body>
+
+<h1>彭博研究摘要</h1>
+<p class="subtitle">第122期 | 日圓困局：創紀錄順差為何救不了40年新低</p>
+<span class="issue-badge">2026年七月上旬更新</span>
+
+<div class="verdict-bar">結論：日圓貶值是結構性而非週期性 — 經常賬順差已由貿易轉為留存海外的初級收入，對日圓需求支撐微弱。順勢做空日圓，關注跌破170關口。</div>
+
+<div class="nav-links">
+  <span><a href="newsletter_121_china.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="toc">
+  <div class="toc-title">目錄</div>
+  <ol>
+    <li><a href="#fdi-feedback-loop">結構性弱勢 海外投資自我強化的貶值循環</a></li>
+    <li><a href="#current-account-composition">經常賬結構 順差構成之變：從貿易到留存海外的初級收入</a></li>
+    <li><a href="#red-team">Red Team 反面論證</a></li>
+    <li><a href="#takeaways">基金經理人重點摘要</a></li>
+  </ol>
+</div>
+
+<div class="section" id="fdi-feedback-loop">
+  <h2><span class="tag tag-misc">結構性弱勢</span> 海外投資自我強化的貶值循環</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--red)">40年</div><div class="lbl">日圓兌美元
+跌至最低水平</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">$5,500億</div><div class="lbl">對美投資承諾
+（Trump貿易協議）</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">&gt;170</div><div class="lbl">美日利差重演2023
+日圓潛在跌破位</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">日圓40年新低 — 外商直接投資（FDI）的推波助瀾</div>
+    <p>日圓跌至 <span style="color:#f0ebe0;font-weight:700">40年低位</span> 的背後，是一個結構性的自我強化循環。弱勢日圓抬升日本企業的海外直接投資（FDI）盈利，這些更豐厚的利潤又為企業提供資金，去進行更多的海外投資，如此循環往復。自1980年代出口導向繁榮以來，失落的十年帶來的國內需求萎縮、金融危機至2011年地震期間的日圓強勢、以及自由貿易時代鼓勵企業將價值鏈建在終端需求附近，多重力量推動日本企業更積極地向海外擴張。Abenomics以來的日圓貶值進一步抬升海外股息收入。與Trump貿易協議掛鉤的 <span style="color:#f0ebe0;font-weight:700">$5,500億</span> 對美投資方案雖不會直接觸發日圓拋售，卻會加劇整體對外直接投資的上升 — 尤其是流向美國的部分。</p>
+    <div class="data-point">日圓水平：<span style="color:#f0ebe0;font-weight:700">40年低位</span> &nbsp;|&nbsp; 對美投資承諾：<span style="color:#f0ebe0;font-weight:700">$5,500億</span> &nbsp;|&nbsp; 驅動力：<span style="color:#f0ebe0;font-weight:700">海外股息→再投資→更弱日圓</span></div>
+    <div class="implication"><div class="label">投資啟示</div>貶值屬結構性而非週期性，日銀口頭干預難以逆轉大勢。<span style="color:#f0ebe0;font-weight:700">順勢做空日圓、做多日本出口股（TOPIX出口成分）</span>，波段對沖美日利差收斂風險。</div>
+  </div>
+
+</div>
+
+<div class="section" id="current-account-composition">
+  <h2><span class="tag tag-misc">經常賬結構</span> 順差構成之變：從貿易到留存海外的初級收入</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--green)">史上最高</div><div class="lbl">日本經常賬順差
+規模創紀錄</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">2011</div><div class="lbl">福島核事故
+貿易由順轉逆</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">留存海外</div><div class="lbl">初級收入再投資
+未兌換為日圓</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">經常賬順差創紀錄高點，日圓卻徘徊40年低位 — 一圖說明</div>
+    <p>日本擁有全球最大的經常賬順差之一，且規模達到 <span style="color:#f0ebe0;font-weight:700">有記錄以來最高水平</span>。理論上這應為日圓帶來巨大需求，那為何日圓仍在近40年低位？答案在於順差的構成 — 其中很大一部分仍以外幣形式存在。直至2000年代，日本經常賬主要由貨物貿易順差驅動；<span style="color:#f0ebe0;font-weight:700">2011年福島核事故</span> 後核電站關閉、能源進口激增，貿易逆差變得常見。填補缺口的是投資收益：直接投資收益與證券投資收益計入國際收支的「初級收入」項目，如今已成為支撐順差的主力。但問題在於，這些收入中相當大一部分被留在海外再投資，意味著這些外幣並未兌換成日圓。若剔除直接投資收益中的再投資部分，剩餘收益實際上會令近期經常賬轉為 <span style="color:#f0ebe0;font-weight:700">逆差</span>。</p>
+    <div class="data-point">順差規模：<span style="color:#f0ebe0;font-weight:700">史上最高</span> &nbsp;|&nbsp; 轉折點：<span style="color:#f0ebe0;font-weight:700">2011福島核事故</span> &nbsp;|&nbsp; 順差來源：<span style="color:#f0ebe0;font-weight:700">貿易→初級收入（再投資留存）</span> &nbsp;|&nbsp; 效果：<span style="color:#f0ebe0;font-weight:700">對日圓支撐極為有限</span></div>
+    <div class="implication"><div class="label">投資啟示</div>「大順差=強貨幣」的傳統邏輯對日本失效。交易上 <span style="color:#f0ebe0;font-weight:700">勿以經常賬順差為理由押注日圓反彈</span>；結構性順差外幣化令日圓下行壓力持續。</div>
+  </div>
+
+</div>
+
+<div class="divider"></div>
+
+<div class="red-team" id="red-team">
+  <div class="red-team-title">&#128308; Red Team — 核心假設與反面論證</div>
+  <ul>
+    <li>假設1：海外初級收入將持續留存海外再投資，不會大規模回流兌換日圓</li>
+    <li>假設2：美日利差維持高位，套利交易繼續施壓日圓</li>
+    <li>假設3：$5,500億對美投資方案僅加劇FDI趨勢，不直接觸發日圓拋售</li>
+    <li style="color:var(--red)">風險1：若日本企業因地緣或稅務誘因而啟動海外收益匯回（repatriation），將部分抵銷日圓下行壓力</li>
+    <li style="color:var(--red)">風險2：若聯準會下半年降息、美日利差收斂，套利平倉可能引發日圓急升（重演2024年8月式逼空）</li>
+    <li style="color:var(--red)">風險3：日銀若因日圓過度貶值而被迫加速升息或協調干預，短線可逆轉趨勢</li>
+  </ul>
+  <p style="margin-top:10px;padding:10px 14px;background:rgba(224,85,69,0.04);border-radius:6px;font-size:0.9em;border-left:3px solid var(--red)">核心結構性邏輯成立 — 順差外幣化是日圓弱勢的深層主因，非短期干預可解。但需警惕週期性尾部風險：若美日利差因Fed降息而快速收斂，擁擠的空頭日圓倉位可能觸發劇烈平倉。結構做空、但須以期權對沖利差收斂的逼空風險。</p>
+</div>
+
+<div class="callout" id="takeaways">
+  <div class="callout-title">基金經理人重點摘要</div>
+  <ul>
+    <li><strong>日圓：</strong>40年新低屬結構性貶值。順差已外幣化，對日圓支撐微弱。順勢偏空，關注跌破170。</li>
+    <li><strong>經常賬：</strong>創紀錄順差是「假支撐」。剔除再投資後近期實為逆差。勿以順差押注日圓反彈。</li>
+    <li><strong>FDI循環：</strong>弱日圓→海外盈利↑→再投資↑→更弱日圓，自我強化。$5,500億對美投資方案加劇趨勢。</li>
+    <li><strong>對沖：</strong>擁擠空頭倉位面臨逼空風險 — 以日圓看漲期權對沖Fed降息、美日利差收斂情境。</li>
+    <li><strong>股市：</strong>弱日圓利好日本出口企業海外盈利，可搭配做多TOPIX出口成分股作為對沖。</li>
+  </ul>
+</div>
+
+<div class="nav-links">
+  <span><a href="newsletter_121_china.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="footer">
+  彭博研究摘要 | 僅供教學與討論用途 | 2026年7月8日<br>
+  資料來源：Bloomberg Intelligence, Bloomberg Economics, Bloomberg News<br>
+  <a href="https://www.patreon.com/Aireturn">Patreon</a> · <a href="https://t.me/AIreturn">Telegram</a> · Threads @aireturn88
+</div>
+
+</body>
+</html>
