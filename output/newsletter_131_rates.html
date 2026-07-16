@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>彭博研究摘要 #131 — Warsh時代開局：智囊團佈陣與Beige Book按兵不動訊號</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Noto+Serif+TC:wght@400;700&family=Source+Sans+Pro:wght@400;600;700&display=swap');
+  :root { --bg: #0a0a08; --card: #141410; --border: #2a2820; --accent: #c9a84c;
+          --gold: #f0d87a; --gold-dim: #c4b896; --text: #e0d8c8; --text-bright: #f0ebe0; --muted: #8a8070;
+          --green: #6bbd5b; --red: #e05545; --yellow: #d4a843; --orange: #d49040;
+          --purple: #b08cd0; --cyan: #4cc9b0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { background: #0a0a08 !important; }
+  body { color: var(--text); font-family: 'Source Sans Pro', 'Noto Serif TC', 'Microsoft JhengHei', sans-serif; line-height: 1.8; padding: 24px; max-width: 880px; margin: 0 auto; }
+  h1 { font-family: 'Playfair Display', 'Noto Serif TC', serif; color: var(--gold); font-size: 1.8em; margin-bottom: 4px; font-weight: 900; letter-spacing: 0.02em; }
+  h2 { font-family: 'Playfair Display', 'Noto Serif TC', serif; }
+  .subtitle { color: var(--text-bright); font-size: 0.95em; margin-bottom: 8px; font-family: 'Noto Serif TC', serif; }
+  .issue-badge { display: inline-block; background: rgba(201,168,76,0.15); color: var(--accent); padding: 4px 12px; border-radius: 12px; font-size: 0.8em; font-weight: 600; margin-bottom: 20px; border: 1px solid rgba(201,168,76,0.3); }
+  .tag { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 0.72em; font-weight: 600; margin-right: 4px; }
+  .tag-rates { background: rgba(201,168,76,0.15); color: var(--accent); }
+  .tag-china { background: rgba(212,144,64,0.15); color: var(--orange); }
+  .tag-japan { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-geo   { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-oil   { background: rgba(212,168,67,0.15); color: var(--yellow); }
+  .tag-trade { background: rgba(212,168,67,0.15); color: var(--yellow); }
+  .tag-growth{ background: rgba(107,189,91,0.15); color: var(--green); }
+  .tag-metals{ background: rgba(176,140,208,0.15); color: var(--purple); }
+  .tag-infl  { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-policy{ background: rgba(201,168,76,0.15); color: var(--accent); }
+  .tag-val   { background: rgba(107,189,91,0.15); color: var(--green); }
+  .tag-vol   { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-semi  { background: rgba(76,201,176,0.15); color: var(--cyan); }
+  .tag-credit{ background: rgba(176,140,208,0.15); color: var(--purple); }
+  .tag-space { background: rgba(201,168,76,0.15); color: var(--accent); }
+  .tag-misc  { background: rgba(138,128,112,0.15); color: var(--muted); }
+  .verdict-bar { background: var(--accent); color: #0a0a08; padding: 14px 20px; border-radius: 8px; margin-bottom: 20px; font-weight: 700; font-size: 1.05em; font-family: 'Noto Serif TC', serif; }
+  .section { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 22px; margin-bottom: 18px; }
+  .section h2 { color: var(--gold); font-size: 1.15em; margin-bottom: 12px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+  .section h3 { color: var(--accent); font-size: 0.95em; margin: 14px 0 6px; }
+  .article { margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid rgba(42,40,32,0.7); }
+  .article:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .article-title { color: var(--text-bright); font-weight: 700; font-size: 0.95em; margin-bottom: 4px; }
+  .article-title-cn { color: var(--muted); font-size: 0.85em; margin-bottom: 8px; }
+  .article p { font-size: 0.9em; margin: 6px 0; }
+  .data-point { background: rgba(201,168,76,0.05); padding: 8px 12px; border-radius: 6px; margin: 8px 0; font-size: 0.85em; border: 1px solid rgba(201,168,76,0.12); }
+  .data-point .num { color: var(--text-bright); font-weight: 700; }
+  .implication { background: rgba(201,168,76,0.06); border-left: 3px solid var(--accent); padding: 10px 14px; margin: 10px 0; border-radius: 0 6px 6px 0; font-size: 0.88em; }
+  .implication .label { color: var(--accent); font-weight: 700; font-size: 0.8em; text-transform: uppercase; margin-bottom: 4px; }
+  .red-team { background: rgba(224,85,69,0.06); border: 1px solid rgba(224,85,69,0.25); border-radius: 8px; padding: 18px; margin: 18px 0; }
+  .red-team-title { color: var(--red); font-weight: 700; font-size: 0.95em; margin-bottom: 10px; font-family: 'Playfair Display', serif; }
+  .red-team ul { padding-left: 18px; }
+  .red-team li { margin: 5px 0; font-size: 0.88em; }
+  .callout { background: rgba(201,168,76,0.06); border: 1px solid rgba(201,168,76,0.25); border-radius: 8px; padding: 18px; margin: 18px 0; }
+  .callout-title { color: var(--accent); font-weight: 700; font-size: 0.95em; margin-bottom: 8px; font-family: 'Playfair Display', 'Noto Serif TC', serif; }
+  .callout ul { padding-left: 18px; }
+  .callout li { margin: 5px 0; font-size: 0.88em; }
+  ul { padding-left: 18px; }
+  li { margin: 4px 0; font-size: 0.88em; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(201,168,76,0.05); padding: 12px; border-radius: 6px; text-align: center; border: 1px solid rgba(201,168,76,0.1); }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: var(--gold); font-family: 'Playfair Display', serif; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
+  .toc { background: rgba(201,168,76,0.04); border: 1px solid rgba(201,168,76,0.18); border-radius: 8px; padding: 16px 20px; margin-bottom: 20px; }
+  .toc-title { color: var(--accent); font-weight: 700; font-size: 0.9em; margin-bottom: 8px; }
+  .toc a { color: var(--accent); text-decoration: none; font-size: 0.88em; }
+  .toc a:hover { text-decoration: underline; color: var(--gold); }
+  .toc ol { padding-left: 20px; }
+  .toc li { margin: 4px 0; }
+  .nav-links { display: flex; justify-content: space-between; margin: 20px 0; font-size: 0.85em; }
+  .nav-links a { color: var(--accent); text-decoration: none; }
+  .nav-links a:hover { text-decoration: underline; color: var(--gold); }
+  .divider { height: 1px; background: linear-gradient(90deg, transparent, var(--accent), transparent); margin: 24px 0; opacity: 0.4; }
+  .footer { text-align: center; color: var(--muted); font-size: 0.75em; margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--border); }
+  .footer a { color: var(--accent); text-decoration: none; }
+</style>
+<script>if(window.self===window.top&&sessionStorage.getItem("student_auth")!=="1"){document.body.innerHTML="";window.location.replace("student.html");}</script>
+</head>
+<body>
+
+<h1>彭博研究摘要</h1>
+<p class="subtitle">第131期 | Warsh時代開局：智囊團佈陣與Beige Book按兵不動訊號</p>
+<span class="issue-badge">2026年七月中旬更新</span>
+
+<div class="verdict-bar">結論：Warsh以全明星任務小組鞏固改革正當性，Beige Book通膨溫和支持利率按兵不動 — 短期勿押注降息，並準備迎接點陣圖退場後的溝通新框架</div>
+
+<div class="nav-links">
+  <span><a href="newsletter_130_valuations.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="toc">
+  <div class="toc-title">目錄</div>
+  <ol>
+    <li><a href="#warsh-task-forces">聯準會改革 Warsh佈陣：15位智囊揭示Fed未來</a></li>
+    <li><a href="#beige-book-hold">利率政策 Beige Book：溫和擴張，支持按兵不動</a></li>
+    <li><a href="#red-team">Red Team 反面論證</a></li>
+    <li><a href="#takeaways">基金經理人重點摘要</a></li>
+  </ol>
+</div>
+
+<div class="section" id="warsh-task-forces">
+  <h2><span class="tag tag-misc">聯準會改革</span> Warsh佈陣：15位智囊揭示Fed未來</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val">5個</div><div class="lbl">Warsh設立的
+政策檢討任務小組</div></div>
+    <div class="stat"><div class="val">15人</div><div class="lbl">任務小組領導層
+（學界巨星＋前央行官員）</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">點陣圖</div><div class="lbl">溝通小組傾向廢除
+改為季度詳細報告</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">15位任務小組領袖 — 解讀Warsh的Fed改革藍圖</div>
+    <p>新任Fed主席 <span style="color:#f0ebe0;font-weight:700">Kevin Warsh</span> 上任後刻意淡化前瞻指引，令利率路徑解讀變得更複雜。Bloomberg Economics認為，觀察Warsh意圖的最佳窗口是他設立的 <span style="color:#f0ebe0;font-weight:700">5個任務小組</span> 及其 <span style="color:#f0ebe0;font-weight:700">15位</span> 領導人選 — 名單雲集學術明星、前央行官員與科技高管，全是敢於挑戰現狀的非主流思想家。其中溝通小組由 <span style="color:#f0ebe0;font-weight:700">Arminio Fraga、Mervyn King</span> 等人領軍，料將建議廢除點陣圖、縮短政策聲明，改為發布類似英倫銀行的季度貨幣政策報告。但陣容並非一言堂：前Fed理事 <span style="color:#f0ebe0;font-weight:700">Jeremy Stein</span> 主張維持大型資產負債表以穩定金融體系，與Warsh縮表立場相左；通膨框架小組中，<span style="color:#f0ebe0;font-weight:700">Mankiw</span> 力挺Phillips Curve，諾獎得主 <span style="color:#f0ebe0;font-weight:700">Sargent</span> 卻不以為然。</p>
+    <div class="data-point">任務小組：<span style="color:#f0ebe0;font-weight:700">5個</span>（溝通、資產負債表、數據、生產力與就業、通膨框架） &nbsp;|&nbsp; 領導人數：<span style="color:#f0ebe0;font-weight:700">15人</span> &nbsp;|&nbsp; 溝通小組傾向：<span style="color:#f0ebe0;font-weight:700">廢除點陣圖、改季度報告</span> &nbsp;|&nbsp; 數據小組：<span style="color:#f0ebe0;font-weight:700">無政治偏向跡象</span></div>
+    <div class="implication"><div class="label">投資啟示</div>全明星陣容確保改革結論具公信力，即使最終支持Warsh既有立場亦能抵禦政治干預指控。Fed溝通框架將迎來重大改變 — <span style="color:#f0ebe0;font-weight:700">降低對點陣圖的策略依賴，改為緊盯任務小組進展與Warsh本人發言作為利率路徑指引</span>。</div>
+  </div>
+
+</div>
+
+<div class="section" id="beige-book-hold">
+  <h2><span class="tag tag-rates">利率政策</span> Beige Book：溫和擴張，支持按兵不動</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val">溫和擴張</div><div class="lbl">美國經濟活動
+（slight to moderate）</div></div>
+    <div class="stat"><div class="val" style="color:var(--green)">全數地區</div><div class="lbl">物價增速持平或放緩
+（vs 上期報告）</div></div>
+    <div class="stat"><div class="val" style="color:var(--green)">AI投資</div><div class="lbl">數據中心/機械/國防
+需求持續強勁</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">Beige Book通膨前景 — 為Warsh的鷹派謹慎背書</div>
+    <p>Fed最新Beige Book（資訊截至 <span style="color:#f0ebe0;font-weight:700">7月6日</span>）顯示美國經濟以 <span style="color:#f0ebe0;font-weight:700">輕微至溫和</span> 步伐持續擴張，企業信心因燃料價格回落而小幅改善。亮點在製造業：數據中心、機械與國防需求強勁，<span style="color:#f0ebe0;font-weight:700">AI相關投資持續火熱</span>。消費支出小升，部分地區受惠世界盃訪客，但高油價壓抑非必需消費。就業小幅增加，技術工人短缺仍普遍，勞動市場偏緊。最關鍵的是通膨面：<span style="color:#f0ebe0;font-weight:700">所有地區</span> 的物價增速均持平或較上期放緩，惟通膨預期分歧 — 部分企業預期維持現水平，另一些則因油價回落預期進一步緩和。整體基調較上期略為樂觀，但不足以促使Fed改變政策路徑。</p>
+    <div class="data-point">經濟活動：<span style="color:#f0ebe0;font-weight:700">輕微至溫和擴張</span> &nbsp;|&nbsp; 物價增速：<span style="color:#f0ebe0;font-weight:700">全數地區持平或放緩</span> &nbsp;|&nbsp; 就業：<span style="color:#f0ebe0;font-weight:700">小幅增加、技術工短缺</span> &nbsp;|&nbsp; 主要風險：<span style="color:#f0ebe0;font-weight:700">能源價格與地緣政治不確定性</span></div>
+    <div class="implication"><div class="label">投資啟示</div>Beige Book為Warsh的謹慎鷹派立場提供數據支撐，Fed短期內無改變利率的理由。<span style="color:#f0ebe0;font-weight:700">勿押注近期降息，維持中性存續期部署</span>，並密切監控油價作為通膨敘事的關鍵變數。</div>
+  </div>
+
+</div>
+
+<div class="divider"></div>
+
+<div class="red-team" id="red-team">
+  <div class="red-team-title">&#128308; Red Team — 核心假設與反面論證</div>
+  <ul>
+    <li>假設1：Warsh的任務小組將順利為其改革議程（縮表、淡化前瞻指引）背書，且結論具公信力</li>
+    <li>假設2：通膨溫和放緩趨勢延續，Fed按兵不動是正確解讀</li>
+    <li>假設3：燃料價格回落帶動的企業信心改善可持續</li>
+    <li style="color:var(--red)">風險1：任務小組領導層立場分歧明顯 — Jeremy Stein主張維持大型資產負債表、Mankiw堅守Phillips Curve，若結論與Warsh立場相左，Fed政策方向的不確定性反而升高</li>
+    <li style="color:var(--red)">風險2：Beige Book明言通膨預期分歧，且企業視能源價格與地緣政治為首要風險 — 高油價已在壓抑非必需消費，若油價回升，物價放緩趨勢可能逆轉</li>
+    <li style="color:var(--red)">風險3：勞動市場仍緊、技術工人持續短缺，工資壓力可能令通膨黏性高於預期，鷹派按兵不動或演變為更長期的higher-for-longer</li>
+  </ul>
+  <p style="margin-top:10px;padding:10px 14px;background:rgba(224,85,69,0.04);border-radius:6px;font-size:0.9em;border-left:3px solid var(--red)">核心邏輯成立：Beige Book全數地區物價增速持平或放緩，配合Warsh謹慎鷹派基調，短期按兵不動幾成定局。但兩大尾部風險需監控 — 其一，油價反彈將直接推翻「燃料價格回落緩解通膨」的敘事基礎；其二，任務小組若在資產負債表或通膨框架上得出與Warsh相左的結論，政策溝通混亂期的市場波動不可低估。點陣圖廢除前的過渡期，Fed訊號雜訊比將上升。</p>
+</div>
+
+<div class="callout" id="takeaways">
+  <div class="callout-title">基金經理人重點摘要</div>
+  <ul>
+    <li><strong>Fed改革：</strong>Warsh以15位全明星領袖執掌5個任務小組，改革公信力大增。點陣圖料被季度報告取代 — 提前調整以Fed溝通文件為基礎的交易框架。</li>
+    <li><strong>利率政策：</strong>Beige Book顯示物價增速在全數地區持平或放緩，支持按兵不動。勿押注近期降息，維持中性存續期。</li>
+    <li><strong>通膨監控：</strong>能源價格是關鍵搖擺變數 — 油價回落緩解通膨預期，但同時高油價已壓抑非必需消費。緊盯油價走勢作為Fed轉向的領先指標。</li>
+    <li><strong>結構性亮點：</strong>AI相關投資持續強勁，數據中心、機械與國防製造需求旺盛 — 相關資本財與AI基建供應鏈仍是實體經濟最確定的增長引擎。</li>
+    <li><strong>政策不確定性：</strong>任務小組內部立場分歧（縮表 vs 大型資產負債表、Phillips Curve存廢），結論公布前後或引發利率波動 — 適度持有利率波動率對沖。</li>
+  </ul>
+</div>
+
+<div class="nav-links">
+  <span><a href="newsletter_130_valuations.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="footer">
+  彭博研究摘要 | 僅供教學與討論用途 | 2026年7月17日<br>
+  資料來源：Bloomberg Intelligence, Bloomberg Economics, Bloomberg News<br>
+  <a href="https://www.patreon.com/Aireturn">Patreon</a> · <a href="https://t.me/AIreturn">Telegram</a> · Threads @aireturn88
+</div>
+
+</body>
+</html>

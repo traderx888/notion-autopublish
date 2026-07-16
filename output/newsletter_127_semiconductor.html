@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>彭博研究摘要 #127 — AI投資週期仍強勁，但集中度風險成為全市場問題</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Noto+Serif+TC:wght@400;700&family=Source+Sans+Pro:wght@400;600;700&display=swap');
+  :root { --bg: #0a0a08; --card: #141410; --border: #2a2820; --accent: #c9a84c;
+          --gold: #f0d87a; --gold-dim: #c4b896; --text: #e0d8c8; --text-bright: #f0ebe0; --muted: #8a8070;
+          --green: #6bbd5b; --red: #e05545; --yellow: #d4a843; --orange: #d49040;
+          --purple: #b08cd0; --cyan: #4cc9b0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { background: #0a0a08 !important; }
+  body { color: var(--text); font-family: 'Source Sans Pro', 'Noto Serif TC', 'Microsoft JhengHei', sans-serif; line-height: 1.8; padding: 24px; max-width: 880px; margin: 0 auto; }
+  h1 { font-family: 'Playfair Display', 'Noto Serif TC', serif; color: var(--gold); font-size: 1.8em; margin-bottom: 4px; font-weight: 900; letter-spacing: 0.02em; }
+  h2 { font-family: 'Playfair Display', 'Noto Serif TC', serif; }
+  .subtitle { color: var(--text-bright); font-size: 0.95em; margin-bottom: 8px; font-family: 'Noto Serif TC', serif; }
+  .issue-badge { display: inline-block; background: rgba(201,168,76,0.15); color: var(--accent); padding: 4px 12px; border-radius: 12px; font-size: 0.8em; font-weight: 600; margin-bottom: 20px; border: 1px solid rgba(201,168,76,0.3); }
+  .tag { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 0.72em; font-weight: 600; margin-right: 4px; }
+  .tag-rates { background: rgba(201,168,76,0.15); color: var(--accent); }
+  .tag-china { background: rgba(212,144,64,0.15); color: var(--orange); }
+  .tag-japan { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-geo   { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-oil   { background: rgba(212,168,67,0.15); color: var(--yellow); }
+  .tag-trade { background: rgba(212,168,67,0.15); color: var(--yellow); }
+  .tag-growth{ background: rgba(107,189,91,0.15); color: var(--green); }
+  .tag-metals{ background: rgba(176,140,208,0.15); color: var(--purple); }
+  .tag-infl  { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-policy{ background: rgba(201,168,76,0.15); color: var(--accent); }
+  .tag-val   { background: rgba(107,189,91,0.15); color: var(--green); }
+  .tag-vol   { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-semi  { background: rgba(76,201,176,0.15); color: var(--cyan); }
+  .tag-credit{ background: rgba(176,140,208,0.15); color: var(--purple); }
+  .tag-space { background: rgba(201,168,76,0.15); color: var(--accent); }
+  .tag-misc  { background: rgba(138,128,112,0.15); color: var(--muted); }
+  .verdict-bar { background: var(--accent); color: #0a0a08; padding: 14px 20px; border-radius: 8px; margin-bottom: 20px; font-weight: 700; font-size: 1.05em; font-family: 'Noto Serif TC', serif; }
+  .section { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 22px; margin-bottom: 18px; }
+  .section h2 { color: var(--gold); font-size: 1.15em; margin-bottom: 12px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+  .section h3 { color: var(--accent); font-size: 0.95em; margin: 14px 0 6px; }
+  .article { margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid rgba(42,40,32,0.7); }
+  .article:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .article-title { color: var(--text-bright); font-weight: 700; font-size: 0.95em; margin-bottom: 4px; }
+  .article-title-cn { color: var(--muted); font-size: 0.85em; margin-bottom: 8px; }
+  .article p { font-size: 0.9em; margin: 6px 0; }
+  .data-point { background: rgba(201,168,76,0.05); padding: 8px 12px; border-radius: 6px; margin: 8px 0; font-size: 0.85em; border: 1px solid rgba(201,168,76,0.12); }
+  .data-point .num { color: var(--text-bright); font-weight: 700; }
+  .implication { background: rgba(201,168,76,0.06); border-left: 3px solid var(--accent); padding: 10px 14px; margin: 10px 0; border-radius: 0 6px 6px 0; font-size: 0.88em; }
+  .implication .label { color: var(--accent); font-weight: 700; font-size: 0.8em; text-transform: uppercase; margin-bottom: 4px; }
+  .red-team { background: rgba(224,85,69,0.06); border: 1px solid rgba(224,85,69,0.25); border-radius: 8px; padding: 18px; margin: 18px 0; }
+  .red-team-title { color: var(--red); font-weight: 700; font-size: 0.95em; margin-bottom: 10px; font-family: 'Playfair Display', serif; }
+  .red-team ul { padding-left: 18px; }
+  .red-team li { margin: 5px 0; font-size: 0.88em; }
+  .callout { background: rgba(201,168,76,0.06); border: 1px solid rgba(201,168,76,0.25); border-radius: 8px; padding: 18px; margin: 18px 0; }
+  .callout-title { color: var(--accent); font-weight: 700; font-size: 0.95em; margin-bottom: 8px; font-family: 'Playfair Display', 'Noto Serif TC', serif; }
+  .callout ul { padding-left: 18px; }
+  .callout li { margin: 5px 0; font-size: 0.88em; }
+  ul { padding-left: 18px; }
+  li { margin: 4px 0; font-size: 0.88em; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(201,168,76,0.05); padding: 12px; border-radius: 6px; text-align: center; border: 1px solid rgba(201,168,76,0.1); }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: var(--gold); font-family: 'Playfair Display', serif; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
+  .toc { background: rgba(201,168,76,0.04); border: 1px solid rgba(201,168,76,0.18); border-radius: 8px; padding: 16px 20px; margin-bottom: 20px; }
+  .toc-title { color: var(--accent); font-weight: 700; font-size: 0.9em; margin-bottom: 8px; }
+  .toc a { color: var(--accent); text-decoration: none; font-size: 0.88em; }
+  .toc a:hover { text-decoration: underline; color: var(--gold); }
+  .toc ol { padding-left: 20px; }
+  .toc li { margin: 4px 0; }
+  .nav-links { display: flex; justify-content: space-between; margin: 20px 0; font-size: 0.85em; }
+  .nav-links a { color: var(--accent); text-decoration: none; }
+  .nav-links a:hover { text-decoration: underline; color: var(--gold); }
+  .divider { height: 1px; background: linear-gradient(90deg, transparent, var(--accent), transparent); margin: 24px 0; opacity: 0.4; }
+  .footer { text-align: center; color: var(--muted); font-size: 0.75em; margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--border); }
+  .footer a { color: var(--accent); text-decoration: none; }
+</style>
+<script>if(window.self===window.top&&sessionStorage.getItem("student_auth")!=="1"){document.body.innerHTML="";window.location.replace("student.html");}</script>
+</head>
+<body>
+
+<h1>彭博研究摘要</h1>
+<p class="subtitle">第127期 | AI投資週期仍強勁，但集中度風險成為全市場問題</p>
+<span class="issue-badge">2026年七月中旬更新</span>
+
+<div class="verdict-bar">結論：美國AI投資儀表盤全面亮綠燈，資本支出週期未見頂 — 維持AI基礎設施多頭，但科技集中度已滲透股、債、EM市場，需以防禦性指數與利率久期對沖尾部風險</div>
+
+<div class="nav-links">
+  <span><a href="newsletter_126_geopolitics.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="toc">
+  <div class="toc-title">目錄</div>
+  <ol>
+    <li><a href="#tech-selloff-systemic">系統性風險 科技拋售，無處可藏</a></li>
+    <li><a href="#ai-capex-dashboard">AI資本支出 儀表盤全綠，週期未見頂</a></li>
+    <li><a href="#us-ai-data-moat">AI競爭格局 高價值用戶：美國AI的數據護城河</a></li>
+    <li><a href="#red-team">Red Team 反面論證</a></li>
+    <li><a href="#takeaways">基金經理人重點摘要</a></li>
+  </ol>
+</div>
+
+<div class="section" id="tech-selloff-systemic">
+  <h2><span class="tag tag-misc">系統性風險</span> 科技拋售，無處可藏</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--orange)">39%</div><div class="lbl">MSCI EM前十大成分股
+權重佔比</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">$3,000億</div><div class="lbl">今年AI相關投資級
+債券發行額</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">14%</div><div class="lbl">AI發債佔2025年美國
+企業債發行比例</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">科技拋售將成為所有人的問題 — 集中度風險已跨越資產類別</div>
+    <p>本週始於科技股權重極高的Kospi的拋售，蔓延至全球市場時並未區分科技曝險高低 — 這正是問題所在。AI投資已成為全球成長與風險情緒的核心支柱，一旦引擎失速，衝擊將遠超科技板塊本身。歐洲提供了前車之鑑：dot-com泡沫破裂時，歐美股市同步下跌且歐洲最終跑輸；2022年修正中歐洲表現稍好，但全程仍未跑贏。更值得警惕的是，集中度風險已蔓延至新興市場與信用市場：MSCI EM前十大成分股權重約 <span style="color:#f0ebe0;font-weight:700">39%</span>，與MSCI USA相當，但EM成分股數量是美國的兩倍以上，意味EM面臨科技集中與全球成長敏感度的<span style="color:#f0ebe0;font-weight:700">雙重曝險</span>。信用端，AI相關投資級發債今年估計約 <span style="color:#f0ebe0;font-weight:700">$3,000億</span>，相當於2025年美國企業債總發行的 <span style="color:#f0ebe0;font-weight:700">14%</span>，且科技發行人偏好長天期融資，正推高信用指數久期，令債券指數愈發「股票化」。</p>
+    <div class="data-point">拋售震央：<span style="color:#f0ebe0;font-weight:700">Kospi（科技權重最高）</span> &nbsp;|&nbsp; MSCI EM前十大權重：<span style="color:#f0ebe0;font-weight:700">~39%（與MSCI USA相當）</span> &nbsp;|&nbsp; AI投資級發債：<span style="color:#f0ebe0;font-weight:700">~$3,000億/年，佔美國企業債14%</span> &nbsp;|&nbsp; 歷史先例：<span style="color:#f0ebe0;font-weight:700">dot-com破裂時歐股同跌且跑輸</span></div>
+    <div class="implication"><div class="label">投資啟示</div>科技回調不再是板塊事件而是宏觀事件。EM股票是最脆弱環節（集中度+成長敏感雙重曝險）。<span style="color:#f0ebe0;font-weight:700">增持瑞士、英國等防禦性指數作為相對價值對沖，並警惕信用指數久期被動拉長的利率敏感性</span>。</div>
+  </div>
+
+</div>
+
+<div class="section" id="ai-capex-dashboard">
+  <h2><span class="tag tag-misc">AI資本支出</span> 儀表盤全綠，週期未見頂</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--green)">16.4%</div><div class="lbl">Q2設備投資預估增速
+（亞特蘭大聯儲）</div></div>
+    <div class="stat"><div class="val" style="color:var(--green)">~$500億</div><div class="lbl">超大規模雲服務商
+每月資本支出</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">-2.0%</div><div class="lbl">5月AI相關進口
+（4月為+8.6%）</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">彭博經濟AI儀表盤亮綠燈 — 投資週期強度完全抵消局部疲軟</div>
+    <p>彭博經濟研究新推出的美國AI儀表盤顯示綠色：強勁資本支出、快速技術採用與強韌企業投資推動擴張。亞特蘭大聯儲預計Q2設備投資增速將從Q1已然強勁的 <span style="color:#f0ebe0;font-weight:700">15.8%</span> 加速至 <span style="color:#f0ebe0;font-weight:700">16.4%</span> — 若排除疫情，這是自2010-11年金融危機復甦以來增速提升幅度最大的兩個季度。超大規模雲服務商資本支出每月接近 <span style="color:#f0ebe0;font-weight:700">$500億</span>，韓國DRAM出口過去一年成長 <span style="color:#f0ebe0;font-weight:700">三倍</span>，推動Kospi上漲，半導體銷售額一年內翻倍。疲軟集中於AI相關進口（5月下降 <span style="color:#f0ebe0;font-weight:700">2.0%</span>，4月為+8.6%）與數據中心建設（增速較高點放緩但仍維持兩位數）。儀表盤同時追蹤詞元價格作為AI資本支出需求可持續性的領先指標，值得持續監測。科技業仍是今年裁員最重的行業，是週期中的暗流。</p>
+    <div class="data-point">Q2設備投資：<span style="color:#f0ebe0;font-weight:700">16.4%（Q1為15.8%）</span> &nbsp;|&nbsp; 雲巨頭月度capex：<span style="color:#f0ebe0;font-weight:700">~$500億</span> &nbsp;|&nbsp; 韓國DRAM出口：<span style="color:#f0ebe0;font-weight:700">一年成長3倍</span> &nbsp;|&nbsp; 半導體銷售額：<span style="color:#f0ebe0;font-weight:700">一年翻倍</span> &nbsp;|&nbsp; 5月AI進口：<span style="color:#f0ebe0;font-weight:700">-2.0%</span></div>
+    <div class="implication"><div class="label">投資啟示</div>投資週期的硬數據仍在加速，未見頂部訊號。<span style="color:#f0ebe0;font-weight:700">維持半導體與AI基礎設施供應鏈多頭（記憶體、數據中心設備）</span>，以詞元價格與AI進口數據作為減倉的領先訊號。</div>
+  </div>
+
+</div>
+
+<div class="section" id="us-ai-data-moat">
+  <h2><span class="tag tag-misc">AI競爭格局</span> 高價值用戶：美國AI的數據護城河</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--green)">80%</div><div class="lbl">Claude美國週活用戶來自
+年收入逾$10萬家庭</div></div>
+    <div class="stat"><div class="val" style="color:var(--green)">40%</div><div class="lbl">Anthropic企業級LLM
+支出市佔（OpenAI 27%）</div></div>
+    <div class="stat"><div class="val">$10億+</div><div class="lbl">Anthropic一年內計畫投入
+強化學習環境</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">行為反饋數據成AI新分界線 — 美國閉源模型握有高價值反饋循環</div>
+    <p>AI競賽的下一條分界線是用戶質量與反饋數據掌控權。Epoch AI與Ipsos調查顯示，Claude約 <span style="color:#f0ebe0;font-weight:700">80%</span> 的美國週活躍用戶來自年收入逾 <span style="color:#f0ebe0;font-weight:700">$10萬</span> 家庭，Meta AI僅 <span style="color:#f0ebe0;font-weight:700">37%</span>。用戶行為差異更大：Anthropic <span style="color:#f0ebe0;font-weight:700">37.2%</span> 的查詢涉及計算機與數學任務，ChatGPT僅 <span style="color:#f0ebe0;font-weight:700">4.2%</span> 涉及編程。Menlo Ventures估計Anthropic在企業級LLM支出市佔達 <span style="color:#f0ebe0;font-weight:700">40%</span>（OpenAI 27%），編碼使用市佔 <span style="color:#f0ebe0;font-weight:700">54%</span>（OpenAI 21%）。美國閉源模式讓開發者直接掌握用戶如何使用、評價與糾正模型；中國開放權重模型雖在OpenRouter上詞元處理量已超越美國模型，但大量流量經第三方托管，反饋數據大幅流失。為繞過企業數據禁用於訓練的限制，強化學習環境已成新興產業：Anthropic計畫一年投入逾 <span style="color:#f0ebe0;font-weight:700">$10億</span>，供應商Surge在2024年收入 <span style="color:#f0ebe0;font-weight:700">$12億</span>，Mercor最新估值達 <span style="color:#f0ebe0;font-weight:700">$100億</span>。</p>
+    <div class="data-point">Claude高收入用戶佔比：<span style="color:#f0ebe0;font-weight:700">80% vs Meta AI 37%</span> &nbsp;|&nbsp; 企業LLM支出市佔：<span style="color:#f0ebe0;font-weight:700">Anthropic 40% / OpenAI 27%</span> &nbsp;|&nbsp; 編碼市佔：<span style="color:#f0ebe0;font-weight:700">Anthropic 54% / OpenAI 21%</span> &nbsp;|&nbsp; RL環境投入：<span style="color:#f0ebe0;font-weight:700">Anthropic $10億+/年</span> &nbsp;|&nbsp; Surge 2024收入：<span style="color:#f0ebe0;font-weight:700">$12億</span></div>
+    <div class="implication"><div class="label">投資啟示</div>反饋循環是複利型護城河，利好掌握高價值用戶的美國閉源龍頭及其算力供應鏈。<span style="color:#f0ebe0;font-weight:700">關注數據標註/RL環境賽道（Surge、Mercor）的一級市場機會；對依賴開放權重路線的中國AI鏈保持審慎</span>。</div>
+  </div>
+
+</div>
+
+<div class="divider"></div>
+
+<div class="red-team" id="red-team">
+  <div class="red-team-title">&#128308; Red Team — 核心假設與反面論證</div>
+  <ul>
+    <li>假設1：AI資本支出週期可持續，超大規模雲服務商每月~$500億的capex不會急剎車</li>
+    <li>假設2：科技集中度風險可透過防禦性資產有效對沖</li>
+    <li>假設3：美國閉源模型的反饋數據優勢可長期維持</li>
+    <li style="color:var(--red)">風險1：AI相關進口5月已轉負（-2.0%），數據中心建設增速自高點放緩，且科技業是今年裁員最重的行業 — 週期領先指標已現雜音</li>
+    <li style="color:var(--red)">風險2：dot-com與2022年的先例顯示歐股「同跌且跑輸」，本週拋售蔓延時亦不區分科技曝險 —「surprisingly few places to hide」，防禦性指數僅是相對而非絕對避風港</li>
+    <li style="color:var(--red)">風險3：中國模型在OpenRouter詞元處理量已超越美國模型，阿里正將高端模型轉向閉源托管；且美國開發者最有價值的企業流量默認禁止用於訓練，數據優勢存在結構性缺口</li>
+  </ul>
+  <p style="margin-top:10px;padding:10px 14px;background:rgba(224,85,69,0.04);border-radius:6px;font-size:0.9em;border-left:3px solid var(--red)">核心邏輯仍成立：設備投資增速16.4%加速中、雲巨頭capex未減、DRAM出口三倍成長，硬數據支持週期延續。但集中度風險已從股票蔓延至信用（AI發債佔企業債14%）與EM（前十大權重39%），一旦AI敘事動搖，跨資產傳染速度將快於2022年。若AI進口連續兩個月負成長、或詞元價格出現持續下行，應視為capex週期見頂的確認訊號並果斷減倉。</p>
+</div>
+
+<div class="callout" id="takeaways">
+  <div class="callout-title">基金經理人重點摘要</div>
+  <ul>
+    <li><strong>AI資本支出：</strong>儀表盤全綠，Q2設備投資增速升至16.4%，雲巨頭月capex~$500億。維持半導體與AI基礎設施多頭，以詞元價格與AI進口為減倉領先指標。</li>
+    <li><strong>集中度風險：</strong>AI發債佔美國企業債14%，信用指數久期被動拉長；MSCI EM前十大權重39%。科技回調已是宏觀事件，減持EM股票曝險。</li>
+    <li><strong>對沖策略：</strong>歷史顯示科技拋售中「幾乎無處可藏」。以瑞士、英國等防禦性指數做相對價值對沖，警惕強美元+高利率放大EM壓力。</li>
+    <li><strong>AI競爭格局：</strong>Claude高收入用戶佔80%、企業LLM支出市佔40%，反饋循環構成複利護城河。利好美國閉源龍頭供應鏈，審慎看待中國開放權重路線。</li>
+    <li><strong>新興賽道：</strong>強化學習環境成獨立產業（Anthropic投入$10億+、Mercor估值$100億），關注數據標註/RL環境的一級市場配置機會。</li>
+  </ul>
+</div>
+
+<div class="nav-links">
+  <span><a href="newsletter_126_geopolitics.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="footer">
+  彭博研究摘要 | 僅供教學與討論用途 | 2026年7月17日<br>
+  資料來源：Bloomberg Intelligence, Bloomberg Economics, Bloomberg News<br>
+  <a href="https://www.patreon.com/Aireturn">Patreon</a> · <a href="https://t.me/AIreturn">Telegram</a> · Threads @aireturn88
+</div>
+
+</body>
+</html>

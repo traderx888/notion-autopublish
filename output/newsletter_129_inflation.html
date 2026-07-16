@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>彭博研究摘要 #129 — 能源衝擊退潮下的通膨分化</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Noto+Serif+TC:wght@400;700&family=Source+Sans+Pro:wght@400;600;700&display=swap');
+  :root { --bg: #0a0a08; --card: #141410; --border: #2a2820; --accent: #c9a84c;
+          --gold: #f0d87a; --gold-dim: #c4b896; --text: #e0d8c8; --text-bright: #f0ebe0; --muted: #8a8070;
+          --green: #6bbd5b; --red: #e05545; --yellow: #d4a843; --orange: #d49040;
+          --purple: #b08cd0; --cyan: #4cc9b0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { background: #0a0a08 !important; }
+  body { color: var(--text); font-family: 'Source Sans Pro', 'Noto Serif TC', 'Microsoft JhengHei', sans-serif; line-height: 1.8; padding: 24px; max-width: 880px; margin: 0 auto; }
+  h1 { font-family: 'Playfair Display', 'Noto Serif TC', serif; color: var(--gold); font-size: 1.8em; margin-bottom: 4px; font-weight: 900; letter-spacing: 0.02em; }
+  h2 { font-family: 'Playfair Display', 'Noto Serif TC', serif; }
+  .subtitle { color: var(--text-bright); font-size: 0.95em; margin-bottom: 8px; font-family: 'Noto Serif TC', serif; }
+  .issue-badge { display: inline-block; background: rgba(201,168,76,0.15); color: var(--accent); padding: 4px 12px; border-radius: 12px; font-size: 0.8em; font-weight: 600; margin-bottom: 20px; border: 1px solid rgba(201,168,76,0.3); }
+  .tag { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 0.72em; font-weight: 600; margin-right: 4px; }
+  .tag-rates { background: rgba(201,168,76,0.15); color: var(--accent); }
+  .tag-china { background: rgba(212,144,64,0.15); color: var(--orange); }
+  .tag-japan { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-geo   { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-oil   { background: rgba(212,168,67,0.15); color: var(--yellow); }
+  .tag-trade { background: rgba(212,168,67,0.15); color: var(--yellow); }
+  .tag-growth{ background: rgba(107,189,91,0.15); color: var(--green); }
+  .tag-metals{ background: rgba(176,140,208,0.15); color: var(--purple); }
+  .tag-infl  { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-policy{ background: rgba(201,168,76,0.15); color: var(--accent); }
+  .tag-val   { background: rgba(107,189,91,0.15); color: var(--green); }
+  .tag-vol   { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-semi  { background: rgba(76,201,176,0.15); color: var(--cyan); }
+  .tag-credit{ background: rgba(176,140,208,0.15); color: var(--purple); }
+  .tag-space { background: rgba(201,168,76,0.15); color: var(--accent); }
+  .tag-misc  { background: rgba(138,128,112,0.15); color: var(--muted); }
+  .verdict-bar { background: var(--accent); color: #0a0a08; padding: 14px 20px; border-radius: 8px; margin-bottom: 20px; font-weight: 700; font-size: 1.05em; font-family: 'Noto Serif TC', serif; }
+  .section { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 22px; margin-bottom: 18px; }
+  .section h2 { color: var(--gold); font-size: 1.15em; margin-bottom: 12px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+  .section h3 { color: var(--accent); font-size: 0.95em; margin: 14px 0 6px; }
+  .article { margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid rgba(42,40,32,0.7); }
+  .article:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .article-title { color: var(--text-bright); font-weight: 700; font-size: 0.95em; margin-bottom: 4px; }
+  .article-title-cn { color: var(--muted); font-size: 0.85em; margin-bottom: 8px; }
+  .article p { font-size: 0.9em; margin: 6px 0; }
+  .data-point { background: rgba(201,168,76,0.05); padding: 8px 12px; border-radius: 6px; margin: 8px 0; font-size: 0.85em; border: 1px solid rgba(201,168,76,0.12); }
+  .data-point .num { color: var(--text-bright); font-weight: 700; }
+  .implication { background: rgba(201,168,76,0.06); border-left: 3px solid var(--accent); padding: 10px 14px; margin: 10px 0; border-radius: 0 6px 6px 0; font-size: 0.88em; }
+  .implication .label { color: var(--accent); font-weight: 700; font-size: 0.8em; text-transform: uppercase; margin-bottom: 4px; }
+  .red-team { background: rgba(224,85,69,0.06); border: 1px solid rgba(224,85,69,0.25); border-radius: 8px; padding: 18px; margin: 18px 0; }
+  .red-team-title { color: var(--red); font-weight: 700; font-size: 0.95em; margin-bottom: 10px; font-family: 'Playfair Display', serif; }
+  .red-team ul { padding-left: 18px; }
+  .red-team li { margin: 5px 0; font-size: 0.88em; }
+  .callout { background: rgba(201,168,76,0.06); border: 1px solid rgba(201,168,76,0.25); border-radius: 8px; padding: 18px; margin: 18px 0; }
+  .callout-title { color: var(--accent); font-weight: 700; font-size: 0.95em; margin-bottom: 8px; font-family: 'Playfair Display', 'Noto Serif TC', serif; }
+  .callout ul { padding-left: 18px; }
+  .callout li { margin: 5px 0; font-size: 0.88em; }
+  ul { padding-left: 18px; }
+  li { margin: 4px 0; font-size: 0.88em; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(201,168,76,0.05); padding: 12px; border-radius: 6px; text-align: center; border: 1px solid rgba(201,168,76,0.1); }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: var(--gold); font-family: 'Playfair Display', serif; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
+  .toc { background: rgba(201,168,76,0.04); border: 1px solid rgba(201,168,76,0.18); border-radius: 8px; padding: 16px 20px; margin-bottom: 20px; }
+  .toc-title { color: var(--accent); font-weight: 700; font-size: 0.9em; margin-bottom: 8px; }
+  .toc a { color: var(--accent); text-decoration: none; font-size: 0.88em; }
+  .toc a:hover { text-decoration: underline; color: var(--gold); }
+  .toc ol { padding-left: 20px; }
+  .toc li { margin: 4px 0; }
+  .nav-links { display: flex; justify-content: space-between; margin: 20px 0; font-size: 0.85em; }
+  .nav-links a { color: var(--accent); text-decoration: none; }
+  .nav-links a:hover { text-decoration: underline; color: var(--gold); }
+  .divider { height: 1px; background: linear-gradient(90deg, transparent, var(--accent), transparent); margin: 24px 0; opacity: 0.4; }
+  .footer { text-align: center; color: var(--muted); font-size: 0.75em; margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--border); }
+  .footer a { color: var(--accent); text-decoration: none; }
+</style>
+<script>if(window.self===window.top&&sessionStorage.getItem("student_auth")!=="1"){document.body.innerHTML="";window.location.replace("student.html");}</script>
+</head>
+<body>
+
+<h1>彭博研究摘要</h1>
+<p class="subtitle">第129期 | 能源衝擊退潮下的通膨分化</p>
+<span class="issue-badge">2026年七月中旬更新</span>
+
+<div class="verdict-bar">結論：伊朗戰爭引發的能源通膨在歐洲已見頂回落、在新興亞洲仍在升溫 — 做多歐元區前端利率（押注ECB寬鬆空間），迴避高油價敏感的新興市場本幣債</div>
+
+<div class="nav-links">
+  <span><a href="newsletter_128_china.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="toc">
+  <div class="toc-title">目錄</div>
+  <ol>
+    <li><a href="#france-disinflation">法國 能源衝擊退潮，通膨重返2%</a></li>
+    <li><a href="#sri-lanka-inflation">斯里蘭卡 通膨仍在爬升，央行選擇按兵不動</a></li>
+    <li><a href="#red-team">Red Team 反面論證</a></li>
+    <li><a href="#takeaways">基金經理人重點摘要</a></li>
+  </ol>
+</div>
+
+<div class="section" id="france-disinflation">
+  <h2><span class="tag tag-misc">法國</span> 能源衝擊退潮，通膨重返2%</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--green)">2.0%</div><div class="lbl">6月CPI
+（5月為2.8%）</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">-0.1%</div><div class="lbl">1Q26 GDP
+（意外收縮）</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">8.1%</div><div class="lbl">失業率
+（年升0.7個百分點）</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">法國通膨重返2% — 能源衝擊證明是暫時性的</div>
+    <p>法國6月通膨從5月的 <span style="color:#f0ebe0;font-weight:700">2.8%</span> 大幅回落至 <span style="color:#f0ebe0;font-weight:700">2.0%</span>，能源價格放緩疊加服務與製造品價格轉軟，核心通膨更從 <span style="color:#f0ebe0;font-weight:700">1.6%</span> 降至 <span style="color:#f0ebe0;font-weight:700">1.2%</span>。這組數據強烈暗示：伊朗戰爭引發的能源型通膨反彈很可能是暫時性的。Bloomberg Economics預計法國通膨2026年全年暫升至 <span style="color:#f0ebe0;font-weight:700">2.2%</span>，2027年即回落至ECB <span style="color:#f0ebe0;font-weight:700">2%</span> 目標之下。背後邏輯是勞動力市場降溫（失業率已升至 <span style="color:#f0ebe0;font-weight:700">8.1%</span>，接近疫前水平）加上電價受控，廣泛價格壓力難以形成。對歐元區而言，這是能源衝擊不會演變成第二輪通膨的早期證據。</p>
+    <div class="data-point">6月核心通膨：<span style="color:#f0ebe0;font-weight:700">1.2%</span>（5月為1.6%） &nbsp;|&nbsp; 2026通膨預測：<span style="color:#f0ebe0;font-weight:700">2.2%</span> &nbsp;|&nbsp; 2027年：<span style="color:#f0ebe0;font-weight:700">低於ECB 2%目標</span> &nbsp;|&nbsp; 失業率：<span style="color:#f0ebe0;font-weight:700">8.1%</span>（年升0.7pp）</div>
+    <div class="implication"><div class="label">投資啟示</div>核心通膨1.2%意味著法國實際上已處於通縮邊緣，ECB下半年寬鬆空間打開 — <span style="color:#f0ebe0;font-weight:700">做多歐元區前端利率期貨（Euribor/Schatz）</span>。</div>
+  </div>
+  <div class="article">
+    <div class="article-title">增長疲弱加深減息邏輯 — 1Q26 GDP意外收縮</div>
+    <p>通膨回落的另一面是增長失速：法國1Q26 GDP意外收縮 <span style="color:#f0ebe0;font-weight:700">0.1%</span>，消費、投資、淨貿易全數拖累，僅庫存為正貢獻。2Q26預計僅增長 <span style="color:#f0ebe0;font-weight:700">0.1%</span>，消費者信心跌至 <span style="color:#f0ebe0;font-weight:700">三年低點</span>，除國防與航空業外企業普遍反映需求疲弱，嚴重熱浪更添下行風險。全年增長預測從2025年的 <span style="color:#f0ebe0;font-weight:700">0.9%</span> 下修至 <span style="color:#f0ebe0;font-weight:700">0.7%</span>。疲弱增長疊加2027年總統大選前的政治不確定性，令 <span style="color:#f0ebe0;font-weight:700">5%</span> 赤字目標（2026年）與2029年降至 <span style="color:#f0ebe0;font-weight:700">3%</span> 的財政整固路徑更難達成，OAT利差存在走闊風險。</p>
+    <div class="data-point">2026 GDP預測：<span style="color:#f0ebe0;font-weight:700">0.7%</span>（2025年為0.9%） &nbsp;|&nbsp; 2Q26預測：<span style="color:#f0ebe0;font-weight:700">+0.1%</span> &nbsp;|&nbsp; 消費者信心：<span style="color:#f0ebe0;font-weight:700">三年低點</span> &nbsp;|&nbsp; 赤字目標：<span style="color:#f0ebe0;font-weight:700">2026年5% / 2029年3%</span></div>
+    <div class="implication"><div class="label">投資啟示</div>增長差＋財政風險組合利好核心債息、利淡法國利差 — <span style="color:#f0ebe0;font-weight:700">做多Bund、對OAT-Bund利差保持謹慎</span>，避免以法債表達歐元區duration多頭。</div>
+  </div>
+
+</div>
+
+<div class="section" id="sri-lanka-inflation">
+  <h2><span class="tag tag-misc">斯里蘭卡</span> 通膨仍在爬升，央行選擇按兵不動</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--red)">6.8%</div><div class="lbl">6月通膨
+（5月為5.5%，續升）</div></div>
+    <div class="stat"><div class="val">8.75%</div><div class="lbl">政策利率
+預計維持至年底</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">4.2%</div><div class="lbl">2026 GDP預測
+（2025年為5%）</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">斯里蘭卡通膨升溫不會觸發更多加息</div>
+    <p>與歐洲形成鮮明對比，斯里蘭卡6月通膨從5月的 <span style="color:#f0ebe0;font-weight:700">5.5%</span> 升至 <span style="color:#f0ebe0;font-weight:700">6.8%</span>，且預計續升 — 強勁內需、燃料價格上漲、匯率傳導與基數效應四重推升，4Q平均通膨料達 <span style="color:#f0ebe0;font-weight:700">7%-8%</span>（2Q為5.9%）。但央行（CBSL）大概率不再加息：5月超預期的 <span style="color:#f0ebe0;font-weight:700">100bp</span> 加息已足夠，政策利率將維持 <span style="color:#f0ebe0;font-weight:700">8.75%</span> 至年底，通膨到2027年中回落至 <span style="color:#f0ebe0;font-weight:700">5%</span> 目標。前提假設是下半年油價平均 <span style="color:#f0ebe0;font-weight:700">$80/桶</span>、盧比匯率穩定。經濟動能仍強 — 5月活動追蹤指標年增 <span style="color:#f0ebe0;font-weight:700">18.7%</span> — 但加息、購買力侵蝕與航空燃油推高機票費用（打擊旅遊業）將令2026年GDP增長從5%放緩至 <span style="color:#f0ebe0;font-weight:700">4.2%</span>。</p>
+    <div class="data-point">4Q通膨預測：<span style="color:#f0ebe0;font-weight:700">7%-8%</span> &nbsp;|&nbsp; 2026年均通膨：<span style="color:#f0ebe0;font-weight:700">5.5%</span> &nbsp;|&nbsp; 5月加息幅度：<span style="color:#f0ebe0;font-weight:700">100bp</span>（超預期） &nbsp;|&nbsp; 5月活動年增：<span style="color:#f0ebe0;font-weight:700">18.7%</span></div>
+    <div class="implication"><div class="label">投資啟示</div>央行「一次到位」策略若成功，斯里蘭卡本幣債在高息＋通膨見頂後具吸引力；但伊朗衝突再升級是明確上行風險 — <span style="color:#f0ebe0;font-weight:700">暫緩加倉，等待油價與4Q通膨路徑確認</span>。</div>
+  </div>
+
+</div>
+
+<div class="divider"></div>
+
+<div class="red-team" id="red-team">
+  <div class="red-team-title">&#128308; Red Team — 核心假設與反面論證</div>
+  <ul>
+    <li>假設1：伊朗戰爭引發的能源衝擊是暫時性的，不會形成第二輪通膨（法國6月數據為主要證據）</li>
+    <li>假設2：下半年油價平均$80/桶、盧比匯率穩定（斯里蘭卡通膨2027年中回到5%目標的前提）</li>
+    <li>假設3：斯里蘭卡央行5月的100bp加息足以錨定通膨預期，無需進一步緊縮</li>
+    <li style="color:var(--red)">風險1：法國通膨回落僅一個月數據，Bloomberg自己也承認「反彈仍有可能」；若伊朗衝突再升級推高油價，2.2%的全年預測將被突破</li>
+    <li style="color:var(--red)">風險2：斯里蘭卡通膨從5.5%升至6.8%仍在加速中，4Q料達7%-8% — 若戰爭延長，油價持續飆升可能令通膨預期脫錨，屆時8.75%的利率恐不足</li>
+    <li style="color:var(--red)">風險3：法國財政整固在2027大選前政治上幾乎不可行，5%赤字目標落空可能引發OAT利差走闊，干擾「做多歐元區duration」交易</li>
+  </ul>
+  <p style="margin-top:10px;padding:10px 14px;background:rgba(224,85,69,0.04);border-radius:6px;font-size:0.9em;border-left:3px solid var(--red)">「能源衝擊暫時論」在歐洲的證據較硬：法國核心通膨1.2%、失業率8.1%、消費信心三年低點，需求端完全無法支撐持續通膨，ECB寬鬆交易成立。但新興市場端的判斷高度依賴油價假設 — 若油價持續高於$80且伊朗衝突延長，斯里蘭卡「不再加息」的預測將被推翻，其IMF目標、國際收支與復甦全數受威脅。結論：歐元區前端利率多頭可執行，新興亞洲本幣債等油價確認後再進場。</p>
+</div>
+
+<div class="callout" id="takeaways">
+  <div class="callout-title">基金經理人重點摘要</div>
+  <ul>
+    <li><strong>歐元區通膨：</strong>法國6月CPI從2.8%回落至2.0%、核心僅1.2%，能源衝擊證明暫時。<strong>做多歐元區前端利率期貨</strong>。</li>
+    <li><strong>法國財政：</strong>1Q26 GDP收縮0.1%、2027大選前財政整固難產。做多Bund但<strong>迴避OAT表達duration多頭</strong>，留意利差走闊。</li>
+    <li><strong>斯里蘭卡：</strong>通膨6.8%仍在升溫但央行維持8.75%不動，5月100bp加息「一次到位」。<strong>本幣債等4Q通膨見頂確認後再加倉</strong>。</li>
+    <li><strong>油價尾部風險：</strong>兩邊敘事共同前提是伊朗衝突不再升級（油價~$80）。若油價持續突破，歐洲通縮交易延後、斯里蘭卡被迫重啟加息 — <strong>保留能源多頭作為組合對沖</strong>。</li>
+  </ul>
+</div>
+
+<div class="nav-links">
+  <span><a href="newsletter_128_china.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="footer">
+  彭博研究摘要 | 僅供教學與討論用途 | 2026年7月17日<br>
+  資料來源：Bloomberg Intelligence, Bloomberg Economics, Bloomberg News<br>
+  <a href="https://www.patreon.com/Aireturn">Patreon</a> · <a href="https://t.me/AIreturn">Telegram</a> · Threads @aireturn88
+</div>
+
+</body>
+</html>

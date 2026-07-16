@@ -1,6 +1,6 @@
 {
-  "lastRunAt": "2026-07-08T14:11:46+08:00",
-  "lastNewsletterNumber": 124,
+  "lastRunAt": "2026-07-16T23:59:37+08:00",
+  "lastNewsletterNumber": 133,
   "processedFiles": {
     "2026 Outlook Global Aluminum Producers #metals.pdf": {
       "processedAt": "2026-03-26T15:52:49+08:00",
@@ -5451,6 +5451,219 @@
         "oil"
       ],
       "newsletterNumber": 124
+    },
+    "DUP We Faltered IBM Falls Most Since 1968 #valuations.pdf": {
+      "processedAt": null,
+      "mdPath": null,
+      "topics": [],
+      "newsletterNumber": "DUP"
+    },
+    "A Tech Selloff Will Become Everyones Problem Macro View #semiconductor #valuations.pdf": {
+      "processedAt": "2026-07-16T23:59:26+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\A Tech Selloff Will Become Everyones Problem Macro View.md",
+      "topics": [
+        "semiconductor",
+        "valuations"
+      ],
+      "newsletterNumber": 127
+    },
+    "Behavioral Feedback Data Gives US AI Firms Edge in High-Value Users #semiconductor.pdf": {
+      "processedAt": "2026-07-16T23:59:27+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\Behavioral Feedback Data Gives US AI Firms Edge in High-Value Users.md",
+      "topics": [
+        "semiconductor"
+      ],
+      "newsletterNumber": 127
+    },
+    "BOJ Hawkish Yen Defense Would Be Costly SHOK Model #japan #rates.pdf": {
+      "processedAt": "2026-07-16T23:59:27+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\BOJ Hawkish Yen Defense Would Be Costly SHOK Model.md",
+      "topics": [
+        "japan",
+        "rates"
+      ],
+      "newsletterNumber": 125
+    },
+    "China Credit Data Reflects Weak Demand Signals Need for Rate Cut #china #credit.pdf": {
+      "processedAt": "2026-07-16T23:59:28+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\China Credit Data Reflects Weak Demand Signals Need for Rate Cut.md",
+      "topics": [
+        "china",
+        "credit"
+      ],
+      "newsletterNumber": 128
+    },
+    "China Q2 GDP Below Target May Accelerate Stimulus #china #growth.pdf": {
+      "processedAt": "2026-07-16T23:59:28+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\China Q2 GDP Below Target May Accelerate Stimulus.md",
+      "topics": [
+        "china",
+        "growth"
+      ],
+      "newsletterNumber": 128
+    },
+    "Crowding-Out Effect Returns What Is Pushing Up JGB Yields #japan #rates.pdf": {
+      "processedAt": "2026-07-16T23:59:29+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\Crowding-Out Effect Returns What Is Pushing Up JGB Yields.md",
+      "topics": [
+        "japan",
+        "rates"
+      ],
+      "newsletterNumber": 125
+    },
+    "Europe vs SpaceX in Satellite Network Fight #space #geopolitics.pdf": {
+      "processedAt": "2026-07-16T23:59:29+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\Europe vs SpaceX in Satellite Network Fight.md",
+      "topics": [
+        "space",
+        "geopolitics"
+      ],
+      "newsletterNumber": 133
+    },
+    "French Inflation Back at 2pct as Energy Shock Fades #inflation #growth.pdf": {
+      "processedAt": "2026-07-16T23:59:30+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\French Inflation Back at 2pct as Energy Shock Fades.md",
+      "topics": [
+        "inflation",
+        "growth"
+      ],
+      "newsletterNumber": 129
+    },
+    "IBM Shares Sink as 2Q Prelim Results Worse Than Expected #valuations #semiconductor.pdf": {
+      "processedAt": "2026-07-16T23:59:30+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\IBM Shares Sink as 2Q Prelim Results Worse Than Expected.md",
+      "topics": [
+        "valuations",
+        "semiconductor"
+      ],
+      "newsletterNumber": 130
+    },
+    "Japan Primer BOJ to Keep Hiking Amid Jittery Long-Term Yields #japan #rates.pdf": {
+      "processedAt": "2026-07-16T23:59:30+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\Japan Primer BOJ to Keep Hiking Amid Jittery Long-Term Yields.md",
+      "topics": [
+        "japan",
+        "rates"
+      ],
+      "newsletterNumber": 125
+    },
+    "Midyear Outlook Summary Cross-Asset Volatility #volatility.pdf": {
+      "processedAt": "2026-07-16T23:59:32+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\Midyear Outlook Summary Cross-Asset Volatility.md",
+      "topics": [
+        "volatility"
+      ],
+      "newsletterNumber": 133
+    },
+    "Mining Sector Confronts Growing Threats to Rally #metals.pdf": {
+      "processedAt": "2026-07-16T23:59:32+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\Mining Sector Confronts Growing Threats to Rally.md",
+      "topics": [
+        "metals"
+      ],
+      "newsletterNumber": 133
+    },
+    "NATO Alliance Under Trump Unity With Undercurrents #geopolitics.pdf": {
+      "processedAt": "2026-07-16T23:59:33+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\NATO Alliance Under Trump Unity With Undercurrents.md",
+      "topics": [
+        "geopolitics"
+      ],
+      "newsletterNumber": 126
+    },
+    "Protein Drink vs Cold Medicine Takaichi Supply-Side Fiscal Plan #japan #policy.pdf": {
+      "processedAt": "2026-07-16T23:59:34+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\Protein Drink vs Cold Medicine Takaichi Supply-Side Fiscal Plan.md",
+      "topics": [
+        "japan",
+        "policy"
+      ],
+      "newsletterNumber": 125
+    },
+    "Sri Lanka Hotter Inflation Wont Trigger More Rate Hikes #inflation #rates.pdf": {
+      "processedAt": "2026-07-16T23:59:34+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\Sri Lanka Hotter Inflation Wont Trigger More Rate Hikes.md",
+      "topics": [
+        "inflation",
+        "rates"
+      ],
+      "newsletterNumber": 129
+    },
+    "Strikes and Oil-Waiver Reversal US-Iran Jockeying #geopolitics #oil.pdf": {
+      "processedAt": "2026-07-16T23:59:34+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\Strikes and Oil-Waiver Reversal US-Iran Jockeying.md",
+      "topics": [
+        "geopolitics",
+        "oil"
+      ],
+      "newsletterNumber": 126
+    },
+    "Trump New Hormuz Blockade Plan Costly and Risky #geopolitics #oil.pdf": {
+      "processedAt": "2026-07-16T23:59:35+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\Trump New Hormuz Blockade Plan Costly and Risky.md",
+      "topics": [
+        "geopolitics",
+        "oil"
+      ],
+      "newsletterNumber": 126
+    },
+    "Turkey Insight Iran War and Court Ruling Shift Election Math #geopolitics.pdf": {
+      "processedAt": "2026-07-16T23:59:35+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\Turkey Insight Iran War and Court Ruling Shift Election Math.md",
+      "topics": [
+        "geopolitics"
+      ],
+      "newsletterNumber": 126
+    },
+    "US AI Investment Still Booming Dashboard #semiconductor.pdf": {
+      "processedAt": "2026-07-16T23:59:36+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\US AI Investment Still Booming Dashboard.md",
+      "topics": [
+        "semiconductor"
+      ],
+      "newsletterNumber": 127
+    },
+    "US Insight What 15 Task-Force Leaders Reveal About Fed Future #rates #policy.pdf": {
+      "processedAt": "2026-07-16T23:59:36+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\US Insight What 15 Task-Force Leaders Reveal About Fed Future.md",
+      "topics": [
+        "rates",
+        "policy"
+      ],
+      "newsletterNumber": 131
+    },
+    "US Preview World Cup and Prime Day to Support June Retail #growth.pdf": {
+      "processedAt": "2026-07-16T23:59:36+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\US Preview World Cup and Prime Day to Support June Retail.md",
+      "topics": [
+        "growth"
+      ],
+      "newsletterNumber": 132
+    },
+    "US React Beige Book Inflation Outlook Supports Fed Hold #rates #inflation.pdf": {
+      "processedAt": "2026-07-16T23:59:36+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\US React Beige Book Inflation Outlook Supports Fed Hold.md",
+      "topics": [
+        "rates",
+        "inflation"
+      ],
+      "newsletterNumber": 131
+    },
+    "US React World Cup and Prime Day Lift Core Retail Sales #growth.pdf": {
+      "processedAt": "2026-07-16T23:59:36+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\US React World Cup and Prime Day Lift Core Retail Sales.md",
+      "topics": [
+        "growth"
+      ],
+      "newsletterNumber": 132
+    },
+    "Wall Street Earnings Bonanza Rests on Anthropic OpenAI IPOs #valuations.pdf": {
+      "processedAt": "2026-07-16T23:59:37+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\Wall Street Earnings Bonanza Rests on Anthropic OpenAI IPOs.md",
+      "topics": [
+        "valuations"
+      ],
+      "newsletterNumber": 130
     }
   },
   "newsletters": {
@@ -6408,6 +6621,80 @@
       "topics": [
         "semiconductor",
         "oil"
+      ]
+    },
+    "125": {
+      "filename": "newsletter_125_japan.html",
+      "generatedAt": "2026-07-17T00:01:46+08:00",
+      "articleCount": 4,
+      "topics": [
+        "japan"
+      ]
+    },
+    "126": {
+      "filename": "newsletter_126_geopolitics.html",
+      "generatedAt": "2026-07-17T00:03:18+08:00",
+      "articleCount": 4,
+      "topics": [
+        "geopolitics"
+      ]
+    },
+    "127": {
+      "filename": "newsletter_127_semiconductor.html",
+      "generatedAt": "2026-07-17T00:04:45+08:00",
+      "articleCount": 3,
+      "topics": [
+        "semiconductor"
+      ]
+    },
+    "128": {
+      "filename": "newsletter_128_china.html",
+      "generatedAt": "2026-07-17T00:06:05+08:00",
+      "articleCount": 2,
+      "topics": [
+        "china"
+      ]
+    },
+    "129": {
+      "filename": "newsletter_129_inflation.html",
+      "generatedAt": "2026-07-17T00:07:19+08:00",
+      "articleCount": 2,
+      "topics": [
+        "inflation"
+      ]
+    },
+    "130": {
+      "filename": "newsletter_130_valuations.html",
+      "generatedAt": "2026-07-17T00:08:40+08:00",
+      "articleCount": 2,
+      "topics": [
+        "valuations"
+      ]
+    },
+    "131": {
+      "filename": "newsletter_131_rates.html",
+      "generatedAt": "2026-07-17T00:09:47+08:00",
+      "articleCount": 2,
+      "topics": [
+        "rates"
+      ]
+    },
+    "132": {
+      "filename": "newsletter_132_growth.html",
+      "generatedAt": "2026-07-17T00:10:57+08:00",
+      "articleCount": 2,
+      "topics": [
+        "growth"
+      ]
+    },
+    "133": {
+      "filename": "newsletter_133_space_volatility_metals.html",
+      "generatedAt": "2026-07-17T00:12:38+08:00",
+      "articleCount": 3,
+      "topics": [
+        "space",
+        "volatility",
+        "metals"
       ]
     }
   },

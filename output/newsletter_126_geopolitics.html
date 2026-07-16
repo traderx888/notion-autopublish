@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>彭博研究摘要 #126 — 美伊博弈升級與地緣風險重估</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Noto+Serif+TC:wght@400;700&family=Source+Sans+Pro:wght@400;600;700&display=swap');
+  :root { --bg: #0a0a08; --card: #141410; --border: #2a2820; --accent: #c9a84c;
+          --gold: #f0d87a; --gold-dim: #c4b896; --text: #e0d8c8; --text-bright: #f0ebe0; --muted: #8a8070;
+          --green: #6bbd5b; --red: #e05545; --yellow: #d4a843; --orange: #d49040;
+          --purple: #b08cd0; --cyan: #4cc9b0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { background: #0a0a08 !important; }
+  body { color: var(--text); font-family: 'Source Sans Pro', 'Noto Serif TC', 'Microsoft JhengHei', sans-serif; line-height: 1.8; padding: 24px; max-width: 880px; margin: 0 auto; }
+  h1 { font-family: 'Playfair Display', 'Noto Serif TC', serif; color: var(--gold); font-size: 1.8em; margin-bottom: 4px; font-weight: 900; letter-spacing: 0.02em; }
+  h2 { font-family: 'Playfair Display', 'Noto Serif TC', serif; }
+  .subtitle { color: var(--text-bright); font-size: 0.95em; margin-bottom: 8px; font-family: 'Noto Serif TC', serif; }
+  .issue-badge { display: inline-block; background: rgba(201,168,76,0.15); color: var(--accent); padding: 4px 12px; border-radius: 12px; font-size: 0.8em; font-weight: 600; margin-bottom: 20px; border: 1px solid rgba(201,168,76,0.3); }
+  .tag { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 0.72em; font-weight: 600; margin-right: 4px; }
+  .tag-rates { background: rgba(201,168,76,0.15); color: var(--accent); }
+  .tag-china { background: rgba(212,144,64,0.15); color: var(--orange); }
+  .tag-japan { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-geo   { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-oil   { background: rgba(212,168,67,0.15); color: var(--yellow); }
+  .tag-trade { background: rgba(212,168,67,0.15); color: var(--yellow); }
+  .tag-growth{ background: rgba(107,189,91,0.15); color: var(--green); }
+  .tag-metals{ background: rgba(176,140,208,0.15); color: var(--purple); }
+  .tag-infl  { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-policy{ background: rgba(201,168,76,0.15); color: var(--accent); }
+  .tag-val   { background: rgba(107,189,91,0.15); color: var(--green); }
+  .tag-vol   { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-semi  { background: rgba(76,201,176,0.15); color: var(--cyan); }
+  .tag-credit{ background: rgba(176,140,208,0.15); color: var(--purple); }
+  .tag-space { background: rgba(201,168,76,0.15); color: var(--accent); }
+  .tag-misc  { background: rgba(138,128,112,0.15); color: var(--muted); }
+  .verdict-bar { background: var(--accent); color: #0a0a08; padding: 14px 20px; border-radius: 8px; margin-bottom: 20px; font-weight: 700; font-size: 1.05em; font-family: 'Noto Serif TC', serif; }
+  .section { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 22px; margin-bottom: 18px; }
+  .section h2 { color: var(--gold); font-size: 1.15em; margin-bottom: 12px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+  .section h3 { color: var(--accent); font-size: 0.95em; margin: 14px 0 6px; }
+  .article { margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid rgba(42,40,32,0.7); }
+  .article:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .article-title { color: var(--text-bright); font-weight: 700; font-size: 0.95em; margin-bottom: 4px; }
+  .article-title-cn { color: var(--muted); font-size: 0.85em; margin-bottom: 8px; }
+  .article p { font-size: 0.9em; margin: 6px 0; }
+  .data-point { background: rgba(201,168,76,0.05); padding: 8px 12px; border-radius: 6px; margin: 8px 0; font-size: 0.85em; border: 1px solid rgba(201,168,76,0.12); }
+  .data-point .num { color: var(--text-bright); font-weight: 700; }
+  .implication { background: rgba(201,168,76,0.06); border-left: 3px solid var(--accent); padding: 10px 14px; margin: 10px 0; border-radius: 0 6px 6px 0; font-size: 0.88em; }
+  .implication .label { color: var(--accent); font-weight: 700; font-size: 0.8em; text-transform: uppercase; margin-bottom: 4px; }
+  .red-team { background: rgba(224,85,69,0.06); border: 1px solid rgba(224,85,69,0.25); border-radius: 8px; padding: 18px; margin: 18px 0; }
+  .red-team-title { color: var(--red); font-weight: 700; font-size: 0.95em; margin-bottom: 10px; font-family: 'Playfair Display', serif; }
+  .red-team ul { padding-left: 18px; }
+  .red-team li { margin: 5px 0; font-size: 0.88em; }
+  .callout { background: rgba(201,168,76,0.06); border: 1px solid rgba(201,168,76,0.25); border-radius: 8px; padding: 18px; margin: 18px 0; }
+  .callout-title { color: var(--accent); font-weight: 700; font-size: 0.95em; margin-bottom: 8px; font-family: 'Playfair Display', 'Noto Serif TC', serif; }
+  .callout ul { padding-left: 18px; }
+  .callout li { margin: 5px 0; font-size: 0.88em; }
+  ul { padding-left: 18px; }
+  li { margin: 4px 0; font-size: 0.88em; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(201,168,76,0.05); padding: 12px; border-radius: 6px; text-align: center; border: 1px solid rgba(201,168,76,0.1); }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: var(--gold); font-family: 'Playfair Display', serif; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
+  .toc { background: rgba(201,168,76,0.04); border: 1px solid rgba(201,168,76,0.18); border-radius: 8px; padding: 16px 20px; margin-bottom: 20px; }
+  .toc-title { color: var(--accent); font-weight: 700; font-size: 0.9em; margin-bottom: 8px; }
+  .toc a { color: var(--accent); text-decoration: none; font-size: 0.88em; }
+  .toc a:hover { text-decoration: underline; color: var(--gold); }
+  .toc ol { padding-left: 20px; }
+  .toc li { margin: 4px 0; }
+  .nav-links { display: flex; justify-content: space-between; margin: 20px 0; font-size: 0.85em; }
+  .nav-links a { color: var(--accent); text-decoration: none; }
+  .nav-links a:hover { text-decoration: underline; color: var(--gold); }
+  .divider { height: 1px; background: linear-gradient(90deg, transparent, var(--accent), transparent); margin: 24px 0; opacity: 0.4; }
+  .footer { text-align: center; color: var(--muted); font-size: 0.75em; margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--border); }
+  .footer a { color: var(--accent); text-decoration: none; }
+</style>
+<script>if(window.self===window.top&&sessionStorage.getItem("student_auth")!=="1"){document.body.innerHTML="";window.location.replace("student.html");}</script>
+</head>
+<body>
+
+<h1>彭博研究摘要</h1>
+<p class="subtitle">第126期 | 美伊博弈升級與地緣風險重估</p>
+<span class="issue-badge">2026年七月中旬更新</span>
+
+<div class="verdict-bar">結論：美伊陷入「襲船—報復—封鎖」低烈度消耗戰，霍爾木茲風險溢價將長期化 — 持有Brent看漲期權對沖尾部風險，迴避土耳其里拉資產至2027年</div>
+
+<div class="nav-links">
+  <span><a href="newsletter_125_japan.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="toc">
+  <div class="toc-title">目錄</div>
+  <ol>
+    <li><a href="#us-iran-hormuz">美伊衝突 霍爾木茲僵局：封鎖重啟，代價高昂</a></li>
+    <li><a href="#nato-trump">北約 北約表面團結，歐洲自主加速</a></li>
+    <li><a href="#turkey-election">土耳其 戰火改寫艾爾多安的選舉時間表</a></li>
+    <li><a href="#red-team">Red Team 反面論證</a></li>
+    <li><a href="#takeaways">基金經理人重點摘要</a></li>
+  </ol>
+</div>
+
+<div class="section" id="us-iran-hormuz">
+  <h2><span class="tag tag-misc">美伊衝突</span> 霍爾木茲僵局：封鎖重啟，代價高昂</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--red)">80+</div><div class="lbl">美軍最新一輪
+對伊打擊目標數</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">$3,100-4,500萬</div><div class="lbl">封鎖行動
+每日開支</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">142艘</div><div class="lbl">前次封鎖期間
+改道船隻</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">石油豁免撤銷 + 80次空襲 — 美伊重回以打促談</div>
+    <p>伊朗襲擊多艘商業油輪後，美國對伊朗目標發動超過 <span style="color:#f0ebe0;font-weight:700">80次打擊</span>，摧毀逾 <span style="color:#f0ebe0;font-weight:700">60艘IRGC快艇</span>，川普在安卡拉北約峰會上宣布停火「結束」。更關鍵的是，美國週二撤銷了原定持續至 <span style="color:#f0ebe0;font-weight:700">8月</span> 的對伊石油銷售豁免 — 該豁免是6月17日諒解備忘錄的核心組成部分，撤銷後交易商對任何未來豁免的信任度將大幅降低。伊朗則再度以無人機和飛彈襲擊巴林與科威特作為回應。彭博經濟研究認為，這仍是雙方「以牙還牙」爭奪談判籌碼的熟悉模式的延續，雙方都想避免全面戰爭，但Brent已聞聲上漲，市場正在重新定價衝突長期化。</p>
+    <div class="data-point">美軍打擊目標：<span style="color:#f0ebe0;font-weight:700">80+個</span> &nbsp;|&nbsp; IRGC快艇被毀：<span style="color:#f0ebe0;font-weight:700">60+艘</span> &nbsp;|&nbsp; 石油豁免：<span style="color:#f0ebe0;font-weight:700">已撤銷</span>（原定至8月） &nbsp;|&nbsp; 伊朗反擊目標：<span style="color:#f0ebe0;font-weight:700">巴林、科威特</span></div>
+    <div class="implication"><div class="label">投資啟示</div>豁免撤銷意味伊朗石油回歸市場的路徑再度受阻，供給端風險溢價回升。<span style="color:#f0ebe0;font-weight:700">持有Brent看漲期權</span>，並警惕停火談判反覆帶來的雙向波動。</div>
+  </div>
+  <div class="article">
+    <div class="article-title">川普的霍爾木茲新計畫 — 封鎖易、護航難、買單更難</div>
+    <p>美東時間7月14日下午4點，美國恢復對伊海上封鎖。前次封鎖持續 <span style="color:#f0ebe0;font-weight:700">66天</span>、導致 <span style="color:#f0ebe0;font-weight:700">142艘船隻改道</span>，每日開支達 <span style="color:#f0ebe0;font-weight:700">3,100萬至4,500萬美元</span>。川普曾提議對所有過峽貨物徵收 <span style="color:#f0ebe0;font-weight:700">20%</span> 「補償費」，但不到 <span style="color:#f0ebe0;font-weight:700">24小時</span> 便改口，轉而尋求以海灣國家貿易投資協議取代。歷史上有盟友分攤先例 — 1991年海灣戰爭 <span style="color:#f0ebe0;font-weight:700">611億美元</span> 總成本中，海灣及其他國家承擔了 <span style="color:#f0ebe0;font-weight:700">445億美元</span> — 但就護航收費則史無前例。若美國改為海軍直接護航，伊朗曾對美艦開火，升級風險顯著。彭博經濟研究判斷雙方都不會讓步：德黑蘭視海峽為核心籌碼，華盛頓則堅持航行自由，低烈度衝突將成為可預見未來的常態。</p>
+    <div class="data-point">封鎖恢復：<span style="color:#f0ebe0;font-weight:700">7月14日</span> &nbsp;|&nbsp; 前次封鎖時長：<span style="color:#f0ebe0;font-weight:700">66天</span> &nbsp;|&nbsp; 每日成本：<span style="color:#f0ebe0;font-weight:700">$3,100-4,500萬</span> &nbsp;|&nbsp; 1991年海灣戰爭盟友分攤：<span style="color:#f0ebe0;font-weight:700">$445億/$611億</span></div>
+    <div class="implication"><div class="label">投資啟示</div>封鎖長期化 = 航運與保險成本結構性上移。<span style="color:#f0ebe0;font-weight:700">增持油運（VLCC運費受益）與能源股</span>，同時預留倉位應對誤判升級情境。</div>
+  </div>
+
+</div>
+
+<div class="section" id="nato-trump">
+  <h2><span class="tag tag-misc">北約</span> 北約表面團結，歐洲自主加速</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val">3.5%/5%</div><div class="lbl">核心國防開支目標
+/ 2035年總體目標</div></div>
+    <div class="stat"><div class="val" style="color:var(--green)">€700億</div><div class="lbl">2026年對烏
+軍援承諾</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">2028年</div><div class="lbl">烏克蘭本地化生產
+愛國者攔截彈最早時點</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">安卡拉峰會：團結之下暗流涌動</div>
+    <p>北約領導人在安卡拉峰會成功避免與川普公開衝突，宣布數十億防務合同並確保美國對烏克蘭更堅定承諾。但川普再次點名西班牙未達標，據報美國財政部正起草可能實施禁運的西班牙產品清單 — 此舉將危及歐盟正準備批准的美歐貿易協議。彭博經濟研究預計僅部分盟國能達到核心國防開支占GDP <span style="color:#f0ebe0;font-weight:700">3.5%</span> 的目標及2035年 <span style="color:#f0ebe0;font-weight:700">5%</span> 總體目標。歐洲正加速自主防務：英法德聯合開發遠程打擊能力、採購多達 <span style="color:#f0ebe0;font-weight:700">10架</span> Saab GlobalEye預警機、投資反無人機能力；但採購Northrop Grumman MQ-4C等交易顯示對美依賴猶存。北約承諾2026年向烏克蘭提供 <span style="color:#f0ebe0;font-weight:700">700億歐元</span>（800億美元）軍援，惟愛國者攔截彈短缺無解，本地化生產最早 <span style="color:#f0ebe0;font-weight:700">2028年</span> 才能實現。</p>
+    <div class="data-point">對烏軍援：<span style="color:#f0ebe0;font-weight:700">€700億/2026年</span>（2027年類似規模） &nbsp;|&nbsp; 國防開支目標：<span style="color:#f0ebe0;font-weight:700">GDP 3.5%核心 / 5%至2035</span> &nbsp;|&nbsp; GlobalEye採購：<span style="color:#f0ebe0;font-weight:700">最多10架</span> &nbsp;|&nbsp; 禁運風險標的：<span style="color:#f0ebe0;font-weight:700">西班牙石材、水泥、機械</span></div>
+    <div class="implication"><div class="label">投資啟示</div>歐洲防務開支上行是十年級別的結構性趨勢。<span style="color:#f0ebe0;font-weight:700">做多歐洲國防股</span>（Rheinmetall、Saab等），並關注美西貿易摩擦對美歐貿易協議的外溢風險。</div>
+  </div>
+
+</div>
+
+<div class="section" id="turkey-election">
+  <h2><span class="tag tag-misc">土耳其</span> 戰火改寫艾爾多安的選舉時間表</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--orange)">2027末-2028初</div><div class="lbl">預期選舉窗口
+（由2027年3-8月推遲）</div></div>
+    <div class="stat"><div class="val">2028年5月</div><div class="lbl">艾爾多安
+現任期屆滿</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">儲備下降</div><div class="lbl">央行為穩定里拉
+消耗外匯儲備</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">伊朗戰爭 + 司法打壓 — 土耳其提前選舉窗口後移</div>
+    <p>伊朗戰爭推高了土耳其的能源帳單、打擊里拉信心、加深外部融資需求，並推升通膨與利率前景；對反對派的司法打壓進一步迫使央行消耗儲備。彭博經濟研究因此將預期選舉窗口從 <span style="color:#f0ebe0;font-weight:700">2027年3月至8月</span> 推遲至 <span style="color:#f0ebe0;font-weight:700">2027年末至2028年初</span> — 即艾爾多安 <span style="color:#f0ebe0;font-weight:700">2028年5月</span> 任期屆滿之前。歷史經驗顯示，消費者信心與里拉穩定是執政黨勝選的兩大可靠前瞻指標，對應四個變數：名義工資增長、通膨、政策利率與淨儲備。2026年7月至2027年3月的第一窗口里拉支撐強但通膨侵蝕購買力；2027年二三季度央行降息將放緩儲備積累；唯有更晚的窗口能同時滿足購買力回升、儲備重建與正實際利率三大條件。</p>
+    <div class="data-point">原選舉窗口：<span style="color:#f0ebe0;font-weight:700">2027年3-8月</span> &nbsp;|&nbsp; 新窗口：<span style="color:#f0ebe0;font-weight:700">2027年末-2028年初</span> &nbsp;|&nbsp; 任期屆滿：<span style="color:#f0ebe0;font-weight:700">2028年5月</span> &nbsp;|&nbsp; 勝選前瞻指標：<span style="color:#f0ebe0;font-weight:700">消費者信心 + 里拉穩定</span></div>
+    <div class="implication"><div class="label">投資啟示</div>選前央行將維持高利率、優先重建儲備，但戰爭成本與政治風險積壓。<span style="color:#f0ebe0;font-weight:700">迴避土耳其里拉資產</span>，若持有硬通貨土債，優先短久期。</div>
+  </div>
+
+</div>
+
+<div class="divider"></div>
+
+<div class="red-team" id="red-team">
+  <div class="red-team-title">&#128308; Red Team — 核心假設與反面論證</div>
+  <ul>
+    <li>假設1：美伊雙方均理性克制，衝突將維持低烈度、不會演變為全面戰爭</li>
+    <li>假設2：海灣國家願意以貿易投資協議實質分攤美國護航成本，封鎖行動財政上可持續</li>
+    <li>假設3：歐洲防務開支承諾（3.5%/5%目標）將實際兌現並轉化為國防企業訂單</li>
+    <li style="color:var(--red)">風險1：伊朗曾對執行護航的美艦直接開火，「自由行動」僅一天便被放棄 — 誤判或人員傷亡可能在數日內將低烈度衝突推向大規模對抗，屆時Brent的跳空幅度將遠超漸進式定價</li>
+    <li style="color:var(--red)">風險2：就護航向商船或第三國收費史無前例，川普的20%費用計畫24小時內夭折，顯示成本分攤機制脆弱；封鎖每日耗資3,100-4,500萬美元且削弱美軍戰備，國內政治壓力可能迫使方案再度轉向</li>
+    <li style="color:var(--red)">風險3：彭博經濟研究預計僅部分盟國能達標3.5%，川普對西班牙的禁運威脅若兌現，反而危及美歐貿易協議，歐洲防務股的訂單兌現節奏可能慢於估值隱含預期</li>
+  </ul>
+  <p style="margin-top:10px;padding:10px 14px;background:rgba(224,85,69,0.04);border-radius:6px;font-size:0.9em;border-left:3px solid var(--red)">「低烈度長期化」的核心判斷成立 — 雙方過去四個月的行為模式（襲船→報復→封鎖→談判停滯）高度一致，且均明確迴避全面戰爭。但這是一個尾部風險肥厚的均衡：封鎖已重啟、豁免已撤銷、停火已被宣告結束，升級的引線比6月更短。持有Brent上行保護的成本應視為必要保費而非可選項。若美國海軍轉向直接護航且伊朗再次開火，判斷即告失效，屆時應立即上調能源與國防倉位。</p>
+</div>
+
+<div class="callout" id="takeaways">
+  <div class="callout-title">基金經理人重點摘要</div>
+  <ul>
+    <li><strong>美伊衝突：</strong>石油豁免撤銷、封鎖7月14日重啟，低烈度消耗戰成為新常態。持有Brent看漲期權對沖尾部風險。</li>
+    <li><strong>航運能源：</strong>前次封鎖致142艘船改道，護航成本每日數百萬美元起。增持油運與能源股，受益於運費與風險溢價結構性上移。</li>
+    <li><strong>歐洲國防：</strong>北約峰會落地數十億防務合同，對烏軍援2026年達€700億。做多歐洲國防股（Rheinmetall、Saab），十年級別開支上行週期。</li>
+    <li><strong>美歐貿易：</strong>川普威脅對西班牙禁運（石材、水泥、機械為可能標的），美歐貿易協議批准存在外溢風險，關注歐洲出口板塊波動。</li>
+    <li><strong>土耳其：</strong>選舉窗口推遲至2027年末-2028年初，央行選前維持高利率並重建儲備。迴避里拉資產，硬通貨土債取短久期。</li>
+  </ul>
+</div>
+
+<div class="nav-links">
+  <span><a href="newsletter_125_japan.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="footer">
+  彭博研究摘要 | 僅供教學與討論用途 | 2026年7月17日<br>
+  資料來源：Bloomberg Intelligence, Bloomberg Economics, Bloomberg News<br>
+  <a href="https://www.patreon.com/Aireturn">Patreon</a> · <a href="https://t.me/AIreturn">Telegram</a> · Threads @aireturn88
+</div>
+
+</body>
+</html>

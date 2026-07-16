@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>彭博研究摘要 #125 — 日銀鋼絲之上：升息路徑、日圓防衛與高市財政新政</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Noto+Serif+TC:wght@400;700&family=Source+Sans+Pro:wght@400;600;700&display=swap');
+  :root { --bg: #0a0a08; --card: #141410; --border: #2a2820; --accent: #c9a84c;
+          --gold: #f0d87a; --gold-dim: #c4b896; --text: #e0d8c8; --text-bright: #f0ebe0; --muted: #8a8070;
+          --green: #6bbd5b; --red: #e05545; --yellow: #d4a843; --orange: #d49040;
+          --purple: #b08cd0; --cyan: #4cc9b0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { background: #0a0a08 !important; }
+  body { color: var(--text); font-family: 'Source Sans Pro', 'Noto Serif TC', 'Microsoft JhengHei', sans-serif; line-height: 1.8; padding: 24px; max-width: 880px; margin: 0 auto; }
+  h1 { font-family: 'Playfair Display', 'Noto Serif TC', serif; color: var(--gold); font-size: 1.8em; margin-bottom: 4px; font-weight: 900; letter-spacing: 0.02em; }
+  h2 { font-family: 'Playfair Display', 'Noto Serif TC', serif; }
+  .subtitle { color: var(--text-bright); font-size: 0.95em; margin-bottom: 8px; font-family: 'Noto Serif TC', serif; }
+  .issue-badge { display: inline-block; background: rgba(201,168,76,0.15); color: var(--accent); padding: 4px 12px; border-radius: 12px; font-size: 0.8em; font-weight: 600; margin-bottom: 20px; border: 1px solid rgba(201,168,76,0.3); }
+  .tag { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 0.72em; font-weight: 600; margin-right: 4px; }
+  .tag-rates { background: rgba(201,168,76,0.15); color: var(--accent); }
+  .tag-china { background: rgba(212,144,64,0.15); color: var(--orange); }
+  .tag-japan { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-geo   { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-oil   { background: rgba(212,168,67,0.15); color: var(--yellow); }
+  .tag-trade { background: rgba(212,168,67,0.15); color: var(--yellow); }
+  .tag-growth{ background: rgba(107,189,91,0.15); color: var(--green); }
+  .tag-metals{ background: rgba(176,140,208,0.15); color: var(--purple); }
+  .tag-infl  { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-policy{ background: rgba(201,168,76,0.15); color: var(--accent); }
+  .tag-val   { background: rgba(107,189,91,0.15); color: var(--green); }
+  .tag-vol   { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-semi  { background: rgba(76,201,176,0.15); color: var(--cyan); }
+  .tag-credit{ background: rgba(176,140,208,0.15); color: var(--purple); }
+  .tag-space { background: rgba(201,168,76,0.15); color: var(--accent); }
+  .tag-misc  { background: rgba(138,128,112,0.15); color: var(--muted); }
+  .verdict-bar { background: var(--accent); color: #0a0a08; padding: 14px 20px; border-radius: 8px; margin-bottom: 20px; font-weight: 700; font-size: 1.05em; font-family: 'Noto Serif TC', serif; }
+  .section { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 22px; margin-bottom: 18px; }
+  .section h2 { color: var(--gold); font-size: 1.15em; margin-bottom: 12px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+  .section h3 { color: var(--accent); font-size: 0.95em; margin: 14px 0 6px; }
+  .article { margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid rgba(42,40,32,0.7); }
+  .article:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .article-title { color: var(--text-bright); font-weight: 700; font-size: 0.95em; margin-bottom: 4px; }
+  .article-title-cn { color: var(--muted); font-size: 0.85em; margin-bottom: 8px; }
+  .article p { font-size: 0.9em; margin: 6px 0; }
+  .data-point { background: rgba(201,168,76,0.05); padding: 8px 12px; border-radius: 6px; margin: 8px 0; font-size: 0.85em; border: 1px solid rgba(201,168,76,0.12); }
+  .data-point .num { color: var(--text-bright); font-weight: 700; }
+  .implication { background: rgba(201,168,76,0.06); border-left: 3px solid var(--accent); padding: 10px 14px; margin: 10px 0; border-radius: 0 6px 6px 0; font-size: 0.88em; }
+  .implication .label { color: var(--accent); font-weight: 700; font-size: 0.8em; text-transform: uppercase; margin-bottom: 4px; }
+  .red-team { background: rgba(224,85,69,0.06); border: 1px solid rgba(224,85,69,0.25); border-radius: 8px; padding: 18px; margin: 18px 0; }
+  .red-team-title { color: var(--red); font-weight: 700; font-size: 0.95em; margin-bottom: 10px; font-family: 'Playfair Display', serif; }
+  .red-team ul { padding-left: 18px; }
+  .red-team li { margin: 5px 0; font-size: 0.88em; }
+  .callout { background: rgba(201,168,76,0.06); border: 1px solid rgba(201,168,76,0.25); border-radius: 8px; padding: 18px; margin: 18px 0; }
+  .callout-title { color: var(--accent); font-weight: 700; font-size: 0.95em; margin-bottom: 8px; font-family: 'Playfair Display', 'Noto Serif TC', serif; }
+  .callout ul { padding-left: 18px; }
+  .callout li { margin: 5px 0; font-size: 0.88em; }
+  ul { padding-left: 18px; }
+  li { margin: 4px 0; font-size: 0.88em; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(201,168,76,0.05); padding: 12px; border-radius: 6px; text-align: center; border: 1px solid rgba(201,168,76,0.1); }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: var(--gold); font-family: 'Playfair Display', serif; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
+  .toc { background: rgba(201,168,76,0.04); border: 1px solid rgba(201,168,76,0.18); border-radius: 8px; padding: 16px 20px; margin-bottom: 20px; }
+  .toc-title { color: var(--accent); font-weight: 700; font-size: 0.9em; margin-bottom: 8px; }
+  .toc a { color: var(--accent); text-decoration: none; font-size: 0.88em; }
+  .toc a:hover { text-decoration: underline; color: var(--gold); }
+  .toc ol { padding-left: 20px; }
+  .toc li { margin: 4px 0; }
+  .nav-links { display: flex; justify-content: space-between; margin: 20px 0; font-size: 0.85em; }
+  .nav-links a { color: var(--accent); text-decoration: none; }
+  .nav-links a:hover { text-decoration: underline; color: var(--gold); }
+  .divider { height: 1px; background: linear-gradient(90deg, transparent, var(--accent), transparent); margin: 24px 0; opacity: 0.4; }
+  .footer { text-align: center; color: var(--muted); font-size: 0.75em; margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--border); }
+  .footer a { color: var(--accent); text-decoration: none; }
+</style>
+<script>if(window.self===window.top&&sessionStorage.getItem("student_auth")!=="1"){document.body.innerHTML="";window.location.replace("student.html");}</script>
+</head>
+<body>
+
+<h1>彭博研究摘要</h1>
+<p class="subtitle">第125期 | 日銀鋼絲之上：升息路徑、日圓防衛與高市財政新政</p>
+<span class="issue-badge">2026年七月中旬更新</span>
+
+<div class="verdict-bar">結論：日銀12月升息至1.25%路徑明確，JGB殖利率上升反映成長預期而非財政危機 — 維持做空長端JGB，但日圓若破170恐觸發套利平倉風暴，需以USDJPY選擇權對沖尾部風險</div>
+
+<div class="nav-links">
+  <span><a href="newsletter_124_semiconductor_oil.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="toc">
+  <div class="toc-title">目錄</div>
+  <ol>
+    <li><a href="#boj-rate-path">日銀政策 漸進升息不停步，AI景氣添柴火</a></li>
+    <li><a href="#yen-defense">日圓風險 170關口攻防：鷹派護盤的高昂代價</a></li>
+    <li><a href="#takaichi-fiscal">高市財政 蛋白飲經濟學：擠出效應回歸，JGB賣壓非財政危機</a></li>
+    <li><a href="#red-team">Red Team 反面論證</a></li>
+    <li><a href="#takeaways">基金經理人重點摘要</a></li>
+  </ol>
+</div>
+
+<div class="section" id="boj-rate-path">
+  <h2><span class="tag tag-misc">日銀政策</span> 漸進升息不停步，AI景氣添柴火</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val">1.25%</div><div class="lbl">12月政策利率預測
+（現為1%，1995年來最高）</div></div>
+    <div class="stat"><div class="val" style="color:var(--green)">22</div><div class="lbl">2Q短觀大型製造業景氣指數
+（前值17，預期16）</div></div>
+    <div class="stat"><div class="val">1.75%</div><div class="lbl">基準情景終端利率
+（2028年1月達成）</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">日本Primer：長端殖利率震盪中，日銀續行升息路</div>
+    <p>日銀6月將政策利率升至 <span style="color:#f0ebe0;font-weight:700">1%</span>，為 <span style="color:#f0ebe0;font-weight:700">1995年以來最高</span>，主因中東油價推升日本進口通膨風險。國內需求穩固之下，只要薪資動能延續且過往升息未引發金融壓力，日銀將維持漸進升息，彭博經濟研究預計 <span style="color:#f0ebe0;font-weight:700">12月升至1.25%</span>。值得注意的是，日銀同時<span style="color:#f0ebe0;font-weight:700">暫停JGB縮表</span>，以應對長端殖利率波動 — 背後是高市早苗的刺激立場與其對日銀放慢升息的隱性施壓，令長期通膨預期更不穩定。基準路徑下，日銀約每半年升息一次，2027年7月與2028年1月各加25bp，終端利率 <span style="color:#f0ebe0;font-weight:700">1.75%</span>。1月薪資數據強於預期、6月東京CPI剔除水費減免扭曲後底層趨勢依然偏熱，均支持升息路徑延續。</p>
+    <div class="data-point">6月政策利率：<span style="color:#f0ebe0;font-weight:700">1%（1995年來最高）</span> &nbsp;|&nbsp; 12月預測：<span style="color:#f0ebe0;font-weight:700">升至1.25%</span> &nbsp;|&nbsp; 終端利率：<span style="color:#f0ebe0;font-weight:700">1.75%（2028年1月）</span> &nbsp;|&nbsp; JGB縮表：<span style="color:#f0ebe0;font-weight:700">已暫停</span></div>
+    <div class="implication"><div class="label">投資啟示</div>日銀單一物價穩定使命下，油價衝擊反而傾向<span style="color:#f0ebe0;font-weight:700">提早升息</span>而非推遲。<span style="color:#f0ebe0;font-weight:700">做空日本前端利率期貨（押注12月升息）</span>，並留意JGB縮表暫停對長端的技術性支撐。</div>
+  </div>
+  <div class="article">
+    <div class="article-title">短觀驚喜：AI熱潮外溢終於惠及日本</div>
+    <p>日銀2Q短觀揭示日本經濟的新順風：<span style="color:#f0ebe0;font-weight:700">AI相關需求</span>。大型製造業景氣指數從1Q的17躍升至 <span style="color:#f0ebe0;font-weight:700">22</span>，遠超市場共識的 <span style="color:#f0ebe0;font-weight:700">16</span>，強勢集中於機械與電子設備製造商 — 反映晶片設備、電子元件、半導體材料、伺服器零組件與線纜訂單轉強。這標誌著格局轉變：過去日本一直缺席南韓、台灣享有的AI紅利，如今外溢效應正式啟動，對2Q GDP成長構成利多。配合薪資-物價循環強化（基本薪資穩健上升、冬季獎金豐厚），日銀對達成2%通膨目標的信心增強，今年春鬥有望再現可觀加薪。</p>
+    <div class="data-point">大型製造業景氣指數：<span style="color:#f0ebe0;font-weight:700">22（前值17）</span> &nbsp;|&nbsp; 市場共識：<span style="color:#f0ebe0;font-weight:700">16</span> &nbsp;|&nbsp; 動能來源：<span style="color:#f0ebe0;font-weight:700">晶片設備、伺服器零組件、半導體材料</span></div>
+    <div class="implication"><div class="label">投資啟示</div>AI外溢利多日本半導體設備與電子零組件股。<span style="color:#f0ebe0;font-weight:700">增持日本AI供應鏈（機械、電子設備製造商）</span>，短觀強勢亦鞏固日銀升息底氣。</div>
+  </div>
+
+</div>
+
+<div class="section" id="yen-defense">
+  <h2><span class="tag tag-misc">日圓風險</span> 170關口攻防：鷹派護盤的高昂代價</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--orange)">34%</div><div class="lbl">年底前日圓破170
+機率（分位數回歸模型）</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">-0.8%</div><div class="lbl">鷹派情景下GDP
+較基準情景最大落差</div></div>
+    <div class="stat"><div class="val">2.0%</div><div class="lbl">鷹派情景終端利率
+（vs 基準1.75%）</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">SHOK模型：日銀鷹派護盤日圓，恐贏了戰役輸掉戰爭</div>
+    <p>日圓兌美元破 <span style="color:#f0ebe0;font-weight:700">170</span> 已非尾部風險 — 模型顯示年底前機率達 <span style="color:#f0ebe0;font-weight:700">34%</span>。屆時政治壓力恐迫使日銀轉鷹：每次升息幅度較基準多25bp，終端利率升至 <span style="color:#f0ebe0;font-weight:700">2.0%</span>，觸發日圓套利交易平倉、日圓兩季內升值 <span style="color:#f0ebe0;font-weight:700">10%至約147</span>。SHOK模型量化的代價驚人：2026年4Q出口下降 <span style="color:#f0ebe0;font-weight:700">1.2%</span>、股市下跌 <span style="color:#f0ebe0;font-weight:700">6%</span>，最嚴重時GDP較基準低 <span style="color:#f0ebe0;font-weight:700">0.8%</span>，整體通膨率下降 <span style="color:#f0ebe0;font-weight:700">0.6個百分點</span>、長期跌破2%目標。第一年GDP拖累的 <span style="color:#f0ebe0;font-weight:700">90%</span> 來自匯率渠道；但匯率衝擊消退後，更高的終端利率持續施壓 — 到2029年匯率因素拖累GDP增速0.3pp、利率因素0.2pp。更深層風險難以量化：若被政治逼出來的升息導致通膨跌破2%，日銀多年重建的通膨目標框架公信力將受損。</p>
+    <div class="data-point">破170機率：<span style="color:#f0ebe0;font-weight:700">34%（年底前）</span> &nbsp;|&nbsp; 鷹派情景：<span style="color:#f0ebe0;font-weight:700">出口-1.2%、日股-6%（2026 Q4）</span> &nbsp;|&nbsp; 通膨衝擊：<span style="color:#f0ebe0;font-weight:700">-0.6pp，長期低於2%目標</span> &nbsp;|&nbsp; 日圓反彈：<span style="color:#f0ebe0;font-weight:700">升值10%至~147</span></div>
+    <div class="implication"><div class="label">投資啟示</div>日圓套利交易的尾部風險已實質化。<span style="color:#f0ebe0;font-weight:700">減持日圓套利部位，或買入USDJPY 170上方的反向保護選擇權</span>；若日銀被迫轉鷹，日股（尤其出口股）將首當其衝，<span style="color:#f0ebe0;font-weight:700">避開對匯率敏感的出口權值股</span>。</div>
+  </div>
+
+</div>
+
+<div class="section" id="takaichi-fiscal">
+  <h2><span class="tag tag-misc">高市財政</span> 蛋白飲經濟學：擠出效應回歸，JGB賣壓非財政危機</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val">370兆円</div><div class="lbl">至2040財年17個戰略領域
+公私合計投資</div></div>
+    <div class="stat"><div class="val" style="color:var(--green)">68兆円</div><div class="lbl">半導體領域投資
+（另有32.7兆投入數據中心/電池）</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">~0%</div><div class="lbl">日本潛在GDP增速
+（內閣府與日銀估算）</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">擠出效應重現 — 推高JGB殖利率的是成長預期，不是財政恐慌</div>
+    <p>高市早苗去年10月上台以來，日本長端國債殖利率快速上升，市場普遍歸咎於財政惡化擔憂。但彭博經濟研究的分解模型給出更簡單的答案：教科書式的<span style="color:#f0ebe0;font-weight:700">「擠出效應」</span>。模型顯示，日本宏觀衝擊同時推高了 <span style="color:#f0ebe0;font-weight:700">10年期JGB殖利率、日經225指數與日圓</span> — 這一組合結構上排除了財政恐慌（後者會引發日股與日圓同步拋售），反映的是市場對財政支出至少暫時提振成長的預期。擠出效應沉寂多年後回歸，源於日銀 <span style="color:#f0ebe0;font-weight:700">2024年3月</span> 退出殖利率曲線控制等壓制長端的非常規政策。但警訊仍在：若高市的支出最終淪為對成長貢獻甚微的補貼或地方利益輸送，成長預期消退後，<span style="color:#f0ebe0;font-weight:700">真正的財政風險溢價</span>才會登場推高殖利率。</p>
+    <div class="data-point">殖利率上升主因：<span style="color:#f0ebe0;font-weight:700">擠出效應（宏觀成長衝擊）</span> &nbsp;|&nbsp; 模型佐證：<span style="color:#f0ebe0;font-weight:700">JGB殖利率、日經225、日圓同步走高</span> &nbsp;|&nbsp; 結構轉折點：<span style="color:#f0ebe0;font-weight:700">2024年3月日銀退出YCC</span></div>
+    <div class="implication"><div class="label">投資啟示</div>JGB殖利率上升是「良性」的成長定價，非財政危機前兆 — <span style="color:#f0ebe0;font-weight:700">維持做空長端JGB（基於成長與供給邏輯）</span>，暫不需為財政崩盤情景定價；但需追蹤財政支出質量，作為敘事轉變的領先指標。</div>
+  </div>
+  <div class="article">
+    <div class="article-title">蛋白飲 vs 感冒藥：高市的供給側藥方與「實體AI」豪賭</div>
+    <p>市場聚焦高市支出計畫的規模與財政風險，卻忽略其本質：這可能是日本<span style="color:#f0ebe0;font-weight:700">近三十年來最重要的財政政策轉變</span>。過去的財政應對手冊靠發現金、搞公共工程 — 如同「感冒藥」只緩解周期性症狀；高市的路線圖則是「蛋白飲」，目標直指供給能力與長期成長。至2040財年，日本將在17個戰略領域投入超過 <span style="color:#f0ebe0;font-weight:700">370兆日圓</span> 公私投資，其中 <span style="color:#f0ebe0;font-weight:700">68兆</span> 投向半導體、<span style="color:#f0ebe0;font-weight:700">32.7兆</span> 投向數據中心與電池、<span style="color:#f0ebe0;font-weight:700">10.5兆</span> 專攻「實體AI」。診斷切中要害：內閣府與日銀估算的潛在增速<span style="color:#f0ebe0;font-weight:700">均接近零</span>。日本勞動力短缺最嚴重的領域恰是機器難以取代人工之處（有機床沒操作員、有卡車沒司機），實體AI讓機床向熟練工學習、卡車無人配送 — 對已被缺工制約產出的日本，AI回報率高於多數主要經濟體。</p>
+    <div class="data-point">總投資：<span style="color:#f0ebe0;font-weight:700">370兆日圓（至FY2040，17領域）</span> &nbsp;|&nbsp; 半導體：<span style="color:#f0ebe0;font-weight:700">68兆</span> &nbsp;|&nbsp; 數據中心+電池：<span style="color:#f0ebe0;font-weight:700">32.7兆</span> &nbsp;|&nbsp; 實體AI：<span style="color:#f0ebe0;font-weight:700">10.5兆</span> &nbsp;|&nbsp; 潛在增速：<span style="color:#f0ebe0;font-weight:700">接近0%</span></div>
+    <div class="implication"><div class="label">投資啟示</div>供給側轉向若成功，將結構性抬升日本潛在成長與中性利率。<span style="color:#f0ebe0;font-weight:700">佈局日本半導體設備、工廠自動化與機器人（實體AI受益股）</span>，作為高市財政的長線多頭表達。</div>
+  </div>
+
+</div>
+
+<div class="divider"></div>
+
+<div class="red-team" id="red-team">
+  <div class="red-team-title">&#128308; Red Team — 核心假設與反面論證</div>
+  <ul>
+    <li>假設1：日銀能按自身節奏漸進升息（12月至1.25%、終端1.75%），不被政治壓力打亂</li>
+    <li>假設2：JGB殖利率上升由擠出效應與成長預期驅動，財政風險溢價作用有限</li>
+    <li>假設3：薪資-物價循環持續強化，支撐2%通膨目標與升息正當性</li>
+    <li style="color:var(--red)">風險1：日圓年底前破170的機率已達34%，屆時政府恐被迫容忍日銀急轉鷹派 — 終端利率2.0%情景下GDP較基準低0.8%、日股跌6%，漸進路徑假設瓦解</li>
+    <li style="color:var(--red)">風險2：若370兆日圓支出淪為低效補貼與地方利益輸送，成長預期消退後，真正的財政風險溢價將接棒推高長端殖利率，且伴隨日股日圓同步拋售</li>
+    <li style="color:var(--red)">風險3：油價急升雖短期傾向促使日銀提早升息，但會擠壓企業利潤進而威脅明年春鬥加薪，動搖薪資-物價循環的根基</li>
+  </ul>
+  <p style="margin-top:10px;padding:10px 14px;background:rgba(224,85,69,0.04);border-radius:6px;font-size:0.9em;border-left:3px solid var(--red)">核心邏輯成立：只要USDJPY守在170下方，日銀12月升息至1.25%與「良性」JGB殖利率上升的敘事都有堅實數據支撐（短觀22、薪資強勁、東京CPI偏熱）。但34%的破位機率已不容忽視 — 這不是尾部而是實質情景。若日圓破170且日銀被迫加速升息，做空JGB的邏輯反而強化（終端利率升至2.0%），但日股與出口部位將承受出口-1.2%、股市-6%的衝擊。策略上：JGB空頭可留，日股多頭必須搭配USDJPY 170敲入的對沖。</p>
+</div>
+
+<div class="callout" id="takeaways">
+  <div class="callout-title">基金經理人重點摘要</div>
+  <ul>
+    <li><strong>日銀：</strong>6月已升至1%（1995年來最高），12月料再升至1.25%，終端1.75%。薪資與東京CPI均支持路徑延續。做空日本前端利率期貨。</li>
+    <li><strong>日圓：</strong>破170機率34%，已非尾部風險。若觸發日銀轉鷹，套利平倉將推動日圓兩季升值10%至147。減持日圓套利，買入USDJPY選擇權保護。</li>
+    <li><strong>JGB：</strong>長端殖利率上升是擠出效應（成長定價）而非財政恐慌 — 日股、日圓與殖利率同步走高即為佐證。維持做空長端JGB，暫不為財政危機定價。</li>
+    <li><strong>日股：</strong>短觀大型製造業指數22遠超預期，AI外溢終於啟動。增持晶片設備、伺服器零組件供應鏈；但出口權值股需防日圓急升情景。</li>
+    <li><strong>高市財政：</strong>至2040年370兆日圓供給側投資（半導體68兆、實體AI 10.5兆），劍指接近零的潛在增速。長線佈局工廠自動化與機器人。</li>
+    <li><strong>對沖：</strong>核心風險組合為「日圓破170＋日銀被迫急轉鷹」：GDP -0.8%、日股-6%、通膨跌破2%。日股多頭部位必須搭配匯率對沖。</li>
+  </ul>
+</div>
+
+<div class="nav-links">
+  <span><a href="newsletter_124_semiconductor_oil.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="footer">
+  彭博研究摘要 | 僅供教學與討論用途 | 2026年7月17日<br>
+  資料來源：Bloomberg Intelligence, Bloomberg Economics, Bloomberg News<br>
+  <a href="https://www.patreon.com/Aireturn">Patreon</a> · <a href="https://t.me/AIreturn">Telegram</a> · Threads @aireturn88
+</div>
+
+</body>
+</html>

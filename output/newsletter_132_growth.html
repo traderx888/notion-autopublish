@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>彭博研究摘要 #132 — 世界盃與Prime Day撐起美國消費：零售數據表面降溫、內裡強勁</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Noto+Serif+TC:wght@400;700&family=Source+Sans+Pro:wght@400;600;700&display=swap');
+  :root { --bg: #0a0a08; --card: #141410; --border: #2a2820; --accent: #c9a84c;
+          --gold: #f0d87a; --gold-dim: #c4b896; --text: #e0d8c8; --text-bright: #f0ebe0; --muted: #8a8070;
+          --green: #6bbd5b; --red: #e05545; --yellow: #d4a843; --orange: #d49040;
+          --purple: #b08cd0; --cyan: #4cc9b0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { background: #0a0a08 !important; }
+  body { color: var(--text); font-family: 'Source Sans Pro', 'Noto Serif TC', 'Microsoft JhengHei', sans-serif; line-height: 1.8; padding: 24px; max-width: 880px; margin: 0 auto; }
+  h1 { font-family: 'Playfair Display', 'Noto Serif TC', serif; color: var(--gold); font-size: 1.8em; margin-bottom: 4px; font-weight: 900; letter-spacing: 0.02em; }
+  h2 { font-family: 'Playfair Display', 'Noto Serif TC', serif; }
+  .subtitle { color: var(--text-bright); font-size: 0.95em; margin-bottom: 8px; font-family: 'Noto Serif TC', serif; }
+  .issue-badge { display: inline-block; background: rgba(201,168,76,0.15); color: var(--accent); padding: 4px 12px; border-radius: 12px; font-size: 0.8em; font-weight: 600; margin-bottom: 20px; border: 1px solid rgba(201,168,76,0.3); }
+  .tag { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 0.72em; font-weight: 600; margin-right: 4px; }
+  .tag-rates { background: rgba(201,168,76,0.15); color: var(--accent); }
+  .tag-china { background: rgba(212,144,64,0.15); color: var(--orange); }
+  .tag-japan { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-geo   { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-oil   { background: rgba(212,168,67,0.15); color: var(--yellow); }
+  .tag-trade { background: rgba(212,168,67,0.15); color: var(--yellow); }
+  .tag-growth{ background: rgba(107,189,91,0.15); color: var(--green); }
+  .tag-metals{ background: rgba(176,140,208,0.15); color: var(--purple); }
+  .tag-infl  { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-policy{ background: rgba(201,168,76,0.15); color: var(--accent); }
+  .tag-val   { background: rgba(107,189,91,0.15); color: var(--green); }
+  .tag-vol   { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-semi  { background: rgba(76,201,176,0.15); color: var(--cyan); }
+  .tag-credit{ background: rgba(176,140,208,0.15); color: var(--purple); }
+  .tag-space { background: rgba(201,168,76,0.15); color: var(--accent); }
+  .tag-misc  { background: rgba(138,128,112,0.15); color: var(--muted); }
+  .verdict-bar { background: var(--accent); color: #0a0a08; padding: 14px 20px; border-radius: 8px; margin-bottom: 20px; font-weight: 700; font-size: 1.05em; font-family: 'Noto Serif TC', serif; }
+  .section { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 22px; margin-bottom: 18px; }
+  .section h2 { color: var(--gold); font-size: 1.15em; margin-bottom: 12px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+  .section h3 { color: var(--accent); font-size: 0.95em; margin: 14px 0 6px; }
+  .article { margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid rgba(42,40,32,0.7); }
+  .article:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .article-title { color: var(--text-bright); font-weight: 700; font-size: 0.95em; margin-bottom: 4px; }
+  .article-title-cn { color: var(--muted); font-size: 0.85em; margin-bottom: 8px; }
+  .article p { font-size: 0.9em; margin: 6px 0; }
+  .data-point { background: rgba(201,168,76,0.05); padding: 8px 12px; border-radius: 6px; margin: 8px 0; font-size: 0.85em; border: 1px solid rgba(201,168,76,0.12); }
+  .data-point .num { color: var(--text-bright); font-weight: 700; }
+  .implication { background: rgba(201,168,76,0.06); border-left: 3px solid var(--accent); padding: 10px 14px; margin: 10px 0; border-radius: 0 6px 6px 0; font-size: 0.88em; }
+  .implication .label { color: var(--accent); font-weight: 700; font-size: 0.8em; text-transform: uppercase; margin-bottom: 4px; }
+  .red-team { background: rgba(224,85,69,0.06); border: 1px solid rgba(224,85,69,0.25); border-radius: 8px; padding: 18px; margin: 18px 0; }
+  .red-team-title { color: var(--red); font-weight: 700; font-size: 0.95em; margin-bottom: 10px; font-family: 'Playfair Display', serif; }
+  .red-team ul { padding-left: 18px; }
+  .red-team li { margin: 5px 0; font-size: 0.88em; }
+  .callout { background: rgba(201,168,76,0.06); border: 1px solid rgba(201,168,76,0.25); border-radius: 8px; padding: 18px; margin: 18px 0; }
+  .callout-title { color: var(--accent); font-weight: 700; font-size: 0.95em; margin-bottom: 8px; font-family: 'Playfair Display', 'Noto Serif TC', serif; }
+  .callout ul { padding-left: 18px; }
+  .callout li { margin: 5px 0; font-size: 0.88em; }
+  ul { padding-left: 18px; }
+  li { margin: 4px 0; font-size: 0.88em; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(201,168,76,0.05); padding: 12px; border-radius: 6px; text-align: center; border: 1px solid rgba(201,168,76,0.1); }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: var(--gold); font-family: 'Playfair Display', serif; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
+  .toc { background: rgba(201,168,76,0.04); border: 1px solid rgba(201,168,76,0.18); border-radius: 8px; padding: 16px 20px; margin-bottom: 20px; }
+  .toc-title { color: var(--accent); font-weight: 700; font-size: 0.9em; margin-bottom: 8px; }
+  .toc a { color: var(--accent); text-decoration: none; font-size: 0.88em; }
+  .toc a:hover { text-decoration: underline; color: var(--gold); }
+  .toc ol { padding-left: 20px; }
+  .toc li { margin: 4px 0; }
+  .nav-links { display: flex; justify-content: space-between; margin: 20px 0; font-size: 0.85em; }
+  .nav-links a { color: var(--accent); text-decoration: none; }
+  .nav-links a:hover { text-decoration: underline; color: var(--gold); }
+  .divider { height: 1px; background: linear-gradient(90deg, transparent, var(--accent), transparent); margin: 24px 0; opacity: 0.4; }
+  .footer { text-align: center; color: var(--muted); font-size: 0.75em; margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--border); }
+  .footer a { color: var(--accent); text-decoration: none; }
+</style>
+<script>if(window.self===window.top&&sessionStorage.getItem("student_auth")!=="1"){document.body.innerHTML="";window.location.replace("student.html");}</script>
+</head>
+<body>
+
+<h1>彭博研究摘要</h1>
+<p class="subtitle">第132期 | 世界盃與Prime Day撐起美國消費：零售數據表面降溫、內裡強勁</p>
+<span class="issue-badge">2026年七月中旬更新</span>
+
+<div class="verdict-bar">結論：6月零售表面放緩全因油價下跌，核心銷售年化增長9.2%、實質消費加速至2%以上 — 消費韌性延續，維持看多美國消費、暫緩押注經濟放緩交易</div>
+
+<div class="nav-links">
+  <span><a href="newsletter_131_rates.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="toc">
+  <div class="toc-title">目錄</div>
+  <ol>
+    <li><a href="#june-retail">零售數據 油價拖累表面數字，核心需求逆勢加速</a></li>
+    <li><a href="#q3-outlook">消費展望 油價紅利延續，Q3實質消費開局強勁</a></li>
+    <li><a href="#red-team">Red Team 反面論證</a></li>
+    <li><a href="#takeaways">基金經理人重點摘要</a></li>
+  </ol>
+</div>
+
+<div class="section" id="june-retail">
+  <h2><span class="tag tag-misc">零售數據</span> 油價拖累表面數字，核心需求逆勢加速</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--orange)">+0.2%</div><div class="lbl">6月零售銷售月增
+（5月為+1.0%）</div></div>
+    <div class="stat"><div class="val" style="color:var(--green)">+0.5%</div><div class="lbl">控制組銷售月增
+（剔除汽車、油、建材、餐飲）</div></div>
+    <div class="stat"><div class="val" style="color:var(--green)">+9.2%</div><div class="lbl">Q2控制組銷售
+年化增速（Q1為5.9%）</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">6月零售實況：世界盃與Prime Day推升核心銷售</div>
+    <p>6月零售銷售月增 <span style="color:#f0ebe0;font-weight:700">0.2%</span>，較5月的 <span style="color:#f0ebe0;font-weight:700">1.0%</span> 明顯降溫，但符合市場與Bloomberg Economics預期。表面放緩幾乎全由油價解釋：汽油價格大跌 <span style="color:#f0ebe0;font-weight:700">9.7%</span>，直接從headline中扣掉 <span style="color:#f0ebe0;font-weight:700">0.42個百分點</span>，汽車銷售則貢獻 <span style="color:#f0ebe0;font-weight:700">+0.35個百分點</span>。剔除汽車、汽油、建材與餐飲的控制組銷售增長 <span style="color:#f0ebe0;font-weight:700">0.5%</span>，第二季年化增速高達 <span style="color:#f0ebe0;font-weight:700">9.2%</span>（前值5.9%）。配合6月通膨讀數為負，實質消費支出在Q2料加速至 <span style="color:#f0ebe0;font-weight:700">2.0%以上</span>，遠高於Q1的 <span style="color:#f0ebe0;font-weight:700">0.5%</span>。7月褐皮書亦印證：世界盃遊客推升紐約酒店入住率與房價，比賽日餐飲銷售明顯轉強。</p>
+    <div class="data-point">汽油拖累headline：<span style="color:#f0ebe0;font-weight:700">-0.42ppt</span> &nbsp;|&nbsp; 汽車貢獻：<span style="color:#f0ebe0;font-weight:700">+0.35ppt</span> &nbsp;|&nbsp; 體育用品銷售：<span style="color:#f0ebe0;font-weight:700">+1.3%</span>（前值0.8%） &nbsp;|&nbsp; 無店面零售（Prime Day）：<span style="color:#f0ebe0;font-weight:700">+1.9%</span>（前值1.4%）</div>
+    <div class="implication"><div class="label">投資啟示</div>Headline低估真實需求，勿被0.2%誤導。實質消費Q2加速確認家庭需求韌性 — <span style="color:#f0ebe0;font-weight:700">維持增持美國消費類股，暫緩衰退對沖交易</span>。</div>
+  </div>
+
+</div>
+
+<div class="section" id="q3-outlook">
+  <h2><span class="tag tag-misc">消費展望</span> 油價紅利延續，Q3實質消費開局強勁</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--green)">-7%</div><div class="lbl">7月至今汽油價格跌幅
+（持續釋放可支配收入）</div></div>
+    <div class="stat"><div class="val" style="color:var(--green)">&gt;2.0%</div><div class="lbl">Q2實質消費支出
+年化增速預估</div></div>
+    <div class="stat"><div class="val">+0.3ppt</div><div class="lbl">餐飲業對6月headline
+預期貢獻（世界盃效應）</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">廉價汽油＝消費者的隱形加薪：Q3動能已在路上</div>
+    <p>Bloomberg Economics在數據公布前已預判：世界盃與Amazon Prime Day提前舉行的消費，將抵銷油價下跌對headline的拖累。此判斷完全兌現。更重要的是前瞻訊號：7月至今汽油價格再跌約 <span style="color:#f0ebe0;font-weight:700">7%</span>，等同對家庭可支配收入的又一次注資，意味實質消費在 <span style="color:#f0ebe0;font-weight:700">3Q開局</span> 便有強勁支撐。去年Prime Day曾為無店面零售貢獻約 <span style="color:#f0ebe0;font-weight:700">0.2個百分點</span>，今年提前舉行同樣發揮作用；世界盃則帶動體育用品、書籍與餐飲消費。即使剔除這些一次性因素，經濟學家仍預期消費需求整個夏季維持穩健 — 廉價能源正在接棒，成為下一階段的消費引擎。</p>
+    <div class="data-point">6月汽油價格：<span style="color:#f0ebe0;font-weight:700">-9.7%</span>（前值-7.0%） &nbsp;|&nbsp; 7月至今汽油：<span style="color:#f0ebe0;font-weight:700">-7%</span> &nbsp;|&nbsp; 6月通膨讀數：<span style="color:#f0ebe0;font-weight:700">負值</span> &nbsp;|&nbsp; 餐飲銷售：<span style="color:#f0ebe0;font-weight:700">+0.1%</span>（波動大，料上修）</div>
+    <div class="implication"><div class="label">投資啟示</div>油價下跌是持續性順風而非一次性事件。<span style="color:#f0ebe0;font-weight:700">做多美國非必需消費（XLY）相對必需消費（XLP）</span>，並留意能源股與消費股的蹺蹺板效應。</div>
+  </div>
+
+</div>
+
+<div class="divider"></div>
+
+<div class="red-team" id="red-team">
+  <div class="red-team-title">&#128308; Red Team — 核心假設與反面論證</div>
+  <ul>
+    <li>假設1：剔除世界盃與Prime Day等一次性因素後，消費需求仍能在夏季維持穩健</li>
+    <li>假設2：油價下跌趨勢延續，持續為家庭可支配收入提供順風</li>
+    <li>假設3：控制組9.2%年化增速真實反映底層需求，而非季節調整失真</li>
+    <li style="color:var(--red)">風險1：世界盃（貢獻餐飲約0.3ppt）與Prime Day（無店面零售+1.9%）均屬一次性拉動，7-8月數據可能出現明顯回落基期效應</li>
+    <li style="color:var(--red)">風險2：餐飲及飲品銷售僅+0.1%（前值1.2%），若後續未如預期上修，服務消費動能可能已在轉弱</li>
+    <li style="color:var(--red)">風險3：油價紅利建立在供給面寬鬆之上，任何地緣供給衝擊令油價反彈，將同時推高CPI並侵蝕實質購買力</li>
+  </ul>
+  <p style="margin-top:10px;padding:10px 14px;background:rgba(224,85,69,0.04);border-radius:6px;font-size:0.9em;border-left:3px solid var(--red)">核心邏輯成立：0.42ppt的油價拖累與9.2%的控制組年化增速之間的落差，證明headline嚴重低估需求。但7月數據將是真正試金石 — 若剔除世界盃效應後控制組月增仍達0.3%以上，消費韌性論確認；若無店面與餐飲同步回落且控制組跌破0.2%，則6月強勁純屬事件驅動，應轉為中性。</p>
+</div>
+
+<div class="callout" id="takeaways">
+  <div class="callout-title">基金經理人重點摘要</div>
+  <ul>
+    <li><strong>零售數據：</strong>6月headline僅+0.2%全因汽油跌9.7%拖累0.42ppt，控制組+0.5%、Q2年化9.2%才是真實訊號。勿把油價通縮誤讀為需求轉弱。</li>
+    <li><strong>實質消費：</strong>配合6月負通膨讀數，Q2實質消費支出料由Q1的0.5%加速至2.0%以上。消費衰退敘事暫時證偽，<strong>減碼防禦性倉位</strong>。</li>
+    <li><strong>Q3動能：</strong>7月汽油再跌7%，可支配收入紅利延續至第三季。<strong>做多非必需消費相對必需消費（XLY/XLP）</strong>。</li>
+    <li><strong>事件效應：</strong>世界盃（體育用品+1.3%、紐約酒店餐飲轉旺）與Prime Day（無店面+1.9%）屬一次性拉動，7月數據回落屬正常，勿過度反應。</li>
+    <li><strong>監察點：</strong>餐飲銷售僅+0.1%為唯一雜音，若8月中公布的7月數據未見上修且控制組跌破0.2%，需重檢消費韌性論。</li>
+  </ul>
+</div>
+
+<div class="nav-links">
+  <span><a href="newsletter_131_rates.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="footer">
+  彭博研究摘要 | 僅供教學與討論用途 | 2026年7月17日<br>
+  資料來源：Bloomberg Intelligence, Bloomberg Economics, Bloomberg News<br>
+  <a href="https://www.patreon.com/Aireturn">Patreon</a> · <a href="https://t.me/AIreturn">Telegram</a> · Threads @aireturn88
+</div>
+
+</body>
+</html>

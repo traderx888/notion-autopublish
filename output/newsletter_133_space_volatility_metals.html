@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>彭博研究摘要 #133 — 衛星頻譜爭奪、波動結構轉變與礦業降溫</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Noto+Serif+TC:wght@400;700&family=Source+Sans+Pro:wght@400;600;700&display=swap');
+  :root { --bg: #0a0a08; --card: #141410; --border: #2a2820; --accent: #c9a84c;
+          --gold: #f0d87a; --gold-dim: #c4b896; --text: #e0d8c8; --text-bright: #f0ebe0; --muted: #8a8070;
+          --green: #6bbd5b; --red: #e05545; --yellow: #d4a843; --orange: #d49040;
+          --purple: #b08cd0; --cyan: #4cc9b0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { background: #0a0a08 !important; }
+  body { color: var(--text); font-family: 'Source Sans Pro', 'Noto Serif TC', 'Microsoft JhengHei', sans-serif; line-height: 1.8; padding: 24px; max-width: 880px; margin: 0 auto; }
+  h1 { font-family: 'Playfair Display', 'Noto Serif TC', serif; color: var(--gold); font-size: 1.8em; margin-bottom: 4px; font-weight: 900; letter-spacing: 0.02em; }
+  h2 { font-family: 'Playfair Display', 'Noto Serif TC', serif; }
+  .subtitle { color: var(--text-bright); font-size: 0.95em; margin-bottom: 8px; font-family: 'Noto Serif TC', serif; }
+  .issue-badge { display: inline-block; background: rgba(201,168,76,0.15); color: var(--accent); padding: 4px 12px; border-radius: 12px; font-size: 0.8em; font-weight: 600; margin-bottom: 20px; border: 1px solid rgba(201,168,76,0.3); }
+  .tag { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 0.72em; font-weight: 600; margin-right: 4px; }
+  .tag-rates { background: rgba(201,168,76,0.15); color: var(--accent); }
+  .tag-china { background: rgba(212,144,64,0.15); color: var(--orange); }
+  .tag-japan { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-geo   { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-oil   { background: rgba(212,168,67,0.15); color: var(--yellow); }
+  .tag-trade { background: rgba(212,168,67,0.15); color: var(--yellow); }
+  .tag-growth{ background: rgba(107,189,91,0.15); color: var(--green); }
+  .tag-metals{ background: rgba(176,140,208,0.15); color: var(--purple); }
+  .tag-infl  { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-policy{ background: rgba(201,168,76,0.15); color: var(--accent); }
+  .tag-val   { background: rgba(107,189,91,0.15); color: var(--green); }
+  .tag-vol   { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-semi  { background: rgba(76,201,176,0.15); color: var(--cyan); }
+  .tag-credit{ background: rgba(176,140,208,0.15); color: var(--purple); }
+  .tag-space { background: rgba(201,168,76,0.15); color: var(--accent); }
+  .tag-misc  { background: rgba(138,128,112,0.15); color: var(--muted); }
+  .verdict-bar { background: var(--accent); color: #0a0a08; padding: 14px 20px; border-radius: 8px; margin-bottom: 20px; font-weight: 700; font-size: 1.05em; font-family: 'Noto Serif TC', serif; }
+  .section { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 22px; margin-bottom: 18px; }
+  .section h2 { color: var(--gold); font-size: 1.15em; margin-bottom: 12px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+  .section h3 { color: var(--accent); font-size: 0.95em; margin: 14px 0 6px; }
+  .article { margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid rgba(42,40,32,0.7); }
+  .article:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .article-title { color: var(--text-bright); font-weight: 700; font-size: 0.95em; margin-bottom: 4px; }
+  .article-title-cn { color: var(--muted); font-size: 0.85em; margin-bottom: 8px; }
+  .article p { font-size: 0.9em; margin: 6px 0; }
+  .data-point { background: rgba(201,168,76,0.05); padding: 8px 12px; border-radius: 6px; margin: 8px 0; font-size: 0.85em; border: 1px solid rgba(201,168,76,0.12); }
+  .data-point .num { color: var(--text-bright); font-weight: 700; }
+  .implication { background: rgba(201,168,76,0.06); border-left: 3px solid var(--accent); padding: 10px 14px; margin: 10px 0; border-radius: 0 6px 6px 0; font-size: 0.88em; }
+  .implication .label { color: var(--accent); font-weight: 700; font-size: 0.8em; text-transform: uppercase; margin-bottom: 4px; }
+  .red-team { background: rgba(224,85,69,0.06); border: 1px solid rgba(224,85,69,0.25); border-radius: 8px; padding: 18px; margin: 18px 0; }
+  .red-team-title { color: var(--red); font-weight: 700; font-size: 0.95em; margin-bottom: 10px; font-family: 'Playfair Display', serif; }
+  .red-team ul { padding-left: 18px; }
+  .red-team li { margin: 5px 0; font-size: 0.88em; }
+  .callout { background: rgba(201,168,76,0.06); border: 1px solid rgba(201,168,76,0.25); border-radius: 8px; padding: 18px; margin: 18px 0; }
+  .callout-title { color: var(--accent); font-weight: 700; font-size: 0.95em; margin-bottom: 8px; font-family: 'Playfair Display', 'Noto Serif TC', serif; }
+  .callout ul { padding-left: 18px; }
+  .callout li { margin: 5px 0; font-size: 0.88em; }
+  ul { padding-left: 18px; }
+  li { margin: 4px 0; font-size: 0.88em; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(201,168,76,0.05); padding: 12px; border-radius: 6px; text-align: center; border: 1px solid rgba(201,168,76,0.1); }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: var(--gold); font-family: 'Playfair Display', serif; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
+  .toc { background: rgba(201,168,76,0.04); border: 1px solid rgba(201,168,76,0.18); border-radius: 8px; padding: 16px 20px; margin-bottom: 20px; }
+  .toc-title { color: var(--accent); font-weight: 700; font-size: 0.9em; margin-bottom: 8px; }
+  .toc a { color: var(--accent); text-decoration: none; font-size: 0.88em; }
+  .toc a:hover { text-decoration: underline; color: var(--gold); }
+  .toc ol { padding-left: 20px; }
+  .toc li { margin: 4px 0; }
+  .nav-links { display: flex; justify-content: space-between; margin: 20px 0; font-size: 0.85em; }
+  .nav-links a { color: var(--accent); text-decoration: none; }
+  .nav-links a:hover { text-decoration: underline; color: var(--gold); }
+  .divider { height: 1px; background: linear-gradient(90deg, transparent, var(--accent), transparent); margin: 24px 0; opacity: 0.4; }
+  .footer { text-align: center; color: var(--muted); font-size: 0.75em; margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--border); }
+  .footer a { color: var(--accent); text-decoration: none; }
+</style>
+<script>if(window.self===window.top&&sessionStorage.getItem("student_auth")!=="1"){document.body.innerHTML="";window.location.replace("student.html");}</script>
+</head>
+<body>
+
+<h1>彭博研究摘要</h1>
+<p class="subtitle">第133期 | 衛星頻譜爭奪、波動結構轉變與礦業降溫</p>
+<span class="issue-badge">2026年七月中旬更新</span>
+
+<div class="verdict-bar">結論：下半年續押股票離散度交易但用指數相關性上行對沖；礦業估值已無緩衝，棄Rio Tinto改持Glencore；太空板塊留意FCC頻譜拍賣釋放的SpaceX擴張訊號</div>
+
+<div class="nav-links">
+  <span><a href="newsletter_132_growth.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="toc">
+  <div class="toc-title">目錄</div>
+  <ol>
+    <li><a href="#space-spectrum">太空 頻譜成新戰場：美國助攻SpaceX，歐盟築牆自保</a></li>
+    <li><a href="#cross-asset-vol">波動率 離散度掛帥，右尾比左尾更貴</a></li>
+    <li><a href="#miners-pullback">金屬礦業 礦業狂歡結束？估值已無緩衝</a></li>
+    <li><a href="#red-team">Red Team 反面論證</a></li>
+    <li><a href="#takeaways">基金經理人重點摘要</a></li>
+  </ol>
+</div>
+
+<div class="section" id="space-spectrum">
+  <h2><span class="tag tag-space">太空</span> 頻譜成新戰場：美國助攻SpaceX，歐盟築牆自保</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--green)">$3.2B</div><div class="lbl">SES可望獲得的
+頻譜補償上限</div></div>
+    <div class="stat"><div class="val">160 MHz</div><div class="lbl">FCC擬釋出的
+上段C-band頻譜</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">$130B</div><div class="lbl">Blue Origin
+最新募資估值</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">歐洲 vs SpaceX：衛星網絡監管分道揚鑣</div>
+    <p>衛星政策正成為歐美角力的新戰場。FCC下週將表決是否補償營運商交出 <span style="color:#f0ebe0;font-weight:700">160 MHz</span> 上段C-band頻譜，據Bloomberg Intelligence估算，資金緊絀的盧森堡營運商SES最多可獲 <span style="color:#f0ebe0;font-weight:700">$3.2 billion</span> 補償。但諷刺的是，釋出的頻譜料將拍賣予無線營運商，而已切入direct-to-device手機直連業務的SpaceX有望參與競標，等同華盛頓為Musk的擴張鋪路——FCC主席Brendan Carr更直言審批正轉向「流水線思維」。布魯塞爾則反其道而行：5月歐盟執委會提案將適用於衛星直連的2 GHz頻段 <span style="color:#f0ebe0;font-weight:700">三分之一保留給政府專用</span>（僅限開發中的IRIS²星座），三分之一留給歐盟本土新進者，僅餘三分之一開放全球競標，明確阻止SpaceX通吃。同日消息面上，Bezos的Blue Origin以 <span style="color:#f0ebe0;font-weight:700">$130 billion</span> 估值募資，中國亦成功發射並回收可重複使用火箭助推器，太空競賽全面升溫。</p>
+    <div class="data-point">SES潛在補償：<span style="color:#f0ebe0;font-weight:700">$3.2B</span> &nbsp;|&nbsp; 釋出頻譜：<span style="color:#f0ebe0;font-weight:700">160 MHz 上段C-band</span> &nbsp;|&nbsp; 歐盟2GHz頻段分配：<span style="color:#f0ebe0;font-weight:700">政府1/3、歐盟企業1/3、公開1/3</span> &nbsp;|&nbsp; Blue Origin估值：<span style="color:#f0ebe0;font-weight:700">$130B</span></div>
+    <div class="implication"><div class="label">投資啟示</div>美國監管紅利持續向SpaceX傾斜，歐洲衛星股（SES等）短線有頻譜補償現金流題材，但長線競爭力受壓。<span style="color:#f0ebe0;font-weight:700">關注FCC拍賣結果作為SpaceX生態擴張的領先指標；歐洲衛星營運商僅宜作事件驅動短線交易，不宜長持</span>。</div>
+  </div>
+
+</div>
+
+<div class="section" id="cross-asset-vol">
+  <h2><span class="tag tag-vol">波動率</span> 離散度掛帥，右尾比左尾更貴</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val">新高</div><div class="lbl">2026上半年
+股票離散度水平</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">Spot-up
+Vol-up</div><div class="lbl">上漲日主導
+已實現波動</div></div>
+    <div class="stat"><div class="val" style="color:var(--green)">7月</div><div class="lbl">VIX全年季節性
+最低月份</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">BI年中展望：離散度可延續，但相關性飆升是主要尾部風險</div>
+    <p>Bloomberg Intelligence首席衍生品策略師Tanvir Sandhu的年中總結指出，股票離散度（dispersion）在 <span style="color:#f0ebe0;font-weight:700">2026上半年創下新高</span>，僅在美伊戰爭期間短暫回落，背後是AI稀缺週期、單股波動高企與歷史低位的個股相關性。此格局可望延續，但最大風險是 <span style="color:#f0ebe0;font-weight:700">相關性突然飆升</span>。市場結構出現明顯轉變：已實現波動愈來愈多產生於 <span style="color:#f0ebe0;font-weight:700">上漲日而非下跌日</span>，「spot-up, vol-up」動態在Nasdaq尤其顯著，形成「陰跌急漲」的不對稱格局；追逐龍頭股上行的期權需求令 <span style="color:#f0ebe0;font-weight:700">單股skew趨平</span>，愈來愈多個股出現call skew倒掛。美國槓桿ETF急速膨脹會放大市場波動，但BI認為不足以觸發極端結果。利率方面，前端波動仍是曲線焦點，進一步壓縮須待右尾風險消退。</p>
+    <div class="data-point">離散度：<span style="color:#f0ebe0;font-weight:700">上半年創新高</span> &nbsp;|&nbsp; 已實現波動來源：<span style="color:#f0ebe0;font-weight:700">上漲日 &gt; 下跌日</span> &nbsp;|&nbsp; 單股skew：<span style="color:#f0ebe0;font-weight:700">趨平、call skew倒掛增加</span> &nbsp;|&nbsp; VIX季節性：<span style="color:#f0ebe0;font-weight:700">7月均值全年最低，其後回升</span></div>
+    <div class="implication"><div class="label">投資啟示</div>隱含波動率重置後，雙向布局的成本效益改善，且傳統分散工具（債券對沖）可靠性下降。<span style="color:#f0ebe0;font-weight:700">維持離散度多頭（做多單股波動/做空指數相關性），同時買入廉價指數相關性上行保護；7月低VIX是季節性建倉窗口，並以call spread取代正股追高捕捉右尾</span>。</div>
+  </div>
+
+</div>
+
+<div class="section" id="miners-pullback">
+  <h2><span class="tag tag-misc">金屬礦業</span> 礦業狂歡結束？估值已無緩衝</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--red)">-11%</div><div class="lbl">過去一個月
+Stoxx 600最差板塊</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">1.7x</div><div class="lbl">市淨率
+接近15年週期高位</div></div>
+    <div class="stat"><div class="val">$13-14k</div><div class="lbl">銅價自4月起
+橫盤區間（每噸）</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">歐洲礦業股急轉直下：AI題材降溫遇上鷹派Fed</div>
+    <p>歐洲礦業股的蜜月期戛然而止。板塊1月至6月初曾憑AI供應鏈題材（晶片與電力基建所需礦物）大漲 <span style="color:#f0ebe0;font-weight:700">36%</span>，但過去一個月基本資源指數重挫 <span style="color:#f0ebe0;font-weight:700">11%</span>，成為Stoxx 600最差板塊，導火線是美元轉強、金屬價格疲軟與中東緊張情勢。估值不再便宜：板塊較10年均值溢價 <span style="color:#f0ebe0;font-weight:700">14%</span>（處於77百分位），市淨率 <span style="color:#f0ebe0;font-weight:700">1.7倍</span> 逼近15年週期高點。Morgan Stanley維持in-line但將Rio Tinto降至underweight（估值偏高＋鋁/鐵礦石基本面轉弱），轉而偏好風險回報更佳的Glencore與有Cobre Panama復產題材的First Quantum。商品端，銅價自4月起在 <span style="color:#f0ebe0;font-weight:700">$13,000-14,000/噸</span> 橫盤（2025年初以來已漲50%），鐵礦石自5月高點回落 <span style="color:#f0ebe0;font-weight:700">13%</span>，鋁則因中東復產與印尼擴產面臨供給寬鬆。不過Citigroup指市場或過度悲觀：現價已隱含BHP商品價格跌 <span style="color:#f0ebe0;font-weight:700">10%</span>、Rio跌 <span style="color:#f0ebe0;font-weight:700">8%</span>，Glencore更隱含暴跌 <span style="color:#f0ebe0;font-weight:700">45%</span>（反映ESG折價）。</p>
+    <div class="data-point">1-6月漲幅：<span style="color:#f0ebe0;font-weight:700">+36%</span> → 近月：<span style="color:#f0ebe0;font-weight:700">-11%</span> &nbsp;|&nbsp; 估值：<span style="color:#f0ebe0;font-weight:700">10年均值溢價14%、P/B 1.7x</span> &nbsp;|&nbsp; 銅：<span style="color:#f0ebe0;font-weight:700">$13-14k/噸橫盤</span> &nbsp;|&nbsp; Citi隱含跌價：<span style="color:#f0ebe0;font-weight:700">BHP -10%、Rio -8%、Glencore -45%</span></div>
+    <div class="implication"><div class="label">投資啟示</div>板塊「有盈利支撐、無估值緩衝」，下半年將由個股因素主導而非beta行情。<span style="color:#f0ebe0;font-weight:700">減持Rio Tinto，換入隱含悲觀已極端的Glencore及有復產催化劑的First Quantum；銅價區間上緣（$14,000）前不宜追加板塊beta敞口</span>。</div>
+  </div>
+
+</div>
+
+<div class="divider"></div>
+
+<div class="red-team" id="red-team">
+  <div class="red-team-title">&#128308; Red Team — 核心假設與反面論證</div>
+  <ul>
+    <li>假設1：股票離散度格局可延續至下半年，個股相關性維持歷史低位</li>
+    <li>假設2：礦業拋售過頭，Glencore隱含45%商品跌價是錯誤定價而非合理折讓</li>
+    <li>假設3：歐盟頻譜保護主義能有效培育本土衛星競爭者</li>
+    <li style="color:var(--red)">風險1：BI自己點名「相關性飆升」是核心風險——一旦宏觀衝擊（鷹派Fed、中東升級）令個股齊跌，離散度多頭與槓桿ETF放大效應將同時反噬</li>
+    <li style="color:var(--red)">風險2：Glencore的45%折讓部分反映持續性ESG資金排斥而非週期錯價；且鋁市供給寬鬆（中東復產＋印尼擴產）與鐵礦石two-year橫盤顯示商品端確有實質逆風</li>
+    <li style="color:var(--red)">風險3：IRIS²星座仍在開發中，歐洲同時面臨火箭短缺、發射能力真空；保留頻譜給尚不存在的網絡，可能只是延緩而非阻止SpaceX主導</li>
+  </ul>
+  <p style="margin-top:10px;padding:10px 14px;background:rgba(224,85,69,0.04);border-radius:6px;font-size:0.9em;border-left:3px solid var(--red)">三個論點中，波動率結構判斷最穩固——離散度有AI週期與期權流實據支撐，且對沖成本（低隱含相關性）處於歷史低位，賠率有利。礦業「悲觀過度」論僅對Glencore成立（45%隱含跌價 vs BHP僅10%，差距難以基本面完全解釋），但板塊P/B 1.7x的15年高位意味任何銅價跌破$13,000都會觸發二次去估值。歐洲衛星論最弱：監管保護無法彌補發射能力與資本差距（Blue Origin單一公司估值$130B已超過歐洲全行業）。若VIX在8-9月季節性回升期間伴隨個股相關性跳升逾10點，離散度倉位應先於礦業倉位減磅。</p>
+</div>
+
+<div class="callout" id="takeaways">
+  <div class="callout-title">基金經理人重點摘要</div>
+  <ul>
+    <li><strong>波動率：</strong>上半年離散度創新高、spot-up vol-up成常態。維持離散度多頭並買入廉價相關性上行保護；7月VIX季節性低點是建倉窗口，以call spread捕捉右尾。</li>
+    <li><strong>礦業：</strong>板塊一個月跌11%後盈利支撐仍在但估值無緩衝（P/B 1.7x）。減持Rio Tinto，換入隱含45%商品跌價的Glencore及First Quantum。</li>
+    <li><strong>銅：</strong>$13,000-14,000/噸橫盤三個月，2025年以來已漲50%。突破區間前不加板塊beta；跌破$13,000視為礦業二次去估值訊號。</li>
+    <li><strong>太空：</strong>FCC釋出160MHz頻譜、SES最多獲$3.2B補償，但拍賣終將利好SpaceX。歐洲衛星股只做事件驅動短線，不長持。</li>
+    <li><strong>利率波動：</strong>前端vol仍是曲線焦點，壓縮須待右尾風險消退。Fed鷹派疑慮未除前，避免做空前端利率波動。</li>
+  </ul>
+</div>
+
+<div class="nav-links">
+  <span><a href="newsletter_132_growth.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="footer">
+  彭博研究摘要 | 僅供教學與討論用途 | 2026年7月17日<br>
+  資料來源：Bloomberg Intelligence, Bloomberg Economics, Bloomberg News<br>
+  <a href="https://www.patreon.com/Aireturn">Patreon</a> · <a href="https://t.me/AIreturn">Telegram</a> · Threads @aireturn88
+</div>
+
+</body>
+</html>

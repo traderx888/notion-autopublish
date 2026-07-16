@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>彭博研究摘要 #130 — AI資本開支重新洗牌：IT服務業受擠壓，華爾街盛宴近頂</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Noto+Serif+TC:wght@400;700&family=Source+Sans+Pro:wght@400;600;700&display=swap');
+  :root { --bg: #0a0a08; --card: #141410; --border: #2a2820; --accent: #c9a84c;
+          --gold: #f0d87a; --gold-dim: #c4b896; --text: #e0d8c8; --text-bright: #f0ebe0; --muted: #8a8070;
+          --green: #6bbd5b; --red: #e05545; --yellow: #d4a843; --orange: #d49040;
+          --purple: #b08cd0; --cyan: #4cc9b0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { background: #0a0a08 !important; }
+  body { color: var(--text); font-family: 'Source Sans Pro', 'Noto Serif TC', 'Microsoft JhengHei', sans-serif; line-height: 1.8; padding: 24px; max-width: 880px; margin: 0 auto; }
+  h1 { font-family: 'Playfair Display', 'Noto Serif TC', serif; color: var(--gold); font-size: 1.8em; margin-bottom: 4px; font-weight: 900; letter-spacing: 0.02em; }
+  h2 { font-family: 'Playfair Display', 'Noto Serif TC', serif; }
+  .subtitle { color: var(--text-bright); font-size: 0.95em; margin-bottom: 8px; font-family: 'Noto Serif TC', serif; }
+  .issue-badge { display: inline-block; background: rgba(201,168,76,0.15); color: var(--accent); padding: 4px 12px; border-radius: 12px; font-size: 0.8em; font-weight: 600; margin-bottom: 20px; border: 1px solid rgba(201,168,76,0.3); }
+  .tag { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 0.72em; font-weight: 600; margin-right: 4px; }
+  .tag-rates { background: rgba(201,168,76,0.15); color: var(--accent); }
+  .tag-china { background: rgba(212,144,64,0.15); color: var(--orange); }
+  .tag-japan { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-geo   { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-oil   { background: rgba(212,168,67,0.15); color: var(--yellow); }
+  .tag-trade { background: rgba(212,168,67,0.15); color: var(--yellow); }
+  .tag-growth{ background: rgba(107,189,91,0.15); color: var(--green); }
+  .tag-metals{ background: rgba(176,140,208,0.15); color: var(--purple); }
+  .tag-infl  { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-policy{ background: rgba(201,168,76,0.15); color: var(--accent); }
+  .tag-val   { background: rgba(107,189,91,0.15); color: var(--green); }
+  .tag-vol   { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-semi  { background: rgba(76,201,176,0.15); color: var(--cyan); }
+  .tag-credit{ background: rgba(176,140,208,0.15); color: var(--purple); }
+  .tag-space { background: rgba(201,168,76,0.15); color: var(--accent); }
+  .tag-misc  { background: rgba(138,128,112,0.15); color: var(--muted); }
+  .verdict-bar { background: var(--accent); color: #0a0a08; padding: 14px 20px; border-radius: 8px; margin-bottom: 20px; font-weight: 700; font-size: 1.05em; font-family: 'Noto Serif TC', serif; }
+  .section { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 22px; margin-bottom: 18px; }
+  .section h2 { color: var(--gold); font-size: 1.15em; margin-bottom: 12px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+  .section h3 { color: var(--accent); font-size: 0.95em; margin: 14px 0 6px; }
+  .article { margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid rgba(42,40,32,0.7); }
+  .article:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .article-title { color: var(--text-bright); font-weight: 700; font-size: 0.95em; margin-bottom: 4px; }
+  .article-title-cn { color: var(--muted); font-size: 0.85em; margin-bottom: 8px; }
+  .article p { font-size: 0.9em; margin: 6px 0; }
+  .data-point { background: rgba(201,168,76,0.05); padding: 8px 12px; border-radius: 6px; margin: 8px 0; font-size: 0.85em; border: 1px solid rgba(201,168,76,0.12); }
+  .data-point .num { color: var(--text-bright); font-weight: 700; }
+  .implication { background: rgba(201,168,76,0.06); border-left: 3px solid var(--accent); padding: 10px 14px; margin: 10px 0; border-radius: 0 6px 6px 0; font-size: 0.88em; }
+  .implication .label { color: var(--accent); font-weight: 700; font-size: 0.8em; text-transform: uppercase; margin-bottom: 4px; }
+  .red-team { background: rgba(224,85,69,0.06); border: 1px solid rgba(224,85,69,0.25); border-radius: 8px; padding: 18px; margin: 18px 0; }
+  .red-team-title { color: var(--red); font-weight: 700; font-size: 0.95em; margin-bottom: 10px; font-family: 'Playfair Display', serif; }
+  .red-team ul { padding-left: 18px; }
+  .red-team li { margin: 5px 0; font-size: 0.88em; }
+  .callout { background: rgba(201,168,76,0.06); border: 1px solid rgba(201,168,76,0.25); border-radius: 8px; padding: 18px; margin: 18px 0; }
+  .callout-title { color: var(--accent); font-weight: 700; font-size: 0.95em; margin-bottom: 8px; font-family: 'Playfair Display', 'Noto Serif TC', serif; }
+  .callout ul { padding-left: 18px; }
+  .callout li { margin: 5px 0; font-size: 0.88em; }
+  ul { padding-left: 18px; }
+  li { margin: 4px 0; font-size: 0.88em; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(201,168,76,0.05); padding: 12px; border-radius: 6px; text-align: center; border: 1px solid rgba(201,168,76,0.1); }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: var(--gold); font-family: 'Playfair Display', serif; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
+  .toc { background: rgba(201,168,76,0.04); border: 1px solid rgba(201,168,76,0.18); border-radius: 8px; padding: 16px 20px; margin-bottom: 20px; }
+  .toc-title { color: var(--accent); font-weight: 700; font-size: 0.9em; margin-bottom: 8px; }
+  .toc a { color: var(--accent); text-decoration: none; font-size: 0.88em; }
+  .toc a:hover { text-decoration: underline; color: var(--gold); }
+  .toc ol { padding-left: 20px; }
+  .toc li { margin: 4px 0; }
+  .nav-links { display: flex; justify-content: space-between; margin: 20px 0; font-size: 0.85em; }
+  .nav-links a { color: var(--accent); text-decoration: none; }
+  .nav-links a:hover { text-decoration: underline; color: var(--gold); }
+  .divider { height: 1px; background: linear-gradient(90deg, transparent, var(--accent), transparent); margin: 24px 0; opacity: 0.4; }
+  .footer { text-align: center; color: var(--muted); font-size: 0.75em; margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--border); }
+  .footer a { color: var(--accent); text-decoration: none; }
+</style>
+<script>if(window.self===window.top&&sessionStorage.getItem("student_auth")!=="1"){document.body.innerHTML="";window.location.replace("student.html");}</script>
+</head>
+<body>
+
+<h1>彭博研究摘要</h1>
+<p class="subtitle">第130期 | AI資本開支重新洗牌：IT服務業受擠壓，華爾街盛宴近頂</p>
+<span class="issue-badge">2026年七月中旬更新</span>
+
+<div class="verdict-bar">結論：AI基建搶奪企業IT預算，傳統IT服務商首當其衝 — 減持legacy IT服務股；投行交易收入創紀錄但已近週期頂部，Anthropic/OpenAI IPO兌現前逢高減碼銀行股</div>
+
+<div class="nav-links">
+  <span><a href="newsletter_129_inflation.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="toc">
+  <div class="toc-title">目錄</div>
+  <ol>
+    <li><a href="#ibm-capex-shock">IT服務 IBM暴雷：AI搶預算，傳統IT成犧牲品</a></li>
+    <li><a href="#wall-street-ipo">投資銀行 華爾街創紀錄盛宴，押注Anthropic與OpenAI上市</a></li>
+    <li><a href="#red-team">Red Team 反面論證</a></li>
+    <li><a href="#takeaways">基金經理人重點摘要</a></li>
+  </ol>
+</div>
+
+<div class="section" id="ibm-capex-shock">
+  <h2><span class="tag tag-misc">IT服務</span> IBM暴雷：AI搶預算，傳統IT成犧牲品</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--red)">-19%</div><div class="lbl">IBM盤前股價
+最大跌幅</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">$17.2B</div><div class="lbl">2Q初步營收
+（預期$17.86B）</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">-8.5%</div><div class="lbl">Accenture連鎖下跌
+（板塊傳染）</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">IBM二季度初步業績遠遜預期 — 客戶capex轉向搶購AI硬體</div>
+    <p>IBM公布二季度初步營收 <span style="color:#f0ebe0;font-weight:700">$17.2 billion</span>，大幅低於市場共識的 <span style="color:#f0ebe0;font-weight:700">$17.86 billion</span>，股價盤前一度重挫 <span style="color:#f0ebe0;font-weight:700">19%</span>。真正值得警惕的是背後原因：CEO Arvind Krishna在致投資者信中承認，6月最後幾週客戶突然將季度capex轉向伺服器、儲存與記憶體採購，趕在漲價前搶購供應受限的基建硬體，導致多宗大型合約未能如期簽署。分部表現分化明顯 — 軟體收入增 <span style="color:#f0ebe0;font-weight:700">5%</span>，但基建收入跌 <span style="color:#f0ebe0;font-weight:700">7%</span>，諮詢業務僅持平（固定匯率+1%）。Krishna直言「實際情況比我們的預期更差」，並承認未預料到capex重新排序的規模。消息拖累整個軟體與IT板塊：Accenture <span style="color:#f0ebe0;font-weight:700">-8.5%</span>、ServiceNow <span style="color:#f0ebe0;font-weight:700">-6.8%</span>、Salesforce <span style="color:#f0ebe0;font-weight:700">-5.4%</span>、Microsoft <span style="color:#f0ebe0;font-weight:700">-2.9%</span>，歐洲的SAP與Capgemini同步下挫。</p>
+    <div class="data-point">初步營收：<span style="color:#f0ebe0;font-weight:700">$17.2B vs 預期$17.86B</span> &nbsp;|&nbsp; 軟體收入：<span style="color:#f0ebe0;font-weight:700">+5%</span> &nbsp;|&nbsp; 基建收入：<span style="color:#f0ebe0;font-weight:700">-7%</span> &nbsp;|&nbsp; 分析師評級：<span style="color:#f0ebe0;font-weight:700">17買入、6持有、2賣出</span></div>
+    <div class="implication"><div class="label">投資啟示</div>這不是IBM單一公司問題，而是AI硬體供應緊張對企業IT預算的「排擠效應」首次在財報層面現形。客戶搶購伺服器與記憶體，意味被砍的是軟體與諮詢開支 — <span style="color:#f0ebe0;font-weight:700">減持依賴企業IT預算的legacy服務商（IBM、Accenture類），資金轉向供應受限的硬體與記憶體受惠者</span>。留意賣方仍有17個買入評級，下修週期才剛開始。</div>
+  </div>
+
+</div>
+
+<div class="section" id="wall-street-ipo">
+  <h2><span class="tag tag-misc">投資銀行</span> 華爾街創紀錄盛宴，押注Anthropic與OpenAI上市</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--green)">$74B+</div><div class="lbl">五大行今年股票交易收入
+預測（+26%）</div></div>
+    <div class="stat"><div class="val" style="color:var(--green)">$6.3B</div><div class="lbl">Morgan Stanley股票交易
+破紀錄69%</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">10月</div><div class="lbl">Anthropic最快
+上市時點</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">華爾街盈利盛宴繫於Anthropic、OpenAI IPO能否兌現</div>
+    <p>華爾街正處於史詩級豐收季：分析師預測Goldman、Morgan Stanley、JPMorgan、BofA與Citi五大行今年股票交易收入將跳升 <span style="color:#f0ebe0;font-weight:700">26%</span>、突破 <span style="color:#f0ebe0;font-weight:700">$74 billion</span>。Morgan Stanley率先交出震撼答卷 — 股票交易收入 <span style="color:#f0ebe0;font-weight:700">$6.3 billion</span>，以 <span style="color:#f0ebe0;font-weight:700">69%</span> 的幅度打破自身紀錄，超出預期 <span style="color:#f0ebe0;font-weight:700">41%</span>；股票承銷費大增 <span style="color:#f0ebe0;font-weight:700">70%</span> 至 <span style="color:#f0ebe0;font-weight:700">$851 million</span>；財富管理透過鎖定初創企業高管，單季吸納 <span style="color:#f0ebe0;font-weight:700">$148.1 billion</span> 淨新資產，超預期幅度高達 <span style="color:#f0ebe0;font-weight:700">121%</span>。管理層極度樂觀：Solomon稱投行backlog處於五年高位，Anthropic最快 <span style="color:#f0ebe0;font-weight:700">10月</span> 掛牌。但警號已現 — Dimon親口說「已接近好到不能再好」（as good as it gets），且SpaceX等巨型IPO的投資者胃納正在減退，與2020-2022年的boom-bust週期如出一轍。</p>
+    <div class="data-point">五大行股票交易收入：<span style="color:#f0ebe0;font-weight:700">$74B（+26%）</span> &nbsp;|&nbsp; MS股票承銷費：<span style="color:#f0ebe0;font-weight:700">$851M（+70%）</span> &nbsp;|&nbsp; MS淨新資產：<span style="color:#f0ebe0;font-weight:700">$148.1B（超預期121%）</span> &nbsp;|&nbsp; 2028年預測：<span style="color:#f0ebe0;font-weight:700">收入仍達$75B以上</span></div>
+    <div class="implication"><div class="label">投資啟示</div>本輪投行盈利的可持續性高度綁定AI巨頭IPO管道 — 這是單一敘事風險。Dimon的「as good as it gets」歷來是週期頂部訊號。<span style="color:#f0ebe0;font-weight:700">銀行股逢高減碼，或以賣出價外call鎖定利潤</span>；若Anthropic十月順利掛牌可視為最後的出貨窗口，若延期或定價疲軟則直接轉為防守。</div>
+  </div>
+
+</div>
+
+<div class="divider"></div>
+
+<div class="red-team" id="red-team">
+  <div class="red-team-title">&#128308; Red Team — 核心假設與反面論證</div>
+  <ul>
+    <li>假設1：IBM的capex排擠只是「時點問題」— 大單延遲而非取消，下半年會回補</li>
+    <li>假設2：Anthropic、OpenAI等巨型IPO將如期於2026下半年至2027年兌現，支撐投行收入至2028年</li>
+    <li>假設3：AI硬體供應緊張（伺服器、記憶體漲價）將持續，企業被迫優先採購基建</li>
+    <li style="color:var(--red)">風險1：IBM同時承認Transaction Processing軟體本身表現不濟 — 若這是需求走弱而非單純延遲，「回補」邏輯不成立，整個板塊估值需要下修</li>
+    <li style="color:var(--red)">風險2：投資者對SpaceX等巨型IPO的胃納已在減退，Bloomberg明確類比2020-2022的boom-bust週期；股票承銷收入至今仍未回到2021年SPAC泡沫水平，說明市場容量有天花板</li>
+    <li style="color:var(--red)">風險3：Dimon「接近好到不能再好」與Solomon五年高位backlog同時出現 — 管理層集體樂觀本身就是逆向指標</li>
+  </ul>
+  <p style="margin-top:10px;padding:10px 14px;background:rgba(224,85,69,0.04);border-radius:6px;font-size:0.9em;border-left:3px solid var(--red)">兩條主線指向同一結論：AI是唯一的邊際買家。IT服務被AI硬體搶預算（IBM營收miss $660M），投行盈利靠AI公司上市（五大行$74B交易收入押注IPO管道）。這種單一依賴在上行時放大盈利，在AI融資環境轉冷時將同步反噬兩端。核心判斷：IBM式暴雷會蔓延（Accenture、ServiceNow下個財報季是驗證點），投行盛宴則以Anthropic十月IPO為分水嶺 — 若掛牌後破發或需求疲軟，2027年$75B的收入預測將被大幅下修。現階段：做空legacy IT服務相對做多AI硬體供應鏈，銀行股持倉降至中性以下。</p>
+</div>
+
+<div class="callout" id="takeaways">
+  <div class="callout-title">基金經理人重點摘要</div>
+  <ul>
+    <li><strong>IT服務：</strong>IBM初步營收$17.2B遠遜預期，客戶capex轉向搶購AI硬體。**減持legacy IT服務股（IBM、Accenture、ServiceNow類）**，賣方17個買入評級意味下修空間仍大。</li>
+    <li><strong>AI硬體：</strong>伺服器、儲存、記憶體供應受限且客戶趕在漲價前搶購 — 排擠效應反面就是硬體商的定價權。**維持超配記憶體與AI基建供應鏈**。</li>
+    <li><strong>投資銀行：</strong>五大行股票交易收入今年料+26%破$74B，MS單季$6.3B創紀錄。但Dimon稱「接近好到不能再好」— **銀行股逢高減碼，以價外call鎖利**。</li>
+    <li><strong>IPO週期：</strong>Anthropic最快10月掛牌，是本輪投行盛宴的分水嶺事件。SpaceX等巨型IPO需求已現疲態，與2020-2022泡沫週期相似 — **將Anthropic上市表現作為風險開關，破發即轉防守**。</li>
+  </ul>
+</div>
+
+<div class="nav-links">
+  <span><a href="newsletter_129_inflation.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="footer">
+  彭博研究摘要 | 僅供教學與討論用途 | 2026年7月17日<br>
+  資料來源：Bloomberg Intelligence, Bloomberg Economics, Bloomberg News<br>
+  <a href="https://www.patreon.com/Aireturn">Patreon</a> · <a href="https://t.me/AIreturn">Telegram</a> · Threads @aireturn88
+</div>
+
+</body>
+</html>
