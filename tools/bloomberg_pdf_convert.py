@@ -154,20 +154,36 @@ def convert_one(pdf_path: Path) -> Path:
 # ---------------------------------------------------------------------------
 # Batch conversion
 # ---------------------------------------------------------------------------
-def run(dry_run: bool = False) -> dict:
-    """Convert all new PDFs. Returns summary stats."""
+def _modified_at_hkt(pdf_path: Path) -> datetime:
+    """Return a PDF's local modified timestamp in HKT."""
+    return datetime.fromtimestamp(pdf_path.stat().st_mtime, tz=HKT)
+
+
+def run(dry_run: bool = False, since: datetime | None = None) -> dict:
+    """Convert new PDFs modified on or after an optional inclusive cutoff."""
+    if since is not None and since.tzinfo is None:
+        raise ValueError("since must be timezone-aware")
+
     state = read_state()
     processed = state["processedFiles"]
 
     pdf_files = sorted(PDF_DIR.glob("*.pdf"))
     new_count = 0
     skipped = 0
+    out_of_window = 0
     errors: list[str] = []
+
+    if since is not None:
+        print(f"Modified-time window: >= {since.astimezone(HKT).isoformat()}")
 
     for pdf_path in pdf_files:
         fname = pdf_path.name
         if fname in processed:
             skipped += 1
+            continue
+
+        if since is not None and _modified_at_hkt(pdf_path) < since:
+            out_of_window += 1
             continue
 
         if dry_run:
@@ -195,8 +211,16 @@ def run(dry_run: bool = False) -> dict:
         state["lastRunAt"] = now_hkt_iso()
         write_state(state)
 
-    summary = {"new": new_count, "skipped": skipped, "errors": len(errors)}
-    print(f"\nDone: {new_count} converted, {skipped} skipped, {len(errors)} errors")
+    summary = {
+        "new": new_count,
+        "skipped": skipped,
+        "out_of_window": out_of_window,
+        "errors": len(errors),
+    }
+    print(
+        f"\nDone: {new_count} converted, {skipped} skipped, "
+        f"{out_of_window} outside window, {len(errors)} errors"
+    )
     if errors:
         for e in errors:
             print(f"  ERROR: {e}", file=sys.stderr)
@@ -211,5 +235,14 @@ if __name__ == "__main__":
 
     parser = argparse.ArgumentParser(description="Convert Bloomberg PDFs to Markdown")
     parser.add_argument("--dry-run", action="store_true", help="Preview without writing")
+    parser.add_argument(
+        "--days",
+        type=int,
+        metavar="N",
+        help="Only convert unprocessed PDFs modified in the last N rolling days",
+    )
     args = parser.parse_args()
-    run(dry_run=args.dry_run)
+    if args.days is not None and args.days <= 0:
+        parser.error("--days must be greater than zero")
+    since = datetime.now(HKT) - timedelta(days=args.days) if args.days else None
+    run(dry_run=args.dry_run, since=since)

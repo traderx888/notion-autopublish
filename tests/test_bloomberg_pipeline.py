@@ -2,8 +2,10 @@
 from __future__ import annotations
 
 import json
+import os
 import sys
 import tempfile
+from datetime import datetime, timedelta
 from pathlib import Path
 
 import pytest
@@ -116,6 +118,48 @@ class TestStateRoundtrip:
         loaded = json.loads(fake_path.read_text(encoding="utf-8"))
         assert loaded["lastNewsletterNumber"] == 7
         assert "test.pdf" in loaded["processedFiles"]
+
+
+# ---------------------------------------------------------------------------
+# Rolling modified-time window
+# ---------------------------------------------------------------------------
+class TestModifiedTimeWindow:
+    def test_run_only_selects_unprocessed_pdfs_inside_window(
+        self, tmp_path, monkeypatch
+    ):
+        from tools import bloomberg_pdf_convert as converter
+
+        recent_pdf = tmp_path / "recent.pdf"
+        old_pdf = tmp_path / "old.pdf"
+        recent_pdf.write_bytes(b"recent")
+        old_pdf.write_bytes(b"old")
+
+        cutoff = datetime(2026, 8, 13, 12, 0, tzinfo=converter.HKT)
+        os.utime(recent_pdf, (cutoff.timestamp(), cutoff.timestamp()))
+        old_time = cutoff - timedelta(seconds=1)
+        os.utime(old_pdf, (old_time.timestamp(), old_time.timestamp()))
+
+        monkeypatch.setattr(converter, "PDF_DIR", tmp_path)
+        monkeypatch.setattr(
+            converter,
+            "read_state",
+            lambda: {"processedFiles": {}},
+        )
+
+        summary = converter.run(dry_run=True, since=cutoff)
+
+        assert summary == {
+            "new": 1,
+            "skipped": 0,
+            "out_of_window": 1,
+            "errors": 0,
+        }
+
+    def test_run_rejects_naive_cutoff(self):
+        from tools import bloomberg_pdf_convert as converter
+
+        with pytest.raises(ValueError, match="timezone-aware"):
+            converter.run(dry_run=True, since=datetime(2026, 8, 13))
 
 
 # ---------------------------------------------------------------------------

@@ -46,16 +46,17 @@ the runner.
 ### Step 1 — PDF → Markdown conversion
 
 ```bash
-python tools/bloomberg_pdf_convert.py
+python tools/bloomberg_pdf_convert.py --days 28
 ```
 
-- Scans `C:\blp\data\` for new PDFs not yet in state
+- Scans `C:\blp\data\` for PDFs not yet in state whose local modified time is
+  within the latest rolling 28 days
 - Extracts text via `pypdf`, strips Bloomberg disclaimers
 - Parses `#hashtag` topics from filename
 - Writes `.md` files to `C:\blp\data\md_converted\`
 - State tracked in `outputs/ops/bloomberg_pipeline_state.json`
 
-**Dry run:** `python tools/bloomberg_pdf_convert.py --dry-run`
+**Dry run:** `python tools/bloomberg_pdf_convert.py --days 28 --dry-run`
 
 ### Step 2 — Newsletter build (Codex editorial synthesis)
 

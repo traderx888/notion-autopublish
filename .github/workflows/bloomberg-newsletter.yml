@@ -49,7 +49,7 @@ jobs:
       - name: Convert new PDFs to markdown
         shell: powershell
         run: |
-          python tools/bloomberg_pdf_convert.py
+          python tools/bloomberg_pdf_convert.py --days 28
 
       - name: Build weekly digest (Sunday only)
         shell: powershell

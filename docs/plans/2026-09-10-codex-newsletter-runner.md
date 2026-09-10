@@ -78,3 +78,8 @@ and register a Windows self-hosted runner on this computer.
 `C:\blp\data`; all currently lack topic hashtags and would enter the pipeline
 as `uncategorized`. A live workflow dispatch is intentionally withheld until
 the operator chooses whether to classify first or publish the whole backlog.
+
+The operator subsequently authorized publication only for the most recent four
+weeks. The workflow now applies an inclusive rolling 28-day cutoff to each
+unprocessed PDF's local modified timestamp; older unprocessed PDFs remain out
+of state and unpublished.
