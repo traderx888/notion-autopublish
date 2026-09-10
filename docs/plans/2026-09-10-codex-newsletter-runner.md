@@ -115,3 +115,19 @@ builder correctly deferred it under the default two-article threshold. Manual
 dispatch now exposes a constrained `min_articles` choice (2 by default, or 1);
 scheduled runs retain 2, while the authorized singleton can be published with
 an explicit `min_articles=1` dispatch.
+
+## Final verification
+
+- Run `34468358003` completed successfully in 27m19s: 21 tests passed, 75 PDFs
+  converted, ten newsletters (`134`–`143`) generated, and commit `14a568a`
+  pushed to `main`.
+- Run `34471169157` verified the parser fallback: 22 tests passed, the remaining
+  Wells Fargo ISRG PDF converted via `pdfplumber`, and the converter reported
+  zero errors. The default two-article gate intentionally deferred publishing.
+- Run `34471713753`, dispatched with `min_articles=1`, completed successfully in
+  3m32s: 23 tests passed and commit `4c98dbe` pushed
+  `output/newsletter_144_uncategorized.html`, `output/student.html`, and the
+  pipeline state to `main`.
+- GitHub read-back confirmed `lastNewsletterNumber=144`, newsletter `144` has
+  `articleCount=1`, the Wells Fargo source has `newsletterNumber=144`, the
+  student portal links newsletter `144`, and runner id `21` is online and idle.
