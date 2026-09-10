@@ -20,8 +20,9 @@ and register a Windows self-hosted runner on this computer.
 - Pin and verify the Codex CLI in the GitHub Actions workflow.
 - Add focused tests for command construction, parsing, and failure behavior.
 - Update the operator runbook.
-- Register and start a repo-scoped Windows x64 self-hosted runner only after the
-  updated workflow reaches `main`.
+- Register and start a repo-scoped Windows x64 self-hosted runner with the
+  dedicated `notion-autopublish` label only after the updated workflow reaches
+  `main`.
 
 ## Safety Boundaries
 
