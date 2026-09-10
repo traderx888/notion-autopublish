@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>彭博研究摘要 #135 — 政策分化、AI成本擠壓與實物資產訊號</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Noto+Serif+TC:wght@400;700&family=Source+Sans+Pro:wght@400;600;700&display=swap');
+  :root { --bg: #0a0a08; --card: #141410; --border: #2a2820; --accent: #c9a84c;
+          --gold: #f0d87a; --gold-dim: #c4b896; --text: #e0d8c8; --text-bright: #f0ebe0; --muted: #8a8070;
+          --green: #6bbd5b; --red: #e05545; --yellow: #d4a843; --orange: #d49040;
+          --purple: #b08cd0; --cyan: #4cc9b0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { background: #0a0a08 !important; }
+  body { color: var(--text); font-family: 'Source Sans Pro', 'Noto Serif TC', 'Microsoft JhengHei', sans-serif; line-height: 1.8; padding: 24px; max-width: 880px; margin: 0 auto; }
+  h1 { font-family: 'Playfair Display', 'Noto Serif TC', serif; color: var(--gold); font-size: 1.8em; margin-bottom: 4px; font-weight: 900; letter-spacing: 0.02em; }
+  h2 { font-family: 'Playfair Display', 'Noto Serif TC', serif; }
+  .subtitle { color: var(--text-bright); font-size: 0.95em; margin-bottom: 8px; font-family: 'Noto Serif TC', serif; }
+  .issue-badge { display: inline-block; background: rgba(201,168,76,0.15); color: var(--accent); padding: 4px 12px; border-radius: 12px; font-size: 0.8em; font-weight: 600; margin-bottom: 20px; border: 1px solid rgba(201,168,76,0.3); }
+  .tag { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 0.72em; font-weight: 600; margin-right: 4px; }
+  .tag-rates { background: rgba(201,168,76,0.15); color: var(--accent); }
+  .tag-china { background: rgba(212,144,64,0.15); color: var(--orange); }
+  .tag-japan { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-geo   { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-oil   { background: rgba(212,168,67,0.15); color: var(--yellow); }
+  .tag-trade { background: rgba(212,168,67,0.15); color: var(--yellow); }
+  .tag-growth{ background: rgba(107,189,91,0.15); color: var(--green); }
+  .tag-metals{ background: rgba(176,140,208,0.15); color: var(--purple); }
+  .tag-infl  { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-policy{ background: rgba(201,168,76,0.15); color: var(--accent); }
+  .tag-val   { background: rgba(107,189,91,0.15); color: var(--green); }
+  .tag-vol   { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-semi  { background: rgba(76,201,176,0.15); color: var(--cyan); }
+  .tag-credit{ background: rgba(176,140,208,0.15); color: var(--purple); }
+  .tag-space { background: rgba(201,168,76,0.15); color: var(--accent); }
+  .tag-misc  { background: rgba(138,128,112,0.15); color: var(--muted); }
+  .verdict-bar { background: var(--accent); color: #0a0a08; padding: 14px 20px; border-radius: 8px; margin-bottom: 20px; font-weight: 700; font-size: 1.05em; font-family: 'Noto Serif TC', serif; }
+  .section { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 22px; margin-bottom: 18px; }
+  .section h2 { color: var(--gold); font-size: 1.15em; margin-bottom: 12px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+  .section h3 { color: var(--accent); font-size: 0.95em; margin: 14px 0 6px; }
+  .article { margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid rgba(42,40,32,0.7); }
+  .article:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .article-title { color: var(--text-bright); font-weight: 700; font-size: 0.95em; margin-bottom: 4px; }
+  .article-title-cn { color: var(--muted); font-size: 0.85em; margin-bottom: 8px; }
+  .article p { font-size: 0.9em; margin: 6px 0; }
+  .data-point { background: rgba(201,168,76,0.05); padding: 8px 12px; border-radius: 6px; margin: 8px 0; font-size: 0.85em; border: 1px solid rgba(201,168,76,0.12); }
+  .data-point .num { color: var(--text-bright); font-weight: 700; }
+  .implication { background: rgba(201,168,76,0.06); border-left: 3px solid var(--accent); padding: 10px 14px; margin: 10px 0; border-radius: 0 6px 6px 0; font-size: 0.88em; }
+  .implication .label { color: var(--accent); font-weight: 700; font-size: 0.8em; text-transform: uppercase; margin-bottom: 4px; }
+  .red-team { background: rgba(224,85,69,0.06); border: 1px solid rgba(224,85,69,0.25); border-radius: 8px; padding: 18px; margin: 18px 0; }
+  .red-team-title { color: var(--red); font-weight: 700; font-size: 0.95em; margin-bottom: 10px; font-family: 'Playfair Display', serif; }
+  .red-team ul { padding-left: 18px; }
+  .red-team li { margin: 5px 0; font-size: 0.88em; }
+  .callout { background: rgba(201,168,76,0.06); border: 1px solid rgba(201,168,76,0.25); border-radius: 8px; padding: 18px; margin: 18px 0; }
+  .callout-title { color: var(--accent); font-weight: 700; font-size: 0.95em; margin-bottom: 8px; font-family: 'Playfair Display', 'Noto Serif TC', serif; }
+  .callout ul { padding-left: 18px; }
+  .callout li { margin: 5px 0; font-size: 0.88em; }
+  ul { padding-left: 18px; }
+  li { margin: 4px 0; font-size: 0.88em; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(201,168,76,0.05); padding: 12px; border-radius: 6px; text-align: center; border: 1px solid rgba(201,168,76,0.1); }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: var(--gold); font-family: 'Playfair Display', serif; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
+  .toc { background: rgba(201,168,76,0.04); border: 1px solid rgba(201,168,76,0.18); border-radius: 8px; padding: 16px 20px; margin-bottom: 20px; }
+  .toc-title { color: var(--accent); font-weight: 700; font-size: 0.9em; margin-bottom: 8px; }
+  .toc a { color: var(--accent); text-decoration: none; font-size: 0.88em; }
+  .toc a:hover { text-decoration: underline; color: var(--gold); }
+  .toc ol { padding-left: 20px; }
+  .toc li { margin: 4px 0; }
+  .nav-links { display: flex; justify-content: space-between; margin: 20px 0; font-size: 0.85em; }
+  .nav-links a { color: var(--accent); text-decoration: none; }
+  .nav-links a:hover { text-decoration: underline; color: var(--gold); }
+  .divider { height: 1px; background: linear-gradient(90deg, transparent, var(--accent), transparent); margin: 24px 0; opacity: 0.4; }
+  .footer { text-align: center; color: var(--muted); font-size: 0.75em; margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--border); }
+  .footer a { color: var(--accent); text-decoration: none; }
+</style>
+<script>if(window.self===window.top&&sessionStorage.getItem("student_auth")!=="1"){document.body.innerHTML="";window.location.replace("student.html");}</script>
+</head>
+<body>
+
+<h1>彭博研究摘要</h1>
+<p class="subtitle">第135期 | 政策分化、AI成本擠壓與實物資產訊號</p>
+<span class="issue-badge">2026年九月上旬更新</span>
+
+<div class="verdict-bar">**結論：增持巴西前端利率與歐元區銀行受惠倉位、低接銅礦股但避免追逐短期逼倉，並降低高估值AI應用商及無催化劑黃金的方向性曝險。**</div>
+
+<div class="nav-links">
+  <span><a href="newsletter_134_uncategorized.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="toc">
+  <div class="toc-title">目錄</div>
+  <ol>
+    <li><a href="#global-rates">全球利率 巴西慢降，歐洲轉鷹</a></li>
+    <li><a href="#china-policy-property">中國經濟 準財政托底，地產先苦後穩</a></li>
+    <li><a href="#ai-equity-positioning">AI與美股 算力漲價，應用通縮</a></li>
+    <li><a href="#metals-signals">金屬市場 銅現貨告急，黃金靜待催化</a></li>
+    <li><a href="#red-team">Red Team 反面論證</a></li>
+    <li><a href="#takeaways">基金經理人重點摘要</a></li>
+  </ol>
+</div>
+
+<div class="section" id="global-rates">
+  <h2><span class="tag tag-misc">全球利率</span> 巴西慢降，歐洲轉鷹</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--orange)">14%</div><div class="lbl">巴西Selic利率
+8月會議後</div></div>
+    <div class="stat"><div class="val" style="color:var(--green)">9.4%</div><div class="lbl">巴西事前實質利率
+高於5%中性水平</div></div>
+    <div class="stat"><div class="val" style="color:var(--green)">52.0</div><div class="lbl">歐元區7至8月
+平均綜合PMI</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">巴西仍有減息空間，但匯率與預期限制速度</div>
+    <p>巴西央行在8月5日連續第四次減息 <span style="color:#f0ebe0;font-weight:700">25bp</span>，把Selic降至 <span style="color:#f0ebe0;font-weight:700">14%</span>；自3月以來累計寬鬆 <span style="color:#f0ebe0;font-weight:700">100bp</span>，但事前實質政策利率仍達 <span style="color:#f0ebe0;font-weight:700">9.4%</span>，遠高於央行假設的 <span style="color:#f0ebe0;font-weight:700">5%</span> 中性利率。7月通膨改善讓減息周期得以延續，惟央行沒有提供明確前瞻指引，只承諾維持「足夠限制性」直至通膨回到 <span style="color:#f0ebe0;font-weight:700">3%</span> 目標。長期通膨預期持續脫錨、經濟尚未形成足夠閒置產能，加上選舉波動可能打擊雷亞爾，意味寬鬆路徑狹窄。若通膨正式突破目標、核心價格反彈、2028年預期再惡化或匯率急跌，央行均可能暫停減息。</p>
+    <div class="data-point">Selic利率: <span style="color:#f0ebe0;font-weight:700">14%</span> &nbsp;|&nbsp; 3月以來累計減息: <span style="color:#f0ebe0;font-weight:700">100bp</span> &nbsp;|&nbsp; 事前實質政策利率: <span style="color:#f0ebe0;font-weight:700">9.4%</span> &nbsp;|&nbsp; 通膨目標: <span style="color:#f0ebe0;font-weight:700">3%</span></div>
+    <div class="implication"><div class="label">投資啟示</div>政策仍極度緊縮且會議紀要保留再減息空間，可<span style="color:#f0ebe0;font-weight:700">做多巴西前端利率、偏好接收短端利率</span>；同時以雷亞爾保護性期權對沖選舉及匯率失控風險。</div>
+  </div>
+  <div class="article">
+    <div class="article-title">歐元區增長意外轉強，ECB九月加息理據回升</div>
+    <p>歐元區踏入第三季後動能優於預期，7至8月PMI標題指數平均達 <span style="color:#f0ebe0;font-weight:700">52.0</span>，明顯高於第二季的 <span style="color:#f0ebe0;font-weight:700">49.1</span>。Bloomberg Economics原先估計第三季GDP按季增長 <span style="color:#f0ebe0;font-weight:700">0.2%</span>，但第二季經濟已逆勢增長 <span style="color:#f0ebe0;font-weight:700">0.4%</span>，加上經濟驚喜指數轉正，預測面臨上行風險。能源衝擊及美國關稅仍壓抑實質收入和出口，不過油價回落提供緩衝。勞動市場亦未明顯轉弱，3月失業率僅 <span style="color:#f0ebe0;font-weight:700">6.2%</span>，接近貨幣聯盟成立以來低位；雖然職位空缺及工資前瞻指標正在降溫，近期經濟韌性仍足以支持ECB於9月再次加息。</p>
+    <div class="data-point">7至8月平均PMI: <span style="color:#f0ebe0;font-weight:700">52.0</span> &nbsp;|&nbsp; 2Q GDP按季增長: <span style="color:#f0ebe0;font-weight:700">0.4%</span> &nbsp;|&nbsp; 3Q GDP預測: <span style="color:#f0ebe0;font-weight:700">0.2%</span> &nbsp;|&nbsp; 3月失業率: <span style="color:#f0ebe0;font-weight:700">6.2%</span></div>
+    <div class="implication"><div class="label">投資啟示</div>市場若仍低估9月加息，可<span style="color:#f0ebe0;font-weight:700">減持歐元區短債、部署短端收益率上行</span>，並選擇性增持受惠息差的歐洲銀行；油價續跌則應收窄鷹派倉位。</div>
+  </div>
+
+</div>
+
+<div class="section" id="china-policy-property">
+  <h2><span class="tag tag-misc">中國經濟</span> 準財政托底，地產先苦後穩</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--green)">8,000億元</div><div class="lbl">新政策性金融工具
+計劃規模</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">+0.1ppt</div><div class="lbl">計劃對2026年
+GDP增速貢獻</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">-19.2%</div><div class="lbl">首七月房地產投資
+按年變化</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">八千億元準財政計劃，今年托底效果有限</div>
+    <p>中國擬透過政策性銀行推出 <span style="color:#f0ebe0;font-weight:700">8,000億元人民幣</span> 新政策性金融工具，以資本金形式注入項目，理論上最多可撬動 <span style="color:#f0ebe0;font-weight:700">8萬億元</span> 投資。然而項目周期通常長達 <span style="color:#f0ebe0;font-weight:700">3至5年</span>，距年底僅餘四個月，估計今年實際形成的投資只有 <span style="color:#f0ebe0;font-weight:700">4,000億至6,000億元</span>，對2026年GDP增速僅貢獻約 <span style="color:#f0ebe0;font-weight:700">0.1個百分點</span>，不足以單獨確保達到 <span style="color:#f0ebe0;font-weight:700">4.5%-5.0%</span> 增長目標。較大效益將延至2027年，或提升全年增速 <span style="color:#f0ebe0;font-weight:700">0.6-0.8個百分點</span>，但前提是成功形成十倍槓桿。PBOC料提供 <span style="color:#f0ebe0;font-weight:700">3,200億至4,000億元</span> 資金，亦可能透過MLF等渠道回收流動性。</p>
+    <div class="data-point">計劃規模: <span style="color:#f0ebe0;font-weight:700">8,000億元</span> &nbsp;|&nbsp; 最大可撬動投資: <span style="color:#f0ebe0;font-weight:700">8萬億元</span> &nbsp;|&nbsp; 2026年GDP貢獻: <span style="color:#f0ebe0;font-weight:700">約0.1ppt</span> &nbsp;|&nbsp; 2027年潛在貢獻: <span style="color:#f0ebe0;font-weight:700">0.6-0.8ppt</span></div>
+    <div class="implication"><div class="label">投資啟示</div>今年宏觀盈利改善幅度有限，應<span style="color:#f0ebe0;font-weight:700">避免僅憑政策規模追高大市</span>；集中配置具明確項目訂單的基建央企，並等待實際資金投放及投資落地數據確認。</div>
+  </div>
+  <div class="article">
+    <div class="article-title">預售資金受限，房企融資成本與行業集中度上升</div>
+    <p>中國8月28日公布的新規重點是降低爛尾樓及壞帳風險，而非直接刺激樓市。發展商須優先出售現樓；即使預售，也只能在項目完工交付後取得首期及按揭資金，失去過往近乎零成本的預售融資。以五年期LPR計算，替代融資成本可高達 <span style="color:#f0ebe0;font-weight:700">3.5%</span>，資金較弱的中小型民營房企尤其受壓。首七月房地產投資已按年下跌 <span style="color:#f0ebe0;font-weight:700">19.2%</span>，並拖累固定資產投資下降 <span style="color:#f0ebe0;font-weight:700">6.7%</span>，短期下行壓力料進一步加劇。監管機構雖延長項目貸款期限及鼓勵債券、資產證券化，並把最長按揭期由 <span style="color:#f0ebe0;font-weight:700">30年</span> 延至 <span style="color:#f0ebe0;font-weight:700">40年</span>，但信心低迷限制需求刺激效果。</p>
+    <div class="data-point">首七月房地產投資: <span style="color:#f0ebe0;font-weight:700">-19.2%</span> &nbsp;|&nbsp; 首七月固定資產投資: <span style="color:#f0ebe0;font-weight:700">-6.7%</span> &nbsp;|&nbsp; 潛在融資成本: <span style="color:#f0ebe0;font-weight:700">最高3.5%</span> &nbsp;|&nbsp; 最長按揭期: <span style="color:#f0ebe0;font-weight:700">40年</span></div>
+    <div class="implication"><div class="label">投資啟示</div>新規有利信用較強的大型國企開發商及銀行資產質素，應<span style="color:#f0ebe0;font-weight:700">減持高槓桿民營房企、偏好國企龍頭債券</span>，短期亦宜低配依賴新開工的建材企業。</div>
+  </div>
+
+</div>
+
+<div class="section" id="ai-equity-positioning">
+  <h2><span class="tag tag-misc">AI與美股</span> 算力漲價，應用通縮</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--red)">&gt;15%</div><div class="lbl">部分Nvidia AI伺服器
+明年初加價幅度</div></div>
+    <div class="stat"><div class="val" style="color:var(--green)">~70%</div><div class="lbl">Nvidia預期FY2028
+收入增長</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">47.6%</div><div class="lbl">美國L/S基金
+淨槓桿</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">Token價格急跌，昂貴晶片考驗AI盈利模式</div>
+    <p>AI智能產品正在快速通縮：免費模型Ox Alpha已接近前沿能力，OpenAI約一個月內三度下調旗艦模型價格，Token支出指數亦持續下滑。問題並非價格下降本身，而是售價跌幅會否超過生產成本改善。供應端正出現結構性短缺，部分配備Nvidia晶片的伺服器明年初售價將上升超過 <span style="color:#f0ebe0;font-weight:700">15%</span>；Samsung把部分先進晶圓代工新訂單加價最多 <span style="color:#f0ebe0;font-weight:700">15%</span>，並把高達 <span style="color:#f0ebe0;font-weight:700">70%</span> 記憶體產能鎖入多年合約。需求仍強：付費使用AI的美國企業比例接近 <span style="color:#f0ebe0;font-weight:700">60%</span>，三大hyperscaler上季雲端收入合計約 <span style="color:#f0ebe0;font-weight:700">1,060億美元</span>、按年增逾 <span style="color:#f0ebe0;font-weight:700">40%</span>。勝負因此取決於用量能否跑贏單價與算力成本壓力。</p>
+    <div class="data-point">部分AI伺服器加價: <span style="color:#f0ebe0;font-weight:700">逾15%</span> &nbsp;|&nbsp; Samsung部分代工加價: <span style="color:#f0ebe0;font-weight:700">最高15%</span> &nbsp;|&nbsp; 美國企業AI付費比例: <span style="color:#f0ebe0;font-weight:700">接近60%</span> &nbsp;|&nbsp; 三大雲端商季度收入: <span style="color:#f0ebe0;font-weight:700">約1,060億美元</span></div>
+    <div class="implication"><div class="label">投資啟示</div>產業利潤可能向稀缺硬件及雲端平台集中，應<span style="color:#f0ebe0;font-weight:700">增持具定價權的晶片、記憶體與hyperscaler龍頭，減持缺乏差異化的AI應用商</span>。</div>
+  </div>
+  <div class="article">
+    <div class="article-title">對沖基金總槓桿回升，淨風險卻貼近低位</div>
+    <p>截至8月28日，美國long/short基金總槓桿按周增加 <span style="color:#f0ebe0;font-weight:700">1.9個百分點</span> 至 <span style="color:#f0ebe0;font-weight:700">207%</span>，但淨槓桿反而下降 <span style="color:#f0ebe0;font-weight:700">0.7個百分點</span> 至 <span style="color:#f0ebe0;font-weight:700">47.6%</span>，處於一年期 <span style="color:#f0ebe0;font-weight:700">第1百分位</span>，反映基金增加雙向倉位而非建立明確看多方向。8月21日至27日，Macro Products錄得 <span style="color:#f0ebe0;font-weight:700">+0.7個標準差</span> 淨買入，主要來自空倉回補；ETF空倉連續第二周下降 <span style="color:#f0ebe0;font-weight:700">2.3%</span>，按月減少 <span style="color:#f0ebe0;font-weight:700">12%</span>。相反，Single Stocks連續第二周淨賣出 <span style="color:#f0ebe0;font-weight:700">-0.7個標準差</span>，沽空量為長倉買入的 <span style="color:#f0ebe0;font-weight:700">3.3倍</span>。所有防守板塊合計遭遇2025年4月以來最大金額淨賣出，顯示指數反彈的內部參與度並不穩固。</p>
+    <div class="data-point">總槓桿: <span style="color:#f0ebe0;font-weight:700">207%</span> &nbsp;|&nbsp; 淨槓桿: <span style="color:#f0ebe0;font-weight:700">47.6%</span> &nbsp;|&nbsp; ETF空倉按周變化: <span style="color:#f0ebe0;font-weight:700">-2.3%</span> &nbsp;|&nbsp; 個股沽空／長倉買入: <span style="color:#f0ebe0;font-weight:700">3.3倍</span></div>
+    <div class="implication"><div class="label">投資啟示</div>指數買盤主要源自short covering而非信念型增持，應<span style="color:#f0ebe0;font-weight:700">保留指數上行對沖、避免追逐被夾升板塊</span>，並以盈利與現金流篩選AI及科技股。</div>
+  </div>
+
+</div>
+
+<div class="section" id="metals-signals">
+  <h2><span class="tag tag-metals">金屬市場</span> 銅現貨告急，黃金靜待催化</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--orange)">$110/噸</div><div class="lbl">LME銅Tom/next
+盤中現貨溢價</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">-75%</div><div class="lbl">LME可交割銅庫存
+較4月中高位降幅</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">5年最窄</div><div class="lbl">黃金30日隱含與
+實現波幅差距</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">LME銅近端價差急升，關稅套利扭曲全球庫存</div>
+    <p>LME銅的Tom/next一日價差一度升至每噸 <span style="color:#f0ebe0;font-weight:700">110美元</span>，為2021年歷史性逼倉以來最闊，反映即期供應緊張及淡倉展期壓力。美國潛在進口關稅推高當地價格，套利交易吸走其他地區庫存；LME可交割存量此前較4月中高位縮減 <span style="color:#f0ebe0;font-weight:700">75%</span>。其後倉庫單日增加逾 <span style="color:#f0ebe0;font-weight:700">2萬噸</span> 銅，令價差回落至 <span style="color:#f0ebe0;font-weight:700">80美元</span> 以下，顯示逼倉壓力可以快速逆轉。銅價今年仍升逾 <span style="color:#f0ebe0;font-weight:700">13%</span>，受數據中心及再生能源需求支持，三個月期銅報每噸 <span style="color:#f0ebe0;font-weight:700">14,098美元</span>。不過高價已抑制中國採購，上海庫存回升至約 <span style="color:#f0ebe0;font-weight:700">8萬噸</span>，基本面呈現地區錯配而非全面短缺。</p>
+    <div class="data-point">Tom/next最高溢價: <span style="color:#f0ebe0;font-weight:700">110美元／噸</span> &nbsp;|&nbsp; LME單日庫存增加: <span style="color:#f0ebe0;font-weight:700">逾2萬噸</span> &nbsp;|&nbsp; 年內銅價升幅: <span style="color:#f0ebe0;font-weight:700">逾13%</span> &nbsp;|&nbsp; 上海庫存: <span style="color:#f0ebe0;font-weight:700">約8萬噸</span></div>
+    <div class="implication"><div class="label">投資啟示</div>長期需求與礦商盈利仍獲支持，但近端價差極易隨交倉反轉；應<span style="color:#f0ebe0;font-weight:700">逢回調增持低成本銅礦股，避免裸空近月LME合約及追逐逼倉升勢</span>。</div>
+  </div>
+  <div class="article">
+    <div class="article-title">黃金波動脈搏轉弱，突破仍欠新催化劑</div>
+    <p>黃金近數周重新上升，但在偏鷹Jackson Hole後回吐，市場內部動能亦未配合。30日隱含波動率與實現波動率之差已收窄至 <span style="color:#f0ebe0;font-weight:700">五年來最窄區間</span>，顯示期權市場對突破的定價明顯降溫。更重要的是，近年支撐金價估值重塑的央行需求正在減速：雖然官方淨買入仍為正數，但 <span style="color:#f0ebe0;font-weight:700">3個月、6個月及12個月</span> 移動平均均低於2022至2023年的異常高峰。這也可能代表投資者已更習慣持有黃金穿越利率、地緣政治及政策波動，而非牛市結束。不過在邊際買家動能下降、波動溢價壓縮的環境下，金價若要持續突破，仍需現貨上升與波幅差重新擴闊作確認。</p>
+    <div class="data-point">波幅差區間: <span style="color:#f0ebe0;font-weight:700">五年最窄</span> &nbsp;|&nbsp; 央行需求趨勢: <span style="color:#f0ebe0;font-weight:700">3、6、12個月均線下降</span> &nbsp;|&nbsp; 央行淨流量: <span style="color:#f0ebe0;font-weight:700">仍為正數</span></div>
+    <div class="implication"><div class="label">投資啟示</div>結構性配置理由未被破壞，但方向性追價的回報風險比下降；應<span style="color:#f0ebe0;font-weight:700">維持核心黃金配置、減少短期槓桿多倉</span>，待現貨與波幅差同步上升再加碼。</div>
+  </div>
+
+</div>
+
+<div class="divider"></div>
+
+<div class="red-team" id="red-team">
+  <div class="red-team-title">&#128308; Red Team — 核心假設與反面論證</div>
+  <ul>
+    <li>假設1：巴西通膨及雷亞爾保持穩定，使央行可延續每次25bp的審慎減息。</li>
+    <li>假設2：AI使用量增長足以抵銷Token售價下跌及晶片、記憶體與伺服器成本上升。</li>
+    <li>假設3：銅的供應緊張具有持續性，而非主要由美國關稅套利及庫存地區錯配造成。</li>
+    <li style="color:var(--red)">反證1：巴西長期通膨預期仍在上升，實體經濟尚未形成足夠閒置產能；若2028年預期惡化或匯率急跌，央行已列明可能暫停減息。</li>
+    <li style="color:var(--red)">反證2：部分AI伺服器與Samsung先進代工價格均上升最多或超過15%，同時免費前沿模型湧現、旗艦模型一個月內三度減價，應用層毛利可能先於用量擴張受壓。</li>
+    <li style="color:var(--red)">反證3：LME單日交倉逾2萬噸已令Tom/next溢價由110美元回落至80美元以下，而上海庫存升至約8萬噸，顯示高價正壓抑實際需求。</li>
+  </ul>
+  <p style="margin-top:10px;padding:10px 14px;background:rgba(224,85,69,0.04);border-radius:6px;font-size:0.9em;border-left:3px solid var(--red)">跨資產主線只屬有條件成立：巴西9.4%的事前實質利率為減息交易提供緩衝，但雷亞爾或通膨預期失控即構成止損訊號；AI需求雖有接近60%的企業付費率及雲端收入按年增逾40%支持，惟若收入增長不能覆蓋逾15%的硬件加價，應用層估值需要下修；銅的長期需求故事仍在，但LME庫存回補及上海約8萬噸庫存表明短期逼倉不可當作全面供應缺口。</p>
+</div>
+
+<div class="callout" id="takeaways">
+  <div class="callout-title">基金經理人重點摘要</div>
+  <ul>
+    <li><strong>全球利率：</strong>巴西實質政策利率仍達9.4%，可做多前端利率但須對沖雷亞爾；歐元區PMI升至52.0，短期減持歐洲短債。</li>
+    <li><strong>中國政策：</strong>8,000億元工具今年僅料貢獻約0.1ppt增長；避免追逐政策標題，偏好已有項目訂單的基建央企。</li>
+    <li><strong>中國地產：</strong>首七月投資按年跌19.2%，預售資金限制將加速行業分化；減持高槓桿民企，偏好國企開發商債券。</li>
+    <li><strong>AI產業鏈：</strong>企業採用率與雲端收入仍強，但Token通縮遇上硬件加價；增持具定價權的晶片、記憶體及雲端平台，降低同質化應用商曝險。</li>
+    <li><strong>美股倉位：</strong>L/S淨槓桿47.6%處一年第1百分位，指數買盤以回補空倉為主；保留上行對沖，避免把技術性反彈誤判為全面風險偏好回升。</li>
+    <li><strong>金屬：</strong>低接低成本銅礦股但不追近月逼倉；黃金維持核心配置，待現貨及波幅差同步擴闊才增加戰術性多倉。</li>
+  </ul>
+</div>
+
+<div class="nav-links">
+  <span><a href="newsletter_134_uncategorized.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="footer">
+  彭博研究摘要 | 僅供教學與討論用途 | 2026年9月10日<br>
+  資料來源：Bloomberg Intelligence, Bloomberg Economics, Bloomberg News<br>
+  <a href="https://www.patreon.com/Aireturn">Patreon</a> · <a href="https://t.me/AIreturn">Telegram</a> · Threads @aireturn88
+</div>
+
+</body>
+</html>

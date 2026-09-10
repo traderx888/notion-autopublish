@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>彭博研究摘要 #137 — 戰爭通膨、政治風險與高波動交易</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Noto+Serif+TC:wght@400;700&family=Source+Sans+Pro:wght@400;600;700&display=swap');
+  :root { --bg: #0a0a08; --card: #141410; --border: #2a2820; --accent: #c9a84c;
+          --gold: #f0d87a; --gold-dim: #c4b896; --text: #e0d8c8; --text-bright: #f0ebe0; --muted: #8a8070;
+          --green: #6bbd5b; --red: #e05545; --yellow: #d4a843; --orange: #d49040;
+          --purple: #b08cd0; --cyan: #4cc9b0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { background: #0a0a08 !important; }
+  body { color: var(--text); font-family: 'Source Sans Pro', 'Noto Serif TC', 'Microsoft JhengHei', sans-serif; line-height: 1.8; padding: 24px; max-width: 880px; margin: 0 auto; }
+  h1 { font-family: 'Playfair Display', 'Noto Serif TC', serif; color: var(--gold); font-size: 1.8em; margin-bottom: 4px; font-weight: 900; letter-spacing: 0.02em; }
+  h2 { font-family: 'Playfair Display', 'Noto Serif TC', serif; }
+  .subtitle { color: var(--text-bright); font-size: 0.95em; margin-bottom: 8px; font-family: 'Noto Serif TC', serif; }
+  .issue-badge { display: inline-block; background: rgba(201,168,76,0.15); color: var(--accent); padding: 4px 12px; border-radius: 12px; font-size: 0.8em; font-weight: 600; margin-bottom: 20px; border: 1px solid rgba(201,168,76,0.3); }
+  .tag { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 0.72em; font-weight: 600; margin-right: 4px; }
+  .tag-rates { background: rgba(201,168,76,0.15); color: var(--accent); }
+  .tag-china { background: rgba(212,144,64,0.15); color: var(--orange); }
+  .tag-japan { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-geo   { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-oil   { background: rgba(212,168,67,0.15); color: var(--yellow); }
+  .tag-trade { background: rgba(212,168,67,0.15); color: var(--yellow); }
+  .tag-growth{ background: rgba(107,189,91,0.15); color: var(--green); }
+  .tag-metals{ background: rgba(176,140,208,0.15); color: var(--purple); }
+  .tag-infl  { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-policy{ background: rgba(201,168,76,0.15); color: var(--accent); }
+  .tag-val   { background: rgba(107,189,91,0.15); color: var(--green); }
+  .tag-vol   { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-semi  { background: rgba(76,201,176,0.15); color: var(--cyan); }
+  .tag-credit{ background: rgba(176,140,208,0.15); color: var(--purple); }
+  .tag-space { background: rgba(201,168,76,0.15); color: var(--accent); }
+  .tag-misc  { background: rgba(138,128,112,0.15); color: var(--muted); }
+  .verdict-bar { background: var(--accent); color: #0a0a08; padding: 14px 20px; border-radius: 8px; margin-bottom: 20px; font-weight: 700; font-size: 1.05em; font-family: 'Noto Serif TC', serif; }
+  .section { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 22px; margin-bottom: 18px; }
+  .section h2 { color: var(--gold); font-size: 1.15em; margin-bottom: 12px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+  .section h3 { color: var(--accent); font-size: 0.95em; margin: 14px 0 6px; }
+  .article { margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid rgba(42,40,32,0.7); }
+  .article:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .article-title { color: var(--text-bright); font-weight: 700; font-size: 0.95em; margin-bottom: 4px; }
+  .article-title-cn { color: var(--muted); font-size: 0.85em; margin-bottom: 8px; }
+  .article p { font-size: 0.9em; margin: 6px 0; }
+  .data-point { background: rgba(201,168,76,0.05); padding: 8px 12px; border-radius: 6px; margin: 8px 0; font-size: 0.85em; border: 1px solid rgba(201,168,76,0.12); }
+  .data-point .num { color: var(--text-bright); font-weight: 700; }
+  .implication { background: rgba(201,168,76,0.06); border-left: 3px solid var(--accent); padding: 10px 14px; margin: 10px 0; border-radius: 0 6px 6px 0; font-size: 0.88em; }
+  .implication .label { color: var(--accent); font-weight: 700; font-size: 0.8em; text-transform: uppercase; margin-bottom: 4px; }
+  .red-team { background: rgba(224,85,69,0.06); border: 1px solid rgba(224,85,69,0.25); border-radius: 8px; padding: 18px; margin: 18px 0; }
+  .red-team-title { color: var(--red); font-weight: 700; font-size: 0.95em; margin-bottom: 10px; font-family: 'Playfair Display', serif; }
+  .red-team ul { padding-left: 18px; }
+  .red-team li { margin: 5px 0; font-size: 0.88em; }
+  .callout { background: rgba(201,168,76,0.06); border: 1px solid rgba(201,168,76,0.25); border-radius: 8px; padding: 18px; margin: 18px 0; }
+  .callout-title { color: var(--accent); font-weight: 700; font-size: 0.95em; margin-bottom: 8px; font-family: 'Playfair Display', 'Noto Serif TC', serif; }
+  .callout ul { padding-left: 18px; }
+  .callout li { margin: 5px 0; font-size: 0.88em; }
+  ul { padding-left: 18px; }
+  li { margin: 4px 0; font-size: 0.88em; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(201,168,76,0.05); padding: 12px; border-radius: 6px; text-align: center; border: 1px solid rgba(201,168,76,0.1); }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: var(--gold); font-family: 'Playfair Display', serif; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
+  .toc { background: rgba(201,168,76,0.04); border: 1px solid rgba(201,168,76,0.18); border-radius: 8px; padding: 16px 20px; margin-bottom: 20px; }
+  .toc-title { color: var(--accent); font-weight: 700; font-size: 0.9em; margin-bottom: 8px; }
+  .toc a { color: var(--accent); text-decoration: none; font-size: 0.88em; }
+  .toc a:hover { text-decoration: underline; color: var(--gold); }
+  .toc ol { padding-left: 20px; }
+  .toc li { margin: 4px 0; }
+  .nav-links { display: flex; justify-content: space-between; margin: 20px 0; font-size: 0.85em; }
+  .nav-links a { color: var(--accent); text-decoration: none; }
+  .nav-links a:hover { text-decoration: underline; color: var(--gold); }
+  .divider { height: 1px; background: linear-gradient(90deg, transparent, var(--accent), transparent); margin: 24px 0; opacity: 0.4; }
+  .footer { text-align: center; color: var(--muted); font-size: 0.75em; margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--border); }
+  .footer a { color: var(--accent); text-decoration: none; }
+</style>
+<script>if(window.self===window.top&&sessionStorage.getItem("student_auth")!=="1"){document.body.innerHTML="";window.location.replace("student.html");}</script>
+</head>
+<body>
+
+<h1>彭博研究摘要</h1>
+<p class="subtitle">第137期 | 戰爭通膨、政治風險與高波動交易</p>
+<span class="issue-badge">2026年九月上旬更新</span>
+
+<div class="verdict-bar">**結論：增持能源與美股指數波動率、減持法國內需股及巴基斯坦利率風險；量子科技與選舉後反彈只宜以小倉位、嚴格止損參與。**</div>
+
+<div class="nav-links">
+  <span><a href="newsletter_136_uncategorized.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="toc">
+  <div class="toc-title">目錄</div>
+  <ol>
+    <li><a href="#geopolitics-inflation">地緣通膨 戰火未熄，油價再成利率錨</a></li>
+    <li><a href="#fiscal-political-risk">財政政治 巴黎陰雲，美債長端失守</a></li>
+    <li><a href="#positioning-volatility">倉位波動 槓桿升溫，AI波動未散</a></li>
+    <li><a href="#tactical-equity-trades">戰術交易 先震後升？投機熱度考驗紀律</a></li>
+    <li><a href="#red-team">Red Team 反面論證</a></li>
+    <li><a href="#takeaways">基金經理人重點摘要</a></li>
+  </ol>
+</div>
+
+<div class="section" id="geopolitics-inflation">
+  <h2><span class="tag tag-misc">地緣通膨</span> 戰火未熄，油價再成利率錨</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--red)">11.1%</div><div class="lbl">巴基斯坦8月通膨
+按年升幅</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">$95</div><div class="lbl">Brent現價
+每桶附近</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">$122-$126</div><div class="lbl">海峽關閉至2027年1月
+冬季Brent情景</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">巴基斯坦通膨高燒，惟再加息機率下降</div>
+    <p>巴基斯坦8月通膨由7月的 <span style="color:#f0ebe0;font-weight:700">9.2%</span> 急升至 <span style="color:#f0ebe0;font-weight:700">11.1%</span>，預計直至12月仍高於央行 <span style="color:#f0ebe0;font-weight:700">5%-7%</span> 目標區間。能源成本向核心商品及服務傳導，加上食品價格受惡劣天氣威脅，令物價短期難以回落。Bloomberg Economics仍預期SBP年底前把政策利率上調至 <span style="color:#f0ebe0;font-weight:700">12.5%</span>，但經濟放緩與通膨預期保持穩定，已降低加息的確定性。高利率、能源成本和購買力受損正同步壓抑需求，未來三季GDP增長料平均僅 <span style="color:#f0ebe0;font-weight:700">2.6%</span>，顯著低於首季的 <span style="color:#f0ebe0;font-weight:700">4%</span>，形成滯脹式政策兩難。</p>
+    <div class="data-point">8月通膨: <span style="color:#f0ebe0;font-weight:700">11.1%</span> &nbsp;|&nbsp; SBP目標區間: <span style="color:#f0ebe0;font-weight:700">5%-7%</span> &nbsp;|&nbsp; 預測政策利率: <span style="color:#f0ebe0;font-weight:700">12.5%</span> &nbsp;|&nbsp; 2026財年平均通膨: <span style="color:#f0ebe0;font-weight:700">9.5%</span></div>
+    <div class="implication"><div class="label">投資啟示</div>通膨與增長風險同時惡化，宜<span style="color:#f0ebe0;font-weight:700">減持巴基斯坦長久期債券及本幣風險</span>；若油價續升，可透過能源敞口對沖當地資產。</div>
+  </div>
+  <div class="article">
+    <div class="article-title">伊朗戰爭半年：戰術得分，戰略突破仍缺席</div>
+    <p>美伊戰爭持續六個月，美國與以色列的攻擊雖進一步破壞伊朗核設施及軍事資產，卻未摧毀其核計劃或約 <span style="color:#f0ebe0;font-weight:700">400公斤</span> 高濃縮鈾存量，伊朗盟友亦仍能威脅霍爾木茲海峽與紅海。美國新增制裁超過 <span style="color:#f0ebe0;font-weight:700">70個</span> 伊朗相關實體，但若不觸及協助石油結算的主要中國銀行，經濟施壓效果可能有限。Brent目前徘徊每桶 <span style="color:#f0ebe0;font-weight:700">95美元</span>；若霍爾木茲海峽關閉至2027年1月，BNEF估計冬季油價可升至 <span style="color:#f0ebe0;font-weight:700">122-126美元</span>，屆時全球通膨與利率下行空間都會受到明顯擠壓。</p>
+    <div class="data-point">高濃縮鈾存量: <span style="color:#f0ebe0;font-weight:700">400公斤</span> &nbsp;|&nbsp; 新制裁實體: <span style="color:#f0ebe0;font-weight:700">逾70個</span> &nbsp;|&nbsp; Brent現價: <span style="color:#f0ebe0;font-weight:700">約95美元</span> &nbsp;|&nbsp; 封鎖情景油價: <span style="color:#f0ebe0;font-weight:700">122-126美元</span></div>
+    <div class="implication"><div class="label">投資啟示</div>海峽封鎖風險尚未充分消失，應<span style="color:#f0ebe0;font-weight:700">增持能源股或Brent看漲期權</span>，並降低對快速降息及長久期債券的押注。</div>
+  </div>
+
+</div>
+
+<div class="section" id="fiscal-political-risk">
+  <h2><span class="tag tag-misc">財政政治</span> 巴黎陰雲，美債長端失守</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--orange)">3.6%</div><div class="lbl">CAC 40年初至今
+升幅</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">56%</div><div class="lbl">基金經理淨比例
+最不偏好法股</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">75bp</div><div class="lbl">Fed累計減息
+長債孳息仍上升</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">法國政治陰霾重臨，內需股首當其衝</div>
+    <p>CAC 40年內升 <span style="color:#f0ebe0;font-weight:700">3.6%</span> 並曾創新高，但明顯落後Stoxx Europe 600的 <span style="color:#f0ebe0;font-weight:700">11%</span> 漲幅。Fitch評級檢討、9月底預算案及明年4月展開的總統選舉，令法國風險溢價再受關注。雖然CAC 40成分股不足五分之一收入來自本土，整體指數具一定海外緩衝，但金融、公用、電訊與工業股對國內政治最敏感。若預算無法在選舉前通過，財政赤字至少擴大相當於GDP的 <span style="color:#f0ebe0;font-weight:700">0.5%</span>。基金經理淨 <span style="color:#f0ebe0;font-weight:700">56%</span> 將法國列為最不偏好的歐洲股市，顯示悲觀情緒濃厚，惟本土收入股仍可能隨法德債息差擴大而受壓。</p>
+    <div class="data-point">CAC 40年內回報: <span style="color:#f0ebe0;font-weight:700">3.6%</span> &nbsp;|&nbsp; Stoxx Europe 600回報: <span style="color:#f0ebe0;font-weight:700">11%</span> &nbsp;|&nbsp; 潛在赤字惡化: <span style="color:#f0ebe0;font-weight:700">至少GDP的0.5%</span> &nbsp;|&nbsp; 最不偏好法股: <span style="color:#f0ebe0;font-weight:700">淨56%</span></div>
+    <div class="implication"><div class="label">投資啟示</div>在預算與選舉風險明朗前，宜<span style="color:#f0ebe0;font-weight:700">減持法國本土收入較高的金融、公用及電訊股</span>，相對偏好海外收入佔比較高的CAC 40企業。</div>
+  </div>
+  <div class="article">
+    <div class="article-title">Bessent「3-3-3」未奏效，美債長端逆風未除</div>
+    <p>美國財長Scott Bessent希望以 <span style="color:#f0ebe0;font-weight:700">3%</span> 實質GDP增長、赤字降至GDP的 <span style="color:#f0ebe0;font-weight:700">3%</span>，以及每日增產 <span style="color:#f0ebe0;font-weight:700">300萬桶</span> 石油來壓低融資成本，但目前成效有限。財政部延續以短期國庫券應付邊際融資需求的做法，票據供應雖高，尚未構成直接警號；真正壓力來自長端債價。即使Fed已累計減息 <span style="color:#f0ebe0;font-weight:700">75個基點</span>，長期國債孳息仍高於本屆政府上任時水平。Bloomberg Treasury Index依靠票息取得正回報，卻跑輸國庫券，導致Sharpe ratio為負，反映財政、能源與期限溢價正在抵銷貨幣寬鬆。</p>
+    <div class="data-point">實質增長目標: <span style="color:#f0ebe0;font-weight:700">3%</span> &nbsp;|&nbsp; 赤字目標: <span style="color:#f0ebe0;font-weight:700">GDP的3%</span> &nbsp;|&nbsp; 石油增產目標: <span style="color:#f0ebe0;font-weight:700">每日300萬桶</span> &nbsp;|&nbsp; Fed累計減息: <span style="color:#f0ebe0;font-weight:700">75bp</span></div>
+    <div class="implication"><div class="label">投資啟示</div>減息未能壓低長端孳息，宜<span style="color:#f0ebe0;font-weight:700">偏好美國國庫券及曲線前端、低配長久期美債</span>，等待財政或能源政策出現實質改善。</div>
+  </div>
+
+</div>
+
+<div class="section" id="positioning-volatility">
+  <h2><span class="tag tag-misc">倉位波動</span> 槓桿升溫，AI波動未散</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--orange)">305.9%</div><div class="lbl">Prime整體帳簿
+Gross leverage</div></div>
+    <div class="stat"><div class="val" style="color:var(--green)">38%</div><div class="lbl">個股波動率
+由51%回落</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">-0.05%</div><div class="lbl">基本面及系統化
+L/S周回報</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">對沖基金加總槓桿，選股Alpha仍然疲弱</div>
+    <p>截至8月27日的一周，Goldman Sachs基本面及系統化股票多空策略估算回報均為 <span style="color:#f0ebe0;font-weight:700">-0.05%</span>，同期MSCI World總回報升 <span style="color:#f0ebe0;font-weight:700">0.94%</span>。基本面策略的 <span style="color:#f0ebe0;font-weight:700">-0.40%</span> alpha幾乎抵銷 <span style="color:#f0ebe0;font-weight:700">+0.35%</span> beta，顯示市場上升未能轉化為選股收益。整體帳簿Gross leverage增加 <span style="color:#f0ebe0;font-weight:700">2.7個百分點</span> 至 <span style="color:#f0ebe0;font-weight:700">305.9%</span>，Net leverage僅升至 <span style="color:#f0ebe0;font-weight:700">76.9%</span>；基本面基金Net leverage更處於一年期第 <span style="color:#f0ebe0;font-weight:700">3百分位</span>。資金買入新興亞洲、非必需消費、工業及通訊服務，同時沽售歐洲、科技、醫療和能源，反映總槓桿增加但方向信心仍有限。</p>
+    <div class="data-point">基本面L/S回報: <span style="color:#f0ebe0;font-weight:700">-0.05%</span> &nbsp;|&nbsp; MSCI World回報: <span style="color:#f0ebe0;font-weight:700">+0.94%</span> &nbsp;|&nbsp; 整體Gross leverage: <span style="color:#f0ebe0;font-weight:700">305.9%</span> &nbsp;|&nbsp; 整體Net leverage: <span style="color:#f0ebe0;font-weight:700">76.9%</span></div>
+    <div class="implication"><div class="label">投資啟示</div>高Gross、低信念的結構容易放大平倉衝擊，宜<span style="color:#f0ebe0;font-weight:700">降低擁擠個股曝險並保留指數下行保護</span>，相對偏好資金淨買入的新興亞洲。</div>
+  </div>
+  <div class="article">
+    <div class="article-title">個股波動率洩氣，AI稀缺性仍支撐FOMO</div>
+    <p>美股個股波動率在一個月內由 <span style="color:#f0ebe0;font-weight:700">51%</span> 急降至 <span style="color:#f0ebe0;font-weight:700">38%</span>，主因大型業績期結束及高波動股份去槓桿；個股skew大致平穩，顯示市場主要下調波動率水平，而非全面重估尾部風險。相關性仍接近歷史低位，使買入指數波動率、沽出個股波動率的reverse dispersion開始具吸引力，但既有dispersion策略表現強勁，逆向交易時機仍難掌握。另一方面，AI資產的稀缺性維持追價情緒，可能形成股價上升、波動率同步上升。加上VIX歷史上常由7月低位升至10月高位，季節性對指數波動率構成支持。</p>
+    <div class="data-point">個股波動率前值: <span style="color:#f0ebe0;font-weight:700">51%</span> &nbsp;|&nbsp; 個股波動率現值: <span style="color:#f0ebe0;font-weight:700">38%</span> &nbsp;|&nbsp; 策略波動目標: <span style="color:#f0ebe0;font-weight:700">10%</span> &nbsp;|&nbsp; VIX季節高位月份: <span style="color:#f0ebe0;font-weight:700">10月</span></div>
+    <div class="implication"><div class="label">投資啟示</div>可<span style="color:#f0ebe0;font-weight:700">小量做多SPX指數波動率或建立reverse dispersion</span>，但避免重倉沽空AI龍頭個股波動率，以防spot-up、vol-up行情。</div>
+  </div>
+
+</div>
+
+<div class="section" id="tactical-equity-trades">
+  <h2><span class="tag tag-misc">戰術交易</span> 先震後升？投機熱度考驗紀律</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--orange)">-5%</div><div class="lbl">中期選舉年平均
+截至9月跌幅</div></div>
+    <div class="stat"><div class="val" style="color:var(--green)">+52%</div><div class="lbl">Pasqal首日
+股價升幅</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">&gt;90%</div><div class="lbl">SPAC股份
+贖回比例</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">中期選舉魔咒：9月下挫或鋪路年末反彈</div>
+    <p>對1990年至2022年九個美國中期選舉周期的分析顯示，S&amp;P 500通常在9月跌入年初至今負回報區間，多數全年升幅則集中於第四季。歷史平均截至9月下跌約 <span style="color:#f0ebe0;font-weight:700">5%</span>，其後在年底前收復失地；消費與科技等周期及增長板塊往往主導反彈，不論哪個政黨增加國會議席。選舉前市場通常先降低風險，平均回報在投票日前約 <span style="color:#f0ebe0;font-weight:700">19至21日</span> 見底，並於最後兩周隨民調收斂而回升，投票後反彈進一步加速。2026年中期選舉定於 <span style="color:#f0ebe0;font-weight:700">11月3日</span>，季節模式提供戰術參考，但九次樣本仍偏小。</p>
+    <div class="data-point">歷史樣本: <span style="color:#f0ebe0;font-weight:700">9次選舉</span> &nbsp;|&nbsp; 截至9月平均跌幅: <span style="color:#f0ebe0;font-weight:700">約5%</span> &nbsp;|&nbsp; 平均低位: <span style="color:#f0ebe0;font-weight:700">選前19-21日</span> &nbsp;|&nbsp; 2026投票日: <span style="color:#f0ebe0;font-weight:700">11月3日</span></div>
+    <div class="implication"><div class="label">投資啟示</div>若9月至10月出現歷史式調整，可<span style="color:#f0ebe0;font-weight:700">分段增持S&amp;P 500、科技及非必需消費板塊</span>，並把選前約三周視為戰術觀察窗口。</div>
+  </div>
+  <div class="article">
+    <div class="article-title">Pasqal借殼首秀飆升，低流通量放大賭博色彩</div>
+    <p>法國量子運算公司Pasqal透過SPAC合併在紐約上市，首日一度升 <span style="color:#f0ebe0;font-weight:700">52%</span> 至 <span style="color:#f0ebe0;font-weight:700">14.84美元</span>，表現勝過近期上市同業。交易完成時公司約有 <span style="color:#f0ebe0;font-weight:700">3.6億美元</span> 現金，並擁有 <span style="color:#f0ebe0;font-weight:700">8,000萬美元</span> 訂單積壓及10台量子處理器；惟超過 <span style="color:#f0ebe0;font-weight:700">90%</span> SPAC股份被贖回，意味公司錯失大部分原IPO資金，也令可交易股份大幅收縮。低流通量可能放大升跌，首日升勢未必代表基本面定價。作為參照，IQM上市後跌 <span style="color:#f0ebe0;font-weight:700">17%</span>，Quantinuum亦跌約 <span style="color:#f0ebe0;font-weight:700">10%</span>，說明量子概念的市場熱度尚未轉化為穩定回報。</p>
+    <div class="data-point">首日升幅: <span style="color:#f0ebe0;font-weight:700">52%</span> &nbsp;|&nbsp; 盤中股價: <span style="color:#f0ebe0;font-weight:700">14.84美元</span> &nbsp;|&nbsp; 可用現金: <span style="color:#f0ebe0;font-weight:700">約3.6億美元</span> &nbsp;|&nbsp; 訂單積壓: <span style="color:#f0ebe0;font-weight:700">8,000萬美元</span></div>
+    <div class="implication"><div class="label">投資啟示</div>Pasqal的低流通量使風險回報失衡，宜<span style="color:#f0ebe0;font-weight:700">避免追高並把量子科技倉位限制於投機配置</span>；待鎖定期、成交量及基本面更清晰後再評估。</div>
+  </div>
+
+</div>
+
+<div class="divider"></div>
+
+<div class="red-team" id="red-team">
+  <div class="red-team-title">&#128308; Red Team — 核心假設與反面論證</div>
+  <ul>
+    <li>假設1：霍爾木茲海峽持續受擾，能源供應風險足以支撐油價及通膨對沖交易。</li>
+    <li>假設2：法國政治不確定性與美國財政期限溢價將繼續壓抑法國內需股及長久期美債。</li>
+    <li>假設3：美股會重演中期選舉年的先跌後升模式，而AI需求可維持個股追價情緒。</li>
+    <li style="color:var(--red)">反證1：巴基斯坦基準預測假設Brent在2026下半年僅平均80美元，且通膨預期仍受控；若海峽迅速恢復通航，95美元附近油價及能源溢價可能回落。</li>
+    <li style="color:var(--red)">反證2：CAC 40不足五分之一收入來自法國本土，海外盈利可緩衝政治衝擊；美債指數亦仍靠票息錄得正回報，長端並非單向下跌。</li>
+    <li style="color:var(--red)">反證3：中期選舉結論只基於1990年以來9次樣本；Pasqal逾90%贖回及同業上市後下跌10%-17%，顯示FOMO可能只是低流通量造成的短期失真。</li>
+  </ul>
+  <p style="margin-top:10px;padding:10px 14px;background:rgba(224,85,69,0.04);border-radius:6px;font-size:0.9em;border-left:3px solid var(--red)">核心配置邏輯暫時成立，但應以情景門檻管理風險：若霍爾木茲海峽延續關閉，BNEF的Brent冬季 <span style="color:#f0ebe0;font-weight:700">122-126美元</span> 情景支持能源多倉及低配長債；若油價回到巴基斯坦預測所採用的 <span style="color:#f0ebe0;font-weight:700">80美元</span> 附近，則應削減能源對沖。法股方面，若預算僵局令赤字惡化至少 <span style="color:#f0ebe0;font-weight:700">GDP的0.5%</span>，減持本土收入股仍合理。美股選舉後反彈可參與，但不應把九次歷史樣本或Pasqal首日 <span style="color:#f0ebe0;font-weight:700">52%</span> 升幅視為高置信度訊號。</p>
+</div>
+
+<div class="callout" id="takeaways">
+  <div class="callout-title">基金經理人重點摘要</div>
+  <ul>
+    <li><strong>能源與通膨：</strong>Brent約95美元，海峽長期關閉情景可推升至122-126美元；增持能源對沖，降低長久期利率曝險。</li>
+    <li><strong>巴基斯坦：</strong>通膨升至11.1%、增長料放緩至2.6%；減持本幣債與長久期資產。</li>
+    <li><strong>法國：</strong>CAC 40落後歐股，預算僵局可令赤字惡化至少GDP的0.5%；低配本土收入較高的金融、公用及電訊股。</li>
+    <li><strong>美債：</strong>Fed減息75bp後長端孳息仍上升；偏好國庫券及曲線前端，暫避長債。</li>
+    <li><strong>美股波動：</strong>個股波動率由51%降至38%，但VIX季節性與AI FOMO仍在；小量做多指數波動率並控制擁擠倉位。</li>
+    <li><strong>戰術交易：</strong>留意選前19-21日的歷史低位窗口，分段部署年末反彈；Pasqal等低流通量新股只宜小倉位參與並嚴格止損。</li>
+  </ul>
+</div>
+
+<div class="nav-links">
+  <span><a href="newsletter_136_uncategorized.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="footer">
+  彭博研究摘要 | 僅供教學與討論用途 | 2026年9月10日<br>
+  資料來源：Bloomberg Intelligence, Bloomberg Economics, Bloomberg News<br>
+  <a href="https://www.patreon.com/Aireturn">Patreon</a> · <a href="https://t.me/AIreturn">Telegram</a> · Threads @aireturn88
+</div>
+
+</body>
+</html>

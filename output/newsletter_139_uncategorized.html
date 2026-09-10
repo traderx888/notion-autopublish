@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>彭博研究摘要 #139 — AI資本競賽與全球政策風險</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Noto+Serif+TC:wght@400;700&family=Source+Sans+Pro:wght@400;600;700&display=swap');
+  :root { --bg: #0a0a08; --card: #141410; --border: #2a2820; --accent: #c9a84c;
+          --gold: #f0d87a; --gold-dim: #c4b896; --text: #e0d8c8; --text-bright: #f0ebe0; --muted: #8a8070;
+          --green: #6bbd5b; --red: #e05545; --yellow: #d4a843; --orange: #d49040;
+          --purple: #b08cd0; --cyan: #4cc9b0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { background: #0a0a08 !important; }
+  body { color: var(--text); font-family: 'Source Sans Pro', 'Noto Serif TC', 'Microsoft JhengHei', sans-serif; line-height: 1.8; padding: 24px; max-width: 880px; margin: 0 auto; }
+  h1 { font-family: 'Playfair Display', 'Noto Serif TC', serif; color: var(--gold); font-size: 1.8em; margin-bottom: 4px; font-weight: 900; letter-spacing: 0.02em; }
+  h2 { font-family: 'Playfair Display', 'Noto Serif TC', serif; }
+  .subtitle { color: var(--text-bright); font-size: 0.95em; margin-bottom: 8px; font-family: 'Noto Serif TC', serif; }
+  .issue-badge { display: inline-block; background: rgba(201,168,76,0.15); color: var(--accent); padding: 4px 12px; border-radius: 12px; font-size: 0.8em; font-weight: 600; margin-bottom: 20px; border: 1px solid rgba(201,168,76,0.3); }
+  .tag { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 0.72em; font-weight: 600; margin-right: 4px; }
+  .tag-rates { background: rgba(201,168,76,0.15); color: var(--accent); }
+  .tag-china { background: rgba(212,144,64,0.15); color: var(--orange); }
+  .tag-japan { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-geo   { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-oil   { background: rgba(212,168,67,0.15); color: var(--yellow); }
+  .tag-trade { background: rgba(212,168,67,0.15); color: var(--yellow); }
+  .tag-growth{ background: rgba(107,189,91,0.15); color: var(--green); }
+  .tag-metals{ background: rgba(176,140,208,0.15); color: var(--purple); }
+  .tag-infl  { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-policy{ background: rgba(201,168,76,0.15); color: var(--accent); }
+  .tag-val   { background: rgba(107,189,91,0.15); color: var(--green); }
+  .tag-vol   { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-semi  { background: rgba(76,201,176,0.15); color: var(--cyan); }
+  .tag-credit{ background: rgba(176,140,208,0.15); color: var(--purple); }
+  .tag-space { background: rgba(201,168,76,0.15); color: var(--accent); }
+  .tag-misc  { background: rgba(138,128,112,0.15); color: var(--muted); }
+  .verdict-bar { background: var(--accent); color: #0a0a08; padding: 14px 20px; border-radius: 8px; margin-bottom: 20px; font-weight: 700; font-size: 1.05em; font-family: 'Noto Serif TC', serif; }
+  .section { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 22px; margin-bottom: 18px; }
+  .section h2 { color: var(--gold); font-size: 1.15em; margin-bottom: 12px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+  .section h3 { color: var(--accent); font-size: 0.95em; margin: 14px 0 6px; }
+  .article { margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid rgba(42,40,32,0.7); }
+  .article:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .article-title { color: var(--text-bright); font-weight: 700; font-size: 0.95em; margin-bottom: 4px; }
+  .article-title-cn { color: var(--muted); font-size: 0.85em; margin-bottom: 8px; }
+  .article p { font-size: 0.9em; margin: 6px 0; }
+  .data-point { background: rgba(201,168,76,0.05); padding: 8px 12px; border-radius: 6px; margin: 8px 0; font-size: 0.85em; border: 1px solid rgba(201,168,76,0.12); }
+  .data-point .num { color: var(--text-bright); font-weight: 700; }
+  .implication { background: rgba(201,168,76,0.06); border-left: 3px solid var(--accent); padding: 10px 14px; margin: 10px 0; border-radius: 0 6px 6px 0; font-size: 0.88em; }
+  .implication .label { color: var(--accent); font-weight: 700; font-size: 0.8em; text-transform: uppercase; margin-bottom: 4px; }
+  .red-team { background: rgba(224,85,69,0.06); border: 1px solid rgba(224,85,69,0.25); border-radius: 8px; padding: 18px; margin: 18px 0; }
+  .red-team-title { color: var(--red); font-weight: 700; font-size: 0.95em; margin-bottom: 10px; font-family: 'Playfair Display', serif; }
+  .red-team ul { padding-left: 18px; }
+  .red-team li { margin: 5px 0; font-size: 0.88em; }
+  .callout { background: rgba(201,168,76,0.06); border: 1px solid rgba(201,168,76,0.25); border-radius: 8px; padding: 18px; margin: 18px 0; }
+  .callout-title { color: var(--accent); font-weight: 700; font-size: 0.95em; margin-bottom: 8px; font-family: 'Playfair Display', 'Noto Serif TC', serif; }
+  .callout ul { padding-left: 18px; }
+  .callout li { margin: 5px 0; font-size: 0.88em; }
+  ul { padding-left: 18px; }
+  li { margin: 4px 0; font-size: 0.88em; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(201,168,76,0.05); padding: 12px; border-radius: 6px; text-align: center; border: 1px solid rgba(201,168,76,0.1); }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: var(--gold); font-family: 'Playfair Display', serif; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
+  .toc { background: rgba(201,168,76,0.04); border: 1px solid rgba(201,168,76,0.18); border-radius: 8px; padding: 16px 20px; margin-bottom: 20px; }
+  .toc-title { color: var(--accent); font-weight: 700; font-size: 0.9em; margin-bottom: 8px; }
+  .toc a { color: var(--accent); text-decoration: none; font-size: 0.88em; }
+  .toc a:hover { text-decoration: underline; color: var(--gold); }
+  .toc ol { padding-left: 20px; }
+  .toc li { margin: 4px 0; }
+  .nav-links { display: flex; justify-content: space-between; margin: 20px 0; font-size: 0.85em; }
+  .nav-links a { color: var(--accent); text-decoration: none; }
+  .nav-links a:hover { text-decoration: underline; color: var(--gold); }
+  .divider { height: 1px; background: linear-gradient(90deg, transparent, var(--accent), transparent); margin: 24px 0; opacity: 0.4; }
+  .footer { text-align: center; color: var(--muted); font-size: 0.75em; margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--border); }
+  .footer a { color: var(--accent); text-decoration: none; }
+</style>
+<script>if(window.self===window.top&&sessionStorage.getItem("student_auth")!=="1"){document.body.innerHTML="";window.location.replace("student.html");}</script>
+</head>
+<body>
+
+<h1>彭博研究摘要</h1>
+<p class="subtitle">第139期 | AI資本競賽與全球政策風險</p>
+<span class="issue-badge">2026年九月上旬更新</span>
+
+<div class="verdict-bar">**結論：增持中國科技製造與日本AI供應鏈、低配美國長債及法國主權債；中國准財政刺激今年僅托底，不能視作全面復甦訊號。**</div>
+
+<div class="nav-links">
+  <span><a href="newsletter_138_uncategorized.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="toc">
+  <div class="toc-title">目錄</div>
+  <ol>
+    <li><a href="#china-growth-divide">中國經濟 政策托底，科技突圍</a></li>
+    <li><a href="#ai-capital-race">AI融資 算力吞金，融資分流</a></li>
+    <li><a href="#policy-risk-premium">政策風險 央行失語，歐洲添險</a></li>
+    <li><a href="#japan-ai-transition">日本轉型 工廠受惠，白領承壓</a></li>
+    <li><a href="#red-team">Red Team 反面論證</a></li>
+    <li><a href="#takeaways">基金經理人重點摘要</a></li>
+  </ol>
+</div>
+
+<div class="section" id="china-growth-divide">
+  <h2><span class="tag tag-misc">中國經濟</span> 政策托底，科技突圍</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--green)">8,000億元</div><div class="lbl">新型政策性金融工具
+計畫規模</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">+0.1ppt</div><div class="lbl">計畫對2026年GDP
+估算貢獻</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">20%</div><div class="lbl">15個科技領先城市
+佔全國GDP</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">准財政工具撬動投資，今年增長效應有限</div>
+    <p>中國擬透過政策性銀行推出 <span style="color:#f0ebe0;font-weight:700">8,000億元人民幣</span>「新型政策性金融工具」，以資本金形式注入項目，理論上最多可撬動 <span style="color:#f0ebe0;font-weight:700">8萬億元</span> 投資。然而距年底僅餘四個月，加上項目建設期通常長達三至五年，今年實際落地投資估計只有 <span style="color:#f0ebe0;font-weight:700">4,000億至6,000億元</span>。彭博經濟研究模型顯示，計畫對2026年GDP增速僅貢獻約 <span style="color:#f0ebe0;font-weight:700">0.1個百分點</span>，較明顯的拉動要到明年才出現。人民銀行預計提供3,200億至4,000億元資金，並可能減少MLF投放以回籠流動性，因此政策更像定向托底，而非全面貨幣擴張。</p>
+    <div class="data-point">政策工具規模: <span style="color:#f0ebe0;font-weight:700">8,000億元人民幣</span> &nbsp;|&nbsp; 今年落地投資: <span style="color:#f0ebe0;font-weight:700">4,000億至6,000億元</span> &nbsp;|&nbsp; 2026年GDP貢獻: <span style="color:#f0ebe0;font-weight:700">約0.1個百分點</span> &nbsp;|&nbsp; 2027年GDP貢獻: <span style="color:#f0ebe0;font-weight:700">0.6至0.8個百分點</span></div>
+    <div class="implication"><div class="label">投資啟示</div>刺激效應後移且依賴十倍槓桿假設，應<span style="color:#f0ebe0;font-weight:700">避免追逐廣泛內需復甦交易，優先配置政策支持明確的基建與設備供應商</span>。</div>
+  </div>
+  <div class="article">
+    <div class="article-title">科技「獨角獸」城市高速增長，尚難托起全國經濟</div>
+    <p>中國高技術製造業上半年增加值增長 <span style="color:#f0ebe0;font-weight:700">13.3%</span>，顯著快於GDP的 <span style="color:#f0ebe0;font-weight:700">4.7%</span>，但紅利高度集中。合肥受記憶晶片產業帶動，高技術產業增加值急升 <span style="color:#f0ebe0;font-weight:700">79.0%</span>，GDP增長6.8%；武漢憑藉光通信及光電子集群，高技術製造業增長65.7%，GDP增長5.7%。問題是，2025年科技增速高於全國平均的15個城市，合計僅佔全國GDP <span style="color:#f0ebe0;font-weight:700">20%</span>，其中三分之二位於長三角。哈爾濱、昆明及西安等傳統產業城市增長偏弱，顯示科技升級仍是局部突破，尚未形成足以抵銷房地產與傳統製造放緩的全國性浪潮。</p>
+    <div class="data-point">全國高技術製造增速: <span style="color:#f0ebe0;font-weight:700">13.3%</span> &nbsp;|&nbsp; 合肥高技術產業增速: <span style="color:#f0ebe0;font-weight:700">79.0%</span> &nbsp;|&nbsp; 武漢高技術製造增速: <span style="color:#f0ebe0;font-weight:700">65.7%</span> &nbsp;|&nbsp; 領先城市GDP佔比: <span style="color:#f0ebe0;font-weight:700">20%</span></div>
+    <div class="implication"><div class="label">投資啟示</div>採取城市與產業集群選股策略，<span style="color:#f0ebe0;font-weight:700">增持合肥半導體、武漢光電子及長三角高端製造供應鏈，低配依賴地產與傳統工業的地區資產</span>。</div>
+  </div>
+
+</div>
+
+<div class="section" id="ai-capital-race">
+  <h2><span class="tag tag-misc">AI融資</span> 算力吞金，融資分流</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--orange)">450億美元</div><div class="lbl">Anthropic向Nscale
+六年合約金額</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">2,330億美元</div><div class="lbl">美國科技公司
+前七月債券淨融資</div></div>
+    <div class="stat"><div class="val" style="color:var(--green)">1,526億元</div><div class="lbl">中國科技IPO
+年內募資額</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">Anthropic斥資450億美元鎖定Nscale算力</div>
+    <p>Anthropic同意在六年內向Nscale支付 <span style="color:#f0ebe0;font-weight:700">450億美元</span>，租用其西弗吉尼亞州數據中心的AI算力。項目將採用Nvidia Vera Rubin晶片，預計自明年底陸續上線，對應約 <span style="color:#f0ebe0;font-weight:700">460兆瓦</span> 電力容量，相當於34.5萬戶美國家庭同時用電。這並非單一押注：Anthropic近期亦與Fluidstack簽訂500億美元協議、與Volta Infra達成100億美元協議，並與SpaceX簽訂450億美元協議。公司5月估值已達 <span style="color:#f0ebe0;font-weight:700">9,650億美元</span>，市場並預期其IPO募資或創紀錄。密集合約反映前沿模型競爭正由演算法延伸至電力、晶片與數據中心的長期供應保障。</p>
+    <div class="data-point">Nscale合約: <span style="color:#f0ebe0;font-weight:700">450億美元</span> &nbsp;|&nbsp; 合約期限: <span style="color:#f0ebe0;font-weight:700">六年</span> &nbsp;|&nbsp; 電力容量: <span style="color:#f0ebe0;font-weight:700">460兆瓦</span> &nbsp;|&nbsp; Anthropic估值: <span style="color:#f0ebe0;font-weight:700">9,650億美元</span></div>
+    <div class="implication"><div class="label">投資啟示</div>算力需求具備多年合約支持，宜<span style="color:#f0ebe0;font-weight:700">增持Nvidia晶片、數據中心及電力基建供應鏈，同時審慎評估AI客戶集中與資本承諾風險</span>。</div>
+  </div>
+  <div class="article">
+    <div class="article-title">中美AI融資殊途：美國發債，中國靠貸款與IPO</div>
+    <p>全球50大科技企業2025年資本開支達 <span style="color:#f0ebe0;font-weight:700">5,330億美元</span>，首次超過可用現金，迫使AI投資轉向外部融資。美國主要科技公司在2026年前七個月透過債券淨融資 <span style="color:#f0ebe0;font-weight:700">2,330億美元</span>，佔公司債淨融資36%，龐大供給正與國債爭奪資金並推高長端收益率。中國模式則以銀行貸款和股權為主：大型上市科技公司上半年取得約2,400億元人民幣貸款，年內37家科技企業上市，募資1,526億元；境內債券融資僅660億元。中國短期避免了債券收益率上升和融資擠出，長期卻可能因企業債市場不足而限制AI擴張。</p>
+    <div class="data-point">全球科技資本開支: <span style="color:#f0ebe0;font-weight:700">5,330億美元</span> &nbsp;|&nbsp; 美國科技債券淨融資: <span style="color:#f0ebe0;font-weight:700">2,330億美元</span> &nbsp;|&nbsp; 中國科技銀行貸款: <span style="color:#f0ebe0;font-weight:700">約2,400億元人民幣</span> &nbsp;|&nbsp; 中國科技債券融資: <span style="color:#f0ebe0;font-weight:700">660億元人民幣</span></div>
+    <div class="implication"><div class="label">投資啟示</div>融資差異有利中國利率穩定、但增加股權稀釋風險；建議<span style="color:#f0ebe0;font-weight:700">低配美國長久期債券，精選中國AI股並關注科技創新債擴容受益者</span>。</div>
+  </div>
+
+</div>
+
+<div class="section" id="policy-risk-premium">
+  <h2><span class="tag tag-misc">政策風險</span> 央行失語，歐洲添險</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--red)">+30bp</div><div class="lbl">沃什首次主持FOMC後
+30年期美債收益率</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">5.1%</div><div class="lbl">法國2025年
+財政赤字率</div></div>
+    <div class="stat"><div class="val" style="color:var(--green)">3.1%</div><div class="lbl">意大利2025年
+財政赤字率</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">沃什面臨Jackson Hole溝通考驗</div>
+    <p>自Kevin Warsh在6月中首次以Fed主席身份主持FOMC會議後，<span style="color:#f0ebe0;font-weight:700">30年期美債收益率上升30個基點</span>，而7月記者會的含糊表態進一步削弱市場信心。投資者希望他在Jackson Hole確認PCE仍是衡量 <span style="color:#f0ebe0;font-weight:700">2%</span> 通膨目標的核心標尺，並交代何種數據會觸發加息。彭博經濟研究預計，Warsh將主張減少前瞻性指引、保留政策彈性，卻未必提供清晰反應框架。若演說仍集中於工作組與內部討論，而迴避通膨回落時限和政策條件，市場可能把「靈活性」解讀成缺乏方案，令長債拋售及美元貶值交易進一步加劇。</p>
+    <div class="data-point">30年期美債收益率變動: <span style="color:#f0ebe0;font-weight:700">+30bp</span> &nbsp;|&nbsp; Fed通膨目標: <span style="color:#f0ebe0;font-weight:700">2%</span> &nbsp;|&nbsp; 關鍵演說日期: <span style="color:#f0ebe0;font-weight:700">8月28日</span></div>
+    <div class="implication"><div class="label">投資啟示</div>事件風險偏向收益率上行，演說前宜<span style="color:#f0ebe0;font-weight:700">減持30年期美債、以曲線陡峭化交易對沖，並保留美元下行保護</span>。</div>
+  </div>
+  <div class="article">
+    <div class="article-title">歐洲選舉周期逼近，財政整頓再受考驗</div>
+    <p>歐洲近期避過重大政治危機，但法國、意大利、西班牙及波蘭將於2027年迎來關鍵選舉，財政紀律或讓位於選票。法國若無法通過預算，可能再次依據《特別法》運作，令預測僅 <span style="color:#f0ebe0;font-weight:700">0.9%</span> 的2027年增長面臨下行風險；其赤字率由2024年的5.8%降至2025年的 <span style="color:#f0ebe0;font-weight:700">5.1%</span>，但2026年5%目標仍難達成。德國地方選舉可能加劇執政聯盟摩擦，波蘭赤字則達GDP的 <span style="color:#f0ebe0;font-weight:700">7.3%</span>。相較之下，意大利赤字已由2023年的7.2%降至2025年的3.1%，較有望跌破歐盟3%門檻，呈現明顯的主權信用分化。</p>
+    <div class="data-point">法國2027年GDP預測: <span style="color:#f0ebe0;font-weight:700">0.9%</span> &nbsp;|&nbsp; 法國2025年赤字率: <span style="color:#f0ebe0;font-weight:700">5.1%</span> &nbsp;|&nbsp; 波蘭2025年赤字率: <span style="color:#f0ebe0;font-weight:700">7.3%</span> &nbsp;|&nbsp; 意大利2025年赤字率: <span style="color:#f0ebe0;font-weight:700">3.1%</span></div>
+    <div class="implication"><div class="label">投資啟示</div>歐洲不宜一籃子配置，建議<span style="color:#f0ebe0;font-weight:700">低配法國與波蘭主權債、相對增持意大利債券，並以德國國債作政治風險對沖</span>。</div>
+  </div>
+
+</div>
+
+<div class="section" id="japan-ai-transition">
+  <h2><span class="tag tag-misc">日本轉型</span> 工廠受惠，白領承壓</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--red)">70%</div><div class="lbl">一般事務職員任務
+可被AI大幅提速</div></div>
+    <div class="stat"><div class="val" style="color:var(--green)">≥50%</div><div class="lbl">AI可縮短相關任務
+所需時間</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">接近零</div><div class="lbl">日本當前潛在
+GDP增長率</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">AI提振日本製造業，也衝擊終身僱傭制</div>
+    <p>AI正同時改變日本的生產與就業結構。需求端方面，晶片製造設備、半導體材料、伺服器組件及電纜訂單增強，7月工業產值亦顯示AI需求可支持第三季GDP。供應端方面，「實體AI」可緩解老齡化造成的勞工短缺，讓閒置設備恢復運轉。然而一般事務職員約 <span style="color:#f0ebe0;font-weight:700">70%</span> 的工作任務，可能由AI把所需時間縮短至少一半，企業因而更難維持以通才輪調為核心的終身僱傭制度。轉向職位制及增加中途招聘可提升創新和生產力，但資深員工可能面對減薪、調職與消費收縮。整體而言，生產力增長仍有望推動日本潛在GDP增速脫離接近零的水平。</p>
+    <div class="data-point">一般事務職員AI暴露度: <span style="color:#f0ebe0;font-weight:700">約70%</span> &nbsp;|&nbsp; 任務時間縮減門檻: <span style="color:#f0ebe0;font-weight:700">至少一半</span> &nbsp;|&nbsp; 潛在GDP增速起點: <span style="color:#f0ebe0;font-weight:700">接近零</span></div>
+    <div class="implication"><div class="label">投資啟示</div>產業層面的正面效應較強，宜<span style="color:#f0ebe0;font-weight:700">增持日本半導體設備、自動化與工業AI企業，低配依賴行政人力且轉型成本高的公司</span>。</div>
+  </div>
+
+</div>
+
+<div class="divider"></div>
+
+<div class="red-team" id="red-team">
+  <div class="red-team-title">&#128308; Red Team — 核心假設與反面論證</div>
+  <ul>
+    <li>假設1：中國准財政工具能成功以十倍槓桿撬動投資，並把主要增長效應延續至2027年。</li>
+    <li>假設2：AI資本開支及算力需求能持續支撐晶片、數據中心、電力設備與日本製造業訂單。</li>
+    <li>假設3：Fed溝通不清與歐洲選舉風險將繼續推高美國長債及部分歐洲主權債的風險溢價。</li>
+    <li style="color:var(--red)">風險1：中國項目建設期長達三至五年，今年僅落地4,000億至6,000億元；若槓桿低於十倍，2027年0.6至0.8個百分點的增長貢獻也會下修。</li>
+    <li style="color:var(--red)">風險2：全球50大科技企業2025年5,330億美元資本開支已超過可用現金；若融資成本上升或AI收入未能兌現，長期算力合約及設備訂單可能被延後。</li>
+    <li style="color:var(--red)">風險3：若Warsh明確確認PCE標尺及政策反應框架，30年期收益率自6月中上升30bp的溝通溢價可能回落；意大利赤字率亦已降至3.1%，顯示歐洲風險並非全面惡化。</li>
+  </ul>
+  <p style="margin-top:10px;padding:10px 14px;background:rgba(224,85,69,0.04);border-radius:6px;font-size:0.9em;border-left:3px solid var(--red)">核心配置邏輯暫時成立，但必須區分結構性贏家與總量復甦。中國刺激今年僅增加約0.1個百分點GDP，不能支持全面加倉；AI供應鏈仍受450億美元Nscale合約及美國2,330億美元科技債融資支撐。若中國投資槓桿明顯低於十倍、AI資本開支開始縮減，或30年期美債收益率回吐6月中以來30bp升幅，應削減相關方向性倉位。</p>
+</div>
+
+<div class="callout" id="takeaways">
+  <div class="callout-title">基金經理人重點摘要</div>
+  <ul>
+    <li><strong>中國增長：</strong>8,000億元准財政工具今年僅貢獻約0.1個百分點GDP；避免全面復甦交易，聚焦政策支持的基建與設備股。</li>
+    <li><strong>中國科技：</strong>合肥及武漢高技術產業分別增長79.0%及65.7%；增持半導體、光電子與長三角高端製造供應鏈。</li>
+    <li><strong>AI資本：</strong>Anthropic鎖定450億美元Nscale算力，美國科技債淨融資達2,330億美元；增持算力及電力基建，低配美國長債。</li>
+    <li><strong>Fed：</strong>30年期美債收益率自Warsh首次主持FOMC後升30bp；以曲線陡峭化交易防範Jackson Hole溝通失誤。</li>
+    <li><strong>歐洲：</strong>法國及波蘭赤字壓力高於意大利；低配法國與波蘭主權債，相對增持意大利債券。</li>
+    <li><strong>日本：</strong>AI可把一般事務職員約70%的任務時間縮短至少一半；增持自動化與半導體設備商，避開轉型成本高的人力密集企業。</li>
+  </ul>
+</div>
+
+<div class="nav-links">
+  <span><a href="newsletter_138_uncategorized.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="footer">
+  彭博研究摘要 | 僅供教學與討論用途 | 2026年9月10日<br>
+  資料來源：Bloomberg Intelligence, Bloomberg Economics, Bloomberg News<br>
+  <a href="https://www.patreon.com/Aireturn">Patreon</a> · <a href="https://t.me/AIreturn">Telegram</a> · Threads @aireturn88
+</div>
+
+</body>
+</html>

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>彭博研究摘要 #138 — 利率轉折、科技輪動與私募信貸壓力</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Noto+Serif+TC:wght@400;700&family=Source+Sans+Pro:wght@400;600;700&display=swap');
+  :root { --bg: #0a0a08; --card: #141410; --border: #2a2820; --accent: #c9a84c;
+          --gold: #f0d87a; --gold-dim: #c4b896; --text: #e0d8c8; --text-bright: #f0ebe0; --muted: #8a8070;
+          --green: #6bbd5b; --red: #e05545; --yellow: #d4a843; --orange: #d49040;
+          --purple: #b08cd0; --cyan: #4cc9b0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { background: #0a0a08 !important; }
+  body { color: var(--text); font-family: 'Source Sans Pro', 'Noto Serif TC', 'Microsoft JhengHei', sans-serif; line-height: 1.8; padding: 24px; max-width: 880px; margin: 0 auto; }
+  h1 { font-family: 'Playfair Display', 'Noto Serif TC', serif; color: var(--gold); font-size: 1.8em; margin-bottom: 4px; font-weight: 900; letter-spacing: 0.02em; }
+  h2 { font-family: 'Playfair Display', 'Noto Serif TC', serif; }
+  .subtitle { color: var(--text-bright); font-size: 0.95em; margin-bottom: 8px; font-family: 'Noto Serif TC', serif; }
+  .issue-badge { display: inline-block; background: rgba(201,168,76,0.15); color: var(--accent); padding: 4px 12px; border-radius: 12px; font-size: 0.8em; font-weight: 600; margin-bottom: 20px; border: 1px solid rgba(201,168,76,0.3); }
+  .tag { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 0.72em; font-weight: 600; margin-right: 4px; }
+  .tag-rates { background: rgba(201,168,76,0.15); color: var(--accent); }
+  .tag-china { background: rgba(212,144,64,0.15); color: var(--orange); }
+  .tag-japan { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-geo   { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-oil   { background: rgba(212,168,67,0.15); color: var(--yellow); }
+  .tag-trade { background: rgba(212,168,67,0.15); color: var(--yellow); }
+  .tag-growth{ background: rgba(107,189,91,0.15); color: var(--green); }
+  .tag-metals{ background: rgba(176,140,208,0.15); color: var(--purple); }
+  .tag-infl  { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-policy{ background: rgba(201,168,76,0.15); color: var(--accent); }
+  .tag-val   { background: rgba(107,189,91,0.15); color: var(--green); }
+  .tag-vol   { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-semi  { background: rgba(76,201,176,0.15); color: var(--cyan); }
+  .tag-credit{ background: rgba(176,140,208,0.15); color: var(--purple); }
+  .tag-space { background: rgba(201,168,76,0.15); color: var(--accent); }
+  .tag-misc  { background: rgba(138,128,112,0.15); color: var(--muted); }
+  .verdict-bar { background: var(--accent); color: #0a0a08; padding: 14px 20px; border-radius: 8px; margin-bottom: 20px; font-weight: 700; font-size: 1.05em; font-family: 'Noto Serif TC', serif; }
+  .section { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 22px; margin-bottom: 18px; }
+  .section h2 { color: var(--gold); font-size: 1.15em; margin-bottom: 12px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+  .section h3 { color: var(--accent); font-size: 0.95em; margin: 14px 0 6px; }
+  .article { margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid rgba(42,40,32,0.7); }
+  .article:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .article-title { color: var(--text-bright); font-weight: 700; font-size: 0.95em; margin-bottom: 4px; }
+  .article-title-cn { color: var(--muted); font-size: 0.85em; margin-bottom: 8px; }
+  .article p { font-size: 0.9em; margin: 6px 0; }
+  .data-point { background: rgba(201,168,76,0.05); padding: 8px 12px; border-radius: 6px; margin: 8px 0; font-size: 0.85em; border: 1px solid rgba(201,168,76,0.12); }
+  .data-point .num { color: var(--text-bright); font-weight: 700; }
+  .implication { background: rgba(201,168,76,0.06); border-left: 3px solid var(--accent); padding: 10px 14px; margin: 10px 0; border-radius: 0 6px 6px 0; font-size: 0.88em; }
+  .implication .label { color: var(--accent); font-weight: 700; font-size: 0.8em; text-transform: uppercase; margin-bottom: 4px; }
+  .red-team { background: rgba(224,85,69,0.06); border: 1px solid rgba(224,85,69,0.25); border-radius: 8px; padding: 18px; margin: 18px 0; }
+  .red-team-title { color: var(--red); font-weight: 700; font-size: 0.95em; margin-bottom: 10px; font-family: 'Playfair Display', serif; }
+  .red-team ul { padding-left: 18px; }
+  .red-team li { margin: 5px 0; font-size: 0.88em; }
+  .callout { background: rgba(201,168,76,0.06); border: 1px solid rgba(201,168,76,0.25); border-radius: 8px; padding: 18px; margin: 18px 0; }
+  .callout-title { color: var(--accent); font-weight: 700; font-size: 0.95em; margin-bottom: 8px; font-family: 'Playfair Display', 'Noto Serif TC', serif; }
+  .callout ul { padding-left: 18px; }
+  .callout li { margin: 5px 0; font-size: 0.88em; }
+  ul { padding-left: 18px; }
+  li { margin: 4px 0; font-size: 0.88em; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(201,168,76,0.05); padding: 12px; border-radius: 6px; text-align: center; border: 1px solid rgba(201,168,76,0.1); }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: var(--gold); font-family: 'Playfair Display', serif; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
+  .toc { background: rgba(201,168,76,0.04); border: 1px solid rgba(201,168,76,0.18); border-radius: 8px; padding: 16px 20px; margin-bottom: 20px; }
+  .toc-title { color: var(--accent); font-weight: 700; font-size: 0.9em; margin-bottom: 8px; }
+  .toc a { color: var(--accent); text-decoration: none; font-size: 0.88em; }
+  .toc a:hover { text-decoration: underline; color: var(--gold); }
+  .toc ol { padding-left: 20px; }
+  .toc li { margin: 4px 0; }
+  .nav-links { display: flex; justify-content: space-between; margin: 20px 0; font-size: 0.85em; }
+  .nav-links a { color: var(--accent); text-decoration: none; }
+  .nav-links a:hover { text-decoration: underline; color: var(--gold); }
+  .divider { height: 1px; background: linear-gradient(90deg, transparent, var(--accent), transparent); margin: 24px 0; opacity: 0.4; }
+  .footer { text-align: center; color: var(--muted); font-size: 0.75em; margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--border); }
+  .footer a { color: var(--accent); text-decoration: none; }
+</style>
+<script>if(window.self===window.top&&sessionStorage.getItem("student_auth")!=="1"){document.body.innerHTML="";window.location.replace("student.html");}</script>
+</head>
+<body>
+
+<h1>彭博研究摘要</h1>
+<p class="subtitle">第138期 | 利率轉折、科技輪動與私募信貸壓力</p>
+<span class="issue-badge">2026年九月上旬更新</span>
+
+<div class="verdict-bar">**結論：降低擁擠科技與高槓桿軟件信貸曝險，增持非 AI 美股及防守板塊；美日央行政策仍受數據牽引，利率倉位宜保留彈性。**</div>
+
+<div class="nav-links">
+  <span><a href="newsletter_137_uncategorized.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="toc">
+  <div class="toc-title">目錄</div>
+  <ol>
+    <li><a href="#central-bank-crosscurrents">央行政策 美日台政策轉向延後</a></li>
+    <li><a href="#equity-leadership-rotation">股票輪動 資金未離場，只是離開AI</a></li>
+    <li><a href="#private-credit-refinancing">私募信貸 軟件債務牆逼近</a></li>
+    <li><a href="#geopolitics-and-fx">地緣與外匯 制裁受阻，人民幣波幅蒸發</a></li>
+    <li><a href="#red-team">Red Team 反面論證</a></li>
+    <li><a href="#takeaways">基金經理人重點摘要</a></li>
+  </ol>
+</div>
+
+<div class="section" id="central-bank-crosscurrents">
+  <h2><span class="tag tag-misc">央行政策</span> 美日台政策轉向延後</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--orange)">約1/3</div><div class="lbl">市場定價Fed
+9月加息概率</div></div>
+    <div class="stat"><div class="val">1.1%</div><div class="lbl">日本Q2 GDP
+年化增長</div></div>
+    <div class="stat"><div class="val">12月</div><div class="lbl">台灣預期
+加息時點</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">美國數據轉弱，FOMC紀要仍可能掀起鷹派波動</div>
+    <p>美國非農就業減少、零售額下降及CPI溫和，均削弱Fed在9月再次收緊政策的必要性，市場定價的加息概率約為 <span style="color:#f0ebe0;font-weight:700">三分之一</span>。前瞻數據亦指向動能放緩：7月新屋開工預計下降 <span style="color:#f0ebe0;font-weight:700">6.0%</span> 至 <span style="color:#f0ebe0;font-weight:700">134.1萬戶</span>，工業產值僅增 <span style="color:#f0ebe0;font-weight:700">0.1%</span>。不過，7月FOMC會議有三名委員支持加息，而6月點陣圖的18名參與者中，有 <span style="color:#f0ebe0;font-weight:700">9人</span> 預計年內至少加息一次。會議紀要若顯示鷹派陣營比異議票反映的更廣，短期美債收益率仍可能上升；但其內容具有滯後性，最新疲弱數據仍支持年內不加息的基準判斷。</p>
+    <div class="data-point">9月加息概率: <span style="color:#f0ebe0;font-weight:700">約三分之一</span> &nbsp;|&nbsp; 7月新屋開工預測: <span style="color:#f0ebe0;font-weight:700">134.1萬戶</span> &nbsp;|&nbsp; 7月工業產值預測: <span style="color:#f0ebe0;font-weight:700">+0.1%</span> &nbsp;|&nbsp; 年內至少加息一次的點陣圖人數: <span style="color:#f0ebe0;font-weight:700">9人</span></div>
+    <div class="implication"><div class="label">投資啟示</div>避免重注單一政策結果，會議紀要公布前 <span style="color:#f0ebe0;font-weight:700">維持美債久期中性並以期權對沖收益率上行</span>；若疲弱數據延續，再逐步增加前端利率多倉。</div>
+  </div>
+  <div class="article">
+    <div class="article-title">日本GDP表面勝潛在增速，內需疲弱限制加息步伐</div>
+    <p>日本第二季GDP按年率增長 <span style="color:#f0ebe0;font-weight:700">1.1%</span>，雖高於央行估算約 <span style="color:#f0ebe0;font-weight:700">0.7%</span> 的潛在增長率，卻遠低於市場預期的 <span style="color:#f0ebe0;font-weight:700">2.0%</span>。增長主要來自庫存及淨出口，兩者分別貢獻 <span style="color:#f0ebe0;font-weight:700">1.1個</span> 與 <span style="color:#f0ebe0;font-weight:700">1.8個百分點</span>，內需質素並不扎實。資本支出按季下降 <span style="color:#f0ebe0;font-weight:700">1.2%</span>，私人消費大致持平，顯示油價衝擊與此前緊縮已令企業和家庭更審慎。8月分析因此把25基點加息預測放在10月；其後GDP上修則令9月加息理據增強，但仍不支持進取緊縮。訊息並非日本央行不會加息，而是政策時點高度依賴修訂數據，後續步伐可能慢於市場較鷹派的定價。</p>
+    <div class="data-point">Q2 GDP年化增長: <span style="color:#f0ebe0;font-weight:700">1.1%</span> &nbsp;|&nbsp; 潛在增長率: <span style="color:#f0ebe0;font-weight:700">約0.7%</span> &nbsp;|&nbsp; Q2資本支出: <span style="color:#f0ebe0;font-weight:700">-1.2%</span> &nbsp;|&nbsp; 預期加息幅度: <span style="color:#f0ebe0;font-weight:700">25bp</span></div>
+    <div class="implication"><div class="label">投資啟示</div>日本利率方向仍偏上，但速度有限；<span style="color:#f0ebe0;font-weight:700">減少高槓桿日圓套利、避免追空長久期日債</span>，等待央行會議確認時點。</div>
+  </div>
+  <div class="article">
+    <div class="article-title">台灣通膨低於預期，加息預測押後至年底</div>
+    <p>台灣最新通膨數據低於預期，使Bloomberg Economics把央行加息預測押後至 <span style="color:#f0ebe0;font-weight:700">12月</span>。這項調整顯示，價格壓力暫時不足以迫使央行立即收緊政策，台灣與日本的政策節奏亦開始分化。對市場而言，延後加息可在短期紓緩本地債券及利率敏感資產的估值壓力，也有利資金把台幣視為替代套利貨幣。不過，來源摘要未提供CPI實際讀數、原預測時點或預期加息幅度，因此目前只能確認政策時點後移，不能據此判斷完整的利率周期。投資者仍需等待後續通膨、匯率及央行指引，以驗證12月行動是否具有足夠數據支持。</p>
+    <div class="data-point">預期加息時點: <span style="color:#f0ebe0;font-weight:700">12月</span> &nbsp;|&nbsp; 關鍵訊號: <span style="color:#f0ebe0;font-weight:700">CPI低於預期</span> &nbsp;|&nbsp; 已披露加息幅度: <span style="color:#f0ebe0;font-weight:700">未提供</span></div>
+    <div class="implication"><div class="label">投資啟示</div>短期可 <span style="color:#f0ebe0;font-weight:700">持有台灣本地債券及審慎部署台幣套利</span>，但因原文數據有限，應嚴控槓桿並等待完整CPI資料確認。</div>
+  </div>
+
+</div>
+
+<div class="section" id="equity-leadership-rotation">
+  <h2><span class="tag tag-misc">股票輪動</span> 資金未離場，只是離開AI</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--red)">-4%</div><div class="lbl">Nasdaq 100距
+6月高位</div></div>
+    <div class="stat"><div class="val" style="color:var(--green)">+8%</div><div class="lbl">S&P 500 ex-AI
+6月高位後表現</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">&lt;5%</div><div class="lbl">BofA判斷GT30
+利率關鍵門檻</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">Nasdaq落後不是熊市，而是科技主題消化期</div>
+    <p>S&amp;P 500已重返紀錄高位，Nasdaq 100卻仍較6月2日峰值低 <span style="color:#f0ebe0;font-weight:700">4%</span>，差距源於持續約 <span style="color:#f0ebe0;font-weight:700">10個月</span> 的內部領導權轉移。自本輪牛市開始以來，兩指數有173個交易日處於不同回撤狀態，其中 <span style="color:#f0ebe0;font-weight:700">84日</span> 集中在過去10個月。夏季調整尤其失衡，Nasdaq較S&amp;P 500遲 <span style="color:#f0ebe0;font-weight:700">33個交易日</span> 見底，跌幅亦超過兩倍。歷史顯示，當大市僅淺度回落而科技受創較深，科技通常需在S&amp;P 500復原後再花兩至四個月追趕。同期S&amp;P 500 ex-AI上升約 <span style="color:#f0ebe0;font-weight:700">8%</span>、等權指數升約 <span style="color:#f0ebe0;font-weight:700">5%</span>，證明資金仍在市場，只是由AI主題轉向更廣泛股份。</p>
+    <div class="data-point">Nasdaq距紀錄高位: <span style="color:#f0ebe0;font-weight:700">-4%</span> &nbsp;|&nbsp; 分化交易日: <span style="color:#f0ebe0;font-weight:700">173日</span> &nbsp;|&nbsp; 過去10個月佔比: <span style="color:#f0ebe0;font-weight:700">84日</span> &nbsp;|&nbsp; S&amp;P 500 ex-AI表現: <span style="color:#f0ebe0;font-weight:700">約+8%</span></div>
+    <div class="implication"><div class="label">投資啟示</div>不要把指數落後等同全面撤資；<span style="color:#f0ebe0;font-weight:700">減持擁擠AI領導股，增持S&amp;P 500 ex-AI及等權策略</span>，並預留兩至四個月等待科技修復。</div>
+  </div>
+  <div class="article">
+    <div class="article-title">長端收益率主導風險偏好，AI採用者勝過建設者</div>
+    <p>BofA認為目前是債券主導股票估值，而非股票泡沫牽動債市。年初至今油價上升 <span style="color:#f0ebe0;font-weight:700">44.3%</span>、國際股票升 <span style="color:#f0ebe0;font-weight:700">15.6%</span>、S&amp;P 500升 <span style="color:#f0ebe0;font-weight:700">12.6%</span>，但政府債券跌 <span style="color:#f0ebe0;font-weight:700">1.1%</span>、Bitcoin跌 <span style="color:#f0ebe0;font-weight:700">9.3%</span>，反映通膨與長端收益率仍是核心約束。策略上的分水嶺是30年期美債收益率能否降至 <span style="color:#f0ebe0;font-weight:700">5%以下</span>：在此之前，AI資本開支者與晶片建設者的相對弱勢可能延續，醫療與金融等AI採用者更受青睞。若政策溝通既能錨定短端通膨預期，又支持長端回落，風險資產和美元可同步上升；若失敗，10年與30年收益率突破 <span style="color:#f0ebe0;font-weight:700">4.7%</span>、<span style="color:#f0ebe0;font-weight:700">5.3%</span> 將觸發防守交易。</p>
+    <div class="data-point">油價年初至今: <span style="color:#f0ebe0;font-weight:700">+44.3%</span> &nbsp;|&nbsp; S&amp;P 500年初至今: <span style="color:#f0ebe0;font-weight:700">+12.6%</span> &nbsp;|&nbsp; 10年期風險線: <span style="color:#f0ebe0;font-weight:700">4.7%</span> &nbsp;|&nbsp; 30年期風險線: <span style="color:#f0ebe0;font-weight:700">5.3%</span></div>
+    <div class="implication"><div class="label">投資啟示</div>在30年期收益率穩定低於5%前，<span style="color:#f0ebe0;font-weight:700">超配醫療、金融等AI採用者，低配MAGS與SOX</span>；若收益率突破風險線，進一步轉向防守板塊。</div>
+  </div>
+
+</div>
+
+<div class="section" id="private-credit-refinancing">
+  <h2><span class="tag tag-misc">私募信貸</span> 軟件債務牆逼近</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--red)">$651bn</div><div class="lbl">軟件及服務業
+債務規模</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">3.8年</div><div class="lbl">債務加權
+平均年期</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">2028</div><div class="lbl">償債到期
+高峰年份</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">Thoma Bravo再融資揭示軟件私募債壓力</div>
+    <p>2021至2022年的軟件收購潮留下約 <span style="color:#f0ebe0;font-weight:700">6,510億美元</span> 軟件及服務業債務，加權平均年期只有 <span style="color:#f0ebe0;font-weight:700">3.8年</span>，償還高峰將在 <span style="color:#f0ebe0;font-weight:700">2028年</span> 到來。多數貸款仍接近或高於面值，但折價交易比例上升，已是早期壓力訊號。AI替代廉價SaaS服務的風險、利率高企及直接貸款機構轉趨審慎，使再融資比新交易更迫切。Thoma Bravo累計完成 <span style="color:#f0ebe0;font-weight:700">1,180億美元</span> 軟件收購，其Proofpoint再融資須接受40項債權人友善條款，並每年多付 <span style="color:#f0ebe0;font-weight:700">6,000萬美元</span> 利息；Conga亦在銀團市場失敗後，才取得逾5億美元銀行展期承諾。個案顯示，即使資產尚未違約，資本成本與契約限制已明顯惡化。</p>
+    <div class="data-point">軟件及服務業債務: <span style="color:#f0ebe0;font-weight:700">約$651bn</span> &nbsp;|&nbsp; 加權平均年期: <span style="color:#f0ebe0;font-weight:700">3.8年</span> &nbsp;|&nbsp; Thoma Bravo收購額: <span style="color:#f0ebe0;font-weight:700">$118bn</span> &nbsp;|&nbsp; Proofpoint新增年息: <span style="color:#f0ebe0;font-weight:700">$60mn</span></div>
+    <div class="implication"><div class="label">投資啟示</div>在2028到期潮前 <span style="color:#f0ebe0;font-weight:700">減持高槓桿軟件貸款及CLO低順位 tranche</span>，優先選擇具定價能力、自由現金流及較低再融資需求的借款人。</div>
+  </div>
+
+</div>
+
+<div class="section" id="geopolitics-and-fx">
+  <h2><span class="tag tag-misc">地緣與外匯</span> 制裁受阻，人民幣波幅蒸發</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--orange)">&lt;2%</div><div class="lbl">部分人民幣期限
+隱含波動率</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">$58bn</div><div class="lbl">首八月離岸人民幣期權
+月均名義成交額</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">5月</div><div class="lbl">中國發布阻斷令
+限制遵守美國制裁</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">中國約束削弱美國對伊朗新制裁的威力</div>
+    <p>美國正考慮擴大對伊朗的制裁權限，甚至仿效第 <span style="color:#f0ebe0;font-weight:700">13810號</span> 行政令或沒收被凍結資產，但政策成效取決於執行，而非措施名稱。核心障礙是華盛頓一直不願制裁伊朗賴以交易及取得硬通貨的中國與其他第三國大型銀行。特朗普下月計劃與習近平會面，美方亦須衡量中國限制稀土及關鍵礦產供應的反制風險。中國在今年 <span style="color:#f0ebe0;font-weight:700">5月</span> 已發布阻斷令，禁止在華企業遵守美國制裁，令跨國公司面臨中美法律衝突。即使美國最終打擊主要金融中介，伊朗政權也可能因戰爭涉及存亡、並預期美國中期選舉前政治壓力上升，而拒絕在短期內讓步。</p>
+    <div class="data-point">可參考行政令: <span style="color:#f0ebe0;font-weight:700">第13810號</span> &nbsp;|&nbsp; 中國阻斷令時間: <span style="color:#f0ebe0;font-weight:700">今年5月</span> &nbsp;|&nbsp; 特朗普與習近平會面: <span style="color:#f0ebe0;font-weight:700">下月</span></div>
+    <div class="implication"><div class="label">投資啟示</div>不要把宣布新制裁直接等同伊朗供應迅速中斷；<span style="color:#f0ebe0;font-weight:700">保留能源上行對沖，但避免僅憑制裁標題追高油價</span>，並監察中國大型銀行是否成為正式目標。</div>
+  </div>
+  <div class="article">
+    <div class="article-title">人民幣進入自我強化的低波動循環</div>
+    <p>人民幣短期波幅被政策穩定、銀行逆市做市與投機資金退場所共同壓低，部分期限隱含波動率已跌至 <span style="color:#f0ebe0;font-weight:700">不足2%</span> 的十多年低位。今年首八個月，美元兌離岸人民幣期權月均名義成交額僅約 <span style="color:#f0ebe0;font-weight:700">580億美元</span>，明顯低於去年，投機及套利資金轉向港元、台幣等市場。與離岸交易萎縮相反，反映實體企業避險需求的在岸客戶期權成交量快速增加，今年更已超越離岸市場。低波動有助貿易結算、降低套保成本及緩解資本外流，但若持續過久，企業可能弱化避險意識，市場深度與對沖工具生態亦會受損，最終限制人民幣國際化及應對大幅供需變化的能力。</p>
+    <div class="data-point">部分期限隱含波動率: <span style="color:#f0ebe0;font-weight:700">不足2%</span> &nbsp;|&nbsp; 離岸期權月均成交額: <span style="color:#f0ebe0;font-weight:700">約$58bn</span> &nbsp;|&nbsp; 統計期間: <span style="color:#f0ebe0;font-weight:700">今年首八個月</span> &nbsp;|&nbsp; 在岸客戶期權成交量: <span style="color:#f0ebe0;font-weight:700">已超越離岸</span></div>
+    <div class="implication"><div class="label">投資啟示</div>方向性人民幣交易的回報空間有限，應 <span style="color:#f0ebe0;font-weight:700">減少長波動及高成本CNH期權倉位</span>；企業則不宜因低波動而取消尾部匯率對沖。</div>
+  </div>
+
+</div>
+
+<div class="divider"></div>
+
+<div class="red-team" id="red-team">
+  <div class="red-team-title">&#128308; Red Team — 核心假設與反面論證</div>
+  <ul>
+    <li>假設1：美國疲弱就業、消費與溫和通膨足以阻止Fed年內再次加息。</li>
+    <li>假設2：Nasdaq的落後主要是健康輪動，科技股可在兩至四個月內逐步追趕。</li>
+    <li>假設3：軟件私募債的再融資壓力將從個別交易擴散，並在2028到期高峰前持續惡化。</li>
+    <li style="color:var(--red)">反證1：7月FOMC已有三名委員投票支持加息，6月18名點陣圖參與者中有9人預計年內至少加息一次；若10年及30年期收益率突破4.7%與5.3%，市場或重新定價更鷹政策。</li>
+    <li style="color:var(--red)">反證2：自1985年以來，兩指數同跌至少10%的16次深度調整中，Nasdaq有14次率先復原；若長端收益率迅速跌破5%，AI建設者可能突然反彈，使低配科技策略落後。</li>
+    <li style="color:var(--red)">反證3：多數軟件貸款目前仍在面值附近或以上，顯示壓力尚未演變成全面信用事件；債權人取得更嚴條款亦可能提高回收保障。</li>
+  </ul>
+  <p style="margin-top:10px;padding:10px 14px;background:rgba(224,85,69,0.04);border-radius:6px;font-size:0.9em;border-left:3px solid var(--red)">核心配置邏輯目前成立，但應視為輪動與風險控制，而非全面看淡風險資產。Fed不加息的判斷只有在疲弱數據延續時才穩固；若30年期美債收益率穩定低於5%，科技估值壓力可緩和。軟件信貸方面，$651bn債務、3.8年平均年期及2028到期峰值支持減倉，但只有折價貸款比例持續增加、再融資普遍要求類似Proofpoint每年額外$60mn利息時，才代表系統性壓力正式形成。</p>
+</div>
+
+<div class="callout" id="takeaways">
+  <div class="callout-title">基金經理人重點摘要</div>
+  <ul>
+    <li><strong>美國利率：</strong>9月加息概率約三分之一；會議紀要前維持久期中性，疲弱數據延續後再增加前端利率多倉。</li>
+    <li><strong>亞洲央行：</strong>日本仍有25bp加息風險但步伐料溫和，台灣加息預測押後至12月；減少高槓桿日圓套利，審慎持有台灣債券。</li>
+    <li><strong>股票輪動：</strong>Nasdaq仍低於高位4%，但S&P 500 ex-AI已升約8%；減持擁擠AI建設者，增持等權、醫療及金融。</li>
+    <li><strong>收益率風險：</strong>30年期美債收益率低於5%是科技修復的重要條件；突破5.3%則轉向防守板塊。</li>
+    <li><strong>私募信貸：</strong>軟件債務達$651bn且2028年到期見頂；減持高槓桿軟件貸款與CLO低順位 tranche。</li>
+    <li><strong>地緣與外匯：</strong>美國制裁伊朗受中國執行約束，保留能源尾部對沖；人民幣隱含波動率不足2%，減少昂貴的長波動交易。</li>
+  </ul>
+</div>
+
+<div class="nav-links">
+  <span><a href="newsletter_137_uncategorized.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="footer">
+  彭博研究摘要 | 僅供教學與討論用途 | 2026年9月10日<br>
+  資料來源：Bloomberg Intelligence, Bloomberg Economics, Bloomberg News<br>
+  <a href="https://www.patreon.com/Aireturn">Patreon</a> · <a href="https://t.me/AIreturn">Telegram</a> · Threads @aireturn88
+</div>
+
+</body>
+</html>

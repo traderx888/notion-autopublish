@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>彭博研究摘要 #141 — AI盛景、能源衝擊與全球資產再定價</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Noto+Serif+TC:wght@400;700&family=Source+Sans+Pro:wght@400;600;700&display=swap');
+  :root { --bg: #0a0a08; --card: #141410; --border: #2a2820; --accent: #c9a84c;
+          --gold: #f0d87a; --gold-dim: #c4b896; --text: #e0d8c8; --text-bright: #f0ebe0; --muted: #8a8070;
+          --green: #6bbd5b; --red: #e05545; --yellow: #d4a843; --orange: #d49040;
+          --purple: #b08cd0; --cyan: #4cc9b0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { background: #0a0a08 !important; }
+  body { color: var(--text); font-family: 'Source Sans Pro', 'Noto Serif TC', 'Microsoft JhengHei', sans-serif; line-height: 1.8; padding: 24px; max-width: 880px; margin: 0 auto; }
+  h1 { font-family: 'Playfair Display', 'Noto Serif TC', serif; color: var(--gold); font-size: 1.8em; margin-bottom: 4px; font-weight: 900; letter-spacing: 0.02em; }
+  h2 { font-family: 'Playfair Display', 'Noto Serif TC', serif; }
+  .subtitle { color: var(--text-bright); font-size: 0.95em; margin-bottom: 8px; font-family: 'Noto Serif TC', serif; }
+  .issue-badge { display: inline-block; background: rgba(201,168,76,0.15); color: var(--accent); padding: 4px 12px; border-radius: 12px; font-size: 0.8em; font-weight: 600; margin-bottom: 20px; border: 1px solid rgba(201,168,76,0.3); }
+  .tag { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 0.72em; font-weight: 600; margin-right: 4px; }
+  .tag-rates { background: rgba(201,168,76,0.15); color: var(--accent); }
+  .tag-china { background: rgba(212,144,64,0.15); color: var(--orange); }
+  .tag-japan { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-geo   { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-oil   { background: rgba(212,168,67,0.15); color: var(--yellow); }
+  .tag-trade { background: rgba(212,168,67,0.15); color: var(--yellow); }
+  .tag-growth{ background: rgba(107,189,91,0.15); color: var(--green); }
+  .tag-metals{ background: rgba(176,140,208,0.15); color: var(--purple); }
+  .tag-infl  { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-policy{ background: rgba(201,168,76,0.15); color: var(--accent); }
+  .tag-val   { background: rgba(107,189,91,0.15); color: var(--green); }
+  .tag-vol   { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-semi  { background: rgba(76,201,176,0.15); color: var(--cyan); }
+  .tag-credit{ background: rgba(176,140,208,0.15); color: var(--purple); }
+  .tag-space { background: rgba(201,168,76,0.15); color: var(--accent); }
+  .tag-misc  { background: rgba(138,128,112,0.15); color: var(--muted); }
+  .verdict-bar { background: var(--accent); color: #0a0a08; padding: 14px 20px; border-radius: 8px; margin-bottom: 20px; font-weight: 700; font-size: 1.05em; font-family: 'Noto Serif TC', serif; }
+  .section { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 22px; margin-bottom: 18px; }
+  .section h2 { color: var(--gold); font-size: 1.15em; margin-bottom: 12px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+  .section h3 { color: var(--accent); font-size: 0.95em; margin: 14px 0 6px; }
+  .article { margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid rgba(42,40,32,0.7); }
+  .article:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .article-title { color: var(--text-bright); font-weight: 700; font-size: 0.95em; margin-bottom: 4px; }
+  .article-title-cn { color: var(--muted); font-size: 0.85em; margin-bottom: 8px; }
+  .article p { font-size: 0.9em; margin: 6px 0; }
+  .data-point { background: rgba(201,168,76,0.05); padding: 8px 12px; border-radius: 6px; margin: 8px 0; font-size: 0.85em; border: 1px solid rgba(201,168,76,0.12); }
+  .data-point .num { color: var(--text-bright); font-weight: 700; }
+  .implication { background: rgba(201,168,76,0.06); border-left: 3px solid var(--accent); padding: 10px 14px; margin: 10px 0; border-radius: 0 6px 6px 0; font-size: 0.88em; }
+  .implication .label { color: var(--accent); font-weight: 700; font-size: 0.8em; text-transform: uppercase; margin-bottom: 4px; }
+  .red-team { background: rgba(224,85,69,0.06); border: 1px solid rgba(224,85,69,0.25); border-radius: 8px; padding: 18px; margin: 18px 0; }
+  .red-team-title { color: var(--red); font-weight: 700; font-size: 0.95em; margin-bottom: 10px; font-family: 'Playfair Display', serif; }
+  .red-team ul { padding-left: 18px; }
+  .red-team li { margin: 5px 0; font-size: 0.88em; }
+  .callout { background: rgba(201,168,76,0.06); border: 1px solid rgba(201,168,76,0.25); border-radius: 8px; padding: 18px; margin: 18px 0; }
+  .callout-title { color: var(--accent); font-weight: 700; font-size: 0.95em; margin-bottom: 8px; font-family: 'Playfair Display', 'Noto Serif TC', serif; }
+  .callout ul { padding-left: 18px; }
+  .callout li { margin: 5px 0; font-size: 0.88em; }
+  ul { padding-left: 18px; }
+  li { margin: 4px 0; font-size: 0.88em; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(201,168,76,0.05); padding: 12px; border-radius: 6px; text-align: center; border: 1px solid rgba(201,168,76,0.1); }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: var(--gold); font-family: 'Playfair Display', serif; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
+  .toc { background: rgba(201,168,76,0.04); border: 1px solid rgba(201,168,76,0.18); border-radius: 8px; padding: 16px 20px; margin-bottom: 20px; }
+  .toc-title { color: var(--accent); font-weight: 700; font-size: 0.9em; margin-bottom: 8px; }
+  .toc a { color: var(--accent); text-decoration: none; font-size: 0.88em; }
+  .toc a:hover { text-decoration: underline; color: var(--gold); }
+  .toc ol { padding-left: 20px; }
+  .toc li { margin: 4px 0; }
+  .nav-links { display: flex; justify-content: space-between; margin: 20px 0; font-size: 0.85em; }
+  .nav-links a { color: var(--accent); text-decoration: none; }
+  .nav-links a:hover { text-decoration: underline; color: var(--gold); }
+  .divider { height: 1px; background: linear-gradient(90deg, transparent, var(--accent), transparent); margin: 24px 0; opacity: 0.4; }
+  .footer { text-align: center; color: var(--muted); font-size: 0.75em; margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--border); }
+  .footer a { color: var(--accent); text-decoration: none; }
+</style>
+<script>if(window.self===window.top&&sessionStorage.getItem("student_auth")!=="1"){document.body.innerHTML="";window.location.replace("student.html");}</script>
+</head>
+<body>
+
+<h1>彭博研究摘要</h1>
+<p class="subtitle">第141期 | AI盛景、能源衝擊與全球資產再定價</p>
+<span class="issue-badge">2026年九月上旬更新</span>
+
+<div class="verdict-bar">**結論：增持中國高技術出口龍頭、減持純內需銀行股，趁美國就業轉弱做多前端利率，但以能源多頭及日圓看漲期權對沖通膨與匯市干預風險。**</div>
+
+<div class="nav-links">
+  <span><a href="newsletter_140_uncategorized.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="toc">
+  <div class="toc-title">目錄</div>
+  <ol>
+    <li><a href="#china-two-speed">中國經濟 科技突圍，內需仍弱</a></li>
+    <li><a href="#us-ai-labor">美國宏觀 AI繁榮，就業降溫</a></li>
+    <li><a href="#hormuz-energy">能源風險 航運回升，油價未脫險</a></li>
+    <li><a href="#japan-intervention">日本匯市 重手托圓，美債承壓</a></li>
+    <li><a href="#red-team">Red Team 反面論證</a></li>
+    <li><a href="#takeaways">基金經理人重點摘要</a></li>
+  </ol>
+</div>
+
+<div class="section" id="china-two-speed">
+  <h2><span class="tag tag-china">中國經濟</span> 科技突圍，內需仍弱</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--green)">+40.7%</div><div class="lbl">首七月高技術產品
+出口按年增幅</div></div>
+    <div class="stat"><div class="val">3,000億元</div><div class="lbl">銀行及保險機構
+新增注資</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">3.7%</div><div class="lbl">8月PPI通膨
+彭博經濟研究預測</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">中國出口優勢由低價轉向科技與利潤</div>
+    <p>中國出口增長正由低價商品轉向高技術產品。2026年首七個月，高技術產品出口按年激增 <span style="color:#f0ebe0;font-weight:700">40.7%</span> 至 <span style="color:#f0ebe0;font-weight:700">7,230億美元</span>，佔出口總額近 <span style="color:#f0ebe0;font-weight:700">30%</span>，並貢獻整體出口增量的 <span style="color:#f0ebe0;font-weight:700">53%</span>。更關鍵的是，企業並非以壓價換取份額：計算機、通信及電子設備製造業收入增長 <span style="color:#f0ebe0;font-weight:700">19%</span>，利潤卻上升 <span style="color:#f0ebe0;font-weight:700">105%</span>。上市企業數據亦顯示，2026年上半年科技企業出口額達 <span style="color:#f0ebe0;font-weight:700">900億美元</span>；出口收入佔比逾20%的科技企業，平均營業利潤率由2015年的 <span style="color:#f0ebe0;font-weight:700">9%</span> 升至 <span style="color:#f0ebe0;font-weight:700">30%</span>。AI相關需求正把中國製造的競爭基礎，由成本優勢推向技術、規模與盈利能力。</p>
+    <div class="data-point">高技術產品出口: <span style="color:#f0ebe0;font-weight:700">7,230億美元</span> &nbsp;|&nbsp; 出口按年增幅: <span style="color:#f0ebe0;font-weight:700">40.7%</span> &nbsp;|&nbsp; 高技術產品增量貢獻: <span style="color:#f0ebe0;font-weight:700">53%</span> &nbsp;|&nbsp; 出口型科技企業利潤率: <span style="color:#f0ebe0;font-weight:700">30%</span></div>
+    <div class="implication"><div class="label">投資啟示</div>優先配置具海外收入、AI硬體及電子設備敞口的中國科技製造商，<span style="color:#f0ebe0;font-weight:700">增持高技術出口龍頭，減持低附加值消費品出口商</span>。</div>
+  </div>
+  <div class="article">
+    <div class="article-title">450億美元注資固本，卻難解借貸需求不足</div>
+    <p>中國向銀行與保險機構注資 <span style="color:#f0ebe0;font-weight:700">3,000億元人民幣</span>，有助提前加厚金融體系緩衝，卻未觸及復甦的核心障礙。銀行並不缺資本：全行業核心一級資本充足率達 <span style="color:#f0ebe0;font-weight:700">10.7%</span>，農業銀行亦有 <span style="color:#f0ebe0;font-weight:700">10.8%</span>，高於 <span style="color:#f0ebe0;font-weight:700">9%</span> 的監管要求。真正問題是企業與居民持續去槓桿，4月至7月企業淨融資僅增長 <span style="color:#f0ebe0;font-weight:700">4.7%</span>，遠低於第一季的 <span style="color:#f0ebe0;font-weight:700">22%</span>；過去12個月居民借貸更有七個月萎縮，貸款餘額減少 <span style="color:#f0ebe0;font-weight:700">1.1萬億元</span>。由於本輪注資未配套消費補貼等需求側措施，其主要作用是降低金融尾部風險，而非迅速帶動信貸、消費或投資。</p>
+    <div class="data-point">注資規模: <span style="color:#f0ebe0;font-weight:700">3,000億元人民幣</span> &nbsp;|&nbsp; 核心一級資本充足率: <span style="color:#f0ebe0;font-weight:700">10.7%</span> &nbsp;|&nbsp; 企業淨融資增幅: <span style="color:#f0ebe0;font-weight:700">4.7%</span> &nbsp;|&nbsp; 居民貸款餘額變化: <span style="color:#f0ebe0;font-weight:700">-1.1萬億元</span></div>
+    <div class="implication"><div class="label">投資啟示</div>把注資視為防守性資本補充而非盈利催化劑，<span style="color:#f0ebe0;font-weight:700">減持依賴信貸擴張的內銀及純內需周期股</span>，等待直接需求刺激。</div>
+  </div>
+  <div class="article">
+    <div class="article-title">能源與旅遊推動中國CPI、PPI同步回升</div>
+    <p>中國通膨可能在8月同步反彈，但背後更多是能源、AI硬體成本與季節性旅遊需求，而非全面內需復甦。彭博經濟研究預計PPI按年升幅由7月的 <span style="color:#f0ebe0;font-weight:700">3.5%</span> 加快至 <span style="color:#f0ebe0;font-weight:700">3.7%</span>；官方PMI出廠價格指數亦由 <span style="color:#f0ebe0;font-weight:700">47.8</span> 躍升至 <span style="color:#f0ebe0;font-weight:700">50.4</span>，結束連續四個月下滑。原油、汽油與銅成本構成主要推力，煤炭和螺紋鋼則較弱。CPI預計由 <span style="color:#f0ebe0;font-weight:700">0.5%</span> 小幅回升至 <span style="color:#f0ebe0;font-weight:700">0.7%</span>，仍低於市場預期的 <span style="color:#f0ebe0;font-weight:700">0.8%</span>，主要受暑期交通與娛樂價格支持。數據意味工業成本壓力升溫，但居民需求尚不足以證明再通膨已形成廣泛而持久的循環。</p>
+    <div class="data-point">PPI預測: <span style="color:#f0ebe0;font-weight:700">3.7%</span> &nbsp;|&nbsp; CPI預測: <span style="color:#f0ebe0;font-weight:700">0.7%</span> &nbsp;|&nbsp; PMI出廠價格指數: <span style="color:#f0ebe0;font-weight:700">50.4</span> &nbsp;|&nbsp; PPI前值: <span style="color:#f0ebe0;font-weight:700">3.5%</span></div>
+    <div class="implication"><div class="label">投資啟示</div>在需求未明顯改善前，<span style="color:#f0ebe0;font-weight:700">增持具定價能力的上游與科技硬體企業，迴避成本難以轉嫁的下游製造商</span>。</div>
+  </div>
+
+</div>
+
+<div class="section" id="us-ai-labor">
+  <h2><span class="tag tag-misc">美國宏觀</span> AI繁榮，就業降溫</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--red)">+1.2萬</div><div class="lbl">8月非農就業
+彭博經濟研究預測</div></div>
+    <div class="stat"><div class="val" style="color:var(--green)">3.1%</div><div class="lbl">AI調整後勞動
+生產率增幅</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">26%</div><div class="lbl">面臨至少中度
+AI衝擊的職位</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">勞動力回流或推高失業率，Fed料維持利率</div>
+    <p>美國8月就業報告可能確認勞動市場已接近停滯。彭博經濟研究預計非農就業僅增加 <span style="color:#f0ebe0;font-weight:700">1.2萬</span>，雖較7月減少 <span style="color:#f0ebe0;font-weight:700">2.3萬</span> 改善，但三個月平均增幅或由 <span style="color:#f0ebe0;font-weight:700">2萬</span> 降至僅 <span style="color:#f0ebe0;font-weight:700">3,000</span>，遠低於春季的 <span style="color:#f0ebe0;font-weight:700">14.2萬</span>。隨勞動參與率由 <span style="color:#f0ebe0;font-weight:700">61.43%</span> 回升至 <span style="color:#f0ebe0;font-weight:700">61.47%</span>，更多求職者重返市場，失業率料由 <span style="color:#f0ebe0;font-weight:700">4.10%</span> 升至 <span style="color:#f0ebe0;font-weight:700">4.26%</span>。風險仍偏向更弱：模型區間介乎減少 <span style="color:#f0ebe0;font-weight:700">3.2萬</span> 至增加 <span style="color:#f0ebe0;font-weight:700">5.2萬</span>。自1999年以來，約 <span style="color:#f0ebe0;font-weight:700">70%</span> 的8月非農低於預期，季節性偏差與政府教育職位收縮可能再次拖累數據，支持Fed在9月按兵不動。</p>
+    <div class="data-point">非農預測: <span style="color:#f0ebe0;font-weight:700">+1.2萬</span> &nbsp;|&nbsp; 三個月平均增幅: <span style="color:#f0ebe0;font-weight:700">3,000</span> &nbsp;|&nbsp; 失業率預測: <span style="color:#f0ebe0;font-weight:700">4.26%</span> &nbsp;|&nbsp; 8月低於預期比例: <span style="color:#f0ebe0;font-weight:700">約70%</span></div>
+    <div class="implication"><div class="label">投資啟示</div>在疲弱就業數據確認後，<span style="color:#f0ebe0;font-weight:700">做多美國前端利率期貨、加長高質素政府債券久期</span>，但避免單憑8月初值過度加倉。</div>
+  </div>
+  <div class="article">
+    <div class="article-title">AI貢獻被低估，資本開支峰值卻可能逼近</div>
+    <p>AI對美國經濟的支持可能遠超官方統計，但這也意味投資周期比市場想像更成熟。官方數據顯示，過去一年AI投資貢獻約 <span style="color:#f0ebe0;font-weight:700">1個百分點</span> GDP增長；經質量調整後，實際貢獻或為官方數字兩倍。第二季計算機及外圍設備實際投資增速可達 <span style="color:#f0ebe0;font-weight:700">75%</span>，高於官方的 <span style="color:#f0ebe0;font-weight:700">42%</span>；軟件投資亦可能增長 <span style="color:#f0ebe0;font-weight:700">21%</span>，而非 <span style="color:#f0ebe0;font-weight:700">11%</span>。調整後勞動生產率達 <span style="color:#f0ebe0;font-weight:700">3.1%</span>，接近1990年代末水平。不過，本輪資本開支周期已延續近三年，而同類周期通常約三年；增速料於今年見頂。約 <span style="color:#f0ebe0;font-weight:700">4,100萬個</span>、即 <span style="color:#f0ebe0;font-weight:700">26%</span> 美國職位亦面臨至少中度AI衝擊，白領招聘放緩正逐步浮現。</p>
+    <div class="data-point">AI對GDP官方貢獻: <span style="color:#f0ebe0;font-weight:700">約1個百分點</span> &nbsp;|&nbsp; 設備投資調整後增幅: <span style="color:#f0ebe0;font-weight:700">75%</span> &nbsp;|&nbsp; 生產率增幅: <span style="color:#f0ebe0;font-weight:700">3.1%</span> &nbsp;|&nbsp; AI暴露職位: <span style="color:#f0ebe0;font-weight:700">4,100萬個</span></div>
+    <div class="implication"><div class="label">投資啟示</div>保留AI核心龍頭，但周期成熟後估值容錯率下降；<span style="color:#f0ebe0;font-weight:700">減持依賴持續加速Capex的高估值供應鏈，轉向具現金流與效率收益的企業</span>。</div>
+  </div>
+
+</div>
+
+<div class="section" id="hormuz-energy">
+  <h2><span class="tag tag-misc">能源風險</span> 航運回升，油價未脫險</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--orange)">800萬桶/日</div><div class="lbl">霍爾木茲海峽
+七日平均出口量</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">40%</div><div class="lbl">海峽石油出口量
+相當於戰前水平</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">&gt;$100/桶</div><div class="lbl">柴油利潤
+市場壓力指標</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">霍爾木茲運量反彈，供應鏈仍處戰時狀態</div>
+    <p>美伊衝突持續逾六個月，空襲與油輪遇襲未完全切斷霍爾木茲海峽，但能源供應仍遠離正常。截至8月31日，海峽每日雙向通行約 <span style="color:#f0ebe0;font-weight:700">15至40艘</span>；石油七日平均出口量略低於 <span style="color:#f0ebe0;font-weight:700">800萬桶/日</span>，僅相當於戰前 <span style="color:#f0ebe0;font-weight:700">40%</span>。大型船舶改走鄰近阿曼的南部航線，加上延布與富查伊拉港的替代出口回升至逾 <span style="color:#f0ebe0;font-weight:700">500萬桶/日</span>，暫時緩解實物短缺。惟近月原油期貨已升至約 <span style="color:#f0ebe0;font-weight:700">95美元/桶</span>，一周上漲約 <span style="color:#f0ebe0;font-weight:700">10美元</span>；柴油利潤更超過 <span style="color:#f0ebe0;font-weight:700">100美元/桶</span>。俄羅斯煉油產能遇襲及南半球播種季需求，令成品油市場成為更直接的通膨威脅。</p>
+    <div class="data-point">霍爾木茲出口量: <span style="color:#f0ebe0;font-weight:700">略低於800萬桶/日</span> &nbsp;|&nbsp; 相對戰前水平: <span style="color:#f0ebe0;font-weight:700">約40%</span> &nbsp;|&nbsp; 替代港口出口量: <span style="color:#f0ebe0;font-weight:700">逾500萬桶/日</span> &nbsp;|&nbsp; 近月原油期貨: <span style="color:#f0ebe0;font-weight:700">約95美元/桶</span></div>
+    <div class="implication"><div class="label">投資啟示</div>供應改善不足以消除尾部風險，<span style="color:#f0ebe0;font-weight:700">維持原油與柴油裂解價差多頭，增持能源股並對沖運輸及耗油行業</span>。</div>
+  </div>
+
+</div>
+
+<div class="section" id="japan-intervention">
+  <h2><span class="tag tag-misc">日本匯市</span> 重手托圓，美債承壓</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--orange)">15.4萬億日圓</div><div class="lbl">一個月內匯市
+干預資金</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">-878億美元</div><div class="lbl">8月外國證券
+持倉變化</div></div>
+    <div class="stat"><div class="val">9,950億美元</div><div class="lbl">8月底日本
+外匯儲備</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">日本或出售短期美債，為創紀錄干預融資</div>
+    <p>日本可能出售美債等外國證券，為歷來最大規模的日圓干預籌資。8月底外國證券持倉按月減少 <span style="color:#f0ebe0;font-weight:700">878億美元</span>，與截至8月26日一個月內動用的 <span style="color:#f0ebe0;font-weight:700">15.4萬億日圓</span>、約 <span style="color:#f0ebe0;font-weight:700">986億美元</span> 干預資金大致相當。市場估計日本約 <span style="color:#f0ebe0;font-weight:700">70%</span> 外匯儲備投資於美債，今次拋售很可能集中於五年或以下的流動性資產，以免推高美國長債孳息率。干預曾把美元兌日圓由約 <span style="color:#f0ebe0;font-weight:700">160.39</span> 壓至 <span style="color:#f0ebe0;font-weight:700">155.30</span>，其後回到約 <span style="color:#f0ebe0;font-weight:700">155.9</span>。雖然8月外儲總額減少 <span style="color:#f0ebe0;font-weight:700">946億美元</span>，日本仍持有 <span style="color:#f0ebe0;font-weight:700">9,950億美元</span>，具備再次入市能力，但美方對債市穩定的關注可能限制東京的操作空間。</p>
+    <div class="data-point">干預規模: <span style="color:#f0ebe0;font-weight:700">15.4萬億日圓</span> &nbsp;|&nbsp; 外國證券持倉降幅: <span style="color:#f0ebe0;font-weight:700">878億美元</span> &nbsp;|&nbsp; 外儲餘額: <span style="color:#f0ebe0;font-weight:700">9,950億美元</span> &nbsp;|&nbsp; 日圓波動區間: <span style="color:#f0ebe0;font-weight:700">160.39至155.30</span></div>
+    <div class="implication"><div class="label">投資啟示</div>東京仍有再度干預能力，<span style="color:#f0ebe0;font-weight:700">減持日圓融資套利、買入日圓看漲期權，並降低五年期以下美債的事件風險敞口</span>。</div>
+  </div>
+
+</div>
+
+<div class="divider"></div>
+
+<div class="red-team" id="red-team">
+  <div class="red-team-title">&#128308; Red Team — 核心假設與反面論證</div>
+  <ul>
+    <li>假設1：美國就業放緩將支持Fed維持利率，並最終利好前端美債。</li>
+    <li>假設2：中國高技術出口的增長與利潤改善可以抵銷內需及信貸疲弱。</li>
+    <li>假設3：霍爾木茲與替代航線能維持足夠出口量，能源衝擊不會演變為全面供應中斷。</li>
+    <li style="color:var(--red)">風險1：AI調整後勞動生產率達3.1%，企業效率與利潤率改善可能維持經濟韌性；同時原油約95美元、柴油利潤逾100美元，能源通膨可能令Fed即使面對弱就業也難以轉鴿。</li>
+    <li style="color:var(--red)">風險2：企業淨融資增幅已由第一季22%降至4.7%，居民貸款餘額在12個月內縮減1.1萬億元；若缺乏直接需求刺激，出口強勢未必能廣泛傳導至內需與銀行盈利。</li>
+    <li style="color:var(--red)">風險3：霍爾木茲石油出口量僅恢復至戰前40%，且伊朗已襲擊兩艘油輪；任何航道再度受阻，都可能迅速抵銷替代港口逾500萬桶/日的緩衝。</li>
+  </ul>
+  <p style="margin-top:10px;padding:10px 14px;background:rgba(224,85,69,0.04);border-radius:6px;font-size:0.9em;border-left:3px solid var(--red)">主線仍成立，但應採取槓鈴配置而非單向押注。美國三個月平均新增職位若降至預測的3,000、失業率升至4.26%，前端利率多頭有基本面支持；惟若能源運輸惡化並使原油明顯突破目前約95美元水平，利率交易便可能受通膨反噬。中國方面，高技術出口增長40.7%、出口型科技企業利潤率達30%，足以支持精選科技製造商，但不足以推翻居民貸款縮減1.1萬億元所反映的內需弱勢。因此應做多出口科技與能源對沖，同時低配純內需金融及高估值AI Capex概念。</p>
+</div>
+
+<div class="callout" id="takeaways">
+  <div class="callout-title">基金經理人重點摘要</div>
+  <ul>
+    <li><strong>中國科技：</strong>高技術產品出口增長40.7%，出口型科技企業利潤率達30%；增持具AI硬體及海外收入敞口的製造龍頭。</li>
+    <li><strong>中國內需：</strong>3,000億元注資主要加厚資本緩衝，未解決借貸需求不足；減持依賴信貸擴張的內銀與純內需周期股。</li>
+    <li><strong>美國利率：</strong>8月非農預測僅增1.2萬、失業率料升至4.26%；做多前端利率期貨，但以能源敞口對沖通膨反彈。</li>
+    <li><strong>AI配置：</strong>調整後設備投資增速達75%，惟近三年的Capex周期或已接近峰值；由高估值供應鏈轉向具現金流及生產率收益的企業。</li>
+    <li><strong>能源：</strong>霍爾木茲出口量仍僅為戰前40%，柴油利潤逾100美元/桶；維持原油、柴油裂解價差及能源股多頭。</li>
+    <li><strong>日圓：</strong>日本仍持有9,950億美元外儲並具再干預能力；減持日圓套利，買入日圓看漲期權。</li>
+  </ul>
+</div>
+
+<div class="nav-links">
+  <span><a href="newsletter_140_uncategorized.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="footer">
+  彭博研究摘要 | 僅供教學與討論用途 | 2026年9月10日<br>
+  資料來源：Bloomberg Intelligence, Bloomberg Economics, Bloomberg News<br>
+  <a href="https://www.patreon.com/Aireturn">Patreon</a> · <a href="https://t.me/AIreturn">Telegram</a> · Threads @aireturn88
+</div>
+
+</body>
+</html>

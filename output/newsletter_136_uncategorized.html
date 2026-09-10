@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>彭博研究摘要 #136 — 美股蓄勢、央行轉鷹與日本政策防線</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Noto+Serif+TC:wght@400;700&family=Source+Sans+Pro:wght@400;600;700&display=swap');
+  :root { --bg: #0a0a08; --card: #141410; --border: #2a2820; --accent: #c9a84c;
+          --gold: #f0d87a; --gold-dim: #c4b896; --text: #e0d8c8; --text-bright: #f0ebe0; --muted: #8a8070;
+          --green: #6bbd5b; --red: #e05545; --yellow: #d4a843; --orange: #d49040;
+          --purple: #b08cd0; --cyan: #4cc9b0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { background: #0a0a08 !important; }
+  body { color: var(--text); font-family: 'Source Sans Pro', 'Noto Serif TC', 'Microsoft JhengHei', sans-serif; line-height: 1.8; padding: 24px; max-width: 880px; margin: 0 auto; }
+  h1 { font-family: 'Playfair Display', 'Noto Serif TC', serif; color: var(--gold); font-size: 1.8em; margin-bottom: 4px; font-weight: 900; letter-spacing: 0.02em; }
+  h2 { font-family: 'Playfair Display', 'Noto Serif TC', serif; }
+  .subtitle { color: var(--text-bright); font-size: 0.95em; margin-bottom: 8px; font-family: 'Noto Serif TC', serif; }
+  .issue-badge { display: inline-block; background: rgba(201,168,76,0.15); color: var(--accent); padding: 4px 12px; border-radius: 12px; font-size: 0.8em; font-weight: 600; margin-bottom: 20px; border: 1px solid rgba(201,168,76,0.3); }
+  .tag { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 0.72em; font-weight: 600; margin-right: 4px; }
+  .tag-rates { background: rgba(201,168,76,0.15); color: var(--accent); }
+  .tag-china { background: rgba(212,144,64,0.15); color: var(--orange); }
+  .tag-japan { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-geo   { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-oil   { background: rgba(212,168,67,0.15); color: var(--yellow); }
+  .tag-trade { background: rgba(212,168,67,0.15); color: var(--yellow); }
+  .tag-growth{ background: rgba(107,189,91,0.15); color: var(--green); }
+  .tag-metals{ background: rgba(176,140,208,0.15); color: var(--purple); }
+  .tag-infl  { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-policy{ background: rgba(201,168,76,0.15); color: var(--accent); }
+  .tag-val   { background: rgba(107,189,91,0.15); color: var(--green); }
+  .tag-vol   { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-semi  { background: rgba(76,201,176,0.15); color: var(--cyan); }
+  .tag-credit{ background: rgba(176,140,208,0.15); color: var(--purple); }
+  .tag-space { background: rgba(201,168,76,0.15); color: var(--accent); }
+  .tag-misc  { background: rgba(138,128,112,0.15); color: var(--muted); }
+  .verdict-bar { background: var(--accent); color: #0a0a08; padding: 14px 20px; border-radius: 8px; margin-bottom: 20px; font-weight: 700; font-size: 1.05em; font-family: 'Noto Serif TC', serif; }
+  .section { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 22px; margin-bottom: 18px; }
+  .section h2 { color: var(--gold); font-size: 1.15em; margin-bottom: 12px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+  .section h3 { color: var(--accent); font-size: 0.95em; margin: 14px 0 6px; }
+  .article { margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid rgba(42,40,32,0.7); }
+  .article:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .article-title { color: var(--text-bright); font-weight: 700; font-size: 0.95em; margin-bottom: 4px; }
+  .article-title-cn { color: var(--muted); font-size: 0.85em; margin-bottom: 8px; }
+  .article p { font-size: 0.9em; margin: 6px 0; }
+  .data-point { background: rgba(201,168,76,0.05); padding: 8px 12px; border-radius: 6px; margin: 8px 0; font-size: 0.85em; border: 1px solid rgba(201,168,76,0.12); }
+  .data-point .num { color: var(--text-bright); font-weight: 700; }
+  .implication { background: rgba(201,168,76,0.06); border-left: 3px solid var(--accent); padding: 10px 14px; margin: 10px 0; border-radius: 0 6px 6px 0; font-size: 0.88em; }
+  .implication .label { color: var(--accent); font-weight: 700; font-size: 0.8em; text-transform: uppercase; margin-bottom: 4px; }
+  .red-team { background: rgba(224,85,69,0.06); border: 1px solid rgba(224,85,69,0.25); border-radius: 8px; padding: 18px; margin: 18px 0; }
+  .red-team-title { color: var(--red); font-weight: 700; font-size: 0.95em; margin-bottom: 10px; font-family: 'Playfair Display', serif; }
+  .red-team ul { padding-left: 18px; }
+  .red-team li { margin: 5px 0; font-size: 0.88em; }
+  .callout { background: rgba(201,168,76,0.06); border: 1px solid rgba(201,168,76,0.25); border-radius: 8px; padding: 18px; margin: 18px 0; }
+  .callout-title { color: var(--accent); font-weight: 700; font-size: 0.95em; margin-bottom: 8px; font-family: 'Playfair Display', 'Noto Serif TC', serif; }
+  .callout ul { padding-left: 18px; }
+  .callout li { margin: 5px 0; font-size: 0.88em; }
+  ul { padding-left: 18px; }
+  li { margin: 4px 0; font-size: 0.88em; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(201,168,76,0.05); padding: 12px; border-radius: 6px; text-align: center; border: 1px solid rgba(201,168,76,0.1); }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: var(--gold); font-family: 'Playfair Display', serif; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
+  .toc { background: rgba(201,168,76,0.04); border: 1px solid rgba(201,168,76,0.18); border-radius: 8px; padding: 16px 20px; margin-bottom: 20px; }
+  .toc-title { color: var(--accent); font-weight: 700; font-size: 0.9em; margin-bottom: 8px; }
+  .toc a { color: var(--accent); text-decoration: none; font-size: 0.88em; }
+  .toc a:hover { text-decoration: underline; color: var(--gold); }
+  .toc ol { padding-left: 20px; }
+  .toc li { margin: 4px 0; }
+  .nav-links { display: flex; justify-content: space-between; margin: 20px 0; font-size: 0.85em; }
+  .nav-links a { color: var(--accent); text-decoration: none; }
+  .nav-links a:hover { text-decoration: underline; color: var(--gold); }
+  .divider { height: 1px; background: linear-gradient(90deg, transparent, var(--accent), transparent); margin: 24px 0; opacity: 0.4; }
+  .footer { text-align: center; color: var(--muted); font-size: 0.75em; margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--border); }
+  .footer a { color: var(--accent); text-decoration: none; }
+</style>
+<script>if(window.self===window.top&&sessionStorage.getItem("student_auth")!=="1"){document.body.innerHTML="";window.location.replace("student.html");}</script>
+</head>
+<body>
+
+<h1>彭博研究摘要</h1>
+<p class="subtitle">第136期 | 美股蓄勢、央行轉鷹與日本政策防線</p>
+<span class="issue-badge">2026年九月上旬更新</span>
+
+<div class="verdict-bar">**結論：美股資金面仍支持破頂，但美國通膨、BOJ加息及日本減持美債構成利率上行風險；維持核心股票倉位、增持能源與主權債作情境對沖，避免追逐高槓桿交易。**</div>
+
+<div class="nav-links">
+  <span><a href="newsletter_135_uncategorized.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="toc">
+  <div class="toc-title">目錄</div>
+  <ol>
+    <li><a href="#us-growth-fed">美國宏觀 增長未熄，Fed難轉鴿</a></li>
+    <li><a href="#equity-flows-ai">美股 橫行蓄力，資金托住牛市</a></li>
+    <li><a href="#multi-asset-defense">資產配置 衰退買債，滯脹買能源</a></li>
+    <li><a href="#japan-policy">日本 加息、護匯、保能源</a></li>
+    <li><a href="#red-team">Red Team 反面論證</a></li>
+    <li><a href="#takeaways">基金經理人重點摘要</a></li>
+  </ol>
+</div>
+
+<div class="section" id="us-growth-fed">
+  <h2><span class="tag tag-misc">美國宏觀</span> 增長未熄，Fed難轉鴿</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--green)">2.2%</div><div class="lbl">2026年美國
+實質GDP增長預測</div></div>
+    <div class="stat"><div class="val" style="color:var(--green)">16.2萬</div><div class="lbl">8月非農就業
+新增職位</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">3.3%</div><div class="lbl">核心PCE
+按年初步推算</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">美國增長高於趨勢，9月FOMC成通膨數據之戰</div>
+    <p>美國經濟並未呈現急速失速：AI建設、設備投資與數據中心施工延續投資周期，消費亦受招聘增加及裁員偏低支持。Bloomberg Economics預計2026年實質GDP增長 <span style="color:#f0ebe0;font-weight:700">2.2%</span>，高於Fed估算的 <span style="color:#f0ebe0;font-weight:700">1.8%</span> 長期增速。8月非農職位增加 <span style="color:#f0ebe0;font-weight:700">16.2萬</span>，遠勝7月上修後的 <span style="color:#f0ebe0;font-weight:700">2.1萬</span>；雖然季節調整及World Cup可能放大升幅，基礎就業增速仍高於穩定失業率所需水平。與此同時，初步估算核心PCE月升 <span style="color:#f0ebe0;font-weight:700">0.21%-0.26%</span>、按年約 <span style="color:#f0ebe0;font-weight:700">3.3%</span>。強增長與偏高通膨令9月會議成為加息與按兵不動的近距離角力，但基準情境仍是Fed年底前維持利率不變。</p>
+    <div class="data-point">2026年實質GDP增長: <span style="color:#f0ebe0;font-weight:700">2.2%</span> &nbsp;|&nbsp; Fed長期增長估算: <span style="color:#f0ebe0;font-weight:700">1.8%</span> &nbsp;|&nbsp; 8月非農新增: <span style="color:#f0ebe0;font-weight:700">16.2萬</span> &nbsp;|&nbsp; 核心PCE按年初步推算: <span style="color:#f0ebe0;font-weight:700">3.3%</span></div>
+    <div class="implication"><div class="label">投資啟示</div>政策寬鬆空間有限，應<span style="color:#f0ebe0;font-weight:700">減少對短期降息的押注、維持前端利率風險偏低</span>，並保留受惠AI資本開支的優質增長股。</div>
+  </div>
+
+</div>
+
+<div class="section" id="equity-flows-ai">
+  <h2><span class="tag tag-misc">美股</span> 橫行蓄力，資金托住牛市</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--green)">$400億</div><div class="lbl">上周股票基金
+及ETF流入</div></div>
+    <div class="stat"><div class="val" style="color:var(--green)">1.7倍</div><div class="lbl">企業回購速度
+相對去年</div></div>
+    <div class="stat"><div class="val">7500</div><div class="lbl">S&P夏季
+反覆整固水平</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">槓桿資金降倉，企業與家庭接棒托市</div>
+    <p>S&amp;P距離歷史高位只差一次強勢交易日，但近數周受暑期市況及因子輪動影響，指數缺乏明顯動能。這種橫行並非牛市結束：年初指數曾在 <span style="color:#f0ebe0;font-weight:700">6900</span> 附近反覆三個月，夏季又在 <span style="color:#f0ebe0;font-weight:700">7500</span> 左右整固三個月，過往擠塞期最終均以新高化解。更重要的是，目前交易群體的多倉少於此前觸頂階段，追高擠迫程度有所下降。股票互惠基金及ETF上周錄得 <span style="color:#f0ebe0;font-weight:700">400億美元</span> 流入，本周再吸納 <span style="color:#f0ebe0;font-weight:700">90億美元</span>；企業回購則以去年 <span style="color:#f0ebe0;font-weight:700">1.7倍</span> 的速度進行。對沖基金削減美股曝險後，企業與家庭仍持續買入，在9月新股供應明顯增加前，技術面有利指數緩步向上。</p>
+    <div class="data-point">上周股票基金及ETF流入: <span style="color:#f0ebe0;font-weight:700">$400億</span> &nbsp;|&nbsp; 本周流入: <span style="color:#f0ebe0;font-weight:700">$90億</span> &nbsp;|&nbsp; 回購速度: <span style="color:#f0ebe0;font-weight:700">去年1.7倍</span> &nbsp;|&nbsp; 夏季整固水平: <span style="color:#f0ebe0;font-weight:700">S&amp;P 7500</span></div>
+    <div class="implication"><div class="label">投資啟示</div>供需結構仍偏多，宜<span style="color:#f0ebe0;font-weight:700">維持美股核心長倉並在回調時分段增持</span>，但等待放量突破高位後才提高戰術性Beta。</div>
+  </div>
+  <div class="article">
+    <div class="article-title">AI由顛覆軟件轉向協助加價</div>
+    <p>市場對software的敘事正在逆轉。原先的悲觀框架認為AI會令應用層商品化、削弱定價能力並破壞按席位收費模式；近期業績則開始展示另一條路徑。具備專有數據、既有工作流程及龐大分銷網絡的軟件商，可以把AI嵌入產品，再向現有客戶提高價格。Salesforce被視為這種模式的早期例證，令AI從「席位摧毀者」轉變為潛在變現工具。這輪反彈同時包含技術性修復與基本面改善，惟文章亦強調商業模式仍有很多需要證明。配合NVDA強勁季度表現，AI交易正由硬件領導逐步擴散至能把技術轉化為收入的應用供應商，但選股重要性將高於單純追逐板塊。</p>
+    <div class="data-point">S&amp;P年初整固水平: <span style="color:#f0ebe0;font-weight:700">6900</span> &nbsp;|&nbsp; S&amp;P夏季整固水平: <span style="color:#f0ebe0;font-weight:700">7500</span> &nbsp;|&nbsp; 回購速度: <span style="color:#f0ebe0;font-weight:700">去年1.7倍</span></div>
+    <div class="implication"><div class="label">投資啟示</div>應<span style="color:#f0ebe0;font-weight:700">由全面低配software轉向精選具專有數據、工作流程及加價能力的龍頭</span>，同時避免把一次業績改善外推為全行業復甦。</div>
+  </div>
+
+</div>
+
+<div class="section" id="multi-asset-defense">
+  <h2><span class="tag tag-misc">資產配置</span> 衰退買債，滯脹買能源</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--red)">-3.5%</div><div class="lbl">RLY在典型美國
+放緩情境的回報</div></div>
+    <div class="stat"><div class="val" style="color:var(--orange)">-0.6%</div><div class="lbl">RLY在美國
+滯脹情境的回報</div></div>
+    <div class="stat"><div class="val" style="color:var(--green)">$13.7億</div><div class="lbl">RLY最新
+資產規模</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">RLY情境測試揭示兩套防守路徑</div>
+    <p>美國就業降溫與通膨偏高令單一防守策略未必奏效。Bloomberg PORT情境分析顯示，State Street Multi-Asset Real Return ETF（RLY）在典型美國放緩下或跌 <span style="color:#f0ebe0;font-weight:700">3.5%</span>，在滯脹環境則跌 <span style="color:#f0ebe0;font-weight:700">0.6%</span>。前者假設GDP增長較基準低 <span style="color:#f0ebe0;font-weight:700">1個百分點</span>，適合降低股票、增加主權債；後者加入通膨較基準高 <span style="color:#f0ebe0;font-weight:700">1.3個百分點</span> 的衝擊，配置應增持能源並削減股票及房地產。RLY資產已增至 <span style="color:#f0ebe0;font-weight:700">13.7億美元</span>，俄烏戰爭後及Iran war後分兩波擴張，2026年流入與表現均為2022年以來最強。實物資產在高通膨、商品需求偏強環境仍具吸引力，但若2027年去通膨加快，其相對優勢便會下降。</p>
+    <div class="data-point">RLY資產規模: <span style="color:#f0ebe0;font-weight:700">$13.7億</span> &nbsp;|&nbsp; 放緩情境回報: <span style="color:#f0ebe0;font-weight:700">-3.5%</span> &nbsp;|&nbsp; 滯脹情境回報: <span style="color:#f0ebe0;font-weight:700">-0.6%</span> &nbsp;|&nbsp; 滯脹通膨衝擊: <span style="color:#f0ebe0;font-weight:700">較基準高1.3個百分點</span></div>
+    <div class="implication"><div class="label">投資啟示</div>採用分岔式配置：衰退風險升溫時<span style="color:#f0ebe0;font-weight:700">減持股票、增持主權債</span>；滯脹風險升溫時則<span style="color:#f0ebe0;font-weight:700">增持能源、減持股票及房地產</span>。</div>
+  </div>
+  <div class="article">
+    <div class="article-title">Jane Street巨額再融資折射槓桿尾部風險</div>
+    <p>Jane Street在7月AI相關股票急跌期間虧損 <span style="color:#f0ebe0;font-weight:700">150億美元</span>，為約十年來首次月度下滑，並因亞洲股票損失而平倉及降低部分風險。其後公司向以PIMCO為首的較小投資者群體出售接近 <span style="color:#f0ebe0;font-weight:700">150億美元</span> 新債，償還原有貸款及債券，同時令總債務增加 <span style="color:#f0ebe0;font-weight:700">34億美元</span>。縮窄債券持有人範圍可降低二級市場交易頻率與價格波動，避免債價向prime brokers發出過度負面的信用訊號，從而保護支持其槓桿交易的融資渠道。這既是資訊控制，也是防禦性資產負債管理；事件提醒投資者，AI擠倉逆轉可能迅速由股票損失傳導至融資條件與市場流動性。</p>
+    <div class="data-point">7月虧損: <span style="color:#f0ebe0;font-weight:700">$150億</span> &nbsp;|&nbsp; 新債規模: <span style="color:#f0ebe0;font-weight:700">接近$150億</span> &nbsp;|&nbsp; 債務增幅: <span style="color:#f0ebe0;font-weight:700">$34億</span> &nbsp;|&nbsp; 距上次月度下滑: <span style="color:#f0ebe0;font-weight:700">約十年</span></div>
+    <div class="implication"><div class="label">投資啟示</div>應<span style="color:#f0ebe0;font-weight:700">降低高槓桿及擁擠AI交易曝險、提高流動性緩衝</span>，並監察prime-broker融資條件是否出現收緊。</div>
+  </div>
+
+</div>
+
+<div class="section" id="japan-policy">
+  <h2><span class="tag tag-japan">日本</span> 加息、護匯、保能源</h2>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="val" style="color:var(--orange)">+25bp</div><div class="lbl">BOJ 9月
+預期加息幅度</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">¥15.4萬億</div><div class="lbl">截至8月26日
+護日圓支出</div></div>
+    <div class="stat"><div class="val" style="color:var(--red)">&gt;90%</div><div class="lbl">戰前日本原油
+來自中東比重</div></div>
+  </div>
+
+  <div class="article">
+    <div class="article-title">GDP上修支持BOJ加息，但緊縮步伐料溫和</div>
+    <p>日本第二季GDP獲上修，顯示即使Iran war造成原油供應與價格壓力，經濟增速仍高於潛在水平。這支持BOJ對寬鬆政策可能引發通膨超調的判斷，Bloomberg Economics預期央行於 <span style="color:#f0ebe0;font-weight:700">9月17至18日</span> 會議加息 <span style="color:#f0ebe0;font-weight:700">25個基點</span>。不過，增長仍較預期疲弱，資本開支亦欠活力，因此政策正常化不等於進入急速加息周期。最可能的路徑是先以一次加息回應通膨風險，其後採取較部分市場參與者預期更漸進的步伐。對資產價格而言，日圓可獲利差與政策可信度支持，但日本股票的利率敏感板塊將面對估值壓力，銀行等受惠息差改善的行業則相對佔優。</p>
+    <div class="data-point">預期加息幅度: <span style="color:#f0ebe0;font-weight:700">25bp</span> &nbsp;|&nbsp; BOJ會議日期: <span style="color:#f0ebe0;font-weight:700">9月17至18日</span> &nbsp;|&nbsp; 第二季GDP: <span style="color:#f0ebe0;font-weight:700">上修並高於潛在增速</span></div>
+    <div class="implication"><div class="label">投資啟示</div>宜<span style="color:#f0ebe0;font-weight:700">減持日圓融資套利、選擇性增持日本銀行股</span>，並降低高估值、長久期日本股票曝險。</div>
+  </div>
+  <div class="article">
+    <div class="article-title">創紀錄護匯或以出售美債融資</div>
+    <p>日本截至8月26日的一個月內動用 <span style="color:#f0ebe0;font-weight:700">15.4萬億日圓（986億美元）</span> 支持日圓，為歷來最大單月干預。同期外國證券持倉按月減少創紀錄的 <span style="color:#f0ebe0;font-weight:700">878億美元</span>，規模接近護匯行動，分析員因此判斷日本很可能出售包括短期US Treasuries在內的資產。市場估計約 <span style="color:#f0ebe0;font-weight:700">70%</span> 日本外匯儲備投資於美債，意味當局仍有干預能力；但持續售債可能與美國壓低長債收益率的政策目標衝突。美國曾於7月31日參與1998年以來首次協調支持日圓，顯示雙方目前立場一致，惟Washington對Treasury市場穩定的關注可能限制日本下一輪行動。</p>
+    <div class="data-point">護匯規模: <span style="color:#f0ebe0;font-weight:700">¥15.4萬億／$986億</span> &nbsp;|&nbsp; 外國證券持倉降幅: <span style="color:#f0ebe0;font-weight:700">$878億</span> &nbsp;|&nbsp; 儲備投資美債估計比重: <span style="color:#f0ebe0;font-weight:700">約70%</span> &nbsp;|&nbsp; 美日協調干預日期: <span style="color:#f0ebe0;font-weight:700">7月31日</span></div>
+    <div class="implication"><div class="label">投資啟示</div>日圓下行尾部已受政策限制，宜<span style="color:#f0ebe0;font-weight:700">削減日圓空倉</span>；同時避免過度集中短期美債，防範日本再度售債造成技術性壓力。</div>
+  </div>
+  <div class="article">
+    <div class="article-title">日本以繞過Hormuz管道補強能源安全</div>
+    <p>US-Iran war暴露日本對中東供應鏈的高度依賴：戰前日本超過 <span style="color:#f0ebe0;font-weight:700">90%</span> 原油來自中東，衝突後煉油商被迫轉向包括美國在內的替代供應，並提取國家戰略儲備填補缺口。日本的新能源策略計劃支持建設繞過Strait of Hormuz的輸油管道，同時推動採購來源多元化及補貼運輸成本。政策方向顯示，東京不再只把油價視為周期性通膨因素，而是把運輸瓶頸納入國家安全框架。措施能降低單一航道中斷的衝擊，卻需時間與資本落實，短期內日本仍難完全擺脫中東風險，能源進口成本亦會繼續影響通膨、貿易條件及BOJ政策。</p>
+    <div class="data-point">戰前中東原油依賴: <span style="color:#f0ebe0;font-weight:700">超過90%</span> &nbsp;|&nbsp; 替代供應來源: <span style="color:#f0ebe0;font-weight:700">包括美國</span> &nbsp;|&nbsp; 應急措施: <span style="color:#f0ebe0;font-weight:700">動用戰略儲備</span></div>
+    <div class="implication"><div class="label">投資啟示</div>應<span style="color:#f0ebe0;font-weight:700">保留能源與油價上行對沖、審慎看待高能源成本的日本進口企業</span>，並關注管道及運輸基建受惠標的。</div>
+  </div>
+
+</div>
+
+<div class="divider"></div>
+
+<div class="red-team" id="red-team">
+  <div class="red-team-title">&#128308; Red Team — 核心假設與反面論證</div>
+  <ul>
+    <li>假設1：企業回購、家庭及基金流入足以延續美股主要升勢。</li>
+    <li>假設2：Fed年底前維持利率不變，而BOJ只會漸進加息，不會觸發全球利率急升。</li>
+    <li>假設3：能源與實物資產可在滯脹及中東供應風險下提供有效對沖。</li>
+    <li style="color:var(--red)">風險1：Jane Street單月虧損150億美元並急降風險，反映AI持倉逆轉可透過槓桿與prime-broker融資放大；9月新股供應增加亦可能削弱目前有利的技術面。</li>
+    <li style="color:var(--red)">風險2：美國8月非農增加16.2萬、核心PCE按年初步推算3.3%，足以令9月FOMC考慮加息；日本亦預期加息25bp，且護匯售出美債可能額外推高收益率。</li>
+    <li style="color:var(--red)">風險3：RLY在模擬滯脹下仍錄得0.6%跌幅，在典型放緩下更跌3.5%；若2027年去通膨加快，實物資產配置可能失去相對優勢。</li>
+  </ul>
+  <p style="margin-top:10px;padding:10px 14px;background:rgba(224,85,69,0.04);border-radius:6px;font-size:0.9em;border-left:3px solid var(--red)">核心美股偏多論點仍成立，因股票基金及ETF兩周合計流入490億美元，企業回購速度達去年1.7倍，而投機性多倉已有下降。不過，若核心PCE明顯高於目前0.21%-0.26%的月升估算並促使Fed加息，或日本再以接近878億美元的月度規模出售外國證券，利率上行便可能打破估值擴張。資產配置不應只持有RLY：放緩情境須配主權債，滯脹情境則提高能源比重。</p>
+</div>
+
+<div class="callout" id="takeaways">
+  <div class="callout-title">基金經理人重點摘要</div>
+  <ul>
+    <li><strong>美國宏觀：</strong>2026年GDP料增2.2%、核心PCE按年約3.3%；<strong>減少短期降息押注並控制前端利率風險</strong>。</li>
+    <li><strong>美股資金：</strong>兩周基金流入合計490億美元，回購速度為去年1.7倍；<strong>維持核心長倉，回調分段增持</strong>。</li>
+    <li><strong>AI與software：</strong>敘事由席位流失轉向AI加價變現；<strong>精選具專有數據與分銷優勢的龍頭</strong>。</li>
+    <li><strong>多資產：</strong>RLY在放緩情境料跌3.5%、滯脹情境跌0.6%；<strong>衰退增持主權債，滯脹增持能源</strong>。</li>
+    <li><strong>日本政策：</strong>BOJ料加息25bp，日本護匯規模達15.4萬億日圓；<strong>削減日圓套利並偏好銀行股</strong>。</li>
+    <li><strong>下一步建議：</strong>以核心PCE超出0.21%-0.26%月升區間、BOJ加息25bp及日本再度大規模售債作為三項風險觸發點，逐項調整股票Beta、債券久期與能源對沖。</li>
+  </ul>
+</div>
+
+<div class="nav-links">
+  <span><a href="newsletter_135_uncategorized.html">&larr; 前期</a></span>
+  <span><a href="student.html">返回目錄 &rarr;</a></span>
+</div>
+
+<div class="footer">
+  彭博研究摘要 | 僅供教學與討論用途 | 2026年9月10日<br>
+  資料來源：Bloomberg Intelligence, Bloomberg Economics, Bloomberg News<br>
+  <a href="https://www.patreon.com/Aireturn">Patreon</a> · <a href="https://t.me/AIreturn">Telegram</a> · Threads @aireturn88
+</div>
+
+</body>
+</html>
