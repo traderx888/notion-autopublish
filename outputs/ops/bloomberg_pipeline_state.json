@@ -1,6 +1,6 @@
 {
-  "lastRunAt": "2026-09-10T19:26:53+08:00",
-  "lastNewsletterNumber": 143,
+  "lastRunAt": "2026-09-10T19:32:27+08:00",
+  "lastNewsletterNumber": 144,
   "processedFiles": {
     "2026 Outlook Global Aluminum Producers #metals.pdf": {
       "processedAt": "2026-03-26T15:52:49+08:00",
@@ -6119,7 +6119,7 @@
       "processedAt": "2026-09-10T19:26:53+08:00",
       "mdPath": "C:\\blp\\data\\md_converted\\Wells Fargo ISRG 2026 Society of Robotic Surgery (SRS) Survey Key Takeawa.md",
       "topics": [],
-      "newsletterNumber": null
+      "newsletterNumber": 144
     }
   },
   "newsletters": {
@@ -7229,6 +7229,14 @@
       "filename": "newsletter_143_uncategorized.html",
       "generatedAt": "2026-09-10T19:20:05+08:00",
       "articleCount": 3,
+      "topics": [
+        "uncategorized"
+      ]
+    },
+    "144": {
+      "filename": "newsletter_144_uncategorized.html",
+      "generatedAt": "2026-09-10T19:34:32+08:00",
+      "articleCount": 1,
       "topics": [
         "uncategorized"
       ]
