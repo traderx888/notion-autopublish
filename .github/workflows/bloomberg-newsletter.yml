@@ -54,6 +54,12 @@ jobs:
           & $env:PYTHON_BIN -m pip install --upgrade pip
           & $env:PYTHON_BIN -m pip install "pypdf>=4.0.0" "beautifulsoup4>=4.12.0" pytest
 
+      - name: Run pipeline tests
+        shell: powershell
+        run: |
+          $pytestTemp = Join-Path $env:RUNNER_TEMP "pytest-$env:GITHUB_RUN_ID-$env:GITHUB_RUN_ATTEMPT"
+          & $env:PYTHON_BIN -m pytest tests/test_bloomberg_pipeline.py -q --basetemp $pytestTemp -p no:cacheprovider
+
       - name: Convert new PDFs to markdown
         shell: powershell
         run: |
@@ -74,11 +80,6 @@ jobs:
         shell: powershell
         run: |
           & $env:PYTHON_BIN tools/bloomberg_newsletter_build.py
-
-      - name: Run pipeline tests
-        shell: powershell
-        run: |
-          & $env:PYTHON_BIN -m pytest tests/test_bloomberg_pipeline.py -q
 
       - name: Commit and push
         shell: powershell

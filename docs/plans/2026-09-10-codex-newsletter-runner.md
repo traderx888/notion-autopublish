@@ -96,3 +96,9 @@ Live run `34465081365` passed conversion and completed the first Codex synthesis
 batch, then failed while updating `output/student.html` because the narrowed
 environment omitted Beautiful Soup. `beautifulsoup4` is now included alongside
 `pypdf` and `pytest`; no generated output from the failed run was pushed.
+
+Live run `34465833665` completed all ten Codex newsletter batches, then its test
+gate reported 17 passed and four fixture setup errors because pytest selected an
+inaccessible shared `%TEMP%\pytest-of-user` directory. The workflow now assigns
+pytest a run-specific directory under `RUNNER_TEMP`, disables its repository
+cache, and runs the test gate before conversion or synthesis.
