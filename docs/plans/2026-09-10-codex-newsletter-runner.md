@@ -49,3 +49,31 @@ and register a Windows self-hosted runner on this computer.
 - Generated newsletter HTML and `outputs/ops/bloomberg_pipeline_state.json`
   retain their existing shape.
 - No `fundman-jarvis` schema or consumer change is intended.
+
+## Verification Results — 2026-09-10
+
+- `python -m pytest tests/test_codex_synthesis.py tests/test_bloomberg_pipeline.py`
+  passed: `25 passed`.
+- `python -m py_compile` passed for both builders, the Codex adapter, and the
+  focused tests.
+- A real adapter probe using `gpt-5.6-sol` returned
+  `{"probe": "CODEX_SOL_OK"}`.
+- The workflow-pinned `@openai/codex@0.154.0` returned `CODEX_154_OK` in a
+  separate live probe.
+- Staged diff check passed and the credential-literal scan found zero matches.
+- Commits `71d7b61` and `50c75bd` were pushed to `main` after confirming the
+  remote SHA had not advanced.
+- Old queued run `34441214110`, which referenced the Claude workflow at
+  `5185ee0`, was cancelled before the runner started.
+- GitHub runner `notion-autopublish-windows` (runner id 21) registered with
+  runner version `2.337.0`; GitHub read-back showed `online`, `busy=false`, and
+  the `notion-autopublish` label.
+- The runner is currently a hidden process under the signed-in Windows user.
+  Reboot/logon persistence is not configured.
+
+## Live-Run Gate
+
+`bloomberg_pdf_convert.py --dry-run` found 138 unprocessed PDFs in
+`C:\blp\data`; all currently lack topic hashtags and would enter the pipeline
+as `uncategorized`. A live workflow dispatch is intentionally withheld until
+the operator chooses whether to classify first or publish the whole backlog.
