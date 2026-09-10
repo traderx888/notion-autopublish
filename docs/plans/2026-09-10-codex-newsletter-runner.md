@@ -83,3 +83,11 @@ The operator subsequently authorized publication only for the most recent four
 weeks. The workflow now applies an inclusive rolling 28-day cutoff to each
 unprocessed PDF's local modified timestamp; older unprocessed PDFs remain out
 of state and unpublished.
+
+Live run `34464644094` reached the self-hosted runner but failed before content
+processing because `actions/setup-python@v5` tried to modify protected Windows
+registry entries while installing Python 3.11. The runner is intentionally not
+elevated. The workflow therefore uses this host's existing bundled Python only
+to bootstrap a run-scoped virtual environment, then installs the pipeline's
+actual `pypdf` and `pytest` dependencies there. It does not install Python,
+change system registry state, or modify the bundled runtime's packages.

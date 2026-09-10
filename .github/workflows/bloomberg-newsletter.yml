@@ -17,6 +17,7 @@ jobs:
     env:
       CODEX_NEWSLETTER_MODEL: gpt-5.6-sol
       CODEX_NEWSLETTER_TIMEOUT_SECONDS: "600"
+      PYTHON_BOOTSTRAP: C:\Users\user\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe
     steps:
       - name: Checkout main
         uses: actions/checkout@v4
@@ -24,10 +25,17 @@ jobs:
           ref: main
           fetch-depth: 0
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.11"
+      - name: Prepare isolated Python
+        shell: powershell
+        run: |
+          if (-not (Test-Path -LiteralPath $env:PYTHON_BOOTSTRAP)) {
+            throw "Required Python runtime not found: $env:PYTHON_BOOTSTRAP"
+          }
+          $venvDir = Join-Path $env:RUNNER_TEMP "bloomberg-newsletter-$env:GITHUB_RUN_ID-$env:GITHUB_RUN_ATTEMPT"
+          & $env:PYTHON_BOOTSTRAP -m venv $venvDir
+          $python = Join-Path $venvDir "Scripts\python.exe"
+          & $python --version
+          "PYTHON_BIN=$python" | Out-File -FilePath $env:GITHUB_ENV -Encoding utf8 -Append
 
       - name: Set up Node.js
         uses: actions/setup-node@v4
@@ -43,13 +51,13 @@ jobs:
       - name: Install dependencies
         shell: powershell
         run: |
-          python -m pip install --upgrade pip
-          python -m pip install -r requirements.txt
+          & $env:PYTHON_BIN -m pip install --upgrade pip
+          & $env:PYTHON_BIN -m pip install "pypdf>=4.0.0" pytest
 
       - name: Convert new PDFs to markdown
         shell: powershell
         run: |
-          python tools/bloomberg_pdf_convert.py --days 28
+          & $env:PYTHON_BIN tools/bloomberg_pdf_convert.py --days 28
 
       - name: Build weekly digest (Sunday only)
         shell: powershell
@@ -57,7 +65,7 @@ jobs:
           $dow = (Get-Date).DayOfWeek
           if ($dow -eq 'Sunday') {
             Write-Host "Sunday — generating weekly digest"
-            python tools/bloomberg_weekly_digest.py
+            & $env:PYTHON_BIN tools/bloomberg_weekly_digest.py
           } else {
             Write-Host "Not Sunday ($dow) — skipping weekly digest"
           }
@@ -65,12 +73,12 @@ jobs:
       - name: Build newsletter from new articles
         shell: powershell
         run: |
-          python tools/bloomberg_newsletter_build.py
+          & $env:PYTHON_BIN tools/bloomberg_newsletter_build.py
 
       - name: Run pipeline tests
         shell: powershell
         run: |
-          python -m pytest tests/test_bloomberg_pipeline.py -q
+          & $env:PYTHON_BIN -m pytest tests/test_bloomberg_pipeline.py -q
 
       - name: Commit and push
         shell: powershell
