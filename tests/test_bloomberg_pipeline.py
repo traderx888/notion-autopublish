@@ -201,6 +201,34 @@ class TestModifiedTimeWindow:
 # Newsletter HTML structure
 # ---------------------------------------------------------------------------
 class TestNewsletterHtml:
+    def test_single_article_override_reaches_dry_run_generation(
+        self, monkeypatch, capsys
+    ):
+        from tools import bloomberg_newsletter_build as bnb
+
+        state = {
+            "lastNewsletterNumber": 143,
+            "newsletters": {},
+            "processedFiles": {},
+        }
+        groups = {
+            "uncategorized": [
+                {
+                    "filename": "single.pdf",
+                    "mdPath": "single.md",
+                    "topics": ["uncategorized"],
+                    "title": "Single article",
+                }
+            ]
+        }
+        monkeypatch.setattr(bnb, "read_state", lambda: state)
+        monkeypatch.setattr(bnb, "_group_articles", lambda _state: groups)
+
+        bnb.build(dry_run=True, min_articles=1)
+
+        output = capsys.readouterr().out
+        assert "newsletter_144_uncategorized.html: 1 articles" in output
+
     def test_html_has_required_elements(self):
         from tools.bloomberg_newsletter_build import render_newsletter_html
 

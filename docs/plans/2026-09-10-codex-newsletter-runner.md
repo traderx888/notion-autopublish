@@ -109,3 +109,9 @@ Fargo ISRG survey PDF. `pdfplumber` independently extracted all 26 pages. The
 converter now falls back to `pdfplumber` after a `pypdf` exception and returns a
 non-zero CLI status if both parsers fail, so a partial conversion cannot produce
 a green workflow unnoticed.
+
+Follow-up run `34471169157` converted that final PDF with zero errors, but the
+builder correctly deferred it under the default two-article threshold. Manual
+dispatch now exposes a constrained `min_articles` choice (2 by default, or 1);
+scheduled runs retain 2, while the authorized singleton can be published with
+an explicit `min_articles=1` dispatch.

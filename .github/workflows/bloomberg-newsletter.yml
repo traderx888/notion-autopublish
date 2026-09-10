@@ -2,6 +2,15 @@ name: Bloomberg Newsletter Pipeline
 
 on:
   workflow_dispatch:
+    inputs:
+      min_articles:
+        description: Minimum articles required to publish a newsletter
+        required: true
+        default: "2"
+        type: choice
+        options:
+          - "2"
+          - "1"
   schedule:
     # Every 3 days at 09:00 HKT (01:00 UTC)
     - cron: "0 1 */3 * *"
@@ -18,6 +27,7 @@ jobs:
       CODEX_NEWSLETTER_MODEL: gpt-5.6-sol
       CODEX_NEWSLETTER_TIMEOUT_SECONDS: "600"
       PYTHON_BOOTSTRAP: C:\Users\user\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe
+      NEWSLETTER_MIN_ARTICLES: ${{ inputs.min_articles || '2' }}
     steps:
       - name: Checkout main
         uses: actions/checkout@v4
@@ -79,7 +89,7 @@ jobs:
       - name: Build newsletter from new articles
         shell: powershell
         run: |
-          & $env:PYTHON_BIN tools/bloomberg_newsletter_build.py
+          & $env:PYTHON_BIN tools/bloomberg_newsletter_build.py --min-articles $env:NEWSLETTER_MIN_ARTICLES
 
       - name: Commit and push
         shell: powershell

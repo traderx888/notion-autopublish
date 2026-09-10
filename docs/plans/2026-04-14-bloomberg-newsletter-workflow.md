@@ -65,7 +65,8 @@ python tools/bloomberg_newsletter_build.py
 ```
 
 - Groups unprocessed articles by topic
-- Requires minimum 2 articles per topic to generate a newsletter
+- Requires minimum 2 articles per topic by default; an explicit manual dispatch
+  can select 1 to publish an authorized singleton backlog item
 - Calls Codex CLI with `gpt-5.6-sol` for editorial synthesis (stat grids,
   investment implications, bilingual summaries)
 - Uses an ephemeral session, ignores the user's mutable CLI config, and grants

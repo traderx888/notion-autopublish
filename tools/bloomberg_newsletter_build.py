@@ -625,18 +625,21 @@ def update_student_portal(
 # ---------------------------------------------------------------------------
 # Main build
 # ---------------------------------------------------------------------------
-def build(dry_run: bool = False) -> list[dict]:
+def build(dry_run: bool = False, min_articles: int = MIN_ARTICLES) -> list[dict]:
+    if min_articles < 1:
+        raise ValueError("min_articles must be greater than zero")
+
     state = read_state()
     groups = _group_articles(state)
 
     total_unprocessed = sum(len(v) for v in groups.values())
     print(f"Unprocessed articles: {total_unprocessed} across {len(groups)} topics")
 
-    if total_unprocessed < MIN_ARTICLES:
-        print(f"Below minimum threshold ({MIN_ARTICLES}), skipping.")
+    if total_unprocessed < min_articles:
+        print(f"Below minimum threshold ({min_articles}), skipping.")
         return []
 
-    merged = _merge_small_groups(groups, min_size=MIN_ARTICLES)
+    merged = _merge_small_groups(groups, min_size=min_articles)
     generated = []
     number = state["lastNewsletterNumber"]
 
@@ -656,7 +659,7 @@ def build(dry_run: bool = False) -> list[dict]:
             expanded.append((topics, articles))
 
     for topics, articles in expanded:
-        if len(articles) < MIN_ARTICLES:
+        if len(articles) < min_articles:
             print(f"  Skipping {topics}: only {len(articles)} articles")
             continue
 
@@ -715,5 +718,13 @@ if __name__ == "__main__":
 
     parser = argparse.ArgumentParser(description="Build Bloomberg newsletters with Codex editorial synthesis")
     parser.add_argument("--dry-run", action="store_true")
+    parser.add_argument(
+        "--min-articles",
+        type=int,
+        default=MIN_ARTICLES,
+        help="Minimum unprocessed articles required to publish (default: 2)",
+    )
     args = parser.parse_args()
-    build(dry_run=args.dry_run)
+    if args.min_articles < 1:
+        parser.error("--min-articles must be greater than zero")
+    build(dry_run=args.dry_run, min_articles=args.min_articles)
