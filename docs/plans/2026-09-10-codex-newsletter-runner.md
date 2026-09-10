@@ -91,3 +91,8 @@ elevated. The workflow therefore uses this host's existing bundled Python only
 to bootstrap a run-scoped virtual environment, then installs the pipeline's
 actual `pypdf` and `pytest` dependencies there. It does not install Python,
 change system registry state, or modify the bundled runtime's packages.
+
+Live run `34465081365` passed conversion and completed the first Codex synthesis
+batch, then failed while updating `output/student.html` because the narrowed
+environment omitted Beautiful Soup. `beautifulsoup4` is now included alongside
+`pypdf` and `pytest`; no generated output from the failed run was pushed.
