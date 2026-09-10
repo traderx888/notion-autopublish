@@ -1,7 +1,7 @@
-"""Bloomberg Newsletter Builder — Editorial Synthesis via Claude.
+"""Bloomberg Newsletter Builder — Editorial Synthesis via Codex.
 
 Reads unprocessed markdown articles from state, groups by topic,
-uses Claude to synthesize editorial summaries (stat grids, investment
+uses Codex to synthesize editorial summaries (stat grids, investment
 implications, bilingual conclusions), then generates newsletter HTML
 matching the hand-crafted style of newsletters #4 and #5.
 
@@ -9,10 +9,7 @@ Continues newsletter numbering from the last issued number in state.
 """
 from __future__ import annotations
 
-import json
-import os
 import re
-import subprocess
 import sys
 import html as html_mod
 from datetime import datetime, timezone, timedelta
@@ -35,11 +32,12 @@ from tools.bloomberg_pdf_convert import (
     now_hkt_iso,
     HKT,
 )
+from tools.codex_synthesis import synthesize_json
 
 OUTPUT_DIR = REPO_ROOT / "output"
 STUDENT_HTML = OUTPUT_DIR / "student.html"
 MIN_ARTICLES = 2
-MAX_ARTICLES = 8  # split large topic groups to stay within Claude synthesis limits
+MAX_ARTICLES = 8  # split large topic groups to stay within model synthesis limits
 
 # ---------------------------------------------------------------------------
 # Topic metadata
@@ -139,7 +137,7 @@ NEWSLETTER_CSS = """\
 
 
 # ---------------------------------------------------------------------------
-# Claude editorial synthesis prompt
+# Codex editorial synthesis prompt
 # ---------------------------------------------------------------------------
 SYNTHESIS_PROMPT = """\
 You are an editorial assistant for a fund management research newsletter (學海無涯) targeting finance students in Hong Kong.
@@ -315,7 +313,7 @@ def _merge_small_groups(
 
 
 # ---------------------------------------------------------------------------
-# Claude synthesis
+# Codex synthesis
 # ---------------------------------------------------------------------------
 def _read_article_text(md_path: str, max_chars: int = 3000) -> str:
     """Read article markdown, truncated to max_chars."""
@@ -330,7 +328,7 @@ def _read_article_text(md_path: str, max_chars: int = 3000) -> str:
 
 
 def _build_prompt(topics: list[str], articles: list[dict]) -> str:
-    """Build the full prompt with article content for Claude."""
+    """Build the full prompt with article content for Codex."""
     prompt = SYNTHESIS_PROMPT
 
     # For large groups, reduce per-article text to fit context
@@ -356,84 +354,10 @@ def _build_prompt(topics: list[str], articles: list[dict]) -> str:
     return prompt
 
 
-def _parse_claude_json(output: str) -> dict | None:
-    """Parse JSON from Claude CLI or SDK output."""
-    # claude --output-format json wraps in {"result": "...", ...}
-    try:
-        wrapper = json.loads(output)
-        raw_text = wrapper.get("result", output)
-    except json.JSONDecodeError:
-        raw_text = output
-
-    # Extract JSON from the response
-    json_match = re.search(r"\{[\s\S]*\}", raw_text)
-    if not json_match:
-        return None
-    try:
-        return json.loads(json_match.group())
-    except json.JSONDecodeError:
-        return None
-
-
-def synthesize_with_claude(topics: list[str], articles: list[dict]) -> dict | None:
-    """Call Claude to synthesize articles into structured editorial content."""
+def synthesize_with_codex(topics: list[str], articles: list[dict]) -> dict | None:
+    """Call Codex to synthesize articles into structured editorial content."""
     prompt = _build_prompt(topics, articles)
-
-    # Try claude CLI (non-interactive) — pipe prompt via stdin to avoid
-    # Windows command-line length limits
-    try:
-        print(f"  [CLAUDE] Synthesizing {len(articles)} articles ({len(prompt)} chars)...")
-        result = subprocess.run(
-            ["claude", "-p", "--output-format", "json"],
-            input=prompt,
-            capture_output=True,
-            text=True,
-            timeout=300,
-            encoding="utf-8",
-            errors="replace",
-        )
-        if result.returncode != 0:
-            print(f"  [CLAUDE ERR] rc={result.returncode}: {result.stderr[:300]}")
-            return None
-
-        parsed = _parse_claude_json(result.stdout.strip())
-        if not parsed:
-            print(f"  [CLAUDE ERR] No valid JSON found in response")
-            return None
-        return parsed
-
-    except FileNotFoundError:
-        print("  [CLAUDE] 'claude' CLI not found, trying Anthropic SDK...")
-        return _synthesize_with_sdk(prompt)
-    except subprocess.TimeoutExpired:
-        print("  [CLAUDE ERR] Timeout after 300s")
-        return None
-    except Exception as e:
-        print(f"  [CLAUDE ERR] {e}")
-        return None
-
-
-def _synthesize_with_sdk(prompt: str) -> dict | None:
-    """Fallback: use Anthropic SDK if available."""
-    try:
-        import anthropic
-        client = anthropic.Anthropic()  # uses ANTHROPIC_API_KEY env var
-        message = client.messages.create(
-            model="claude-sonnet-4-20250514",
-            max_tokens=8000,
-            messages=[{"role": "user", "content": prompt}],
-        )
-        raw_text = message.content[0].text
-        json_match = re.search(r"\{[\s\S]*\}", raw_text)
-        if json_match:
-            return json.loads(json_match.group())
-        return None
-    except ImportError:
-        print("  [ERR] Neither 'claude' CLI nor anthropic SDK available.")
-        return None
-    except Exception as e:
-        print(f"  [SDK ERR] {e}")
-        return None
+    return synthesize_json(prompt, label=f"newsletter ({len(articles)} articles)")
 
 
 # ---------------------------------------------------------------------------
@@ -745,10 +669,10 @@ def build(dry_run: bool = False) -> list[dict]:
             print(f"  [DRY-RUN] Would generate {filename}: {len(articles)} articles, topics={topics}")
             continue
 
-        # Claude editorial synthesis
-        synthesized = synthesize_with_claude(topics, articles)
+        # Codex editorial synthesis
+        synthesized = synthesize_with_codex(topics, articles)
         if not synthesized:
-            print(f"  [SKIP] Claude synthesis failed for {topics}, skipping")
+            print(f"  [SKIP] Codex synthesis failed for {topics}, skipping")
             continue
 
         html_content = render_newsletter_html(number, synthesized, topics, prev_newsletter)
@@ -789,7 +713,7 @@ def build(dry_run: bool = False) -> list[dict]:
 if __name__ == "__main__":
     import argparse
 
-    parser = argparse.ArgumentParser(description="Build Bloomberg newsletters with Claude editorial synthesis")
+    parser = argparse.ArgumentParser(description="Build Bloomberg newsletters with Codex editorial synthesis")
     parser.add_argument("--dry-run", action="store_true")
     args = parser.parse_args()
     build(dry_run=args.dry_run)

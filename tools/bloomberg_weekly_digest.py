@@ -1,13 +1,11 @@
 """Bloomberg Weekly Digest — Sunday summary of past 7 days.
 
-Uses Claude to synthesize a "Week in Review" editorial newsletter
+Uses Codex to synthesize a "Week in Review" editorial newsletter
 from all articles processed in the last 7 days.
 """
 from __future__ import annotations
 
 import html as html_mod
-import json
-import re
 import sys
 from datetime import datetime, timedelta
 from pathlib import Path
@@ -36,7 +34,6 @@ from tools.bloomberg_newsletter_build import (
     _title_from_md,
     _date_label,
     _read_article_text,
-    synthesize_with_claude,
     _render_section_html,
     _bold_to_html,
 )
@@ -156,57 +153,24 @@ def _build_digest_prompt(groups: dict[str, list[dict]]) -> str:
 
 
 def _synthesize_digest(groups: dict[str, list[dict]]) -> dict | None:
-    """Use Claude to synthesize the weekly digest."""
+    """Use Codex to synthesize the weekly digest."""
     all_articles = [a for arts in groups.values() for a in arts]
     topics = list(groups.keys())
     prompt = _build_digest_prompt(groups)
 
-    from tools.bloomberg_newsletter_build import _parse_claude_json
-    import subprocess
-    try:
-        print(f"  [CLAUDE] Synthesizing weekly digest: {len(all_articles)} articles across {len(topics)} topics ({len(prompt)} chars)...")
-        result = subprocess.run(
-            ["claude", "-p", "--output-format", "json"],
-            input=prompt,
-            capture_output=True,
-            text=True,
-            timeout=300,
-            encoding="utf-8",
-            errors="replace",
-        )
-        if result.returncode != 0:
-            print(f"  [CLAUDE ERR] rc={result.returncode}")
-            return None
+    from tools.codex_synthesis import synthesize_json
 
-        parsed = _parse_claude_json(result.stdout.strip())
-        if parsed:
-            return parsed
-        print("  [CLAUDE ERR] No valid JSON in response")
-        return None
-    except FileNotFoundError:
-        # Fallback to SDK
-        try:
-            import anthropic
-            client = anthropic.Anthropic()
-            message = client.messages.create(
-                model="claude-sonnet-4-20250514",
-                max_tokens=8000,
-                messages=[{"role": "user", "content": prompt}],
-            )
-            raw_text = message.content[0].text
-            json_match = re.search(r"\{[\s\S]*\}", raw_text)
-            if json_match:
-                return json.loads(json_match.group())
-        except Exception as e:
-            print(f"  [ERR] {e}")
-        return None
-    except Exception as e:
-        print(f"  [CLAUDE ERR] {e}")
-        return None
+    return synthesize_json(
+        prompt,
+        label=(
+            f"weekly digest ({len(all_articles)} articles across "
+            f"{len(topics)} topics)"
+        ),
+    )
 
 
 def render_digest_html(week_label: str, synthesized: dict) -> str:
-    """Render digest HTML from Claude-synthesized content."""
+    """Render digest HTML from Codex-synthesized content."""
     title_zh = synthesized.get("title_zh", "本週市場回顧")
     title_en = synthesized.get("title_en", "Week in Review")
     sections = synthesized.get("sections", [])
@@ -362,10 +326,10 @@ def build_digest(dry_run: bool = False) -> dict | None:
         print(f"[DRY-RUN] Would generate {filename}")
         return {"week": week_label, "filename": filename, "total": total}
 
-    # Claude synthesis
+    # Codex synthesis
     synthesized = _synthesize_digest(groups)
     if not synthesized:
-        print("[SKIP] Claude synthesis failed for weekly digest")
+        print("[SKIP] Codex synthesis failed for weekly digest")
         return None
 
     html_content = render_digest_html(week_label, synthesized)
@@ -390,7 +354,7 @@ def build_digest(dry_run: bool = False) -> dict | None:
 if __name__ == "__main__":
     import argparse
 
-    parser = argparse.ArgumentParser(description="Build Bloomberg weekly digest with Claude synthesis")
+    parser = argparse.ArgumentParser(description="Build Bloomberg weekly digest with Codex synthesis")
     parser.add_argument("--dry-run", action="store_true")
     args = parser.parse_args()
     build_digest(dry_run=args.dry_run)

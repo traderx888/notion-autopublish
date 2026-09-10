@@ -1,8 +1,8 @@
 # Bloomberg Newsletter Pipeline — Operator Runbook
 
-**Owner:** Claude agent (notion-autopublish)
-**Last updated:** 2026-04-14
-**Status:** Active — 35 newsletters published (#1–#35)
+**Owner:** Codex agent (notion-autopublish)
+**Last updated:** 2026-09-10
+**Status:** Active — state on `main` is through newsletter #133
 
 ---
 
@@ -34,11 +34,14 @@ or missing topic tags need renaming before conversion.
 Descriptive Title Here #topic1 #topic2.pdf
 ```
 
-When Claude runs the pipeline, it:
+Before the automated workflow runs, the operator:
 1. Reads page 1 of each untagged PDF
 2. Determines appropriate topic tags from content
 3. Renames files with descriptive names + hashtags
-4. Proceeds to conversion
+
+The workflow does not currently infer missing topics or rename source PDFs.
+Untagged files become `uncategorized`, so review the PDF queue before enabling
+the runner.
 
 ### Step 1 — PDF → Markdown conversion
 
@@ -54,15 +57,18 @@ python tools/bloomberg_pdf_convert.py
 
 **Dry run:** `python tools/bloomberg_pdf_convert.py --dry-run`
 
-### Step 2 — Newsletter build (Claude editorial synthesis)
+### Step 2 — Newsletter build (Codex editorial synthesis)
 
 ```bash
 python tools/bloomberg_newsletter_build.py
 ```
 
 - Groups unprocessed articles by topic
-- Requires minimum 3 articles per topic to generate a newsletter
-- Calls Claude API for editorial synthesis (stat grids, investment implications, bilingual summaries)
+- Requires minimum 2 articles per topic to generate a newsletter
+- Calls Codex CLI with `gpt-5.6-sol` for editorial synthesis (stat grids,
+  investment implications, bilingual summaries)
+- Uses an ephemeral session, ignores the user's mutable CLI config, and grants
+  the model read-only filesystem access
 - Generates newsletter HTML in `output/newsletter_<N>_<topic>.html`
 - Auto-updates `output/student.html` with new issue cards
 - Continues numbering from `lastNewsletterNumber` in state
@@ -134,6 +140,14 @@ GitHub Pages auto-deploys from `main`.
 ---
 
 ## Troubleshooting
+
+### Codex authentication and config
+
+The self-hosted runner must run as the same Windows user that signed in to
+Codex CLI. The workflow installs the pinned `@openai/codex@0.154.0`. The
+synthesis adapter passes `--ignore-user-config`, so unrelated mutable settings
+cannot change the unattended job; authentication still comes from that user's
+Codex credential store.
 
 ### f-string escape error in build script
 JavaScript `{}` braces in the HTML template must be escaped as `{{}}` inside

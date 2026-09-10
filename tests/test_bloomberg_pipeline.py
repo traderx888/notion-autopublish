@@ -125,12 +125,28 @@ class TestNewsletterHtml:
     def test_html_has_required_elements(self):
         from tools.bloomberg_newsletter_build import render_newsletter_html
 
-        articles = [
-            {"filename": "test1.pdf", "mdPath": "", "topics": ["rates"], "title": "Test Article 1"},
-            {"filename": "test2.pdf", "mdPath": "", "topics": ["rates"], "title": "Test Article 2"},
-            {"filename": "test3.pdf", "mdPath": "", "topics": ["china"], "title": "Test Article 3"},
-        ]
-        html = render_newsletter_html(6, ["rates", "china"], articles)
+        synthesized = {
+            "title_zh": "央行與中國市場",
+            "title_en": "Central Banks and China",
+            "verdict_zh": "結論：保持審慎。",
+            "sections": [
+                {
+                    "id": "rates",
+                    "tag_zh": "利率",
+                    "tag_en": "Rates",
+                    "heading_zh": "利率展望",
+                    "stats": [],
+                    "articles": [],
+                }
+            ],
+            "red_team": {
+                "assumptions": [],
+                "counter_evidence": [],
+                "editorial_verdict": "等待更多證據。",
+            },
+            "fund_manager_takeaways": [],
+        }
+        html = render_newsletter_html(6, synthesized, ["rates", "china"])
         assert "<!DOCTYPE html>" in html
         assert "彭博研究摘要" in html
         assert 'class="toc"' in html
@@ -143,10 +159,35 @@ class TestNewsletterHtml:
     def test_html_contains_article_titles(self):
         from tools.bloomberg_newsletter_build import render_newsletter_html
 
-        articles = [
-            {"filename": "t.pdf", "mdPath": "", "topics": ["rates"], "title": "Fed Holds Rate Steady"},
-        ]
-        html = render_newsletter_html(7, ["rates"], articles)
+        synthesized = {
+            "title_zh": "利率市場",
+            "title_en": "Rates",
+            "verdict_zh": "結論：利率維持不變。",
+            "sections": [
+                {
+                    "id": "rates",
+                    "tag_zh": "利率",
+                    "tag_en": "Rates",
+                    "heading_zh": "政策觀察",
+                    "stats": [],
+                    "articles": [
+                        {
+                            "title": "Fed Holds Rate Steady",
+                            "summary_zh": "聯準會維持政策利率不變。",
+                            "data_points": "",
+                            "implication_zh": "等待更多數據。",
+                        }
+                    ],
+                }
+            ],
+            "red_team": {
+                "assumptions": [],
+                "counter_evidence": [],
+                "editorial_verdict": "等待更多證據。",
+            },
+            "fund_manager_takeaways": [],
+        }
+        html = render_newsletter_html(7, synthesized, ["rates"])
         assert "Fed Holds Rate Steady" in html
 
 
@@ -168,7 +209,13 @@ class TestStudentPortal:
         )
         monkeypatch.setattr(bnb, "STUDENT_HTML", portal)
 
-        bnb.update_student_portal(6, "newsletter_6_rates.html", ["rates"], 5)
+        bnb.update_student_portal(
+            6,
+            "newsletter_6_rates.html",
+            "利率展望",
+            ["rates"],
+            5,
+        )
 
         result = portal.read_text(encoding="utf-8")
         assert "newsletter_6_rates.html" in result
