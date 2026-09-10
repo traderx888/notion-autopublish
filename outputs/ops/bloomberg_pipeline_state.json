@@ -1,5 +1,5 @@
 {
-  "lastRunAt": "2026-09-10T18:54:35+08:00",
+  "lastRunAt": "2026-09-10T19:26:53+08:00",
   "lastNewsletterNumber": 143,
   "processedFiles": {
     "2026 Outlook Global Aluminum Producers #metals.pdf": {
@@ -6114,6 +6114,12 @@
       "mdPath": "C:\\blp\\data\\md_converted\\第三季度將決定中國下一輪成長支持舉措.md",
       "topics": [],
       "newsletterNumber": 143
+    },
+    "Wells Fargo ISRG 2026 Society of Robotic Surgery (SRS) Survey Key Takeawa.pdf": {
+      "processedAt": "2026-09-10T19:26:53+08:00",
+      "mdPath": "C:\\blp\\data\\md_converted\\Wells Fargo ISRG 2026 Society of Robotic Surgery (SRS) Survey Key Takeawa.md",
+      "topics": [],
+      "newsletterNumber": null
     }
   },
   "newsletters": {
