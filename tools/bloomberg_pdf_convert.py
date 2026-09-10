@@ -106,16 +106,36 @@ def title_from_filename(filename: str) -> str:
 # PDF text extraction + cleaning
 # ---------------------------------------------------------------------------
 def extract_pdf_text(pdf_path: Path) -> str:
-    """Extract text from all pages of a PDF via pypdf."""
-    from pypdf import PdfReader
+    """Extract all PDF text, falling back when pypdf rejects malformed fonts."""
+    try:
+        from pypdf import PdfReader
 
-    reader = PdfReader(str(pdf_path))
-    pages = []
-    for page in reader.pages:
-        text = page.extract_text()
-        if text:
-            pages.append(text)
-    return "\n\n".join(pages)
+        reader = PdfReader(str(pdf_path))
+        pages = []
+        for page in reader.pages:
+            text = page.extract_text()
+            if text:
+                pages.append(text)
+        return "\n\n".join(pages)
+    except Exception as primary_error:
+        primary_error_text = str(primary_error)
+        print(
+            f"  [WARN] pypdf failed for {pdf_path.name}: {primary_error_text}; "
+            "retrying with pdfplumber",
+            file=sys.stderr,
+        )
+
+    try:
+        import pdfplumber
+
+        with pdfplumber.open(str(pdf_path)) as pdf:
+            pages = [text for page in pdf.pages if (text := page.extract_text())]
+        return "\n\n".join(pages)
+    except Exception as fallback_error:
+        raise RuntimeError(
+            f"pypdf failed ({primary_error_text}); "
+            f"pdfplumber fallback failed ({fallback_error})"
+        ) from fallback_error
 
 
 def strip_disclaimers(text: str) -> str:
@@ -245,4 +265,6 @@ if __name__ == "__main__":
     if args.days is not None and args.days <= 0:
         parser.error("--days must be greater than zero")
     since = datetime.now(HKT) - timedelta(days=args.days) if args.days else None
-    run(dry_run=args.dry_run, since=since)
+    summary = run(dry_run=args.dry_run, since=since)
+    if summary["errors"]:
+        raise SystemExit(1)

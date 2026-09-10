@@ -102,3 +102,10 @@ gate reported 17 passed and four fixture setup errors because pytest selected an
 inaccessible shared `%TEMP%\pytest-of-user` directory. The workflow now assigns
 pytest a run-specific directory under `RUNNER_TEMP`, disables its repository
 cache, and runs the test gate before conversion or synthesis.
+
+Live run `34468358003` completed and pushed 75 converted PDFs as ten newsletters,
+but the converter reported one non-fatal `pypdf` font-width error for the Wells
+Fargo ISRG survey PDF. `pdfplumber` independently extracted all 26 pages. The
+converter now falls back to `pdfplumber` after a `pypdf` exception and returns a
+non-zero CLI status if both parsers fail, so a partial conversion cannot produce
+a green workflow unnoticed.

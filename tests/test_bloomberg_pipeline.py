@@ -5,6 +5,7 @@ import json
 import os
 import sys
 import tempfile
+import types
 from datetime import datetime, timedelta
 from pathlib import Path
 
@@ -21,6 +22,7 @@ from tools.bloomberg_pdf_convert import (
     read_state,
     write_state,
     STATE_PATH,
+    extract_pdf_text,
 )
 
 
@@ -91,6 +93,39 @@ class TestStripDisclaimers:
     def test_preserves_real_content(self):
         text = "China's export engine continues to hum. That backs our assessment."
         assert strip_disclaimers(text) == text
+
+
+class TestPdfExtraction:
+    def test_falls_back_to_pdfplumber_when_pypdf_fails(
+        self, monkeypatch, capsys
+    ):
+        pypdf = types.ModuleType("pypdf")
+        pdfplumber = types.ModuleType("pdfplumber")
+
+        class BrokenPage:
+            def extract_text(self):
+                raise TypeError("malformed font width")
+
+        class FallbackPage:
+            def extract_text(self):
+                return "Recovered page text"
+
+        class FallbackPdf:
+            pages = [FallbackPage()]
+
+            def __enter__(self):
+                return self
+
+            def __exit__(self, *_args):
+                return False
+
+        pypdf.PdfReader = lambda _path: types.SimpleNamespace(pages=[BrokenPage()])
+        pdfplumber.open = lambda _path: FallbackPdf()
+        monkeypatch.setitem(sys.modules, "pypdf", pypdf)
+        monkeypatch.setitem(sys.modules, "pdfplumber", pdfplumber)
+
+        assert extract_pdf_text(Path("broken.pdf")) == "Recovered page text"
+        assert "retrying with pdfplumber" in capsys.readouterr().err
 
 
 # ---------------------------------------------------------------------------

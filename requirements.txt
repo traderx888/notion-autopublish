@@ -11,3 +11,4 @@ beautifulsoup4>=4.12.0
 yt-dlp>=2026.03.03
 notebooklm-py[browser]>=0.3.4
 pypdf>=4.0.0
+pdfplumber>=0.11.0

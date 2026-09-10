@@ -52,7 +52,7 @@ jobs:
         shell: powershell
         run: |
           & $env:PYTHON_BIN -m pip install --upgrade pip
-          & $env:PYTHON_BIN -m pip install "pypdf>=4.0.0" "beautifulsoup4>=4.12.0" pytest
+          & $env:PYTHON_BIN -m pip install "pypdf>=4.0.0" "pdfplumber>=0.11.0" "beautifulsoup4>=4.12.0" pytest
 
       - name: Run pipeline tests
         shell: powershell
