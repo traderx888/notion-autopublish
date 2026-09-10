@@ -66,10 +66,11 @@ and register a Windows self-hosted runner on this computer.
 - Old queued run `34441214110`, which referenced the Claude workflow at
   `5185ee0`, was cancelled before the runner started.
 - GitHub runner `notion-autopublish-windows` (runner id 21) registered with
-  runner version `2.337.0`; GitHub read-back showed `online`, `busy=false`, and
-  the `notion-autopublish` label.
-- The runner is currently a hidden process under the signed-in Windows user.
-  Reboot/logon persistence is not configured.
+  runner version `2.337.0`; initial GitHub read-back showed `online`,
+  `busy=false`, and the `notion-autopublish` label.
+- After the connectivity proof, the runner process was stopped and GitHub
+  read-back showed `offline`, preventing the scheduled workflow from publishing
+  the unclassified backlog. Reboot/logon persistence is not configured.
 
 ## Live-Run Gate
 
