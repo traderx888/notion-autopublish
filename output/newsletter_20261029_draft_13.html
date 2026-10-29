@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>學海無涯｜政策換錨、日圓拆倉與地緣風險｜研究草稿</title>
+<style>
+
+  :root { --bg: #0a0a08; --card: #141410; --border: #2a2820; --accent: #c9a84c;
+          --gold: #f0d87a; --gold-dim: #c4b896; --text: #e0d8c8; --text-bright: #f0ebe0; --muted: #c4b896;
+          --green: #6bbd5b; --red: #e05545; --yellow: #d4a843; --orange: #d49040;
+          --purple: #b08cd0; --cyan: #4cc9b0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { background: #0a0a08 !important; }
+  body { color: var(--text); font-family: 'Source Sans Pro', 'Noto Serif TC', 'Microsoft JhengHei', sans-serif; line-height: 1.8; padding: 24px; max-width: 880px; margin: 0 auto; }
+  h1 { font-family: 'Playfair Display', 'Noto Serif TC', serif; color: var(--gold); font-size: 1.8em; margin-bottom: 4px; font-weight: 900; letter-spacing: 0.02em; }
+  h2 { font-family: 'Playfair Display', 'Noto Serif TC', serif; }
+  .subtitle { color: var(--text-bright); font-size: 0.95em; margin-bottom: 8px; font-family: 'Noto Serif TC', serif; }
+  .issue-badge { display: inline-block; background: rgba(201,168,76,0.15); color: var(--accent); padding: 4px 12px; border-radius: 12px; font-size: 0.8em; font-weight: 600; margin-bottom: 20px; border: 1px solid rgba(201,168,76,0.3); }
+  .tag { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 0.72em; font-weight: 600; margin-right: 4px; }
+  .tag-rates { background: rgba(201,168,76,0.15); color: var(--accent); }
+  .tag-china { background: rgba(212,144,64,0.15); color: var(--orange); }
+  .tag-japan { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-geo   { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-oil   { background: rgba(212,168,67,0.15); color: var(--yellow); }
+  .tag-trade { background: rgba(212,168,67,0.15); color: var(--yellow); }
+  .tag-growth{ background: rgba(107,189,91,0.15); color: var(--green); }
+  .tag-metals{ background: rgba(176,140,208,0.15); color: var(--purple); }
+  .tag-infl  { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-policy{ background: rgba(201,168,76,0.15); color: var(--accent); }
+  .tag-val   { background: rgba(107,189,91,0.15); color: var(--green); }
+  .tag-vol   { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-semi  { background: rgba(76,201,176,0.15); color: var(--cyan); }
+  .tag-credit{ background: rgba(176,140,208,0.15); color: var(--purple); }
+  .tag-space { background: rgba(201,168,76,0.15); color: var(--accent); }
+  .tag-misc  { background: rgba(138,128,112,0.15); color: var(--muted); }
+  .verdict-bar { background: var(--accent); color: #0a0a08; padding: 14px 20px; border-radius: 8px; margin-bottom: 20px; font-weight: 700; font-size: 1.05em; font-family: 'Noto Serif TC', serif; }
+  .section { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 22px; margin-bottom: 18px; }
+  .section h2 { color: var(--gold); font-size: 1.15em; margin-bottom: 12px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+  .section h3 { color: var(--accent); font-size: 0.95em; margin: 14px 0 6px; }
+  .article { margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid rgba(42,40,32,0.7); }
+  .article:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .article-title { color: var(--text-bright); font-weight: 700; font-size: 0.95em; margin-bottom: 4px; }
+  .article-title-cn { color: var(--muted); font-size: 0.85em; margin-bottom: 8px; }
+  .article p { font-size: 0.9em; margin: 6px 0; }
+  .data-point { background: rgba(201,168,76,0.05); padding: 8px 12px; border-radius: 6px; margin: 8px 0; font-size: 0.85em; border: 1px solid rgba(201,168,76,0.12); }
+  .data-point .num { color: var(--text-bright); font-weight: 700; }
+  .implication { background: rgba(201,168,76,0.06); border-left: 3px solid var(--accent); padding: 10px 14px; margin: 10px 0; border-radius: 0 6px 6px 0; font-size: 0.88em; }
+  .implication .label { color: var(--accent); font-weight: 700; font-size: 0.8em; text-transform: uppercase; margin-bottom: 4px; }
+  .red-team { background: rgba(224,85,69,0.06); border: 1px solid rgba(224,85,69,0.25); border-radius: 8px; padding: 18px; margin: 18px 0; }
+  .red-team-title { color: var(--red); font-weight: 700; font-size: 0.95em; margin-bottom: 10px; font-family: 'Playfair Display', serif; }
+  .red-team ul { padding-left: 18px; }
+  .red-team li { margin: 5px 0; font-size: 0.88em; }
+  .callout { background: rgba(201,168,76,0.06); border: 1px solid rgba(201,168,76,0.25); border-radius: 8px; padding: 18px; margin: 18px 0; }
+  .callout-title { color: var(--accent); font-weight: 700; font-size: 0.95em; margin-bottom: 8px; font-family: 'Playfair Display', 'Noto Serif TC', serif; }
+  .callout ul { padding-left: 18px; }
+  .callout li { margin: 5px 0; font-size: 0.88em; }
+  ul { padding-left: 18px; }
+  li { margin: 4px 0; font-size: 0.88em; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(201,168,76,0.05); padding: 12px; border-radius: 6px; text-align: center; border: 1px solid rgba(201,168,76,0.1); }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: var(--gold); font-family: 'Playfair Display', serif; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
+  .toc { background: rgba(201,168,76,0.04); border: 1px solid rgba(201,168,76,0.18); border-radius: 8px; padding: 16px 20px; margin-bottom: 20px; }
+  .toc-title { color: var(--accent); font-weight: 700; font-size: 0.9em; margin-bottom: 8px; }
+  .toc a { color: var(--accent); text-decoration: none; font-size: 0.88em; }
+  .toc a:hover { text-decoration: underline; color: var(--gold); }
+  .toc ol { padding-left: 20px; }
+  .toc li { margin: 4px 0; }
+  .nav-links { display: flex; justify-content: space-between; margin: 20px 0; font-size: 0.85em; }
+  .nav-links a { color: var(--accent); text-decoration: none; }
+  .nav-links a:hover { text-decoration: underline; color: var(--gold); }
+  .divider { height: 1px; background: linear-gradient(90deg, transparent, var(--accent), transparent); margin: 24px 0; opacity: 0.4; }
+  .footer { text-align: center; color: var(--muted); font-size: 0.75em; margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--border); }
+  .footer a { color: var(--accent); text-decoration: none; }
+</style>
+<style>body{overflow-wrap:anywhere}.local-notice{border:1px solid #c9a84c;border-radius:8px;padding:18px;margin:0 0 20px;background:#201d13;color:#f0ebe0}.source-list{font-size:.85em}.source-list a{color:#f0d87a}pre{white-space:pre-wrap}a{color:#f0d87a}@media(max-width:600px){body{padding:14px}h1{font-size:1.4em}.stat-grid{grid-template-columns:1fr}.section{padding:16px}}</style><style>body{overflow-wrap:anywhere}.local-notice{border:1px solid #c9a84c;border-radius:8px;padding:18px;margin:0 0 20px;background:#201d13;color:#f0ebe0}.source-list{font-size:.85em}.source-list a{color:#f0d87a}pre{white-space:pre-wrap}a{color:#f0d87a}@media(max-width:600px){body{padding:14px}h1{font-size:1.4em}.stat-grid{grid-template-columns:1fr}.section{padding:16px}}</style><link href="https://traderx888.github.io/notion-autopublish/newsletter_20261029_draft_13.html" rel="canonical"/></head>
+<body id="top"><aside class="local-notice"><strong>研究草稿｜來源節錄整合，未作上架日市場重核</strong><details open=""><summary>閱讀限制：來源節錄、未作當日市場重核</summary><p>範圍：最近 22 天新檔，依檔案修改時間選取（2026-10-07 21:09 至 2026-10-29 21:09，UTC+8）。修改時間並非文章發表日期；各項數字及預測以原報告日期為準，未作發布日市場重核。</p><p>沿用既有批次流程，每份來源最多約 3,000 字元進入生成；此頁是節錄整合，並非逐頁完整研究。來源主張與編輯推論均需回看原文。草稿序號只用於本批次閱讀排序。</p></details></aside>
+<h1>政策換錨、日圓拆倉與地緣風險</h1>
+<p class="subtitle">學海無涯 · 10 月來源快照 · 研究草稿 13</p>
+<span class="issue-badge">2026-10-30 上架 · 2026-10-29 整理 · 研究草稿</span>
+<div class="verdict-bar">編輯推論（待核對）｜結論：貨幣政策分化與中東升級風險正同時壓縮風險資產承受力；基金經理宜條件式降低日圓融資套利及 AI 高估值曝險，並以能源與防禦性資產管理尾部風險。</div>
+<div class="nav-links"><a href="student.html#october-research">← 返回 10 月研究目錄</a><a href="#source-register">來源與限制</a></div>
+<div class="toc">
+<div class="toc-title">目錄</div>
+<ol>
+<li><a href="#monetary-policy">中日央行 換錨非寬鬆，轉鷹逼拆倉</a></li>
+<li><a href="#us-consumption">美國消費 財富撐消費，AI也是軟肋</a></li>
+<li><a href="#energy-geopolitics">能源與中東 柴油小修補，戰爭大尾險</a></li>
+<li><a href="#brazil-election">巴西大選 選情收窄，優勢未翻</a></li>
+<li><a href="#red-team">Red Team 反面論證</a></li>
+<li><a href="#takeaways">基金經理人重點摘要</a></li>
+</ol>
+</div>
+<div class="section" id="monetary-policy">
+<h2><span class="tag tag-misc">中日央行</span> 換錨非寬鬆，轉鷹逼拆倉</h2>
+<div class="stat-grid">
+<div class="stat"><div class="val" style="color:var(--green)">10bp</div><div class="lbl">中國政策利率
+潛在下調窗口</div></div>
+<div class="stat"><div class="val">83.4%</div><div class="lbl">9月隔夜回購
+成交量佔比</div></div>
+<div class="stat"><div class="val" style="color:var(--orange)">2%</div><div class="lbl">日本央行本輪
+終端利率預測</div></div>
+</div>
+<div class="article">
+<div class="article-title">中國央行換錨只是機制改革，降息才構成真正寬鬆</div>
+<p>Bloomberg Economics於2026年10月20日指出，中國央行可能在兩至三個月內、或年底前，把政策錨由7天期逆回購利率轉向隔夜逆回購利率。隔夜交易已佔9月銀行間質押式回購成交量的 <span style="color:#f0ebe0;font-weight:700">83.4%</span>，因此新錨更貼近實際融資市場；但隔夜衍生品及公開定價基準仍不成熟。現行7天期操作利率為 <span style="color:#f0ebe0;font-weight:700">1.40%</span>，市場傳聞隔夜操作利率為 <span style="color:#f0ebe0;font-weight:700">1.25%</span>，兩者差距主要反映期限，不能直接視為寬鬆。研究認為真正刺激須由換錨與約 <span style="color:#f0ebe0;font-weight:700">10個基點</span> 降息共同構成；過往2024年換錨時曾同步降息 <span style="color:#f0ebe0;font-weight:700">20個基點</span>，令這一情境具有歷史依據。</p>
+<div class="data-point">7天期逆回購利率：<span style="color:#f0ebe0;font-weight:700">1.40%</span>  |  傳聞隔夜逆回購利率：<span style="color:#f0ebe0;font-weight:700">1.25%</span>  |  隔夜回購成交佔比：<span style="color:#f0ebe0;font-weight:700">83.4%</span>  |  潛在降息窗口：<span style="color:#f0ebe0;font-weight:700">10bp</span></div>
+<div class="implication"><div class="label">條件式研究推論</div>在正式操作利率公布前，不宜把換錨等同全面寬鬆；若換錨同時伴隨 <span style="color:#f0ebe0;font-weight:700">10bp降息</span>，才可條件式提高對中國短端債券及利率敏感資產的正面評估。</div>
+</div>
+<div class="article">
+<div class="article-title">日本央行鷹聲難撐日圓，市場仍把終端利率鎖定約2%</div>
+<p>Bloomberg Economics於2026年10月20日表示，日本央行官員雖接連釋放鷹派訊號，日圓反應卻有限。植田和男稱潛在通脹已接近 <span style="color:#f0ebe0;font-weight:700">2%</span> 目標，小枝淳子則認為中性利率顯著高於 <span style="color:#f0ebe0;font-weight:700">1%</span>；然而美元兌日圓約為 <span style="color:#f0ebe0;font-weight:700">158.4</span>，與相關言論前的 <span style="color:#f0ebe0;font-weight:700">158.3</span> 幾乎無異。市場及研究團隊均把本輪終端利率估在約 <span style="color:#f0ebe0;font-weight:700">2%</span>，多數經濟學家預期明年底政策利率達 <span style="color:#f0ebe0;font-weight:700">1.75%-2%</span>。財政成本、政治阻力及過早緊縮的歷史記憶，均限制日本央行把利率推至明顯高於中性的可能性，因此單靠口頭鷹派訊號不足以持續扭轉日圓。</p>
+<div class="data-point">現行政策利率：<span style="color:#f0ebe0;font-weight:700">1.25%</span>  |  終端利率預測：<span style="color:#f0ebe0;font-weight:700">約2%</span>  |  美元兌日圓：<span style="color:#f0ebe0;font-weight:700">158.4</span>  |  明年底利率共識：<span style="color:#f0ebe0;font-weight:700">1.75%-2%</span></div>
+<div class="implication"><div class="label">條件式研究推論</div>若終端利率預期仍停留在 <span style="color:#f0ebe0;font-weight:700">2%</span>，不宜僅憑鷹派言論追逐日圓升勢；應等待實際加息節奏或終端利率重新定價後，再調整日圓方向曝險。</div>
+</div>
+<div class="article">
+<div class="article-title">日本央行加快正常化，日圓套利與AI股票形成共振風險</div>
+<p>Bloomberg Economics於2026年10月22日指出，日圓融資套利交易可能在日本央行轉鷹與AI股票波動升高之際被迫平倉。當日亞洲時段日圓兌美元上升 <span style="color:#f0ebe0;font-weight:700">0.7%</span>，日經225下跌 <span style="color:#f0ebe0;font-weight:700">2.7%</span>，Kospi下跌 <span style="color:#f0ebe0;font-weight:700">3.5%</span>，呈現典型避險拆倉特徵。日本央行9月加息 <span style="color:#f0ebe0;font-weight:700">25bp</span>，距前次加息僅三個月；研究預測12月、翌年3月及7月各加息 <span style="color:#f0ebe0;font-weight:700">25bp</span>，最終把政策利率推至 <span style="color:#f0ebe0;font-weight:700">2%</span>。若AI投資信心進一步轉弱，日圓升值與槓桿平倉可能互相強化；但若市場動盪過大，日本央行也可能重新審視既定加息路徑。</p>
+<div class="data-point">日圓單日升幅：<span style="color:#f0ebe0;font-weight:700">0.7%</span>  |  日經225跌幅：<span style="color:#f0ebe0;font-weight:700">2.7%</span>  |  Kospi跌幅：<span style="color:#f0ebe0;font-weight:700">3.5%</span>  |  預測終端利率：<span style="color:#f0ebe0;font-weight:700">2%</span></div>
+<div class="implication"><div class="label">條件式研究推論</div>若日本央行維持每三個月加息一次而AI股票延續波動，可考慮 <span style="color:#f0ebe0;font-weight:700">降低日圓融資套利槓桿並壓縮高估值AI曝險</span>；若央行因市場失序放慢加息，則需重新評估拆倉情境。</div>
+</div>
+</div>
+<div class="section" id="us-consumption">
+<h2><span class="tag tag-misc">美國消費</span> 財富撐消費，AI也是軟肋</h2>
+<div class="stat-grid">
+<div class="stat"><div class="val" style="color:var(--orange)">1.7%</div><div class="lbl">截至2027年底
+實際消費增長預測</div></div>
+<div class="stat"><div class="val" style="color:var(--orange)">40%</div><div class="lbl">AI相關股票
+佔股市市值約數</div></div>
+<div class="stat"><div class="val" style="color:var(--red)">-1ppt</div><div class="lbl">股市跌20%對
+GDP增速估算拖累</div></div>
+</div>
+<div class="article">
+<div class="article-title">美國消費靠財富續航，AI回調可能切斷支柱</div>
+<p>Bloomberg Economics於2026年10月22日估計，美國實際消費增長將由2026年底的 <span style="color:#f0ebe0;font-weight:700">2.6%</span> 放緩至2027年底約 <span style="color:#f0ebe0;font-weight:700">1.7%-1.8%</span>。家庭淨資產約為可支配收入的 <span style="color:#f0ebe0;font-weight:700">830%</span>，實際可支配收入仍增長約 <span style="color:#f0ebe0;font-weight:700">1.5%</span>，高財富及退休資產提取有助維持低儲蓄率；但消費韌性集中於富裕家庭偏好的服務類別，貨運量則已連續 <span style="color:#f0ebe0;font-weight:700">42個月</span> 同比下降。由於AI相關股票約佔股市市值 <span style="color:#f0ebe0;font-weight:700">40%</span>，財富效應亦成為脆弱點：股市若下跌 <span style="color:#f0ebe0;font-weight:700">20%</span>，研究估算實際PCE增速將少約 <span style="color:#f0ebe0;font-weight:700">1.4個百分點</span>，並拖低GDP增速約 <span style="color:#f0ebe0;font-weight:700">1個百分點</span>。</p>
+<div class="data-point">2027年底實際消費預測：<span style="color:#f0ebe0;font-weight:700">約1.7%-1.8%</span>  |  家庭淨資產／可支配收入：<span style="color:#f0ebe0;font-weight:700">830%</span>  |  AI股票市值佔比：<span style="color:#f0ebe0;font-weight:700">約40%</span>  |  股市跌20%的GDP拖累：<span style="color:#f0ebe0;font-weight:700">約1ppt</span></div>
+<div class="implication"><div class="label">條件式研究推論</div>若股市回調接近 <span style="color:#f0ebe0;font-weight:700">20%</span> 或勞動收入明顯失速，應 <span style="color:#f0ebe0;font-weight:700">下調美國消費與高估值成長資產的盈利假設</span>；若收入維持約1.5%增長，消費放緩仍較可能是降速而非崩塌。</div>
+</div>
+</div>
+<div class="section" id="energy-geopolitics">
+<h2><span class="tag tag-misc">能源與中東</span> 柴油小修補，戰爭大尾險</h2>
+<div class="stat-grid">
+<div class="stat"><div class="val" style="color:var(--red)">&gt;$100</div><div class="lbl">中東供應接近恢復後
+油價仍高於每桶</div></div>
+<div class="stat"><div class="val" style="color:var(--green)">$4-5</div><div class="lbl">俄供應增加對柴油
+每桶估算降幅</div></div>
+<div class="stat"><div class="val" style="color:var(--orange)">3個</div><div class="lbl">美軍部署中的
+航母打擊群</div></div>
+</div>
+<div class="article">
+<div class="article-title">美國打擊伊朗的選項愈廣，衝突失控機率愈高</div>
+<p>Bloomberg Economics於2026年10月22日梳理美國對伊朗的四類軍事選項：限制霍爾木茲海峽襲擊、打擊導彈與無人機部隊、攻擊地下核設施，以及擴大至能源和基礎設施。五角大樓據報已規劃 <span style="color:#f0ebe0;font-weight:700">三天</span> 轟炸行動，但分散式發射架、地下設施及伊朗重建能力意味效果可能短暫。即使動用MOAB，因其並非鑽地彈，也不太可能摧毀深埋地下的核設施。能源及交通攻擊的升級風險最高，可能引來伊朗襲擊海灣煉油廠、輸油管、海底電纜與美軍資產。研究判斷，多種方案組合較可能出現，但均難以保證迫使德黑蘭讓步或結束戰爭。</p>
+<div class="data-point">軍事選項：<span style="color:#f0ebe0;font-weight:700">4類</span>  |  據報轟炸計劃：<span style="color:#f0ebe0;font-weight:700">3天</span>  |  關鍵區域：<span style="color:#f0ebe0;font-weight:700">霍爾木茲海峽</span>  |  最高風險目標：<span style="color:#f0ebe0;font-weight:700">能源及基礎設施</span></div>
+<div class="implication"><div class="label">條件式研究推論</div>若攻擊範圍擴至能源設施或霍爾木茲航運再度惡化，可 <span style="color:#f0ebe0;font-weight:700">提高能源供應中斷對沖及降低週期性風險曝險</span>；有限打擊若未波及出口設施，則不應直接推演為持久供應缺口。</div>
+</div>
+<div class="article">
+<div class="article-title">美俄柴油協議難改供需，真正衝擊在西方政策分裂</div>
+<p>Bloomberg Economics於2026年10月22日指出，美國給予俄羅斯柴油制裁豁免，對全球供應及價格的直接影響有限。協議前俄羅斯柴油出口較正常水平低約 <span style="color:#f0ebe0;font-weight:700">70%</span>，其後缺口仍超過 <span style="color:#f0ebe0;font-weight:700">60%</span>；煉油量亦因烏克蘭襲擊而低約 <span style="color:#f0ebe0;font-weight:700">20%</span>。可恢復出口僅約等於俄羅斯通常出口量的 <span style="color:#f0ebe0;font-weight:700">六分之一</span>，估計只會令全球柴油價格每桶回落 <span style="color:#f0ebe0;font-weight:700">4至5美元</span>，遠小於伊朗戰爭以來約 <span style="color:#f0ebe0;font-weight:700">100美元</span> 的升幅。更重要的是，放鬆制裁可能擴大美歐分歧及美烏摩擦。俄羅斯油氣收入佔聯邦財政收入已降至約 <span style="color:#f0ebe0;font-weight:700">20%</span>，協議亦不足以根本改變其戰爭融資能力。</p>
+<div class="data-point">柴油出口缺口：<span style="color:#f0ebe0;font-weight:700">逾60%</span>  |  煉油量缺口：<span style="color:#f0ebe0;font-weight:700">約20%</span>  |  柴油價格估算回落：<span style="color:#f0ebe0;font-weight:700">每桶4-5美元</span>  |  戰後柴油累計升幅：<span style="color:#f0ebe0;font-weight:700">約100美元</span></div>
+<div class="implication"><div class="label">條件式研究推論</div>不宜把制裁豁免視為柴油價格反轉訊號；若伊朗戰事及俄羅斯煉油受損延續，可 <span style="color:#f0ebe0;font-weight:700">維持對成品油裂解價差的風險溢價假設</span>，並監察美歐政策分裂。</div>
+</div>
+<div class="article">
+<div class="article-title">美伊再次逼近衝突，選舉與霍爾木茲令風險高於年初</div>
+<p>Bloomberg Economics於2026年10月23日認為，美伊局勢與2026年2月戰爭前高度相似，而且部分條件更加危險。美國正增派第三個航母打擊群及第二支海軍陸戰隊遠征部隊，新增力量預計11月初至中旬抵達；伊朗則恢復分散式防禦並提出更強硬要求。以色列選舉定於 <span style="color:#f0ebe0;font-weight:700">10月27日</span>，美國中期選舉定於 <span style="color:#f0ebe0;font-weight:700">11月3日</span>，政治時點可能影響攻擊決策。霍爾木茲商業航運仍受嚴重干擾，即使中東石油供應已接近戰前水平，油價仍高於每桶 <span style="color:#f0ebe0;font-weight:700">100美元</span>；相比戰爭前約 <span style="color:#f0ebe0;font-weight:700">6美元</span> 的原油風險溢價，市場已反映更強烈的供應警報。</p>
+<div class="data-point">以色列選舉：<span style="color:#f0ebe0;font-weight:700">10月27日</span>  |  美國中期選舉：<span style="color:#f0ebe0;font-weight:700">11月3日</span>  |  航母打擊群：<span style="color:#f0ebe0;font-weight:700">3個</span>  |  油價：<span style="color:#f0ebe0;font-weight:700">每桶100美元以上</span></div>
+<div class="implication"><div class="label">條件式研究推論</div>若新增美軍完成部署、談判破裂且霍爾木茲流量再降，應 <span style="color:#f0ebe0;font-weight:700">提高能源尾部風險保護並收緊整體風險預算</span>；選舉前保持克制則可能延後而非消除衝突風險。</div>
+</div>
+</div>
+<div class="section" id="brazil-election">
+<h2><span class="tag tag-misc">巴西大選</span> 選情收窄，優勢未翻</h2>
+<div class="stat-grid">
+<div class="stat"><div class="val">2ppt</div><div class="lbl">首輪Bolsonaro
+領先幅度</div></div>
+<div class="stat"><div class="val" style="color:var(--orange)">10月25日</div><div class="lbl">總統大選
+次輪投票</div></div>
+<div class="stat"><div class="val" style="color:var(--green)">10月14日</div><div class="lbl">較短工時法案
+通過日期</div></div>
+</div>
+<div class="article">
+<div class="article-title">巴西次輪競爭升溫，但Bolsonaro仍較佔優</div>
+<p>Bloomberg Economics於2026年10月21日根據巴西利亞訪談及最新民調指出，原本近似形式化的 <span style="color:#f0ebe0;font-weight:700">10月25日</span> 次輪投票已變得更具競爭性。Flávio Bolsonaro首輪僅領先 <span style="color:#f0ebe0;font-weight:700">2個百分點</span>；Lula陣營其後透過大城市動員、社交媒體及基層宣傳重整聲勢，政府亦於 <span style="color:#f0ebe0;font-weight:700">10月14日</span> 通過縮短工時法案，令次輪民調差距收窄。不過，選舉算術仍對Lula不利，研究的基準判斷仍偏向Bolsonaro勝出。Lula同時受到長期執政疲勞、貪腐觀感、最高法院認受性危機及治安議題拖累。由於提供的原文在治安段落中斷，未有足夠資料重建完整政策或市場影響。</p>
+<div class="data-point">首輪領先：<span style="color:#f0ebe0;font-weight:700">2ppt</span>  |  次輪日期：<span style="color:#f0ebe0;font-weight:700">10月25日</span>  |  工時法案通過：<span style="color:#f0ebe0;font-weight:700">10月14日</span>  |  基準判斷：<span style="color:#f0ebe0;font-weight:700">Bolsonaro仍較佔優</span></div>
+<div class="implication"><div class="label">條件式研究推論</div>在次輪結果確認前，可 <span style="color:#f0ebe0;font-weight:700">控制巴西政治敏感資產的事件風險與倉位規模</span>；由於來源節錄不完整，不宜據此推導具體財政、匯率或產業政策交易。</div>
+</div>
+</div>
+<div class="divider"></div>
+<div class="red-team" id="red-team">
+<div class="red-team-title">🔴 Red Team — 核心假設與反面論證</div>
+<ul>
+<li>假設1：日本央行將按12月、翌年3月及7月各加息25bp的預測路徑，把政策利率推至2%。</li>
+<li>假設2：美國消費可繼續依靠約1.5%的實際可支配收入增長及高家庭財富維持韌性。</li>
+<li>假設3：美伊軍事壓力將繼續推高能源風險溢價，但尚未造成不可逆的全面供應中斷。</li>
+<li style="color:var(--red)">反證1：研究同時承認，若市場動盪加劇，日本央行可能重新審視加息路徑；另一篇報告亦顯示美元兌日圓由158.3至158.4幾乎沒有反應，反映市場仍不相信終端利率會顯著高於2%。</li>
+<li style="color:var(--red)">反證2：美國貨運量已連續42個月同比下降，且股市若跌20%，模型估計PCE增速會少約1.4個百分點、GDP增速少約1個百分點，財富支撐可能迅速反轉。</li>
+<li style="color:var(--red)">反證3：中東石油供應已接近戰前水平而油價仍高於每桶100美元，顯示風險溢價高企；若攻擊擴至能源基礎設施或霍爾木茲航運，有限衝突假設可能失效。</li>
+</ul>
+<p style="margin-top:10px;padding:10px 14px;background:rgba(224,85,69,0.04);border-radius:6px;font-size:0.9em;border-left:3px solid var(--red)">截至上述2026年10月20日至23日的Bloomberg Economics歷史快照，核心判斷仍成立，但屬條件式而非確定路徑。日本央行若偏離三次各25bp的預測，日圓拆倉壓力可能減弱；美股若下跌20%，消費韌性論將面臨約1個百分點GDP拖累的硬性壓力測試；若美伊攻擊波及能源設施或霍爾木茲航運再度惡化，則應視為能源尾部風險情境已由溢價轉為實際供應衝擊。</p>
+</div>
+<div class="callout" id="takeaways">
+<div class="callout-title">基金經理人重點摘要</div>
+<ul>
+<li><strong>中國利率：</strong>換錨本身不是寬鬆；只有同步出現約10bp降息，才支持提高對短端債券及利率敏感資產的正面評估。</li>
+<li><strong>日本央行：</strong>研究預測政策利率經三次各25bp加息升至2%；若路徑延續，宜降低日圓融資套利槓桿，但須保留央行因市場動盪放慢加息的情境。</li>
+<li><strong>美國消費：</strong>基準情境是2027年底實際消費增長約1.7%-1.8%；股市下跌20%可拖低GDP增速約1個百分點，AI估值是關鍵壓力測試。</li>
+<li><strong>能源風險：</strong>俄羅斯新增柴油供應估計僅令價格每桶回落4至5美元，無法抵銷伊朗戰爭以來約100美元的漲幅，成品油風險溢價仍主要取決於中東。</li>
+<li><strong>美伊局勢：</strong>若美軍新增部署完成、談判破裂並伴隨霍爾木茲流量下降，宜提高能源尾部風險保護及收緊整體風險預算。</li>
+<li><strong>巴西選舉：</strong>次輪差距收窄但基準判斷仍偏向Bolsonaro；由於來源節錄不完整，宜控制事件倉位，避免推導未獲資料支持的政策交易。</li>
+</ul>
+</div>
+<div class="nav-links"><a href="student.html#october-research">← 返回 10 月研究目錄</a><a href="#source-register">來源與限制</a></div>
+<div class="footer">學海無涯｜來源整理：2026-10-29；上架：2026-10-30。研究草稿，僅供教學與討論，不構成投資建議。</div>
+<section class="section" id="source-register"><h2>來源文件與閱讀限制</h2><ul class="source-list"><li>TN6S49T9NJLUa456028f-2697-48c4-95bb-6dffdd09864b.pdf｜PDF 文字擷取</li><li>TN72EBT9NJLS1895d055-42c4-41f1-8167-6e10131bcc99.pdf｜PDF 文字擷取</li><li>TN9CXTKJH6V4c08bf6a2-c0bd-4178-b771-8bbb2177ec2e.pdf｜PDF 文字擷取</li><li>TNA7IOT9NJLT0e222d1f-37fb-4631-9285-a4f380eae6a2.pdf｜PDF 文字擷取</li><li>TNA7N9T9NJLSd86a4208-df52-4b78-ab11-ca44e1f217ca.pdf｜PDF 文字擷取</li><li>TNAAT2T9NJLXaaa1a776-323b-45f9-b4a4-b364bb69e6ac.pdf｜PDF 文字擷取</li><li>TNAXRSKJH6V62fb387ef-c11b-49ff-9baa-29d7054cacfe.pdf｜PDF 文字擷取</li><li>TNC9X2KJH6VZ7747f58e-2910-42a8-b6f2-e6cfd83134be.pdf｜PDF 文字擷取</li></ul><p>來源清單保留本批次文件名稱，不提供原始文件下載。檔案修改時間不是發表日期；報告日期以正文註明為準，未明確註明者仍待核對。</p></section></body>
+</html>

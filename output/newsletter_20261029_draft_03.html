@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>學海無涯｜表面繁榮下的裂痕：通膨、信貸與催化劑｜研究草稿</title>
+<style>
+
+  :root { --bg: #0a0a08; --card: #141410; --border: #2a2820; --accent: #c9a84c;
+          --gold: #f0d87a; --gold-dim: #c4b896; --text: #e0d8c8; --text-bright: #f0ebe0; --muted: #c4b896;
+          --green: #6bbd5b; --red: #e05545; --yellow: #d4a843; --orange: #d49040;
+          --purple: #b08cd0; --cyan: #4cc9b0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { background: #0a0a08 !important; }
+  body { color: var(--text); font-family: 'Source Sans Pro', 'Noto Serif TC', 'Microsoft JhengHei', sans-serif; line-height: 1.8; padding: 24px; max-width: 880px; margin: 0 auto; }
+  h1 { font-family: 'Playfair Display', 'Noto Serif TC', serif; color: var(--gold); font-size: 1.8em; margin-bottom: 4px; font-weight: 900; letter-spacing: 0.02em; }
+  h2 { font-family: 'Playfair Display', 'Noto Serif TC', serif; }
+  .subtitle { color: var(--text-bright); font-size: 0.95em; margin-bottom: 8px; font-family: 'Noto Serif TC', serif; }
+  .issue-badge { display: inline-block; background: rgba(201,168,76,0.15); color: var(--accent); padding: 4px 12px; border-radius: 12px; font-size: 0.8em; font-weight: 600; margin-bottom: 20px; border: 1px solid rgba(201,168,76,0.3); }
+  .tag { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 0.72em; font-weight: 600; margin-right: 4px; }
+  .tag-rates { background: rgba(201,168,76,0.15); color: var(--accent); }
+  .tag-china { background: rgba(212,144,64,0.15); color: var(--orange); }
+  .tag-japan { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-geo   { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-oil   { background: rgba(212,168,67,0.15); color: var(--yellow); }
+  .tag-trade { background: rgba(212,168,67,0.15); color: var(--yellow); }
+  .tag-growth{ background: rgba(107,189,91,0.15); color: var(--green); }
+  .tag-metals{ background: rgba(176,140,208,0.15); color: var(--purple); }
+  .tag-infl  { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-policy{ background: rgba(201,168,76,0.15); color: var(--accent); }
+  .tag-val   { background: rgba(107,189,91,0.15); color: var(--green); }
+  .tag-vol   { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-semi  { background: rgba(76,201,176,0.15); color: var(--cyan); }
+  .tag-credit{ background: rgba(176,140,208,0.15); color: var(--purple); }
+  .tag-space { background: rgba(201,168,76,0.15); color: var(--accent); }
+  .tag-misc  { background: rgba(138,128,112,0.15); color: var(--muted); }
+  .verdict-bar { background: var(--accent); color: #0a0a08; padding: 14px 20px; border-radius: 8px; margin-bottom: 20px; font-weight: 700; font-size: 1.05em; font-family: 'Noto Serif TC', serif; }
+  .section { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 22px; margin-bottom: 18px; }
+  .section h2 { color: var(--gold); font-size: 1.15em; margin-bottom: 12px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+  .section h3 { color: var(--accent); font-size: 0.95em; margin: 14px 0 6px; }
+  .article { margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid rgba(42,40,32,0.7); }
+  .article:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .article-title { color: var(--text-bright); font-weight: 700; font-size: 0.95em; margin-bottom: 4px; }
+  .article-title-cn { color: var(--muted); font-size: 0.85em; margin-bottom: 8px; }
+  .article p { font-size: 0.9em; margin: 6px 0; }
+  .data-point { background: rgba(201,168,76,0.05); padding: 8px 12px; border-radius: 6px; margin: 8px 0; font-size: 0.85em; border: 1px solid rgba(201,168,76,0.12); }
+  .data-point .num { color: var(--text-bright); font-weight: 700; }
+  .implication { background: rgba(201,168,76,0.06); border-left: 3px solid var(--accent); padding: 10px 14px; margin: 10px 0; border-radius: 0 6px 6px 0; font-size: 0.88em; }
+  .implication .label { color: var(--accent); font-weight: 700; font-size: 0.8em; text-transform: uppercase; margin-bottom: 4px; }
+  .red-team { background: rgba(224,85,69,0.06); border: 1px solid rgba(224,85,69,0.25); border-radius: 8px; padding: 18px; margin: 18px 0; }
+  .red-team-title { color: var(--red); font-weight: 700; font-size: 0.95em; margin-bottom: 10px; font-family: 'Playfair Display', serif; }
+  .red-team ul { padding-left: 18px; }
+  .red-team li { margin: 5px 0; font-size: 0.88em; }
+  .callout { background: rgba(201,168,76,0.06); border: 1px solid rgba(201,168,76,0.25); border-radius: 8px; padding: 18px; margin: 18px 0; }
+  .callout-title { color: var(--accent); font-weight: 700; font-size: 0.95em; margin-bottom: 8px; font-family: 'Playfair Display', 'Noto Serif TC', serif; }
+  .callout ul { padding-left: 18px; }
+  .callout li { margin: 5px 0; font-size: 0.88em; }
+  ul { padding-left: 18px; }
+  li { margin: 4px 0; font-size: 0.88em; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(201,168,76,0.05); padding: 12px; border-radius: 6px; text-align: center; border: 1px solid rgba(201,168,76,0.1); }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: var(--gold); font-family: 'Playfair Display', serif; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
+  .toc { background: rgba(201,168,76,0.04); border: 1px solid rgba(201,168,76,0.18); border-radius: 8px; padding: 16px 20px; margin-bottom: 20px; }
+  .toc-title { color: var(--accent); font-weight: 700; font-size: 0.9em; margin-bottom: 8px; }
+  .toc a { color: var(--accent); text-decoration: none; font-size: 0.88em; }
+  .toc a:hover { text-decoration: underline; color: var(--gold); }
+  .toc ol { padding-left: 20px; }
+  .toc li { margin: 4px 0; }
+  .nav-links { display: flex; justify-content: space-between; margin: 20px 0; font-size: 0.85em; }
+  .nav-links a { color: var(--accent); text-decoration: none; }
+  .nav-links a:hover { text-decoration: underline; color: var(--gold); }
+  .divider { height: 1px; background: linear-gradient(90deg, transparent, var(--accent), transparent); margin: 24px 0; opacity: 0.4; }
+  .footer { text-align: center; color: var(--muted); font-size: 0.75em; margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--border); }
+  .footer a { color: var(--accent); text-decoration: none; }
+</style>
+<style>body{overflow-wrap:anywhere}.local-notice{border:1px solid #c9a84c;border-radius:8px;padding:18px;margin:0 0 20px;background:#201d13;color:#f0ebe0}.source-list{font-size:.85em}.source-list a{color:#f0d87a}pre{white-space:pre-wrap}a{color:#f0d87a}@media(max-width:600px){body{padding:14px}h1{font-size:1.4em}.stat-grid{grid-template-columns:1fr}.section{padding:16px}}</style><style>body{overflow-wrap:anywhere}.local-notice{border:1px solid #c9a84c;border-radius:8px;padding:18px;margin:0 0 20px;background:#201d13;color:#f0ebe0}.source-list{font-size:.85em}.source-list a{color:#f0d87a}pre{white-space:pre-wrap}a{color:#f0d87a}@media(max-width:600px){body{padding:14px}h1{font-size:1.4em}.stat-grid{grid-template-columns:1fr}.section{padding:16px}}</style><link href="https://traderx888.github.io/notion-autopublish/newsletter_20261029_draft_03.html" rel="canonical"/></head>
+<body id="top"><aside class="local-notice"><strong>研究草稿｜來源節錄整合，未作上架日市場重核</strong><details open=""><summary>閱讀限制：來源節錄、未作當日市場重核</summary><p>範圍：最近 22 天新檔，依檔案修改時間選取（2026-10-07 21:09 至 2026-10-29 21:09，UTC+8）。修改時間並非文章發表日期；各項數字及預測以原報告日期為準，未作發布日市場重核。</p><p>沿用既有批次流程，每份來源最多約 3,000 字元進入生成；此頁是節錄整合，並非逐頁完整研究。來源主張與編輯推論均需回看原文。草稿序號只用於本批次閱讀排序。</p><p><strong>本稿含 OCR 來源：</strong>OCR 全頁處理已完成，但數字、欄位及圖表關係未逐項核實。Gemini Notebook 簡報屬二手整理，不作獨立佐證。</p></details></aside>
+<h1>表面繁榮下的裂痕：通膨、信貸與催化劑</h1>
+<p class="subtitle">學海無涯 · 10 月來源快照 · 研究草稿 03</p>
+<span class="issue-badge">2026-10-30 上架 · 2026-10-29 整理 · 研究草稿</span>
+<div class="verdict-bar">編輯推論（待核對）｜結論：跨資產訊號指向停滯性通膨與擁擠交易風險；宜條件式增持實體資產防禦、降低歐洲銀行集中度，並以明確事件催化劑篩選個股。</div>
+<div class="nav-links"><a href="student.html#october-research">← 返回 10 月研究目錄</a><a href="#source-register">來源與限制</a></div>
+<div class="toc">
+<div class="toc-title">目錄</div>
+<ol>
+<li><a href="#cross-asset-stagflation">跨資產 指數創高，底層轉弱</a></li>
+<li><a href="#europe-credit">歐洲信貸 基本面尚穩，估值門檻更高</a></li>
+<li><a href="#event-driven-equities">事件驅動 催化劑勝過故事</a></li>
+<li><a href="#mexico-resilience">墨西哥 危機免疫，增長仍慢</a></li>
+<li><a href="#red-team">Red Team 反面論證</a></li>
+<li><a href="#takeaways">基金經理人重點摘要</a></li>
+</ol>
+</div>
+<div class="section" id="cross-asset-stagflation">
+<h2><span class="tag tag-misc">跨資產</span> 指數創高，底層轉弱</h2>
+<div class="stat-grid">
+<div class="stat"><div class="val" style="color:var(--orange)">3.7%</div><div class="lbl">簡報所示CPI
+OCR擷取值</div></div>
+<div class="stat"><div class="val" style="color:var(--red)">3.0%</div><div class="lbl">簡報所示薪資增長
+OCR擷取值</div></div>
+<div class="stat"><div class="val" style="color:var(--green)">4.03</div><div class="lbl">商品相對長債比值
+簡報所示</div></div>
+</div>
+<div class="article">
+<div class="article-title">跨資產診斷：能源衝擊正在改寫利率與資產配置</div>
+<p>據2026年10月15日的二手Cross Asset Market Diagnostic簡報，市場呈現「長期牛市、短期過熱」的矛盾：標普500自2022年底以來曾出現<span style="color:#f0ebe0;font-weight:700">8次超過5%</span>的回調，近期回撤被列為<span style="color:#f0ebe0;font-weight:700">9.1%</span>。簡報把CPI反彈至<span style="color:#f0ebe0;font-weight:700">3.7%</span>與薪資增長降至<span style="color:#f0ebe0;font-weight:700">3.0%</span>並置，認為外部供給衝擊正侵蝕實質購買力。其跨市場分析另稱能源運輸成本與長期美債殖利率同步上升，可能反映停滯性通膨，而非單純的需求強勁。商品相對長期避險美債的比值升至<span style="color:#f0ebe0;font-weight:700">4.03</span>，被解讀為資金轉向Hard Assets。不過上述數值來自OCR及Gemini Notebook二手整理，並未獲獨立驗證，應視為待核實的壓力測試線索，而非即時市場定論。</p>
+<div class="data-point">標普500回調次數: <span style="color:#f0ebe0;font-weight:700">8次超過5%</span>  |  近期回撤: <span style="color:#f0ebe0;font-weight:700">9.1%</span>  |  CPI／薪資增長: <span style="color:#f0ebe0;font-weight:700">3.7%／3.0%</span>  |  商品相對長債比值: <span style="color:#f0ebe0;font-weight:700">4.03</span></div>
+<div class="implication"><div class="label">條件式研究推論</div>若後續原始數據確認通膨高於薪資增長且能源運輸成本持續傳導至長端利率，可考慮<span style="color:#f0ebe0;font-weight:700">提高Hard Assets與通膨對沖配置、縮短債券久期</span>；在核實前僅宜作情境分析。</div>
+</div>
+</div>
+<div class="section" id="europe-credit">
+<h2><span class="tag tag-misc">歐洲信貸</span> 基本面尚穩，估值門檻更高</h2>
+<div class="stat-grid">
+<div class="stat"><div class="val" style="color:var(--red)">-8.6%</div><div class="lbl">歐洲銀行指數
+距19年高位回落</div></div>
+<div class="stat"><div class="val" style="color:var(--green)">12%</div><div class="lbl">第三季銀行EPS
+預測增長</div></div>
+<div class="stat"><div class="val" style="color:var(--orange)">38%</div><div class="lbl">視銀行為最擁擠
+股票主題的投資者</div></div>
+</div>
+<div class="article">
+<div class="article-title">歐洲銀行：盈利強勁也未必換來股價掌聲</div>
+<p>Bloomberg News於2026年10月16日指出，歐洲銀行第三季每股盈利增長預測由前季的<span style="color:#f0ebe0;font-weight:700">9%</span>加速至<span style="color:#f0ebe0;font-weight:700">12%</span>，較高利率亦可能帶來小幅共識上調。然而，法國財政與政治風險、債券殖利率急升及持倉擁擠，已令區內銀行指數從不足六星期前的19年高位回落<span style="color:#f0ebe0;font-weight:700">8.6%</span>。雖然銀行股2026年仍上升<span style="color:#f0ebe0;font-weight:700">12%</span>，投資者的要求明顯提高：<span style="color:#f0ebe0;font-weight:700">22%</span>的基金經理超配銀行，另有<span style="color:#f0ebe0;font-weight:700">38%</span>受訪者把它視為最擁擠的股票主題。美國大型銀行公布業績後股價普遍受壓，也顯示即使盈利達標，估值、交易收入及指引稍有瑕疵，市場仍可能迅速降溫。</p>
+<div class="data-point">第三季EPS增長預測: <span style="color:#f0ebe0;font-weight:700">12%</span>  |  前季EPS增長: <span style="color:#f0ebe0;font-weight:700">9%</span>  |  基金經理淨超配: <span style="color:#f0ebe0;font-weight:700">22%</span>  |  擁擠主題認定: <span style="color:#f0ebe0;font-weight:700">38%</span></div>
+<div class="implication"><div class="label">條件式研究推論</div>在盈利仍具韌性但持倉擁擠的情境下，可考慮<span style="color:#f0ebe0;font-weight:700">降低歐洲銀行集中度並以業績後個股分化取代板塊追價</span>；若法國債務壓力緩和且EPS持續上修，再評估恢復風險曝險。</div>
+</div>
+<div class="article">
+<div class="article-title">資產抵押融資：銀行退場留下機會，也壓縮回報空間</div>
+<p>Bloomberg Intelligence於2026年10月23日的Credit Crunch訪談顯示，歐洲資產抵押融資正由銀行持續轉向另類信貸提供者。Waterfall Asset Management的James Cuby強調，信貸策略不應以取得<span style="color:#f0ebe0;font-weight:700">30%回報</span>為目標，因為投資者同樣難以承受<span style="color:#f0ebe0;font-weight:700">負20%</span>的結果；核心仍是資產選擇、抵押品品質及風險回報紀律。資金積極湧入該資產類別，意味競爭與定價壓力上升，而利率環境、主權債務疑慮及選舉風險亦可能改變借款人的還款能力。訪談同時提出歐洲消費者或較美國消費者具備更佳信用品質，但來源未提供違約率或損失率數據，因此這一判斷仍需逐筆承保資料驗證。</p>
+<div class="data-point">不追求的回報目標: <span style="color:#f0ebe0;font-weight:700">30%</span>  |  投資者難承受的跌幅: <span style="color:#f0ebe0;font-weight:700">-20%</span>  |  結構趨勢: <span style="color:#f0ebe0;font-weight:700">銀行轉向另類信貸</span>  |  相對信用品質觀點: <span style="color:#f0ebe0;font-weight:700">歐洲消費者或優於美國</span></div>
+<div class="implication"><div class="label">條件式研究推論</div>若參與European ABF，可考慮<span style="color:#f0ebe0;font-weight:700">優先選擇抵押品透明、放貸關係穩定且具下行保護的管理人</span>；在資金大量流入時，應避免以降低契約保障換取部署速度。</div>
+</div>
+</div>
+<div class="section" id="event-driven-equities">
+<h2><span class="tag tag-misc">事件驅動</span> 催化劑勝過故事</h2>
+<div class="stat-grid">
+<div class="stat"><div class="val">10</div><div class="lbl">BI第四季
+焦點公司</div></div>
+<div class="stat"><div class="val" style="color:var(--orange)">6／4</div><div class="lbl">正面機會／
+基本面疑慮</div></div>
+<div class="stat"><div class="val" style="color:var(--red)">$21bn</div><div class="lbl">Coca-Cola潛在
+稅務判決金額</div></div>
+</div>
+<div class="article">
+<div class="article-title">BI第四季焦點：用事件驗證高信念差異觀點</div>
+<p>Bloomberg Intelligence於2026年10月9日挑選<span style="color:#f0ebe0;font-weight:700">10家公司</span>作為第四季焦點，涵蓋原油油輪、薄餅銷售、影院、預測市場、汽水及煤炭等領域，其中<span style="color:#f0ebe0;font-weight:700">6項</span>可能迎來正面發展，<span style="color:#f0ebe0;font-weight:700">4項</span>則面對基本面疑慮。方法重點不是尋找單純便宜的股票，而是要求差異化觀點同時具備可在數月內驗證的催化劑，以降低價值陷阱風險。Coca-Cola是文中披露較完整的負面案例：潛在不利稅務判決約達<span style="color:#f0ebe0;font-weight:700">210億美元</span>，股價年內已升<span style="color:#f0ebe0;font-weight:700">28%</span>，估值較同業溢價<span style="color:#f0ebe0;font-weight:700">47%</span>。市場若尚未充分反映訴訟風險，高估值便會放大判決及未來稅款上升帶來的重估壓力。</p>
+<div class="data-point">第四季焦點公司: <span style="color:#f0ebe0;font-weight:700">10家</span>  |  正面／負面觀點: <span style="color:#f0ebe0;font-weight:700">6／4</span>  |  Coca-Cola潛在稅務判決: <span style="color:#f0ebe0;font-weight:700">約210億美元</span>  |  相對同業估值溢價: <span style="color:#f0ebe0;font-weight:700">47%</span></div>
+<div class="implication"><div class="label">條件式研究推論</div>個股研究可採用<span style="color:#f0ebe0;font-weight:700">「差異觀點＋限時催化劑＋失效條件」篩選框架</span>；對估值高且面臨二元法律事件的公司，宜控制倉位並預先設定情境風險上限。</div>
+</div>
+</div>
+<div class="section" id="mexico-resilience">
+<h2><span class="tag tag-misc">墨西哥</span> 危機免疫，增長仍慢</h2>
+<div class="stat-grid">
+<div class="stat"><div class="val" style="color:var(--green)">3.45%</div><div class="lbl">墨西哥通膨率
+來源所述</div></div>
+<div class="stat"><div class="val" style="color:var(--orange)">3.75%</div><div class="lbl">美國通膨率
+來源所述</div></div>
+<div class="stat"><div class="val" style="color:var(--red)">&gt;50%</div><div class="lbl">墨西哥1995年底
+歷史通膨率</div></div>
+</div>
+<div class="article">
+<div class="article-title">墨西哥擺脫龍舌蘭危機，卻未走出中等收入陷阱</div>
+<p>Bloomberg Opinion於2026年10月16日認為，墨西哥已建立足以抵禦外部金融震盪的宏觀框架。1994年龍舌蘭危機後，當地通膨在1995年底升至<span style="color:#f0ebe0;font-weight:700">逾50%</span>，銀行體系最終撇銷約<span style="color:#f0ebe0;font-weight:700">一半資產</span>；如今披索採取浮動匯率，近年的重大金融壓力主要來自2008年全球金融危機及疫情等外部事件。來源稱墨西哥通膨為<span style="color:#f0ebe0;font-weight:700">3.45%</span>，低於美國的<span style="color:#f0ebe0;font-weight:700">3.75%</span>，顯示價格穩定與政策可信度已有明顯改善。然而，穩定並未轉化為充足的生產力及經濟增長，國家仍受中等收入陷阱困擾。對投資者而言，較低的危機概率不等同較高的長期盈利增長，宏觀韌性與結構改革須分開定價。</p>
+<div class="data-point">墨西哥通膨: <span style="color:#f0ebe0;font-weight:700">3.45%</span>  |  美國通膨: <span style="color:#f0ebe0;font-weight:700">3.75%</span>  |  1995年底墨西哥通膨: <span style="color:#f0ebe0;font-weight:700">逾50%</span>  |  危機後銀行資產撇銷: <span style="color:#f0ebe0;font-weight:700">約一半</span></div>
+<div class="implication"><div class="label">條件式研究推論</div>墨西哥資產可被視為<span style="color:#f0ebe0;font-weight:700">宏觀韌性配置候選</span>，但若缺乏生產力改善與增長催化劑，不宜僅憑穩定通膨給予全面估值溢價。</div>
+</div>
+</div>
+<div class="divider"></div>
+<div class="red-team" id="red-team">
+<div class="red-team-title">🔴 Red Team — 核心假設與反面論證</div>
+<ul>
+<li>假設1：能源與運輸成本上升將持續傳導至通膨及長端利率，支持Hard Assets相對Paper Assets。</li>
+<li>假設2：歐洲銀行盈利韌性足以抵銷法國主權風險、殖利率上升及擁擠持倉的壓力。</li>
+<li>假設3：明確事件催化劑能在第四季促使市場重新定價差異化基本面觀點。</li>
+<li style="color:var(--red)">風險1：跨資產簡報屬Gemini Notebook二手綜合，CPI 3.7%、薪資增長3.0%及比值4.03均來自OCR，未經原始數據獨立核實；若數字或欄位對齊有誤，停滯性通膨判斷便會失去基礎。</li>
+<li style="color:var(--red)">風險2：歐洲銀行指數已從高位回落8.6%，而第三季EPS仍預測增長12%；若法國風險降溫，現有跌幅可能已反映相當部分悲觀情境。反之，22%淨超配及38%擁擠度意味即使業績達標也可能遭獲利回吐。</li>
+<li style="color:var(--red)">風險3：催化劑的方向與時間均可能偏離預期；以Coca-Cola為例，約210億美元的潛在稅務判決仍取決於法院結果，公司亦主張可以勝訴。</li>
+</ul>
+<p style="margin-top:10px;padding:10px 14px;background:rgba(224,85,69,0.04);border-radius:6px;font-size:0.9em;border-left:3px solid var(--red)">核心防禦邏輯暫時成立，但證據強度不均。歐洲銀行的8.6%回撤、22%淨超配及38%擁擠度提供了可量化的降集中度理由；Coca-Cola約210億美元的二元法律風險亦支持事件前控制倉位。Hard Assets論點則須待原始數據確認：若CPI 3.7%、薪資增長3.0%及商品相對長債比值4.03無法核實，該配置主張應撤回，而非視為既定趨勢。</p>
+</div>
+<div class="callout" id="takeaways">
+<div class="callout-title">基金經理人重點摘要</div>
+<ul>
+<li><strong>跨資產：</strong>二手簡報顯示CPI 3.7%高於薪資增長3.0%，但數值來自OCR；核實原始數據後，才考慮提高Hard Assets與通膨對沖。</li>
+<li><strong>歐洲銀行：</strong>第三季EPS預測增長12%，惟板塊已屬擁擠交易；可降低集中度，改以業績後的個股分化配置。</li>
+<li><strong>另類信貸：</strong>歐洲ABF受惠於銀行退場，但資金流入或壓縮回報；優先檢視抵押品、契約保障及管理人下行紀律。</li>
+<li><strong>事件驅動：</strong>以「差異觀點＋限時催化劑＋失效條件」建立觀察名單；高估值及二元法律風險個股宜設定嚴格風險上限。</li>
+<li><strong>墨西哥：</strong>3.45%通膨與浮動匯率反映宏觀韌性，但慢增長仍限制估值；等待生產力或改革催化劑。</li>
+<li><strong>下一步：</strong>核實跨資產簡報的原始圖表、追蹤歐洲銀行業績後EPS修訂，並為重大法律催化劑建立情境矩陣。</li>
+</ul>
+</div>
+<div class="nav-links"><a href="student.html#october-research">← 返回 10 月研究目錄</a><a href="#source-register">來源與限制</a></div>
+<div class="footer">學海無涯｜來源整理：2026-10-29；上架：2026-10-30。研究草稿，僅供教學與討論，不構成投資建議。</div>
+<section class="section" id="source-register"><h2>來源文件與閱讀限制</h2><ul class="source-list"><li>China Petroleum &amp; Chemical Corp Semi-annual Report 2026823 HK000000003117287033.pdf｜PDF 文字擷取</li><li>Coke, Coal, Pizza, Movies BI's 10 Focus Ideas to Watch for 4Q.pdf｜PDF 文字擷取</li><li>Credit Crunch Waterfalls Cuby.pdf｜PDF 文字擷取</li><li>Cross Asset Market Diagnostic_2026-10-15.pdf｜OCR；未完整核對</li><li>Curing Mexicos Long Tequila Cr.pdf｜PDF 文字擷取</li><li>EE.pdf｜PDF 文字擷取</li><li>ETF.pdf｜PDF 文字擷取</li><li>European Banks Confront Hardto.pdf｜PDF 文字擷取</li></ul><p>來源清單保留本批次文件名稱，不提供原始文件下載。檔案修改時間不是發表日期；報告日期以正文註明為準，未明確註明者仍待核對。</p></section></body>
+</html>

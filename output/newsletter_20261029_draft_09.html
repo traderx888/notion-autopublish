@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>學海無涯｜IPO凍結、科技去槓桿與能源外交｜研究草稿</title>
+<style>
+
+  :root { --bg: #0a0a08; --card: #141410; --border: #2a2820; --accent: #c9a84c;
+          --gold: #f0d87a; --gold-dim: #c4b896; --text: #e0d8c8; --text-bright: #f0ebe0; --muted: #c4b896;
+          --green: #6bbd5b; --red: #e05545; --yellow: #d4a843; --orange: #d49040;
+          --purple: #b08cd0; --cyan: #4cc9b0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { background: #0a0a08 !important; }
+  body { color: var(--text); font-family: 'Source Sans Pro', 'Noto Serif TC', 'Microsoft JhengHei', sans-serif; line-height: 1.8; padding: 24px; max-width: 880px; margin: 0 auto; }
+  h1 { font-family: 'Playfair Display', 'Noto Serif TC', serif; color: var(--gold); font-size: 1.8em; margin-bottom: 4px; font-weight: 900; letter-spacing: 0.02em; }
+  h2 { font-family: 'Playfair Display', 'Noto Serif TC', serif; }
+  .subtitle { color: var(--text-bright); font-size: 0.95em; margin-bottom: 8px; font-family: 'Noto Serif TC', serif; }
+  .issue-badge { display: inline-block; background: rgba(201,168,76,0.15); color: var(--accent); padding: 4px 12px; border-radius: 12px; font-size: 0.8em; font-weight: 600; margin-bottom: 20px; border: 1px solid rgba(201,168,76,0.3); }
+  .tag { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 0.72em; font-weight: 600; margin-right: 4px; }
+  .tag-rates { background: rgba(201,168,76,0.15); color: var(--accent); }
+  .tag-china { background: rgba(212,144,64,0.15); color: var(--orange); }
+  .tag-japan { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-geo   { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-oil   { background: rgba(212,168,67,0.15); color: var(--yellow); }
+  .tag-trade { background: rgba(212,168,67,0.15); color: var(--yellow); }
+  .tag-growth{ background: rgba(107,189,91,0.15); color: var(--green); }
+  .tag-metals{ background: rgba(176,140,208,0.15); color: var(--purple); }
+  .tag-infl  { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-policy{ background: rgba(201,168,76,0.15); color: var(--accent); }
+  .tag-val   { background: rgba(107,189,91,0.15); color: var(--green); }
+  .tag-vol   { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-semi  { background: rgba(76,201,176,0.15); color: var(--cyan); }
+  .tag-credit{ background: rgba(176,140,208,0.15); color: var(--purple); }
+  .tag-space { background: rgba(201,168,76,0.15); color: var(--accent); }
+  .tag-misc  { background: rgba(138,128,112,0.15); color: var(--muted); }
+  .verdict-bar { background: var(--accent); color: #0a0a08; padding: 14px 20px; border-radius: 8px; margin-bottom: 20px; font-weight: 700; font-size: 1.05em; font-family: 'Noto Serif TC', serif; }
+  .section { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 22px; margin-bottom: 18px; }
+  .section h2 { color: var(--gold); font-size: 1.15em; margin-bottom: 12px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+  .section h3 { color: var(--accent); font-size: 0.95em; margin: 14px 0 6px; }
+  .article { margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid rgba(42,40,32,0.7); }
+  .article:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .article-title { color: var(--text-bright); font-weight: 700; font-size: 0.95em; margin-bottom: 4px; }
+  .article-title-cn { color: var(--muted); font-size: 0.85em; margin-bottom: 8px; }
+  .article p { font-size: 0.9em; margin: 6px 0; }
+  .data-point { background: rgba(201,168,76,0.05); padding: 8px 12px; border-radius: 6px; margin: 8px 0; font-size: 0.85em; border: 1px solid rgba(201,168,76,0.12); }
+  .data-point .num { color: var(--text-bright); font-weight: 700; }
+  .implication { background: rgba(201,168,76,0.06); border-left: 3px solid var(--accent); padding: 10px 14px; margin: 10px 0; border-radius: 0 6px 6px 0; font-size: 0.88em; }
+  .implication .label { color: var(--accent); font-weight: 700; font-size: 0.8em; text-transform: uppercase; margin-bottom: 4px; }
+  .red-team { background: rgba(224,85,69,0.06); border: 1px solid rgba(224,85,69,0.25); border-radius: 8px; padding: 18px; margin: 18px 0; }
+  .red-team-title { color: var(--red); font-weight: 700; font-size: 0.95em; margin-bottom: 10px; font-family: 'Playfair Display', serif; }
+  .red-team ul { padding-left: 18px; }
+  .red-team li { margin: 5px 0; font-size: 0.88em; }
+  .callout { background: rgba(201,168,76,0.06); border: 1px solid rgba(201,168,76,0.25); border-radius: 8px; padding: 18px; margin: 18px 0; }
+  .callout-title { color: var(--accent); font-weight: 700; font-size: 0.95em; margin-bottom: 8px; font-family: 'Playfair Display', 'Noto Serif TC', serif; }
+  .callout ul { padding-left: 18px; }
+  .callout li { margin: 5px 0; font-size: 0.88em; }
+  ul { padding-left: 18px; }
+  li { margin: 4px 0; font-size: 0.88em; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(201,168,76,0.05); padding: 12px; border-radius: 6px; text-align: center; border: 1px solid rgba(201,168,76,0.1); }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: var(--gold); font-family: 'Playfair Display', serif; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
+  .toc { background: rgba(201,168,76,0.04); border: 1px solid rgba(201,168,76,0.18); border-radius: 8px; padding: 16px 20px; margin-bottom: 20px; }
+  .toc-title { color: var(--accent); font-weight: 700; font-size: 0.9em; margin-bottom: 8px; }
+  .toc a { color: var(--accent); text-decoration: none; font-size: 0.88em; }
+  .toc a:hover { text-decoration: underline; color: var(--gold); }
+  .toc ol { padding-left: 20px; }
+  .toc li { margin: 4px 0; }
+  .nav-links { display: flex; justify-content: space-between; margin: 20px 0; font-size: 0.85em; }
+  .nav-links a { color: var(--accent); text-decoration: none; }
+  .nav-links a:hover { text-decoration: underline; color: var(--gold); }
+  .divider { height: 1px; background: linear-gradient(90deg, transparent, var(--accent), transparent); margin: 24px 0; opacity: 0.4; }
+  .footer { text-align: center; color: var(--muted); font-size: 0.75em; margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--border); }
+  .footer a { color: var(--accent); text-decoration: none; }
+</style>
+<style>body{overflow-wrap:anywhere}.local-notice{border:1px solid #c9a84c;border-radius:8px;padding:18px;margin:0 0 20px;background:#201d13;color:#f0ebe0}.source-list{font-size:.85em}.source-list a{color:#f0d87a}pre{white-space:pre-wrap}a{color:#f0d87a}@media(max-width:600px){body{padding:14px}h1{font-size:1.4em}.stat-grid{grid-template-columns:1fr}.section{padding:16px}}</style><style>body{overflow-wrap:anywhere}.local-notice{border:1px solid #c9a84c;border-radius:8px;padding:18px;margin:0 0 20px;background:#201d13;color:#f0ebe0}.source-list{font-size:.85em}.source-list a{color:#f0d87a}pre{white-space:pre-wrap}a{color:#f0d87a}@media(max-width:600px){body{padding:14px}h1{font-size:1.4em}.stat-grid{grid-template-columns:1fr}.section{padding:16px}}</style><link href="https://traderx888.github.io/notion-autopublish/newsletter_20261029_draft_09.html" rel="canonical"/></head>
+<body id="top"><aside class="local-notice"><strong>研究草稿｜來源節錄整合，未作上架日市場重核</strong><details open=""><summary>閱讀限制：來源節錄、未作當日市場重核</summary><p>範圍：最近 22 天新檔，依檔案修改時間選取（2026-10-07 21:09 至 2026-10-29 21:09，UTC+8）。修改時間並非文章發表日期；各項數字及預測以原報告日期為準，未作發布日市場重核。</p><p>沿用既有批次流程，每份來源最多約 3,000 字元進入生成；此頁是節錄整合，並非逐頁完整研究。來源主張與編輯推論均需回看原文。草稿序號只用於本批次閱讀排序。</p></details></aside>
+<h1>IPO凍結、科技去槓桿與能源外交</h1>
+<p class="subtitle">學海無涯 · 10 月來源快照 · 研究草稿 09</p>
+<span class="issue-badge">2026-10-30 上架 · 2026-10-29 整理 · 研究草稿</span>
+<div class="verdict-bar">編輯推論（待核對）｜結論：AI估值分歧與對沖基金去風險正壓抑美股承銷及科技板塊；短期宜控制高估值科技曝險、觀察Anthropic上市成敗，並以醫療與具政策支持的能源項目作條件式分散。</div>
+<div class="nav-links"><a href="student.html#october-research">← 返回 10 月研究目錄</a><a href="#source-register">來源與限制</a></div>
+<div class="toc">
+<div class="toc-title">目錄</div>
+<ol>
+<li><a href="#ipo-market-freeze">美國IPO Anthropic成為破冰關鍵</a></li>
+<li><a href="#hedge-fund-positioning">對沖基金 總槓桿升，方向曝險降</a></li>
+<li><a href="#trade-energy-diplomacy">貿易與能源 關稅降溫，煉油合作升溫</a></li>
+<li><a href="#red-team">Red Team 反面論證</a></li>
+<li><a href="#takeaways">基金經理人重點摘要</a></li>
+</ol>
+</div>
+<div class="section" id="ipo-market-freeze">
+<h2><span class="tag tag-misc">美國IPO</span> Anthropic成為破冰關鍵</h2>
+<div class="stat-grid">
+<div class="stat"><div class="val" style="color:var(--green)">US$162.6bn</div><div class="lbl">截至9月底
+IPO集資額</div></div>
+<div class="stat"><div class="val" style="color:var(--orange)">約US$15bn</div><div class="lbl">Oura潛在
+全面攤薄估值</div></div>
+<div class="stat"><div class="val" style="color:var(--red)">約12家</div><div class="lbl">已公開申報但
+尚未推進上市</div></div>
+</div>
+<div class="article">
+<div class="article-title">AI估值爭議凍結美國IPO，市場等待Anthropic定價</div>
+<p>Bloomberg於2026年10月22日報道，美國IPO市場由前三季的旺盛集資突然轉冷：截至9月底累計集資 <span style="color:#f0ebe0;font-weight:700">US$162.6bn</span>，但10月正朝全年最淡月份發展。CoreWeave等AI同業股價下挫，使投資者重新審視Nscale、DayOne Data Centers等基建公司的估值與資本需求；約 <span style="color:#f0ebe0;font-weight:700">12家</span> 已公開提交文件的企業仍未推進。利率上升及伊朗戰事亦令Oura與Bamboo Insurance延期，Oura約 <span style="color:#f0ebe0;font-weight:700">US$15bn</span> 的全面攤薄估值更遭潛在投資者質疑。市場因此把Anthropic預期於11月的上市視為價格發現事件：若需求與後市表現穩健，或可重啟交易管線；若定價受挫，部分項目可能延至2027年。</p>
+<div class="data-point">截至9月底IPO集資額: <span style="color:#f0ebe0;font-weight:700">US$162.6bn</span>  |  尚未推進的已申報企業: <span style="color:#f0ebe0;font-weight:700">約12家</span>  |  Oura潛在全面攤薄估值: <span style="color:#f0ebe0;font-weight:700">約US$15bn</span>  |  Anthropic預期上市時間: <span style="color:#f0ebe0;font-weight:700">2026年11月</span></div>
+<div class="implication"><div class="label">條件式研究推論</div>在Anthropic完成定價前，宜將AI新股視作估值與流動性測試；可<span style="color:#f0ebe0;font-weight:700">控制未盈利AI基建及高估值新股曝險</span>，並把認購決定條件化於訂單可見度、融資需求與上市後承接力。</div>
+</div>
+</div>
+<div class="section" id="hedge-fund-positioning">
+<h2><span class="tag tag-misc">對沖基金</span> 總槓桿升，方向曝險降</h2>
+<div class="stat-grid">
+<div class="stat"><div class="val" style="color:var(--orange)">311.7%</div><div class="lbl">10月15日
+整體Gross leverage</div></div>
+<div class="stat"><div class="val" style="color:var(--red)">72.7%</div><div class="lbl">10月15日
+整體Net leverage</div></div>
+<div class="stat"><div class="val" style="color:var(--red)">-1.68%</div><div class="lbl">10月9至15日
+Fundamental L/S估算</div></div>
+</div>
+<div class="article">
+<div class="article-title">科技股連續遭拋售，Fundamental L/S淨曝險降至低位</div>
+<p>Goldman Sachs Prime Services於2026年10月9日及16日的週報顯示，去風險由科技板塊擴散至全球股票。10月2至8日，Fundamental L/S估算回報為 <span style="color:#f0ebe0;font-weight:700">-0.70%</span>，同期MSCI World TR升 <span style="color:#f0ebe0;font-weight:700">0.78%</span>；10月9至15日跌幅再擴至 <span style="color:#f0ebe0;font-weight:700">-1.68%</span>，而指數僅升 <span style="color:#f0ebe0;font-weight:700">0.05%</span>。截至10月15日，整體Gross leverage升至 <span style="color:#f0ebe0;font-weight:700">311.7%</span>，但Net leverage降至 <span style="color:#f0ebe0;font-weight:700">72.7%</span>，位處一年第4百分位，反映基金仍維持大量雙邊持倉，方向性信心卻下降。全球股票淨賣出達一年尺度 <span style="color:#f0ebe0;font-weight:700">-2.0個標準差</span>，長倉沽售量為短倉沽售的 <span style="color:#f0ebe0;font-weight:700">2.6倍</span>；資訊科技更錄得2016年有紀錄以來最大百分比淨賣出。</p>
+<div class="data-point">Fundamental L/S週回報: <span style="color:#f0ebe0;font-weight:700">-1.68%</span>  |  整體Gross leverage: <span style="color:#f0ebe0;font-weight:700">311.7%</span>  |  整體Net leverage: <span style="color:#f0ebe0;font-weight:700">72.7%</span>  |  全球股票淨流量: <span style="color:#f0ebe0;font-weight:700">-2.0個標準差</span></div>
+<div class="implication"><div class="label">條件式研究推論</div>高Gross、低Net的組合容易受擠倉與相關性上升影響；宜<span style="color:#f0ebe0;font-weight:700">壓低擁擠科技長倉及組合Gross leverage</span>，同時檢查因子集中度，而非把低Net誤當作低風險。</div>
+</div>
+<div class="article">
+<div class="article-title">醫療買盤主要來自回補，防守輪動仍待確認</div>
+<p>截至2026年10月15日的一週，Goldman Sachs Prime Services稱 <span style="color:#f0ebe0;font-weight:700">11個</span> 全球板塊中有 <span style="color:#f0ebe0;font-weight:700">8個</span> 遭淨賣出，資訊科技、工業及非必需消費領跌；醫療、通訊服務與必需消費則是僅有的淨買入板塊。美國醫療獲對沖基金以 <span style="color:#f0ebe0;font-weight:700">7個月最快速度</span> 淨買入，但資金結構並非純粹增持：短倉回補多於長倉買入，而且該板塊已連續 <span style="color:#f0ebe0;font-weight:700">5週</span> 降低風險。這意味醫療相對強勢可能兼具防守輪動與技術性回補，尚不足以證明基本面資金形成持續趨勢。相較之下，科技板塊出現創紀錄淨賣出，使兩者的相對資金流差距值得追蹤。</p>
+<div class="data-point">遭淨賣出板塊: <span style="color:#f0ebe0;font-weight:700">8個／11個</span>  |  美國醫療淨買入速度: <span style="color:#f0ebe0;font-weight:700">7個月最快</span>  |  醫療去風險期: <span style="color:#f0ebe0;font-weight:700">連續5週</span>  |  科技淨賣出紀錄起點: <span style="color:#f0ebe0;font-weight:700">2016年</span></div>
+<div class="implication"><div class="label">條件式研究推論</div>若醫療後續由長倉買入接替短倉回補，可考慮<span style="color:#f0ebe0;font-weight:700">提高醫療相對科技的防守性配置</span>；在此之前，宜避免把單週資金流直接外推為長期輪動。</div>
+</div>
+</div>
+<div class="section" id="trade-energy-diplomacy">
+<h2><span class="tag tag-misc">貿易與能源</span> 關稅降溫，煉油合作升溫</h2>
+<div class="stat-grid">
+<div class="stat"><div class="val" style="color:var(--green)">39%→15%</div><div class="lbl">瑞士輸美關稅
+由高位降至上限</div></div>
+<div class="stat"><div class="val" style="color:var(--green)">168,000桶／日</div><div class="lbl">Reliance相關新煉廠
+美國頁岩油處理設計量</div></div>
+<div class="stat"><div class="val">20年</div><div class="lbl">Reliance燃料
+採購協議期</div></div>
+</div>
+<div class="article">
+<div class="article-title">瑞士爭取永久協議，15%關稅上限仍待法律化</div>
+<p>Bloomberg於2026年10月14日報道，瑞士最高貿易官員表示，美國已遵守把相關關稅由 <span style="color:#f0ebe0;font-weight:700">39%</span> 降至 <span style="color:#f0ebe0;font-weight:700">15%</span> 上限的安排，但雙方仍在磋商更永久、具法律約束力的協議。此前瑞士企業代表向白宮送交Rolex座鐘及刻字金條，引發國內對潛在賄賂的刑事投訴與議會審查；瑞士官員稱禮物屬於美國人民、已正式登記，而且並非由政府贈送。對市場而言，實質訊號不是禮物本身，而是瑞士出口商取得較低關稅後，政策可見度有所改善；然而，在正式條約落實前，企業仍面對政治及合規尾部風險。</p>
+<div class="data-point">美方最初關稅: <span style="color:#f0ebe0;font-weight:700">39%</span>  |  現行關稅上限: <span style="color:#f0ebe0;font-weight:700">15%</span>  |  降幅: <span style="color:#f0ebe0;font-weight:700">24個百分點</span>  |  協議狀態: <span style="color:#f0ebe0;font-weight:700">永久法律文本仍在磋商</span></div>
+<div class="implication"><div class="label">條件式研究推論</div>瑞士出口企業的關稅壓力已有緩和，但重新評級應取決於協議能否法律化；現階段可<span style="color:#f0ebe0;font-weight:700">優先研究美國收入佔比較高且15%關稅已反映於指引的企業</span>，並保留政策折價。</div>
+</div>
+<div class="article">
+<div class="article-title">Reliance押注美國煉油，印美能源關係重新校準</div>
+<p>Bloomberg於2026年10月15日報道，美國國務卿Marco Rubio計劃於10月17至22日訪問印度，並預期與Reliance Industries主席Mukesh Ambani接觸，討論能源合作。這標誌華盛頓對Reliance的態度轉變：美方此前批評印度大型煉油商利用折價俄油，現時則支持其參與美國近 <span style="color:#f0ebe0;font-weight:700">50年</span> 來首座主要新煉油廠。報道稱，新設施擬每日處理約 <span style="color:#f0ebe0;font-weight:700">168,000桶</span> 美國頁岩油，而Reliance已簽署 <span style="color:#f0ebe0;font-weight:700">20年</span> 燃料採購協議。項目為美國頁岩油提供長期需求，也讓Reliance分散原油與地緣政治來源；但執行時間、資本開支及監管條件在所供資料中未有披露。</p>
+<div class="data-point">設計處理量: <span style="color:#f0ebe0;font-weight:700">約168,000桶／日</span>  |  燃料採購期: <span style="color:#f0ebe0;font-weight:700">20年</span>  |  美國主要新煉廠空窗: <span style="color:#f0ebe0;font-weight:700">近50年</span>  |  Rubio訪印日期: <span style="color:#f0ebe0;font-weight:700">2026年10月17至22日</span></div>
+<div class="implication"><div class="label">條件式研究推論</div>此項目可視為印美能源關係改善的政策訊號；只有在資本開支、投產時間與回報框架披露後，才宜<span style="color:#f0ebe0;font-weight:700">評估Reliance及美國頁岩供應鏈的條件式受惠機會</span>。</div>
+</div>
+</div>
+<div class="divider"></div>
+<div class="red-team" id="red-team">
+<div class="red-team-title">🔴 Red Team — 核心假設與反面論證</div>
+<ul>
+<li>假設1：Anthropic上市若獲穩健認購及上市後承接，足以改善其他AI與軟件IPO的風險胃納。</li>
+<li>假設2：科技板塊的創紀錄淨賣出代表去風險仍會延續，而醫療可提供相對防守。</li>
+<li>假設3：瑞美關稅安排及印美能源合作能由政治表態轉化為持久、可執行的商業利益。</li>
+<li style="color:var(--red)">反證1：IPO疲弱亦受利率上升、伊朗戰事及發行人估值要求影響；即使Anthropic成功，也未必能修復Oura約US$15bn估值所反映的價格落差。</li>
+<li style="color:var(--red)">反證2：截至10月15日，美國醫療的買盤主要由短倉回補帶動，且已連續5週去風險，未能確認長線資金持續增持；科技急售亦可能造成技術性反彈。</li>
+<li style="color:var(--red)">反證3：瑞美15%安排仍非永久法律協議；Reliance項目的資本開支、投產日期及預期回報均未在來源披露，故政策支持不等同已實現盈利。</li>
+</ul>
+<p style="margin-top:10px;padding:10px 14px;background:rgba(224,85,69,0.04);border-radius:6px;font-size:0.9em;border-left:3px solid var(--red)">核心的風險收縮判斷暫時成立：截至2026年10月15日，全球股票淨賣出達一年尺度-2.0個標準差、整體Net leverage降至72.7%的第4百分位，科技並錄得2016年以來最大百分比淨賣出。不過，論點只有在Anthropic上市後需求仍弱、科技長倉繼續流出，且醫療買盤轉為實質長倉增持時才獲進一步確認。若Anthropic上市表現穩健並帶動約12家已申報企業重啟發行，或科技資金流迅速逆轉，則「IPO持續凍結及科技去風險」論點需要下調。貿易與能源主題則須等待15%關稅安排法律化，以及168,000桶／日煉廠項目披露投資回報資料。</p>
+</div>
+<div class="callout" id="takeaways">
+<div class="callout-title">基金經理人重點摘要</div>
+<ul>
+<li><strong>美國IPO：</strong>截至9月底集資US$162.6bn後，10月急速降溫；在Anthropic完成價格發現前，控制高估值AI新股曝險。</li>
+<li><strong>對沖基金：</strong>Gross leverage升至311.7%，Net leverage卻降至72.7%；優先檢查擁擠交易、因子集中及雙邊持倉風險。</li>
+<li><strong>板塊輪動：</strong>科技錄得2016年以來最大百分比淨賣出；醫療買盤主要來自短倉回補，增配前宜等待長倉資金確認。</li>
+<li><strong>瑞士貿易：</strong>關稅由39%降至15%上限，但永久協議仍在磋商；對出口商估值保留政策折價。</li>
+<li><strong>印美能源：</strong>Reliance相關新煉廠擬處理約168,000桶／日並配套20年採購協議；待資本開支與回報披露後再評估受惠者。</li>
+<li><strong>下一步建議：</strong>追蹤Anthropic定價與上市後表現、下一期Prime Services科技及醫療流量，以及瑞美協議和Reliance項目的正式條款。</li>
+</ul>
+</div>
+<div class="nav-links"><a href="student.html#october-research">← 返回 10 月研究目錄</a><a href="#source-register">來源與限制</a></div>
+<div class="footer">學海無涯｜來源整理：2026-10-29；上架：2026-10-30。研究草稿，僅供教學與討論，不構成投資建議。</div>
+<section class="section" id="source-register"><h2>來源文件與閱讀限制</h2><ul class="source-list"><li>Paralyzed US IPO Market Asks I.pdf｜PDF 文字擷取</li><li>PORT.pdf｜PDF 文字擷取</li><li>Prime_Services_Weekly_Report_10.16.26.pdf｜PDF 文字擷取</li><li>Prime_Services_Weekly_Report_10.8.26.pdf｜PDF 文字擷取</li><li>PRTU.pdf｜PDF 文字擷取</li><li>Rodmans Mega Contract Transfor.pdf｜PDF 文字擷取</li><li>Rolex and Gold Were for US and.pdf｜PDF 文字擷取</li><li>Rubio Set to Meet Ambani Signa.pdf｜PDF 文字擷取</li></ul><p>來源清單保留本批次文件名稱，不提供原始文件下載。檔案修改時間不是發表日期；報告日期以正文註明為準，未明確註明者仍待核對。</p></section></body>
+</html>
