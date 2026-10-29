@@ -2,7 +2,7 @@
 
 - Owner: Codex
 - Branch: `codex/idea-student-newsletter146-20261030`
-- Status: VERIFIED LOCALLY / READY TO DEPLOY
+- Status: PUBLISHED / LIVE VERIFIED
 - Authorization: user explicitly confirmed public publication of the selected illustrated newsletter to the existing student portal on 2026-10-30.
 
 ## Scope and plan
@@ -21,4 +21,16 @@ The publication date is 2026-10-30; the research review cutoff remains 2026-10-2
 - `python verify_public146.py`: 10 PDF pages and six images, local PDF download link rewritten to the production URL; no remaining machine-local links. All new relative links resolve. Scoped credential/email/local-path/subscriber-name scan passed.
 - PDF contact sheet and source page visually reviewed; dates, captions, institution marks and chart labels retained.
 - Public HTML: `output/newsletter_20261029_ai_crowding.html`; PDF uses the same basename. Existing portal: `output/student.html`.
-- Deployment and live verification pending. No changes to schedules, login logic, pipeline state or other distribution channels.
+- PR #4 merged as `1e1ba7231c7813b510582ae01f4ed0bd76ae7625`; GitHub Pages run `40910807868` completed successfully.
+- `node check_live146.cjs`: verified at 2026-10-30 00:24 Asia/Taipei. Portal, article and PDF all returned HTTP 200 and matched the committed SHA-256 hashes. Git-normalized line endings are the comparison baseline, not Windows working-copy CRLF bytes.
+- Live article passed at 1440px and 390px: six loaded images, no overflow or JavaScript errors, correct PDF and portal links. Live portal contains 178 cards, including the new entry; existing login gate remains visible and archive initially hidden.
+- No changes to schedules, login logic, pipeline state or other distribution channels.
+
+## Delivery
+
+- Portal: https://traderx888.github.io/notion-autopublish/student.html
+- Article: https://traderx888.github.io/notion-autopublish/newsletter_20261029_ai_crowding.html
+- PDF: https://traderx888.github.io/notion-autopublish/newsletter_20261029_ai_crowding.pdf
+- PR: https://github.com/traderx888/notion-autopublish/pull/4
+- Deployment: https://github.com/traderx888/notion-autopublish/actions/runs/40910807868
+- Research limitations remain in the published article; publication does not imply a new market refresh.
