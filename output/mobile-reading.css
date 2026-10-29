@@ -1,0 +1,112 @@
+/* Phone-only reading styles shared by the portal and October research drafts. */
+@media (max-width: 600px) {
+  body.student-portal {
+    padding: 14px;
+    overflow-wrap: anywhere;
+  }
+
+  .student-portal #content .card {
+    padding: 16px;
+  }
+
+  .student-portal #content .card-header {
+    display: grid;
+    grid-template-columns: 28px minmax(0, 1fr);
+    gap: 6px 10px;
+    align-items: start;
+  }
+
+  .student-portal #content .card-icon {
+    grid-row: 1 / span 2;
+    font-size: 1.4rem;
+    line-height: 1.55;
+  }
+
+  .student-portal #content .card-title {
+    min-width: 0;
+    font-size: 1rem;
+    line-height: 1.55;
+  }
+
+  .student-portal #content .card-date {
+    grid-column: 2;
+    margin-left: 0;
+    white-space: normal;
+    font-size: 0.8125rem;
+  }
+
+  .student-portal #content .card-desc {
+    margin-left: 0;
+    font-size: 0.9375rem;
+  }
+
+  .student-portal #content .tag {
+    font-size: 0.8125rem;
+    margin-bottom: 4px;
+  }
+
+  .research-draft .article p,
+  .research-draft .callout li {
+    font-size: 1rem;
+  }
+
+  .research-draft .toc li,
+  .research-draft .toc a {
+    font-size: 1rem;
+  }
+
+  .research-draft .toc li {
+    margin: 0;
+  }
+
+  .research-draft .toc a {
+    display: block;
+    min-height: 44px;
+    padding: 10px 0;
+    line-height: 1.5;
+  }
+
+  .research-draft .toc .tag {
+    font-size: 0.8125rem;
+  }
+
+  .research-draft .nav-links {
+    flex-wrap: wrap;
+    gap: 8px;
+    font-size: 0.9375rem;
+  }
+
+  .research-draft .nav-links a {
+    display: flex;
+    align-items: center;
+    min-height: 44px;
+    padding: 8px 10px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+  }
+
+  .research-draft .source-list {
+    font-size: 0.875rem;
+  }
+
+  .research-draft .source-list li {
+    font-size: inherit;
+    margin: 8px 0;
+  }
+
+  .research-draft .data-point,
+  .research-draft .stat .lbl {
+    font-size: 0.875rem;
+  }
+
+  .research-draft .implication,
+  .research-draft .red-team li {
+    font-size: 0.9375rem;
+  }
+
+  .research-draft .local-notice summary {
+    min-height: 44px;
+    padding: 8px 0;
+    cursor: pointer;
+  }
+}
