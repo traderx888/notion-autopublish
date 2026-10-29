@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>學海無涯｜AI資本開支、波動率與歐中貿易風險｜研究草稿</title>
+<style>
+
+  :root { --bg: #0a0a08; --card: #141410; --border: #2a2820; --accent: #c9a84c;
+          --gold: #f0d87a; --gold-dim: #c4b896; --text: #e0d8c8; --text-bright: #f0ebe0; --muted: #c4b896;
+          --green: #6bbd5b; --red: #e05545; --yellow: #d4a843; --orange: #d49040;
+          --purple: #b08cd0; --cyan: #4cc9b0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { background: #0a0a08 !important; }
+  body { color: var(--text); font-family: 'Source Sans Pro', 'Noto Serif TC', 'Microsoft JhengHei', sans-serif; line-height: 1.8; padding: 24px; max-width: 880px; margin: 0 auto; }
+  h1 { font-family: 'Playfair Display', 'Noto Serif TC', serif; color: var(--gold); font-size: 1.8em; margin-bottom: 4px; font-weight: 900; letter-spacing: 0.02em; }
+  h2 { font-family: 'Playfair Display', 'Noto Serif TC', serif; }
+  .subtitle { color: var(--text-bright); font-size: 0.95em; margin-bottom: 8px; font-family: 'Noto Serif TC', serif; }
+  .issue-badge { display: inline-block; background: rgba(201,168,76,0.15); color: var(--accent); padding: 4px 12px; border-radius: 12px; font-size: 0.8em; font-weight: 600; margin-bottom: 20px; border: 1px solid rgba(201,168,76,0.3); }
+  .tag { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 0.72em; font-weight: 600; margin-right: 4px; }
+  .tag-rates { background: rgba(201,168,76,0.15); color: var(--accent); }
+  .tag-china { background: rgba(212,144,64,0.15); color: var(--orange); }
+  .tag-japan { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-geo   { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-oil   { background: rgba(212,168,67,0.15); color: var(--yellow); }
+  .tag-trade { background: rgba(212,168,67,0.15); color: var(--yellow); }
+  .tag-growth{ background: rgba(107,189,91,0.15); color: var(--green); }
+  .tag-metals{ background: rgba(176,140,208,0.15); color: var(--purple); }
+  .tag-infl  { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-policy{ background: rgba(201,168,76,0.15); color: var(--accent); }
+  .tag-val   { background: rgba(107,189,91,0.15); color: var(--green); }
+  .tag-vol   { background: rgba(224,85,69,0.15); color: var(--red); }
+  .tag-semi  { background: rgba(76,201,176,0.15); color: var(--cyan); }
+  .tag-credit{ background: rgba(176,140,208,0.15); color: var(--purple); }
+  .tag-space { background: rgba(201,168,76,0.15); color: var(--accent); }
+  .tag-misc  { background: rgba(138,128,112,0.15); color: var(--muted); }
+  .verdict-bar { background: var(--accent); color: #0a0a08; padding: 14px 20px; border-radius: 8px; margin-bottom: 20px; font-weight: 700; font-size: 1.05em; font-family: 'Noto Serif TC', serif; }
+  .section { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 22px; margin-bottom: 18px; }
+  .section h2 { color: var(--gold); font-size: 1.15em; margin-bottom: 12px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+  .section h3 { color: var(--accent); font-size: 0.95em; margin: 14px 0 6px; }
+  .article { margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid rgba(42,40,32,0.7); }
+  .article:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .article-title { color: var(--text-bright); font-weight: 700; font-size: 0.95em; margin-bottom: 4px; }
+  .article-title-cn { color: var(--muted); font-size: 0.85em; margin-bottom: 8px; }
+  .article p { font-size: 0.9em; margin: 6px 0; }
+  .data-point { background: rgba(201,168,76,0.05); padding: 8px 12px; border-radius: 6px; margin: 8px 0; font-size: 0.85em; border: 1px solid rgba(201,168,76,0.12); }
+  .data-point .num { color: var(--text-bright); font-weight: 700; }
+  .implication { background: rgba(201,168,76,0.06); border-left: 3px solid var(--accent); padding: 10px 14px; margin: 10px 0; border-radius: 0 6px 6px 0; font-size: 0.88em; }
+  .implication .label { color: var(--accent); font-weight: 700; font-size: 0.8em; text-transform: uppercase; margin-bottom: 4px; }
+  .red-team { background: rgba(224,85,69,0.06); border: 1px solid rgba(224,85,69,0.25); border-radius: 8px; padding: 18px; margin: 18px 0; }
+  .red-team-title { color: var(--red); font-weight: 700; font-size: 0.95em; margin-bottom: 10px; font-family: 'Playfair Display', serif; }
+  .red-team ul { padding-left: 18px; }
+  .red-team li { margin: 5px 0; font-size: 0.88em; }
+  .callout { background: rgba(201,168,76,0.06); border: 1px solid rgba(201,168,76,0.25); border-radius: 8px; padding: 18px; margin: 18px 0; }
+  .callout-title { color: var(--accent); font-weight: 700; font-size: 0.95em; margin-bottom: 8px; font-family: 'Playfair Display', 'Noto Serif TC', serif; }
+  .callout ul { padding-left: 18px; }
+  .callout li { margin: 5px 0; font-size: 0.88em; }
+  ul { padding-left: 18px; }
+  li { margin: 4px 0; font-size: 0.88em; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .stat { background: rgba(201,168,76,0.05); padding: 12px; border-radius: 6px; text-align: center; border: 1px solid rgba(201,168,76,0.1); }
+  .stat .val { font-size: 1.4em; font-weight: 700; color: var(--gold); font-family: 'Playfair Display', serif; }
+  .stat .lbl { font-size: 0.72em; color: var(--muted); margin-top: 2px; }
+  .toc { background: rgba(201,168,76,0.04); border: 1px solid rgba(201,168,76,0.18); border-radius: 8px; padding: 16px 20px; margin-bottom: 20px; }
+  .toc-title { color: var(--accent); font-weight: 700; font-size: 0.9em; margin-bottom: 8px; }
+  .toc a { color: var(--accent); text-decoration: none; font-size: 0.88em; }
+  .toc a:hover { text-decoration: underline; color: var(--gold); }
+  .toc ol { padding-left: 20px; }
+  .toc li { margin: 4px 0; }
+  .nav-links { display: flex; justify-content: space-between; margin: 20px 0; font-size: 0.85em; }
+  .nav-links a { color: var(--accent); text-decoration: none; }
+  .nav-links a:hover { text-decoration: underline; color: var(--gold); }
+  .divider { height: 1px; background: linear-gradient(90deg, transparent, var(--accent), transparent); margin: 24px 0; opacity: 0.4; }
+  .footer { text-align: center; color: var(--muted); font-size: 0.75em; margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--border); }
+  .footer a { color: var(--accent); text-decoration: none; }
+</style>
+<style>body{overflow-wrap:anywhere}.local-notice{border:1px solid #c9a84c;border-radius:8px;padding:18px;margin:0 0 20px;background:#201d13;color:#f0ebe0}.source-list{font-size:.85em}.source-list a{color:#f0d87a}pre{white-space:pre-wrap}a{color:#f0d87a}@media(max-width:600px){body{padding:14px}h1{font-size:1.4em}.stat-grid{grid-template-columns:1fr}.section{padding:16px}}</style><style>body{overflow-wrap:anywhere}.local-notice{border:1px solid #c9a84c;border-radius:8px;padding:18px;margin:0 0 20px;background:#201d13;color:#f0ebe0}.source-list{font-size:.85em}.source-list a{color:#f0d87a}pre{white-space:pre-wrap}a{color:#f0d87a}@media(max-width:600px){body{padding:14px}h1{font-size:1.4em}.stat-grid{grid-template-columns:1fr}.section{padding:16px}}</style><link href="https://traderx888.github.io/notion-autopublish/newsletter_20261029_draft_01.html" rel="canonical"/></head>
+<body id="top"><aside class="local-notice"><strong>研究草稿｜來源節錄整合，未作上架日市場重核</strong><details open=""><summary>閱讀限制：來源節錄、未作當日市場重核</summary><p>範圍：最近 22 天新檔，依檔案修改時間選取（2026-10-07 21:09 至 2026-10-29 21:09，UTC+8）。修改時間並非文章發表日期；各項數字及預測以原報告日期為準，未作發布日市場重核。</p><p>沿用既有批次流程，每份來源最多約 3,000 字元進入生成；此頁是節錄整合，並非逐頁完整研究。來源主張與編輯推論均需回看原文。草稿序號只用於本批次閱讀排序。</p><p><strong>本稿含 OCR 來源：</strong>OCR 全頁處理已完成，但數字、欄位及圖表關係未逐項核實。Gemini Notebook 簡報屬二手整理，不作獨立佐證。</p></details></aside>
+<h1>AI資本開支、波動率與歐中貿易風險</h1>
+<p class="subtitle">學海無涯 · 10 月來源快照 · 研究草稿 01</p>
+<span class="issue-badge">2026-10-30 上架 · 2026-10-29 整理 · 研究草稿</span>
+<div class="verdict-bar">編輯推論（待核對）｜結論：AI需求仍支撐半導體基本面，但科技股業績分化與歐中稀土風險正在抬高尾部波動；基金經理宜條件式保留記憶體與先進製程曝險，同時以期權控制組合下行風險。</div>
+<div class="nav-links"><a href="student.html#october-research">← 返回 10 月研究目錄</a><a href="#source-register">來源與限制</a></div>
+<div class="toc">
+<div class="toc-title">目錄</div>
+<ol>
+<li><a href="#ai-semiconductor-cycle">半導體 AI需求強，估值容錯低</a></li>
+<li><a href="#eu-china-trade-friction">地緣經濟 歐中角力，稀土成槓桿</a></li>
+<li><a href="#volatility-risk-framework">衍生工具 曲面先行，對沖才可靠</a></li>
+<li><a href="#red-team">Red Team 反面論證</a></li>
+<li><a href="#takeaways">基金經理人重點摘要</a></li>
+</ol>
+</div>
+<div class="section" id="ai-semiconductor-cycle">
+<h2><span class="tag tag-semi">半導體</span> AI需求強，估值容錯低</h2>
+<div class="stat-grid">
+<div class="stat"><div class="val" style="color:var(--green)">US$71.7bn</div><div class="lbl">中國9月IC進口額
+按年增75%</div></div>
+<div class="stat"><div class="val" style="color:var(--green)">US$37.3bn</div><div class="lbl">中國8月記憶體進口
+創紀錄高位</div></div>
+<div class="stat"><div class="val" style="color:var(--orange)">US$60-64bn</div><div class="lbl">TSMC 2026年
+資本開支指引</div></div>
+</div>
+<div class="article">
+<div class="article-title">中國晶片進口與TSMC指引顯示AI週期尚未失速</div>
+<p>BofA Global Research於<span style="color:#f0ebe0;font-weight:700">2026年10月16日</span>發布的報告顯示，AI需求仍在推動亞洲半導體產業鏈快速增長。中國9月IC進口額升至<span style="color:#f0ebe0;font-weight:700">US$71.7bn</span>，按年增長<span style="color:#f0ebe0;font-weight:700">75%</span>；進口量僅增<span style="color:#f0ebe0;font-weight:700">2%</span>至<span style="color:#f0ebe0;font-weight:700">56.5bn件</span>，而平均售價升至<span style="color:#f0ebe0;font-weight:700">US$1.27</span>、按年增<span style="color:#f0ebe0;font-weight:700">72%</span>，反映增長主要來自產品組合與價格，而非單純數量擴張。OCR資料另顯示，中國8月記憶體進口達創紀錄的<span style="color:#f0ebe0;font-weight:700">US$37.3bn</span>，按年增長<span style="color:#f0ebe0;font-weight:700">277%</span>。TSMC第三季收入為<span style="color:#f0ebe0;font-weight:700">NT$1,494bn</span>，第四季指引為<span style="color:#f0ebe0;font-weight:700">NT$1,727bn</span>，並重申全年資本開支<span style="color:#f0ebe0;font-weight:700">US$60-64bn</span>。整體證據支持AI基建週期延續，但價格驅動的進口增長也意味需求一旦轉弱，收入敏感度可能較高。</p>
+<div class="data-point">中國9月IC進口額：<span style="color:#f0ebe0;font-weight:700">US$71.7bn（+75% YoY）</span>  |  中國9月IC進口量：<span style="color:#f0ebe0;font-weight:700">56.5bn件（+2% YoY）</span>  |  8月記憶體進口：<span style="color:#f0ebe0;font-weight:700">US$37.3bn（+277% YoY，OCR）</span>  |  TSMC 2026年資本開支指引：<span style="color:#f0ebe0;font-weight:700">US$60-64bn</span></div>
+<div class="implication"><div class="label">條件式研究推論</div>若AI訂單與TSMC收入指引維持，研究上可考慮<span style="color:#f0ebe0;font-weight:700">保留記憶體及先進製程的核心曝險</span>；若IC平均售價回落而進口量仍低增長，則應重新評估週期持續性。</div>
+</div>
+<div class="article">
+<div class="article-title">科技股業績分化，市場不再為所有AI敘事付費</div>
+<p>Barron's於<span style="color:#f0ebe0;font-weight:700">2026年10月29日</span>報道，科技股在第三季業績後出現劇烈分化，反映投資者對AI支出與盈利兌現的要求顯著提高。Alphabet因盈利及收入遜於分析員預期，盤前下跌<span style="color:#f0ebe0;font-weight:700">10%</span>；雲端業務表現穩健，卻不足以抵銷其他業務失望。相反，Microsoft業績勝過市場預期，且資本開支低於預期，股價上升<span style="color:#f0ebe0;font-weight:700">3.1%</span>。Marvell因據報洽購Lumentum而下跌<span style="color:#f0ebe0;font-weight:700">10%</span>，ServiceNow則在第四季訂閱指引平淡後急跌<span style="color:#f0ebe0;font-weight:700">18%</span>。Fortinet即使業績優於預期，仍下挫<span style="color:#f0ebe0;font-weight:700">25%</span>，部分原因是此前年度升幅已達<span style="color:#f0ebe0;font-weight:700">119%</span>。這組反應說明，高估值科技股即使盈利增長，若指引、資本配置或交易風險稍遜預期，估值壓縮仍可迅速主導回報。</p>
+<div class="data-point">Alphabet盤前變動：<span style="color:#f0ebe0;font-weight:700">-10%</span>  |  Microsoft股價變動：<span style="color:#f0ebe0;font-weight:700">+3.1%</span>  |  ServiceNow股價變動：<span style="color:#f0ebe0;font-weight:700">-18%</span>  |  Fortinet股價變動：<span style="color:#f0ebe0;font-weight:700">-25%</span></div>
+<div class="implication"><div class="label">條件式研究推論</div>在高估值科技股中，研究上宜<span style="color:#f0ebe0;font-weight:700">提高盈利質素、指引及自由現金流門檻</span>；對事件密集或估值已大幅擴張的持倉，可條件式考慮降低集中度。</div>
+</div>
+</div>
+<div class="section" id="eu-china-trade-friction">
+<h2><span class="tag tag-misc">地緣經濟</span> 歐中角力，稀土成槓桿</h2>
+<div class="stat-grid">
+<div class="stat"><div class="val" style="color:var(--red)">&gt;€1bn/日</div><div class="lbl">歐盟對華
+每日貿易逆差</div></div>
+<div class="stat"><div class="val" style="color:var(--red)">0.7% GDP</div><div class="lbl">歐洲製造業份額流失
+2025年估算成本</div></div>
+<div class="stat"><div class="val" style="color:var(--orange)">159bp</div><div class="lbl">法德10年債息差
+前週高位</div></div>
+</div>
+<div class="article">
+<div class="article-title">談判若失敗，歐中摩擦或由汽車延伸至稀土</div>
+<p>Bloomberg Economics於<span style="color:#f0ebe0;font-weight:700">2026年10月8日</span>指出，歐中關係正處於可能升級為全面貿易戰的分岔口。歐盟對華貿易逆差已超過每日<span style="color:#f0ebe0;font-weight:700">€1bn</span>，而Bloomberg Economics估算，歐洲因全球製造業市場份額轉移至中國而承受的成本，在上一年約為GDP的<span style="color:#f0ebe0;font-weight:700">0.7%</span>，高於2024年的<span style="color:#f0ebe0;font-weight:700">0.5%</span>，其中德國汽車業受壓尤其明顯。若北京與布魯塞爾未能就中國出口、歐盟商品採購及稀土管制取得進展，歐盟可能研究混合動力汽車保障措施，以及針對中國產品的反傾銷或反補貼調查。報告預期中國初期反制或較為對稱，但若措施互相升級，北京仍可透過額外稀土出口限制施加更大壓力，令歐洲汽車及工業供應鏈面臨成本與產量風險。</p>
+<div class="data-point">歐盟對華貿易逆差：<span style="color:#f0ebe0;font-weight:700">每日逾€1bn</span>  |  製造業份額流失成本：<span style="color:#f0ebe0;font-weight:700">GDP的0.7%</span>  |  2024年比較值：<span style="color:#f0ebe0;font-weight:700">GDP的0.5%</span>  |  法德10年債息差前週高位：<span style="color:#f0ebe0;font-weight:700">159bp</span></div>
+<div class="implication"><div class="label">條件式研究推論</div>若稀土出口限制實際收緊，研究上可考慮<span style="color:#f0ebe0;font-weight:700">降低對稀土高度敏感的歐洲汽車與工業曝險</span>，並優先檢視具替代供應、庫存緩衝或成本轉嫁能力的企業。</div>
+</div>
+</div>
+<div class="section" id="volatility-risk-framework">
+<h2><span class="tag tag-misc">衍生工具</span> 曲面先行，對沖才可靠</h2>
+<div class="stat-grid">
+<div class="stat"><div class="val">2階段</div><div class="lbl">波動率曲面建構
+遠期曲線與模型校準</div></div>
+<div class="stat"><div class="val">2011-06-21</div><div class="lbl">方法文件
+首次發布日期</div></div>
+<div class="stat"><div class="val">2026-07-14</div><div class="lbl">Bloomberg文件
+所列版本日期</div></div>
+</div>
+<div class="article">
+<div class="article-title">從遠期價格到波動率曲面：事件風險對沖的技術底座</div>
+<p>Bloomberg Quantitative Analytics日期為<span style="color:#f0ebe0;font-weight:700">2026年7月14日</span>的方法文件指出，股票及指數期權的隱含波動率曲面通常分兩個階段建構。首先，由於上市市場不會直接報出遠期價格，模型須從期權價格推導與市場一致的遠期及股息曲線，並處理美式提前行權與股息季節性。其次，再以lognormal mixture model校準觀察到的期權價格，並對缺乏報價的履約價及期限進行插值和外推。這項方法本身不提供市場方向預測，但對當前科技股單日出現雙位數波動的環境具有風險管理意義：若遠期或股息假設存在偏差，曲面、Greeks及對沖比率亦會同步失真。因此，事件對沖不能只比較表面隱含波動率，還須核查期限結構、偏斜及模型外推區域。</p>
+<div class="data-point">曲面建構：<span style="color:#f0ebe0;font-weight:700">2個階段</span>  |  首次發布：<span style="color:#f0ebe0;font-weight:700">2011年6月21日</span>  |  文件版本日期：<span style="color:#f0ebe0;font-weight:700">2026年7月14日</span></div>
+<div class="implication"><div class="label">條件式研究推論</div>如需對沖科技股業績或歐中政策風險，研究上應<span style="color:#f0ebe0;font-weight:700">先驗證遠期、股息及波動率偏斜假設，再設計有限虧損的期權結構</span>；避免以單一ATM波動率代表完整尾部風險。</div>
+</div>
+</div>
+<div class="divider"></div>
+<div class="red-team" id="red-team">
+<div class="red-team-title">🔴 Red Team — 核心假設與反面論證</div>
+<ul>
+<li>假設1：中國IC進口額、記憶體需求及TSMC資本開支指引能持續代表AI終端需求，而非短期補庫存或價格上漲。</li>
+<li>假設2：歐中摩擦將停留在漸進式措施，稀土出口限制不會迅速升級至嚴重干擾歐洲工業生產。</li>
+<li>假設3：期權市場仍具足夠流動性，且遠期、股息與波動率曲面模型能合理反映事件風險。</li>
+<li style="color:var(--red)">反證1：中國9月IC進口額按年增長75%，但進口量只增2%；增長高度依賴平均售價上升72%，若價格回落，名義進口額可能快速降溫。</li>
+<li style="color:var(--red)">反證2：Bloomberg Economics明確指出，談判失敗後歐盟可能啟動汽車保障措施及反補貼調查，中國則可運用額外稀土限制反制；歐洲製造業份額流失成本已由2024年的GDP 0.5%升至約0.7%。</li>
+<li style="color:var(--red)">反證3：科技股業績後出現Alphabet -10%、ServiceNow -18%及Fortinet -25%的劇烈反應，顯示跳空風險可能超出平滑曲面與常規Greeks的局部估算。</li>
+</ul>
+<p style="margin-top:10px;padding:10px 14px;background:rgba(224,85,69,0.04);border-radius:6px;font-size:0.9em;border-left:3px solid var(--red)">核心AI需求論點暫未被來源數據推翻：TSMC第四季收入指引為NT$1,727bn，全年資本開支仍為US$60-64bn，中國記憶體進口亦處於高位。然而，論點的脆弱處在於量價背離——IC進口量僅增2%，遠低於進口額75%的增幅。若後續價格回落、進口量未加速，或TSMC下調收入／資本開支指引，應視為AI週期論點轉弱。歐中方面，若稀土限制由談判籌碼變成實際供應中斷，則歐洲工業曝險的中性判斷不再成立。</p>
+</div>
+<div class="callout" id="takeaways">
+<div class="callout-title">基金經理人重點摘要</div>
+<ul>
+<li><strong>半導體：</strong>中國IC進口額達US$71.7bn，但量只增2%；在量價背離收窄前，宜條件式保留而非擴大記憶體與先進製程曝險。</li>
+<li><strong>TSMC：</strong>第四季收入指引NT$1,727bn、全年資本開支US$60-64bn仍支持AI基建延續；若指引下調，需重新檢視產業鏈盈利假設。</li>
+<li><strong>大型科技：</strong>Alphabet、ServiceNow及Fortinet的雙位數跌幅顯示估值容錯率偏低；應提高盈利質素及現金流篩選門檻。</li>
+<li><strong>歐中貿易：</strong>每日逾€1bn貿易逆差與稀土槓桿增加政策升級風險；應檢視歐洲汽車及工業公司的替代供應與庫存緩衝。</li>
+<li><strong>風險管理：</strong>對沖前須核查遠期、股息、期限結構及波動率偏斜；在業績與政策事件附近，可研究有限虧損的期權結構。</li>
+<li><strong>下一步建議：</strong>追蹤中國IC進口量價、TSMC指引及稀土出口限制三組驗證指標；對OCR數據回查原始圖表後再納入正式投資模型。</li>
+</ul>
+</div>
+<div class="nav-links"><a href="student.html#october-research">← 返回 10 月研究目錄</a><a href="#source-register">來源與限制</a></div>
+<div class="footer">學海無涯｜來源整理：2026-10-29；上架：2026-10-30。研究草稿，僅供教學與討論，不構成投資建議。</div>
+<section class="section" id="source-register"><h2>來源文件與閱讀限制</h2><ul class="source-list"><li>114833043.pdf｜PDF 文字擷取</li><li>26.10.16 BofA Global Memory Tech.pdf｜OCR；未完整核對</li><li>Alphabet Microsoft Marvell Ama.pdf｜PDF 文字擷取</li><li>Another Trade War EU and China.pdf｜PDF 文字擷取</li><li>ASKB.pdf｜PDF 文字擷取</li><li>Bain Capital Asia Fund VI LP D 20251030 primary_doc.htm.pdf｜PDF 文字擷取</li><li>BECO.pdf｜PDF 文字擷取</li><li>BI.pdf｜PDF 文字擷取</li></ul><p>來源清單保留本批次文件名稱，不提供原始文件下載。檔案修改時間不是發表日期；報告日期以正文註明為準，未明確註明者仍待核對。</p></section></body>
+</html>
