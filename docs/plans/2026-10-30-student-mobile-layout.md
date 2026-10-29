@@ -2,7 +2,7 @@
 
 - Owner: Codex
 - Branch: `codex/idea-student-mobile-layout-20261030`
-- Status: VERIFIED LOCALLY / READY TO DEPLOY
+- Status: PUBLISHED / VERIFIED
 - Authorization: user requested mobile layout inspection of student.html and all 15 drafts, with fixes and publication when needed.
 
 ## Evidence and scope
@@ -29,4 +29,15 @@ Repo-local presentation change only. No research updates, source data, schedules
 - CUA browser layout matrix: PASS, 64 checks (16 pages at actual widths 320/390/430/1440), no document overflow or elements outside the viewport, 193 portal cards, all 45 phone article checks pass the 16px TOC / 44px target / 14px source thresholds.
 - Mobile interaction checks: PASS; portal card opens draft, notice expands/collapses, TOC and source anchors navigate correctly, return link reaches the October section.
 - Mobile portal and article screenshots reviewed. Desktop rules remain unchanged because the entire stylesheet is inside the phone media query.
-- Publication and live hash/browser verification pending.
+- Scoped secret scan and staged `git diff --check`: PASS.
+
+## Deployment receipt
+
+- PR https://github.com/traderx888/notion-autopublish/pull/6 merged; publication commit `2030699c2d32763882371eabd25703f3cebbd715`.
+- GitHub Pages run `40921525026`: completed / success.
+- `python verify_live_mobile.py`: PASS, all 17 files (16 HTML plus shared CSS) HTTP 200 and byte-for-byte SHA-256 match with the committed release.
+- Live CUA browser: PASS, all 45 draft checks at measured 320/390/430px after reload. TOC >=16px, TOC/nav targets >=44px, source entries >=14px, no horizontal overflow; original expanded draft restrictions preserved.
+- Previously visited pages initially used cached old HTML without the stylesheet link; normal reload fetched the new body class and CSS. Readers should refresh an already-open page.
+- Portal card rendering is verified in the script-free local fixture, whose content/CSS match the deployed files. Production portal authentication was not re-entered or altered; no credential extraction occurred.
+- Live mobile draft screenshot saved, temporary viewport override reset. Local preview server stopped at handoff.
+- Next suggested check: refresh the original portal on a phone and read any October draft.
