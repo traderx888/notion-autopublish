@@ -2,7 +2,7 @@
 
 - Owner: Codex
 - Branch: `codex/idea-student-newsletter-batch-20261030`
-- Status: STATIC VERIFIED / READY TO DEPLOY
+- Status: PUBLISHED / LIVE CONTENT VERIFIED; MOBILE LAYOUT UNVERIFIED
 - Authorization: user requested publishing the generated batch to the existing student portal, in addition to the illustrated edition already published.
 
 ## Scope
@@ -20,10 +20,21 @@ Public copies retain source dates, draft status, excerpt limits and OCR qualific
 
 ## Handoff
 
-No changes to schedules, pipeline state, source files, other publishing channels or downstream schemas. `fundman-jarvis` has no consumer contract change. Live verification pending.
+No changes to schedules, pipeline state, source files, other publishing channels or downstream schemas. `fundman-jarvis` has no consumer contract change.
 
 - `python publish_batch.py`: PASS; 15 public articles created, all article bodies preserved, 178 old cards retained, 193 total cards; login scripts and gate unchanged.
 - `python verify_batch.py`: PASS; 120 source entries preserved, relative links and anchors resolve, unique IDs, one heading per article, explicit draft restrictions, no scripts/forms or event handlers in articles; scoped secret/email/subscriber/local-path scan passed.
 - `git diff --check`: PASS. Public files use UTF-8/LF bytes for deployment hash verification.
 - Local browser preview was not performed because the browser policy disallowed file URLs. Responsive browser verification is pending on the deployed public HTTPS pages.
 - Existing authenticated browser session was refreshed and its top illustrated article opened successfully.
+
+## Deployment receipt
+
+- PR: https://github.com/traderx888/notion-autopublish/pull/5 (merged).
+- Publication commit: `6e38bf1fa609fc89a061fcfed8aec7ed91dadc62`.
+- GitHub Pages run `40917155630`: completed / success.
+- `python verify_live_batch.py`: PASS, 16/16 HTTP 200 and 16/16 exact SHA-256 matches against the committed publication bytes (15 articles plus portal).
+- CUA live browser: 193 portal cards, 15 new draft cards; all 15 articles opened at an observed 1322px viewport, one h1 and eight source entries each, draft restrictions visible and no horizontal overflow.
+- Requested 390px viewport override did not apply (observed width remained 1322px); reset after checking. Mobile layout remains UNVERIFIED, not claimed passed.
+- User's existing authenticated session was reused; no credentials or authentication settings were changed. The updated portal is left open.
+- Suggested next verification: read a draft on an actual phone and confirm the long titles wrap correctly.
